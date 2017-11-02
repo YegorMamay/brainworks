@@ -3344,29 +3344,29 @@ table#wp-calendar {
 ol {
   padding-left: 20px; }
 
-div.big-space {
+div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
   height: 15vh; }
 
-div.medium-space {
+div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
   height: 12vh; }
 
-div.small-space {
+div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
   height: 5vh; }
 
-div.tiny-space {
+div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
   height: 2vh; }
 
 @media (max-width: 544px) {
-  div.big-space {
+  div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
     height: 13vh; }
 
-  div.medium-space {
+  div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
     height: 10vh; }
 
-  div.small-space {
+  div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
     height: 4vh; }
 
-  div.tiny-space {
+  div.sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2 {
     height: 1vh; } }
 hr.style-one {
   border: 0;
