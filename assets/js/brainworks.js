@@ -36,6 +36,11 @@
         // Buy one click
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
 
+        // Constant -> Selector for handler
+        var SCROLL_ELEMENTS = "nav a";
+        
+        scrollToElementHandler(SCROLL_ELEMENTS);
+
     });
 
     /**
@@ -226,6 +231,22 @@
         window.setTimeout(function () {
             body.removeChild(div);
         }, 0);
+    }
+
+    function scrollToElementHandler (selector) {
+        var elements = $(selector);
+
+        elements.each(function (index) {
+            if ($(this).attr("href")[0] === "#") {
+                $(this).click(function (event) {
+                    event.preventDefault();
+                    var id = $(this).attr("href");
+                    $('body, html').animate({
+                        scrollTop: $(id).offset().top
+                    }, 600);
+                });
+            }
+        });
     }
 
 })(jQuery);
