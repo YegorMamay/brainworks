@@ -16,7 +16,9 @@
         reviews(".js-reviews");
         scrollTop(".js-scroll-top");
         wrapHighlightedElements(".highlighted");
-        ajaxLoadMorePosts(".js-load-more", ".js-ajax-posts");
+        if (ajax) {
+            ajaxLoadMorePosts(".js-load-more", ".js-ajax-posts");
+        }
         stickFooter(".js-footer", ".js-container");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
         buyOneClick(".one-click", '[data-field-id="field7"]', "h1.page-name");
@@ -26,6 +28,7 @@
                 removeAllStyles($(".js-menu"));
             }
         });
+        $(".menu-link").closeMenuOnClick();
     });
     var stickFooter = function stickFooter(footer, container) {
         var el = $(footer);
@@ -40,8 +43,8 @@
                 autoplay: false,
                 autoplaySpeed: 3e3,
                 arrows: true,
-                prevArrow: '<button type="button" class="slick-prev"></button>',
-                nextArrow: '<button type="button" class="slick-next"></button>',
+                prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
+                nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
                 dots: false,
                 dotsClass: "slick-dots",
                 draggable: true,
@@ -143,11 +146,19 @@
             if (href[0] === "#") {
                 $element.on("click", function(e) {
                     e.preventDefault();
-                    $("html, body").animate({
-                        scrollTop: $(href).offset().top
-                    }, animationSpeed);
+                    var $childElement = $(href);
+                    if ($childElement.length) {
+                        $("html, body").animate({
+                            scrollTop: $(href).offset().top
+                        }, animationSpeed);
+                    }
                 });
             }
+        });
+    };
+    $.fn.closeMenuOnClick = function() {
+        return this.on("click", function() {
+            return $(".js-menu").removeClass("is-active");
         });
     };
     var ajaxLoadMorePosts = function ajaxLoadMorePosts(selector, container) {
