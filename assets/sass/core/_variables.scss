@@ -6,12 +6,10 @@ $borderRadius: 0px;
 $shadow: 0 0 10px rgba(#000, .2);
 
 // BRAND
-$themeColorOne: #2c3e50; // header, menu, footer, title,
-$themeColorTwo: #e74c3c; // menu active item, button, footer link hover, woo
-$themeColorThree: #3498db; // preHeader bg, wooOnSale
-$themeColorFour: #2980b9; //menu hover item, table border, preHeader font
+$themeColorOne: #2c3e50; //
+$themeColorTwo: #e74c3c; //
 
-// SELECTION
+// SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColorTwo;
 $selectionFontColor: #fff;
 
@@ -19,19 +17,17 @@ $selectionFontColor: #fff;
 $bodyBgColor: #fff; //white
 $bodyFontColor: #000; // black
 
-// PreHeader
-$preHeaderBgColor: $themeColorThree;
-$preHeaderColor: $themeColorFour;
-
-// HEADER
+// HEADER: цвет фона шапки сайта
 $headerBgColor: $themeColorOne;
 $headerFontColor: #fff;
-$headerHighlightBgColor: $themeColorTwo;
-$headerHighlightColor: #fff;
+
+// Text Highlight: цвет фона и текста при добавлении к нему .highlighted
+$textHighlightBgColor: $themeColorTwo;
+$textHighlightColor: #fff;
 
 // MENU
 $menuBgColor: $themeColorOne;
-$menuBgColorActive: $themeColorFour;
+$menuBgColorActive: $themeColorTwo;
 $menuFontColor: #fff;
 $menuFontColorActive: #fff;
 
@@ -56,7 +52,6 @@ $hamburger-color: $themeColorTwo;
 $menu-close-size: 25px;
 $menu-close-color: #fff;
 $menuContainerMobilePaddingTop: 30%;
-// MENU END
 
 // FOOTER
 $footerBgColor: $themeColorOne;
