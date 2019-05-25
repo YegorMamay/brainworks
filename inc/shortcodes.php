@@ -34,7 +34,7 @@ if (!function_exists('bw_polylang_shortcode')) {
             $flags = pll_the_languages($atts);
 
             if (0 === (int)$atts['dropdown']) {
-                $flags = sprintf('<ul class="lang"></ul>', $flags);
+                $flags = sprintf('<ul class="lang">%s</ul>', $flags);
             }
 
             return $flags;
@@ -70,19 +70,17 @@ if (!function_exists('bw_social_shortcode')) {
             $items = '';
 
             foreach (get_social() as $name => $social) {
-                $icon_fallback = sprintf(
-                    '<i class="%s" aria-hidden="true" aria-label="%s"></i>',
-                    esc_attr($social['icon']), esc_attr($social['text'])
-                );
+	            $icon_fallback = sprintf( '<i class="%s" aria-hidden="true"></i>', esc_attr( $social['icon'] ) );
 
                 $icon = !empty($social['icon-html']) ? strip_tags($social['icon-html'], '<i>') : $icon_fallback;
 
                 $items .= sprintf(
                     '<li class="social-item">%s</li>',
                     sprintf(
-                        '<a class="social-link social-%s" href="%s" target="_blank">%s</a>',
+                        '<a class="social-link social-%s" href="%s" target="_blank" rel="nofollow noopener" aria-label="%s">%s</a>',
                         esc_attr($name),
                         esc_attr(esc_url($social['url'])),
+	                    esc_attr($social['text']),
                         $icon
                     )
                 );
@@ -164,16 +162,13 @@ if (!function_exists('bw_messengers_shortcode')) {
             $items = '';
 
             foreach (get_messengers() as $name => $messenger) {
-                $icon = sprintf(
-                    '<i class="%s" aria-hidden="true" aria-label="%s"></i>',
-                    esc_attr($messenger['icon']),
-                    esc_attr($messenger['text'])
-                );
+	            $icon = sprintf( '<i class="%s" aria-hidden="true"></i>', esc_attr( $messenger['icon'] ) );
 
                 $link = sprintf(
-                    '<a class="messenger-link messenger-%s" href="tel:%s" target="_blank" rel="nofollow noopener">%s</a>',
+                    '<a class="messenger-link messenger-%s" href="tel:%s" target="_blank" aria-label="%s" rel="nofollow noopener">%s</a>',
                     esc_attr($name),
                     esc_attr(get_phone_number($messenger['tel'])),
+	                esc_attr($messenger['text']),
                     $icon
                 );
 

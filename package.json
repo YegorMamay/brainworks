@@ -4,8 +4,8 @@
     "description": "Workpieces code and structure that I use in every project",
     "main": "gulpfile.babel.js",
     "devDependencies": {
-        "@babel/core": "^7.4.4",
-        "@babel/preset-env": "^7.4.4",
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
         "@babel/register": "^7.4.4",
         "babel-eslint": "^10.0.1",
         "browser-sync": "^2.26.5",
@@ -22,7 +22,7 @@
         "gulp-svgstore": "^7.0.1",
         "gulp-uglify": "^3.0.2",
         "gulp-zip": "^4.2.0",
-        "husky": "^2.2.0"
+        "husky": "^2.3.0"
     },
     "babel": {
         "presets": [

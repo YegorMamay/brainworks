@@ -52,10 +52,24 @@
      * @returns {void}
      */
     const stickFooter = (footer, container) => {
-        const el = $(footer);
-        const height = (el.outerHeight() + 20) + 'px';
+        let previousHeight, currentHeight;
 
-        $(container).css('paddingBottom', height);
+        const offset = 0;
+        const $footer = $(footer);
+        const $container = $(container);
+
+        currentHeight = ($footer.outerHeight() + offset) + 'px';
+        previousHeight = currentHeight;
+
+        $container.css('paddingBottom', currentHeight);
+
+        $(window).on('resize', () => {
+            currentHeight = ($footer.outerHeight() + offset) + 'px';
+
+            if (previousHeight !== currentHeight) {
+                $container.css('paddingBottom', currentHeight);
+            }
+        });
     };
 
     /**

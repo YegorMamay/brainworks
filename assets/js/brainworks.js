@@ -31,9 +31,19 @@
         });
     });
     var stickFooter = function stickFooter(footer, container) {
-        var el = $(footer);
-        var height = el.outerHeight() + 20 + "px";
-        $(container).css("paddingBottom", height);
+        var previousHeight, currentHeight;
+        var offset = 0;
+        var $footer = $(footer);
+        var $container = $(container);
+        currentHeight = $footer.outerHeight() + offset + "px";
+        previousHeight = currentHeight;
+        $container.css("paddingBottom", currentHeight);
+        $(window).on("resize", function() {
+            currentHeight = $footer.outerHeight() + offset + "px";
+            if (previousHeight !== currentHeight) {
+                $container.css("paddingBottom", currentHeight);
+            }
+        });
     };
     var reviews = function reviews(container) {
         var element = $(container);
