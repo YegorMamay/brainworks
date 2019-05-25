@@ -14,7 +14,7 @@
 </head>
 <body <?php body_class(); ?> id="top">
 
-<?php wp_body(); ?>
+<?php wp_body_open(); ?>
 
 <div class="wrapper">
 
