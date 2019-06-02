@@ -37,4 +37,11 @@ function bw_login_headertitle($login_header_title)
     return esc_attr(get_bloginfo('name'));
 }
 
-add_filter('login_headertitle', 'bw_login_headertitle');
+global $wp_version;
+
+if ( version_compare( $wp_version, '5.2', '>=' ) ) {
+	add_filter( 'login_headertext', 'bw_login_headertitle' );
+} else {
+	add_filter( 'login_headertitle', 'bw_login_headertitle' );
+}
+
