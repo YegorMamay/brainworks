@@ -9491,6 +9491,10 @@ i.button-style {
   padding: 3px 8px;
 }
 
+span {
+  font-weight: 400;
+}
+
 @media (max-width: 544px) {
   p {
     font-size: 14.4px;

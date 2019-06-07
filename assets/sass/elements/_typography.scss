@@ -44,6 +44,10 @@ i.button-style {
     padding: 3px 8px;
 }
 
+span {
+    font-weight: 400;
+}
+
 @media #{$mobile} {
     p {
         font-size: $p_mobile * $p_size;
