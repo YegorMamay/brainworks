@@ -24,8 +24,13 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <?php get_default_logo_link(); ?>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <button type="button" class="button-medium center-block <?php the_lang_class('js-call-back'); ?>">
+                        <?php _e('Call back', 'brainworks'); ?>
+                    </button>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <?php get_search_form(); ?>
