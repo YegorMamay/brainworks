@@ -23,7 +23,15 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <div class="logo">
-	                    <?php get_default_logo_link(); ?>
+	                    <?php get_default_logo_link([
+                            'name'    => 'logo.svg',
+                            'options' => [
+                                'class'  => 'logo-img',
+                                'width'  => 60,
+                                'height' => 37,
+                                ],
+                            ])
+                        ?>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -66,53 +74,3 @@
             </button>
             <div class="logo"><?php get_default_logo_link(); ?></div>
         </div>
-
-        <?php /*
-        <br>
-
-        <button class="btn btn-primary btn-sm">Submit</button>
-        <button class="btn btn-secondary btn-sm">Submit</button>
-
-        <button class="btn btn-outline-primary btn-sm">Submit</button>
-        <button class="btn btn-outline-secondary btn-sm">Submit</button>
-
-        <br><br>
-
-        <button class="btn btn-primary">Submit</button>
-        <button class="btn btn-secondary">Submit</button>
-
-        <button class="btn btn-outline-primary">Submit</button>
-        <button class="btn btn-outline-secondary">Submit</button>
-
-        <br><br>
-
-        <button class="btn btn-primary btn-lg">Submit</button>
-        <button class="btn btn-secondary btn-lg">Submit</button>
-
-        <button class="btn btn-outline-primary btn-lg">Submit</button>
-        <button class="btn btn-outline-secondary btn-lg">Submit</button>
-
-        <br><br>
-
-        <button class="btn btn-primary btn-block btn-sm">Submit</button>
-        <button class="btn btn-secondary btn-block btn-sm">Submit</button>
-
-        <button class="btn btn-outline-primary btn-block btn-sm">Submit</button>
-        <button class="btn btn-outline-secondary btn-block btn-sm">Submit</button>
-
-        <br>
-
-        <button class="btn btn-primary btn-block">Submit</button>
-        <button class="btn btn-secondary btn-block">Submit</button>
-
-        <button class="btn btn-outline-primary btn-block">Submit</button>
-        <button class="btn btn-outline-secondary btn-block">Submit</button>
-
-        <br>
-
-        <button class="btn btn-primary btn-block btn-lg">Submit</button>
-        <button class="btn btn-secondary btn-block btn-lg">Submit</button>
-
-        <button class="btn btn-outline-primary btn-block btn-lg">Submit</button>
-        <button class="btn btn-outline-secondary btn-block btn-lg">Submit</button>
-        */ ?>
