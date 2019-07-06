@@ -1,4 +1,18 @@
+%button-style {
+    @extend .btn;
+    @extend .btn-outline-secondary;
+}
+
+%btn-outline-primary {
+    @extend .btn;
+    @extend .btn-outline-primary;
+}
+
 .woocommerce {
+    a.added_to_cart {
+        @extend %btn-outline-primary;
+    }
+
     input.input-text {
         min-height: $inputFieldMinHeight;
         padding-top: 0;
@@ -18,7 +32,6 @@
 
             &.alt {
                 @extend %button-style;
-                @extend %button-style-pseudo;
 
                 &.disabled,
                 &.disabled:hover,
@@ -37,6 +50,8 @@
     button,
     input {
         &.button {
+            @extend %button-style;
+
             &,
             &.disabled,
             &.disabled:hover,
@@ -44,12 +59,15 @@
             &:disabled:hover,
             &:disabled[disabled],
             &:disabled[disabled]:hover {
-                @extend %button-style;
+                //@extend %button-style;
             }
 
             &.alt {
                 @extend %button-style;
-                @extend %button-style-pseudo;
+
+                &:hover {
+                    background-color: $themeColorTwo;
+                }
 
                 &.disabled,
                 &.disabled:hover,

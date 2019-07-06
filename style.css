@@ -7719,6 +7719,9 @@ form fieldset {
     width: 100%;
     margin-bottom: 10px; }
 
+textarea {
+  font-family: inherit; }
+
 .is-mobile input,
 .is-mobile select {
   -webkit-appearance: none;

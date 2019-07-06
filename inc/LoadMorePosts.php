@@ -139,7 +139,7 @@ if (!function_exists('bw_load_more')) {
         $total = isset($wp_query->max_num_pages) ? intval($wp_query->max_num_pages) : 1;
 
         $output = sprintf(
-            '<button class="button-medium js-load-more" type="button">%s</button>',
+            '<button class="btn btn-outline-secondary js-load-more" type="button">%s</button>',
             __('Load more posts...', 'brainworks')
         );
 
