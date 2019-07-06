@@ -104,7 +104,7 @@ if (!class_exists('LoadMorePosts')) {
                                         <p>' . get_the_excerpt() . '</p>
                                     </header>
                                     <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
-                                    <a class="button-small" href="' . get_permalink() . '">' . __('Continue reading', 'brainworks') . '<i class="glyphicon glyphicon-arrow-right"></i></a>
+                                    <a class="btn btn-outline-secondary" href="' . get_permalink() . '">' . __('Continue reading', 'brainworks') . '<i class="glyphicon glyphicon-arrow-right"></i></a>
                                 </div>
                             </article>
                         </div>

@@ -1,7 +1,7 @@
 $theme-colors: () !default;
 $theme-colors: map-merge((
-    'primary': #007bff,
-    'secondary': #28a745,
+    'primary': $themeColorOne,
+    'secondary': $themeColorTwo,
 ), $theme-colors);
 
 $yiq-contrasted-threshold: 150 !default;
@@ -26,7 +26,7 @@ $yiq-text-light: #fff !default;
     }
 }
 
-$btn-enable-rounded: true !default;
+$btn-enable-rounded: false !default;
 $btn-enable-shadows: false !default;
 $btn-enable-gradients: false !default;
 
@@ -140,7 +140,10 @@ fieldset:disabled a.btn {
             background-color: $background;
         }
         border-color: $border;
-        box-shadow: $btn-box-shadow;
+
+        @if($btn-enable-shadows) {
+            box-shadow: $btn-box-shadow;
+        }
 
         &:hover {
             color: color-yiq($hover-background);
@@ -289,10 +292,61 @@ fieldset:disabled a.btn {
     }
 }
 
-[type="submit"],
-[type="reset"],
-[type="button"] {
+[type='submit'],
+[type='reset'],
+[type='button'] {
     &.btn-block {
         width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .btn {
+        padding: 6px 12px;
+        font-size: 15px;
+    }
+
+    .btn-sm {
+        padding: 4px 8px;
+        font-size: 13px;
+    }
+
+    .btn-lg {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+
+    .btn-sm {
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+
+    .btn-lg {
+        padding: 6px 14px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 544px) {
+    .btn {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .btn-sm {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+
+    .btn-lg {
+        padding: 6px 14px;
+        font-size: 14px;
     }
 }

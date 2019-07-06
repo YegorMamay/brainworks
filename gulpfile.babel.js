@@ -56,10 +56,7 @@ gulp.task('sass', () => {
             linefeed: 'crlf',
             sourceComments: false,
         }).on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 4 versions'],
-            cascade: false
-        }))
+        .pipe(autoprefixer({cascade: false, grid: 'autoplace'}))
         // .pipe(sourcemaps.write('/'))
         .pipe(gulp.dest('./'));
 });

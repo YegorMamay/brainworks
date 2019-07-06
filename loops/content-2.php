@@ -32,7 +32,7 @@
                     </footer>
                     */ ?>
                             <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
-                            <a class="button-small"
+                            <a class="btn btn-outline-secondary btn-sm"
                                href="<?php echo get_permalink(); ?>"><?php _e('Continue reading', 'brainworks') ?> <i
                                         class="glyphicon glyphicon-arrow-right"></i></a>
                         </div>

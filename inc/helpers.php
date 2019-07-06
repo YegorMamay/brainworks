@@ -365,10 +365,32 @@ if (!function_exists('get_default_logo_link')) {
     /**
      * Display site logo
      *
+     * @param array $args
      * @return void
      */
-    function get_default_logo_link()
+    function get_default_logo_link($args = [])
     {
+	    $defaults = [
+		    'name'    => 'logo.svg',
+		    'options' => [
+			    'class'  => 'logo-img',
+			    'width'  => null,
+			    'height' => null,
+		    ]
+	    ];
+
+	    $args = wp_parse_args( $args, $defaults );
+
+	    $attr = [];
+
+	    foreach ( $args['options'] as $name => $value ) {
+		    if ( empty( $value ) ) continue;
+
+		    $attr[] = sprintf( '%s="%s"', $name, $value );
+	    }
+
+	    $attr = implode( ' ', $attr );
+
         $desc = sprintf('<span class="logo-desc screen-reader-text">%s</span>', get_bloginfo('description'));
 
         if (has_custom_logo()) {
@@ -378,9 +400,9 @@ if (!function_exists('get_default_logo_link')) {
 
         } else {
 
-            $file = get_template_directory_uri() . '/assets/img/logo.png';
+            $file = get_template_directory_uri() . '/assets/img/' . $args['name'];
 
-            $img = sprintf('<img class="logo-img" src="%s" alt="%s">', esc_url($file), get_bloginfo('name'));
+            $img = sprintf('<img src="%s" alt="%s" %s>', esc_url($file), get_bloginfo('name'), $attr);
 
             $link = sprintf('<a class="logo-link" href="%s">%s</a>', esc_url(home_url('/')), $img);
 

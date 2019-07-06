@@ -28,7 +28,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "plugins/slick";
 
 // BOOTSTRAP
-//@import "bootstrap/bootstrap-buttons";
+@import "bootstrap/bootstrap-buttons";
 @import "bootstrap/bootstrap-embded";
 @import "bootstrap/bootstrap-grid";
 @import "bootstrap/bootstrap-tables";
@@ -45,7 +45,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/scroll-top";
 @import "elements/forms";
 //@import "elements/buttons";
-@import "elements/buttons-2";
+//@import "elements/buttons-2";
 @import "elements/links";
 @import "elements/pagination";
 @import "elements/tables";
@@ -63,9 +63,9 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/footer";
 
 ::selection {
-    background-color: $selectionBgColor;
-    color: $selectionFontColor;
     text-shadow: none;
+    color: $selectionFontColor;
+    background-color: $selectionBgColor;
 }
 
 html {
@@ -78,8 +78,8 @@ html {
     }
 
     &,
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         box-sizing: inherit;
     }
 }
@@ -90,13 +90,15 @@ body {
 }
 
 body {
-    position: relative;
     margin: 0;
     min-width: 320px;
-    background-color: $bodyBgColor;
+    position: relative;
     color: $bodyFontColor;
-    font-family: $fontFamilyTwo;
-    font-weight: 400;
+    font: 400 16px/1.5 $fontFamilyTwo;
+    background-color: $bodyBgColor;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper {
@@ -109,8 +111,8 @@ body {
     }
 }
 
-strong,
-b {
+b,
+strong {
     font-weight: bold;
 }
 
@@ -126,9 +128,9 @@ img {
 }
 
 .svg-icon {
+    max-width: 100%;
     display: inline-block;
     vertical-align: middle;
-    max-width: 100%;
     @extend %smooth_animation;
 }
 
@@ -140,7 +142,7 @@ img {
     margin-right: auto;
     @extend %clearfix;
 
-    @media only screen and (min-width: 1200px) {
+    @media (min-width: 1200px) {
         width: 1170px;
     }
 }
@@ -160,13 +162,7 @@ img {
     height: 70vh;
     background: image-url('404.png') no-repeat center center;
 
-    //xs 544
-    @media #{$mobile} {
-        background: none;
-    }
-
-    //sm 545 - 768
-    @media #{$tablet} {
-        background: none;
+    @media (max-width: 768px) {
+        background-image: none;
     }
 }

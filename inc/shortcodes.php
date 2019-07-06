@@ -287,7 +287,7 @@ if (!function_exists('bw_last_posts')) {
                                     ' . $post['post_excerpt'] . '
                                 </p>
                                 <br />
-                                <a href="' . $permalink . '" class="button-small button-inverse">
+                                <a href="' . $permalink . '" class="btn btn-outline-secondary btn-sm">
                                     ' . $atts['button_title'] . '
                                 </a>
                             </div>';
@@ -358,7 +358,7 @@ if (!function_exists('bw_advert_shortcode')) {
 
                 $excerpt = sprintf('<div class="%s-excerpt">%s</div>', $basic_class, get_the_excerpt());
 
-                $btn = sprintf('<div class="text-right"><a class="button-small %s-link" href="%s">%s</a></div>',
+                $btn = sprintf('<div class="text-right"><a class="btn btn-outline-secondary btn-sm %s-link" href="%s">%s</a></div>',
                     $basic_class, get_the_permalink(), __('Continue reading', 'brainworks')
                 );
 
