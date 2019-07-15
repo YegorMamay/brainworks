@@ -526,18 +526,46 @@ if (!function_exists('sanitize_background_setting')) {
     }
 }
 
-if (!function_exists("the_auth_button")) {
+if (!function_exists('the_auth_button')) {
     /**
-     * @param $login_page_url Url to auth page
+     * @param string $login_page_url Url to auth page
      * @return void
      */
-    function the_auth_button ($login_page_url = "/auth") {
+    function the_auth_button ($login_page_url = '/auth') {
         $link = $login_page_url;
-        $text = __("Login", "brainworks");
+        $text = __('Login', 'brainworks');
         if (get_auth_session()) {
-            $link = "/wp-json/api/auth/logout";
-            $text = __("Logout", "brainworks");
+            $link = '/wp-json/api/auth/logout';
+            $text = __('Logout', 'brainworks');
         }
         echo sprintf('<a href="%s" class="button-medium">%s</a>', $link, $text);
     }
+}
+
+if ( ! function_exists( 'woocommerce_cart' ) ) {
+	/**
+	 * Add Cart icon and count to header if WC is active
+	 */
+	function woocommerce_cart() {
+		/**
+		 * @var WooCommerce $wc
+		 * @var WC_Cart $cart
+		 */
+		$wc = WC();
+		$cart = $wc->cart;
+
+		$cart_url   = esc_url( wc_get_cart_url() );
+		$cart_count = $cart->get_cart_contents_count();
+		$cart_total = $cart->get_cart_total();
+
+		$title = __( 'View your shopping cart', 'brainworks' );
+
+		$count = sprintf('<span class="cart-contents-count">%s</span>', $cart_count);
+
+		$link = sprintf( '<a class="cart-contents" href="%s" title="%s">%s</a>',
+			$cart_url, $title, $count
+		);
+
+		echo $link;
+	}
 }

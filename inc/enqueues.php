@@ -53,9 +53,10 @@ function bw_wp_default_styles($styles)
 {
     $editor = get_option('classic-editor-replace');
 
-    if ($editor === 'classic') {
-        //$styles->remove('wp-block-library-theme');
-        $styles->remove('wp-block-library');
+    if (empty($editor) || $editor === 'classic') {
+	    $styles->remove('wp-block-library-theme');
+	    $styles->remove('wp-block-library');
+	    $styles->remove('wp-blocks');
     }
 }
 

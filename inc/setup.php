@@ -248,3 +248,22 @@ function bw_breadcrumbs_localization($l10n)
 
 add_filter('kama_breadcrumbs_default_loc', 'bw_breadcrumbs_localization', 10, 1);
 
+/**
+ * Show cart contents / total Ajax
+ */
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ) ?>" title="<?php _e( 'View your shopping cart', 'brainworks' ) ?>">
+		<span class="cart-contents-count"><?php echo WC()->cart->get_cart_contents_count() ?></span>
+	</a>
+	<?php
+	$fragments['a.cart-contents'] = ob_get_clean();
+
+	return $fragments;
+}
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
