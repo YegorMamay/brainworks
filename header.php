@@ -16,54 +16,43 @@
 
 <?php wp_body_open(); ?>
 <div class="wrapper">
+    <div class="pre-header container">
+        <?php echo do_shortcode('[bw-phone]');?>
 
-    <div class="preheader">
-        <div class="container">
-           <div class="row">
-               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <?php echo do_shortcode('[bw-phone]');?>
-               </div>
-               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                   <?php
-                        $address = get_theme_mod('bw_additional_address');
-                        if (!empty($address)) { ?>
-                        <span>
-                            <b><?php _e('Address', 'brainworks'); ?>:</b>
-                            <?php echo esc_html($address); ?>
-                        </span>
-                    <?php } ?>
+        <?php
+            $address = get_theme_mod('bw_additional_address');
+            if (!empty($address)) { ?>
+                <span>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <?php echo esc_html($address); ?>
+                </span>
+        <?php } ?>
 
-               </div>
-               <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                    <?php
-                        $email = get_theme_mod('bw_additional_email');
-                        if (!empty($email)) { ?>
-                        <a href="mailto:<?php echo esc_attr($email); ?>">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <?php echo esc_html($email); ?>
-                        </a>
-                    <?php } ?>
-               </div>
-               <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                    <?php echo do_shortcode('[bw-social]'); ?>
-               </div>
-               <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-                    <?php if (function_exists('pll_the_languages')) { ?>
-                        <ul class="lang">
-                            <?php pll_the_languages(array(
-                                'show_flags' => 1,
-                                'show_names' => 0,
-                                'hide_if_empty' => 0,
-                                'display_names_as' => 'name'
-                            )); ?>
-                        </ul>
-                    <?php } ?>
-               </div>
-               <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-                    <i class="fal fa-shopping-cart"></i>
-                    <?php if ( class_exists( 'WooCommerce' ) ) woocommerce_cart() ?>
-               </div>
-           </div>
+        <?php
+            $email = get_theme_mod('bw_additional_email');
+            if (!empty($email)) { ?>
+            <a href="mailto:<?php echo esc_attr($email); ?>">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <?php echo esc_html($email); ?>
+            </a>
+        <?php } ?>
+
+        <?php echo do_shortcode('[bw-social]'); ?>
+
+        <?php if (function_exists('pll_the_languages')) { ?>
+            <ul class="lang">
+                <?php pll_the_languages(array(
+                    'show_flags' => 1,
+                    'show_names' => 0,
+                    'hide_if_empty' => 0,
+                    'display_names_as' => 'name'
+                )); ?>
+            </ul>
+        <?php } ?>
+
+        <div class="woo-cart">
+            <i class="far fa-shopping-cart"></i>
+            <?php if ( class_exists( 'WooCommerce' ) ) woocommerce_cart() ?>
         </div>
     </div>
 

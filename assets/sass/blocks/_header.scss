@@ -1,3 +1,9 @@
+.pre-header {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
 .page-header {
     padding: 10px 0;
     background-color: $headerBgColor;

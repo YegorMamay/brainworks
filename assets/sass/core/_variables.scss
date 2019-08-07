@@ -36,16 +36,16 @@ $menuFontColor: #fff;
 $menuFontColorActive: #fff;
 
 $navArrowColor: #fff;
-$navHeaderMobileBGColor: $themeColorTwo;
+$navHeaderMobileBGColor: $themeColorOne;
 $navHamburgerMobileColor: #fff;
 
-$menuMobileBGColor: $themeColorTwo;
-$menuMobileSubMenuBGColor: lighten($themeColorTwo, 10%);
+$menuMobileBGColor: $themeColorOne;
+$menuMobileSubMenuBGColor: lighten($themeColorOne, 10%);
 $menuMobileLinkFontSize: 16px;
 $menuMobileSubMenuLinkFontSize: 14px;
 $menuMobileTextColor: #fff;
 $menuMobileSubMenuTextColor: $menuMobileTextColor;
-$menuMobileSubMenuBGOnHover: $themeColorTwo;
+$menuMobileSubMenuBGOnHover: $themeColorOne;
 $menuMobileSubMenuTextColorOnHover: #fff;
 
 $hamburger-offset: 8px;

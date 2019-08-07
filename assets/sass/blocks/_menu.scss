@@ -1,10 +1,10 @@
 .nav {
     display: block;
     position: relative;
-    margin: 10px 15px;
+    margin: 10px 0;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
-    border-radius: 4px;
     text-align: center;
+    background: $menuBgColor;
 
     .menu {
         &,
@@ -17,6 +17,10 @@
             display: inline-block;
             vertical-align: middle;
             padding: 5px;
+
+            &:hover {
+                background: $menuBgColorActive;
+            }
 
             .menu-item-has-children-arrow {
                 display: none;
@@ -63,6 +67,7 @@
 
             &-has-children {
                 position: relative;
+                padding-right: 15px;
                 
                 &:hover {
                     &::after {
@@ -74,10 +79,15 @@
                     content: "";
                     position: absolute;
                     top: 21px;
-                    right: 1px;
-                    border: 5px solid #000;
-                    border-color: #000 transparent transparent transparent;
+                    right: 8px;
+                    border: 5px solid $menuFontColor;
+                    border-color: $menuFontColor transparent transparent transparent;
                 }
+            }
+
+            &-current {
+                border-bottom: 5px solid $menuBgColorActive;
+                padding-bottom: 0px;
             }
 
             .no-touch &:hover,
@@ -101,7 +111,7 @@
         &-link {
             display: block;
             padding: 8px 10px;
-            color: #000;
+            color: $menuFontColor;
             font-size: 16px;
             line-height: 1.3;
             text-align: center;
@@ -118,7 +128,7 @@
         left: 0;
         z-index: 33;
         width: 250px;
-        background-color: #fff;
+        background-color: $menuBgColorActive;
         visibility: hidden;
         text-align: left;
         opacity: 0;
@@ -144,8 +154,8 @@
                     position: absolute;
                     top: 12px;
                     right: 5px;
-                    border: 5px solid #000;
-                    border-color: transparent transparent transparent #000;
+                    border: 5px solid $menuFontColor;
+                    border-color: transparent transparent transparent $menuFontColor;
                     transition: border-color .3s ease-in-out;
                 }
             }
@@ -170,7 +180,7 @@
         &-link {
             display: block;
             padding: 9px 15px;
-            color: #000;
+            color: $menuFontColor;
             font-size: 14px;
             line-height: 1.3;
             text-decoration: none;
