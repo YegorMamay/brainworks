@@ -14,7 +14,7 @@
 </head>
 <body <?php body_class(); ?> id="top">
 
-<?php wp_body_open(); ?>
+
 <div class="wrapper">
     <div class="pre-header container">
         <?php echo do_shortcode('[bw-phone]');?>

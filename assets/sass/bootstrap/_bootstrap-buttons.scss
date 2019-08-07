@@ -26,7 +26,7 @@ $yiq-text-light: #fff !default;
     }
 }
 
-$btn-enable-rounded: false !default;
+$btn-enable-rounded: true !default;
 $btn-enable-shadows: false !default;
 $btn-enable-gradients: false !default;
 
@@ -58,9 +58,9 @@ $btn-link-disabled-color: #6c757d !default;
 
 $btn-block-spacing-y: 8px !default;
 
-$btn-border-radius: 4px !default;
-$btn-border-radius-lg: 5px !default;
-$btn-border-radius-sm: 3px !default;
+$btn-border-radius: $borderRadius;
+$btn-border-radius-lg: $borderRadius;
+$btn-border-radius-sm: $borderRadius;
 
 $btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
