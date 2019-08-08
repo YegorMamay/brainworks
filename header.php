@@ -14,7 +14,7 @@
 </head>
 <body <?php body_class(); ?> id="top">
 
-
+<?php wp_body_open(); ?>
 <div class="wrapper">
     <div class="pre-header container">
         <?php echo do_shortcode('[bw-phone]');?>
@@ -76,7 +76,7 @@
                     
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <button type="button" class="btn btn-outline-secondary center-block <?php the_lang_class('js-call-back'); ?>">
+                    <button type="button" class="btn btn-secondary center-block <?php the_lang_class('js-call-back'); ?>">
                         <?php _e('Call back', 'brainworks'); ?>
                     </button>
                 </div>

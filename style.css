@@ -11163,8 +11163,38 @@ img {
 }
 
 .page-404 {
-  height: 70vh;
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 90vh;
   background: url("assets/img/404.png") no-repeat center center;
+}
+.page-404 .contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 544px) {
+  .page-404 .contain {
+    display: block;
+  }
+  .page-404 .contain div {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 545px) and (max-width: 768px) {
+  .page-404 .contain {
+    display: block;
+  }
+  .page-404 .contain div {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 768px) {
   .page-404 {
