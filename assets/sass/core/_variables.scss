@@ -2,7 +2,7 @@ $debug: false !default;
 $image-url-path: "assets/img/" !default;
 $font-url-path: "assets/fonts/" !default;
 
-$borderRadius: 0px;
+$borderRadius: 0;
 $shadow: 0 0 10px rgba(#000, .2);
 
 // BRAND
@@ -132,3 +132,21 @@ $infoIconFontColor: #1e85be;
 // message
 $messageBorderTopColor: $themeColorTwo;
 $messageIconFontColor: $themeColorTwo;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+) !default;

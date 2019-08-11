@@ -121,6 +121,19 @@
     }
 }
 
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    $min: if($min != 0, $min, null);
+
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
 %smooth_animation {
     @include smooth_animation;
 }
