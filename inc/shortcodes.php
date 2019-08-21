@@ -307,20 +307,18 @@ if (!function_exists('bw_advert_shortcode')) {
     /**
      * Add Shortcode Advert Post List
      *
-     * @param $atts
+     * @param array $atts
      *
      * @return string
      */
-    function bw_advert_shortcode($atts)
+    function bw_advert_shortcode($atts = [])
     {
         // Attributes
-        $atts = shortcode_atts(
-            array(
-                'count' => 3,
-                'class' => 'front-news'
-            ),
-            $atts
-        );
+        $atts = shortcode_atts([
+            'count' => 3,
+            'class' => 'front-news',
+            'category' => null,
+        ], $atts);
 
         $output = '';
 
@@ -336,6 +334,10 @@ if (!function_exists('bw_advert_shortcode')) {
                 ),
             )
         );
+
+        if (!is_null($atts['category'])) {
+            $args['category__in'] = $atts['category'];
+        }
 
         $query = new WP_Query($args);
 

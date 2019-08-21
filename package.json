@@ -9,9 +9,9 @@
         "@babel/register": "^7.5.5",
         "babel-eslint": "^10.0.2",
         "browser-sync": "^2.26.7",
-        "eslint": "^6.1.0",
+        "eslint": "^6.2.1",
         "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^6.1.0",
+        "gulp-autoprefixer": "^7.0.0",
         "gulp-babel": "^8.0.0",
         "gulp-clean-css": "^4.2.0",
         "gulp-plumber": "^1.2.1",
@@ -22,7 +22,7 @@
         "gulp-svgstore": "^7.0.1",
         "gulp-uglify": "^3.0.2",
         "gulp-zip": "^5.0.0",
-        "husky": "^3.0.3"
+        "husky": "^3.0.4"
     },
     "babel": {
         "presets": [

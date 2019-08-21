@@ -6,8 +6,8 @@
         console.info('The site developed by BRAIN WORKS digital agency');
         console.info('Сайт разработан маркетинговым агентством BRAIN WORKS');
 
-        const w = $(w);
-        const d = $(d);
+        const $w = $(w);
+        const $d = $(d);
         const html = $('html');
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -30,10 +30,10 @@
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
         // On Copy
-        d.on('copy', addLink);
+        $d.on('copy', addLink);
 
-        w.on('resize', () => {
-            if (w.innerWidth >= 630) {
+        $w.on('resize', () => {
+            if ($w.innerWidth() >= 630) {
                 removeAllStyles($('.js-menu'));
             }
         });
