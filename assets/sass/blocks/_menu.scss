@@ -20,6 +20,10 @@
 
             &:hover {
                 background: $menuBgColorActive;
+
+                a {
+                    color: $menuFontColorActive;
+                }
             }
 
             .menu-item-has-children-arrow {

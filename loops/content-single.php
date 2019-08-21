@@ -7,7 +7,7 @@
 
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
     <article id="post_<?php the_ID() ?>" <?php post_class() ?>>
-        <header>
+        <div class="header">
             <h1 class="single-title"><?php the_title() ?></h1>
             <?php /*
             <h5>
@@ -19,7 +19,7 @@
                 <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
             </p>
             */ ?>
-        </header>
+        </div>
         <section>
             <?php the_post_thumbnail('full'); ?>
             <?php the_content() ?>
