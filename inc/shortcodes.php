@@ -322,21 +322,21 @@ if (!function_exists('bw_advert_shortcode')) {
 
         $output = '';
 
-        $args = array(
+        $args = [
             'post_type' => 'post',
             'post_status' => 'publish',
             'posts_per_page' => $atts['count'],
-            'meta_query' => array(
+            'meta_query' => [
                 'relation' => 'OR',
-                array(
+                [
                     'key' => 'on-front',
                     'value' => 'yes',
-                ),
-            )
-        );
+                ],
+            ]
+        ];
 
         if (!is_null($atts['category'])) {
-            $args['category__in'] = $atts['category'];
+            $args['category__in'] = explode(',', $atts['category']);
         }
 
         $query = new WP_Query($args);
@@ -351,7 +351,7 @@ if (!function_exists('bw_advert_shortcode')) {
                 $thumbnail = has_post_thumbnail() ? sprintf(
                     '<figure class="%s-preview"><a href="%s">%s</a></figure>',
                     $basic_class, get_the_permalink(),
-                    get_the_post_thumbnail(null, 'medium', array('class' => $basic_class . '-thumbnail'))
+                    get_the_post_thumbnail(null, 'medium', ['class' => $basic_class . '-thumbnail'])
                 ) : '';
 
                 $headline = sprintf('<h3 class="%s-headline"><a href="%s">%s</a></h3>',
@@ -364,13 +364,13 @@ if (!function_exists('bw_advert_shortcode')) {
                     $basic_class, get_the_permalink(), __('Continue reading', 'brainworks')
                 );
 
-	            $box = sprintf( '<div class="%s-box">%s <div class="%s-inner">%s %s %s</div></div>',
-		            $basic_class, $thumbnail, $basic_class, $headline, $excerpt, $btn
-	            );
+                $box = sprintf( '<div class="%s-box">%s <div class="%s-inner">%s %s %s</div></div>',
+                    $basic_class, $thumbnail, $basic_class, $headline, $excerpt, $btn
+                );
 
                 $item = sprintf('<section id="post-%s" class="%s">%s</section>', get_the_ID(),
-                    join(' ', get_post_class(array('col-md-4', $basic_class . '-item'))),
-	                $box
+                    join(' ', get_post_class(['col-md-4', $basic_class . '-item'])),
+                    $box
                 );
 
                 $items .= $item;
