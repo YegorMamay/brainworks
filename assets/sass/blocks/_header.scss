@@ -102,6 +102,24 @@
 
         a {
             display: block;
+
+
+            &:after {
+                content: "/";
+                margin-left: 15px;
+            }
+
+            img {
+                height: 15px;
+            }
+        }
+    }
+
+    &-item:last-child {
+        a {
+            &:after {
+                display: none;
+            }
         }
     }
 }

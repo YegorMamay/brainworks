@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div class="container">
 
 <div class="page-404">
   <div class="contain">
@@ -20,4 +21,5 @@
   </div>
 </div>
 
+</div>
 <?php get_footer(); ?>

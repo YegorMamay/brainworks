@@ -102,7 +102,7 @@
         </nav>
     <?php } ?>
 
-    <div class="container js-container">
+    <div class="js-container">
 
         <div class="nav-mobile-header">
             <button class="hamburger js-hamburger" type="button" tabindex="0">

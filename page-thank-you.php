@@ -19,9 +19,11 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div class="container">
 
 <?php get_template_part('loops/content', 'page'); ?>
 
+</div><!-- /.container -->
 <?php wp_footer(); ?>
 
 </body>

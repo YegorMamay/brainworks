@@ -7,8 +7,9 @@
 
 <?php get_header(); ?>
 
-<div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+<div class="sp-xs-2"></div>
 
+<div class="container">
 <div class="row">
     <div class="col-xs-12 col-md-12">
         <?php if (!is_front_page() && function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
@@ -28,5 +29,6 @@
         <?php endif; ?>
     </div>
 </div><!-- /.row -->
+</div><!-- /.container -->
 
 <?php get_footer(); ?>

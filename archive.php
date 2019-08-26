@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
             <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>

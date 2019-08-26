@@ -4,7 +4,7 @@
 
 <h1 class="page-name"><?php single_post_title(); ?></h1>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
             <?php get_template_part('loops/content-2', get_post_format()); ?>

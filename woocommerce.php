@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<div class="container">
 <div class="row">
     <?php if (!is_single()) : ?>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -10,5 +11,6 @@
         <?php woocommerce_content(); ?>
     </div>
 </div><!-- /.row -->
+</div><!-- /.container -->
 
 <?php get_footer(); ?>

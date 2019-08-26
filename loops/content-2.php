@@ -1,7 +1,7 @@
 <?php if (have_posts()): ?>
     <div class="js-ajax-posts">
         <?php while (have_posts()): the_post(); ?>
-            <div class="container-fluid">
+
                 <div class="row">
                     <article id="post_<?php the_ID() ?>">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -38,7 +38,7 @@
                         </div>
                     </article>
                 </div>
-            </div>
+
             <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
             <hr>
             <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
