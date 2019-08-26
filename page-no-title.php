@@ -2,22 +2,21 @@
 /**
  * Template Name: Page Without Title
  **/
+?>
 
-get_header();
+<?php get_header(); ?>
+<div class="container">
 
-if (have_posts()) :
-    while (have_posts()) : the_post();
+<?php if (have_posts()): while (have_posts()): the_post(); ?>
+    <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 
-        if (function_exists('kama_breadcrumbs')) {
-            kama_breadcrumbs(' » ');
-        }
+    <?php the_content() ?>
+    <?php wp_link_pages(); ?>
 
-        the_content();
-        wp_link_pages();
+<?php endwhile;
+else: ?>
+    <?php get_template_part('loops/content', 'none'); ?>
+<?php endif; ?>
 
-    endwhile;
-else:
-    get_template_part('loops/content', 'none');
-endif;
-
-get_footer();
+</div><!-- /.container -->
+<?php get_footer(); ?>
