@@ -9,9 +9,11 @@
 
 <?php get_template_part('loops/content', 'page'); ?>
 
-<a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-secondary btn-lg">
-    <?php _e('Back to the homepage', 'brainworks'); ?>
-</a>
+<div class="text-center">   
+    <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-secondary btn-lg">
+        <?php _e('Back to the homepage', 'brainworks'); ?>
+    </a>
+</div>
 
 </div><!-- /.container -->
 <?php get_footer(); ?>
