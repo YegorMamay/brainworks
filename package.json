@@ -8,7 +8,6 @@
         "@babel/preset-env": "^7.6.2",
         "@babel/register": "^7.6.2",
         "babel-eslint": "^10.0.3",
-        "browser-sync": "^2.26.7",
         "eslint": "^6.5.1",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^7.0.0",
@@ -21,7 +20,6 @@
         "gulp-svgmin": "^2.2.0",
         "gulp-svgstore": "^7.0.1",
         "gulp-uglify": "^3.0.2",
-        "gulp-zip": "^5.0.0",
         "husky": "^3.0.8"
     },
     "babel": {
