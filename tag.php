@@ -9,7 +9,7 @@
 <hr>
 <div class="sp-xs-2"></div>
 
-<?php get_template_part('loops/content-2', get_post_format()); ?>
+<?php get_template_part('loops/content', get_post_format()); ?>
 
 <?php get_footer(); ?>
 

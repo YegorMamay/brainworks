@@ -21,6 +21,8 @@ $menu_line-height: 22px;
 h1, h2, h3, h4, h5, h6, h1.hero-title {
     color: $titleFontColor;
     font-family: $fontFamilyOne;
+    line-height: 1.2;
+    font-weight: 700;
 
     a {
         color: $titleFontColor;
@@ -34,6 +36,8 @@ h1, h2, h3, h4, h5, h6, h1.hero-title {
 .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $titleFontColor;
     font-family: $fontFamilyOne;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 h1.hero-title {

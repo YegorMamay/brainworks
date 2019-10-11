@@ -94,10 +94,10 @@ if (!class_exists('LoadMorePosts')) {
                     <div class="container-fluid">
                         <div class="row">
                             <article id="post-' . get_the_ID() . '">
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                     <section>' . get_the_post_thumbnail(null, 'large') . '</section>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                     <header>
                                         <h3><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>
                                         <div class="sp-xs-1 sp-sm-1 sp-md-1 sp-lg-1 sp-xl-1"></div>

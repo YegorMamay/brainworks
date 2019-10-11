@@ -59,8 +59,10 @@
         display: block;
         text-align: center;
         text-decoration: none;
+        color: $themeColorTwo;
 
         &:hover {
+            color: lighten($themeColorTwo, 10%);
         }
     }
 }

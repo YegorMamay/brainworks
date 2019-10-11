@@ -15,7 +15,7 @@
 <body <?php body_class(); ?> id="top">
 
 <?php wp_body_open(); ?>
-<div class="wrapper">
+<div class="wrapper js-container"><!--Do not delete!-->
     <div class="pre-header container">
         <?php echo do_shortcode('[bw-phone]');?>
 
@@ -59,7 +59,7 @@
     <header class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <div class="logo">
 	                    <?php get_default_logo_link([
                             'name'    => 'logo.svg',
@@ -72,15 +72,15 @@
                         ?>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <button type="button" class="btn btn-secondary center-block <?php the_lang_class('js-call-back'); ?>">
                         <?php _e('Call back', 'brainworks'); ?>
                     </button>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <?php get_search_form(); ?>
                 </div>
             </div>
@@ -102,13 +102,11 @@
         </nav>
     <?php } ?>
 
-    <div class="js-container">
-
-        <div class="nav-mobile-header">
-            <button class="hamburger js-hamburger" type="button" tabindex="0">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-            </button>
-            <div class="logo"><?php get_default_logo_link(); ?></div>
-        </div>
+    <div class="nav-mobile-header">
+        <button class="hamburger js-hamburger" type="button" tabindex="0">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+        <div class="logo"><?php get_default_logo_link(); ?></div>
+    </div>

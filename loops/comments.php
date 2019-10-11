@@ -42,7 +42,7 @@ endif;
 <?php if (comments_open()) : ?>
     <section id="respond">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
                 <?php /* <h3><?php comment_form_title(__('Your feedback', 'brainworks'), __('Responses to %s', 'brainworks')); ?></h3> */ ?>
                 <p><?php cancel_comment_reply_link(); ?></p>
@@ -89,7 +89,7 @@ endif;
                     </p>
 
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
         </div>
 
         <?php comment_id_fields(); ?>

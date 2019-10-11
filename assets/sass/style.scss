@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: brainworks-v4.8.5
+Theme Name: brainworks-v4.8.6
 Theme URI:
 Text Domain: brainworks
 Author: Brain Works
@@ -8,7 +8,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.8.5
+Version: 4.8.6
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
  
@@ -29,10 +29,10 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 // BOOTSTRAP
 @import "bootstrap/bootstrap-buttons";
 @import "bootstrap/bootstrap-embded";
-@import "bootstrap/bootstrap-grid";
+//@import "bootstrap/bootstrap-grid";
 @import "bootstrap/bootstrap-tables";
-//@import "bootstrap/bootstrap-grid-flexbox";
-//@import "bootstrap/bootstrap-flexbox";
+@import "bootstrap/bootstrap-grid-flexbox";
+@import "bootstrap/bootstrap-flexbox";
 
 // PAGES
 @import "pages/single-post";

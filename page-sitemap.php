@@ -11,7 +11,7 @@
 
 <div class="container">
 <div class="row">
-    <div class="col-xs-12 col-md-12">
+    <div class="col-12 col-md-12">
         <?php if (!is_front_page() && function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 
         <?php if (have_posts()): while (have_posts()): the_post(); ?>
