@@ -7,8 +7,8 @@
 
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
     <article id="post_<?php the_ID() ?>" <?php post_class() ?>>
-        <div class="header">
             <h1 class="single-title"><?php the_title() ?></h1>
+            <div class="sp-xs-2"></div>
             <?php /*
             <h5>
                 <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?></span>
@@ -19,16 +19,15 @@
                 <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
             </p>
             */ ?>
-        </div>
         <section>
-            <?php the_post_thumbnail('full'); ?>
+            <!--<?php the_post_thumbnail('full'); ?>-->
             <?php the_content() ?>
             <?php wp_link_pages(); ?>
         </section>
     </article>
-    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+    <div class="sp-xs-2"></div>
     <hr>
-    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+    <div class="sp-xs-2"></div>
     <?php comments_template('/loops/comments.php'); ?>
 <?php endwhile; ?>
 
