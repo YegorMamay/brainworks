@@ -255,7 +255,7 @@ if (!function_exists('bw_last_posts')) {
         $atts = shortcode_atts(
             array(
                 'count' => 3, // Кол-во новостей для отображения
-                'button_title' => __('Читать полностью', 'brainworks') // Текст в ссылке
+                'button_title' => __('Continue reading', 'brainworks') // Текст в ссылке
             ), $atts);
 
         $posts = wp_get_recent_posts(array(
