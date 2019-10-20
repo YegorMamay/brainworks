@@ -3,6 +3,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    background-color: $footerBgColor;
 }
 
 .pre-footer {
@@ -12,9 +13,9 @@
 
 .copyright {
     padding: 14px 0;
-    background-color: $footerBgColor;
-    text-align: center;
     color: $footerFontColor;
+    display: flex;
+    justify-content: space-between;
 
     a {
         color: $footerFontColor;

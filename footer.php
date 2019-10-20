@@ -9,12 +9,13 @@
         </div><!-- .pre-footer end-->
     <?php endif; ?>
 
-    <div class="copyright">
-        <p class="container">
-            <?php _e('Developed by', 'brainworks') ?>
-            <a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a>
-            &copy; <?php echo date('Y'); ?>
-        </p>
+    <div class="container">
+        <div class="copyright">
+            <div class="date">&copy; <?php echo date('Y'); ?>. Все права защищены</div>
+            <div class="developer">
+                <?php _e('Developed by ', 'brainworks') ?><a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a> 
+            </div>
+        </div>
     </div>
 </footer>
 
