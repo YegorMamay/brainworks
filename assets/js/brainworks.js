@@ -166,13 +166,14 @@
         var links = $("a");
         links.each(function(index, element) {
             var $element = $(element), href = $element.attr("href");
-            if (href[0] === "#") {
+            if (href[0] === "#" || href[0] + href[1] === "/#") {
                 $element.on("click", function(e) {
                     e.preventDefault();
-                    var el = $(href);
+                    var adaptiveHref = href[0] === "#" ? href : href.slice(1);
+                    var el = $(adaptiveHref);
                     if (el.length) {
                         $("html, body").animate({
-                            scrollTop: $(href).offset().top
+                            scrollTop: el.offset().top
                         }, animationSpeed);
                     }
                 });

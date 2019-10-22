@@ -377,16 +377,14 @@
 
         links.each((index, element) => {
             const $element = $(element), href = $element.attr('href');
-
-            if (href[0] === '#') {
+            if (href[0] === '#' || (href[0] + href[1]) === '/#') {
                 $element.on('click', (e) => {
                     e.preventDefault();
-
-                    const el = $(href);
-
+                    const adaptiveHref = href[0] === '#' ? href : href.slice(1);
+                    const el = $(adaptiveHref);
                     if (el.length) {
                         $('html, body').animate({
-                            scrollTop: $(href).offset().top
+                            scrollTop: el.offset().top
                         }, animationSpeed);
                     }
                 });
