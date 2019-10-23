@@ -123,6 +123,10 @@ em {
     display: none;
 }
 
+.scrolled-table-wrapper {
+	overflow-x: scroll;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
