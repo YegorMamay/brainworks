@@ -30,8 +30,8 @@ $btn-enable-rounded: true !default;
 $btn-enable-shadows: false !default;
 $btn-enable-gradients: false !default;
 
-$btn-padding-y: 6px !default;
-$btn-padding-x: 12px !default;
+$btn-padding-y: 8px !default;
+$btn-padding-x: 24px !default;
 $btn-font-size: 16px !default;
 $btn-line-height: 1.5 !default;
 
@@ -40,8 +40,8 @@ $btn-padding-x-sm: 8px !default;
 $btn-font-size-sm: ($btn-font-size * .875) !default;
 $btn-line-height-sm: 1.5 !default;
 
-$btn-padding-y-lg: 8px !default;
-$btn-padding-x-lg: 16px !default;
+$btn-padding-y-lg: 10px !default;
+$btn-padding-x-lg: 50px !default;
 $btn-font-size-lg: ($btn-font-size * 1.25) !default;
 $btn-line-height-lg: 1.5 !default;
 
@@ -302,7 +302,7 @@ fieldset:disabled a.btn {
 
 @media (max-width: 1024px) {
     .btn {
-        padding: 6px 12px;
+        padding: 6px 22px;
         font-size: 15px;
     }
 
@@ -312,24 +312,24 @@ fieldset:disabled a.btn {
     }
 
     .btn-lg {
-        padding: 8px 16px;
+        padding: 8px 46px;
         font-size: 18px;
     }
 }
 
 @media (max-width: 768px) {
     .btn {
-        padding: 4px 10px;
+        padding: 5px 18px;
         font-size: 14px;
     }
 
     .btn-sm {
-        padding: 3px 8px;
+        padding: 4px 8px;
         font-size: 12px;
     }
 
     .btn-lg {
-        padding: 6px 14px;
+        padding: 7px 42px;
         font-size: 16px;
     }
 }
@@ -346,7 +346,7 @@ fieldset:disabled a.btn {
     }
 
     .btn-lg {
-        padding: 6px 14px;
+        padding: 6px 38px;
         font-size: 14px;
     }
 }
