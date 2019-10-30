@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-20 09:53+0000\n"
-"PO-Revision-Date: 2019-10-20 10:00+0000\n"
+"PO-Revision-Date: 2019-10-30 21:31+0000\n"
 "Last-Translator: YegorMamay <yegor19.05@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: footer.php:16
 msgid "Developed by "
-msgstr "Разработанно в"
+msgstr "Разработанно в "
 
 #: searchform.php:2
 msgid "Search"
