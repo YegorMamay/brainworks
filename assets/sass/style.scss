@@ -105,9 +105,20 @@ body {
     position: relative;
     overflow-x: hidden;
     min-height: 100%;
+    padding-top: 130px;
 
     @media #{$mobile} {
-        padding-top: 60px;
+        padding-top: 70px;
+    }
+
+    //sm 545 - 768
+    @media #{$tablet} {
+        padding-top: 70px;
+    }
+
+    //md 769 - 1024
+    @media #{$laptop} {
+        padding-top: 70px;
     }
 }
 

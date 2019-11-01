@@ -16,81 +16,28 @@
 
 <?php wp_body_open(); ?>
 <div class="wrapper js-container"><!--Do not delete!-->
-    <div class="pre-header container">
-        <?php echo do_shortcode('[bw-phone]');?>
 
-        <?php
-            $address = get_theme_mod('bw_additional_address');
-            if (!empty($address)) { ?>
-                <span>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <?php echo esc_html($address); ?>
-                </span>
-        <?php } ?>
-
-        <?php
-            $email = get_theme_mod('bw_additional_email');
-            if (!empty($email)) { ?>
-            <a href="mailto:<?php echo esc_attr($email); ?>">
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <?php echo esc_html($email); ?>
-            </a>
-        <?php } ?>
-
-        <?php echo do_shortcode('[bw-social]'); ?>
-
-        <?php if (function_exists('pll_the_languages')) { ?>
-            <ul class="lang">
-                <?php pll_the_languages(array(
-                    'show_flags' => 1,
-                    'show_names' => 0,
-                    'hide_if_empty' => 0,
-                    'display_names_as' => 'name'
-                )); ?>
-            </ul>
-        <?php } ?>
-
-        <div class="woo-cart">
-            <i class="far fa-shopping-cart"></i>
-            <?php if ( class_exists( 'WooCommerce' ) ) woocommerce_cart() ?>
-        </div>
-    </div>
-
-    <header class="page-header">
+    <header class="page-header fixed-to-top">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="row align-items-center">
+                <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     <div class="logo">
 	                    <?php get_default_logo_link([
                             'name'    => 'logo.svg',
                             'options' => [
                                 'class'  => 'logo-img',
-                                'width'  => 60,
-                                'height' => 37,
+                                'width'  => 100,
+                                'height' => 50,
                                 ],
                             ])
                         ?>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <button type="button" class="btn btn-secondary center-block <?php the_lang_class('js-call-back'); ?>">
-                        <?php _e('Call back', 'brainworks'); ?>
-                    </button>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <?php get_search_form(); ?>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <?php if (has_nav_menu('main-nav')) { ?>
-        <nav class="nav js-menu">
-            <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
-            <?php wp_nav_menu(array(
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+        <?php if (has_nav_menu('main-nav')) { ?>
+            <nav class="nav js-menu">
+                <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+                <?php wp_nav_menu(array(
                 'theme_location' => 'main-nav',
                 'container' => false,
                 'menu_class' => 'menu-container',
@@ -99,8 +46,18 @@
                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'depth' => 3
             )); ?>
-        </nav>
-    <?php } ?>
+            </nav>
+        <?php } ?>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <button type="button" class="btn btn-secondary btn-block <?php the_lang_class('js-call-back'); ?>">
+                        <?php _e('Call back', 'brainworks'); ?>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <div class="nav-mobile-header">
         <button class="hamburger js-hamburger" type="button" tabindex="0">

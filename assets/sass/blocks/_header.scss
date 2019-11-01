@@ -1,11 +1,30 @@
-.pre-header {
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-}
-
 .page-header {
     padding: 10px 0;
     background-color: $headerBgColor;
     color: $headerFontColor;
+
+}
+
+.fixed-to-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 33;
+
+    //xs 544
+    @media #{$mobile} {
+        display: none;
+    }
+
+    //sm 545 - 768
+    @media #{$tablet} {
+        display: none;
+    }
+
+    //md 769 - 1024
+    @media #{$laptop} {
+        display: none;
+    }
 }
