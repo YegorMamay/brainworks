@@ -150,3 +150,33 @@ em {
         text-align: center !important;
     }
 }
+
+//sm 545 - 768
+@media #{$tablet} {
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .hide-on-desktop {
+        display: block !important;
+    }
+
+    .center-on-mobile {
+        text-align: center !important;
+    }
+}
+
+//md 769 - 1024
+@media #{$laptop} {
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .hide-on-desktop {
+        display: block !important;
+    }
+
+    .center-on-mobile {
+        text-align: center !important;
+    }
+}

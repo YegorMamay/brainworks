@@ -34,20 +34,20 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-        <?php if (has_nav_menu('main-nav')) { ?>
-            <nav class="nav js-menu">
-                <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
-                <?php wp_nav_menu(array(
-                'theme_location' => 'main-nav',
-                'container' => false,
-                'menu_class' => 'menu-container',
-                'menu_id' => '',
-                'fallback_cb' => 'wp_page_menu',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 3
-            )); ?>
-            </nav>
-        <?php } ?>
+                    <?php if (has_nav_menu('main-nav')) { ?>
+                        <nav class="nav js-menu">
+                            <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+                            <?php wp_nav_menu(array(
+                            'theme_location' => 'main-nav',
+                            'container' => false,
+                            'menu_class' => 'menu-container',
+                            'menu_id' => '',
+                            'fallback_cb' => 'wp_page_menu',
+                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'depth' => 3
+                            )); ?>
+                        </nav>
+                    <?php } ?>
                 </div>
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <button type="button" class="btn btn-secondary btn-block <?php the_lang_class('js-call-back'); ?>">
@@ -58,7 +58,7 @@
         </div>
     </header>
 
-
+    <!-- Mobile menu start-->
     <div class="nav-mobile-header">
         <button class="hamburger js-hamburger" type="button" tabindex="0">
         <span class="hamburger-box">
@@ -67,3 +67,18 @@
         </button>
         <div class="logo"><?php get_default_logo_link(); ?></div>
     </div>
+    <?php if (has_nav_menu('main-nav')) { ?>
+        <nav class="nav js-menu hide-on-desktop">
+            <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+            <?php wp_nav_menu(array(
+            'theme_location' => 'main-nav',
+            'container' => false,
+            'menu_class' => 'menu-container',
+            'menu_id' => '',
+            'fallback_cb' => 'wp_page_menu',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth' => 3
+        )); ?>
+        </nav>
+    <?php } ?>
+    <!-- Mobile menu end-->
