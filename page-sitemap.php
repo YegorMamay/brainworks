@@ -7,8 +7,6 @@
 
 <?php get_header(); ?>
 
-<div class="sp-xs-2"></div>
-
 <div class="container">
 <div class="row">
     <div class="col-12 col-md-12">
