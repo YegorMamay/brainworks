@@ -47,10 +47,10 @@
         display: block;
         text-align: center;
         text-decoration: none;
-        color: $themeColorTwo;
+        color: $iconColor;
 
         &:hover {
-            color: lighten($themeColorTwo, 10%);
+            color: $iconColorActive;
         }
     }
 }
