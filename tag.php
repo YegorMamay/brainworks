@@ -3,7 +3,7 @@
 
 <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 
-<h1><?php _e('Tag', 'brainworks'); ?>: <?php echo single_tag_title(); ?></h1>
+<h1 class="text-center"><?php echo single_tag_title(); ?></h1>
 
 <div class="sp-xs-2"></div>
 <hr>
