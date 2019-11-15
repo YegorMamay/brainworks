@@ -4,11 +4,11 @@
     }
 
     &-box {
-
+        box-shadow: $shadow;
     }
 
     &-inner {
-
+        padding: 15px;
     }
 
     &-item {
@@ -42,10 +42,10 @@
 
         &,
         p {
-            text-align: left;
+            text-align: justify;
             font-size: 16px;
             line-height: 1.5;
-            color: #333;
+            color: $bodyFontColor;
         }
     }
 }

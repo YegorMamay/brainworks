@@ -97,6 +97,7 @@ em {
     display: inline-block;
     padding: 5px 15px;
     background-color: $textHighlightBgColor;
+    color: $textHighlightColor !important;
 
     &,
     a {
