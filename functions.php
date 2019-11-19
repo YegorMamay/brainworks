@@ -26,3 +26,20 @@ require get_template_directory() . '/inc/meta-boxes.php';
 require get_template_directory() . '/inc/custom-post-types.php';
 
 require get_template_directory() . '/inc/LoadMorePosts.php';
+
+add_action( 'after_setup_theme', function () {
+	if ( function_exists( 'pll_register_string' ) ) {
+		pll_register_string( 'email', 'Email', 'Brainworks' );
+		pll_register_string( 'address', 'Address', 'Brainworks' );
+		pll_register_string( 'work-schedule', 'Work Schedule', 'Brainworks' );
+
+		pll_register_string( 'social-vk', 'Vk', 'Brainworks' );
+		pll_register_string( 'social-twitter', 'Twitter', 'Brainworks' );
+		pll_register_string( 'social-youtube', 'YouTube', 'Brainworks' );
+		pll_register_string( 'social-facebook', 'Facebook', 'Brainworks' );
+		pll_register_string( 'social-linkedin', 'Linkedin', 'Brainworks' );
+		pll_register_string( 'social-instagram', 'Instagram', 'Brainworks' );
+		pll_register_string( 'social-google-plus', 'Google Plus', 'Brainworks' );
+		pll_register_string( 'social-odnoklassniki', 'Odnoklassniki', 'Brainworks' );
+	}
+} );

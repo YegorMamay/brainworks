@@ -12,6 +12,7 @@
             html.addClass("is-mobile");
         }
         html.removeClass("no-js").addClass("js");
+        dropdownPhone();
         scrollToElement();
         sidebarAccordion();
         reviews(".js-reviews");
@@ -30,6 +31,18 @@
             }
         });
     });
+    var dropdownPhone = function dropdownPhone() {
+        var dropDownBtn = $(".js-dropdown");
+        var dropDownList = $(".js-phone-list");
+        dropDownBtn.on("click", function() {
+            $(this).toggleClass("active").siblings(".js-phone-list").fadeToggle(300);
+        });
+        $(document).on("click", function(event) {
+            if ($(event.target).closest(".js-dropdown, .js-phone-list").length) return;
+            dropDownList.fadeOut(300);
+            dropDownBtn.removeClass("active");
+        });
+    };
     var stickFooter = function stickFooter(footer, container) {
         var previousHeight, currentHeight;
         var offset = 0;
@@ -161,30 +174,25 @@
             body.removeChild(div);
         }, 0);
     };
-const scrollToElement = (animationSpeed = 400) => {
-    const links = $("a");
-    links.each((index, element) => {
-      const $element = $(element),
-        href = $element.attr("href");
-      if (href[0] === "#" || href[0] + href[1] === "/#") {
-        const adaptiveHref = href[0] === "#" ? href : href.slice(1);
-        const el = $(adaptiveHref);
-        if (el.length) {
-          $element.on("click", e => {
-            e.preventDefault();
-            if (el.length) {
-              $("html, body").animate(
-                {
-                  scrollTop: el.offset().top
-                },
-                animationSpeed
-              );
+    var scrollToElement = function scrollToElement() {
+        var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
+        var links = $("a");
+        links.each(function(index, element) {
+            var $element = $(element), href = $element.attr("href");
+            if (href[0] === "#" || href[0] + href[1] === "/#") {
+                $element.on("click", function(e) {
+                    e.preventDefault();
+                    var adaptiveHref = href[0] === "#" ? href : href.slice(1);
+                    var el = $(adaptiveHref);
+                    if (el.length) {
+                        $("html, body").animate({
+                            scrollTop: el.offset().top
+                        }, animationSpeed);
+                    }
+                });
             }
-          });
-        }
-      }
-    });
-  };
+        });
+    };
     var sidebarAccordion = function sidebarAccordion() {
         var sidebarMenu = $(".sidebar .widget_nav_menu");
         var items = sidebarMenu.find("li");
