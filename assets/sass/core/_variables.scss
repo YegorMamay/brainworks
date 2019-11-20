@@ -35,14 +35,15 @@ $menuBgColorActive: $themeColorTwo;
 $menuFontColor: #fff;
 $menuFontColorActive: #fff;
 
+// MENU Mobile
 $navArrowColor: #fff;
 $navHeaderMobileBGColor: $themeColorOne;
 $navHamburgerMobileColor: #fff;
 
 $menuMobileBGColor: $themeColorOne;
 $menuMobileSubMenuBGColor: lighten($themeColorOne, 10%);
-$menuMobileLinkFontSize: 16px;
-$menuMobileSubMenuLinkFontSize: 14px;
+$menuMobileLinkFontSize: 20px;
+$menuMobileSubMenuLinkFontSize: 18px;
 $menuMobileTextColor: #fff;
 $menuMobileSubMenuTextColor: $menuMobileTextColor;
 $menuMobileSubMenuBGOnHover: $themeColorOne;
