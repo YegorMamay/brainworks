@@ -37,3 +37,50 @@ function bw_register_cpts_reviews()
 }
 
 add_action('init', 'bw_register_cpts_reviews');
+
+
+
+function sn_create_category()
+{
+    register_post_type('sn_catalogs', array(
+        'label'  => null,
+        'labels' => array(
+            'name'               => 'Каталог', // основное название для типа записи
+            'singular_name'      => 'Каталог', // название для одной записи этого типа
+            'add_new'            => 'Добавить позицию', // для добавления новой записи
+            'add_new_item'       => 'Добавлена позиция', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item'          => 'Редактировать позицию', // для редактирования типа записи
+            'new_item'           => 'Новая позиция', // текст новой записи
+            'view_item'          => 'Посмотреть', // для просмотра записи этого типа.
+            'search_items'       => 'Поиск', // для поиска по этим типам записи
+            'not_found'          => 'Не найден', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Не найден в корзине', // если не было найдено в корзине
+            'parent_item_colon'  => '', // для родителей (у древовидных типов)
+            'menu_name'          => 'Каталог', // название меню
+        ),
+        'description'         => '',
+        'public'              => true,
+        'show_in_menu'        => null, // показывать ли в меню адмнки
+        'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+        'rest_base'           => null, // $post_type. C WP 4.7
+        'menu_position'       => 30,
+        'menu_icon'           => 'dashicons-list-view',
+        'hierarchical'        => false,
+        'supports'            => ['title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'has_archive'         => true, // пример archive-slug.php
+        'rewrite'             => true,
+        'query_var'           => true,
+    ));
+
+    register_taxonomy(
+        'sn_cat',
+        'sn_catalogs', // привязываеться к произвольному типу записи
+        array(
+            'label' => __('Категории'),
+            'rewrite' => array('slug' => 'cat-categries'), // slug по которому будет выводиться категории
+            'hierarchical' => true,
+        )
+    );
+}
+
+add_action('init', 'sn_create_category');

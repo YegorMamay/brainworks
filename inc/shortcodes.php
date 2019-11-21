@@ -33,7 +33,7 @@ if (!function_exists('bw_polylang_shortcode')) {
         if (function_exists('pll_the_languages')) {
             $flags = pll_the_languages($atts);
 
-            if (0 === (int)$atts['dropdown']) {
+            if (0 === (int) $atts['dropdown']) {
                 $flags = sprintf('<ul class="lang">%s</ul>', $flags);
             }
 
@@ -41,7 +41,6 @@ if (!function_exists('bw_polylang_shortcode')) {
         }
 
         return '';
-
     }
 
     add_shortcode('polylang', 'bw_polylang_shortcode');
@@ -70,7 +69,7 @@ if (!function_exists('bw_social_shortcode')) {
             $items = '';
 
             foreach (get_social() as $name => $social) {
-	            $icon_fallback = sprintf( '<i class="%s" aria-hidden="true"></i>', esc_attr( $social['icon'] ) );
+                $icon_fallback = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($social['icon']));
 
                 $icon = !empty($social['icon-html']) ? strip_tags($social['icon-html'], '<i>') : $icon_fallback;
 
@@ -80,7 +79,7 @@ if (!function_exists('bw_social_shortcode')) {
                         '<a class="social-link social-%s" href="%s" target="_blank" rel="nofollow noopener" aria-label="%s">%s</a>',
                         esc_attr($name),
                         esc_attr(esc_url($social['url'])),
-	                    esc_attr($social['text']),
+                        esc_attr($social['text']),
                         $icon
                     )
                 );
@@ -90,7 +89,6 @@ if (!function_exists('bw_social_shortcode')) {
         }
 
         return $output;
-
     }
 
     add_shortcode('bw-social', 'bw_social_shortcode');
@@ -133,7 +131,6 @@ if (!function_exists('bw_phone_shortcode')) {
         }
 
         return $output;
-
     }
 
     add_shortcode('bw-phone', 'bw_phone_shortcode');
@@ -162,13 +159,13 @@ if (!function_exists('bw_messengers_shortcode')) {
             $items = '';
 
             foreach (get_messengers() as $name => $messenger) {
-	            $icon = sprintf( '<i class="%s" aria-hidden="true"></i>', esc_attr( $messenger['icon'] ) );
+                $icon = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($messenger['icon']));
 
                 $link = sprintf(
                     '<a class="messenger-link messenger-%s" href="tel:%s" target="_blank" aria-label="%s" rel="nofollow noopener">%s</a>',
                     esc_attr($name),
                     esc_attr(get_phone_number($messenger['tel'])),
-	                esc_attr($messenger['text']),
+                    esc_attr($messenger['text']),
                     $icon
                 );
 
@@ -181,7 +178,6 @@ if (!function_exists('bw_messengers_shortcode')) {
         }
 
         return $output;
-
     }
 
     add_shortcode('bw-messengers', 'bw_messengers_shortcode');
@@ -256,7 +252,9 @@ if (!function_exists('bw_last_posts')) {
             array(
                 'count' => 3, // Кол-во новостей для отображения
                 'button_title' => __('Continue reading', 'brainworks') // Текст в ссылке
-            ), $atts);
+            ),
+            $atts
+        );
 
         $posts = wp_get_recent_posts(array(
             'numberposts' => $atts['count'],
@@ -297,7 +295,6 @@ if (!function_exists('bw_last_posts')) {
         $output .= '</div></div>';
 
         return $output;
-
     }
 
     add_shortcode('bw-last-posts', 'bw_last_posts');
@@ -350,25 +347,40 @@ if (!function_exists('bw_advert_shortcode')) {
 
                 $thumbnail = has_post_thumbnail() ? sprintf(
                     '<figure class="%s-preview"><a href="%s">%s</a></figure>',
-                    $basic_class, get_the_permalink(),
+                    $basic_class,
+                    get_the_permalink(),
                     get_the_post_thumbnail(null, 'medium', ['class' => $basic_class . '-thumbnail'])
                 ) : '';
 
-                $headline = sprintf('<h3 class="%s-headline"><a href="%s">%s</a></h3>',
-                    $basic_class, get_the_permalink(), get_the_title()
+                $headline = sprintf(
+                    '<h3 class="%s-headline"><a href="%s">%s</a></h3>',
+                    $basic_class,
+                    get_the_permalink(),
+                    get_the_title()
                 );
 
                 $excerpt = sprintf('<div class="%s-excerpt">%s</div>', $basic_class, get_the_excerpt());
 
-                $btn = sprintf('<div class="text-right"><a class="btn btn-secondary btn-sm %s-link" href="%s">%s</a></div>',
-                    $basic_class, get_the_permalink(), __('Continue reading', 'brainworks')
+                $btn = sprintf(
+                    '<div class="text-right"><a class="btn btn-secondary btn-sm %s-link" href="%s">%s</a></div>',
+                    $basic_class,
+                    get_the_permalink(),
+                    __('Continue reading', 'brainworks')
                 );
 
-                $box = sprintf( '<div class="%s-box">%s <div class="%s-inner">%s %s %s</div></div>',
-                    $basic_class, $thumbnail, $basic_class, $headline, $excerpt, $btn
+                $box = sprintf(
+                    '<div class="%s-box">%s <div class="%s-inner">%s %s %s</div></div>',
+                    $basic_class,
+                    $thumbnail,
+                    $basic_class,
+                    $headline,
+                    $excerpt,
+                    $btn
                 );
 
-                $item = sprintf('<section id="post-%s" class="%s">%s</section>', get_the_ID(),
+                $item = sprintf(
+                    '<section id="post-%s" class="%s">%s</section>',
+                    get_the_ID(),
                     join(' ', get_post_class(['col-md-4', $basic_class . '-item'])),
                     $box
                 );
@@ -595,4 +607,48 @@ if (!function_exists('bw_reviews_shortcode')) {
     }
 
     add_shortcode('bw-reviews', 'bw_reviews_shortcode');
+}
+
+// addes shortcode posts category
+if (!function_exists('sn_catalog_shortcode')) {
+    add_shortcode('catalog', 'show_catagories_catalog');
+
+    function show_catagories_catalog($atts)
+    {
+        $atts = shortcode_atts(array(
+            'id' => 1,
+            'count' => 6
+        ), $atts);
+
+        $args = array(
+            'posts_per_page'        => $atts['count'],
+            'post_type'      => 'sn_catalogs',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'sn_cat',
+                    'field'    => 'id',
+                    'terms'    => $atts['id'],
+                ),
+            ),
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) : ?>
+            <div class="row">
+            <?php while ($query->have_posts()) : $query->the_post(); ?>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <div><a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail(); ?></a></div>
+                    <div class="sp-xs-1"></div>
+                    <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
+                    <div class="sp-xs-2"></div>
+                </div>
+                    <?php endwhile; ?>
+            </div>
+        <?php else :
+
+        endif;
+
+        wp_reset_postdata();        
+    }
 }
