@@ -1,0 +1,9 @@
+.catalog-shortcode-item {
+    box-shadow: $shadow;
+    border: 1px solid $borderColor;
+    @include smooth_animation;
+    
+    &:hover {
+        box-shadow: none;
+    }
+}

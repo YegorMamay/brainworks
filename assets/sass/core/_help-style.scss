@@ -105,6 +105,22 @@ em {
     }
 }
 
+.shadow {
+    box-shadow: $shadow;
+    
+    &-bottom {
+        box-shadow: 0 8px 6px -6px $themeColorOne;
+    }
+}
+
+.is-hide {
+    display: none;
+}
+
+.scrolled-table-wrapper {
+	overflow-x: scroll;
+}
+
 .is-loading {
     &::before {
         content: ' ';
@@ -118,14 +134,6 @@ em {
         border-top-color: #363636;
         animation: spin 1s linear infinite;
     }
-}
-
-.is-hide {
-    display: none;
-}
-
-.scrolled-table-wrapper {
-	overflow-x: scroll;
 }
 
 @keyframes spin {

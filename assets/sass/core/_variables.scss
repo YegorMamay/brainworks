@@ -2,9 +2,6 @@ $debug: false !default;
 $image-url-path: "assets/img/" !default;
 $font-url-path: "assets/fonts/" !default;
 
-$borderRadius: 0;
-$shadow: 0 0 10px rgba(#000, .2);
-
 // BRAND
 $themeColorOne: #2c3e50; // Обычно самый темный цвет. Используется для:
 // заголовков h1-h6 - $titleFontColor и других. 
@@ -12,6 +9,9 @@ $themeColorOne: #2c3e50; // Обычно самый темный цвет. Ис�
 $themeColorTwo: #e74c3c; // Основной "брендовый" цвет.
 // Поменять значение этой переменной согласно макета обязательно!
 
+$borderRadius: 0;
+$borderColor: lighten($themeColorOne, 70%);
+$shadow: 0 0 10px rgba($themeColorOne, .2);
 
 // SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColorTwo;
