@@ -25,4 +25,10 @@
             color: $footerLinkColorActive;
         }
     }
+    
+    //xs 544
+    @media #{$mobile} {
+        flex-direction: column;
+        text-align: center;
+    }
 }
