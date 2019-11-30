@@ -640,11 +640,9 @@ if (!function_exists('sn_catalog_shortcode')) {
                 <div class="col-12 col-sm-12 col-md-4">
                     <div class="catalog-shortcode-item">
                         <div><a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail(); ?></a></div>
-                        <div class="sp-xs-1"></div>
                         <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
-                        <div class="sp-xs-1"></div>
                     </div>
-                        <div class="sp-xs-2"></div>
+                        <div class="sp-xs-3"></div>
                 </div>
                     <?php endwhile; ?>
             </div>

@@ -4,8 +4,7 @@
     <div class="row">
         <div class="col-12">
             <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
-            <h1 class="text-center"><?php post_type_archive_title(); ?></h1>
-            <div class="sp-xs-2"></div>
+            <h1 class="page-name"><?php post_type_archive_title(); ?></h1>
         </div>
     </div>
     
@@ -18,9 +17,11 @@
             <div class="row">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="col-12 col-sm-12 col-md-4">
+                   <div class="catalog-item">
                     <div><a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail('medium'); ?></a></div>
                     <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
-                    <div class="sp-xs-2"></div>
+                    </div>
+                    <div class="sp-xs-3"></div>
                 </div>
                 <?php endwhile;
                     else : ?>

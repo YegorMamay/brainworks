@@ -11,6 +11,7 @@ the_post(); ?>
         <?php the_content(); ?>
     <?php else: ?>
         <h1 class="single-title"><?php _e('You must be logged in to see this page!', 'brainworks') ?></h1>
+        <div class="sp-xs-2"></div>
         <?php echo do_shortcode('[bw-custom-auth]'); ?>
     <?php endif; ?>
     <div class="sp-xs-2"></div>
