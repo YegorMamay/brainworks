@@ -174,22 +174,24 @@
             body.removeChild(div);
         }, 0);
     };
-    var scrollToElement = function scrollToElement() {
-        var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
-        var links = $("a");
-        links.each(function(index, element) {
-            var $element = $(element), href = $element.attr("href");
-            if (href[0] === "#" || href[0] + href[1] === "/#") {
-                $element.on("click", function(e) {
-                    e.preventDefault();
-                    var adaptiveHref = href[0] === "#" ? href : href.slice(1);
-                    var el = $(adaptiveHref);
-                    if (el.length) {
-                        $("html, body").animate({
-                            scrollTop: el.offset().top
-                        }, animationSpeed);
-                    }
-                });
+    var scrollToElement = (animationSpeed = 400) => {
+        var links = $('a');
+        links.each((index, element) => {
+            var element$ = $(element), href = element$.attr('href');
+            if (href) {
+                if (href[0] === '#' || href.slice(0,2) === '/#' && !(href[href.length - 1] !== '!')) {
+                    element$.on('click', (e) => {
+                        e.preventDefault();
+                        var target$ = $(href[0] === "#" ? href : href.slice(1));
+                        if (target$.length) {
+                            $("html, body").animate({
+                                scrollTop: target$.offset().top
+                            }, animationSpeed);
+                        } else if (href[0] === "/") {
+                            location.href = href;
+                        }
+                    });
+                }
             }
         });
     };
