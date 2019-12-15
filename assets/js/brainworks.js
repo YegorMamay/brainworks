@@ -174,13 +174,14 @@
             body.removeChild(div);
         }, 0);
     };
-    var scrollToElement = (animationSpeed = 400) => {
-        var links = $('a');
-        links.each((index, element) => {
-            var element$ = $(element), href = element$.attr('href');
+    var scrollToElement = function scrollToElement() {
+        var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
+        var links = $("a");
+        links.each(function(index, element) {
+            var element$ = $(element), href = element$.attr("href");
             if (href) {
-                if (href[0] === '#' || href.slice(0,2) === '/#' && !(href[href.length - 1] !== '!')) {
-                    element$.on('click', (e) => {
+                if ((href[0] === "#" || href.slice(0, 2) === "/#") && !(href.slice(1, 3) === "__")) {
+                    element$.on("click", function(e) {
                         e.preventDefault();
                         var target$ = $(href[0] === "#" ? href : href.slice(1));
                         if (target$.length) {
