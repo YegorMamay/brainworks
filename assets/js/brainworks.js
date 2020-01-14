@@ -23,7 +23,7 @@
         }
         stickFooter(".js-footer", ".js-container");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
-        buyOneClick(".one-click", '[data-field-id="field11"]', "h1.single-title");
+        buyOneClick(".one-click", '[data-field-id="field7"]', "h1.page-name");
         $d.on("copy", addLink);
         $w.on("resize", function() {
             if ($w.innerWidth() >= 630) {
@@ -178,15 +178,15 @@
         var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
         var links = $("a");
         links.each(function(index, element) {
-            var element$ = $(element), href = element$.attr("href");
+            var $element = $(element), href = $element.attr("href");
             if (href) {
-                if ((href[0] === "#" || href.slice(0, 2) === "/#") && !(href.slice(1, 3) === "__")) {
-                    element$.on("click", function(e) {
+                if (href[0] === "#" || href.slice(0, 2) === "/#" && !(href.slice(1, 3) === "__")) {
+                    $element.on("click", function(e) {
                         e.preventDefault();
-                        var target$ = $(href[0] === "#" ? href : href.slice(1));
-                        if (target$.length) {
+                        var target = $(href[0] === "#" ? href : href.slice(1));
+                        if (target.length) {
                             $("html, body").animate({
-                                scrollTop: target$.offset().top
+                                scrollTop: target.offset().top
                             }, animationSpeed);
                         } else if (href[0] === "/") {
                             location.href = href;
@@ -250,4 +250,10 @@
             });
         });
     };
+    $(".js-hamburger").on("click", function() {
+        $("body").addClass("body-overflow");
+    });
+    $(".js-menu-close, .menu-link").on("click", function() {
+        $("body").removeClass("body-overflow");
+    });
 })(window, document, jQuery, window.jpAjax);

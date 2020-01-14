@@ -5,6 +5,14 @@ function bw_enqueues()
     wp_register_style('style-css', get_template_directory_uri() . '/style.css', false, null);
     wp_enqueue_style('style-css');
 
+    wp_register_script('all.min.js', get_template_directory_uri() . '/assets/js/fontawesome/all.min.js', array(),
+        null, false);
+    wp_enqueue_script('all.min.js');
+
+    wp_register_script('v4-shims.min.js', get_template_directory_uri() . '/assets/js/fontawesome/v4-shims.min.js', array(),
+        null, false);
+    wp_enqueue_script('v4-shims.min.js');
+
     /** Scripts */
     wp_register_script('html5shiv', 'https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js', array(), null, false);
     wp_register_script('respond', 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js', array(), null, false);

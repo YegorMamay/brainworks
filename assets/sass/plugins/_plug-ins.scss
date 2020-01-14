@@ -10,13 +10,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
 
 // popup-maker end
 
+@media screen and (min-width: 1024px) {
+    html.pum-open.pum-open-overlay {
+        & body {
+            overflow-y: scroll;
+        }
 
-/* tap-tap menu
-.taptap-menu-button-wrapper {
-    display: none;
-
-    &.taptap-menu-active {
-        display: block;
+        & .page-header.fixed-to-top {
+            overflow-y: scroll;
+        }
     }
 }
-*/

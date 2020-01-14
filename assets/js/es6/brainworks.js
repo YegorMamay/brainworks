@@ -402,17 +402,20 @@
 
         links.each((index, element) => {
             const $element = $(element), href = $element.attr('href');
-            if (href[0] === '#' || (href[0] + href[1]) === '/#') {
-                $element.on('click', (e) => {
-                    e.preventDefault();
-                    const adaptiveHref = href[0] === '#' ? href : href.slice(1);
-                    const el = $(adaptiveHref);
-                    if (el.length) {
-                        $('html, body').animate({
-                            scrollTop: el.offset().top
-                        }, animationSpeed);
-                    }
-                });
+            if(href) {
+                if (href[0] === '#' || href.slice(0, 2) === '/#' && !(href.slice(1, 3) === "__")) {
+                    $element.on('click', (e) => {
+                        e.preventDefault();
+                        const target = $(href[0] === '#' ? href : href.slice(1));
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, animationSpeed);
+                        } else if (href[0] === "/") {
+                            location.href = href;
+                        }
+                    });
+                }
             }
         });
     };
@@ -510,5 +513,14 @@
 
         });
     };
+
+    //disabled page scroll
+    $('.js-hamburger').on('click', function () {
+        $('body').addClass('body-overflow');
+    });
+
+    $('.js-menu-close, .menu-link').on('click', function () {
+        $('body').removeClass('body-overflow');
+    });
 
 })(window, document, jQuery, window.jpAjax);
