@@ -61,7 +61,14 @@ em {
     &-bold {
         font-weight: bold;
     }
-
+    
+    &-italic {
+        font-weight: italic;
+    }
+    
+    &-vertical {
+        transform: rotate(-90deg);
+    }
 }
 
 .pull-right {
