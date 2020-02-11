@@ -29,7 +29,7 @@
         stickFooter('.js-footer', '.js-container');
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-        buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
+        buyOneClick('.one-click-ru', '[data-field-id="field11"]', 'h1.single-title');
         // On Copy
         $d.on('copy', addLink);
 

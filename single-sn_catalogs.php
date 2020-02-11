@@ -18,7 +18,7 @@
 			<div class="sp-xs-2"></div>
 			<div><?php the_content(); ?></div>
 			<div class="sp-xs-2"></div>
-			<button class="btn btn-secondary one-click">Заказать</button>
+			<button class="btn btn-secondary <?php the_lang_class('one-click'); ?>">Заказать</button>
 		</div>
 	<?php endwhile; ?>
 <?php endif; ?>
