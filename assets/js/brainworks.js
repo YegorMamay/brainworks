@@ -2,8 +2,8 @@
 
 (function(w, d, $, ajax) {
     $(function() {
-        console.info("The site developed by BRAIN WORKS digital agency");
-        console.info("Сайт разработан маркетинговым агентством BRAIN WORKS");
+        console.log('%cThe website developed by BRAIN WORKS — https://brainworks.pro/', 'color: blue');
+        console.log('%cСайт разработан BRAIN WORKS — https://brainworks.pro/', 'color: blue');
         var $w = $(w);
         var $d = $(d);
         var html = $("html");
