@@ -4,7 +4,7 @@
 
     $(() => {
         console.log('%cThe website developed by BRAIN WORKS — https://brainworks.pro/', 'color: blue');
-        console.log('%cСайт разработан BRAIN WORKS — https://brainworks.pro/', 'color: blue');
+        console.log('%cСайт разработан в BRAIN WORKS — https://brainworks.pro/', 'color: blue');
 
         const $w = $(w);
         const $d = $(d);

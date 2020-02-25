@@ -3,7 +3,7 @@
 (function(w, d, $, ajax) {
     $(function() {
         console.log('%cThe website developed by BRAIN WORKS — https://brainworks.pro/', 'color: blue');
-        console.log('%cСайт разработан BRAIN WORKS — https://brainworks.pro/', 'color: blue');
+        console.log('%cСайт разработан в BRAIN WORKS — https://brainworks.pro/', 'color: blue');
         var $w = $(w);
         var $d = $(d);
         var html = $("html");
