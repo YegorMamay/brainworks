@@ -11,8 +11,8 @@ function bw_widgets_init()
         'description' => __('The sidebar widget area', 'brainworks'),
         'before_widget' => '<section class="widget-item %1$s %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h5 class="widget-title">',
-        'after_title' => '</h5>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
     ));
 
     /**
@@ -24,8 +24,8 @@ function bw_widgets_init()
         'description' => __('The sidebar widget area', 'brainworks'),
         'before_widget' => '<section class="widget-item %1$s %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h5 class="widget-title">',
-        'after_title' => '</h5>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
     ));
 
     /**

@@ -10,7 +10,7 @@
     
     <div class="row">
         <div class="col-12 col-md-3">
-            <?php dynamic_sidebar('sidebar-widget-area2'); ?>
+            <?php get_sidebar(); ?>
         </div>
         
         <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
