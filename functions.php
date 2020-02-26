@@ -43,3 +43,5 @@ add_action( 'after_setup_theme', function () {
 		pll_register_string( 'social-odnoklassniki', 'Odnoklassniki', 'Brainworks' );
 	}
 } );
+
+remove_action( 'wp_head', '_wp_render_title_tag', 1 ); //удаляет тег title из header.php
