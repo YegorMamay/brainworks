@@ -95,8 +95,8 @@
 
 
             &:after {
-                content: "/";
-                margin-left: 15px;
+                //content: "/";
+                //margin-left: 15px;
             }
 
             img {
@@ -111,5 +111,12 @@
                 display: none;
             }
         }
+    }
+}
+
+//lang dropdown
+.pll-parent-menu-item {
+    .sub-menu {
+        width: auto !important;
     }
 }

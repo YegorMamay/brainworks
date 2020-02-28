@@ -35,19 +35,20 @@ $menuBgColorActive: $themeColorTwo;
 $menuFontColor: #fff;
 $menuFontColorActive: #fff;
 
+//Sub Menu
+$menuMobileSubMenuBGColor: lighten($themeColorOne, 10%);
+$menuMobileTextColor: #fff;
+$menuMobileSubMenuLinkFontSize: 18px;
+$menuMobileSubMenuTextColor: $menuMobileTextColor;
+$menuMobileSubMenuBGOnHover: darken($themeColorTwo, 10%);
+$menuMobileSubMenuTextColorOnHover: #fff;
+
 // MENU Mobile
 $navArrowColor: #fff;
 $navHeaderMobileBGColor: $themeColorOne;
 $navHamburgerMobileColor: #fff;
-
 $menuMobileBGColor: $themeColorOne;
-$menuMobileSubMenuBGColor: lighten($themeColorOne, 10%);
 $menuMobileLinkFontSize: 20px;
-$menuMobileSubMenuLinkFontSize: 18px;
-$menuMobileTextColor: #fff;
-$menuMobileSubMenuTextColor: $menuMobileTextColor;
-$menuMobileSubMenuBGOnHover: $themeColorOne;
-$menuMobileSubMenuTextColorOnHover: #fff;
 
 $hamburger-offset: 8px;
 $hamburger-duration: .1s;
