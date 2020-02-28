@@ -7,7 +7,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
 html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
     overflow-y: hidden;
 }
-
 // popup-maker end
 
 @media screen and (min-width: 1024px) {
@@ -21,3 +20,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
         }
     }
 }
+
+//navi menu
+/*.navi-main-menu-button-wrapper {
+    display: none;
+
+    &.navi-menu-active {
+        display: block;
+    }
+}*/

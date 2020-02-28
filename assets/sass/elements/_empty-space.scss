@@ -20,7 +20,7 @@ $space-media-map: (
 
 @each $name, $value in $space-map {
     @if $name == extra-small {
-        @for $i from 1 through $space-qty {
+        @for $i from 0 through $space-qty {
             .sp-#{$value}-#{$i} {
                 height: #{$i * $space-multiplier}vh;
             }
@@ -30,7 +30,7 @@ $space-media-map: (
 
         @media only screen and (min-width: #{map-get($space-media-map, $name)}px) {
 
-            @for $i from 1 through $space-qty {
+            @for $i from 0 through $space-qty {
 
                 .sp-#{$value}-#{$i} {
                     height: #{$i * $space-multiplier}vh;
