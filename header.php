@@ -7,14 +7,25 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
-    <title><?php bloginfo('name'); ?></title>
+    <title><?php 
+        if ( is_front_page() ) { echo bloginfo('name'); } 
+        elseif ( is_post_type_archive() )  { echo post_type_archive_title();}
+        elseif ( !is_front_page() || !is_page()) { echo single_post_title(); } 
+        elseif ( !is_front_page() || !is_single()) { echo the_title();} 
+    ?></title>
+    
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- OpenGraph -->
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:locale:alternate" content="ru_RU" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<?php if ( is_front_page() ) {echo bloginfo('name');} else { echo single_post_title(); } ?>" />
+    <meta property="og:title" content="<?php 
+        if ( is_front_page() ) { echo bloginfo('name'); } 
+        elseif ( is_post_type_archive() )  { echo post_type_archive_title();}
+        elseif ( !is_front_page() || !is_page()) { echo single_post_title(); } 
+        elseif ( !is_front_page() || !is_single()) { echo the_title();} 
+    ?>" />
     <meta property="og:description" content="<?php bloginfo('description'); ?>">
     <meta property="og:url" content="<?php echo esc_url(site_url()); ?>" />
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
@@ -23,7 +34,12 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>" />
+    <meta name="twitter:title" content="<?php 
+        if ( is_front_page() ) { echo bloginfo('name'); } 
+        elseif ( is_post_type_archive() )  { echo post_type_archive_title();}
+        elseif ( !is_front_page() || !is_page()) { echo single_post_title(); } 
+        elseif ( !is_front_page() || !is_single()) { echo the_title();} 
+    ?>" />
     <meta name="twitter:image" content="<?php echo esc_url(the_post_thumbnail_url()); ?>" />
     <!-- OpenGraph end-->
 
