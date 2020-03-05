@@ -23,7 +23,7 @@
         }
         stickFooter(".js-footer", ".js-container");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
-        buyOneClick(".one-click-ru", '[data-field-id="field11"]', "h1.single-title");
+        buyOneClick(".one-click-ru", '[data-field-id="field11"]', "h1");
         $d.on("copy", addLink);
         $w.on("resize", function() {
             if ($w.innerWidth() >= 630) {
