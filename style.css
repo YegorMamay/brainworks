@@ -9604,13 +9604,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
   }
 }
 
-/*.navi-main-menu-button-wrapper {
-    display: none;
-
-    &.navi-menu-active {
-        display: block;
-    }
-}*/
 .slick-slider {
   position: relative;
   display: block;
@@ -9716,9 +9709,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
   display: none;
 }
 
-/* Medium Buttons */
-/* Small Buttons */
-/* Large Buttons */
 .btn {
   display: inline-block;
   font-weight: 400;
