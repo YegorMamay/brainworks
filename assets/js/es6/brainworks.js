@@ -403,7 +403,7 @@
         links.each((index, element) => {
             const $element = $(element), href = $element.attr('href');
             if(href) {
-                if (href[0] === '#' || href.slice(0, 2) === '/#' && !(href.slice(1, 3) === "__")) {
+                if (href[0] === '#' || href.slice(0, 2) === '/#' && !(href.slice(1, 3) === '__')) {
                     $element.on('click', (e) => {
                         e.preventDefault();
                         const target = $(href[0] === '#' ? href : href.slice(1));
@@ -411,7 +411,7 @@
                             $('html, body').animate({
                                 scrollTop: target.offset().top
                             }, animationSpeed);
-                        } else if (href[0] === "/") {
+                        } else if (href[0] === '/') {
                             location.href = href;
                         }
                     });
