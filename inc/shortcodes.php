@@ -653,3 +653,70 @@ if (!function_exists('sn_catalog_shortcode')) {
         wp_reset_postdata();        
     }
 }
+
+
+
+add_shortcode('sn_cat', 'cat_and_child_id');
+/**
+ * @param $atts
+ * @return string
+ * Работает как с указанием таксономии так и без
+ * при указании таксономии показывает все категории [sn_cat id="7, 78, 82" term="name_term"]
+ */
+function cat_and_child_id($atts)
+{
+    $str = $atts['id'];
+    $arr_id = explode(', ', $str);
+    $name_cpt = $atts['term'];
+
+    if (taxonomy_exists($name_cpt)) {
+        $categories  = get_categories(array(
+            'type' => 'post',
+            'taxonomy' => $name_cpt,
+            'hide_empty' => false,
+        ));
+
+        $html = '<ul class="list-cat">';
+
+        foreach ($arr_id as $cat) {
+            $cat_id = $cat;
+            $cat_url = get_category_link($cat_id);
+            $cat_name = get_cat_name($cat_id);
+
+            if ($categories) {
+                foreach ($categories as $term){
+                    $term_cat_id = $term->term_id;
+                    $term_cat_name = $term->name;
+
+                    if ($term_cat_id == $cat_id) {
+                        $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_url, $term_cat_name);
+                    }
+                }
+            }
+
+            if ($cat_name) {
+                $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_url, $cat_name);
+            }
+
+        }
+
+        $html .= '</ul>';
+        return $html;
+    } else {
+        $html = '<ul class="list-cat">';
+
+        foreach ($arr_id as $cat) {
+            $cat_id = $cat;
+            $cat_url = get_category_link($cat_id);
+            $cat_name = get_cat_name($cat_id);
+
+            if ($cat_name) {
+                $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_url, $cat_name);
+            }
+
+        }
+
+        $html .= '</ul>';
+        return $html;
+    }
+}
