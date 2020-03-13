@@ -640,7 +640,7 @@ function bw_customize_register($wp_customize)
         'settings' => 'bw_social_facebook_icon',
         'type' => 'text',
         'input_attrs' => array(
-            'placeholder' => '<i class="fab fa-facebook-f"></i>',
+            'placeholder' => '<i class="fab fa-facebook-square"></i>',
         ),
     ));
 

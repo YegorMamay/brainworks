@@ -8,7 +8,9 @@
         display: none;
     }
     .nav-mobile-header {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: fixed;
         width: 100%;
         padding: 10px 15px;
@@ -25,17 +27,12 @@
         }
 
         .hamburger {
-            position: absolute;
-            top: 15px;
-            right: 10px;
+            display: block;
         }
     }
 
     .hamburger {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        right: 10px;
+        display: block;
     }
 
     .nav {
@@ -170,7 +167,9 @@
         display: none;
     }
     .nav-mobile-header {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: fixed;
         width: 100%;
         padding: 10px 15px;
@@ -187,17 +186,12 @@
         }
 
         .hamburger {
-            position: absolute;
-            top: 15px;
-            right: 10px;
+            display: block;
         }
     }
 
     .hamburger {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        right: 10px;
+        display: block;
     }
 
     .nav {
@@ -332,7 +326,9 @@
         display: none;
     }
     .nav-mobile-header {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: fixed;
         width: 100%;
         padding: 10px 15px;
@@ -349,17 +345,12 @@
         }
 
         .hamburger {
-            position: absolute;
-            top: 15px;
-            right: 10px;
+            display: block;
         }
     }
 
     .hamburger {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        right: 10px;
+        display: block;
     }
 
     .nav {

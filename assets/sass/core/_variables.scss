@@ -2,11 +2,31 @@ $debug: false !default;
 $image-url-path: "assets/img/" !default;
 $font-url-path: "assets/fonts/" !default;
 
+//GRID Settings
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1170px
+) !default;
+
+
 // BRAND
 $themeColorOne: #2c3e50; // Обычно самый темный цвет. Используется для:
 // заголовков h1-h6 - $titleFontColor и других. 
 
-$themeColorTwo: #e74c3c; // Основной "брендовый" цвет.
+$themeColorTwo: #e74c3c; // Основной/акцентный цвет бренда.
 // Поменять значение этой переменной согласно макета обязательно!
 
 $borderRadius: 0;
@@ -20,6 +40,9 @@ $selectionFontColor: #fff;
 // BODY
 $bodyBgColor: #fff; //white
 $bodyFontColor: #000; // black
+
+// WRAPPER
+$wrapperBgColor: #fff;
 
 // HEADER: цвет фона шапки сайта
 $headerBgColor: $themeColorOne;
@@ -57,15 +80,7 @@ $hamburger-color: $themeColorTwo;
 
 $menu-close-size: 25px;
 $menu-close-color: #fff;
-$menuContainerMobilePaddingTop: 30%;
-
-// FOOTER
-$footerBgColor: $themeColorOne;
-$footerFontColor: #fff;
-$footerLinkColorActive: darken($footerFontColor, 5%);
-
-// WRAPPER
-$wrapperBgColor: #fff;
+$menuContainerMobilePaddingTop: 20%;
 
 // TITLES
 $titleFontColor: $themeColorOne;
@@ -90,7 +105,7 @@ $textMutedColor: #aaa;
 
 // Icons
 $iconColor: $themeColorTwo;
-$iconColorActive: $themeColorOne;
+$iconColorActive: lighten($themeColorTwo, 10%);
 $iconColorReversed: $bodyBgColor;
 
 // FORMS
@@ -103,6 +118,11 @@ $formFieldBorderRadius: $borderRadius;
 $formFieldBackgroundColor: #fff;
 $inputFieldMinHeight: 38px;
 $formBgColor: lighten($themeColorOne, 75%);
+
+// FOOTER
+$footerBgColor: $themeColorOne;
+$footerFontColor: #fff;
+$footerLinkColorActive: darken($footerFontColor, 5%);
 
 // Pagination
 $paginationActiveLink: $themeColorTwo;
@@ -136,21 +156,3 @@ $messageBorderTopColor: $themeColorTwo;
 $messageIconFontColor: $themeColorTwo;
 
 //WOOCOMMERCE end
-
-$grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
-
-$grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
-) !default;
-
-$container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1170px
-) !default;

@@ -237,7 +237,7 @@ if (!function_exists('get_social')) {
             'facebook' => [
                 'url' => get_theme_mod('bw_social_facebook'),
                 'text' => 'Facebook',
-                'icon' => 'fab fa-facebook-f',
+                'icon' => 'fab fa-facebook-square',
                 'icon-html' => get_theme_mod('bw_social_facebook_icon'),
             ],
             'linkedin' => [

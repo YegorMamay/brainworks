@@ -553,7 +553,7 @@ if (!function_exists('bw_reviews_shortcode')) {
                     ),
                     'facebook' => array(
                         'url' => get_post_meta($id, 'review-facebook', true),
-                        'icon' => 'fa-facebook-f',
+                        'icon' => 'fa-facebook-square',
                     ),
                     'linkedin' => array(
                         'url' => get_post_meta($id, 'review-linkedin', true),
