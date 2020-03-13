@@ -95,10 +95,10 @@ fieldset:disabled a.btn {
     $btn-primary-color: white;
     $btn-primary-color-hover: white;
     $border: $themeColorOne;
-    $hover-background: $themeColorTwo;
-    $hover-border: $themeColorTwo;
-    $active-background: darken($themeColorTwo, 5%);
-    $active-border: darken($themeColorOne, 12.5%);
+    $hover-background: lighten($themeColorOne, 5%);
+    $hover-border: lighten($themeColorOne, 5%);
+    $active-background: $themeColorOne;
+    $active-border: $themeColorOne;
     
     @if $btn-enable-gradients {
         background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 15%), $background) repeat-x;
@@ -163,10 +163,10 @@ fieldset:disabled a.btn {
     $btn-primary-color: white;
     $btn-primary-color-hover: white;
     $border: $themeColorTwo;
-    $hover-background: $themeColorOne;
-    $hover-border: $themeColorOne;
-    $active-background: darken($themeColorOne, 5%);
-    $active-border: darken($themeColorOne, 10%);
+    $hover-background: lighten($themeColorTwo, 5%);
+    $hover-border: lighten($themeColorTwo, 5%);
+    $active-background: $themeColorTwo;
+    $active-border: $themeColorTwo;
     
     @if $btn-enable-gradients {
         background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 15%), $background) repeat-x;
