@@ -42,6 +42,7 @@
 .woocommerce {
     a.added_to_cart {
         @extend %btn-outline-primary;
+        margin-top: 1em;
     }
 
     input.input-text {
@@ -288,6 +289,30 @@
             margin-bottom: 5px;
         }
     }
+}
+
+// My Accaunt page
+#customer_login {
+    display: flex;
+    
+    //xs 544
+    @media #{$mobile} {
+        display: block;
+    }
+}
+
+// Checkout page
+#checkout-form {
+    display: flex;
+    
+    //xs 544
+    @media #{$mobile} {
+        display: block;
+    }
+}
+
+.woocommerce .blockUI.blockOverlay {
+    z-index: 3 !important;
 }
 
 // woo filter

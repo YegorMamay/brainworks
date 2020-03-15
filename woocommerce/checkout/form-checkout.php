@@ -35,7 +35,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-    <div class="col2-set d-flex">
+    <div class="col2-set" id="checkout-form">
         <div class="col-12 col-sm-12 col-md-6" id="customer_details">
         	<?php do_action( 'woocommerce_checkout_billing' ); ?>
         </div>

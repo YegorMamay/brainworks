@@ -8,26 +8,23 @@ $grid-gutter-width: 30px !default;
 
 $grid-breakpoints: (
         xs: 0,
-        sm: 576px,
+        sm: 544px,
         md: 768px,
-        lg: 992px,
-        xl: 1200px
+        lg: 1024px,
+        xl: 1360px
 ) !default;
 
 $container-max-widths: (
         sm: 540px,
         md: 720px,
         lg: 960px,
-        xl: 1170px
+        xl: 1300px
 ) !default;
 
 
-// BRAND
-$themeColorOne: #2c3e50; // Обычно самый темный цвет. Используется для:
-// заголовков h1-h6 - $titleFontColor и других. 
-
-$themeColorTwo: #e74c3c; // Основной/акцентный цвет бренда.
-// Поменять значение этой переменной согласно макета обязательно!
+// THEME COLORS
+$themeColorOne: #2c3e50; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других. 
+$themeColorTwo: #e74c3c; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
 
 $borderRadius: 0;
 $borderColor: lighten($themeColorOne, 70%);
