@@ -669,6 +669,8 @@ function cat_and_child_id($atts)
     $arr_id = explode(', ', $str);
     $name_cpt = $atts['term'];
 
+
+
     if (taxonomy_exists($name_cpt)) {
         $categories  = get_categories(array(
             'type' => 'post',
@@ -687,15 +689,18 @@ function cat_and_child_id($atts)
                 foreach ($categories as $term){
                     $term_cat_id = $term->term_id;
                     $term_cat_name = $term->name;
+                    $term_photo = get_field('cat_img', $term);
 
                     if ($term_cat_id == $cat_id) {
-                        $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_url, $term_cat_name);
+                        $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"><img src="%s" class="list-cat__img" alt=""> %s</a></li>', $cat_url, $term_photo[url], $term_cat_name);
                     }
                 }
             }
 
             if ($cat_name) {
-                $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_url, $cat_name);
+
+                $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_url, $term_cat_name);
+
             }
 
         }
@@ -710,8 +715,10 @@ function cat_and_child_id($atts)
             $cat_url = get_category_link($cat_id);
             $cat_name = get_cat_name($cat_id);
 
+            var_dump($cat_photo);
+
             if ($cat_name) {
-                $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_url, $cat_name);
+                $html .= sprintf('<li class="list-cat__item"><a href="%s" class="list-cat__link"> %s</a></li>', $cat_photo[url], $cat_url, $term_cat_name);
             }
 
         }
