@@ -3,7 +3,7 @@
 <div class="container">
 <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 <div class="row">
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-lg-8">
         <h1 class="text-center"><?php post_type_archive_title(); ?></h1>
 
         <div class="sp-xs-2 sp-md-3"></div>
@@ -58,7 +58,7 @@
                     ?>
                     <div id="post-<?php the_ID() ?>" <?php post_class('review-item'); ?>>
                         <div class="row">
-                            <div class="col-sm-2 text-center">
+                            <div class="col-12 col-lg-2 text-center">
                                 <div class="review-client">
                                     <?php the_post_thumbnail('thumbnail', array('class' => 'review-avatar')); ?>
                                     <?php if (count($social)) { ?>
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="review-author"><?php the_title() ?></div>
                             </div>
-                            <div class="col-sm-10">
+                            <div class="col-12 col-lg-10">
                                 <div class="review-content"><?php the_content(); ?></div>
                                 <div class="review-date text-right"><?php echo get_the_date('d.m.Y'); ?></div>
                             </div>
@@ -84,7 +84,7 @@
             get_template_part('loops/content', 'none');
         } ?>
     </div>
-    <div class="col-12 col-md-4"><?php dynamic_sidebar('sidebar-widget-area2'); ?></div>
+    <div class="col-12 col-lg-4"><?php dynamic_sidebar('sidebar-widget-area2'); ?></div>
 </div>
 </div><!-- /.container -->
 

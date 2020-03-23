@@ -77,7 +77,7 @@ function sn_create_category()
         'sn_catalogs', // привязываеться к произвольному типу записи
         array(
             'label' => __('Категории'),
-            'rewrite' => array('slug' => 'cat-categries'), // slug по которому будет выводиться категории
+            'rewrite' => array('slug' => 'categories'), // slug по которому будет выводиться категории
             'hierarchical' => true,
         )
     );
