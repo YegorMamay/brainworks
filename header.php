@@ -7,42 +7,77 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
-    <title><?php 
-        if ( is_front_page() ) { echo bloginfo('name'); } 
-        elseif ( is_post_type_archive() )  { echo post_type_archive_title();}
-        elseif ( !is_front_page() || !is_page()) { echo single_post_title(); } 
-        elseif ( !is_front_page() || !is_single()) { echo the_title();} 
-    ?></title>
-    
+    <title>
+        <?php
+        if (is_front_page()) {
+            echo bloginfo('name');
+        } elseif (is_post_type_archive()) {
+            echo post_type_archive_title();
+        } elseif (!is_front_page() || !is_page()) {
+            echo single_post_title();
+        } elseif (!is_front_page() || !is_single()) {
+            echo the_title();
+        } elseif (is_front_page() && is_category()) {
+            echo single_cat_title();
+        }
+        if (is_archive()) {
+            echo single_cat_title();
+        }
+        ?>
+    </title>
+
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- OpenGraph -->
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:locale:alternate" content="ru_RU" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="<?php 
-        if ( is_front_page() ) { echo bloginfo('name'); } 
-        elseif ( is_post_type_archive() )  { echo post_type_archive_title();}
-        elseif ( !is_front_page() || !is_page()) { echo single_post_title(); } 
-        elseif ( !is_front_page() || !is_single()) { echo the_title();} 
-    ?>" />
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:locale:alternate" content="ru_RU"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="
+    <?php
+    if (is_front_page()) {
+        echo bloginfo('name');
+    } elseif (is_post_type_archive()) {
+        echo post_type_archive_title();
+    } elseif (!is_front_page() || !is_page()) {
+        echo single_post_title();
+    } elseif (!is_front_page() || !is_single()) {
+        echo the_title();
+    } elseif (is_front_page() && is_category()) {
+        echo single_cat_title();
+    }
+    if (is_archive()) {
+        echo single_cat_title();
+    }
+    ?>
+    "/>
     <meta property="og:description" content="<?php bloginfo('description'); ?>">
-    <meta property="og:url" content="<?php echo esc_url(site_url()); ?>" />
-    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-    <meta property="og:image" content="<?php echo esc_url(the_post_thumbnail_url()); ?>" />
-    <meta property="og:image:secure_url" content="<?php echo esc_url(the_post_thumbnail_url()); ?>" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="628" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<?php 
-        if ( is_front_page() ) { echo bloginfo('name'); } 
-        elseif ( is_post_type_archive() )  { echo post_type_archive_title();}
-        elseif ( !is_front_page() || !is_page()) { echo single_post_title(); } 
-        elseif ( !is_front_page() || !is_single()) { echo the_title();} 
-    ?>" />
-    <meta name="twitter:image" content="<?php echo esc_url(the_post_thumbnail_url()); ?>" />
+    <meta property="og:url" content="<?php echo esc_url(site_url()); ?>"/>
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+    <meta property="og:image" content="<?php echo esc_url(the_post_thumbnail_url()); ?>"/>
+    <meta property="og:image:secure_url" content="<?php echo esc_url(the_post_thumbnail_url()); ?>"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="628"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="
+        <?php
+    if (is_front_page()) {
+        echo bloginfo('name');
+    } elseif (is_post_type_archive()) {
+        echo post_type_archive_title();
+    } elseif (!is_front_page() || !is_page()) {
+        echo single_post_title();
+    } elseif (!is_front_page() || !is_single()) {
+        echo the_title();
+    } elseif (is_front_page() && is_category()) {
+        echo single_cat_title();
+    }
+    if (is_archive()) {
+        echo single_cat_title();
+    }
+    ?>
+    "/>
+    <meta name="twitter:image" content="<?php echo esc_url(the_post_thumbnail_url()); ?>"/>
     <!-- OpenGraph end-->
-
     <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>"
           type="image/x-icon">
     <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>"
@@ -59,14 +94,14 @@
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     <div class="logo">
-	                    <?php get_default_logo_link([
-                            'name'    => 'logo.svg',
+                        <?php get_default_logo_link([
+                            'name' => 'logo.svg',
                             'options' => [
-                                'class'  => 'logo-img',
-                                'width'  => 100,
+                                'class' => 'logo-img',
+                                'width' => 100,
                                 'height' => 50,
-                                ],
-                            ])
+                            ],
+                        ])
                         ?>
                     </div>
                 </div>
@@ -74,7 +109,8 @@
                     <div class="nav-wrapper">
                         <?php if (has_nav_menu('main-nav')) { ?>
                             <nav class="nav js-menu">
-                                <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+                                <button type="button" tabindex="0"
+                                        class="menu-item-close menu-close js-menu-close"></button>
                                 <?php wp_nav_menu(array(
                                     'theme_location' => 'main-nav',
                                     'container' => false,
@@ -88,7 +124,8 @@
                         <?php } ?>
                         <?php if (has_nav_menu('language-switcher')) { ?>
                             <nav class="nav js-menu">
-                                <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+                                <button type="button" tabindex="0"
+                                        class="menu-item-close menu-close js-menu-close"></button>
                                 <?php wp_nav_menu(array(
                                     'theme_location' => 'language-switcher',
                                     'container' => false,
@@ -125,14 +162,14 @@
         <nav class="nav js-menu hide-on-desktop">
             <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
             <?php wp_nav_menu(array(
-            'theme_location' => 'main-nav',
-            'container' => false,
-            'menu_class' => 'menu-container',
-            'menu_id' => '',
-            'fallback_cb' => 'wp_page_menu',
-            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            'depth' => 3
-        )); ?>
+                'theme_location' => 'main-nav',
+                'container' => false,
+                'menu_class' => 'menu-container',
+                'menu_id' => '',
+                'fallback_cb' => 'wp_page_menu',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth' => 3
+            )); ?>
             <?php if (has_nav_menu('language-switcher')) { ?>
                 <div class="mobile-language">
                     <?php wp_nav_menu(array(
