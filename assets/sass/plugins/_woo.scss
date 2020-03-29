@@ -1,11 +1,9 @@
 %button-style {
     @extend .btn;
-    @extend .btn-outline-secondary;
 }
 
 %btn-outline-primary {
     @extend .btn;
-    @extend .btn-outline-primary;
 }
 
 .cart-contents {
@@ -47,11 +45,9 @@
 
     input.input-text {
         min-height: $inputFieldMinHeight;
-        padding-top: 0;
-        padding-bottom: 0;
-
+        padding: $formFieldPadding;
     }
-
+    
     #respond {
         input#submit {
             @extend %button-style;
@@ -183,8 +179,7 @@
     // Product quantity
     .quantity {
         .qty {
-            padding-top: 10px;
-            padding-bottom: 9px;
+            padding: $formFieldPadding;
         }
     }
 
