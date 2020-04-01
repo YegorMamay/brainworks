@@ -84,7 +84,7 @@
             get_template_part('loops/content', 'none');
         } ?>
     </div>
-    <div class="col-12 col-lg-4"><?php dynamic_sidebar('sidebar-widget-area2'); ?></div>
+    <div class="col-12 col-lg-4"><?php dynamic_sidebar('sidebar-widget-area3'); ?></div>
 </div>
 </div><!-- /.container -->
 
