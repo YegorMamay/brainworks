@@ -1,9 +1,11 @@
 %button-style {
     @extend .btn;
+    @extend .btn-secondary;
 }
 
 %btn-outline-primary {
     @extend .btn;
+    @extend .btn-primary;
 }
 
 .cart-contents {
