@@ -38,6 +38,7 @@
                 removeAllStyles($('.js-menu'));
             }
         });
+        addLightBoxHandlerForImage(".wpgis-slider-for");
     });
 
     /**
@@ -522,5 +523,21 @@
     $('.js-menu-close, .menu-link').on('click', function () {
         $('body').removeClass('body-overflow');
     });
+    
+    //для плагина "Advanced Woocommerce Product Gallery Slider" https://ru.wordpress.org/plugins/advanced-woocommerce-product-gallery-slider/
+    var addLightBoxHandlerForImage = function addLightBoxHandlerForImage(sliderContainer) {
+        $(window).load(function() {
+            var slider$ = $(sliderContainer);
+            if (slider$.length) {
+                slider$.find("img").each(function(index, element) {
+                    $(element).on("click", function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        $(element).parents(".slick-slide").find(".wpgis-popup").click();
+                    });
+                });
+            }
+        });
+    };
 
 })(window, document, jQuery, window.jpAjax);
