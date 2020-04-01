@@ -431,7 +431,7 @@
      * @returns {void}
      */
     const sidebarAccordion = () => {
-        const sidebarMenu = $('.sidebar .widget_nav_menu');
+        const sidebarMenu = $('.left-sidebar .widget_nav_menu');
         const items = sidebarMenu.find('li');
         const subMenu = items.find('.sub-menu');
 

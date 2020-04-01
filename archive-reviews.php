@@ -1,9 +1,14 @@
 <?php get_header(); ?>
 
+<?php $column_class = is_active_sidebar('sidebar-widget-area3')
+    ? 'col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8'
+    : 'col-12';
+?>
+
 <div class="container">
 <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 <div class="row">
-    <div class="col-12 col-lg-8">
+    <div class="<?php echo $column_class; ?>">
         <h1 class="text-center"><?php post_type_archive_title(); ?></h1>
 
         <div class="sp-xs-2 sp-md-3"></div>
@@ -84,7 +89,12 @@
             get_template_part('loops/content', 'none');
         } ?>
     </div>
-    <div class="col-12 col-lg-4"><?php dynamic_sidebar('sidebar-widget-area3'); ?></div>
+    
+    <?php if (is_active_sidebar('sidebar-widget-area3')) { ?>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <?php dynamic_sidebar('sidebar-widget-area3'); ?>
+        </div>
+    <?php } ?>
 </div>
 </div><!-- /.container -->
 
