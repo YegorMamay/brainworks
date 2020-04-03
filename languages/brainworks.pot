@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-20 09:53+0000\n"
+"POT-Creation-Date: 2020-04-03 08:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,12 +14,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: header.php:80
+#: header.php:144
 msgid "Call back"
+msgstr ""
+
+#: footer.php:14
+msgid "All rights reserved"
 msgstr ""
 
 #: footer.php:16
 msgid "Developed by "
+msgstr ""
+
+#: archive-sn_catalogs.php:47 loops/content.php:45
+msgid "Previous"
+msgstr ""
+
+#: archive-sn_catalogs.php:48 loops/content.php:46
+msgid "Next"
 msgstr ""
 
 #: searchform.php:2
@@ -75,11 +87,8 @@ msgid "Or use search"
 msgstr ""
 
 #. Name of the template
+#: inc/widgets.php:22
 msgid "Sidebar Right"
-msgstr ""
-
-#: tag.php:6
-msgid "Tag"
 msgstr ""
 
 #. Name of the template
@@ -91,6 +100,7 @@ msgid "You must be logged in to see this page!"
 msgstr ""
 
 #. Name of the template
+#: inc/widgets.php:9
 msgid "Sidebar Left"
 msgstr ""
 
@@ -102,29 +112,29 @@ msgstr ""
 msgid "Review"
 msgstr ""
 
-#: inc/shortcodes.php:258 inc/shortcodes.php:364 inc/LoadMorePosts.php:107
+#: inc/shortcodes.php:254 inc/shortcodes.php:368 inc/LoadMorePosts.php:107
 #: loops/content.php:27
 msgid "Continue reading"
 msgstr ""
 
-#: inc/shortcodes.php:399 inc/shortcodes.php:408 inc/shortcodes.php:431
+#: inc/shortcodes.php:411 inc/shortcodes.php:420 inc/shortcodes.php:443
 #: inc/helpers.php:536 inc/customizer.php:377
 msgid "Login"
 msgstr ""
 
-#: inc/shortcodes.php:403 inc/shortcodes.php:439
+#: inc/shortcodes.php:415 inc/shortcodes.php:451
 msgid "Password"
 msgstr ""
 
-#: inc/shortcodes.php:435
+#: inc/shortcodes.php:447
 msgid "Email"
 msgstr ""
 
-#: inc/shortcodes.php:443
+#: inc/shortcodes.php:455
 msgid "Retry password"
 msgstr ""
 
-#: inc/shortcodes.php:448
+#: inc/shortcodes.php:460
 msgid "Register"
 msgstr ""
 
@@ -447,31 +457,27 @@ msgstr ""
 msgid "Phone №4"
 msgstr ""
 
-#: inc/index-pagination.php:20
+#: inc/index-pagination.php:21
 msgid "<i class=\"fa fa-angle-left\"></i> Newer"
 msgstr ""
 
-#: inc/index-pagination.php:21
+#: inc/index-pagination.php:22
 msgid "Older <i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/widgets.php:9
-msgid "Sidebar"
-msgstr ""
-
-#: inc/widgets.php:11 inc/widgets.php:24
+#: inc/widgets.php:11 inc/widgets.php:24 inc/widgets.php:37
 msgid "The sidebar widget area"
 msgstr ""
 
-#: inc/widgets.php:22
-msgid "Sidebar 2"
+#: inc/widgets.php:35
+msgid "Review Page Sidebar"
 msgstr ""
 
-#: inc/widgets.php:35
+#: inc/widgets.php:48
 msgid "Footer"
 msgstr ""
 
-#: inc/widgets.php:37
+#: inc/widgets.php:50
 msgid "The footer widget area"
 msgstr ""
 
@@ -501,6 +507,10 @@ msgstr ""
 
 #: inc/navbar.php:5
 msgid "Second Menu"
+msgstr ""
+
+#: inc/navbar.php:6
+msgid "Language switcher"
 msgstr ""
 
 #: inc/admin.php:10
@@ -597,14 +607,6 @@ msgstr ""
 msgid "Submit comment"
 msgstr ""
 
-#: loops/content.php:45
-msgid "Previous"
-msgstr ""
-
-#: loops/content.php:46
-msgid "Next"
-msgstr ""
-
 #: loops/content-search.php:21
 msgid "Sorry, your search yielded no results."
 msgstr ""
@@ -615,7 +617,7 @@ msgid "Buy in one click"
 msgstr ""
 
 #. Name of the theme
-msgid "brainworks-v4.8.6"
+msgid "brainworks"
 msgstr ""
 
 #. Author of the theme
