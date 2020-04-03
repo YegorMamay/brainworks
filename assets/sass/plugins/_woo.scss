@@ -288,6 +288,11 @@
     }
 }
 
+//message
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    margin: 15px 0 0 0;
+}
+
 //Product page
 .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
     float: none;
@@ -345,6 +350,13 @@
         margin-bottom: 15px;
     }
 }
+
+// "Advanced Woocommerce Product Gallery Slider" https://ru.wordpress.org/plugins/advanced-woocommerce-product-gallery-slider/
+//a.wpgis-popup, a.wpgis-popup:hover {
+//  opacity: 0;
+//  width: 0;
+//  height: 0;
+//}
 
 @media only screen and (max-width: 480px) {
     .woocommerce,
