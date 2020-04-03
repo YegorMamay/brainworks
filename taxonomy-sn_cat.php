@@ -9,7 +9,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3  left-sidebar">
             <?php get_sidebar(); ?>
         </div>
 

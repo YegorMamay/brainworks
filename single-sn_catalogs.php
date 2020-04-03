@@ -9,7 +9,7 @@
 <div class="row">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="col-lg-5">
-			<?php the_post_thumbnail('medium'); ?>
+			<?php the_post_thumbnail('large'); ?>
 		</div>
 		<div class="col-lg-7">
 			<h1 class="single-title"><?php the_title() ?></h1>
