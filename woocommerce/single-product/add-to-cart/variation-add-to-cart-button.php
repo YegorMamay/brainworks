@@ -26,8 +26,8 @@ global $product;
     do_action( 'woocommerce_after_add_to_cart_quantity' );
     ?>
 
-    <button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-    <button type="button" class="single_buy_one_click_button button alt <?php the_lang_class('one-click'); ?>"><?php _e('Buy in one click', 'brainworks'); ?></button>
+    <button type="submit" class="single_add_to_cart_button btn btn-secondary"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+    <button type="button" class="single_buy_one_click_button btn btn-outline-primary <?php the_lang_class('one-click'); ?>"><?php _e('Buy in one click', 'brainworks'); ?></button>
 
     <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
