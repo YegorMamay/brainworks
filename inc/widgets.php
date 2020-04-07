@@ -40,6 +40,20 @@ function bw_widgets_init()
         'before_title' => '<h6 class="widget-title">',
         'after_title' => '</h6>',
     ));
+    
+    
+    /**
+     * Woo cart
+     */
+    register_sidebar(array(
+        'name' => __('Woo Cart', 'brainworks'),
+        'id' => 'cart-widget-area',
+        'description' => __('Woo cart widget area', 'brainworks'),
+        'before_widget' => '<section class="widget-item %1$s %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
+    ));
 
     /**
      * Footer (three widget areas)

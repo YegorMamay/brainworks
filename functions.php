@@ -46,9 +46,6 @@ add_action( 'after_setup_theme', function () {
 
 remove_action( 'wp_head', '_wp_render_title_tag', 1 ); //удаляет тег title из header.php
 
-// Изменяет порядок артикула по отношению к другим элементам на странице товара
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 15 );
 
 // Добавляет возможность задавать картинку для категорий кастомного поста Каталог, при включеном плагине ACF
 if( function_exists('acf_add_local_field_group') ):
@@ -101,3 +98,18 @@ acf_add_local_field_group(array(
 ));
 
 endif;
+
+
+//WOOCOMMERCE
+// Изменяет порядок артикула по отношению к другим элементам на странице товара
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 15 );
+
+//Изменение перевода
+add_filter('gettext', 'translate_text');
+add_filter('ngettext', 'translate_text');
+ 
+function translate_text($translated) {
+$translated = str_ireplace('Подытог', 'Итого', $translated);
+return $translated;
+}

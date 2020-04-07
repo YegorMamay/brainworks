@@ -137,6 +137,9 @@
                                 )); ?>
                             </nav>
                         <?php } ?>
+                        <div class="woo-cart woo-cart-popup-wrapper">
+                            <?php if ( class_exists( 'WooCommerce' ) ) {woocommerce_cart(); woocommerce_cart_popup();} ?>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -189,3 +192,4 @@
         </nav>
     <?php } ?>
     <!-- Mobile menu end-->
+    

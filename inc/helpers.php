@@ -569,3 +569,11 @@ if ( ! function_exists( 'woocommerce_cart' ) ) {
 		echo $link;
 	}
 }
+
+if (!function_exists( 'woocommerce_cart_popup' )) {
+    function woocommerce_cart_popup() {
+        echo '<div class="cart-popup">';
+        dynamic_sidebar('cart-widget-area');
+        echo '</div>';
+    }
+}
