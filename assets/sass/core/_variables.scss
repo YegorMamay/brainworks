@@ -113,12 +113,11 @@ $iconColorReversed: $bodyBgColor;
 // FORMS
 $formFieldBorderWidth: 1px;
 $formFieldBorderColor: lighten($themeColorOne, 60%);
-$formFieldPadding: 11px 8px;
+$formFieldPadding: 13px 8px; // Responsive in _mixins.scss. Задумка в том, чтобы высота полей форм совпадала с размером кнопок
 $formFieldTextColor: #000;
-$formFieldTextSize: 18px;
+$formFieldTextSize: 16px; // Responsive in _mixins.scss
 $formFieldBorderRadius: $borderRadius;
 $formFieldBackgroundColor: #fff;
-$inputFieldMinHeight: 38px;
 $formBgColor: lighten($themeColorOne, 75%);
 
 // FOOTER

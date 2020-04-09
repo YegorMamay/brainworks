@@ -46,11 +46,6 @@
         margin-top: 1em;
     }
 
-    input.input-text {
-        min-height: $inputFieldMinHeight;
-        padding: $formFieldPadding;
-    }
-    
     #respond {
         input#submit {
             @extend %button-style;
@@ -176,13 +171,6 @@
                     }
                 }
             }
-        }
-    }
-
-    // Product quantity
-    .quantity {
-        .qty {
-            padding: $formFieldPadding;
         }
     }
 
@@ -354,6 +342,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   height: 0;
 }
 
+// popup widget cart
 .woo-cart-popup-wrapper {
     position: relative;
 
@@ -397,7 +386,6 @@ a.wpgis-popup, a.wpgis-popup:hover {
     }
 }
 
-// popup widget cart
 .woocommerce ul.cart_list li, .woocommerce ul.product_list_widget li {
     padding: 10px 0;
 }
@@ -417,6 +405,11 @@ a.wpgis-popup, a.wpgis-popup:hover {
 
 .woocommerce-mini-cart__buttons.buttons {
     text-align: center;
+}
+// popup widget cart end
+
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
+    width: 200px;
 }
 
 @media only screen and (max-width: 480px) {

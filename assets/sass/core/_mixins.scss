@@ -42,14 +42,35 @@
     box-shadow: $shadow;
 }
 
+$form-field-MQ: true;
 @mixin form-field-style {
     width: 100%;
     border: $formFieldBorderWidth solid $formFieldBorderColor;
-    padding: $formFieldPadding;
     background-color: $formFieldBackgroundColor;
     color: $formFieldTextColor;
-    font-size: $formFieldTextSize;
     border-radius: $formFieldBorderRadius;
+    padding: $formFieldPadding !important;
+    font-size: $formFieldTextSize !important;
+    
+    @if ($form-field-MQ) {
+        @media (max-width: 1024px) {
+            padding: 9px !important;
+            font-size: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            padding: 8px !important;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 544px) {
+            padding: 6px !important;
+            font-size: 12px;
+        }
+    } @else {
+        padding: $formFieldPadding;
+        font-size: $formFieldTextSize;
+    }
 }
 
 @mixin responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max, $fallback: false) {
