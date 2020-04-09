@@ -1,7 +1,7 @@
 $mobile: "(max-width: 544px)"; //xs
-$tablet: "(min-width: 545px) and (max-width: 768px)"; //sm
-$laptop: "(min-width: 769px) and (max-width: 1024px)"; //md
-$desktop: "(min-width: 1025px) and (max-width: 1366px)"; //lg
+$tablet: "(max-width: 768px)"; //sm
+$laptop: "(max-width: 1024px)"; //md
+$desktop: "(max-width: 1366px)"; //lg
 $screen: "(min-width: 1367px)"; //xl
 
 //xs 544

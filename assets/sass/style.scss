@@ -164,14 +164,6 @@ img {
         justify-content: space-between;
         align-items: center;
 
-        @media #{$mobile} {
-            display: block;
-
-            div {
-                margin-bottom: 20px;
-            }
-        }
-
         @media #{$tablet} {
             display: block;
 

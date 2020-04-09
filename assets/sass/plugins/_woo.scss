@@ -288,6 +288,31 @@
     width: 100%; 
 }
 
+//xs 544
+@media #{$mobile} {
+    .woocommerce {
+        div.product {
+            form.cart {
+                display: flex;
+                flex-direction: column; 
+                
+                .quantity {
+                    margin: 0 0 10px 0 !important;
+                    
+                }
+                
+                .single_add_to_cart_button {
+                    margin-bottom: 10px;
+                }
+            }   
+        } 
+        
+        .quantity .qty {
+            width: 100%;
+        }
+    }
+}
+
 // My Accaunt page
 #customer_login {
     display: flex;
