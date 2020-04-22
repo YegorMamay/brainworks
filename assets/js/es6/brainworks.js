@@ -38,7 +38,8 @@
                 removeAllStyles($('.js-menu'));
             }
         });
-        addLightBoxHandlerForImage(".wpgis-slider-for");
+
+        addLightBoxHandlerForImage('.wpgis-slider-for');
     });
 
     /**
@@ -515,7 +516,38 @@
         });
     };
 
-    //disabled page scroll
+    /**
+     * Add Light Box Handler For Image
+     *
+     * @description для плагина Advanced Woocommerce Product Gallery Slider
+     * https://ru.wordpress.org/plugins/advanced-woocommerce-product-gallery-slider/
+     *
+     * @example
+     * addLightBoxHandlerForImage('.wpgis-slider-for');
+     *
+     * @param {string} sliderContainer - Selected slider container
+     *
+     * @returns {void}
+     */
+    const addLightBoxHandlerForImage = (sliderContainer) => {
+        $(window).on('load', () => {
+            const slider = $(sliderContainer);
+
+            if (slider.length) {
+                slider.find('img').each((index, element) => {
+                    const el = $(element);
+
+                    el.on('click', (event) =>{
+                        event.preventDefault();
+                        event.stopPropagation();
+                        el.parents('.slick-slide').find('.wpgis-popup').click();
+                    });
+                });
+            }
+        });
+    };
+
+    // Disabled page scroll
     $('.js-hamburger').on('click', function () {
         $('body').addClass('body-overflow');
     });
@@ -523,21 +555,5 @@
     $('.js-menu-close, .menu-link').on('click', function () {
         $('body').removeClass('body-overflow');
     });
-    
-    //для плагина "Advanced Woocommerce Product Gallery Slider" https://ru.wordpress.org/plugins/advanced-woocommerce-product-gallery-slider/
-    var addLightBoxHandlerForImage = function addLightBoxHandlerForImage(sliderContainer) {
-        $(window).load(function() {
-            var slider$ = $(sliderContainer);
-            if (slider$.length) {
-                slider$.find("img").each(function(index, element) {
-                    $(element).on("click", function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        $(element).parents(".slick-slide").find(".wpgis-popup").click();
-                    });
-                });
-            }
-        });
-    };
 
 })(window, document, jQuery, window.jpAjax);
