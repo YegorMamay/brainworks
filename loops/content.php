@@ -1,10 +1,10 @@
 <?php if (have_posts()): ?>
     <div class="js-ajax-posts">
         <?php while (have_posts()): the_post(); ?>
-
                     <article id="post_<?php the_ID() ?>" class="row">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                <?php the_post_thumbnail('large'); ?>
+                            <?php the_post_thumbnail('large'); ?>
+                            <div class="sp-xs-2 sp-sm-0"></div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
