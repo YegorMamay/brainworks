@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-03 08:11+0000\n"
+"POT-Creation-Date: 2020-04-28 13:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: header.php:144
+#: header.php:147
 msgid "Call back"
 msgstr ""
 
@@ -97,6 +97,10 @@ msgstr ""
 
 #: page-auth-only.php:13
 msgid "You must be logged in to see this page!"
+msgstr ""
+
+#: single-sn_catalogs.php:20
+msgid "Quick order"
 msgstr ""
 
 #. Name of the template
@@ -473,11 +477,19 @@ msgstr ""
 msgid "Review Page Sidebar"
 msgstr ""
 
-#: inc/widgets.php:48
+#: inc/widgets.php:49
+msgid "Woo Cart"
+msgstr ""
+
+#: inc/widgets.php:51
+msgid "Woo cart widget area"
+msgstr ""
+
+#: inc/widgets.php:62
 msgid "Footer"
 msgstr ""
 
-#: inc/widgets.php:50
+#: inc/widgets.php:64
 msgid "The footer widget area"
 msgstr ""
 
@@ -617,7 +629,7 @@ msgid "Buy in one click"
 msgstr ""
 
 #. Name of the theme
-msgid "brainworks"
+msgid "BrainWorks WP Theme"
 msgstr ""
 
 #. Author of the theme

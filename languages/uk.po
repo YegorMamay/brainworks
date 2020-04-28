@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-03 08:11+0000\n"
-"PO-Revision-Date: 2020-04-03 08:15+0000\n"
+"POT-Creation-Date: 2020-04-28 13:59+0000\n"
+"PO-Revision-Date: 2020-04-28 14:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -13,9 +13,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.2; wp-5.4"
+"X-Loco-Version: 2.3.3; wp-5.4"
 
-#: header.php:144
+#: header.php:147
 msgid "Call back"
 msgstr ""
 
@@ -99,6 +99,10 @@ msgstr ""
 #: page-auth-only.php:13
 msgid "You must be logged in to see this page!"
 msgstr "Вам треба увійти, щоб побачити сторінку!"
+
+#: single-sn_catalogs.php:20
+msgid "Quick order"
+msgstr "Замовити"
 
 #. Name of the template
 #: inc/widgets.php:9
@@ -474,11 +478,19 @@ msgstr ""
 msgid "Review Page Sidebar"
 msgstr ""
 
-#: inc/widgets.php:48
+#: inc/widgets.php:49
+msgid "Woo Cart"
+msgstr ""
+
+#: inc/widgets.php:51
+msgid "Woo cart widget area"
+msgstr ""
+
+#: inc/widgets.php:62
 msgid "Footer"
 msgstr ""
 
-#: inc/widgets.php:50
+#: inc/widgets.php:64
 msgid "The footer widget area"
 msgstr ""
 
@@ -618,7 +630,7 @@ msgid "Buy in one click"
 msgstr "Купити одним кліком"
 
 #. Name of the theme
-msgid "brainworks"
+msgid "BrainWorks WP Theme"
 msgstr ""
 
 #. Author of the theme
