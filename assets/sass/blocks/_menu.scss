@@ -142,7 +142,6 @@
     visibility: hidden;
     text-align: left;
     opacity: 0;
-    @extend %smooth_animation;
 
     &-item {
       .menu-item-has-children-arrow {
