@@ -22,8 +22,8 @@ $container-max-widths: (
 ) !default;
 
 
-$primary_color_one: #000 !default;
-$primary_color_two: #fff !default;
+$primary_color_one: #000 !default; // black
+$primary_color_two: #fff !default; //white
 
 // THEME COLORS
 $themeColorOne: #2c3e50; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других. 
@@ -37,43 +37,42 @@ $shadow: 0 0 10px rgba($themeColorOne, .2);
 
 // SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColorTwo;
-$selectionFontColor: #fff;
+$selectionFontColor: $primary_color_two;
 
 // BODY
-$bodyBgColor: #fff; //white
-$bodyFontColor: #000; // black
+$bodyBgColor: $primary_color_two;
+$bodyFontColor: $primary_color_one;
 
 // WRAPPER
-$wrapperBgColor: #fff;
+$wrapperBgColor: $primary_color_two;
 
 // HEADER: цвет фона шапки сайта
 $headerBgColor: $themeColorOne;
-$headerFontColor: #fff;
+$headerFontColor: $primary_color_two;
 
 // Text Highlight: цвет фона и текста при добавлении к нему .highlighted
 $textHighlightBgColor: $themeColorTwo;
-$textHighlightColor: #fff;
+$textHighlightColor: $primary_color_two;
 
 // MENU
 $menuBgColor: $themeColorOne;
 $menuBgColorActive: $themeColorTwo;
-$menuFontColor: #fff;
-$menuFontColorActive: #fff;
+$menuFontColor: $primary_color_two;
+$menuFontColorActive: $primary_color_two;
 
-//Sub Menu
+// MENU mobile/Sub
+$navHeaderMobileBGColor: $themeColorOne;
+$navHamburgerMobileColor: $primary_color_two;
+$menuMobileBGColor: $themeColorOne;
 $menuMobileSubMenuBGColor: lighten($themeColorOne, 10%);
-$menuMobileTextColor: #fff;
-$menuMobileSubMenuLinkFontSize: 18px;
+$menuMobileTextColor: $primary_color_two;
 $menuMobileSubMenuTextColor: $menuMobileTextColor;
 $menuMobileSubMenuBGOnHover: darken($themeColorTwo, 10%);
-$menuMobileSubMenuTextColorOnHover: #fff;
+$menuMobileSubMenuTextColorOnHover: $primary_color_two;
+$navArrowColor: $primary_color_two;
 
-// MENU Mobile
-$navArrowColor: #fff;
-$navHeaderMobileBGColor: $themeColorOne;
-$navHamburgerMobileColor: #fff;
-$menuMobileBGColor: $themeColorOne;
 $menuMobileLinkFontSize: 20px;
+$menuMobileSubMenuLinkFontSize: 18px;
 
 $hamburger-offset: 8px;
 $hamburger-duration: .1s;
@@ -81,7 +80,7 @@ $hamburger-delay: .1s;
 $hamburger-color: $themeColorTwo;
 
 $menu-close-size: 25px;
-$menu-close-color: #fff;
+$menu-close-color: $primary_color_two;
 $menuContainerMobilePaddingTop: 20%;
 
 // TITLES
@@ -89,21 +88,21 @@ $titleFontColor: $themeColorOne;
 $titleFontColorActive: lighten($titleFontColor, 10%);
 
 // LINKS
-$linkFontColor: #000;
+$linkFontColor: $primary_color_one;
 $linkFontColorActive: lighten($linkFontColor, 20%);
 
 // TABLE
 $tableBgColor: $themeColorTwo;
 $tableBgColorActive: lighten($themeColorTwo, 10%);
-$tableBorderColor: #fff;
+$tableBorderColor: $primary_color_two;
 $tableBorderColorActive: #989898;
 $tableOddBgColor: $themeColorOne;
-$tableOddFontColor: #fff;
+$tableOddFontColor: $primary_color_two;
 $tableEvenBgColor: $themeColorTwo;
-$tableEvenFontColor: #fff;
+$tableEvenFontColor: $primary_color_two;
 
 // TEXT
-$textMutedColor: #aaa;
+$textMutedColor: lighten($primary_color_one, 75%);;
 
 // Icons
 $iconColor: $themeColorTwo;
@@ -114,29 +113,28 @@ $iconColorReversed: $bodyBgColor;
 $formFieldBorderWidth: 1px;
 $formFieldBorderColor: lighten($themeColorOne, 60%);
 $formFieldPadding: 13px 8px; // Responsive in _mixins.scss. Задумка в том, чтобы высота полей форм совпадала с размером кнопок
-$formFieldTextColor: #000;
+$formFieldTextColor: $primary_color_one;
 $formFieldTextSize: 16px; // Responsive in _mixins.scss
 $formFieldBorderRadius: $borderRadius;
-$formFieldBackgroundColor: #fff;
+$formFieldBackgroundColor: $primary_color_two;
 $formBgColor: lighten($themeColorOne, 75%);
 
 // FOOTER
 $footerBgColor: $themeColorOne;
-$footerFontColor: #fff;
+$footerFontColor: $primary_color_two;
 $footerLinkColorActive: darken($footerFontColor, 5%);
 
 // Pagination
-$paginationActiveLink: $themeColorTwo;
-$paginationActiveLinkText: #fff;
-$paginationLinkOnHover: $themeColorTwo;
-$paginationLinkOnHoverText: #fff;
+$paginationTextColor: $primary_color_one;
+$paginationActiveTextColor: $primary_color_two;
+$paginationActiveBG: $themeColorTwo;
 
 //WOOCOMMERCE
 $wooThemeColor: $themeColorTwo;
 
 // On sale
 $onsaleBackgroundColor: $wooThemeColor;
-$onsaleFontColor: #fff;
+$onsaleFontColor: $primary_color_two;
 
 // Products price
 $productsPriceFontColor: $wooThemeColor;

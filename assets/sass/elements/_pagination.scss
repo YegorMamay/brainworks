@@ -31,7 +31,7 @@
             padding: 10px 15px;
             font-size: 16px;
             line-height: 1.1;
-            color: #333;
+            color: $paginationTextColor;
             transition: .3s ease-in-out;
             border: 1px solid #c0c0c0;
             border-left-width: 0;
@@ -39,15 +39,15 @@
 
         .page-link:not(.dots) {
             &:hover {
-                background-color: $paginationLinkOnHover;
-                color: $paginationLinkOnHoverText;
+                background-color: $paginationActiveBG;
+                color: $paginationActiveTextColor;
                 border-color: transparent;
             }
         }
 
         .current {
-            color: $paginationActiveLinkText;
-            background-color: $paginationActiveLink;
+            color: $paginationActiveTextColor;
+            background-color: $paginationActiveBG;
             border-color: transparent;
         }
     }

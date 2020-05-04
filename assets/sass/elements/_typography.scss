@@ -48,6 +48,19 @@ i.button-style {
     padding: 3px 8px;
 }
 
+a {
+    text-decoration: none;
+    color: $linkFontColor;
+    @extend %smooth_animation;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: $linkFontColorActive;
+    }
+}
+
 @media #{$mobile} {
     p {
         font-size: $p_mobile * $p_size;

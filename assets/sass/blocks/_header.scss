@@ -3,7 +3,6 @@
     background-color: $headerBgColor;
     color: $headerFontColor;
     box-shadow: $shadow;
-
 }
 
 .fixed-to-top {
@@ -14,17 +13,7 @@
     width: 100%;
     z-index: 33;
 
-    //xs 544
-    @media #{$mobile} {
-        display: none;
-    }
-
-    //sm 545 - 768
-    @media #{$tablet} {
-        display: none;
-    }
-
-    //md 769 - 1024
+    //md - 1024
     @media #{$laptop} {
         display: none;
     }

@@ -398,8 +398,8 @@ a.wpgis-popup, a.wpgis-popup:hover {
     padding: 25px;
 
     box-shadow: $shadow;
-    background-color: #fff;
-    color: #000;
+    background-color: $primary_color_two;
+    color: $wooThemeColor;
 
     box-sizing: border-box;
     transform: translateY(15px) translateX(15px);
