@@ -288,6 +288,18 @@
     width: 100%; 
 }
 
+//star rating
+.woocommerce .star-rating span::before,
+.woocommerce p.stars a::before {
+    color: $themeColorTwo;
+}
+
+.woocommerce p.stars a {
+    &:hover {
+        color: $themeColorTwo;
+    }
+}
+
 //xs 544
 @media #{$mobile} {
     .woocommerce {
