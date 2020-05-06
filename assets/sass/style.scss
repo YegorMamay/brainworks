@@ -8,7 +8,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.05.20
+Version: 6.05.20
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -57,6 +57,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/custom-scrollbar";
 @import "elements/dinamic-elements";
 @import "elements/buttons.scss";
+@import "elements/gradient-title.scss";
 
 // BLOCKS
 @import "blocks/header";

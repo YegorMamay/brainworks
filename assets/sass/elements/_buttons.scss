@@ -1,6 +1,6 @@
 $btn-enable-shadows: true;
-$btn-enable-gradients: false;
-$btn-gradient-angle: 180deg;
+$btn-enable-gradients: true;
+$btn-gradient-angle: -90deg;
 
 // Medium Buttons
 $btn-padding-y: 10px;
@@ -101,7 +101,7 @@ fieldset:disabled a.btn {
     $active-border: $themeColorOne;
     
     @if $btn-enable-gradients {
-        background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 15%), $background) repeat-x;
+        background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 25%), $background) repeat-x;
     } @else {
         background: $background;
     }
@@ -116,7 +116,7 @@ fieldset:disabled a.btn {
     &:hover {
         color: $btn-primary-color-hover;
         @if $btn-enable-gradients {
-            background: $hover-background linear-gradient($btn-gradient-angle, mix(#fff, $hover-background, 15%), $hover-background) repeat-x;
+            background: $hover-background linear-gradient($btn-gradient-angle, mix(#fff, $hover-background, 25%), $hover-background) repeat-x;
         } @else {
             background-color: $hover-background;
         }
