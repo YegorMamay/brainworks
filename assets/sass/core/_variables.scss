@@ -33,7 +33,7 @@ $themeColorTwo: #e74c3c; // Основной/акцентный цвет бре�
 
 $borderRadius: 0;
 $borderColor: lighten($themeColorOne, 70%);
-$shadow: 0 0 10px rgba($themeColorOne, .2);
+$shadow: 0 10px 20px rgba($primary_color_one, .2);
 
 // SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColorTwo;
