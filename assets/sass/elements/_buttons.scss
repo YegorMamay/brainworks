@@ -202,7 +202,7 @@ fieldset:disabled a.btn {
 
     &.disabled,
     &:disabled {
-        color: $themeColorTwo;
+        color: darken($themeColorTwo, 30%);
         background-color: $themeColorTwo;
         border-color: $border;
     }

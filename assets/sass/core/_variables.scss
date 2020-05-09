@@ -32,7 +32,7 @@ $themeColorTwo: #e74c3c; // Основной/акцентный цвет бре�
 
 
 $borderRadius: 0;
-$borderColor: lighten($themeColorOne, 70%);
+$borderColor: lighten($primary_color_one, 80%);
 $shadow: 0 10px 20px rgba($primary_color_one, .2);
 
 // SELECTION: цвет фона и текста при выделении его курсором
@@ -111,7 +111,7 @@ $iconColorReversed: $bodyBgColor;
 
 // FORMS
 $formFieldBorderWidth: 1px;
-$formFieldBorderColor: lighten($themeColorOne, 60%);
+$formFieldBorderColor: $borderColor;
 $formFieldPadding: 13px 8px; // Responsive in _mixins.scss. Задумка в том, чтобы высота полей форм совпадала с размером кнопок
 $formFieldTextColor: $primary_color_one;
 $formFieldTextSize: 16px; // Responsive in _mixins.scss

@@ -122,6 +122,14 @@
             li {
                 &.product {
                     text-align: center;
+                    box-shadow: $shadow;
+                    border: 1px solid lighten($primary_color_one, 90%);
+                    padding-bottom: 20px;
+                    @include smooth_animation;
+                    
+                    &:hover {
+                        box-shadow: none;
+                    }
 
                     .woocommerce-loop-product__title {
                         line-height: 1.1;
@@ -144,7 +152,7 @@
             .product_title {
                 @include responsive-font-size(20px, 32px, 480px, 1024px, 26px);
                 font-weight: bold;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
 
             p,
@@ -175,9 +183,8 @@
     }
 
     // Product sku
-    .sku_wrapper {
+    .sku_wrapper, .posted_in, .tagged_as {
         display: block;
-        margin-bottom: 5px;
     }
 
     // Cart
@@ -289,15 +296,38 @@
 }
 
 //star rating
-.woocommerce .star-rating span::before,
-.woocommerce p.stars a::before {
-    color: $themeColorTwo;
-}
-
-.woocommerce p.stars a {
-    &:hover {
+.woocommerce {
+    .star-rating span::before,
+    p.stars a::before {
         color: $themeColorTwo;
     }
+    
+    p.stars a {
+        &:hover {
+            color: $themeColorTwo;
+        }
+    }
+    
+    ul.products li.product .star-rating {
+        margin: 0 auto 10px;
+    }
+    
+    .woocommerce-product-rating {
+        margin-bottom: 15px !important;
+    }
+}
+//star rating end
+
+.woocommerce-variation.single_variation {
+    margin-bottom: 20px;
+}
+
+.woocommerce div.product form.cart .variations {
+    margin-bottom: 0;
+}
+
+.woocommerce div.product form.cart .variations td.label {
+    padding: 15px 15px 15px 0;
 }
 
 //xs 544
@@ -347,22 +377,6 @@
 
 .woocommerce .blockUI.blockOverlay {
     z-index: 3 !important;
-}
-
-// woo filter
-.woof_container_inner {
-    h4 {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-}
-
-.woof_list {
-    li {
-        font-size: 16px;
-        padding: 0 !important;
-    }
 }
 
 .woocommerce-Reviews {
