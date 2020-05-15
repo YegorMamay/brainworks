@@ -8,16 +8,16 @@ $grid-gutter-width: 30px !default;
 
 $grid-breakpoints: (
         xs: 0,
-        sm: 544px,
+        sm: 575px,
         md: 768px,
         lg: 1024px,
-        xl: 1360px
+        xl: 1366px
 ) !default;
 
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
+        sm: 570px,
+        md: 760px,
+        lg: 1000px,
         xl: 1300px
 ) !default;
 
@@ -81,7 +81,7 @@ $hamburger-color: $themeColorTwo;
 
 $menu-close-size: 25px;
 $menu-close-color: $primary_color_two;
-$menuContainerMobilePaddingTop: 20%;
+$menuContainerMobilePaddingTop: 100px;
 
 // TITLES
 $titleFontColor: $themeColorOne;

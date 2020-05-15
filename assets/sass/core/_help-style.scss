@@ -63,7 +63,7 @@ em {
     }
     
     &-italic {
-        font-weight: italic;
+        font-style: italic;
     }
     
     &-vertical {
@@ -89,14 +89,6 @@ em {
 
 .pull-none {
     float: none;
-}
-
-.hide-on-mobile {
-    display: block !important;
-}
-
-.hide-on-desktop {
-    display: none !important;
 }
 
 .list-unstyled {
@@ -160,38 +152,15 @@ em {
     }
 }
 
-//xs 544
-@media #{$mobile} {
-    .hide-on-mobile {
-        display: none !important;
-    }
-
-    .hide-on-desktop {
-        display: block !important;
-    }
-    
-    .center-on-mobile {
-        text-align: center !important;
-    }
+.hide-on-mobile {
+    display: block !important;
 }
 
-//sm 545 - 768
-@media #{$tablet} {
-    .hide-on-mobile {
-        display: none !important;
-    }
-
-    .hide-on-desktop {
-        display: block !important;
-    }
-
-    .center-on-mobile {
-        text-align: center !important;
-    }
+.hide-on-desktop {
+    display: none !important;
 }
 
-//md 769 - 1024
-@media #{$laptop} {
+@media #{$desktop} {
     .hide-on-mobile {
         display: none !important;
     }

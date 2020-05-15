@@ -5,16 +5,16 @@
     box-shadow: $shadow;
 }
 
+@media #{$desktop} {
+    .page-header {
+        display: none !important;  
+    }
+}
+
 .fixed-to-top {
     position: fixed;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     z-index: 33;
-
-    //md - 1024
-    @media #{$laptop} {
-        display: none;
-    }
 }

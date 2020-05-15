@@ -7,19 +7,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
 html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
     overflow-y: hidden;
 }
-// popup-maker end
 
-@media screen and (min-width: 1024px) {
-    html.pum-open.pum-open-overlay {
-        & body {
-            overflow-y: scroll;
-        }
-
-        & .page-header.fixed-to-top {
-            overflow-y: scroll;
-        }
-    }
+html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
+      overflow: unset !important;
 }
+// popup-maker end
 
 //navi menu
 //.navi-main-menu-button-wrapper {

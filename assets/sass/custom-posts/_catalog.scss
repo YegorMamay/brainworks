@@ -11,3 +11,16 @@
         padding: 15px;
     }
 }
+
+// Шорткод вывода списка категорий
+.list-cat {
+    &__item a {
+        box-shadow: $shadow;
+        border: 1px solid $borderColor;
+        @include smooth_animation;
+        
+        .list-cat__title {
+            padding: 15px;
+        }
+    }
+}

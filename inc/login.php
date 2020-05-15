@@ -3,7 +3,7 @@
 /** Login page logo */
 function bw_login_head()
 {
-    $default_logo_url = get_template_directory_uri() . '/assets/img/login-logo.svg';
+    $default_logo_url = get_template_directory_uri() . '/assets/img/logo.svg';
     $logo_url = get_theme_mod('bw_login_logo', $default_logo_url);
     $background = get_background_login_page();
 
