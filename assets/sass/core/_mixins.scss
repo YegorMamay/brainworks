@@ -49,22 +49,22 @@ $form-field-MQ: true;
     background-color: $formFieldBackgroundColor;
     color: $formFieldTextColor;
     border-radius: $formFieldBorderRadius;
-    padding: $formFieldPadding !important;
-    font-size: $formFieldTextSize !important;
+    padding: $formFieldPadding;
+    font-size: $formFieldTextSize;
     
     @if ($form-field-MQ) {
-        @media (max-width: 1024px) {
-            padding: 9px !important;
+        @media #{$laptop} {
+            padding: 13px;
             font-size: 15px;
         }
         
-        @media (max-width: 768px) {
-            padding: 8px !important;
+        @media #{$tablet} {
+            padding: 13px;
             font-size: 14px;
         }
         
-        @media (max-width: 544px) {
-            padding: 6px !important;
+        @media #{$mobile} {
+            padding: 10px;
             font-size: 12px;
         }
     } @else {
