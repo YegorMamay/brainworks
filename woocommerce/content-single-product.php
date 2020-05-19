@@ -1,4 +1,8 @@
 <?php
+/**
+ * @version 3.6.0
+ */
+
 defined( 'ABSPATH' ) || exit;
 global $product;
 do_action( 'woocommerce_before_single_product' );
