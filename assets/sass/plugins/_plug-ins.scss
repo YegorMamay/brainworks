@@ -4,24 +4,24 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
     padding-right: 0 !important;
 }
 
-//layer slider
-#top {
-  & .ls-overflow-visible {
-    overflow: auto;
-  }
-}
-
 html.pum-open.pum-open-overlay,
 html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
-  overflow: hidden!important;
-  margin-right: 7px;
+    margin-right: 7px;
 }
 
+html.pum-open.pum-open-overlay .fixed-to-top {
+  margin-right: 7px;
+}
+// popup-maker end
+
+
 //navi menu	
-//.navi-main-menu-button-wrapper {
-//    display: none;
-//
-//    &.navi-menu-active {
-//        display: block;
-//    }
-//}
+/*
+.navi-main-menu-button-wrapper {
+    display: none;
+
+    &.navi-menu-active {
+        display: block;
+    }
+}
+*/
