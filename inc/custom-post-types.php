@@ -29,7 +29,7 @@ function bw_register_cpts_reviews()
         'map_meta_cap' => true,
         'hierarchical' => false,
         'rewrite' => array('slug' => 'reviews', 'with_front' => true),
-        'query_var' => true,
+        'query_var' => false,
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
     );
 

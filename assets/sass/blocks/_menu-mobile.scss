@@ -6,7 +6,7 @@
   nav.main-nav {
     display: none;
   }
-    
+
   .nav-mobile-header {
     display: flex;
     justify-content: space-between;
@@ -176,6 +176,17 @@
     & .menu-item {
       &:hover {
         background: transparent;
+      }
+    }
+  }
+
+  & .lang-item {
+
+    & .sub-menu-link {
+      padding: 5px;
+
+      & img {
+        width: 32px;
       }
     }
   }

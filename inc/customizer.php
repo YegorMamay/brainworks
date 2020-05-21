@@ -380,7 +380,7 @@ function bw_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('bw_login_logo', array(
-        'default' => get_template_directory_uri() . '/assets/img/login-logo.svg',
+        'default' => get_template_directory_uri() . '/assets/img/logo.svg',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bw_login_logo', array(

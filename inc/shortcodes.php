@@ -162,7 +162,7 @@ if (!function_exists('bw_messengers_shortcode')) {
                 $icon = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($messenger['icon']));
 
                 $link = sprintf(
-                    '<a class="messenger-link messenger-%s" href="tel:%s" target="_blank" aria-label="%s" rel="nofollow noopener">%s</a>',
+                    '<a class="messenger-link messenger-%s" href="%s" target="_blank" aria-label="%s" rel="nofollow noopener">%s</a>',
                     esc_attr($name),
                     esc_attr(get_phone_number($messenger['tel'])),
                     esc_attr($messenger['text']),
@@ -202,6 +202,7 @@ if (!function_exists('bw_html_sitemap')) {
         $ignoreposttypes = array(
             'attachment',
             'popup',
+            'reviews'
         );
 
         $post_types = get_post_types($args, 'objects');

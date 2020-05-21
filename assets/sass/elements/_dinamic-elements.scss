@@ -1,131 +1,180 @@
 .logo {
-    &,
-    &-link,
-    &-img {
-        display: inline-block;
-        vertical-align: middle;
-    }
+  &,
+  &-link,
+  &-img {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .phone {
-    @extend %reset-list;
+  @extend %reset-list;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 5px;
+  }
+
+  &-number {
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
+}
 
-    &-item {
-        margin: 0 5px;
-    }
 
-    &-number {
-        display: inline-block;
-        text-decoration: none;
+//Lifecell
+.phone-number[href^="tel:+38063"]:before,
+.phone-number[href^="tel:+38073"]:before,
+.phone-number[href^="tel:+38093"]:before {
+  content: '';
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  background-image: url("/wp-content/themes/brainworks-master/assets/img/life.svg");
+  background-repeat: no-repeat;
+}
 
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+//Vodafone
+.phone-number[href^="tel:+38050"]:before,
+.phone-number[href^="tel:+38066"]:before,
+.phone-number[href^="tel:+38095"]:before,
+.phone-number[href^="tel:+38099"]:before {
+  content: '';
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  background-image: url("/wp-content/themes/brainworks-master/assets/img/vodafone.svg");
+  background-repeat: no-repeat;
+}
+
+//kyivstar
+.phone-number[href^="tel:+38067"]:before,
+.phone-number[href^="tel:+38068"]:before,
+.phone-number[href^="tel:+38096"]:before,
+.phone-number[href^="tel:+38097"]:before,
+.phone-number[href^="tel:+38098"]:before {
+  content: '';
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  background-image: url("/wp-content/themes/brainworks-master/assets/img/kyivstar.svg");
+  background-repeat: no-repeat;
 }
 
 .social {
-    @extend %reset-list;
+  @extend %reset-list;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 5px;
+  }
+
+  &-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    color: $iconColor;
+
+    &:hover, &:active, &:focus {
+      color: $iconColorActive;
     }
-
-    &-item {
-        margin: 0 5px;
-    }
-
-    &-link {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        font-size: 24px;
-        color: $iconColor;
-
-        &:hover, &:active, &:focus {
-            color: $iconColorActive;
-        }
-    }
+  }
 }
 
 .messenger {
-    @extend %reset-list;
+  @extend %reset-list;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 5px;
+  }
+
+  &-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    color: $iconColor;
+
+    &:hover, &:active, &:focus {
+      color: $iconColorActive;
     }
-
-    &-item {
-        margin: 0 5px;
-    }
-
-    &-link {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        font-size: 24px;
-        color: $iconColor;
-
-        &:hover, &:active, &:focus {
-            color: $iconColorActive;
-        }
-    }
+  }
 }
 
 .lang {
-    @extend %reset-list;
+  @extend %reset-list;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 5px;
+
+    a {
+      display: block;
+
+
+      &:after {
+        //content: "/";
+        //margin-left: 15px;
+      }
+
+      img {
+        height: 15px;
+      }
     }
+  }
 
-    &-item {
-        margin: 0 5px;
-
-        a {
-            display: block;
-
-
-            &:after {
-                //content: "/";
-                //margin-left: 15px;
-            }
-
-            img {
-                height: 15px;
-            }
-        }
+  &-item:last-child {
+    a {
+      &:after {
+        display: none;
+      }
     }
-
-    &-item:last-child {
-        a {
-            &:after {
-                display: none;
-            }
-        }
-    }
+  }
 }
 
 //lang dropdown
 .pll-parent-menu-item {
-    .sub-menu {
-        width: auto !important;
-        
-        .lang-item {
-            display: block;
-            text-align: center;
-        }
+  .sub-menu {
+    width: auto !important;
+
+    .lang-item {
+      display: block;
+      text-align: center;
     }
+  }
 }
