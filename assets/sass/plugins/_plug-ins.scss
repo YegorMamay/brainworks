@@ -4,13 +4,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
     padding-right: 0 !important;
 }
 
-html.pum-open.pum-open-overlay,
-html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
+@media screen and (min-width: 1024px) {
+  html.pum-open.pum-open-overlay,
+  html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
     margin-right: 7px;
-}
+  }
 
-html.pum-open.pum-open-overlay .fixed-to-top {
-  margin-right: 7px;
+  html.pum-open.pum-open-overlay .fixed-to-top {
+    overflow-x: hidden;
+  }
 }
 // popup-maker end
 
