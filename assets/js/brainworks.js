@@ -185,9 +185,19 @@
                     $element.on("click", function(e) {
                         e.preventDefault();
                         var target = $(href[0] === "#" ? href : href.slice(1));
-                        if (target.length) {
+                        var fixedHeader = $(".fixed-to-top");
+                        var fixOffset = 20;
+                        var scrollBlockOffset;
+                        if (target.length && href.slice(0, 3) !== "#__") {
+                            if (fixedHeader.length > 0 && $(window).width() > 1024) {
+                                scrollBlockOffset = fixedHeader.outerHeight() + fixOffset;
+                            } else if (fixedHeader.length >= 0 && $(window).width() < 1024) {
+                                scrollBlockOffset = $(".nav-mobile-header").outerHeight() + fixOffset;
+                            } else {
+                                scrollBlockOffset = fixOffset;
+                            }
                             $("html, body").animate({
-                                scrollTop: target.offset().top
+                                scrollTop: target.offset().top - scrollBlockOffset
                             }, animationSpeed);
                         } else if (href[0] === "/") {
                             location.href = href;
@@ -272,4 +282,9 @@
     $(".js-menu-close, .menu-link").on("click", function() {
         $("body").removeClass("body-overflow");
     });
+    
+    // Исправляет конфликт модального окна и галереи в карточке товара
+$('.form-cover input[type="text"]').on('focus', function () {
+    $.fancybox.destroy();
+});
 })(window, document, jQuery, window.jpAjax);
