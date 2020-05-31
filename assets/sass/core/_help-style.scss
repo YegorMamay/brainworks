@@ -153,23 +153,23 @@ em {
 }
 
 .hide-on-mobile {
-    display: block !important;
+    display: block !important; 
+    
+    @media #{$desktop-max} {
+        display: none !important;
+    }
 }
 
 .hide-on-desktop {
     display: none !important;
-}
-
-@media #{$desktop} {
-    .hide-on-mobile {
-        display: none !important;
-    }
-
-    .hide-on-desktop {
+    
+    @media #{$desktop-max} {
         display: block !important;
     }
+}
 
-    .center-on-mobile {
-        text-align: center !important;
-    }
+.center-on-mobile {
+    @media #{$desktop-max} {
+            text-align: center !important;
+    } 
 }

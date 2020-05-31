@@ -27,7 +27,7 @@
     }
     
     //xs 544
-    @media #{$mobile} {
+    @media #{$mobile-max} {
         flex-direction: column;
         text-align: center;
     }

@@ -289,7 +289,7 @@
     }
 }
 
-//Product page
+// Product page
 .woocommerce #content div.product div.images,
 .woocommerce div.product div.images,
 .woocommerce-page #content div.product div.images,
@@ -329,41 +329,49 @@
 }
 //star rating end
 
+.woocommerce {
+    div.product {
+        form.cart .variations {
+            @media #{$mobile-max} {
+                margin-bottom: 0;
+            }
+        }
+        
+        form.cart .variations {
+            td.label {
+                padding: 15px 10px 15px 0;
+                
+                @media #{$mobile-max} {
+                    padding: 7px 10px 7px 0;
+                }
+                
+                @media #{$tablet-max} {
+                    padding: 11px 10px 7px 0;
+                }
+            }
+            
+            td.value {
+                text-align: left;
+                
+                select {
+                    max-width: 200px;
+                    min-width: inherit;
+                }
+            }
+        }
+        
+        .stock {
+            color: $bodyFontColor;
+        }
+    }  
+}
+
 .woocommerce-variation.single_variation {
     margin-bottom: 20px;
 }
 
-.woocommerce div.product form.cart .variations {
-    @media #{$mobile} {
-        margin-bottom: 0;
-    }
-}
-
-.woocommerce div.product form.cart .variations {
-    td.label {
-        padding: 15px 10px 15px 0;
-        
-        @media #{$mobile} {
-            padding: 7px 10px 7px 0;
-        }
-        
-        @media #{$tablet} {
-            padding: 11px 10px 7px 0;
-        }
-    }
-    
-    td.value {
-        text-align: left;
-        
-        select {
-            max-width: 200px;
-            min-width: inherit;
-        }
-    }
-}
-
 //xs 544
-@media #{$mobile} {
+@media #{$mobile-max} {
     .woocommerce {
         div.product {
             form.cart {
@@ -388,13 +396,14 @@
         }
     }
 }
+// Product page END
 
 // My Accaunt page
 #customer_login {
     display: flex;
     
     //xs 544
-    @media #{$mobile} {
+    @media #{$mobile-max} {
         display: block;
     }
 }
@@ -404,14 +413,27 @@
     display: flex;
     
     //xs 544
-    @media #{$mobile} {
+    @media #{$mobile-max} {
         display: block;
+    }
+}
+
+.select2-container .select2-selection--single {
+    height: 40px;
+    
+    .select2-selection__rendered {
+        padding-top: 5px;
+    }
+    
+    .select2-selection__arrow {
+        top: 8px;
     }
 }
 
 .woocommerce .blockUI.blockOverlay {
     z-index: 3 !important;
 }
+// Checkout page end
 
 .woocommerce-Reviews {
     .comment-reply-title {

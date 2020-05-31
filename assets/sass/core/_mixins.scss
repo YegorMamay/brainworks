@@ -53,17 +53,17 @@ $form-field-MQ: true;
     font-size: $formFieldTextSize;
     
     @if ($form-field-MQ) {
-        @media #{$laptop} {
+        @media #{$laptop-max} {
             padding: 13px;
             font-size: 15px;
         }
         
-        @media #{$tablet} {
+        @media #{$tablet-max} {
             padding: 13px;
             font-size: 14px;
         }
         
-        @media #{$mobile} {
+        @media #{$mobile-max} {
             padding: 10px;
             font-size: 12px;
         }

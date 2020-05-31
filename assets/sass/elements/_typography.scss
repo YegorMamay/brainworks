@@ -61,7 +61,7 @@ a {
     }
 }
 
-@media #{$mobile} {
+@media #{$mobile-max} {
     p {
         font-size: $p_mobile * $p_size;
         line-height: $p_mobile * $p_line-height;
@@ -79,7 +79,7 @@ a {
     }
 }
 
-@media #{$tablet} {
+@media #{$tablet-max} {
     p {
         font-size: $fonts_tablet * $p_size;
         line-height: $fonts_tablet * $p_line-height;
@@ -97,7 +97,7 @@ a {
     }
 }
 
-@media #{$laptop} {
+@media #{$laptop-max} {
     p {
         font-size: $fonts_laptop * $p_size;
         line-height: $fonts_laptop * $p_line-height;
@@ -115,7 +115,7 @@ a {
     }
 }
 
-@media #{$desktop} {
+@media #{$desktop-max} {
     p {
         font-size: $fonts_desktop * $p_size;
         line-height: $fonts_desktop * $p_line-height;
@@ -133,7 +133,7 @@ a {
     }
 }
 
-@media #{$screen} {
+@media #{$screen-max} {
     p {
         font-size: $fonts_screen * $p_size;
         line-height: $fonts_screen * $p_line-height;

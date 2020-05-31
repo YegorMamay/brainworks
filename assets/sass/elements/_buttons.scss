@@ -411,7 +411,7 @@ fieldset:disabled a.btn {
     }
 }
 
-@media #{$laptop} {
+@media #{$laptop-max} {
     .btn {
         padding: 11px 28px;
         font-size: 15px;
@@ -428,7 +428,7 @@ fieldset:disabled a.btn {
     }
 }
 
-@media #{$tablet} {
+@media #{$tablet-max} {
     .btn {
         padding: 10px 26px;
         font-size: 14px;
@@ -445,7 +445,7 @@ fieldset:disabled a.btn {
     }
 }
 
-@media #{$mobile} {
+@media #{$mobile-max} {
     .btn {
         padding: 8px 24px;
         font-size: 12px;

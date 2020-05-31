@@ -5,7 +5,7 @@
     box-shadow: $shadow;
 }
 
-@media #{$desktop} {
+@media #{$desktop-max} {
     .page-header {
         display: none !important;  
     }
