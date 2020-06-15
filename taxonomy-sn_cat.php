@@ -30,7 +30,12 @@
             </div>
         </div>
 
+    <?php  the_archive_description( '<div class="term-description">', '</div>' );  ?>
+    <div class="sp-xs-2"></div>
+   
     </div><!-- /.row -->
 </div><!-- /.container -->
+
+
 
 <?php get_footer(); ?>

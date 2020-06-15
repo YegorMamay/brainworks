@@ -11,5 +11,8 @@
 
 <?php get_template_part('loops/content', get_post_format()); ?>
 
+<?php  the_archive_description( '<div class="term-description">', '</div>' );  ?>
+<div class="sp-xs-2"></div>
+
 </div><!-- /.container -->
 <?php get_footer(); ?>

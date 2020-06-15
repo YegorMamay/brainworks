@@ -138,7 +138,14 @@
                             </nav>
                         <?php } ?>
                         <div class="woo-cart woo-cart-popup-wrapper">
-                            <?php if ( class_exists( 'WooCommerce' ) ) { woocommerce_cart(); woocommerce_cart_popup(); } ?>
+                            <?php if ( class_exists( 'WooCommerce' ) ) { ?>
+                                <?php echo woocommerce_cart(); ?>
+                                <?php echo woocommerce_cart_popup(); ?>
+                            <?php } ?>
+                            <span id="modal-cart" class="cart-caption">
+<!--                                <p class="cart-caption__title">--><?php //echo pll_e('text-cart'); ?><!--</p>-->
+                                <?php echo woocommerce_get_total_price(); ?>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -192,4 +199,4 @@
         </nav>
     <?php } ?>
     <!-- Mobile menu end-->
-    
+    <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>'/>

@@ -351,7 +351,7 @@ ul.products li.product .button {
 .woocommerce {
     div.product {
         form.cart .variations {
-            @media #{$mobile} {
+            @media #{$mobile-max} {
                 margin-bottom: 0;
             }
         }
@@ -360,11 +360,11 @@ ul.products li.product .button {
             td.label {
                 padding: 15px 10px 15px 0;
                 
-                @media #{$mobile} {
+                @media #{$mobile-max} {
                     padding: 7px 10px 7px 0;
                 }
                 
-                @media #{$tablet} {
+                @media #{$tablet-max} {
                     padding: 11px 10px 7px 0;
                 }
             }
@@ -390,7 +390,7 @@ ul.products li.product .button {
 }
 
 //xs 544
-@media #{$mobile} {
+@media #{$mobile-max} {
     .woocommerce {
         div.product {
             form.cart {
@@ -422,7 +422,7 @@ ul.products li.product .button {
     display: flex;
     
     //xs 544
-    @media #{$mobile} {
+    @media #{$mobile-max} {
         display: block;
     }
 }
@@ -432,7 +432,7 @@ ul.products li.product .button {
     display: flex;
     
     //xs 544
-    @media #{$mobile} {
+    @media #{$mobile-max} {
         display: block;
     }
 }
@@ -503,7 +503,6 @@ a.wpgis-popup, a.wpgis-popup:hover {
     color: $wooThemeColor;
 
     box-sizing: border-box;
-    transform: translateY(15px) translateX(15px);
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 

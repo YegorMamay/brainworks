@@ -20,6 +20,7 @@
         dropdownPhone();
         scrollToElement();
         sidebarAccordion();
+        updateCartTotalValue('#modal-cart');
         reviews('.js-reviews');
         scrollTop('.js-scroll-top');
         wrapHighlightedElements('.highlighted');
@@ -570,6 +571,75 @@ const scrollToElement = (animationSpeed = 400) => {
     // Исправляет конфликт модального окна и галереи в карточке товара
     $('.form-cover input[type="text"]').on('focus', function () {
         $.fancybox.destroy();
+    });
+    
+    /**
+     *  Update totalCart value
+     *
+     *  Work with default WooCommerce Handler ver. 4.0.1
+     *  Using default WooCommerce selector ver. 4.0.1
+     *  Checked change total cart value for catalog items with button add to cart
+     *
+     *  Page checkout:
+     *  -   cart popup disabled,
+     *  -   update correct total value,
+     *  -   fixed correct value when using shipping method
+     *
+     *  @example
+     *  updateCartTotalValue('#modal-cart');
+     *
+     *  @param {string} elemId - wrapper id for modal cart widget
+     *
+     *  @returns {void}
+     *
+     */
+
+    const updateCartTotalValue = (elemId) => {
+
+
+        localStorage.setItem('currency', $('#cyr-value').val());
+        const totalId = $(elemId);
+
+
+        $(document).bind('ajaxStop.mine', function () {
+
+            if ($('.shop_table').length > 0) {
+                totalId.css('pointerEvents', 'none');
+                let checkoutTotalValue = $('.shop_table .amount').text();
+                totalId.find('.amount').first().text(checkoutTotalValue);
+            }
+
+            if (sessionStorage.getItem(wc_cart_fragments_params.fragment_name) !== null) {
+
+                let sessionHash = sessionStorage.getItem(wc_cart_fragments_params.fragment_name);
+                let parseValue = JSON.parse(sessionHash);
+                let totalValueCart;
+                let totalValueCyr;
+
+                $.each(parseValue, (key, value) => {
+
+                    if (key == 'div.widget_shopping_cart_content') {
+
+                        let cartModalContent = $(value).text();
+                        let cartContentString = cartModalContent.split(':').pop();
+                        totalValueCart = Array.from(cartContentString.split('.'))[0];
+                        totalValueCyr = localStorage.getItem('currency');
+
+                    } else if ($('.cart-contents-count').text() < 1) {
+
+                        totalId.find('.amount').first().text('0 ' + totalValueCyr);
+
+                    } else {
+                        totalId.find('.amount').first().text(totalValueCart + '.');
+
+                    }
+                });
+            }
+        });
+    };
+
+    $(window).load(function (e) {
+        $(document.body).trigger('wc_fragment_refresh');
     });
     
 })(window, document, jQuery, window.jpAjax);
