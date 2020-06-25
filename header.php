@@ -143,7 +143,6 @@
                                 <?php echo woocommerce_cart_popup(); ?>
                             <?php } ?>
                             <span id="modal-cart" class="cart-caption">
-<!--                                <p class="cart-caption__title">--><?php //echo pll_e('text-cart'); ?><!--</p>-->
                                 <?php echo woocommerce_get_total_price(); ?>
                             </span>
                         </div>

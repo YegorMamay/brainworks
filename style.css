@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 31.05.20
+Version: 23.06.20
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -9745,6 +9745,466 @@ html .formcraft-css .fc-form {
   display: none;
 }
 
+.cart-contents {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #e74c3c;
+  text-align: center;
+  font: bold 12px/1.5 Arial, Helvetica, sans-serif;
+}
+.cart-contents::before {
+  content: '\f290';
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+}
+.cart-contents:hover {
+  text-decoration: none;
+  color: #ed7669;
+}
+.cart-contents-count {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.woocommerce #respond input#submit.loading::after {
+  top: 19px;
+}
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #e74c3c;
+}
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background-color: #e74c3c;
+}
+.woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #e74c3c;
+}
+.woocommerce span.onsale {
+  background-color: #e74c3c;
+  color: #fff;
+}
+.woocommerce ul.products li.product {
+  text-align: center;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.woocommerce ul.products li.product:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  line-height: 1.1;
+  font-size: 18px;
+}
+@media (min-width: 480px) and (max-width: 1199px) {
+  .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 20px;
+    font-size: calc(0.0083333333 * 100vw + 14px);
+  }
+}
+@media (min-width: 1200px) {
+  .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 24px;
+  }
+}
+.woocommerce ul.products li.product .price {
+  color: #e74c3c;
+  font-size: 20px;
+  line-height: 1;
+}
+.woocommerce div.product .product_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .woocommerce div.product .product_title {
+    font-size: 26px;
+    font-size: calc(0.0220588235 * 100vw + 9.4117647059px);
+  }
+}
+@media (min-width: 1024px) {
+  .woocommerce div.product .product_title {
+    font-size: 32px;
+  }
+}
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  color: #e74c3c;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .woocommerce div.product p.price,
+  .woocommerce div.product span.price {
+    font-size: 26px;
+    font-size: calc(0.0220588235 * 100vw + 9.4117647059px);
+  }
+}
+@media (min-width: 1024px) {
+  .woocommerce div.product p.price,
+  .woocommerce div.product span.price {
+    font-size: 32px;
+  }
+}
+.woocommerce div.product .woocommerce-product-details__short-description {
+  margin-bottom: 10px;
+}
+.woocommerce div.product form.cart .button + .button {
+  margin-left: 5px;
+}
+.woocommerce .sku_wrapper, .woocommerce .posted_in, .woocommerce .tagged_as {
+  display: block;
+}
+.woocommerce .cart-collaterals .cart_totals h2 {
+  text-align: center;
+}
+.woocommerce .col2-set {
+  padding-top: 20px;
+}
+.woocommerce fieldset {
+  background-color: transparent;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.woocommerce input#coupon_code {
+  width: 100%;
+  border: 1px solid #cccccc;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0;
+  padding: 15px 8px;
+  font-size: 16px;
+  width: 48%;
+}
+@media (max-width: 1023px) {
+  .woocommerce input#coupon_code {
+    padding: 13px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .woocommerce input#coupon_code {
+    padding: 13px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 574px) {
+  .woocommerce input#coupon_code {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+.woocommerce-error a, .woocommerce-info a, .woocommerce-message a {
+  text-decoration: underline;
+}
+.woocommerce-error {
+  border-top-color: #b81c23;
+}
+.woocommerce-error::before {
+  color: #b81c23;
+}
+.woocommerce-info {
+  border-top-color: #1e85be;
+}
+.woocommerce-info::before {
+  color: #1e85be;
+}
+.woocommerce-message {
+  border-top-color: #e74c3c;
+}
+.woocommerce-message::before {
+  color: #e74c3c;
+}
+.woocommerce form .form-row .required {
+  text-decoration: none;
+}
+.woocommerce #reviews #comment {
+  height: 120px;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  width: 100%;
+  display: block;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+  margin-bottom: 5px;
+}
+
+ul.products li.product .button {
+  margin-bottom: 1em;
+}
+
+.woocommerce #content div.product div.images,
+.woocommerce div.product div.images,
+.woocommerce-page #content div.product div.images,
+.woocommerce-page div.product div.images {
+  float: none;
+  width: 100%;
+}
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+  float: none;
+  width: 100%;
+}
+.woocommerce #content div.product div.summary .cart div, .woocommerce #content div.product div.summary .cart button, .woocommerce #content div.product div.summary .cart a,
+.woocommerce div.product div.summary .cart div,
+.woocommerce div.product div.summary .cart button,
+.woocommerce div.product div.summary .cart a,
+.woocommerce-page #content div.product div.summary .cart div,
+.woocommerce-page #content div.product div.summary .cart button,
+.woocommerce-page #content div.product div.summary .cart a,
+.woocommerce-page div.product div.summary .cart div,
+.woocommerce-page div.product div.summary .cart button,
+.woocommerce-page div.product div.summary .cart a {
+  margin-top: 10px;
+}
+
+.loading {
+  opacity: 0.5;
+}
+.loading::after {
+  vertical-align: middle !important;
+  top: 0.8em !important;
+}
+
+.woocommerce .star-rating span::before,
+.woocommerce p.stars a::before {
+  color: #e74c3c;
+}
+.woocommerce p.stars a:hover {
+  color: #e74c3c;
+}
+.woocommerce ul.products li.product .star-rating {
+  margin: 0 auto 10px;
+}
+.woocommerce .woocommerce-product-rating {
+  margin-bottom: 15px !important;
+}
+
+@media (max-width: 574px) {
+  .woocommerce div.product form.cart .variations {
+    margin-bottom: 0;
+  }
+}
+.woocommerce div.product form.cart .variations td.label {
+  padding: 15px 10px 15px 0;
+}
+@media (max-width: 574px) {
+  .woocommerce div.product form.cart .variations td.label {
+    padding: 7px 10px 7px 0;
+  }
+}
+@media (max-width: 767px) {
+  .woocommerce div.product form.cart .variations td.label {
+    padding: 11px 10px 7px 0;
+  }
+}
+.woocommerce div.product form.cart .variations td.value {
+  text-align: left;
+}
+.woocommerce div.product form.cart .variations td.value select {
+  max-width: 200px;
+  min-width: inherit;
+}
+.woocommerce div.product .stock {
+  color: #000;
+}
+
+.woocommerce-variation.single_variation {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 574px) {
+  .woocommerce div.product form.cart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .woocommerce div.product form.cart .quantity {
+    margin: 0 0 10px 0 !important;
+  }
+  .woocommerce div.product form.cart .single_add_to_cart_button {
+    margin-bottom: 10px;
+  }
+  .woocommerce .quantity .qty {
+    width: 100%;
+    max-width: 70px;
+    margin-right: 10px;
+  }
+}
+#customer_login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 574px) {
+  #customer_login {
+    display: block;
+  }
+}
+
+#checkout-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 574px) {
+  #checkout-form {
+    display: block;
+  }
+}
+
+.select2-container .select2-selection--single {
+  height: 40px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-top: 5px;
+}
+.select2-container .select2-selection--single .select2-selection__arrow {
+  top: 8px;
+}
+
+.woocommerce .blockUI.blockOverlay {
+  z-index: 3 !important;
+}
+
+.woocommerce-Reviews .comment-reply-title {
+  display: block;
+  margin-bottom: 15px;
+}
+
+a.wpgis-popup, a.wpgis-popup:hover {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.woo-cart-popup-wrapper {
+  position: relative;
+}
+.woo-cart-popup-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 15px;
+  width: 40px;
+  right: 0;
+}
+.woo-cart-popup-wrapper:hover .cart-popup {
+  opacity: 1;
+  top: 100%;
+}
+
+.cart-popup {
+  position: absolute;
+  top: -999px;
+  right: 0;
+  display: none;
+  width: 360px;
+  padding: 25px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: #e74c3c;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .cart-popup {
+    display: block;
+  }
+}
+
+.woocommerce ul.cart_list li,
+.woocommerce ul.product_list_widget li {
+  padding: 10px 0;
+}
+
+.woocommerce ul.cart_list li img,
+.woocommerce ul.product_list_widget li img {
+  width: 55px;
+}
+
+.woocommerce .widget_shopping_cart .cart_list li a.remove,
+.woocommerce.widget_shopping_cart .cart_list li a.remove {
+  top: 7px;
+}
+
+.woocommerce .widget_shopping_cart .total,
+.woocommerce.widget_shopping_cart .total {
+  padding: 20px 0 20px;
+  text-align: center;
+}
+
+.woocommerce-mini-cart__buttons.buttons {
+  text-align: center;
+}
+
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+  width: 200px;
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce ul.products li.product,
+  .woocommerce-page ul.products li.product,
+  .woocommerce-page[class*=columns-] ul.products li.product,
+  .woocommerce[class*=columns-] ul.products li.product {
+    float: none;
+    width: auto;
+  }
+  .woocommerce ul.products li.product:nth-child(2n),
+  .woocommerce-page ul.products li.product:nth-child(2n),
+  .woocommerce-page[class*=columns-] ul.products li.product:nth-child(2n),
+  .woocommerce[class*=columns-] ul.products li.product:nth-child(2n) {
+    float: none;
+  }
+}
 .embed-responsive {
   position: relative;
   display: block;
@@ -12869,7 +13329,11 @@ hr.style-three {
   text-align: center;
 }
 
-.btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
+.btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button, .woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt, .woocommerce a.added_to_cart {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -12888,46 +13352,74 @@ hr.style-three {
   -webkit-transition: .2s;
   transition: .2s;
 }
-.btn:hover, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:hover, .btn:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:focus {
+.btn:hover, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover, .woocommerce a.added_to_cart:hover, .btn:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
+.woocommerce button.button:focus,
+.woocommerce input.button:focus, .woocommerce a.added_to_cart:focus {
   text-decoration: none;
 }
-.btn:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:focus, .btn.focus, html .formcraft-css .fc-form .form-element .submit-cover .focus.submit-button {
+.btn:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
+.woocommerce button.button:focus,
+.woocommerce input.button:focus, .woocommerce a.added_to_cart:focus, .btn.focus, html .formcraft-css .fc-form .form-element .submit-cover .focus.submit-button, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
+.woocommerce button.focus.button,
+.woocommerce input.focus.button, .woocommerce a.focus.added_to_cart {
   outline: 0;
   -webkit-box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.25);
           box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.25);
 }
-.btn.disabled, html .formcraft-css .fc-form .form-element .submit-cover .disabled.submit-button, .btn:disabled, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:disabled {
+.btn.disabled, html .formcraft-css .fc-form .form-element .submit-cover .disabled.submit-button, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
+.woocommerce button.disabled.button,
+.woocommerce input.disabled.button, .woocommerce a.disabled.added_to_cart, .btn:disabled, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
+.woocommerce button.button:disabled,
+.woocommerce input.button:disabled, .woocommerce a.added_to_cart:disabled {
   opacity: 0.65;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn:not(:disabled):not(.disabled), html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled) {
+.btn:not(:disabled):not(.disabled), html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled), .woocommerce #respond input#submit:not(:disabled):not(.disabled), .woocommerce a.button:not(:disabled):not(.disabled),
+.woocommerce button.button:not(:disabled):not(.disabled),
+.woocommerce input.button:not(:disabled):not(.disabled), .woocommerce a.added_to_cart:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-.btn:not(:disabled):not(.disabled):active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active {
+.btn:not(:disabled):not(.disabled):active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
+.woocommerce button.button:not(:disabled):not(.disabled):active,
+.woocommerce input.button:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
+.woocommerce button.button:not(:disabled):not(.disabled).active,
+.woocommerce input.button:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active {
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn:not(:disabled):not(.disabled):active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active:focus {
+.btn:not(:disabled):not(.disabled):active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
+.woocommerce button.button:not(:disabled):not(.disabled):active:focus,
+.woocommerce input.button:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
+.woocommerce button.button:not(:disabled):not(.disabled).active:focus,
+.woocommerce input.button:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
           box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn:active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:active {
+.btn:active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:active, .woocommerce #respond input#submit:active, .woocommerce a.button:active,
+.woocommerce button.button:active,
+.woocommerce input.button:active, .woocommerce a.added_to_cart:active {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
 
-a.btn.disabled, html .formcraft-css .fc-form .form-element .submit-cover a.disabled.submit-button,
+a.btn.disabled, html .formcraft-css .fc-form .form-element .submit-cover a.disabled.submit-button, .woocommerce a.disabled.button, .woocommerce a.disabled.added_to_cart,
 fieldset:disabled a.btn,
 fieldset:disabled html .formcraft-css .fc-form .form-element .submit-cover a.submit-button,
-html .formcraft-css .fc-form .form-element .submit-cover fieldset:disabled a.submit-button {
+html .formcraft-css .fc-form .form-element .submit-cover fieldset:disabled a.submit-button,
+fieldset:disabled .woocommerce a.button,
+.woocommerce fieldset:disabled a.button,
+fieldset:disabled .woocommerce a.added_to_cart,
+.woocommerce fieldset:disabled a.added_to_cart {
   pointer-events: none;
 }
 
-.btn-primary {
+.btn-primary, .woocommerce a.added_to_cart {
   background: #2c3e50 -webkit-gradient(linear, right top, left top, from(#616e7c), to(#2c3e50)) repeat-x;
   background: #2c3e50 linear-gradient(-90deg, #616e7c, #2c3e50) repeat-x;
   color: white;
@@ -12935,33 +13427,37 @@ html .formcraft-css .fc-form .form-element .submit-cover fieldset:disabled a.sub
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.btn-primary:hover {
+.btn-primary:hover, .woocommerce a.added_to_cart:hover {
   color: white;
   background: #354b60 -webkit-gradient(linear, right top, left top, from(#687888), to(#354b60)) repeat-x;
   background: #354b60 linear-gradient(-90deg, #687888, #354b60) repeat-x;
   border-color: #354b60;
 }
-.btn-primary:focus, .btn-primary.focus {
+.btn-primary:focus, .woocommerce a.added_to_cart:focus, .btn-primary.focus, .woocommerce a.focus.added_to_cart {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(44, 62, 80, 0.5);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(44, 62, 80, 0.5);
 }
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-primary.disabled, .woocommerce a.disabled.added_to_cart, .btn-primary:disabled, .woocommerce a.added_to_cart:disabled {
   color: #2c3e50;
   background-color: #2c3e50;
   border-color: #2c3e50;
 }
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+.btn-primary:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active {
   color: white;
   background-color: #3e5871;
   background-image: none;
   border-color: #354b60;
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(44, 62, 80, 0.5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(44, 62, 80, 0.5);
 }
 
-.btn-secondary, html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
+.btn-secondary, html .formcraft-css .fc-form .form-element .submit-cover .submit-button, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button, .woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
   background: #e74c3c -webkit-gradient(linear, right top, left top, from(#eb6759), to(#e74c3c)) repeat-x;
   background: #e74c3c linear-gradient(-90deg, #eb6759, #e74c3c) repeat-x;
   color: white;
@@ -12969,28 +13465,46 @@ html .formcraft-css .fc-form .form-element .submit-cover fieldset:disabled a.sub
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.btn-secondary:hover, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:hover {
+.btn-secondary:hover, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
   color: white;
   background: #ea6153 -webkit-gradient(linear, right top, left top, from(#ed796d), to(#ea6153)) repeat-x;
   background: #ea6153 linear-gradient(-90deg, #ed796d, #ea6153) repeat-x;
   border-color: #ea6153;
 }
-.btn-secondary:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:focus, .btn-secondary.focus, html .formcraft-css .fc-form .form-element .submit-cover .focus.submit-button {
+.btn-secondary:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
+.woocommerce button.button:focus,
+.woocommerce input.button:focus, .btn-secondary.focus, html .formcraft-css .fc-form .form-element .submit-cover .focus.submit-button, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
+.woocommerce button.focus.button,
+.woocommerce input.focus.button {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(231, 76, 60, 0.5);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(231, 76, 60, 0.5);
 }
-.btn-secondary.disabled, html .formcraft-css .fc-form .form-element .submit-cover .disabled.submit-button, .btn-secondary:disabled, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:disabled {
+.btn-secondary.disabled, html .formcraft-css .fc-form .form-element .submit-cover .disabled.submit-button, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
+.woocommerce button.disabled.button,
+.woocommerce input.disabled.button, .btn-secondary:disabled, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
+.woocommerce button.button:disabled,
+.woocommerce input.button:disabled {
   color: #7b190f;
   background-color: #e74c3c;
   border-color: #e74c3c;
 }
-.btn-secondary:not(:disabled):not(.disabled):active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active {
+.btn-secondary:not(:disabled):not(.disabled):active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
+.woocommerce button.button:not(:disabled):not(.disabled):active,
+.woocommerce input.button:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
+.woocommerce button.button:not(:disabled):not(.disabled).active,
+.woocommerce input.button:not(:disabled):not(.disabled).active {
   color: white;
   background-color: #e74c3c;
   background-image: none;
   border-color: #ea6153;
 }
-.btn-secondary:not(:disabled):not(.disabled):active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active:focus {
+.btn-secondary:not(:disabled):not(.disabled):active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
+.woocommerce button.button:not(:disabled):not(.disabled):active:focus,
+.woocommerce input.button:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
+.woocommerce button.button:not(:disabled):not(.disabled).active:focus,
+.woocommerce input.button:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(231, 76, 60, 0.5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(231, 76, 60, 0.5);
 }
@@ -13111,7 +13625,11 @@ html .formcraft-css .fc-form .form-element .submit-cover fieldset:disabled a.sub
 }
 
 @media (max-width: 1023px) {
-  .btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
+  .btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+  .woocommerce button.button,
+  .woocommerce input.button, .woocommerce a.button.alt,
+  .woocommerce button.button.alt,
+  .woocommerce input.button.alt, .woocommerce a.added_to_cart {
     padding: 11px 28px;
     font-size: 15px;
   }
@@ -13127,7 +13645,11 @@ html .formcraft-css .fc-form .form-element .submit-cover fieldset:disabled a.sub
   }
 }
 @media (max-width: 767px) {
-  .btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
+  .btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+  .woocommerce button.button,
+  .woocommerce input.button, .woocommerce a.button.alt,
+  .woocommerce button.button.alt,
+  .woocommerce input.button.alt, .woocommerce a.added_to_cart {
     padding: 10px 26px;
     font-size: 14px;
   }
@@ -13143,7 +13665,11 @@ html .formcraft-css .fc-form .form-element .submit-cover fieldset:disabled a.sub
   }
 }
 @media (max-width: 574px) {
-  .btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
+  .btn, html .formcraft-css .fc-form .form-element .submit-cover .submit-button, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+  .woocommerce button.button,
+  .woocommerce input.button, .woocommerce a.button.alt,
+  .woocommerce button.button.alt,
+  .woocommerce input.button.alt, .woocommerce a.added_to_cart {
     padding: 8px 24px;
     font-size: 12px;
   }

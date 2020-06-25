@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 13:59+0000\n"
-"PO-Revision-Date: 2020-04-28 14:01+0000\n"
+"POT-Creation-Date: 2020-06-25 13:31+0000\n"
+"PO-Revision-Date: 2020-06-25 13:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.3; wp-5.4"
+"X-Loco-Version: 2.4.0; wp-5.4.2"
 
 #: header.php:147
 msgid "Call back"
@@ -117,81 +117,81 @@ msgstr "Отзывы"
 msgid "Review"
 msgstr "Отзыв"
 
-#: inc/shortcodes.php:254 inc/shortcodes.php:368 inc/LoadMorePosts.php:107
+#: inc/shortcodes.php:255 inc/shortcodes.php:369 inc/LoadMorePosts.php:107
 #: loops/content.php:27
 msgid "Continue reading"
 msgstr "Читать дальше"
 
-#: inc/shortcodes.php:411 inc/shortcodes.php:420 inc/shortcodes.php:443
+#: inc/shortcodes.php:412 inc/shortcodes.php:421 inc/shortcodes.php:444
 #: inc/helpers.php:536 inc/customizer.php:377
 msgid "Login"
 msgstr "Логин"
 
-#: inc/shortcodes.php:415 inc/shortcodes.php:451
+#: inc/shortcodes.php:416 inc/shortcodes.php:452
 msgid "Password"
 msgstr "Пароль"
 
-#: inc/shortcodes.php:447
+#: inc/shortcodes.php:448
 msgid "Email"
 msgstr ""
 
-#: inc/shortcodes.php:455
+#: inc/shortcodes.php:456
 msgid "Retry password"
 msgstr "Повторите пароль"
 
-#: inc/shortcodes.php:460
+#: inc/shortcodes.php:461
 msgid "Register"
 msgstr "Зарегистрироваться"
 
-#: inc/setup.php:235
+#: inc/setup.php:236
 msgid "Front page"
 msgstr "Главная"
 
-#: inc/setup.php:236
+#: inc/setup.php:237
 #, php-format
 msgid "Page %d"
 msgstr "Страница %d"
 
-#: inc/setup.php:237
+#: inc/setup.php:238
 msgid "Error 404"
 msgstr "Ошибка 404"
 
-#: inc/setup.php:238
+#: inc/setup.php:239
 #, php-format
 msgid "Search results by query - <b>%s</b>"
 msgstr "Результаты поиска по запросу - <b>%s</b>"
 
-#: inc/setup.php:239
+#: inc/setup.php:240
 #, php-format
 msgid "Author archve: <b>%s</b>"
 msgstr "Архив автора: <b>%s</b>"
 
-#: inc/setup.php:240
+#: inc/setup.php:241
 #, php-format
 msgid "Archive by <b>%d</b> year"
 msgstr "Архив за <b>%d</b> год"
 
-#: inc/setup.php:241
+#: inc/setup.php:242
 #, php-format
 msgid "Archive by: <b>%s</b>"
 msgstr "Архив за: <b>%s</b>"
 
-#: inc/setup.php:243
+#: inc/setup.php:244
 #, php-format
 msgid "Media: %s"
 msgstr "Медиа: %s"
 
-#: inc/setup.php:244
+#: inc/setup.php:245
 #, php-format
 msgid "Posts by tag: <b>%s</b>"
 msgstr "Записи по метке: <b>%s</b>"
 
-#: inc/setup.php:245
+#: inc/setup.php:246
 #, php-format
 msgid "%1$s from \"%2$s\" by tag: <b>%3$s</b>"
 msgstr "%1$s из \"%2$s\" по тегу: <b>%3$s</b>"
 
-#: inc/setup.php:260 inc/helpers.php:561
+#: inc/setup.php:261 inc/helpers.php:561
 msgid "View your shopping cart"
 msgstr "Перейти в корзину"
 
@@ -530,6 +530,7 @@ msgstr ""
 msgid "Developed by:"
 msgstr "Разработчик:"
 
+#. Author URI of the theme
 #: inc/admin.php:11
 msgid "https://brainworks.com.ua"
 msgstr ""
@@ -620,7 +621,11 @@ msgstr "Ваш комментарий"
 msgid "Submit comment"
 msgstr "Отправить комментарий"
 
-#: loops/content-search.php:21
+#: loops/content-search.php:19
+msgid "Go"
+msgstr "Перейти"
+
+#: loops/content-search.php:29
 msgid "Sorry, your search yielded no results."
 msgstr "Извините, Ваша попытка не принесла результата."
 

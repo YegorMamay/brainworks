@@ -87,9 +87,10 @@ function bw_setup()
 
     add_editor_style('theme/css/editor-style.css');
 
-    update_option('thumbnail_size_w', 170);
-    update_option('thumbnail_size_h', 170);
-    update_option('medium_size_w', 470);
+    update_option('thumbnail_size_w', 250);
+    update_option('thumbnail_size_h', 250);
+    update_option('medium_size_w', 600);
+    update_option('medium_size_h', 400);
     update_option('large_size_w', 970);
 }
 
