@@ -30,7 +30,7 @@
         stickFooter('.js-footer', '.js-container');
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-        buyOneClick(".one-click-ru, .one-click-uk, .one-click-en, .one-click", '[data-field-id="field11"]', "h1");
+        buyOneClick('.one-click-ru, .one-click-uk, .one-click-en, .one-click', '[data-field-id="field11"]', 'h1');
         // On Copy
         $d.on('copy', addLink);
 
@@ -393,47 +393,46 @@
         }, 0);
     };
 
+    /**
+     * Function to add scroll handler for all links with hash as first symbol of href
+     *
+     * @param {number} [animationSpeed=400] speed of animation
+     * @returns {void}
+     */
+    const scrollToElement = (animationSpeed = 400) => {
+        const links = $('a');
 
-/**
- * Function to add scroll handler for all links with hash as first symbol of href
- *
- * @param {number} [animationSpeed=400] speed of animation
- * @returns {void}
- */
-const scrollToElement = (animationSpeed = 400) => {
-    const links = $('a');
+        links.each((index, element) => {
+            const $element = $(element), href = $element.attr('href');
+            if (href) {
+                if (href[0] === '#' || href.slice(0, 2) === '/#' && !(href.slice(1, 3) === '__')) {
+                    $element.on('click', (e) => {
+                        e.preventDefault();
+                        const target = $(href[0] === '#' ? href : href.slice(1));
+                        const fixedHeader = $('.fixed-to-top');
+                        const fixOffset = 20; // смещение блока его можно регулировать или стилями или тут, если не нужен ставим 0
+                        let scrollBlockOffset;
+                        if (target.length && href.slice(0, 3) !== '#__') { // проверка урла в аккордеоне
 
-    links.each((index, element) => {
-        const $element = $(element), href = $element.attr('href');
-        if (href) {
-            if (href[0] === '#' || href.slice(0, 2) === '/#' && !(href.slice(1, 3) === '__')) {
-                $element.on('click', (e) => {
-                    e.preventDefault();
-                    const target = $(href[0] === '#' ? href : href.slice(1));
-                    const fixedHeader = $('.fixed-to-top');
-                    const fixOffset = 20; // смещение блока его можно регулировать или стилями или тут, если не нужен ставим 0
-                    let scrollBlockOffset;
-                    if (target.length && href.slice(0, 3) !== '#__') { // проверка урла в аккордеоне
+                            if (fixedHeader.length > 0 && $(window).width() > 1024) { // проверям наличие fixed-to-top в DOM дереве и ширина обьекта window больше 1024px (по желанию можно заменить на другое значение)
+                                scrollBlockOffset = fixedHeader.outerHeight() + fixOffset; // если ширина больше 1024px делаем скролл с учетом высоты хедера и добавляем небольшой offset 'const fixOffset = 20' (по желанию конечно)
+                            } else if (fixedHeader.length >= 0 && $(window).width() < 1024) { // если ширина меньше 1024px делаем скролл с учетом высоты моб. шапки nav-mobile-header
+                                scrollBlockOffset = $('.nav-mobile-header').outerHeight() + fixOffset;
+                            } else {
+                                scrollBlockOffset = fixOffset; // если шапка не фиксированая просто используем наш offset
+                            }
 
-                        if (fixedHeader.length > 0 && $(window).width() > 1024) { // проверям наличие fixed-to-top в DOM дереве и ширина обьекта window больше 1024px (по желанию можно заменить на другое значение)
-                            scrollBlockOffset = fixedHeader.outerHeight() + fixOffset; // если ширина больше 1024px делаем скролл с учетом высоты хедера и добавляем небольшой offset 'const fixOffset = 20' (по желанию конечно)
-                        } else if (fixedHeader.length >= 0 && $(window).width() < 1024) { // если ширина меньше 1024px делаем скролл с учетом высоты моб. шапки nav-mobile-header
-                            scrollBlockOffset = $('.nav-mobile-header').outerHeight() + fixOffset;
-                        } else {
-                            scrollBlockOffset = fixOffset; // если шапка не фиксированая просто используем наш offset
+                            $('html, body').animate({
+                                scrollTop: target.offset().top - scrollBlockOffset
+                            }, animationSpeed);
+                        } else if (href[0] === '/') {
+                            location.href = href;
                         }
-
-                        $('html, body').animate({
-                            scrollTop: target.offset().top - scrollBlockOffset
-                        }, animationSpeed);
-                    } else if (href[0] === '/') {
-                        location.href = href;
-                    }
-                });
+                    });
+                }
             }
-        }
-    });
-};
+        });
+    };
     /**
      * Sidebar Accordion
      *
@@ -549,7 +548,7 @@ const scrollToElement = (animationSpeed = 400) => {
                 slider.find('img').each((index, element) => {
                     const el = $(element);
 
-                    el.on('click', (event) =>{
+                    el.on('click', (event) => {
                         event.preventDefault();
                         event.stopPropagation();
                         el.parents('.slick-slide').find('.wpgis-popup').click();
@@ -572,7 +571,7 @@ const scrollToElement = (animationSpeed = 400) => {
     $('.form-cover input[type="text"]').on('focus', function () {
         $.fancybox.destroy();
     });
-    
+
     /**
      *  Update totalCart value
      *
@@ -593,13 +592,10 @@ const scrollToElement = (animationSpeed = 400) => {
      *  @returns {void}
      *
      */
-
     const updateCartTotalValue = (elemId) => {
-
 
         localStorage.setItem('currency', $('#cyr-value').val());
         const totalId = $(elemId);
-
 
         $(document).bind('ajaxStop.mine', function () {
 
@@ -638,8 +634,8 @@ const scrollToElement = (animationSpeed = 400) => {
         });
     };
 
-    $(window).load(function (e) {
+    $(window).load(function () {
         $(document.body).trigger('wc_fragment_refresh');
     });
-    
+
 })(window, document, jQuery, window.jpAjax);
