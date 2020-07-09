@@ -371,7 +371,7 @@ if (!function_exists('bw_advert_shortcode')) {
                     $category = sprintf(
                         '<div class="%s-category">%s</div>',
                         $basic_class,
-                        get_the_category()
+                        get_the_category_list(',')
                     );
                 }
 
