@@ -358,7 +358,7 @@ if (!function_exists('bw_advert_shortcode')) {
                 $category = '';
                 $datetime = '';
 
-                if ($args['display_datetime']) {
+                if ($atts['display_datetime']) {
                     $datetime = sprintf(
                         '<time class="%s-datetime" datetime="%s">%s</time>',
                         $basic_class,
@@ -367,7 +367,7 @@ if (!function_exists('bw_advert_shortcode')) {
                     );
                 }
 
-                if ($args['display_category']) {
+                if ($atts['display_category']) {
                     $category = sprintf(
                         '<div class="%s-category">%s</div>',
                         $basic_class,
