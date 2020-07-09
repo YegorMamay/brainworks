@@ -316,6 +316,8 @@ if (!function_exists('bw_advert_shortcode')) {
             'count' => 3,
             'class' => 'front-news',
             'category' => null,
+            'display_category' => false,
+            'display_datetime' => false,
         ], $atts);
 
         $output = '';
@@ -353,6 +355,33 @@ if (!function_exists('bw_advert_shortcode')) {
                     get_the_post_thumbnail(null, 'medium', ['class' => $basic_class . '-thumbnail'])
                 ) : '';
 
+                $category = '';
+                $datetime = '';
+
+                if ($args['display_datetime']) {
+                    $datetime = sprintf(
+                        '<time class="%s-datetime" datetime="%s">%s</time>',
+                        $basic_class,
+                        get_the_date('c'),
+                        get_the_date()
+                    );
+                }
+
+                if ($args['display_category']) {
+                    $category = sprintf(
+                        '<div class="%s-category">%s</div>',
+                        $basic_class,
+                        get_the_category()
+                    );
+                }
+
+                $meta = sprintf(
+                    '<div class="%s-meta">%s %s</div>',
+                    $basic_class,
+                    $category,
+                    $datetime
+                );
+
                 $headline = sprintf(
                     '<h3 class="%s-headline"><a href="%s">%s</a></h3>',
                     $basic_class,
@@ -370,10 +399,11 @@ if (!function_exists('bw_advert_shortcode')) {
                 );
 
                 $box = sprintf(
-                    '<div class="%s-box">%s <div class="%s-inner">%s %s %s</div></div>',
+                    '<div class="%s-box">%s <div class="%s-inner">%s %s %s %s</div></div>',
                     $basic_class,
                     $thumbnail,
                     $basic_class,
+                    $meta,
                     $headline,
                     $excerpt,
                     $btn
