@@ -318,8 +318,10 @@ if (!function_exists('bw_advert_shortcode')) {
             'category' => null,
             'display_category' => false,
             'display_datetime' => false,
+            'array_index' => false,
         ], $atts);
 
+        $posts = [];
         $output = '';
 
         $args = [
@@ -416,12 +418,18 @@ if (!function_exists('bw_advert_shortcode')) {
                     $box
                 );
 
+                $posts[] = $item;
+
                 $items .= $item;
             }
 
             wp_reset_postdata();
 
             $output = sprintf('<div class="row %s-list">%s</div>', $basic_class, $items);
+        }
+
+        if ($atts['array_index'] && array_key_exists($atts['array_index'], $posts)) {
+            return $posts[$atts['array_index']];
         }
 
         return $output;
