@@ -30,6 +30,21 @@
   }
 }
 
+//Other
+.phone-number[href^="tel:+"]:before,
+.phone-number[href^="tel:0"]:before,
+.phone-number[href^="tel:38"]:before,
+.phone-number[href^="tel:+38"]:before {
+  content: '';
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  background-image: url("/wp-content/themes/brainworks-master/assets/img/phones.svg");
+  background-repeat: no-repeat;
+}
 
 //Lifecell
 .phone-number[href^="tel:+38063"]:before,
