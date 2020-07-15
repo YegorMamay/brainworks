@@ -198,4 +198,6 @@
         </nav>
     <?php } ?>
     <!-- Mobile menu end-->
+    <?php if ( class_exists( 'WooCommerce' ) ) { ?>
     <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>'/>
+    <?php } ?>
