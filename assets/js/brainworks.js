@@ -262,60 +262,62 @@
             });
         });
     };
+    var addLightBoxHandlerForImage = function addLightBoxHandlerForImage(sliderContainer) {
+        $(window).on("load", function() {
+            var slider = $(sliderContainer);
+            if (slider.length) {
+                slider.find("img").each(function(index, element) {
+                    var el = $(element);
+                    el.on("click", function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        el.parents(".slick-slide").find(".wpgis-popup").click();
+                    });
+                });
+            }
+        });
+    };
     $(".js-hamburger").on("click", function() {
         $("body").addClass("body-overflow");
     });
     $(".js-menu-close, .menu-link").on("click", function() {
         $("body").removeClass("body-overflow");
     });
-    var addLightBoxHandlerForImage = function addLightBoxHandlerForImage(sliderContainer) {
-        $(window).load(function() {
-            var slider$ = $(sliderContainer);
-            if (slider$.length) {
-                slider$.find("img").each(function(index, element) {
-                    $(element).on("click", function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        $(element).parents(".slick-slide").find(".wpgis-popup").click();
-                    });
-                });
-            }
-        });
-    };
-    // Исправляет конфликт модального окна и галереи в карточке товара
     $('.form-cover input[type="text"]').on("focus", function() {
         $.fancybox.destroy();
     });
     var updateCartTotalValue = function updateCartTotalValue(elemId) {
         localStorage.setItem("currency", $("#cyr-value").val());
         var totalId = $(elemId);
-        $(document).bind("ajaxStop.mine", function() {
-            if ($(".shop_table").length > 0) {
-                totalId.css("pointerEvents", "none");
-                var checkoutTotalValue = $(".shop_table .amount").text();
-                totalId.find(".amount").first().text(checkoutTotalValue);
-            }
-            if (sessionStorage.getItem(wc_cart_fragments_params.fragment_name) !== null) {
-                var sessionHash = sessionStorage.getItem(wc_cart_fragments_params.fragment_name);
-                var parseValue = JSON.parse(sessionHash);
-                var totalValueCart;
-                var totalValueCyr;
-                $.each(parseValue, function(key, value) {
-                    if (key == "div.widget_shopping_cart_content") {
-                        var cartModalContent = $(value).text();
-                        var cartContentString = cartModalContent.split(":").pop();
-                        totalValueCart = Array.from(cartContentString.split("."))[0];
-                        totalValueCyr = localStorage.getItem("currency");
-                    } else if ($(".cart-contents-count").text() < 1) {
-                        totalId.find(".amount").first().text("0 " + totalValueCyr);
-                    } else {
-                        totalId.find(".amount").first().text(totalValueCart + ".");
-                    }
-                });
-            }
-        });
+        if (elemId.length > 0) {
+            $(document).bind("ajaxStop.mine", function() {
+                if ($(".shop_table").length > 0) {
+                    totalId.css("pointerEvents", "none");
+                    var checkoutTotalValue = $(".shop_table .amount").text();
+                    totalId.find(".amount").first().text(checkoutTotalValue);
+                }
+                if (sessionStorage.getItem(wc_cart_fragments_params.fragment_name) !== null) {
+                    var sessionHash = sessionStorage.getItem(wc_cart_fragments_params.fragment_name);
+                    var parseValue = JSON.parse(sessionHash);
+                    var totalValueCart;
+                    var totalValueCyr;
+                    $.each(parseValue, function(key, value) {
+                        if (key == "div.widget_shopping_cart_content") {
+                            var cartModalContent = $(value).text();
+                            var cartContentString = cartModalContent.split(":").pop();
+                            totalValueCart = Array.from(cartContentString.split("."))[0];
+                            totalValueCyr = localStorage.getItem("currency");
+                        } else if ($(".cart-contents-count").text() < 1) {
+                            totalId.find(".amount").first().text("0 " + totalValueCyr);
+                        } else {
+                            totalId.find(".amount").first().text(totalValueCart + ".");
+                        }
+                    });
+                }
+            });
+        }
     };
-    $(window).load(function(e) {
+    $(window).load(function() {
         $(document.body).trigger("wc_fragment_refresh");
     });
 })(window, document, jQuery, window.jpAjax);

@@ -9785,6 +9785,10 @@ html .formcraft-css .fc-form {
   display: none !important;
 }
 
+.woocommerce-checkout .cart-popup {
+  display: none !important;
+}
+
 .cart-contents {
   cursor: pointer;
   position: relative;

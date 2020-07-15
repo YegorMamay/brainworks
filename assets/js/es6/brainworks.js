@@ -597,41 +597,44 @@
         localStorage.setItem('currency', $('#cyr-value').val());
         const totalId = $(elemId);
 
-        $(document).bind('ajaxStop.mine', function () {
+        if (elemId.length > 0) {
 
-            if ($('.shop_table').length > 0) {
-                totalId.css('pointerEvents', 'none');
-                let checkoutTotalValue = $('.shop_table .amount').text();
-                totalId.find('.amount').first().text(checkoutTotalValue);
-            }
+            $(document).bind('ajaxStop.mine', function () {
 
-            if (sessionStorage.getItem(wc_cart_fragments_params.fragment_name) !== null) {
+                if ($('.shop_table').length > 0) {
+                    totalId.css('pointerEvents', 'none');
+                    let checkoutTotalValue = $('.shop_table .amount').text();
+                    totalId.find('.amount').first().text(checkoutTotalValue);
+                }
 
-                let sessionHash = sessionStorage.getItem(wc_cart_fragments_params.fragment_name);
-                let parseValue = JSON.parse(sessionHash);
-                let totalValueCart;
-                let totalValueCyr;
+                if (sessionStorage.getItem(wc_cart_fragments_params.fragment_name) !== null) {
 
-                $.each(parseValue, (key, value) => {
+                    let sessionHash = sessionStorage.getItem(wc_cart_fragments_params.fragment_name);
+                    let parseValue = JSON.parse(sessionHash);
+                    let totalValueCart;
+                    let totalValueCyr;
 
-                    if (key == 'div.widget_shopping_cart_content') {
+                    $.each(parseValue, (key, value) => {
 
-                        let cartModalContent = $(value).text();
-                        let cartContentString = cartModalContent.split(':').pop();
-                        totalValueCart = Array.from(cartContentString.split('.'))[0];
-                        totalValueCyr = localStorage.getItem('currency');
+                        if (key == 'div.widget_shopping_cart_content') {
 
-                    } else if ($('.cart-contents-count').text() < 1) {
+                            let cartModalContent = $(value).text();
+                            let cartContentString = cartModalContent.split(':').pop();
+                            totalValueCart = Array.from(cartContentString.split('.'))[0];
+                            totalValueCyr = localStorage.getItem('currency');
 
-                        totalId.find('.amount').first().text('0 ' + totalValueCyr);
+                        } else if ($('.cart-contents-count').text() < 1) {
 
-                    } else {
-                        totalId.find('.amount').first().text(totalValueCart + '.');
+                            totalId.find('.amount').first().text('0 ' + totalValueCyr);
 
-                    }
-                });
-            }
-        });
+                        } else {
+                            totalId.find('.amount').first().text(totalValueCart + '.');
+
+                        }
+                    });
+                }
+            });
+        }
     };
 
     $(window).load(function () {
