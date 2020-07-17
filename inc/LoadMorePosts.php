@@ -11,7 +11,7 @@ if (!class_exists('LoadMorePosts')) {
          */
         public function __construct()
         {
-            add_action('wp_enqueue_scripts', [$this, 'enqueueScripts']);
+            add_action('wp_enqueue_scripts', [$this, 'enqueueScripts'], 101);
             add_action('customize_register', [$this, 'customizeRegister']);
 
             if (wp_doing_ajax()) {
