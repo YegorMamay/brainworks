@@ -56,7 +56,7 @@ function bw_widgets_init()
     ));
 
     /**
-     * Footer (three widget areas)
+     * Footer
      */
     register_sidebar(array(
         'name' => __('Footer', 'brainworks'),

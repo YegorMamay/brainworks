@@ -91,27 +91,25 @@ if (!class_exists('LoadMorePosts')) {
                     $query->the_post();
 
                     $posts .= '
-                    <div class="container-fluid">
-                        <div class="row">
-                            <article id="post-' . get_the_ID() . '">
+
+                            <article id="post-' . get_the_ID() . '" class="row">
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                    <section>' . get_the_post_thumbnail(null, 'large') . '</section>
+                                    ' . get_the_post_thumbnail(null, 'large') . '
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                     <header>
                                         <h3><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>
-                                        <div class="sp-xs-1 sp-sm-1 sp-md-1 sp-lg-1 sp-xl-1"></div>
+                                        <div class="sp-xs-1"></div>
                                         <p>' . get_the_excerpt() . '</p>
                                     </header>
-                                    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+                                    <div class="sp-xs-2"></div>
                                     <a class="btn btn-secondary" href="' . get_permalink() . '">' . __('Continue reading', 'brainworks') . '<i class="glyphicon glyphicon-arrow-right"></i></a>
                                 </div>
                             </article>
-                        </div>
-                    </div>
-                    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+
+                    <div class="sp-xs-2"></div>
                     <hr>
-                    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+                    <div class="sp-xs-2"></div>
                     ';
                 }
 
@@ -139,7 +137,7 @@ if (!function_exists('bw_load_more')) {
         $total = isset($wp_query->max_num_pages) ? intval($wp_query->max_num_pages) : 1;
 
         $output = sprintf(
-            '<button class="btn btn-secondary js-load-more" type="button">%s</button>',
+            '<button class="btn btn-secondary js-load-more" type="button">%s</button> <div class="sp-xs-3"></div>',
             __('Load more posts...', 'brainworks')
         );
 
