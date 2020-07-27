@@ -441,6 +441,13 @@ ul.products li.product .button {
   }
 }
 
+
+//Cart page
+.woocommerce ul#shipping_method li input {
+    margin: 6px .4375em 0 0;
+    appearance: auto;
+}
+
 // Checkout page
 #checkout-form {
   display: flex;
@@ -467,6 +474,9 @@ ul.products li.product .button {
   z-index: 3 !important;
 }
 
+.woocommerce-checkout #payment ul.payment_methods li input {
+    appearance: auto;    
+}
 // Checkout page end
 
 .woocommerce-Reviews {
