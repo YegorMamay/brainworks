@@ -610,7 +610,7 @@
         localStorage.setItem('currency', $('#cyr-value').val());
         const totalId = $(elemId);
 
-        if (elemId.length > 0) {
+        if ($(elemId).length > 0) {
 
             $(document).bind('ajaxStop.mine', function () {
 
