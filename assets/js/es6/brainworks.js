@@ -606,6 +606,7 @@
      *
      */
     const updateCartTotalValue = (elemId) => {
+        /*global wc_cart_fragments_params*/
 
         localStorage.setItem('currency', $('#cyr-value').val());
         const totalId = $(elemId);

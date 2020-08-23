@@ -40,7 +40,7 @@ gulp.task('sass', () => {
             linefeed: 'crlf',
             sourceComments: false,
         }).on('error', sass.logError))
-        .pipe(autoprefixer({cascade: false, grid: 'autoplace'}))
+        .pipe(autoprefixer({cascade: true, grid: 'autoplace'}))
         // .pipe(sourcemaps.write('/'))
         .pipe(gulp.dest('./'));
 });
