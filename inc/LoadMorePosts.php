@@ -99,17 +99,17 @@ if (!class_exists('LoadMorePosts')) {
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                     <header>
                                         <h3><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>
-                                        <div class="sp-xs-1"></div>
+                                        <div class="vh-xs-1"></div>
                                         <p>' . get_the_excerpt() . '</p>
                                     </header>
-                                    <div class="sp-xs-2"></div>
+                                    <div class="vh-xs-2"></div>
                                     <a class="btn btn-secondary" href="' . get_permalink() . '">' . __('Continue reading', 'brainworks') . '<i class="glyphicon glyphicon-arrow-right"></i></a>
                                 </div>
                             </article>
 
-                    <div class="sp-xs-2"></div>
+                    <div class="vh-xs-2"></div>
                     <hr>
-                    <div class="sp-xs-2"></div>
+                    <div class="vh-xs-2"></div>
                     ';
                 }
 
@@ -137,7 +137,7 @@ if (!function_exists('bw_load_more')) {
         $total = isset($wp_query->max_num_pages) ? intval($wp_query->max_num_pages) : 1;
 
         $output = sprintf(
-            '<button class="btn btn-secondary js-load-more" type="button">%s</button> <div class="sp-xs-3"></div>',
+            '<button class="btn btn-secondary js-load-more" type="button">%s</button> <div class="vh-xs-3"></div>',
             __('Load more posts...', 'brainworks')
         );
 

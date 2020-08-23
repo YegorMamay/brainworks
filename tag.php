@@ -5,9 +5,9 @@
 
 <h1 class="text-center"><?php echo single_tag_title(); ?></h1>
 
-<div class="sp-xs-2"></div>
+<div class="vh-xs-2"></div>
 <hr>
-<div class="sp-xs-2"></div>
+<div class="vh-xs-2"></div>
 
 <?php get_template_part('loops/content', get_post_format()); ?>
 

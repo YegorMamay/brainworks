@@ -11,7 +11,7 @@
     <div class="<?php echo $column_class; ?>">
         <h1 class="text-center"><?php post_type_archive_title(); ?></h1>
 
-        <div class="sp-xs-2 sp-md-3"></div>
+        <div class="vh-xs-2 vh-md-3"></div>
 
         <?php if (have_posts()) { ?>
             <div class="review-list">

@@ -28,7 +28,7 @@ if ( $upsells ) : ?>
 		if ( $heading ) :
 			?>
 			<h2><?php echo esc_html( $heading ); ?></h2>
-			<div class="sp-xs-2"></div>
+			<div class="vh-xs-2"></div>
 		<?php endif; ?>
 
 		<?php woocommerce_product_loop_start(); ?>

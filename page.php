@@ -5,5 +5,5 @@
 
 </div><!-- /.container -->
 
-<div class="sp-xs-4"></div>
+<div class="vh-xs-4"></div>
 <?php get_footer(); ?>

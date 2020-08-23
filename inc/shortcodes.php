@@ -209,7 +209,7 @@ if (!function_exists('bw_html_sitemap')) {
 
         foreach ($post_types as $post_type) {
             if (!in_array($post_type->name, $ignoreposttypes)) {
-                $output .= '<h4 class="sitemap-headline">' . $post_type->labels->name . '</h4><div class="sp-xs-1"></div>';
+                $output .= '<h4 class="sitemap-headline">' . $post_type->labels->name . '</h4><div class="vh-xs-1"></div>';
                 $args = array(
                     'posts_per_page' => -1,
                     'post_type' => $post_type->name,
@@ -222,7 +222,7 @@ if (!function_exists('bw_html_sitemap')) {
                 foreach ($posts_array as $pst) {
                     $output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . get_permalink($pst->ID) . '">' . $pst->post_title . '</a></li>';
                 }
-                $output .= '</ul><div class="sp-xs-2"></div>';
+                $output .= '</ul><div class="vh-xs-2"></div>';
             }
         }
 
@@ -681,7 +681,7 @@ if (!function_exists('sn_catalog_shortcode')) {
                         <div><a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail(); ?></a></div>
                         <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
                     </div>
-                        <div class="sp-xs-3"></div>
+                        <div class="vh-xs-3"></div>
                 </div>
                     <?php endwhile; ?>
             </div>

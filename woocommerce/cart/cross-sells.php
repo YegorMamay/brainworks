@@ -22,7 +22,7 @@ if ( $cross_sells ) : ?>
 	<div class="cross-sells">
 
 		<h4><?php esc_html_e( 'You may be interested in&hellip;', 'woocommerce' ); ?></h4>
-		<div class="sp-xs-2"></div>
+		<div class="vh-xs-2"></div>
 
 		<?php woocommerce_product_loop_start(); ?>
 

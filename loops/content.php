@@ -4,11 +4,11 @@
                     <article id="post_<?php the_ID() ?>" class="row">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                             <?php the_post_thumbnail('large'); ?>
-                            <div class="sp-xs-3 sp-sm-0"></div>
+                            <div class="vh-xs-3 vh-sm-0"></div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
-                                <div class="sp-xs-1"></div>
+                                <div class="vh-xs-1"></div>
                                 <p><?php the_excerpt(); ?></p>
                                 <?php /*
                         <h5>
@@ -22,15 +22,15 @@
                             <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
                         </p>
                     */ ?>
-                            <div class="sp-xs-2"></div>
+                            <div class="vh-xs-2"></div>
                             <a class="btn btn-secondary btn-sm"
                                href="<?php echo get_permalink(); ?>"><?php _e('Continue reading', 'brainworks') ?> <i
                                         class="glyphicon glyphicon-arrow-right"></i></a>
                         </div>
                     </article>
-            <div class="sp-xs-2"></div>
+            <div class="vh-xs-2"></div>
             <hr>
-            <div class="sp-xs-2"></div>
+            <div class="vh-xs-2"></div>
         <?php endwhile; ?>
     </div>
 

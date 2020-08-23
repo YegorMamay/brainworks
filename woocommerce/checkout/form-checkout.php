@@ -59,4 +59,4 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
 
-<div class="sp-xs-4"></div>
+<div class="vh-xs-4"></div>

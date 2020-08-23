@@ -28,7 +28,7 @@
                     <div><a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail('large'); ?></a></div>
                     <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
                     </div>
-                    <div class="sp-xs-3"></div>
+                    <div class="vh-xs-3"></div>
                 </div>  
                 <?php endwhile;
                     else : ?>

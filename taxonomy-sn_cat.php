@@ -21,7 +21,7 @@
                     <div><a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail('medium'); ?></a></div>
                     <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
                     </div>
-                    <div class="sp-xs-3"></div>
+                    <div class="vh-xs-3"></div>
                 </div>
                 <?php endwhile;
                     else : ?>
@@ -31,7 +31,7 @@
         </div>
 
     <?php  the_archive_description( '<div class="term-description">', '</div>' );  ?>
-    <div class="sp-xs-2"></div>
+    <div class="vh-xs-2"></div>
    
     </div><!-- /.row -->
 </div><!-- /.container -->

@@ -83,7 +83,7 @@ endif;
                         <textarea name="comment" id="comment" placeholder="<?php _e('Your comment', 'brainworks'); ?>" rows="4" aria-required="true"></textarea>
                     </div>
 
-                    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+                    <div class="vh-xs-2 vh-sm-2 vh-md-2 vh-lg-2 vh-xl-2"></div>
                     <p>
                         <input name="submit" class="btn btn-secondary btn-sm center-block" type="submit" id="submit" value="<?php _e('Submit comment', 'brainworks'); ?>">
                     </p>
