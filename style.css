@@ -13871,7 +13871,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active {
-  color: color-yiq(#1a252f);
+  color: #fff;
   background-color: #1a252f;
   background-image: none;
   border-color: #151e27;
@@ -13909,7 +13909,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active {
-  color: color-yiq(#d62c1a);
+  color: #fff;
   background-color: #d62c1a;
   background-image: none;
   border-color: #ca2a19;
