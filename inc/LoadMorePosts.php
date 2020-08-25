@@ -95,6 +95,7 @@ if (!class_exists('LoadMorePosts')) {
                             <article id="post-' . get_the_ID() . '" class="row">
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                     ' . get_the_post_thumbnail(null, 'large') . '
+                                    <div class="vh-xs-3 vh-sm-0"></div>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                     <header>

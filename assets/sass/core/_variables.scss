@@ -18,17 +18,17 @@ $container-max-widths: (
         sm: 570px,
         md: 760px,
         lg: 1000px,
-        xl: 1300px
+        xl: 1200px
 ) !default;
 
 
 $primary_color_one: #000 !default; // black
 $primary_color_two: #fff !default; //white
 
+
 // THEME COLORS
 $themeColorOne: #2c3e50; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других. 
 $themeColorTwo: #e74c3c; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
-
 
 
 $borderRadius: 0;
@@ -38,6 +38,10 @@ $shadow: 0 10px 20px rgba($primary_color_one, .2);
 // SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColorTwo;
 $selectionFontColor: $primary_color_two;
+
+// Text Highlight: цвет фона и текста при добавлении к нему .highlighted
+$textHighlightBgColor: $themeColorTwo;
+$textHighlightColor: $primary_color_two;
 
 // BODY
 $bodyBgColor: $primary_color_two;
@@ -49,10 +53,7 @@ $wrapperBgColor: $primary_color_two;
 // HEADER: цвет фона шапки сайта
 $headerBgColor: $themeColorOne;
 $headerFontColor: $primary_color_two;
-
-// Text Highlight: цвет фона и текста при добавлении к нему .highlighted
-$textHighlightBgColor: $themeColorTwo;
-$textHighlightColor: $primary_color_two;
+$headerHight: 80px;
 
 // MENU
 $menuBgColor: $themeColorOne;
