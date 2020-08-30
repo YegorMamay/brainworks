@@ -94,6 +94,82 @@
   background-repeat: no-repeat;
 }
 
+.phone-dropdown {
+  @extend %reset-list;
+  display: inline-flex;
+  align-items: center;
+  min-width: 205px;
+  position: relative;
+  margin-right: 10px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    &.active {
+      &:after {
+        transform: rotate(-225deg);
+        transition: .2s;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      margin-bottom: 3px;
+      margin-left: 10px;
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid $primary_color_two;
+      border-left: 2px solid $primary_color_two;
+      transform: rotate(-45deg);
+      transition: .2s;
+    }
+  }
+
+  &__list {
+    @extend %reset-list;
+    background: $primary_color_two;
+    box-shadow: $shadow;
+    position: absolute;
+    padding: 15px 10px;
+    width: 80%;
+    height: auto;
+    left: -24px;
+    top: 100%;
+    z-index: 3;
+    display: none;
+
+    & .phone-dropdown {
+
+      &__item {
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__link {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
 .social {
   @extend %reset-list;
 

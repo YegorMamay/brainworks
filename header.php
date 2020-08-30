@@ -149,9 +149,31 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <button type="button" class="btn btn-secondary btn-block <?php the_lang_class('js-call-back'); ?>">
-                        <?php _e('Call back', 'brainworks'); ?>
-                    </button>
+<!-- Dropdown phones -->
+<?php if (has_phones()) { ?>
+    <ul class="phone-dropdown">
+        <li class="phone-dropdown__item">
+            <?php foreach(get_phones() as $key => $phone) { ?>
+            <?php if ($key === key(get_phones())) { ?>
+            <a href="tel:<?php echo esc_attr(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
+                <?php echo esc_html($phone); ?>
+            </a>
+            <button type="button" class="phone-dropdown__button js-dropdown"></button>
+            <ul class="phone-dropdown__list js-phone-list">
+                <?php  } else { ?>
+                    <li class="phone-dropdown__item">
+                        <a href="tel:<?php echo esc_attr(get_phone_number($phone)); ?>" class="phone-dropdown__link">
+                            <?php echo esc_html($phone); ?>
+                        </a>
+                    </li>
+                <?php } ?>
+                <?php } ?>
+            </ul>
+        </li>
+    </ul>
+<?php } ?>
+<!-- Dropdown phones -->
+
                 </div>
             </div>
         </div>
