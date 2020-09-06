@@ -111,3 +111,12 @@ function translate_text($translated) {
 $translated = str_ireplace('Подытог', 'Итого', $translated);
 return $translated;
 }
+
+// Отменяет удаление из корзины через определенный срок
+function devise_remove_schedule_delete() {
+    remove_action( 'wp_scheduled_delete', 'wp_scheduled_delete' );
+}
+add_action( 'init', 'devise_remove_schedule_delete' );
+
+// Плагин Yoast: отменяет создание автоматических редиректов
+add_filter('wpseo_premium_post_redirect_slug_change', '__return_true' );
