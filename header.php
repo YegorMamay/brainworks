@@ -7,6 +7,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
+  <?php /* If there is plugin LayerSlider
+   <link data-minify="0" rel="preload" href="/wp-content/plugins/LayerSlider/assets/static/layerslider/skins/fullwidth/skin.css" as="style">
+   */
+    ?>
+       
     <title>
         <?php
         if (is_front_page()) {
