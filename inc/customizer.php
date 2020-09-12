@@ -820,6 +820,31 @@ function bw_customize_register($wp_customize)
         'type' => 'tel',
     ));
 
+	// Section Sticky Header
+	$wp_customize->add_section('bw_sticky_header', array(
+		'title' => __('Sticky Header', 'brainworks'),
+		'description' => esc_html__('Customizer Sticky Header', 'brainworks'),
+		'panel' => 'bw_theme_options',
+	));
+
+	$wp_customize->add_setting('bw_sticky_header_enable', array('default' => false, 'sanitize_callback' => 'wp_validate_boolean'));
+	$wp_customize->add_setting('bw_sticky_header_autohide', array('default' => false, 'sanitize_callback' => 'wp_validate_boolean'));
+
+	$wp_customize->add_control('bw_sticky_header_enable', array(
+		'label' => __('Enable', 'brainworks'),
+		'description' => esc_html__('Enable/Disable sticky header js functionality', 'brainworks'),
+		'section' => 'bw_sticky_header',
+		'settings' => 'bw_sticky_header_enable',
+		'type' => 'checkbox',
+	));
+
+	$wp_customize->add_control('bw_sticky_header_autohide', array(
+		'label' => __('Auto Hide', 'brainworks'),
+		'description' => esc_html__('Enable/Disable auto hide functionality option', 'brainworks'),
+		'section' => 'bw_sticky_header',
+		'settings' => 'bw_sticky_header_autohide',
+		'type' => 'checkbox',
+	));
 }
 
 add_action('customize_register', 'bw_customize_register');

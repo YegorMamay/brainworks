@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 23.08.20
+Version: 8.09.20
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -136,7 +136,7 @@ q:after {
   transition: .2s;
 }
 
-.phone, .social, .messenger, .lang, .nav .menu, .nav .menu-container, .nav .sub-menu {
+.phone, .phone-dropdown, .phone-dropdown__list, .social, .messenger, .lang, .nav .menu, .nav .menu-container, .nav .sub-menu {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -9822,7 +9822,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
   html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
     margin-right: 7px;
   }
-  html.pum-open.pum-open-overlay .fixed-to-top {
+  html.pum-open.pum-open-overlay .header.is-fixed {
     overflow-x: hidden;
   }
 }
@@ -9845,6 +9845,10 @@ html .formcraft-css .fc-form .form-element .form-element-html select,
 html .formcraft-css .fc-form .form-element .form-element-html textarea,
 html .formcraft-css .fc-form {
   border-radius: 0;
+}
+
+.ls-fullwidth .ls-nav-prev, .ls-fullwidth .ls-nav-next {
+  z-index: 30 !important;
 }
 
 .slick-slider {
@@ -10707,7 +10711,7 @@ table th[class*="col-"] {
   transition: .2s;
 }
 
-.phone, .social, .messenger, .lang, .nav .menu, .nav .menu-container, .nav .sub-menu {
+.phone, .phone-dropdown, .phone-dropdown__list, .social, .messenger, .lang, .nav .menu, .nav .menu-container, .nav .sub-menu {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10810,7 +10814,7 @@ select {
 
 @media (min-width: 1366px) {
   .container {
-    max-width: 1300px;
+    max-width: 1200px;
   }
 }
 
@@ -11365,7 +11369,7 @@ select {
   transition: .2s;
 }
 
-.phone, .social, .messenger, .lang, .nav .menu, .nav .menu-container, .nav .sub-menu {
+.phone, .phone-dropdown, .phone-dropdown__list, .social, .messenger, .lang, .nav .menu, .nav .menu-container, .nav .sub-menu {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -13575,6 +13579,100 @@ hr.style-three {
   background-repeat: no-repeat;
 }
 
+.phone-dropdown {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 205px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.phone-dropdown__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.phone-dropdown__button {
+  background: transparent;
+  border: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25px;
+  height: 25px;
+}
+
+.phone-dropdown__button.active:after {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.phone-dropdown__button:after {
+  content: "";
+  display: inline-block;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  width: 7px;
+  height: 7px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.phone-dropdown__list {
+  background: #fff;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  padding: 15px 10px;
+  width: 80%;
+  height: auto;
+  left: -24px;
+  top: 100%;
+  z-index: 3;
+  display: none;
+}
+
+.phone-dropdown__list .phone-dropdown__item {
+  margin-bottom: 8px;
+}
+
+.phone-dropdown__list .phone-dropdown__item:last-child {
+  margin-bottom: 0;
+}
+
+.phone-dropdown__list .phone-dropdown__link {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .social, .social-item {
   display: inline-block;
   vertical-align: middle;
@@ -14049,7 +14147,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
   }
 }
 
-.page-header {
+.header {
   padding: 10px 0;
   background-color: #2c3e50;
   color: #fff;
@@ -14057,18 +14155,33 @@ fieldset:disabled .woocommerce a.added_to_cart,
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1199px) {
-  .page-header {
-    display: none !important;
-  }
-}
-
-.fixed-to-top {
+.header.is-fixed {
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
   z-index: 33;
+  -webkit-transition: .2s transform, .2s visibility, .3s background-color;
+  transition: .2s transform, .2s visibility, .3s background-color;
+  will-change: transform, visibility, background-color;
+}
+
+.header.is-fixed.onscroll-hide {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.header.is-fixed.onscroll-show {
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (max-width: 1199px) {
+  .header {
+    display: none !important;
+  }
 }
 
 .nav {
@@ -14759,6 +14872,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
+}
+
+body.home {
+  margin-top: -80px;
+  height: calc(100% + 80px);
 }
 
 .wrapper {

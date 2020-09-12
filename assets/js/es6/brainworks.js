@@ -27,6 +27,7 @@
         if (ajax) {
             ajaxLoadMorePosts('.js-load-more', '.js-ajax-posts');
         }
+        stickHeader('.js-header');
         stickFooter('.js-footer', '.js-container');
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
@@ -68,6 +69,176 @@
     };
 
     /**
+     * Stick Header
+     *
+     * @example
+     * stickHeader('.js-header');
+     *
+     * @author Fedor Kudinov <brothersrabbits@mail.ru>
+     *
+     * @param {(string|Object)} element - element
+     * @returns {void}
+     */
+    const stickHeader = (element) => {
+        const w = $(window);
+        const d = $(document);
+        const windowHeight = w.height();
+        const documentHeight = d.height();
+
+        let resizeArr = [];
+        let resizeTimeout = 0;
+
+        /**
+         * Debounce Resized
+         *
+         * @private
+         * @returns {void}
+         */
+        const _debounceResized = () => {
+            clearTimeout(resizeTimeout);
+
+            resizeTimeout = setTimeout(() => {
+                if (resizeArr.length) {
+                    for (let i = 0; i < resizeArr.length; i++) {
+                        resizeArr[i]();
+                    }
+                }
+            }, 50);
+        };
+
+        _debounceResized();
+        w.on('ready load resize orientationchange', _debounceResized);
+
+        /**
+         * Debounce Resize
+         *
+         * @param {Object} callback - function
+         * @private
+         * @returns {void}
+         */
+        const _debounceResize = (callback) => {
+            if (typeof callback === 'function') {
+                resizeArr.push(callback);
+            } else {
+                window.dispatchEvent(new Event('resize'));
+            }
+        };
+
+        let didScroll = 0;
+        let lastScrollTop = 0;
+        let hideOnScrollList = [];
+
+        w.on('scroll load resize orientationchange', () => {
+            if (hideOnScrollList.length) didScroll = true;
+        });
+
+        /**
+         * Has Scrolled
+         *
+         * @private
+         * @returns {void}
+         */
+        const _hasScrolled = () => {
+            let type = '';
+            const scrollTop = w.scrollTop();
+
+            if (scrollTop > lastScrollTop) {
+                type = 'down';
+            } else if (scrollTop < lastScrollTop) {
+                type = 'up';
+            } else {
+                type = 'none';
+            }
+
+            if (scrollTop === 0) {
+                type = 'start';
+            } else if (scrollTop >= documentHeight - windowHeight) {
+                type = 'end';
+            }
+
+            hideOnScrollList.forEach((callback) => {
+                if (typeof callback === 'function') {
+                    callback(type, scrollTop, lastScrollTop, w);
+                }
+            });
+
+            lastScrollTop = scrollTop;
+        };
+
+        setInterval(() => {
+            if (didScroll) {
+                didScroll = false;
+
+                window.requestAnimationFrame(_hasScrolled);
+            }
+        }, 250);
+
+        /**
+         * Throttle Scroll
+         *
+         * @param {Object} callback - function
+         * @private
+         * @returns {void}
+         */
+        const _throttleScroll = (callback) => {
+            hideOnScrollList.push(callback);
+        };
+
+        const start = 400;
+        const hideClass = 'onscroll-hide';
+        const showClass = 'onscroll-show';
+        const header = $(element);
+        const headerFake = $('<div>').hide();
+        const autoHideHeader = header.filter('.is-autohide');
+        const headerOffsetTop = header.length ? header.offset().top : 0;
+        //const headerOffsetTop = windowHeight;
+
+        let stickyOn;
+
+        /**
+         * Handler on scroll
+         *
+         * @private
+         * @returns {void}
+         */
+        const _onScroll = () => {
+            stickyOn = w.scrollTop() >= headerOffsetTop;
+
+            if (stickyOn) {
+                header.addClass('is-fixed');
+                headerFake.show();
+            } else {
+                header.removeClass('is-fixed');
+                headerFake.hide();
+            }
+        };
+
+        if (header.hasClass('is-sticky')) {
+            header.after(headerFake);
+            headerFake.height(header.innerHeight());
+
+            _debounceResize(() => {
+                headerFake.height(header.innerHeight());
+            });
+
+            _onScroll();
+            w.on('scroll resize', _onScroll);
+        }
+
+        _throttleScroll((type, scroll) => {
+            if (type === 'down' && scroll > start) {
+                autoHideHeader.removeClass(showClass).addClass(hideClass);
+            } else if (type === 'up' || type === 'end' || type === 'start') {
+                autoHideHeader.removeClass(hideClass).addClass(showClass);
+            }
+
+            if (header.hasClass('is-transparent') && header.hasClass('is-sticky')) {
+                header[(scroll > 70 ? 'add' : 'remove') + 'Class']('is-solid');
+            }
+        });
+    };
+
+    /**
      * Stick Footer
      *
      * @example
@@ -75,15 +246,15 @@
      *
      * @author Fedor Kudinov <brothersrabbits@mail.ru>
      *
-     * @param {(string|Object)} footer - footer element
+     * @param {(string|Object)} element - footer element
      * @param {(string|Object)} container - container element
      * @returns {void}
      */
-    const stickFooter = (footer, container) => {
+    const stickFooter = (element, container) => {
         let previousHeight, currentHeight;
 
         const offset = 0;
-        const $footer = $(footer);
+        const $footer = $(element);
         const $container = $(container);
 
         currentHeight = ($footer.outerHeight() + offset) + 'px';
@@ -409,12 +580,12 @@
                     $element.on('click', (e) => {
                         e.preventDefault();
                         const target = $(href[0] === '#' ? href : href.slice(1));
-                        const fixedHeader = $('.fixed-to-top');
+                        const fixedHeader = $('.js-header');
                         const fixOffset = 20; // смещение блока его можно регулировать или стилями или тут, если не нужен ставим 0
                         let scrollBlockOffset;
                         if (target.length && href.slice(0, 3) !== '#__') { // проверка урла в аккордеоне
 
-                            if (fixedHeader.length > 0 && $(window).width() > 1024) { // проверям наличие fixed-to-top в DOM дереве и ширина обьекта window больше 1024px (по желанию можно заменить на другое значение)
+                            if (fixedHeader.length > 0 && $(window).width() > 1024) { // проверям наличие js-header в DOM дереве и ширина обьекта window больше 1024px (по желанию можно заменить на другое значение)
                                 scrollBlockOffset = fixedHeader.outerHeight() + fixOffset; // если ширина больше 1024px делаем скролл с учетом высоты хедера и добавляем небольшой offset 'const fixOffset = 20' (по желанию конечно)
                             } else if (fixedHeader.length >= 0 && $(window).width() < 1024) { // если ширина меньше 1024px делаем скролл с учетом высоты моб. шапки nav-mobile-header
                                 scrollBlockOffset = $('.nav-mobile-header').outerHeight() + fixOffset;
@@ -516,7 +687,7 @@
 
                     data.paged += 1;
 
-                    if(posts !== '') {
+                    if (posts !== '') {
 
                         $('html, body').animate({
                             scrollTop: $(lastChildren).offset().top

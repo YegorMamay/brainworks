@@ -36,6 +36,13 @@ function bw_enqueues()
         null, true);
     wp_enqueue_script('brainworks-js');
 
+	wp_localize_script('brainworks-js', 'jpAjax', [
+		'sticky_header' => [
+			'enable' => get_theme_mod('bw_sticky_header_enable', false),
+			'autohide' => get_theme_mod('bw_sticky_header_autohide', false)
+		],
+	]);
+
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }

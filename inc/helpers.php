@@ -1,5 +1,36 @@
 <?php
 
+if (!function_exists('dump')) {
+	/**
+	 * Dumps information about a variable
+	 *
+	 * @param mixed $expression
+	 *
+	 * @return void
+	 */
+	function dump($expression)
+	{
+		echo '<pre style="flex-shrink: 0;">';
+		var_dump($expression);
+		echo '</pre>';
+	}
+}
+
+if (!function_exists('dd')) {
+	/**
+	 * Dump and die
+	 *
+	 * @param mixed $expression
+	 *
+	 * @return void
+	 */
+	function dd($expression)
+	{
+		dump($expression);
+		die();
+	}
+}
+
 /**
  * Clear phone number for tag <a href="tel:"></a>
  *
@@ -415,6 +446,20 @@ if (!function_exists('get_default_logo_link')) {
             echo $html;
         }
     }
+}
+
+if ( ! function_exists( 'sticky_header' ) ) {
+	/**
+	 * Get sticky header classes
+	 *
+	 * @return void
+	 */
+	function sticky_header() {
+		$enable    = get_theme_mod( 'bw_sticky_header_enable', false ) ? ' js-header is-sticky' : false;
+		$auto_hide = get_theme_mod( 'bw_sticky_header_autohide', false ) ? ' is-autohide' : false;
+
+		echo $enable ? $enable . $auto_hide : false;
+	}
 }
 
 if (!function_exists('get_background_login_page')) {

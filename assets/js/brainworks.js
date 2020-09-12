@@ -22,6 +22,7 @@
         if (ajax) {
             ajaxLoadMorePosts(".js-load-more", ".js-ajax-posts");
         }
+        stickHeader(".js-header");
         stickFooter(".js-footer", ".js-container");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
         buyOneClick(".one-click-ru, .one-click-uk, .one-click-en, .one-click", '[data-field-id="field11"]', "h1");
@@ -45,10 +46,111 @@
             dropDownBtn.removeClass("active");
         });
     };
-    var stickFooter = function stickFooter(footer, container) {
+    var stickHeader = function stickHeader(element) {
+        var w = $(window);
+        var d = $(document);
+        var windowHeight = w.height();
+        var documentHeight = d.height();
+        var resizeArr = [];
+        var resizeTimeout = 0;
+        var _debounceResized = function _debounceResized() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                if (resizeArr.length) {
+                    for (var i = 0; i < resizeArr.length; i++) {
+                        resizeArr[i]();
+                    }
+                }
+            }, 50);
+        };
+        _debounceResized();
+        w.on("ready load resize orientationchange", _debounceResized);
+        var _debounceResize = function _debounceResize(callback) {
+            if (typeof callback === "function") {
+                resizeArr.push(callback);
+            } else {
+                window.dispatchEvent(new Event("resize"));
+            }
+        };
+        var didScroll = 0;
+        var lastScrollTop = 0;
+        var hideOnScrollList = [];
+        w.on("scroll load resize orientationchange", function() {
+            if (hideOnScrollList.length) didScroll = true;
+        });
+        var _hasScrolled = function _hasScrolled() {
+            var type = "";
+            var scrollTop = w.scrollTop();
+            if (scrollTop > lastScrollTop) {
+                type = "down";
+            } else if (scrollTop < lastScrollTop) {
+                type = "up";
+            } else {
+                type = "none";
+            }
+            if (scrollTop === 0) {
+                type = "start";
+            } else if (scrollTop >= documentHeight - windowHeight) {
+                type = "end";
+            }
+            hideOnScrollList.forEach(function(callback) {
+                if (typeof callback === "function") {
+                    callback(type, scrollTop, lastScrollTop, w);
+                }
+            });
+            lastScrollTop = scrollTop;
+        };
+        setInterval(function() {
+            if (didScroll) {
+                didScroll = false;
+                window.requestAnimationFrame(_hasScrolled);
+            }
+        }, 250);
+        var _throttleScroll = function _throttleScroll(callback) {
+            hideOnScrollList.push(callback);
+        };
+        var start = 400;
+        var hideClass = "onscroll-hide";
+        var showClass = "onscroll-show";
+        var header = $(element);
+        var headerFake = $("<div>").hide();
+        var autoHideHeader = header.filter(".is-autohide");
+        var headerOffsetTop = header.length ? header.offset().top : 0;
+        var stickyOn;
+        var _onScroll = function _onScroll() {
+            stickyOn = w.scrollTop() >= headerOffsetTop;
+            if (stickyOn) {
+                header.addClass("is-fixed");
+                headerFake.show();
+            } else {
+                header.removeClass("is-fixed");
+                headerFake.hide();
+            }
+        };
+        if (header.hasClass("is-sticky")) {
+            header.after(headerFake);
+            headerFake.height(header.innerHeight());
+            _debounceResize(function() {
+                headerFake.height(header.innerHeight());
+            });
+            _onScroll();
+            w.on("scroll resize", _onScroll);
+        }
+        _throttleScroll(function(type, scroll) {
+            if (type === "down" && scroll > start) {
+                autoHideHeader.removeClass(showClass).addClass(hideClass);
+            } else if (type === "up" || type === "end" || type === "start") {
+                autoHideHeader.removeClass(hideClass).addClass(showClass);
+            }
+            if (header.hasClass("is-transparent") && header.hasClass("is-sticky")) {
+                header[(scroll > 70 ? "add" : "remove") + "Class"]("is-solid");
+            }
+        });
+    };
+    var stickFooter = function stickFooter(element, container) {
         var previousHeight, currentHeight;
         var offset = 0;
-        var $footer = $(footer);
+        var $footer = $(element);
         var $container = $(container);
         currentHeight = $footer.outerHeight() + offset + "px";
         previousHeight = currentHeight;
@@ -186,7 +288,7 @@
                     $element.on("click", function(e) {
                         e.preventDefault();
                         var target = $(href[0] === "#" ? href : href.slice(1));
-                        var fixedHeader = $(".fixed-to-top");
+                        var fixedHeader = $(".js-header");
                         var fixOffset = 20;
                         var scrollBlockOffset;
                         if (target.length && href.slice(0, 3) !== "#__") {

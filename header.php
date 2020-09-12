@@ -94,7 +94,7 @@
 <?php wp_body_open(); ?>
 <div class="wrapper js-container"><!--Do not delete!-->
 
-    <header class="page-header fixed-to-top">
+    <header class="header <?php sticky_header(); ?>">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
