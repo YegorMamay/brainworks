@@ -32,8 +32,12 @@
 
 //Other
 .phone-number[href^="tel:+"]::before,
+.phone-dropdown__link[href^="tel:+"]::before,
 .phone-number[href^="tel:0"]::before,
+.phone-dropdown__link[href^="tel:0"]::before,
 .phone-number[href^="tel:38"]::before,
+.phone-dropdown__link[href^="tel:38"]::before,
+.phone-dropdown__link[href^="tel:+38"]::before,
 .phone-number[href^="tel:+38"]::before {
   content: '';
   display: inline-block;
@@ -48,7 +52,10 @@
 
 //Lifecell
 .phone-number[href^="tel:+38063"]::before,
+.phone-dropdown__link[href^="tel:+38063"]::before,
 .phone-number[href^="tel:+38073"]::before,
+.phone-dropdown__link[href^="tel:+38073"]::before,
+.phone-dropdown__link[href^="tel:+38093"]::before,
 .phone-number[href^="tel:+38093"]::before {
   content: '';
   display: inline-block;
@@ -63,9 +70,13 @@
 
 //Vodafone
 .phone-number[href^="tel:+38050"]::before,
+.phone-dropdown__link[href^="tel:+38050"]::before,
 .phone-number[href^="tel:+38066"]::before,
+.phone-dropdown__link[href^="tel:+38066"]::before,
 .phone-number[href^="tel:+38095"]::before,
-.phone-number[href^="tel:+38099"]::before {
+.phone-dropdown__link[href^="tel:+38095"]::before,
+.phone-number[href^="tel:+38099"]::before,
+.phone-dropdown__link[href^="tel:+38099"]::before {
   content: '';
   display: inline-block;
   vertical-align: baseline;
@@ -79,10 +90,15 @@
 
 //kyivstar
 .phone-number[href^="tel:+38067"]::before,
+.phone-dropdown__link[href^="tel:+38067"]::before,
 .phone-number[href^="tel:+38068"]::before,
+.phone-dropdown__link[href^="tel:+38068"]::before,
 .phone-number[href^="tel:+38096"]::before,
+.phone-dropdown__link[href^="tel:+38096"]::before,
 .phone-number[href^="tel:+38097"]::before,
-.phone-number[href^="tel:+38098"]::before {
+.phone-dropdown__link[href^="tel:+38097"]::before,
+.phone-number[href^="tel:+38098"]::before,
+.phone-dropdown__link[href^="tel:+38098"]::before {
   content: '';
   display: inline-block;
   vertical-align: baseline;
@@ -131,8 +147,8 @@
       margin-left: 10px;
       width: 7px;
       height: 7px;
-      border-bottom: 2px solid $primary_color_two;
-      border-left: 2px solid $primary_color_two;
+      border-bottom: 2px solid $themeColorTwo;
+      border-left: 2px solid $themeColorTwo;
       transform: rotate(-45deg);
       transition: .2s;
     }
@@ -144,9 +160,9 @@
     box-shadow: $shadow;
     position: absolute;
     padding: 15px 10px;
-    width: 80%;
+    width: 85%;
     height: auto;
-    left: -24px;
+    left: -12px;
     top: 100%;
     z-index: 3;
     display: none;
@@ -180,7 +196,7 @@
   }
 
   &-item {
-    margin: 0 5px;
+    margin: 0 10px;
   }
 
   &-link {
@@ -188,10 +204,10 @@
     text-align: center;
     text-decoration: none;
     font-size: 24px;
-    color: $iconColor;
+    color: $themeColorOne;
 
     &:hover, &:active, &:focus {
-      color: $iconColorActive;
+      color: $themeColorTwo;
     }
   }
 }
