@@ -121,8 +121,8 @@ body {
     overflow-x: hidden;
     min-height: 100%;
     
-    @media #{$mobile-max} {
-        padding-top: 75px;
+    @media #{$desktop-max} {
+        padding-top: 70px;
     } 
 }
 

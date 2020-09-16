@@ -409,15 +409,6 @@ ul.products li.product .button {
       form.cart {
         display: flex;
         flex-direction: column;
-
-        .quantity {
-          margin: 0 0 10px 0 !important;
-
-        }
-
-        .single_add_to_cart_button {
-          margin-bottom: 10px;
-        }
       }
     }
 
@@ -530,6 +521,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   box-sizing: border-box;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+    z-index: 33;
 
   @media screen and (min-width: 768px) {
     display: block;
