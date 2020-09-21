@@ -16,6 +16,8 @@
     &-container {
       @extend %reset-list;
       font-size: 0;
+      display: flex;
+      justify-content: space-between;
     }
 
     &-item {

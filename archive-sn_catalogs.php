@@ -36,10 +36,8 @@
                 <?php endif; ?>
             </div>
             
-            <?php if (get_theme_mod('bw_load_more_enable') && function_exists('bw_load_more')) { ?>
-        <div class="text-center"><?php bw_load_more(); ?></div>
-    <?php } else {
-        if (function_exists('bw_pagination')) {
+            
+    <?php if (function_exists('bw_pagination')) {
             bw_pagination();
         } else {
             if (is_paged()) { ?>
@@ -49,7 +47,7 @@
                 </ul>
             <?php }
         }
-    } ?>
+ ?>
             
         </div>
 

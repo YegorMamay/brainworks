@@ -110,23 +110,9 @@
                         ?>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <div class="nav-wrapper">
-                        <?php if (has_nav_menu('main-nav')) { ?>
-                            <nav class="nav js-menu">
-                                <button type="button" tabindex="0"
-                                        class="menu-item-close menu-close js-menu-close"></button>
-                                <?php wp_nav_menu(array(
-                                    'theme_location' => 'main-nav',
-                                    'container' => false,
-                                    'menu_class' => 'menu-container',
-                                    'menu_id' => '',
-                                    'fallback_cb' => 'wp_page_menu',
-                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                    'depth' => 3
-                                )); ?>
-                            </nav>
-                        <?php } ?>
                         <?php if (has_nav_menu('language-switcher')) { ?>
                             <nav class="nav js-menu">
                                 <button type="button" tabindex="0"
@@ -178,9 +164,24 @@
     </ul>
 <?php } ?>
 <!-- Dropdown phones -->
-
                 </div>
             </div>
+
+            <?php if (has_nav_menu('main-nav')) { ?>
+                <nav class="nav js-menu">
+                    <button type="button" tabindex="0"
+                            class="menu-item-close menu-close js-menu-close"></button>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'main-nav',
+                        'container' => false,
+                        'menu_class' => 'menu-container',
+                        'menu_id' => '',
+                        'fallback_cb' => 'wp_page_menu',
+                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth' => 3
+                    )); ?>
+                </nav>
+            <?php } ?>
         </div>
     </header>
 

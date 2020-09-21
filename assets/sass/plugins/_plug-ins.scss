@@ -57,3 +57,17 @@ html .formcraft-css .fc-form {
 .ls-fullwidth .ls-nav-prev, .ls-fullwidth .ls-nav-next {
     z-index: 30 !important;
 }
+
+// TI WooCommerce Wishlist
+ul.products {
+    li.product {
+        .tinv-wraper.tinv-wishlist {
+            position: absolute;
+        }
+        
+        .tinvwl_add_to_wishlist_button {
+            margin-top: 0;
+        }
+    }
+}
+// TI WooCommerce Wishlist END

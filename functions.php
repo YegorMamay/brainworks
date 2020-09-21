@@ -111,6 +111,7 @@ function translate_text($translated) {
 $translated = str_ireplace('Подытог', 'Итого', $translated);
 return $translated;
 }
+//WOOCOMMERCE END
 
 // Отменяет удаление из корзины через определенный срок
 function devise_remove_schedule_delete() {
