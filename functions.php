@@ -121,3 +121,64 @@ add_action( 'init', 'devise_remove_schedule_delete' );
 
 // Плагин Yoast: отменяет создание автоматических редиректов
 add_filter('wpseo_premium_post_redirect_slug_change', '__return_true' );
+// Плагин Yoast END
+
+
+// Добавляет кнопки + и - для выбора количества товаров на странице товара
+add_action( 'woocommerce_after_add_to_cart_quantity', 'ts_quantity_plus_sign' );
+
+function ts_quantity_plus_sign() {
+    echo '<button type="button" class="plus" >+</button>';
+}
+
+add_action( 'woocommerce_before_add_to_cart_quantity', 'ts_quantity_minus_sign' );
+
+function ts_quantity_minus_sign() {
+    echo '<button type="button" class="minus" >-</button>';
+}
+
+add_action( 'wp_footer', 'ts_quantity_plus_minus' );
+
+// To run this on the single product page (buttons plus/minus);
+function ts_quantity_plus_minus() {
+
+    if ( ! is_product() ) return;
+    ?>
+    <script type="text/javascript">
+
+        jQuery(document).ready(function($){
+
+            $('.cart .qty.text').attr('type', 'text');
+            $('form.cart').on( 'click', 'button.plus, button.minus', function() {
+
+                var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
+                var val = parseFloat(qty.val());
+                var max = parseFloat(qty.attr( 'max' ));
+                var min = parseFloat(qty.attr( 'min' ));
+                var step = parseFloat(qty.attr( 'step' ));
+
+                if ( $( this ).is( '.plus' ) ) {
+                    if ( max && ( max <= val ) ) {
+                        qty.val( max );
+                    }
+                    else {
+                        qty.val( val + step );
+                    }
+                }
+                else {
+                    if ( min && ( min >= val ) ) {
+                        qty.val( min );
+                    }
+                    else if ( val > 1 ) {
+                        qty.val( val - step );
+                    }
+                }
+
+            });
+
+        });
+
+    </script>
+    <?php
+}
+// Добавляет кнопки + и - END

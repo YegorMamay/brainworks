@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 8.09.20
+Version: 21.09.20
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -9851,6 +9851,14 @@ html .formcraft-css .fc-form {
   z-index: 30 !important;
 }
 
+ul.products li.product .tinv-wraper.tinv-wishlist {
+  position: absolute;
+}
+
+ul.products li.product .tinvwl_add_to_wishlist_button {
+  margin-top: 0;
+}
+
 .slick-slider {
   position: relative;
   display: block;
@@ -10217,8 +10225,39 @@ html .formcraft-css .fc-form {
   margin-bottom: 5px;
 }
 
-ul.products li.product .button {
-  margin-bottom: 1em;
+ul.products li.product .cart-custom-button {
+  position: absolute;
+  top: 220px;
+  right: 93px;
+  background: #e74c3c;
+  padding: 5px 8px;
+  border-radius: 0;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+ul.products li.product .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
+  width: 0;
+  height: 0;
+  top: 220px;
+  left: 93px;
+  background: #e74c3c;
+  padding: 17px;
+  border-radius: 0;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+ul.products li.product:hover .cart-custom-button {
+  opacity: 1;
+}
+
+ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
+  opacity: 1;
 }
 
 .woocommerce #content div.product div.images,
@@ -10276,6 +10315,10 @@ ul.products li.product .button {
   margin-bottom: 15px !important;
 }
 
+.woocommerce div.product form.cart {
+  margin-bottom: 1em;
+}
+
 @media (max-width: 574px) {
   .woocommerce div.product form.cart .variations {
     margin-bottom: 0;
@@ -10320,21 +10363,15 @@ ul.products li.product .button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .woocommerce div.product form.cart .quantity {
-    margin: 0 0 10px 0 !important;
-  }
-  .woocommerce div.product form.cart .single_add_to_cart_button {
-    margin-bottom: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .woocommerce .quantity .qty {
     width: 100%;
     max-width: 70px;
-    margin-right: 10px;
   }
 }
 
@@ -10436,6 +10473,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   opacity: 0;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
+  z-index: 33;
 }
 
 @media screen and (min-width: 768px) {
@@ -10489,6 +10527,70 @@ a.wpgis-popup, a.wpgis-popup:hover {
   .woocommerce-page[class*=columns-] ul.products li.product:nth-child(2n),
   .woocommerce[class*=columns-] ul.products li.product:nth-child(2n) {
     float: none;
+  }
+}
+
+.woocommerce div.product form.cart div.quantity {
+  float: left;
+  display: inline-block;
+  margin-right: 0;
+}
+
+#top .cart .minus {
+  border: 1px solid #cccccc;
+  border-right-color: transparent;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0;
+  padding: 15px 8px;
+  font-size: 16px;
+  float: left;
+  width: 40px;
+}
+
+#top .cart .plus {
+  border: 1px solid #cccccc;
+  border-left-color: transparent;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0;
+  padding: 15px 8px;
+  font-size: 16px;
+  float: left;
+  width: 40px;
+  margin-right: 4px;
+}
+
+@media screen and (max-width: 1023px) {
+  #top .cart .plus {
+    padding: 13px;
+    height: 45px;
+  }
+  #top .cart .minus {
+    padding: 13px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #top .cart .plus {
+    padding: 13px;
+    height: 44px;
+  }
+  #top .cart .minus {
+    padding: 13px;
+    height: 44px;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  #top .cart .plus {
+    padding: 9px;
+    height: 36px;
+  }
+  #top .cart .minus {
+    padding: 9px;
+    height: 36px;
   }
 }
 
@@ -13520,8 +13622,12 @@ hr.style-three {
 }
 
 .phone-number[href^="tel:+"]::before,
+.phone-dropdown__link[href^="tel:+"]::before,
 .phone-number[href^="tel:0"]::before,
+.phone-dropdown__link[href^="tel:0"]::before,
 .phone-number[href^="tel:38"]::before,
+.phone-dropdown__link[href^="tel:38"]::before,
+.phone-dropdown__link[href^="tel:+38"]::before,
 .phone-number[href^="tel:+38"]::before {
   content: '';
   display: inline-block;
@@ -13535,7 +13641,10 @@ hr.style-three {
 }
 
 .phone-number[href^="tel:+38063"]::before,
+.phone-dropdown__link[href^="tel:+38063"]::before,
 .phone-number[href^="tel:+38073"]::before,
+.phone-dropdown__link[href^="tel:+38073"]::before,
+.phone-dropdown__link[href^="tel:+38093"]::before,
 .phone-number[href^="tel:+38093"]::before {
   content: '';
   display: inline-block;
@@ -13549,9 +13658,13 @@ hr.style-three {
 }
 
 .phone-number[href^="tel:+38050"]::before,
+.phone-dropdown__link[href^="tel:+38050"]::before,
 .phone-number[href^="tel:+38066"]::before,
+.phone-dropdown__link[href^="tel:+38066"]::before,
 .phone-number[href^="tel:+38095"]::before,
-.phone-number[href^="tel:+38099"]::before {
+.phone-dropdown__link[href^="tel:+38095"]::before,
+.phone-number[href^="tel:+38099"]::before,
+.phone-dropdown__link[href^="tel:+38099"]::before {
   content: '';
   display: inline-block;
   vertical-align: baseline;
@@ -13564,10 +13677,15 @@ hr.style-three {
 }
 
 .phone-number[href^="tel:+38067"]::before,
+.phone-dropdown__link[href^="tel:+38067"]::before,
 .phone-number[href^="tel:+38068"]::before,
+.phone-dropdown__link[href^="tel:+38068"]::before,
 .phone-number[href^="tel:+38096"]::before,
+.phone-dropdown__link[href^="tel:+38096"]::before,
 .phone-number[href^="tel:+38097"]::before,
-.phone-number[href^="tel:+38098"]::before {
+.phone-dropdown__link[href^="tel:+38097"]::before,
+.phone-number[href^="tel:+38098"]::before,
+.phone-dropdown__link[href^="tel:+38098"]::before {
   content: '';
   display: inline-block;
   vertical-align: baseline;
@@ -13637,8 +13755,8 @@ hr.style-three {
   margin-left: 10px;
   width: 7px;
   height: 7px;
-  border-bottom: 2px solid #fff;
-  border-left: 2px solid #fff;
+  border-bottom: 2px solid #e74c3c;
+  border-left: 2px solid #e74c3c;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   -webkit-transition: .2s;
@@ -13651,11 +13769,11 @@ hr.style-three {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   position: absolute;
   padding: 15px 10px;
-  width: 80%;
+  width: 85%;
   height: auto;
-  left: -24px;
+  left: -12px;
   top: 100%;
-  z-index: 3;
+  z-index: 33;
   display: none;
 }
 
@@ -13679,7 +13797,7 @@ hr.style-three {
 }
 
 .social-item {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .social-link {
@@ -14160,7 +14278,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
   top: 0;
   right: 0;
   left: 0;
-  z-index: 33;
+  z-index: 41;
   -webkit-transition: .2s transform, .2s visibility, .3s background-color;
   transition: .2s transform, .2s visibility, .3s background-color;
   will-change: transform, visibility, background-color;
@@ -14207,6 +14325,12 @@ fieldset:disabled .woocommerce a.added_to_cart,
 
 .nav .menu, .nav .menu-container {
   font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav .menu-item {
@@ -14874,16 +14998,16 @@ body {
   max-width: 100%;
 }
 
-body.home {
-  margin-top: -80px;
-  height: calc(100% + 80px);
-}
-
 .wrapper {
   position: relative;
   overflow-x: hidden;
   min-height: 100%;
-  padding-top: 80px;
+}
+
+@media (max-width: 1199px) {
+  .wrapper {
+    padding-top: 70px;
+  }
 }
 
 b,
