@@ -233,7 +233,7 @@ if (class_exists('YIT_Plugin_Licence')) {
 function bw_breadcrumbs_localization($l10n)
 {
     return array(
-        'home' => __('Front page', 'brainworks'),
+        'home' => __('Home', 'brainworks'),
         'paged' => __('Page %d', 'brainworks'),
         '_404' => __('Error 404', 'brainworks'),
         'search' => __('Search results by query - <b>%s</b>', 'brainworks'),
