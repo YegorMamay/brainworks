@@ -40,9 +40,9 @@ add_action('init', 'bw_register_cpts_reviews');
 
 
 
-function sn_create_category()
+function bw_create_catalog()
 {
-    register_post_type('sn_catalogs', array(
+    register_post_type('catalog', array(
         'label'  => null,
         'labels' => array(
             'name'               => 'Каталог', // основное название для типа записи
@@ -74,7 +74,7 @@ function sn_create_category()
 
     register_taxonomy(
         'sn_cat',
-        'sn_catalogs', // привязываеться к произвольному типу записи
+        'catalog', // привязываеться к произвольному типу записи
         array(
             'label' => __('Категории'),
             'rewrite' => array('slug' => 'categories'), // slug по которому будет выводиться категории
@@ -83,4 +83,4 @@ function sn_create_category()
     );
 }
 
-add_action('init', 'sn_create_category');
+add_action('init', 'bw_create_catalog');

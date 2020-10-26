@@ -661,7 +661,7 @@ if (!function_exists('sn_catalog_shortcode')) {
 
         $args = array(
             'posts_per_page'        => $atts['count'],
-            'post_type'      => 'sn_catalogs',
+            'post_type'      => 'catalog',
             'tax_query' => array(
                 array(
                     'taxonomy' => 'sn_cat',
