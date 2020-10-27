@@ -39,9 +39,10 @@ function bw_register_cpts_reviews()
 add_action('init', 'bw_register_cpts_reviews');
 
 
-
 function bw_create_catalog()
 {
+	flush_rewrite_rules();
+
     register_post_type('catalog', array(
         'label'  => null,
         'labels' => array(
@@ -70,6 +71,7 @@ function bw_create_catalog()
         'has_archive'         => true, // пример archive-slug.php
         'rewrite'             => true,
         'query_var'           => true,
+	    'taxonomies'          => ['sn_cat'],
     ));
 
     register_taxonomy(
