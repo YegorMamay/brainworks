@@ -142,7 +142,7 @@ add_action( 'wp_footer', 'ts_quantity_plus_minus' );
 // To run this on the single product page (buttons plus/minus);
 function ts_quantity_plus_minus() {
 
-    if ( ! is_product() ) return;
+    if ( function_exists( 'is_product' ) && ! is_product() ) return;
     ?>
     <script type="text/javascript">
 
