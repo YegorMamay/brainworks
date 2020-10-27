@@ -650,9 +650,9 @@ if (!function_exists('bw_reviews_shortcode')) {
 
 // addes shortcode posts category
 if (!function_exists('sn_catalog_shortcode')) {
-    add_shortcode('catalog', 'show_catagories_catalog');
+    add_shortcode('catalog', 'show_categories_catalog');
 
-    function show_catagories_catalog($atts)
+    function show_categories_catalog($atts)
     {
         $atts = shortcode_atts(array(
             'id' => 1,

@@ -26,11 +26,11 @@ msgstr ""
 msgid "Developed by "
 msgstr ""
 
-#: archive-sn_catalogs.php:47 loops/content.php:45
+#: archive-catalog.php:47 loops/content.php:45
 msgid "Previous"
 msgstr ""
 
-#: archive-sn_catalogs.php:48 loops/content.php:46
+#: archive-catalog.php:48 loops/content.php:46
 msgid "Next"
 msgstr ""
 
@@ -99,7 +99,7 @@ msgstr ""
 msgid "You must be logged in to see this page!"
 msgstr ""
 
-#: single-sn_catalogs.php:20
+#: single-catalog.php:20
 msgid "Quick order"
 msgstr ""
 

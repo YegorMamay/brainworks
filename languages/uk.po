@@ -27,11 +27,11 @@ msgstr "Всі права захищені"
 msgid "Developed by "
 msgstr "Розроблено в "
 
-#: archive-sn_catalogs.php:47 loops/content.php:45
+#: archive-catalog.php:47 loops/content.php:45
 msgid "Previous"
 msgstr "Попередній"
 
-#: archive-sn_catalogs.php:48 loops/content.php:46
+#: archive-catalog.php:48 loops/content.php:46
 msgid "Next"
 msgstr "Наступний"
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "You must be logged in to see this page!"
 msgstr "Вам треба увійти, щоб побачити сторінку!"
 
-#: single-sn_catalogs.php:20
+#: single-catalog.php:20
 msgid "Quick order"
 msgstr "Замовити"
 
