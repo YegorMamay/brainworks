@@ -132,10 +132,10 @@
                             <?php if ( class_exists( 'WooCommerce' ) ) { ?>
                                 <?php echo woocommerce_cart(); ?>
                                 <?php echo woocommerce_cart_popup(); ?>
+                                <span id="modal-cart" class="cart-caption">
+                                    <?php echo woocommerce_get_total_price(); ?>
+                                </span>
                             <?php } ?>
-                            <span id="modal-cart" class="cart-caption">
-                                <?php echo woocommerce_get_total_price(); ?>
-                            </span>
                         </div>
                     </div>
                 </div>
