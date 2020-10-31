@@ -95,8 +95,8 @@ if (!class_exists('Kama_Breadcrumbs')) {
         );
         // schema.org
         elseif ($mark === 'schema.org') $mark = array(
-          'wrappatt' => '<div class="kama_breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">%s</div>',
-          'linkpatt' => '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="%s" itemprop="item"><span itemprop="name">%s</span></a></span>',
+          'wrappatt' => '<div class="kama_breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">%s</div>',
+          'linkpatt' => '<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="%1$s"><span itemprop="name">%2$s</span></a><meta itemprop="position" content="ORDERNUM" /></span>',
           'sep_after' => '',
         );
 

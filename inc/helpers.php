@@ -10,7 +10,7 @@ if (!function_exists('dump')) {
 	 */
 	function dump($expression)
 	{
-		echo '<pre style="flex-shrink: 0;">';
+		echo '<pre style="flex-shrink: 0;white-space: pre-line;">';
 		var_dump($expression);
 		echo '</pre>';
 	}

@@ -249,6 +249,20 @@ function bw_breadcrumbs_localization($l10n)
 
 add_filter('kama_breadcrumbs_default_loc', 'bw_breadcrumbs_localization', 10, 1);
 
+add_filter( 'kama_breadcrumbs', function ( $out, $sep, $loc, $arg ) {
+
+	$index = 1;
+
+	$out = preg_replace_callback( '/"ORDERNUM"/i', function ( $matches ) use ( &$index ) {
+		return '"' . $index ++ . '"';
+	}, $out );
+
+	unset( $index );
+
+	return $out;
+
+}, 10, 4 );
+
 /**
  * Show cart contents / total Ajax
  */
