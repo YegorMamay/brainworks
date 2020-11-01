@@ -145,39 +145,37 @@ function ts_quantity_plus_minus() {
     if ( function_exists( 'is_product' ) && ! is_product() ) return;
     ?>
     <script type="text/javascript">
+        window.onload = function () {
+            jQuery(document).ready(function($){
 
-        jQuery(document).ready(function($){
+                $('.cart .qty.text').attr('type', 'text');
+                $('form.cart').on( 'click', 'button.plus, button.minus', function() {
 
-            $('.cart .qty.text').attr('type', 'text');
-            $('form.cart').on( 'click', 'button.plus, button.minus', function() {
+                    var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
+                    var val = parseFloat(qty.val());
+                    var max = parseFloat(qty.attr( 'max' ));
+                    var min = parseFloat(qty.attr( 'min' ));
+                    var step = parseFloat(qty.attr( 'step' ));
 
-                var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
-                var val = parseFloat(qty.val());
-                var max = parseFloat(qty.attr( 'max' ));
-                var min = parseFloat(qty.attr( 'min' ));
-                var step = parseFloat(qty.attr( 'step' ));
-
-                if ( $( this ).is( '.plus' ) ) {
-                    if ( max && ( max <= val ) ) {
-                        qty.val( max );
+                    if ( $( this ).is( '.plus' ) ) {
+                        if ( max && ( max <= val ) ) {
+                            qty.val( max );
+                        }
+                        else {
+                            qty.val( val + step );
+                        }
                     }
                     else {
-                        qty.val( val + step );
+                        if ( min && ( min >= val ) ) {
+                            qty.val( min );
+                        }
+                        else if ( val > 1 ) {
+                            qty.val( val - step );
+                        }
                     }
-                }
-                else {
-                    if ( min && ( min >= val ) ) {
-                        qty.val( min );
-                    }
-                    else if ( val > 1 ) {
-                        qty.val( val - step );
-                    }
-                }
-
+                });
             });
-
-        });
-
+        }
     </script>
     <?php
 }

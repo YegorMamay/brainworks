@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-25 13:31+0000\n"
-"PO-Revision-Date: 2020-06-25 13:32+0000\n"
+"POT-Creation-Date: 2020-11-01 13:22+0000\n"
+"PO-Revision-Date: 2020-11-01 13:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -13,84 +13,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.4.0; wp-5.4.2"
-
-#: header.php:147
-msgid "Call back"
-msgstr "Зворотний дзвінок"
-
-#: footer.php:14
-msgid "All rights reserved"
-msgstr "Всі права захищені"
-
-#: footer.php:16
-msgid "Developed by "
-msgstr "Розроблено в "
-
-#: archive-catalog.php:47 loops/content.php:45
-msgid "Previous"
-msgstr "Попередній"
-
-#: archive-catalog.php:48 loops/content.php:46
-msgid "Next"
-msgstr "Наступний"
+"X-Loco-Version: 2.4.4; wp-5.5.3"
 
 #: searchform.php:2
 msgid "Search"
 msgstr "Пошук"
 
 #. Name of the template
-msgid "Page Without Title"
-msgstr ""
-
-#: search.php:5
-msgid "Search Results for"
-msgstr "Результат пошуку для"
-
-#. Name of the template
-msgid "Sitemap Page"
-msgstr ""
-
-#: category.php:6
-msgid "Category"
-msgstr "Категорія"
-
-#. Name of the template
-msgid "Home Page"
-msgstr "Головна сторінка"
-
-#. Name of the template
-msgid "Landing"
-msgstr ""
-
-#. Name of the template
-msgid "Thank You Page"
-msgstr ""
-
-#: page-thank-you.php:14 404.php:13
-msgid "Back to the homepage"
-msgstr "Повернутися на головну"
-
-#. Name of the template
 msgid "Page Without Breadcrumbs"
 msgstr ""
 
-#: 404.php:7
-msgid "Error"
-msgstr "Помилка"
-
-#: 404.php:8
-msgid "The page you were looking for does not exist."
-msgstr "Сторінка, яку ви шукаєте, не існує"
-
-#: 404.php:18
-msgid "Or use search"
-msgstr "Або скористайтеся пошуком"
-
 #. Name of the template
-#: inc/widgets.php:22
-msgid "Sidebar Right"
+msgid "Page Without Title"
 msgstr ""
+
+#: archive-catalog.php:45 loops/content.php:45
+msgid "Previous"
+msgstr "Попередній"
+
+#: archive-catalog.php:46 loops/content.php:46
+msgid "Next"
+msgstr "Наступний"
 
 #. Name of the template
 msgid "Only Logged In"
@@ -100,51 +43,70 @@ msgstr ""
 msgid "You must be logged in to see this page!"
 msgstr "Вам треба увійти, щоб побачити сторінку!"
 
-#: single-catalog.php:20
-msgid "Quick order"
-msgstr "Замовити"
+#: 404.php:7
+msgid "Error"
+msgstr "Помилка"
+
+#: 404.php:8
+msgid "The page you were looking for does not exist."
+msgstr "Сторінка, яку ви шукаєте, не існує"
+
+#: 404.php:13 page-thank-you.php:14
+msgid "Back to the homepage"
+msgstr "Повернутися на головну"
+
+#: 404.php:18
+msgid "Or use search"
+msgstr "Або скористайтеся пошуком"
 
 #. Name of the template
 #: inc/widgets.php:9
 msgid "Sidebar Left"
 msgstr ""
 
-#: inc/custom-post-types.php:9 inc/custom-post-types.php:14
-msgid "Reviews"
-msgstr "Відгуки"
-
-#: inc/custom-post-types.php:10
-msgid "Review"
-msgstr "Відгук"
-
-#: inc/shortcodes.php:255 inc/shortcodes.php:369 inc/LoadMorePosts.php:107
-#: loops/content.php:27
-msgid "Continue reading"
-msgstr "Читати далі"
-
-#: inc/shortcodes.php:412 inc/shortcodes.php:421 inc/shortcodes.php:444
-#: inc/helpers.php:536 inc/customizer.php:377
-msgid "Login"
-msgstr "Увійти"
-
-#: inc/shortcodes.php:416 inc/shortcodes.php:452
-msgid "Password"
+#. Name of the template
+msgid "Sitemap Page"
 msgstr ""
 
-#: inc/shortcodes.php:448
-msgid "Email"
+#. Name of the template
+msgid "Thank You Page"
 msgstr ""
 
-#: inc/shortcodes.php:456
-msgid "Retry password"
+#. Name of the template
+msgid "Landing"
 msgstr ""
 
-#: inc/shortcodes.php:461
-msgid "Register"
+#: single-catalog.php:20
+msgid "Quick order"
+msgstr "Замовити"
+
+#: search.php:5
+msgid "Search Results for"
+msgstr "Результат пошуку для"
+
+#. Name of the template
+#: inc/widgets.php:22
+msgid "Sidebar Right"
 msgstr ""
+
+#: category.php:6
+msgid "Category"
+msgstr "Категорія"
+
+#: footer.php:14
+msgid "All rights reserved"
+msgstr "Всі права захищені"
+
+#: footer.php:16
+msgid "Developed by "
+msgstr "Розроблено в "
+
+#. Name of the template
+msgid "Home Page"
+msgstr "Головна сторінка"
 
 #: inc/setup.php:236
-msgid "Front page"
+msgid "Home"
 msgstr "Головна"
 
 #: inc/setup.php:237
@@ -191,9 +153,134 @@ msgstr "Записи по мітці: <b>%s</b>"
 msgid "%1$s from \"%2$s\" by tag: <b>%3$s</b>"
 msgstr "%1$s з \"%2$s\" по тегу: <b>%3$s</b>"
 
-#: inc/setup.php:261 inc/helpers.php:561
+#: inc/setup.php:275 inc/helpers.php:606
 msgid "View your shopping cart"
 msgstr "Перейти до корзини"
+
+#: inc/LoadMorePosts.php:111 inc/shortcodes.php:255 inc/shortcodes.php:400
+#: loops/content.php:27
+msgid "Continue reading"
+msgstr "Читати далі"
+
+#: inc/LoadMorePosts.php:146
+msgid "Load more posts..."
+msgstr "Завантажити ще статті"
+
+#: inc/index-pagination.php:21
+msgid "<i class=\"fa fa-angle-left\"></i> Newer"
+msgstr "Свіжіший"
+
+#: inc/index-pagination.php:22
+msgid "Older <i class=\"fa fa-angle-right\"></i>"
+msgstr "Ранній"
+
+#: inc/shortcodes.php:450 inc/shortcodes.php:459 inc/shortcodes.php:482
+#: inc/helpers.php:581 inc/customizer.php:377
+msgid "Login"
+msgstr "Увійти"
+
+#: inc/shortcodes.php:454 inc/shortcodes.php:490
+msgid "Password"
+msgstr ""
+
+#: inc/shortcodes.php:486
+msgid "Email"
+msgstr ""
+
+#: inc/shortcodes.php:494
+msgid "Retry password"
+msgstr ""
+
+#: inc/shortcodes.php:499
+msgid "Register"
+msgstr ""
+
+#: inc/admin.php:10
+msgid "Developed by:"
+msgstr "Розробник:"
+
+#. Author URI of the theme
+#: inc/admin.php:11
+msgid "https://brainworks.com.ua"
+msgstr ""
+
+#: inc/admin.php:12
+msgid "brainworks.com.ua"
+msgstr ""
+
+#: inc/admin.php:17 inc/admin.php:85
+msgid "Running PHP version"
+msgstr ""
+
+#: inc/admin.php:22
+#, php-format
+msgid "%d request pear %s sec."
+msgstr ""
+
+#: inc/admin.php:28
+#, php-format
+msgid "Spent %d Mb of memory (including unused pages %d Mb)"
+msgstr ""
+
+#: inc/admin.php:53
+msgid "Support:"
+msgstr "Підтримка:"
+
+#: inc/admin.php:54 inc/admin.php:55
+msgid "web@brainworks.com.ua"
+msgstr ""
+
+#: inc/admin.php:60
+msgid "Tel:"
+msgstr "Тел:"
+
+#: inc/admin.php:61 inc/admin.php:62
+msgid "+38 (063) 20-37-137"
+msgstr ""
+
+#: inc/widgets.php:11 inc/widgets.php:24 inc/widgets.php:37
+msgid "The sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:35
+msgid "Review Page Sidebar"
+msgstr ""
+
+#: inc/widgets.php:49
+msgid "Woo Cart"
+msgstr ""
+
+#: inc/widgets.php:51
+msgid "Woo cart widget area"
+msgstr ""
+
+#: inc/widgets.php:62
+msgid "Footer"
+msgstr ""
+
+#: inc/widgets.php:64
+msgid "The footer widget area"
+msgstr ""
+
+#: inc/helpers.php:584
+msgid "Logout"
+msgstr "Вийти"
+
+#: inc/navbar.php:4
+msgid "Main Navigation"
+msgstr ""
+
+#: inc/navbar.php:5
+msgid "Second Menu"
+msgstr ""
+
+#: inc/navbar.php:6
+msgid "Language switcher"
+msgstr ""
+
+#: inc/login.php:21
+msgid "<strong>ERROR:</strong> The username and password is incorrect."
+msgstr "ПОМИЛКА: невірні ім'я чи пароль."
 
 #: inc/auth.php:74
 msgid "Password is incorrect!"
@@ -218,10 +305,6 @@ msgstr "Користувач з таким логіном вже існує"
 #: inc/auth.php:243
 msgid "Login or password are incorrect!"
 msgstr "Пароль або логін невірні!"
-
-#: inc/helpers.php:539
-msgid "Logout"
-msgstr "Вийти"
 
 #: inc/customizer.php:30
 msgid "Theme Options"
@@ -462,41 +545,29 @@ msgstr ""
 msgid "Phone №4"
 msgstr ""
 
-#: inc/index-pagination.php:21
-msgid "<i class=\"fa fa-angle-left\"></i> Newer"
-msgstr "Свіжіший"
-
-#: inc/index-pagination.php:22
-msgid "Older <i class=\"fa fa-angle-right\"></i>"
-msgstr "Ранній"
-
-#: inc/widgets.php:11 inc/widgets.php:24 inc/widgets.php:37
-msgid "The sidebar widget area"
+#: inc/customizer.php:825
+msgid "Sticky Header"
 msgstr ""
 
-#: inc/widgets.php:35
-msgid "Review Page Sidebar"
+#: inc/customizer.php:826
+msgid "Customizer Sticky Header"
 msgstr ""
 
-#: inc/widgets.php:49
-msgid "Woo Cart"
+#: inc/customizer.php:834
+msgid "Enable"
 msgstr ""
 
-#: inc/widgets.php:51
-msgid "Woo cart widget area"
+#: inc/customizer.php:835
+msgid "Enable/Disable sticky header js functionality"
 msgstr ""
 
-#: inc/widgets.php:62
-msgid "Footer"
+#: inc/customizer.php:842
+msgid "Auto Hide"
 msgstr ""
 
-#: inc/widgets.php:64
-msgid "The footer widget area"
+#: inc/customizer.php:843
+msgid "Enable/Disable auto hide functionality option"
 msgstr ""
-
-#: inc/login.php:21
-msgid "<strong>ERROR:</strong> The username and password is incorrect."
-msgstr "ПОМИЛКА: невірні ім'я чи пароль."
 
 #: inc/feedback.php:30
 msgid "at"
@@ -510,64 +581,24 @@ msgstr "Ваш коментар очікує на модерацію."
 msgid "Edit"
 msgstr "Редагувати"
 
-#: inc/LoadMorePosts.php:143
-msgid "Load more posts..."
-msgstr "Завантажити ще статті"
+#: inc/custom-post-types.php:9 inc/custom-post-types.php:14
+#: wp-content/themes/brainworks/inc/custom-post-types.php:9
+#: wp-content/themes/brainworks/inc/custom-post-types.php:14
+msgid "Reviews"
+msgstr "Відгуки"
 
-#: inc/navbar.php:4
-msgid "Main Navigation"
-msgstr ""
+#: inc/custom-post-types.php:10
+#: wp-content/themes/brainworks/inc/custom-post-types.php:10
+msgid "Review"
+msgstr "Відгук"
 
-#: inc/navbar.php:5
-msgid "Second Menu"
-msgstr ""
+#: loops/content-search.php:19
+msgid "Go"
+msgstr "Перейти"
 
-#: inc/navbar.php:6
-msgid "Language switcher"
-msgstr ""
-
-#: inc/admin.php:10
-msgid "Developed by:"
-msgstr "Розробник:"
-
-#. Author URI of the theme
-#: inc/admin.php:11
-msgid "https://brainworks.com.ua"
-msgstr ""
-
-#: inc/admin.php:12
-msgid "brainworks.com.ua"
-msgstr ""
-
-#: inc/admin.php:17 inc/admin.php:85
-msgid "Running PHP version"
-msgstr ""
-
-#: inc/admin.php:22
-#, php-format
-msgid "%d request pear %s sec."
-msgstr ""
-
-#: inc/admin.php:28
-#, php-format
-msgid "Spent %d Mb of memory (including unused pages %d Mb)"
-msgstr ""
-
-#: inc/admin.php:53
-msgid "Support:"
-msgstr "Підтримка:"
-
-#: inc/admin.php:54 inc/admin.php:55
-msgid "web@brainworks.com.ua"
-msgstr ""
-
-#: inc/admin.php:60
-msgid "Tel:"
-msgstr "Тел:"
-
-#: inc/admin.php:61 inc/admin.php:62
-msgid "+38 (063) 20-37-137"
-msgstr ""
+#: loops/content-search.php:29
+msgid "Sorry, your search yielded no results."
+msgstr "Ваш пошук не дав результату."
 
 #: loops/comments.php:9
 msgid "This post is password protected. Enter the password to view comments."
@@ -620,14 +651,6 @@ msgstr "Ваш коментар"
 #: loops/comments.php:88
 msgid "Submit comment"
 msgstr "Надіслати коментар"
-
-#: loops/content-search.php:19
-msgid "Go"
-msgstr "Перейти"
-
-#: loops/content-search.php:29
-msgid "Sorry, your search yielded no results."
-msgstr "Ваш пошук не дав результату."
 
 #: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:30
 #: woocommerce/single-product/add-to-cart/simple.php:48
