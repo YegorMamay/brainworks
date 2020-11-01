@@ -139,7 +139,7 @@
         _throttleScroll(function(type, scroll) {
             if (type === "down" && scroll > start) {
                 autoHideHeader.removeClass(showClass).addClass(hideClass);
-            } else if (type === "up" || type === "end" || type === "start") {
+            } else if (type === "up" || type === "start") {
                 autoHideHeader.removeClass(hideClass).addClass(showClass);
             }
             if (header.hasClass("is-transparent") && header.hasClass("is-sticky")) {
