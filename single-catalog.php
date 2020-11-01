@@ -17,7 +17,7 @@
 			<div class="vh-xs-2"></div>
 			<div class="prices"><?php the_excerpt(); ?></div>
 			<div class="vh-xs-2"></div>
-			<button class="btn btn-secondary <?php the_lang_class('one-click'); ?>"><?php _e('Quick order', 'brainworks'); ?></button>
+			<button class="btn btn-secondary one-click"><?php _e('Quick order', 'brainworks'); ?></button>
 		</div>
         <div class="col-12">
             <div class="vh-xs-2"></div>
