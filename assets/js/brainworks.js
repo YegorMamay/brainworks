@@ -25,7 +25,7 @@
         stickHeader(".js-header");
         stickFooter(".js-footer", ".js-container");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
-        buyOneClick(".one-click-ru, .one-click-uk, .one-click-en, .one-click", '[data-field-id="field11"]', "h1");
+        buyOneClick(".one-click", '[data-field-id="field11"]', "h1");
         $d.on("copy", addLink);
         $w.on("resize", function() {
             if ($w.innerWidth() >= 630) {
