@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 13:59+0000\n"
+"POT-Creation-Date: 2020-11-01 13:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,81 +14,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: header.php:147
-msgid "Call back"
-msgstr ""
-
-#: footer.php:14
-msgid "All rights reserved"
-msgstr ""
-
-#: footer.php:16
-msgid "Developed by "
-msgstr ""
-
-#: archive-catalog.php:47 loops/content.php:45
-msgid "Previous"
-msgstr ""
-
-#: archive-catalog.php:48 loops/content.php:46
-msgid "Next"
-msgstr ""
-
 #: searchform.php:2
 msgid "Search"
-msgstr ""
-
-#. Name of the template
-msgid "Page Without Title"
-msgstr ""
-
-#: search.php:5
-msgid "Search Results for"
-msgstr ""
-
-#. Name of the template
-msgid "Sitemap Page"
-msgstr ""
-
-#: category.php:6
-msgid "Category"
-msgstr ""
-
-#. Name of the template
-msgid "Home Page"
-msgstr ""
-
-#. Name of the template
-msgid "Landing"
-msgstr ""
-
-#. Name of the template
-msgid "Thank You Page"
-msgstr ""
-
-#: page-thank-you.php:14 404.php:13
-msgid "Back to the homepage"
 msgstr ""
 
 #. Name of the template
 msgid "Page Without Breadcrumbs"
 msgstr ""
 
-#: 404.php:7
-msgid "Error"
-msgstr ""
-
-#: 404.php:8
-msgid "The page you were looking for does not exist."
-msgstr ""
-
-#: 404.php:18
-msgid "Or use search"
-msgstr ""
-
 #. Name of the template
-#: inc/widgets.php:22
-msgid "Sidebar Right"
+msgid "Page Without Title"
+msgstr ""
+
+#: archive-catalog.php:45 loops/content.php:45
+msgid "Previous"
+msgstr ""
+
+#: archive-catalog.php:46 loops/content.php:46
+msgid "Next"
 msgstr ""
 
 #. Name of the template
@@ -99,8 +42,20 @@ msgstr ""
 msgid "You must be logged in to see this page!"
 msgstr ""
 
-#: single-catalog.php:20
-msgid "Quick order"
+#: 404.php:7
+msgid "Error"
+msgstr ""
+
+#: 404.php:8
+msgid "The page you were looking for does not exist."
+msgstr ""
+
+#: 404.php:13 page-thank-you.php:14
+msgid "Back to the homepage"
+msgstr ""
+
+#: 404.php:18
+msgid "Or use search"
 msgstr ""
 
 #. Name of the template
@@ -108,90 +63,222 @@ msgstr ""
 msgid "Sidebar Left"
 msgstr ""
 
-#: inc/custom-post-types.php:9 inc/custom-post-types.php:14
-msgid "Reviews"
+#. Name of the template
+msgid "Sitemap Page"
 msgstr ""
 
-#: inc/custom-post-types.php:10
-msgid "Review"
+#. Name of the template
+msgid "Thank You Page"
 msgstr ""
 
-#: inc/shortcodes.php:254 inc/shortcodes.php:368 inc/LoadMorePosts.php:107
-#: loops/content.php:27
-msgid "Continue reading"
+#. Name of the template
+msgid "Landing"
 msgstr ""
 
-#: inc/shortcodes.php:411 inc/shortcodes.php:420 inc/shortcodes.php:443
-#: inc/helpers.php:536 inc/customizer.php:377
-msgid "Login"
+#: single-catalog.php:20
+msgid "Quick order"
 msgstr ""
 
-#: inc/shortcodes.php:415 inc/shortcodes.php:451
-msgid "Password"
+#: search.php:5
+msgid "Search Results for"
 msgstr ""
 
-#: inc/shortcodes.php:447
-msgid "Email"
+#. Name of the template
+#: inc/widgets.php:22
+msgid "Sidebar Right"
 msgstr ""
 
-#: inc/shortcodes.php:455
-msgid "Retry password"
+#: category.php:6
+msgid "Category"
 msgstr ""
 
-#: inc/shortcodes.php:460
-msgid "Register"
+#: footer.php:14
+msgid "All rights reserved"
 msgstr ""
 
-#: inc/setup.php:235
-msgid "Front page"
+#: footer.php:16
+msgid "Developed by "
+msgstr ""
+
+#. Name of the template
+msgid "Home Page"
 msgstr ""
 
 #: inc/setup.php:236
+msgid "Home"
+msgstr ""
+
+#: inc/setup.php:237
 #, php-format
 msgid "Page %d"
 msgstr ""
 
-#: inc/setup.php:237
-msgid "Error 404"
-msgstr ""
-
 #: inc/setup.php:238
-#, php-format
-msgid "Search results by query - <b>%s</b>"
+msgid "Error 404"
 msgstr ""
 
 #: inc/setup.php:239
 #, php-format
-msgid "Author archve: <b>%s</b>"
+msgid "Search results by query - <b>%s</b>"
 msgstr ""
 
 #: inc/setup.php:240
 #, php-format
-msgid "Archive by <b>%d</b> year"
+msgid "Author archve: <b>%s</b>"
 msgstr ""
 
 #: inc/setup.php:241
 #, php-format
-msgid "Archive by: <b>%s</b>"
+msgid "Archive by <b>%d</b> year"
 msgstr ""
 
-#: inc/setup.php:243
+#: inc/setup.php:242
 #, php-format
-msgid "Media: %s"
+msgid "Archive by: <b>%s</b>"
 msgstr ""
 
 #: inc/setup.php:244
 #, php-format
-msgid "Posts by tag: <b>%s</b>"
+msgid "Media: %s"
 msgstr ""
 
 #: inc/setup.php:245
 #, php-format
+msgid "Posts by tag: <b>%s</b>"
+msgstr ""
+
+#: inc/setup.php:246
+#, php-format
 msgid "%1$s from \"%2$s\" by tag: <b>%3$s</b>"
 msgstr ""
 
-#: inc/setup.php:260 inc/helpers.php:561
+#: inc/setup.php:275 inc/helpers.php:606
 msgid "View your shopping cart"
+msgstr ""
+
+#: inc/LoadMorePosts.php:111 inc/shortcodes.php:255 inc/shortcodes.php:400
+#: loops/content.php:27
+msgid "Continue reading"
+msgstr ""
+
+#: inc/LoadMorePosts.php:146
+msgid "Load more posts..."
+msgstr ""
+
+#: inc/index-pagination.php:21
+msgid "<i class=\"fa fa-angle-left\"></i> Newer"
+msgstr ""
+
+#: inc/index-pagination.php:22
+msgid "Older <i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: inc/shortcodes.php:450 inc/shortcodes.php:459 inc/shortcodes.php:482
+#: inc/helpers.php:581 inc/customizer.php:377
+msgid "Login"
+msgstr ""
+
+#: inc/shortcodes.php:454 inc/shortcodes.php:490
+msgid "Password"
+msgstr ""
+
+#: inc/shortcodes.php:486
+msgid "Email"
+msgstr ""
+
+#: inc/shortcodes.php:494
+msgid "Retry password"
+msgstr ""
+
+#: inc/shortcodes.php:499
+msgid "Register"
+msgstr ""
+
+#: inc/admin.php:10
+msgid "Developed by:"
+msgstr ""
+
+#. Author URI of the theme
+#: inc/admin.php:11
+msgid "https://brainworks.com.ua"
+msgstr ""
+
+#: inc/admin.php:12
+msgid "brainworks.com.ua"
+msgstr ""
+
+#: inc/admin.php:17 inc/admin.php:85
+msgid "Running PHP version"
+msgstr ""
+
+#: inc/admin.php:22
+#, php-format
+msgid "%d request pear %s sec."
+msgstr ""
+
+#: inc/admin.php:28
+#, php-format
+msgid "Spent %d Mb of memory (including unused pages %d Mb)"
+msgstr ""
+
+#: inc/admin.php:53
+msgid "Support:"
+msgstr ""
+
+#: inc/admin.php:54 inc/admin.php:55
+msgid "web@brainworks.com.ua"
+msgstr ""
+
+#: inc/admin.php:60
+msgid "Tel:"
+msgstr ""
+
+#: inc/admin.php:61 inc/admin.php:62
+msgid "+38 (063) 20-37-137"
+msgstr ""
+
+#: inc/widgets.php:11 inc/widgets.php:24 inc/widgets.php:37
+msgid "The sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:35
+msgid "Review Page Sidebar"
+msgstr ""
+
+#: inc/widgets.php:49
+msgid "Woo Cart"
+msgstr ""
+
+#: inc/widgets.php:51
+msgid "Woo cart widget area"
+msgstr ""
+
+#: inc/widgets.php:62
+msgid "Footer"
+msgstr ""
+
+#: inc/widgets.php:64
+msgid "The footer widget area"
+msgstr ""
+
+#: inc/helpers.php:584
+msgid "Logout"
+msgstr ""
+
+#: inc/navbar.php:4
+msgid "Main Navigation"
+msgstr ""
+
+#: inc/navbar.php:5
+msgid "Second Menu"
+msgstr ""
+
+#: inc/navbar.php:6
+msgid "Language switcher"
+msgstr ""
+
+#: inc/login.php:21
+msgid "<strong>ERROR:</strong> The username and password is incorrect."
 msgstr ""
 
 #: inc/auth.php:74
@@ -216,10 +303,6 @@ msgstr ""
 
 #: inc/auth.php:243
 msgid "Login or password are incorrect!"
-msgstr ""
-
-#: inc/helpers.php:539
-msgid "Logout"
 msgstr ""
 
 #: inc/customizer.php:30
@@ -461,40 +544,28 @@ msgstr ""
 msgid "Phone №4"
 msgstr ""
 
-#: inc/index-pagination.php:21
-msgid "<i class=\"fa fa-angle-left\"></i> Newer"
+#: inc/customizer.php:825
+msgid "Sticky Header"
 msgstr ""
 
-#: inc/index-pagination.php:22
-msgid "Older <i class=\"fa fa-angle-right\"></i>"
+#: inc/customizer.php:826
+msgid "Customizer Sticky Header"
 msgstr ""
 
-#: inc/widgets.php:11 inc/widgets.php:24 inc/widgets.php:37
-msgid "The sidebar widget area"
+#: inc/customizer.php:834
+msgid "Enable"
 msgstr ""
 
-#: inc/widgets.php:35
-msgid "Review Page Sidebar"
+#: inc/customizer.php:835
+msgid "Enable/Disable sticky header js functionality"
 msgstr ""
 
-#: inc/widgets.php:49
-msgid "Woo Cart"
+#: inc/customizer.php:842
+msgid "Auto Hide"
 msgstr ""
 
-#: inc/widgets.php:51
-msgid "Woo cart widget area"
-msgstr ""
-
-#: inc/widgets.php:62
-msgid "Footer"
-msgstr ""
-
-#: inc/widgets.php:64
-msgid "The footer widget area"
-msgstr ""
-
-#: inc/login.php:21
-msgid "<strong>ERROR:</strong> The username and password is incorrect."
+#: inc/customizer.php:843
+msgid "Enable/Disable auto hide functionality option"
 msgstr ""
 
 #: inc/feedback.php:30
@@ -509,62 +580,23 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/LoadMorePosts.php:143
-msgid "Load more posts..."
+#: inc/custom-post-types.php:9 inc/custom-post-types.php:14
+#: wp-content/themes/brainworks/inc/custom-post-types.php:9
+#: wp-content/themes/brainworks/inc/custom-post-types.php:14
+msgid "Reviews"
 msgstr ""
 
-#: inc/navbar.php:4
-msgid "Main Navigation"
+#: inc/custom-post-types.php:10
+#: wp-content/themes/brainworks/inc/custom-post-types.php:10
+msgid "Review"
 msgstr ""
 
-#: inc/navbar.php:5
-msgid "Second Menu"
+#: loops/content-search.php:19
+msgid "Go"
 msgstr ""
 
-#: inc/navbar.php:6
-msgid "Language switcher"
-msgstr ""
-
-#: inc/admin.php:10
-msgid "Developed by:"
-msgstr ""
-
-#: inc/admin.php:11
-msgid "https://brainworks.com.ua"
-msgstr ""
-
-#: inc/admin.php:12
-msgid "brainworks.com.ua"
-msgstr ""
-
-#: inc/admin.php:17 inc/admin.php:85
-msgid "Running PHP version"
-msgstr ""
-
-#: inc/admin.php:22
-#, php-format
-msgid "%d request pear %s sec."
-msgstr ""
-
-#: inc/admin.php:28
-#, php-format
-msgid "Spent %d Mb of memory (including unused pages %d Mb)"
-msgstr ""
-
-#: inc/admin.php:53
-msgid "Support:"
-msgstr ""
-
-#: inc/admin.php:54 inc/admin.php:55
-msgid "web@brainworks.com.ua"
-msgstr ""
-
-#: inc/admin.php:60
-msgid "Tel:"
-msgstr ""
-
-#: inc/admin.php:61 inc/admin.php:62
-msgid "+38 (063) 20-37-137"
+#: loops/content-search.php:29
+msgid "Sorry, your search yielded no results."
 msgstr ""
 
 #: loops/comments.php:9
@@ -617,10 +649,6 @@ msgstr ""
 
 #: loops/comments.php:88
 msgid "Submit comment"
-msgstr ""
-
-#: loops/content-search.php:21
-msgid "Sorry, your search yielded no results."
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:30
