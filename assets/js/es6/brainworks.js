@@ -725,9 +725,16 @@
      * @returns {void}
      */
     const addLightBoxHandlerForImage = (sliderContainer) => {
-        $(window).on('load', () => {
-            const slider = $(sliderContainer);
 
+        const slider = $(sliderContainer);
+        const verticalSlider = $('#wpgis-gallery');
+
+        if (verticalSlider.children().length <= 1 && typeof $.fn.slick === 'function') {
+            $(this).hide();
+            $(sliderContainer).css({'width': '100%'});
+        }
+
+        $(window).on('load', () => {
             if (slider.length) {
                 slider.find('img').each((index, element) => {
                     const el = $(element);

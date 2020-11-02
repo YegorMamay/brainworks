@@ -721,15 +721,22 @@ function cat_and_child_id( $atts ) {
             $cat_id = $cat;
             $cat_url = get_category_link( $cat_id );
             $cat_name = get_cat_name( $cat_id );
+            $term_id = $cat_id;
+            $image_id = get_term_meta( $term_id, '_thumbnail_id', true);
+            $image_url =  wp_get_attachment_image_url( $image_id, 'large' );
 
             if ( $categories ) {
                 foreach ( $categories as $term ) {
                     $term_cat_id = $term->term_id;
                     $term_cat_name = $term->name;
-                    $term_photo = get_field( 'cat_img', $term );
 
                     if ( $term_cat_id == $cat_id ) {
-                        $html .= sprintf( '<div class="list-cat__item col-12 col-md-4 col-lg-4"><a href="%s" class="list-cat__link"><img src="%s" class="list-cat__img" alt="image"><div class="list-cat__title h4">%s</div></a></div>', $cat_url, $term_photo[ 'url' ], $term_cat_name );
+                        if(!empty($image_url)) {
+                            $image_url =  wp_get_attachment_image_url( $image_id, 'large' );
+                        } else {
+                            $image_url = get_parent_theme_file_uri('assets/img/placeholder.jpg');
+                        }
+                        $html .= sprintf( '<div class="list-cat__item col-12 col-md-4 col-lg-4"><a href="%s" class="list-cat__link"><img src="%s" class="list-cat__img" alt="image"><div class="list-cat__title h4">%s</div></a></div>', $cat_url, $image_url, $term_cat_name );
                     }
                 }
             }

@@ -1,5 +1,7 @@
 "use strict";
 
+var _this = void 0;
+
 (function(w, d, $, ajax) {
     $(function() {
         console.log("%cThe website developed by BRAIN WORKS — https://brainworks.pro/", "color: blue");
@@ -373,8 +375,15 @@
         });
     };
     var addLightBoxHandlerForImage = function addLightBoxHandlerForImage(sliderContainer) {
+        var slider = $(sliderContainer);
+        var verticalSlider = $("#wpgis-gallery");
+        if (verticalSlider.children().length <= 1 && typeof $.fn.slick === "function") {
+            $(_this).hide();
+            $(sliderContainer).css({
+                width: "100%"
+            });
+        }
         $(window).on("load", function() {
-            var slider = $(sliderContainer);
             if (slider.length) {
                 slider.find("img").each(function(index, element) {
                     var el = $(element);
