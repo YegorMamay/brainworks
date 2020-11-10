@@ -104,7 +104,10 @@ body {
     min-width: 320px;
     position: relative;
     color: $bodyFontColor;
-    font: 400 16px/1.5 $fontFamilyTwo;
+    font-family: $fontFamilyTwo;
+    font-weight: $font-weight-size;
+    font-size: $font-min-size;
+    line-height: $font-line-height;
     background-color: $bodyBgColor;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

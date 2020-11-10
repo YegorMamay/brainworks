@@ -1,152 +1,133 @@
-$fonts_mobile: 0.7;
-$fonts_tablet: 0.8;
-$fonts_laptop: 0.85;
-$fonts_desktop: 1;
-$fonts_screen: 1; //Имеет смысл увеличивать значение, если контент страници на всю ширену экрана 
+// Calculate font metrics.
+// example from Google Fonts, font-family: Open Sans;
+// use https://grtcalculator.com/
+// font-size 14px line-height: 24px our font metrics 1.714 set value to variable ($font-metrics-size)
+//
+$font-metrics-size: 1.714 !default;
+$font-min-size: 14px !default;
+$font-weight-size: 400 !default;
+$elements-space: true !default;
+$space-value: 10px;
+$tablet-font-size: $font-min-size + 1;
+$laptop-font-size: $font-min-size + 2;
+$desktop-font-size: $font-min-size + 3;
+$font-line-height: $font-min-size * $font-metrics-size;
 
-$menu_tablet: 0.7;
-$menu_laptop: 0.8;
-$menu_desktop: 1;
+$media-queries: (
+        mobile (
+                "(min-width: 300px)"
+        ),
+        tablet (
+                "(min-width: 768px)"
+        ),
+        laptop (
+                "(min-width: 1024px)"
+        ),
+        desktop (
+                "(min-width: 1200px)"
+        )
+);
 
-$p_mobile: 0.8;
+$elements-list: (
+        body, html, a,
+        p, span, em,
+        small, strong, sub,
+        sup, blockquote, cite,
+        pre, ol, ul,
+        li, div, article
+);
 
-$p_size: 18px;
-$ul_size: 18px;
-$menu_size: 18px;
+@mixin media-font-style($font-size, $font-metric) {
+  color: inherit;
+  text-decoration: none;
+  font-size: $font-size;
+  line-height: floor($font-size * $font-metric);
+}
 
-$p_line-height: 22px;
-$ul_line-height: 22px;
-$menu_line-height: 22px;
+@mixin elements-space($type: margin, $direction: all, $value: null) {
+  @if $type == padding {
+    @if $direction == all {
+      padding: $value
+    } @else if $direction == top {
+      padding-top: $value
+    } @else if $direction == left {
+      padding-left: $value
+    } @else if $direction == right {
+      padding-right: $value
+    } @else {
+      padding-bottom: $value
+    }
+  } @else {
+    @if $direction == all {
+      margin: $value;
+    } @else if $direction == top {
+      margin-top: $value
+    } @else if $direction == left {
+      margin-left: $value
+    } @else if $direction == right {
+      margin-right: $value
+    } @else {
+      margin-bottom: $value
+    }
+  }
+}
 
-h1, h2, h3, h4, h5, h6, h1.hero-title {
-    color: $titleFontColor;
-    font-family: $fontFamilyOne;
-    line-height: 1.2;
-    font-weight: 700;
+@mixin media-font-queries() {
 
-    a {
-        color: $titleFontColor;
+  @each $key, $breakpoints in $media-queries {
 
-        &:hover {
-            color: $titleFontColorActive;
+    @media #{$breakpoints} {
+
+      @if ($key == mobile) {
+        @if ($elements-space) {
+          h1 {
+            @include elements-space(margin, bottom, $space-value + 5);
+          }
+          h2 {
+            @include elements-space(margin, bottom, $space-value + 2);
+          }
+          h3 {
+            @include elements-space(margin, bottom, $space-value + 2);
+          }
+          h4, h5, h6, p {
+            @include elements-space(margin, bottom, $space-value);
+          }
         }
+        #{$elements-list} {
+          @include media-font-style($font-min-size, $font-metrics-size);
+        }
+      } @else if ($key == tablet) {
+        #{$elements-list} {
+          @include media-font-style($tablet-font-size, $font-metrics-size);
+        }
+      } @else if ($key == laptop) {
+        #{$elements-list} {
+          @include media-font-style($laptop-font-size, $font-metrics-size);
+        }
+      } @else if ($key == desktop) {
+        @if ($elements-space) {
+          h1 {
+            @include elements-space(margin, bottom, $space-value + 8);
+          }
+          h2 {
+            @include elements-space(margin, bottom, $space-value + 6);
+          }
+          h3 {
+            @include elements-space(margin, bottom, $space-value + 5);
+          }
+          h4, h5, h6, p {
+            @include elements-space(margin, bottom, $space-value + 4);
+          }
+        }
+        #{$elements-list} {
+          @include media-font-style($desktop-font-size, $font-metrics-size);
+        }
+      }
     }
+
+  }
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    color: $titleFontColor;
-    font-family: $fontFamilyOne;
-    line-height: 1.2;
-    font-weight: 700;
-}
-
-h1.hero-title {
-    font-weight: 600;
-}
-
-i.button-style {
-    padding: 3px 8px;
-}
-
-a {
-    text-decoration: none;
-    color: $linkFontColor;
-    @extend %smooth_animation;
-
-    &:hover,
-    &:active,
-    &:focus {
-        text-decoration: none;
-        color: $linkFontColorActive;
-    }
-}
-
-@media #{$mobile-max} {
-    p {
-        font-size: $p_mobile * $p_size;
-        line-height: $p_mobile * $p_line-height;
-    }
-
-    ul li,
-    ol li {
-        font-size: $fonts_mobile * $ul_size;
-        line-height: $fonts_mobile * $menu_line-height;
-    }
-
-    li a {
-        font-size: $fonts_mobile * $menu_size;
-        line-height: $fonts_mobile * $menu_line-height;
-    }
-}
-
-@media #{$tablet-max} {
-    p {
-        font-size: $fonts_tablet * $p_size;
-        line-height: $fonts_tablet * $p_line-height;
-    }
-
-    ul li,
-    ol li {
-        font-size: $fonts_tablet * $ul_size;
-        line-height: $fonts_tablet * $ul_line-height;
-    }
-
-    li a {
-        font-size: $menu_tablet * $menu_size;
-        line-height: $menu_tablet * $menu_line-height;
-    }
-}
-
-@media #{$laptop-max} {
-    p {
-        font-size: $fonts_laptop * $p_size;
-        line-height: $fonts_laptop * $p_line-height;
-    }
-
-    ul li,
-    ol li {
-        font-size: $fonts_laptop * $ul_size;
-        line-height: $fonts_laptop * $ul_line-height;
-    }
-
-    li a {
-        font-size: $menu_laptop * $menu_size;
-        line-height: $menu_laptop * $menu_line-height;
-    }
-}
-
-@media #{$desktop-max} {
-    p {
-        font-size: $fonts_desktop * $p_size;
-        line-height: $fonts_desktop * $p_line-height;
-    }
-
-    ul li,
-    ol li {
-        font-size: $fonts_desktop * $ul_size;
-        line-height: $fonts_desktop * $ul_line-height;
-    }
-
-    li a {
-        font-size: $menu_desktop * $menu_size;
-        line-height: $menu_desktop * $menu_line-height;
-    }
-}
-
-@media #{$screen-max} {
-    p {
-        font-size: $fonts_screen * $p_size;
-        line-height: $fonts_screen * $p_line-height;
-    }
-
-    ul li,
-    ol li {
-        font-size: $fonts_screen * $ul_size;
-        line-height: $fonts_screen * $ul_line-height;
-    }
-
-    li a {
-        font-size: $fonts_screen * $menu_size;
-        line-height: $fonts_screen * $menu_line-height;
-    }
+@if (mixin_exists('media-font-queries')) {
+  @include media-font-queries();
 }
