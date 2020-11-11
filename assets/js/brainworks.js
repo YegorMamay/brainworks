@@ -377,7 +377,7 @@ var _this = void 0;
     var addLightBoxHandlerForImage = function addLightBoxHandlerForImage(sliderContainer) {
         var slider = $(sliderContainer);
         var verticalSlider = $("#wpgis-gallery");
-        if (verticalSlider.children().length <= 1 && typeof $.fn.slick === "function") {
+        if (verticalSlider.find(".slick-slide").length < 5 && typeof $.fn.slick === "function") {
             $(_this).hide();
             $(sliderContainer).css({
                 width: "100%"
