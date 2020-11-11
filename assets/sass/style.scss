@@ -160,6 +160,10 @@ img {
     padding: 10px 0;
     font-size: 14px;
     margin-bottom: 10px;
+    & span, a {
+        font-size: 14px;
+        line-height: normal;
+    }
 }
 
 .page-name, .page-title {

@@ -12481,6 +12481,11 @@ ol.commentlist .comment-body {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.js-ajax-posts .row h3 a {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .review-item {
   margin-bottom: 30px;
 }
@@ -12625,6 +12630,11 @@ ol.commentlist .comment-body {
 
 .catalog-shortcode-item h6, .catalog-item h6 {
   padding: 15px;
+}
+
+.catalog-shortcode-item h6 a, .catalog-item h6 a {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .list-cat__item a {
@@ -13783,6 +13793,7 @@ hr.style-three {
 }
 
 .phone-dropdown__list .phone-dropdown__link {
+  color: #000;
   display: block;
   width: 100%;
   text-align: center;
@@ -15197,6 +15208,11 @@ img {
   padding: 10px 0;
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+.kama_breadcrumbs span, .kama_breadcrumbs a {
+  font-size: 14px;
+  line-height: normal;
 }
 
 .page-name, .page-title {

@@ -9,6 +9,11 @@
     
     h6 {
         padding: 15px;
+
+        & a {
+            font-size: inherit;
+            line-height: inherit;
+        }
     }
 }
 
