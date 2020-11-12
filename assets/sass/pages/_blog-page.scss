@@ -19,6 +19,10 @@
 
   &-headline {
     margin-bottom: 10px;
+    & a {
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   &-preview {

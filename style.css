@@ -12451,6 +12451,11 @@ ol.commentlist .comment-body {
   margin-bottom: 10px;
 }
 
+.front-news-headline a {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .front-news-preview {
   margin-bottom: 10px;
 }
