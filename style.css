@@ -10002,6 +10002,10 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
   font-weight: bold;
 }
 
+.woocommerce a.added_to_cart {
+  width: 100%;
+}
+
 .woocommerce #respond input#submit.loading::after {
   top: 19px;
 }

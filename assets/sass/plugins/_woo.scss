@@ -55,6 +55,7 @@
 .woocommerce {
   a.added_to_cart {
     @extend %btn-outline-primary;
+    width: 100%;
   }
 
   #respond {
