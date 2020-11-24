@@ -7,21 +7,26 @@
                             <div class="vh-xs-3 vh-sm-0"></div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
-                                <div class="vh-xs-1"></div>
-                                <p><?php the_excerpt(); ?></p>
-                                <?php /*
-                        <h5>
-                          <em>
-                            <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?>,</span>
-                            <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php echo get_option( 'date_format' ) ?></time>
-                          </em>
-                        </h5>
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+                                  
+                            <h5>
+                              <em>
+                                <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?>,</span>
+                                <time  class="text-muted" datetime="<?php the_time('j F Y')?>"><?php the_time('j F Y')?></time>
+                              </em>
+                            </h5>
+                               
+                            <div class="vh-xs-1"></div>
+                                
+                            <p><?php the_excerpt(); ?></p>
+                            
+                            <div class="vh-xs-1"></div>
+                        
                         <p class="text-muted">
-                            <i class="fa fa-folder-open-o"></i>&nbsp; <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?><br/>
-                            <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
+                            <i class="fal fa-folder-open"></i> <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?><br/>
+                            <?php /*<i class="fal fa-comments"></i> <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>*/ ?>
                         </p>
-                    */ ?>
+
                             <div class="vh-xs-2"></div>
                             <a class="btn btn-secondary btn-sm"
                                href="<?php echo get_permalink(); ?>"><?php _e('Continue reading', 'brainworks') ?> <i

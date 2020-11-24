@@ -12,6 +12,15 @@
   &-inner {
     padding: 15px;
   }
+    
+  &-meta {
+    display: flex;
+    justify-content: space-between;    
+  }
+    
+  &-btn {
+    display: none;
+  }
 
   &-item {
     margin-bottom: 20px;

@@ -371,7 +371,7 @@ if (!function_exists('bw_advert_shortcode')) {
 
                 if ($atts['display_category']) {
                     $category = sprintf(
-                        '<div class="%s-category">%s</div>',
+                        '<div class="%s-category">#%s</div>',
                         $basic_class,
                         get_the_category_list(',')
                     );
@@ -394,7 +394,9 @@ if (!function_exists('bw_advert_shortcode')) {
                 $excerpt = sprintf('<div class="%s-excerpt">%s</div>', $basic_class, get_the_excerpt());
 
                 $btn = sprintf(
-                    '<div class="text-right"><a class="btn btn-secondary btn-sm %s-link" href="%s">%s</a></div>',
+                    '<div class="front-news-btn">
+                        <a class="btn btn-secondary btn-sm %s-link" href="%s">%s</a>
+                    </div>',
                     $basic_class,
                     get_the_permalink(),
                     __('Continue reading', 'brainworks')
