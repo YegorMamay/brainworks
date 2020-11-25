@@ -3,31 +3,34 @@
         <?php while (have_posts()): the_post(); ?>
                     <article id="post_<?php the_ID() ?>" class="row">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                            <?php the_post_thumbnail('large'); ?>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
                             <div class="vh-xs-3 vh-sm-0"></div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                           
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+                                 
+                            <div class="vh-xs-1"></div>
                                   
-                            <h5>
-                              <em>
-                                <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?>,</span>
-                                <time  class="text-muted" datetime="<?php the_time('j F Y')?>"><?php the_time('j F Y')?></time>
-                              </em>
-                            </h5>
+                            <span class="text-muted text-italic bold">
+                                <?php _e('By', 'brainworks'); echo " ";
+                                the_author_meta(first_name); echo " ";
+                                the_author_meta(last_name); ?>, 
+                                <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?>
+                            </span>
                                
                             <div class="vh-xs-1"></div>
                                 
                             <p><?php the_excerpt(); ?></p>
                             
                             <div class="vh-xs-1"></div>
-                        
-                        <p class="text-muted">
-                            <i class="fal fa-folder-open"></i> <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?><br/>
-                            <?php /*<i class="fal fa-comments"></i> <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>*/ ?>
-                        </p>
+                            
+                            <time  class="text-muted text-italic bold" datetime="<?php the_time('j F Y')?>">
+                                <?php the_time('j F Y')?>
+                            </time>
 
                             <div class="vh-xs-2"></div>
+                            
                             <a class="btn btn-secondary btn-sm"
                                href="<?php echo get_permalink(); ?>"><?php _e('Continue reading', 'brainworks') ?> <i
                                         class="glyphicon glyphicon-arrow-right"></i></a>

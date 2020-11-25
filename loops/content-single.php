@@ -25,9 +25,19 @@
             <?php wp_link_pages(); ?>
         </section>
     </article>
+    
     <div class="vh-xs-2"></div>
+    
     <hr>
+    
+    <span class="text-muted text-italic bold">
+        <?php _e('By', 'brainworks'); echo " "; the_author_meta(first_name); echo " "; the_author_meta(last_name); ?>, 
+        <?php _e('Category', 'brainworks'); ?>: <?php the_category(', '); ?>, 
+        <?php the_time('j F Y') ?>
+    </span>
+    
     <div class="vh-xs-2"></div>
+    
     <?php comments_template('/loops/comments.php'); ?>
 <?php endwhile; ?>
 
