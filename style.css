@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 28.10.20
+Version: 23.11.20
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
@@ -163,7 +163,7 @@ select {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 10px;
   font-size: 16px;
 }
 
@@ -204,7 +204,7 @@ select {
   [type='time'],
   textarea,
   select {
-    padding: 13px;
+    padding: 11px;
     font-size: 14px;
   }
 }
@@ -225,7 +225,7 @@ select {
   [type='time'],
   textarea,
   select {
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
   }
 }
@@ -10158,7 +10158,7 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 10px;
   font-size: 16px;
   width: 48%;
 }
@@ -10172,14 +10172,14 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
 
 @media (max-width: 767px) {
   .woocommerce input#coupon_code {
-    padding: 13px;
+    padding: 11px;
     font-size: 14px;
   }
 }
 
 @media (max-width: 574px) {
   .woocommerce input#coupon_code {
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
   }
 }
@@ -10547,10 +10547,11 @@ a.wpgis-popup, a.wpgis-popup:hover {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 8px;
   font-size: 16px;
   float: left;
   width: 40px;
+  cursor: pointer;
 }
 
 #top .cart .plus {
@@ -10559,11 +10560,12 @@ a.wpgis-popup, a.wpgis-popup:hover {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 8px;
   font-size: 16px;
   float: left;
   width: 40px;
   margin-right: 4px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1023px) {
@@ -10579,23 +10581,23 @@ a.wpgis-popup, a.wpgis-popup:hover {
 
 @media screen and (max-width: 767px) {
   #top .cart .plus {
-    padding: 13px;
-    height: 44px;
+    padding: 12px;
+    height: 40px;
   }
   #top .cart .minus {
-    padding: 13px;
-    height: 44px;
+    padding: 12px;
+    height: 40px;
   }
 }
 
 @media screen and (max-width: 574px) {
   #top .cart .plus {
     padding: 9px;
-    height: 36px;
+    height: 40px;
   }
   #top .cart .minus {
     padding: 9px;
-    height: 36px;
+    height: 40px;
   }
 }
 
@@ -10673,12 +10675,12 @@ caption {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #000;
 }
 
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #000;
 }
 
 .table > caption + thead > tr:first-child > th,
@@ -10691,7 +10693,7 @@ caption {
 }
 
 .table > tbody + tbody {
-  border-top: 2px solid #fff;
+  border-top: 2px solid #000;
 }
 
 .table .table {
@@ -10708,7 +10710,7 @@ caption {
 }
 
 .table-bordered {
-  border: 1px solid #fff;
+  border: 1px solid #000;
 }
 
 .table-bordered > thead > tr > th,
@@ -10717,7 +10719,7 @@ caption {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #fff;
+  border: 1px solid #000;
 }
 
 .table-bordered > thead > tr > th,
@@ -10763,7 +10765,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #fff;
+    border: 1px solid #000;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -10844,7 +10846,7 @@ select {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 10px;
   font-size: 16px;
 }
 
@@ -10885,7 +10887,7 @@ select {
   [type='time'],
   textarea,
   select {
-    padding: 13px;
+    padding: 11px;
     font-size: 14px;
   }
 }
@@ -10906,7 +10908,7 @@ select {
   [type='time'],
   textarea,
   select {
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
   }
 }
@@ -11502,7 +11504,7 @@ select {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 10px;
   font-size: 16px;
 }
 
@@ -11543,7 +11545,7 @@ select {
   [type='time'],
   textarea,
   select {
-    padding: 13px;
+    padding: 11px;
     font-size: 14px;
   }
 }
@@ -11564,7 +11566,7 @@ select {
   [type='time'],
   textarea,
   select {
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
   }
 }
@@ -12447,6 +12449,19 @@ ol.commentlist .comment-body {
   padding: 15px;
 }
 
+.front-news-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.front-news-btn {
+  display: none;
+}
+
 .front-news-item {
   margin-bottom: 20px;
 }
@@ -12664,18 +12679,6 @@ ol.commentlist .comment-body {
 }
 
 @media (min-width: 300px) {
-  h1 {
-    margin-bottom: 15px;
-  }
-  h2 {
-    margin-bottom: 12px;
-  }
-  h3 {
-    margin-bottom: 12px;
-  }
-  h4, h5, h6, p {
-    margin-bottom: 10px;
-  }
   body, html, a, p, span, em, small, strong, sub, sup, blockquote, cite, pre, ol, ul, li, div, article {
     color: inherit;
     text-decoration: none;
@@ -12703,18 +12706,6 @@ ol.commentlist .comment-body {
 }
 
 @media (min-width: 1200px) {
-  h1 {
-    margin-bottom: 18px;
-  }
-  h2 {
-    margin-bottom: 16px;
-  }
-  h3 {
-    margin-bottom: 15px;
-  }
-  h4, h5, h6, p {
-    margin-bottom: 14px;
-  }
   body, html, a, p, span, em, small, strong, sub, sup, blockquote, cite, pre, ol, ul, li, div, article {
     color: inherit;
     text-decoration: none;
@@ -13023,7 +13014,7 @@ form fieldset {
 }
 
 form fieldset label {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 form fieldset input {
@@ -13170,7 +13161,7 @@ tbody > tr:first-child th {
 }
 
 table, thead, tfoot, tbody, tr, th, td {
-  border: 1px solid #fff;
+  border: 1px solid #000;
   padding: 13px;
 }
 
@@ -13896,9 +13887,9 @@ hr.style-three {
       -ms-user-select: none;
           user-select: none;
   border: 1px solid transparent;
-  padding: 12px 50px;
+  padding: 12px 35px;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   border-radius: 0px;
   -webkit-transition: all 0.4s;
@@ -14276,15 +14267,15 @@ fieldset:disabled .woocommerce a.added_to_cart,
 }
 
 .btn-lg {
-  padding: 14px 65px;
-  font-size: 22.5px;
+  padding: 14px 45px;
+  font-size: 20px;
   line-height: 1.25;
   border-radius: 0px;
 }
 
 .btn-sm {
-  padding: 9px 30px;
-  font-size: 15.75px;
+  padding: 10px 30px;
+  font-size: 14px;
   line-height: 1.15;
   border-radius: 0px;
 }
@@ -14310,16 +14301,16 @@ fieldset:disabled .woocommerce a.added_to_cart,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
   .woocommerce input.button.alt, .woocommerce a.added_to_cart {
-    padding: 11px 30px;
-    font-size: 15px;
+    padding: 12px 25px;
+    font-size: 16px;
   }
   .btn-sm {
     padding: 8px 20px;
-    font-size: 13px;
+    font-size: 14px;
   }
   .btn-lg {
     padding: 13px 55px;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -14329,16 +14320,16 @@ fieldset:disabled .woocommerce a.added_to_cart,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
   .woocommerce input.button.alt, .woocommerce a.added_to_cart {
-    padding: 10px 30px;
-    font-size: 14px;
+    padding: 10px 25px;
+    font-size: 15px;
   }
   .btn-sm {
-    padding: 7px 16px;
-    font-size: 12px;
+    padding: 10px 15px;
+    font-size: 14px;
   }
   .btn-lg {
-    padding: 12px 50px;
-    font-size: 16px;
+    padding: 14px 40px;
+    font-size: 15px;
   }
 }
 
@@ -14348,15 +14339,15 @@ fieldset:disabled .woocommerce a.added_to_cart,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
   .woocommerce input.button.alt, .woocommerce a.added_to_cart {
-    padding: 8px 30px;
-    font-size: 12px;
+    padding: 10px 20px;
+    font-size: 14px;
   }
   .btn-sm {
-    padding: 6px 14px;
-    font-size: 12px;
+    padding: 8px 15px;
+    font-size: 14px;
   }
   .btn-lg {
-    padding: 10px 40px;
+    padding: 12px 30px;
     font-size: 14px;
   }
 }

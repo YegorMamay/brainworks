@@ -636,10 +636,11 @@ a.wpgis-popup, a.wpgis-popup:hover {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 8px;
   font-size: 16px;
   float: left;
   width: 40px;
+  cursor: pointer;
 }
 
 #top .cart .plus {
@@ -648,11 +649,12 @@ a.wpgis-popup, a.wpgis-popup:hover {
   background-color: #fff;
   color: #000;
   border-radius: 0;
-  padding: 15px 8px;
+  padding: 12.5px 8px;
   font-size: 16px;
   float: left;
   width: 40px;
   margin-right: 4px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1023px) {
@@ -669,24 +671,24 @@ a.wpgis-popup, a.wpgis-popup:hover {
 
 @media screen and (max-width: 767px) {
   #top .cart .plus {
-    padding: 13px;
-    height: 44px;
+    padding: 12px;
+    height: 40px;
   }
 
   #top .cart .minus {
-    padding: 13px;
-    height: 44px;
+    padding: 12px;
+    height: 40px;
   }
 }
 
 @media screen and (max-width: 574px) {
   #top .cart .plus {
     padding: 9px;
-    height: 36px;
+    height: 40px;
   }
 
   #top .cart .minus {
     padding: 9px;
-    height: 36px;
+    height: 40px;
   }
 }

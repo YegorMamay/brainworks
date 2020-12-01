@@ -73,12 +73,12 @@ $form-field-MQ: true;
         }
         
         @media #{$tablet-max} {
-            padding: 13px;
+            padding: 11px;
             font-size: 14px;
         }
         
         @media #{$mobile-max} {
-            padding: 10px;
+            padding: 12px;
             font-size: 12px;
         }
     } @else {
