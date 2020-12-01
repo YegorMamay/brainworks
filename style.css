@@ -13887,7 +13887,7 @@ hr.style-three {
       -ms-user-select: none;
           user-select: none;
   border: 1px solid transparent;
-  padding: 12px 35px;
+  padding: 12px 20px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.2;
@@ -14267,14 +14267,14 @@ fieldset:disabled .woocommerce a.added_to_cart,
 }
 
 .btn-lg {
-  padding: 14px 45px;
+  padding: 14px 30px;
   font-size: 20px;
   line-height: 1.25;
   border-radius: 0px;
 }
 
 .btn-sm {
-  padding: 10px 30px;
+  padding: 25px 30px;
   font-size: 14px;
   line-height: 1.15;
   border-radius: 0px;
@@ -14309,7 +14309,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
     font-size: 14px;
   }
   .btn-lg {
-    padding: 13px 55px;
+    padding: 13px 25px;
     font-size: 16px;
   }
 }
@@ -14328,7 +14328,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
     font-size: 14px;
   }
   .btn-lg {
-    padding: 14px 40px;
+    padding: 14px 25px;
     font-size: 15px;
   }
 }
@@ -14347,7 +14347,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
     font-size: 14px;
   }
   .btn-lg {
-    padding: 12px 30px;
+    padding: 12px 20px;
     font-size: 14px;
   }
 }

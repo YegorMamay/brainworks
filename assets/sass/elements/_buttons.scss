@@ -8,19 +8,19 @@ $btn-glass-effect: true;
 
 // Medium Buttons
 $btn-padding-y: 12px;
-$btn-padding-x: 35px;
+$btn-padding-x: 20px;
 $btn-font-size: 16px;
 $btn-line-height: 1.2;
 
 // Small Buttons
-$btn-padding-y-sm: 10px;
+$btn-padding-y-sm: 25px;
 $btn-padding-x-sm: 30px;
 $btn-font-size-sm: ($btn-font-size * .875);
 $btn-line-height-sm: 1.15;
 
 // Large Buttons
 $btn-padding-y-lg: 14px;
-$btn-padding-x-lg: 45px;
+$btn-padding-x-lg: 30px;
 $btn-font-size-lg: ($btn-font-size * 1.25);
 $btn-line-height-lg: 1.25;
 
@@ -480,7 +480,7 @@ fieldset:disabled a.btn {
   }
 
   .btn-lg {
-    padding: 13px 55px;
+    padding: 13px 25px;
     font-size: 16px;
   }
 }
@@ -497,7 +497,7 @@ fieldset:disabled a.btn {
   }
 
   .btn-lg {
-    padding: 14px 40px;
+    padding: 14px 25px;
     font-size: 15px;
   }
 }
@@ -514,7 +514,7 @@ fieldset:disabled a.btn {
   }
 
   .btn-lg {
-    padding: 12px 30px;
+    padding: 12px 20px;
     font-size: 14px;
   }
 }
