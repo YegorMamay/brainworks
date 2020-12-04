@@ -13,14 +13,14 @@ $btn-font-size: 16px;
 $btn-line-height: 1.2;
 
 // Small Buttons
-$btn-padding-y-sm: 25px;
-$btn-padding-x-sm: 30px;
+$btn-padding-y-sm: 10px;
+$btn-padding-x-sm: 18px;
 $btn-font-size-sm: ($btn-font-size * .875);
 $btn-line-height-sm: 1.15;
 
 // Large Buttons
 $btn-padding-y-lg: 14px;
-$btn-padding-x-lg: 30px;
+$btn-padding-x-lg: 36px;
 $btn-font-size-lg: ($btn-font-size * 1.25);
 $btn-line-height-lg: 1.25;
 
@@ -480,8 +480,8 @@ fieldset:disabled a.btn {
   }
 
   .btn-lg {
-    padding: 13px 25px;
-    font-size: 16px;
+    padding: 14px 34px;
+    font-size: 18px;
   }
 }
 
@@ -497,8 +497,8 @@ fieldset:disabled a.btn {
   }
 
   .btn-lg {
-    padding: 14px 25px;
-    font-size: 15px;
+    padding: 13px 30px;
+    font-size: 16px;
   }
 }
 
@@ -514,7 +514,7 @@ fieldset:disabled a.btn {
   }
 
   .btn-lg {
-    padding: 12px 20px;
+    padding: 12px 26px;
     font-size: 14px;
   }
 }

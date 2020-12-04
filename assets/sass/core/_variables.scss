@@ -95,7 +95,7 @@ $linkFontColorActive: lighten($linkFontColor, 20%);
 // TABLE
 $tableBgColor: $themeColorTwo;
 $tableBgColorActive: lighten($themeColorTwo, 10%);
-$tableBorderColor: $primary_color_one;
+$tableBorderColor: lighten($primary_color_one, 85%);
 $tableBorderColorActive: lighten($primary_color_one, 50%);
 $tableOddBgColor: $themeColorOne;
 $tableOddFontColor: $primary_color_two;
