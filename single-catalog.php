@@ -6,6 +6,7 @@
         <?php if (!is_front_page() && function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
     </div>
 </div><!-- /.row -->
+
 <div class="row">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="col-lg-5">
@@ -14,7 +15,6 @@
 		</div>
 		<div class="col-lg-7">
 			<h1 class="single-title"><?php the_title() ?></h1>
-			<div class="vh-xs-2"></div>
 			<div class="prices"><?php the_excerpt(); ?></div>
 			<div class="vh-xs-2"></div>
 			<button class="btn btn-secondary one-click"><?php _e('Quick order', 'brainworks'); ?></button>
