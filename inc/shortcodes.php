@@ -172,8 +172,6 @@ if (!function_exists('bw_messengers_shortcode')) {
 	            } elseif ($name === 'telegram' && strpos($tel, '@') === 0) {
 		            $tel = strtolower(str_replace('@', '', $tel));
 		            $tel = "tg://resolve?domain=$tel";
-	            } else {
-		            $tel = "tel:$tel";
 	            }
 
                 $link = sprintf(
