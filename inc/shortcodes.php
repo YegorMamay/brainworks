@@ -161,10 +161,25 @@ if (!function_exists('bw_messengers_shortcode')) {
             foreach (get_messengers() as $name => $messenger) {
                 $icon = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($messenger['icon']));
 
+	            $tel = get_phone_number($messenger['tel']);
+
+	            if ($name === 'viber') {
+		            $tel = wp_is_mobile()
+			            ? 'viber://add?number=' . str_replace('+', '', $tel)
+			            : "viber://chat?number=$tel";
+	            } elseif ($name === 'whatsapp') {
+		            $tel = "https://wa.me/$tel";
+	            } elseif ($name === 'telegram' && strpos($tel, '@') === 0) {
+		            $tel = strtolower(str_replace('@', '', $tel));
+		            $tel = "tg://resolve?domain=$tel";
+	            } else {
+		            $tel = "tel:$tel";
+	            }
+
                 $link = sprintf(
                     '<a class="messenger-link messenger-%s" href="%s" target="_blank" aria-label="%s" rel="nofollow">%s</a>',
                     esc_attr($name),
-                    esc_attr(get_phone_number($messenger['tel'])),
+                    esc_attr($tel),
                     esc_attr($messenger['text']),
                     $icon
                 );

@@ -79,3 +79,7 @@ function jp_remove_type_attr($tag)
 
 add_filter('style_loader_tag', 'jp_remove_type_attr');
 add_filter('script_loader_tag', 'jp_remove_type_attr');
+
+add_action('after_setup_theme', function () {
+	add_theme_support('html5', ['script', 'style']);
+});

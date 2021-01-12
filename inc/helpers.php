@@ -10,7 +10,7 @@ if (!function_exists('dump')) {
 	 */
 	function dump($expression)
 	{
-		echo '<pre style="flex-shrink: 0;white-space: pre-line;">';
+		echo '<pre style="background-color: #000; color: #fff; padding: 15px 20px; flex-shrink: 0;white-space: pre-wrap; font: 400 14px/1.5 monospace;">';
 		var_dump($expression);
 		echo '</pre>';
 	}
