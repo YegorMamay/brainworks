@@ -187,8 +187,8 @@
 
     <!-- Mobile menu start-->
     <div class="nav-mobile-header">
-        <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
         <div class="logo"><?php get_default_logo_link(); ?></div>
+        <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
         <button class="hamburger js-hamburger" type="button" tabindex="0">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -223,6 +223,8 @@
             <div class="mobile-phones">
                 <?php echo do_shortcode('[bw-phone]'); ?>
             </div>
+            <div class="vh-xs-2"></div>
+            <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
         </nav>
     <?php } ?>
     <!-- Mobile menu end-->
