@@ -363,10 +363,6 @@ ul.products li.product {
   }
 }
 
-.woocommerce div.product div.summary .cart a {
-    float: left;
-}
-
 .loading {
   opacity: 0.5;
 
@@ -444,6 +440,16 @@ ul.products li.product {
 
 .woocommerce-variation.single_variation {
   margin-bottom: 20px;
+}
+
+table.variations {
+    tbody {
+        border: none;
+        
+        tr {
+            border: none;
+        }
+    }
 }
 
 //xs 544
