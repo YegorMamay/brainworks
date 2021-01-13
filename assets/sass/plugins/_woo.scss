@@ -363,6 +363,10 @@ ul.products li.product {
   }
 }
 
+.woocommerce div.product div.summary .cart a {
+    float: left;
+}
+
 .loading {
   opacity: 0.5;
 
