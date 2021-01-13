@@ -9,6 +9,15 @@
 .pre-footer {
     padding: 20px 0;
     background-color: lighten($footerBgColor, 10%);
+    
+    .widget-item div {
+        padding-bottom: 20px;
+    }
+    
+    ul {
+        padding-left: 0;
+        list-style: none; 
+    }
 }
 
 .copyright {

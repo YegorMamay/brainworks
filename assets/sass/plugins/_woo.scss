@@ -314,7 +314,7 @@ ul.products li.product {
         opacity: 0;
         @include smooth_animation;
     }
-    
+
     .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
         width: 0;
         height: 0;
@@ -327,12 +327,12 @@ ul.products li.product {
         opacity: 0;
         @include smooth_animation;
     }
-    
+
     &:hover {
         .cart-custom-button {
             opacity: 1;
         }
-        
+
         .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
             opacity: 1;
         }
@@ -372,6 +372,16 @@ ul.products li.product {
   }
 }
 
+table.variations {		
+    tbody {		
+        border: none;		
+        		
+        tr {		
+            border: none;		
+        }		
+    }		
+}
+
 //star rating
 .woocommerce {
   .star-rating span::before,
@@ -399,15 +409,38 @@ ul.products li.product {
 .woocommerce {
   div.product {
       form.cart {
+		  display: flex;
+		  justify-content: space-between;
+		  flex-wrap: wrap;
           margin-bottom: 1em;
-          
+
         .variations {
           @media #{$mobile-max} {
             margin-bottom: 0;
           }
         }
+                
+		.added_to_cart.wc-forward {
+		order: 6;
+	    }
+		.tinv-wishlist {
+			order: 7;
+		}
+		.qua-custom {
+		  .quantity,
+			button {
+			  margin-top: 0;
+		  }
+	    }
       }
-      
+	  .woocommerce-variation-add-to-cart {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
 
     form.cart .variations {
       td.label {
@@ -440,16 +473,6 @@ ul.products li.product {
 
 .woocommerce-variation.single_variation {
   margin-bottom: 20px;
-}
-
-table.variations {
-    tbody {
-        border: none;
-        
-        tr {
-            border: none;
-        }
-    }
 }
 
 //xs 544
@@ -516,7 +539,7 @@ table.variations {
 }
 
 .woocommerce-checkout #payment ul.payment_methods li input {
-    appearance: auto;    
+    appearance: auto;
 }
 // Checkout page end
 
@@ -665,6 +688,19 @@ a.wpgis-popup, a.wpgis-popup:hover {
   width: 40px;
   margin-right: 4px;
   cursor: pointer;
+}
+
+@media #{$desktop-max} {
+	.woocommerce {
+		div.product {
+			.woocommerce-variation-add-to-cart {
+				justify-content: flex-start;
+			}
+		}
+	}
+	.woocommerce div.product form.cart {
+		justify-content: flex-start;
+	}
 }
 
 @media screen and (max-width: 1023px) {
