@@ -155,7 +155,7 @@ em {
 .hide-on-mobile {
     display: block !important; 
     
-    @media #{$desktop-max} {
+    @media #{$mobile-max} {
         display: none !important;
     }
 }
