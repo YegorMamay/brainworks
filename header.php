@@ -11,6 +11,10 @@
    <link data-minify="0" rel="preload" href="/wp-content/plugins/LayerSlider/assets/static/layerslider/skins/fullwidth/skin.css" as="style">
    */
     ?>
+      
+    <link rel="preload" as="font" href="/wp-content/themes/brainworks-master/assets/fonts/font-awesome/fa-brands-400.woff2" crossorigin>
+    <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
+    <link rel="preload" as="font" href="/wp-content/themes/brainworks-master/assets/fonts/font-awesome/fa-light-300.woff2" crossorigin>
        
     <title>
         <?php
