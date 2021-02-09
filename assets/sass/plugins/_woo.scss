@@ -165,6 +165,7 @@
         @include responsive-font-size(20px, 32px, 480px, 1024px, 26px);
         font-weight: bold;
         margin-bottom: 10px;
+        line-height: normal;
       }
 
       p,
@@ -736,5 +737,12 @@ a.wpgis-popup, a.wpgis-popup:hover {
   #top .cart .minus {
     padding: 9px;
     height: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
+    float: none;
+    width: 100%;
   }
 }

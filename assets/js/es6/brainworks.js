@@ -833,4 +833,15 @@
         $(document.body).trigger('wc_fragment_refresh');
     });
 
+    $('.wc-tabs a').on('click', function (e) {
+        e.preventDefault();
+        let currentContent = $(this).attr('href');
+        let fixedHeaderHeight = $('.js-header').outerHeight();
+        $(currentContent).slideDown(300).delay(1000);
+        console.log($('.wc-tabs').offset().top - fixedHeaderHeight);
+        $('html, body').animate({
+            scrollTop: $('.wc-tabs').offset().top - (fixedHeaderHeight - 100)
+        }, 'fast');
+    });
+
 })(window, document, jQuery, window.jpAjax);
