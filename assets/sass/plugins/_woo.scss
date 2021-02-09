@@ -746,3 +746,23 @@ a.wpgis-popup, a.wpgis-popup:hover {
     width: 100%;
   }
 }
+
+
+.woocommerce-form__label {
+  display: flex;
+  align-items: center;
+}
+
+.shop_table {
+  & .cart_item {
+    & .product-name {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    & .quantity {
+      margin-left: 15px;
+    }
+  }
+}
