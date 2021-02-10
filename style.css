@@ -10667,7 +10667,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   }
 }
 
-.woocommerce-form__label {
+#top .woocommerce-form__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10676,7 +10676,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
           align-items: center;
 }
 
-.shop_table .cart_item .product-name {
+#top .shop_table .cart_item .product-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10688,7 +10688,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
           justify-content: flex-start;
 }
 
-.shop_table .cart_item .quantity {
+#top .shop_table .cart_item .quantity {
   margin-left: 15px;
 }
 
