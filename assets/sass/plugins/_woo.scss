@@ -306,10 +306,10 @@
 ul.products li.product {
     .cart-custom-button {
         position: absolute;
-        top: 220px;
-        right: 93px;
+        top: 52px;
+        left: 10px;
         background: $themeColorTwo;
-        padding: 5px 8px;
+        padding: 5px 7px 5px 8px;
         border-radius: $borderRadius;
         color: $primary_color_two;
         opacity: 0;
@@ -319,8 +319,8 @@ ul.products li.product {
     .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
         width: 0;
         height: 0;
-        top: 220px;
-        left: 93px;
+        top: 0;
+        left: 0;
         background: $themeColorTwo;
         padding: 17px;
         border-radius: $borderRadius;
