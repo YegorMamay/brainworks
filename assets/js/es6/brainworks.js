@@ -579,6 +579,7 @@
                 if (href[0] === '#' || href.slice(0, 2) === '/#' && !(href.slice(1, 3) === '__')) {
                     $element.on('click', (e) => {
                         e.preventDefault();
+                        if ($element.closest('.woocommerce-tabs').length) return;
                         const target = $(href[0] === '#' ? href : href.slice(1));
                         const fixedHeader = $('.js-header');
                         const fixOffset = 20; // смещение блока его можно регулировать или стилями или тут, если не нужен ставим 0

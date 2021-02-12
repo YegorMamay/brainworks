@@ -4,11 +4,11 @@
     "description": "Workpieces code and structure that I use in every project",
     "main": "gulpfile.babel.js",
     "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@babel/preset-env": "^7.12.11",
-        "@babel/register": "^7.12.10",
+        "@babel/core": "^7.12.16",
+        "@babel/preset-env": "^7.12.16",
+        "@babel/register": "^7.12.13",
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.17.0",
+        "eslint": "^7.19.0",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^7.0.1",
         "gulp-babel": "^8.0.0",
@@ -21,7 +21,7 @@
         "gulp-svgmin": "^3.0.0",
         "gulp-svgstore": "^7.0.1",
         "gulp-uglify": "^3.0.2",
-        "husky": "^4.3.7"
+        "husky": "^4.3.8"
     },
     "babel": {
         "presets": [
