@@ -834,7 +834,7 @@
         $(document.body).trigger('wc_fragment_refresh');
     });
 
-    $('.wc-tabs a').on('click', function (e) {
+    /*$('.wc-tabs a').on('click', function (e) {
         e.preventDefault();
         let currentContent = $(this).attr('href');
         let fixedHeaderHeight = $('.js-header').outerHeight();
@@ -843,6 +843,6 @@
         $('html, body').animate({
             scrollTop: $('.wc-tabs').offset().top - (fixedHeaderHeight - 100)
         }, 'fast');
-    });
+    });*/
 
 })(window, document, jQuery, window.jpAjax);
