@@ -1,0 +1,51 @@
+//Cupon
+.checkout_coupon input {
+    @include form-field-style;
+}
+
+@media #{$mobile-max} {
+    .checkout_coupon {
+        .form-row-first {
+            width: 100% !important;
+            
+            input {
+                width: 100% !important;
+            }
+        }
+        
+        .form-row-last {
+            float: none !important;
+        }
+    }
+}
+//Cupon end
+
+#checkout-form {
+  display: flex;
+
+  //xs 544
+  @media #{$mobile-max} {
+    display: block;
+  }
+}
+
+.select2-container .select2-selection--single {
+  height: 40px;
+
+  .select2-selection__rendered {
+    padding-top: 5px;
+  }
+
+  .select2-selection__arrow {
+    top: 8px;
+  }
+}
+
+.woocommerce .blockUI.blockOverlay {
+  z-index: 3 !important;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li input {
+    appearance: auto;
+}
+// Checkout page end

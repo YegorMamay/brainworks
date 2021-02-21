@@ -1,0 +1,43 @@
+.woocommerce-cart {
+  .cart-popup {
+    display: none !important;
+  }
+}
+
+.woocommerce {
+  a.added_to_cart {
+    @extend %btn-outline-primary;
+    width: 100%;
+  }
+    
+    .cart-collaterals {
+    .cart_totals {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.woocommerce ul#shipping_method li input {
+    margin: 6px .4375em 0 0;
+    appearance: auto;
+}
+
+
+.woocommerce-cart-form input#coupon_code {
+    @include form-field-style;
+    width: 48%;
+}
+
+.woocommerce-cart,
+.woocommerce-checkout {
+  .wc-proceed-to-checkout {
+    a {
+      &.checkout-button {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

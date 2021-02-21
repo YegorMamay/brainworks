@@ -1,0 +1,16 @@
+.woocommerce-account {
+  .woocommerce-MyAccount-navigation {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+#customer_login {
+  display: flex;
+
+  //xs 544
+  @media #{$mobile-max} {
+    display: block;
+  }
+}
