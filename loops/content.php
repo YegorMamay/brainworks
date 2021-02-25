@@ -14,8 +14,8 @@
                                   
                             <span class="text-muted text-italic bold">
                                 <?php _e('By', 'brainworks'); echo " ";
-                                the_author_meta(first_name); echo " ";
-                                the_author_meta(last_name); ?>, 
+                                the_author_meta('first_name'); echo " ";
+                                the_author_meta('last_name'); ?>,
                                 <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?>
                             </span>
                                
