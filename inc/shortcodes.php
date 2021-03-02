@@ -331,6 +331,7 @@ if (!function_exists('bw_advert_shortcode')) {
             'category' => null,
             'display_category' => false,
             'display_datetime' => false,
+            'display_tags' => false,
             'array_index' => false,
         ], $atts);
 
@@ -370,6 +371,7 @@ if (!function_exists('bw_advert_shortcode')) {
                     get_the_post_thumbnail(null, 'medium', ['class' => $basic_class . '-thumbnail'])
                 ) : '';
 
+                $tags = '';
                 $category = '';
                 $datetime = '';
 
@@ -390,11 +392,20 @@ if (!function_exists('bw_advert_shortcode')) {
                     );
                 }
 
+	            if ($atts['display_tags']) {
+		            $tags = sprintf(
+			            '<div class="%s-tags">#%s</div>',
+			            $basic_class,
+			            get_the_tag_list( '', ', ', '' )
+		            );
+	            }
+
                 $meta = sprintf(
-                    '<div class="%s-meta">%s %s</div>',
+                    '<div class="%s-meta">%s %s %s</div>',
                     $basic_class,
                     $category,
-                    $datetime
+                    $datetime,
+                    $tags
                 );
 
                 $headline = sprintf(
