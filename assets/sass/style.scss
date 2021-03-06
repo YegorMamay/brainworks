@@ -39,6 +39,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "pages/home-page";
 @import "pages/single-post";
 @import "pages/blog-page";
+@import "pages/404";
 
 //Custom Posts
 @import "custom-posts/reviews";
@@ -129,15 +130,6 @@ body {
     } 
 }
 
-b,
-strong {
-    font-weight: bold;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: $fontFamilyOne;
-}
-
 img {
     display: inline-block;
     vertical-align: middle;
@@ -167,36 +159,5 @@ img {
     & span, a {
         font-size: 14px;
         line-height: normal;
-    }
-}
-
-.page-name, .page-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.page-404 {
-    width: 90%;
-    max-width: 1170px;
-    margin: 0 auto;
-    height: 90vh;
-    background: image-url('404.png') no-repeat center center;
-
-    .contain {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @media #{$tablet-max} {
-            display: block;
-
-            div {
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    @media (max-width: 768px) {
-        background-image: none;
     }
 }

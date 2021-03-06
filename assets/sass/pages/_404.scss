@@ -1,0 +1,25 @@
+.page-404 {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 90vh;
+    background: image-url('404.png') no-repeat center center;
+
+    .contain {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media #{$tablet-max} {
+            display: block;
+
+            div {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        background-image: none;
+    }
+}

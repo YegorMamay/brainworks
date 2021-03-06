@@ -131,3 +131,17 @@ $elements-list: (
 @if (mixin_exists('media-font-queries')) {
   @include media-font-queries();
 }
+
+b,
+strong {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $fontFamilyOne;
+}
+
+.page-name, .page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
