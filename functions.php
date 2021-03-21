@@ -360,6 +360,10 @@ function ts_quantity_plus_minus() {
 }
 // Добавляет кнопки + и - END
 
+//Перемещает описание категории под товары
+remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_taxonomy_archive_description', 100 );
+// end
 
 //show hide content text
 
