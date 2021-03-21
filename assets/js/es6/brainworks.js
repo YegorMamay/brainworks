@@ -760,9 +760,11 @@
     });
 
     // Исправляет конфликт модального окна и галереи в карточке товара
-    $('.form-cover input[type="text"]').on('focus', function () {
-        $.fancybox.destroy();
-    });
+    if($('.wpgis-slider-for').length > 0) {
+        $('.form-cover input[type="text"]').on('focus', function () {
+            $.fancybox.destroy();
+        });
+    }
 
     /**
      *  Update totalCart value

@@ -403,9 +403,11 @@ var _this = void 0;
     $(".js-menu-close, .menu-link").on("click", function() {
         $("body").removeClass("body-overflow");
     });
-    $('.form-cover input[type="text"]').on("focus", function() {
-        $.fancybox.destroy();
-    });
+    if ($(".wpgis-slider-for").length > 0) {
+        $('.form-cover input[type="text"]').on("focus", function() {
+            $.fancybox.destroy();
+        });
+    }
     var updateCartTotalValue = function updateCartTotalValue(elemId) {
         localStorage.setItem("currency", $("#cyr-value").val());
         var totalId = $(elemId);
