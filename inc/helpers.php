@@ -283,11 +283,11 @@ if (!function_exists('get_social')) {
                 'icon' => 'fab fa-instagram',
                 'icon-html' => get_theme_mod('bw_social_instagram_icon'),
             ],
-            'google-plus' => [
-                'url' => get_theme_mod('bw_social_google_plus'),
-                'text' => 'Google Plus',
-                'icon' => 'fab fa-google-plus-g',
-                'icon-html' => get_theme_mod('bw_social_google_plus_icon'),
+            'tiktok' => [
+                'url' => get_theme_mod('bw_social_tiktok'),
+                'text' => 'TikTok',
+                'icon' => 'fab fa-tiktok',
+                'icon-html' => get_theme_mod('bw_social_tiktok_icon'),
             ],
             'youtube' => [
                 'url' => get_theme_mod('bw_social_youtube'),

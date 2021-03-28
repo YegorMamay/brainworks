@@ -574,7 +574,7 @@ function bw_customize_register($wp_customize)
     $wp_customize->add_setting('bw_social_facebook', array('default' => ''));
     $wp_customize->add_setting('bw_social_linkedin', array('default' => ''));
     $wp_customize->add_setting('bw_social_instagram', array('default' => ''));
-    $wp_customize->add_setting('bw_social_google_plus', array('default' => ''));
+    $wp_customize->add_setting('bw_social_tiktok', array('default' => ''));
     $wp_customize->add_setting('bw_social_youtube', array('default' => ''));
     $wp_customize->add_setting('bw_social_odnoklassniki', array('default' => ''));
     $wp_customize->add_setting('bw_social_custom_one', array('default' => ''));
@@ -586,7 +586,7 @@ function bw_customize_register($wp_customize)
     $wp_customize->add_setting('bw_social_facebook_icon', array('default' => ''));
     $wp_customize->add_setting('bw_social_linkedin_icon', array('default' => ''));
     $wp_customize->add_setting('bw_social_instagram_icon', array('default' => ''));
-    $wp_customize->add_setting('bw_social_google_plus_icon', array('default' => ''));
+    $wp_customize->add_setting('bw_social_tiktok_icon', array('default' => ''));
     $wp_customize->add_setting('bw_social_youtube_icon', array('default' => ''));
     $wp_customize->add_setting('bw_social_odnoklassniki_icon', array('default' => ''));
     $wp_customize->add_setting('bw_social_custom_one_icon', array('default' => ''));
@@ -678,20 +678,20 @@ function bw_customize_register($wp_customize)
         ),
     ));
 
-    $wp_customize->add_control('bw_social_google_plus', array(
-        'label' => __('Google Plus', 'brainworks'),
+    $wp_customize->add_control('bw_social_tiktok', array(
+        'label' => __('TikTok', 'brainworks'),
         'section' => 'bw_social',
-        'settings' => 'bw_social_google_plus',
+        'settings' => 'bw_social_tiktok',
         'type' => 'text',
     ));
 
-    $wp_customize->add_control('bw_social_google_plus_icon', array(
-        'label' => 'Google Plus Icon',
+    $wp_customize->add_control('bw_social_tiktok_icon', array(
+        'label' => 'TikTok Icon',
         'section' => 'bw_social',
-        'settings' => 'bw_social_google_plus_icon',
+        'settings' => 'bw_social_tiktok_icon',
         'type' => 'text',
         'input_attrs' => array(
-            'placeholder' => '<i class="fab fa-google-plus-g"></i>',
+            'placeholder' => '<i class="fab fa-tiktok"></i>',
         ),
     ));
 

@@ -39,7 +39,7 @@ add_action( 'after_setup_theme', function () {
 		pll_register_string( 'social-facebook', 'Facebook', 'Brainworks' );
 		pll_register_string( 'social-linkedin', 'Linkedin', 'Brainworks' );
 		pll_register_string( 'social-instagram', 'Instagram', 'Brainworks' );
-		pll_register_string( 'social-google-plus', 'Google Plus', 'Brainworks' );
+		pll_register_string( 'social-tiktok', 'TikTok', 'Brainworks' );
 		pll_register_string( 'social-odnoklassniki', 'Odnoklassniki', 'Brainworks' );
 	}
 } );

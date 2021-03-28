@@ -10780,6 +10780,16 @@ a.wpgis-popup, a.wpgis-popup:hover {
   margin-left: 15px;
 }
 
+#coupon_code {
+  height: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  #coupon_code {
+    height: 40px;
+  }
+}
+
 .embed-responsive {
   position: relative;
   display: block;
