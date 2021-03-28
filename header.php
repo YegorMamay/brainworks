@@ -12,9 +12,13 @@
    */
     ?>
       
-    <link rel="preload" as="font" href="/wp-content/themes/brainworks-master/assets/fonts/font-awesome/fa-brands-400.woff2" crossorigin>
+    <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-brands-400.woff2'); ?>" crossorigin>
+    <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-light-300.woff2'); ?>" crossorigin>
+    <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
+    <?php $plugin='yith-woocommerce-wishlist/init.php'; ?>
+    <?php if(is_plugin_active($plugin)){ ?>
     <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
-    <link rel="preload" as="font" href="/wp-content/themes/brainworks-master/assets/fonts/font-awesome/fa-light-300.woff2" crossorigin>
+    <?php } ?>
        
     <title>
         <?php

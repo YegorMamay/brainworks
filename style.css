@@ -10471,6 +10471,7 @@ table.variations tbody tr {
 
 .woocommerce div.product .stock {
   color: #000;
+  margin-bottom: 10px;
 }
 
 .woocommerce div.product .product_title {
@@ -15447,4 +15448,16 @@ img {
 
 #top .button {
   border-color: inherit;
+}
+
+h5 a, .h5 a {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+h5 a b, .h5 a b {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
 }

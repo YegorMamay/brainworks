@@ -70,100 +70,114 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/list-category";
 
 ::selection {
-    text-shadow: none;
-    color: $selectionFontColor;
-    background-color: $selectionBgColor;
+  text-shadow: none;
+  color: $selectionFontColor;
+  background-color: $selectionBgColor;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    @if ($debug) {
-        outline: 1px solid red !important;
-    }
+  @if ($debug) {
+    outline: 1px solid red !important;
+  }
 
-    &,
-    &::before,
-    &::after {
-        box-sizing: inherit;
-    }
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    min-width: 320px;
-    position: relative;
-    color: $bodyFontColor;
-    font-family: $fontFamilyTwo;
-    font-weight: $font-weight-size;
-    font-size: $font-min-size;
-    line-height: $font-line-height;
-    background-color: $bodyBgColor;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    max-width: 100%;
-    
-    &.home {
-        
-    }
+  margin: 0;
+  min-width: 320px;
+  position: relative;
+  color: $bodyFontColor;
+  font-family: $fontFamilyTwo;
+  font-weight: $font-weight-size;
+  font-size: $font-min-size;
+  line-height: $font-line-height;
+  background-color: $bodyBgColor;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+
+  &.home {
+
+  }
 }
 
 .wrapper {
-    position: relative;
-    overflow-x: hidden;
-    min-height: 100%;
-    
-    @media #{$desktop-max} {
-        padding-top: 70px;
-    } 
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100%;
+
+  @media #{$desktop-max} {
+    padding-top: 70px;
+  }
 }
 
 img {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%; // не удалять
-    height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%; // не удалять
+  height: auto;
 }
 
 :focus {
-    outline: 0;
+  outline: 0;
 }
 
 .body-overflow {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .svg-icon {
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    @extend %smooth_animation;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  @extend %smooth_animation;
 }
 
 .kama_breadcrumbs {
-    padding: 10px 0;
+  padding: 10px 0;
+  font-size: 14px;
+  margin-bottom: 10px;
+
+  & span, a {
     font-size: 14px;
-    margin-bottom: 10px;
-    & span, a {
-        font-size: 14px;
-        line-height: normal;
-    }
+    line-height: normal;
+  }
 }
 
 #top {
-    .button {
-        border-color: inherit;
+  .button {
+    border-color: inherit;
+  }
+}
+
+h5, .h5 {
+  & a {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    & b {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
     }
+  }
 }
