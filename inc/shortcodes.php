@@ -222,6 +222,7 @@ if (!function_exists('bw_html_sitemap')) {
 
         foreach ($post_types as $post_type) {
             if (!in_array($post_type->name, $ignoreposttypes)) {
+                $output .= '<div class="col-12 col-md-6 col-lg-3">';
                 $output .= '<h4 class="sitemap-headline">' . $post_type->labels->name . '</h4><div class="vh-xs-1"></div>';
                 $args = array(
                     'posts_per_page' => -1,
@@ -236,6 +237,7 @@ if (!function_exists('bw_html_sitemap')) {
                     $output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . get_permalink($pst->ID) . '">' . $pst->post_title . '</a></li>';
                 }
                 $output .= '</ul><div class="vh-xs-2"></div>';
+                $output .= '</div>';
             }
         }
 
