@@ -255,12 +255,14 @@ if (!function_exists('bw_html_sitemap')) {
 	    $taxonomy = get_taxonomy( 'product_cat' );
 
 	    if ( ! in_array( $taxonomy->name, $ignoretaxonomy ) ) {
+            $output .= '<div class="col-12 col-md-6 col-lg-3">';
 		    $output .= '<h4 class="sitemap-headline">' . $taxonomy->labels->name . '</h4><div class="vh-xs-1"></div>';
 		    $output .= '<ul class="sitemap-list">';
 		    foreach ( $product_categories as $term ) {
 			    $output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . get_term_link( $term ) . '">' . $term->name . '</a></li>';
 		    }
 		    $output .= '</ul><div class="vh-xs-2"></div>';
+            $output .= '</div>';
 	    }
 
         return $output;
