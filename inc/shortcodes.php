@@ -215,7 +215,9 @@ if (!function_exists('bw_html_sitemap')) {
         $ignoreposttypes = array(
             'attachment',
             'popup',
-            'reviews'
+            'reviews',
+            'sn_catalogs',
+            'product'
         );
 
         $post_types = get_post_types($args, 'objects');
