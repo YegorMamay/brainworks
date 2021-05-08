@@ -173,7 +173,7 @@
       .no-touch &:hover,
       &-current {
         > .sub-menu-link {
-          background-color: $menuMobileSubMenuBGOnHover;
+          background-color: $SubMenuBGOnHover;
           color: $menuFontColorActive;
         }
       }

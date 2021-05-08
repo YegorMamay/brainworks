@@ -61,6 +61,9 @@ $menuBgColorActive: $themeColorTwo;
 $menuFontColor: $primary_color_two;
 $menuFontColorActive: $primary_color_two;
 
+// SubMenu
+$SubMenuBGOnHover: darken($themeColorTwo, 5%);
+
 // MENU mobile/Sub
 $navHeaderMobileBGColor: $themeColorOne;
 $navHamburgerMobileColor: $primary_color_two;
@@ -68,7 +71,7 @@ $menuMobileBGColor: $themeColorOne;
 $menuMobileSubMenuBGColor: lighten($themeColorOne, 10%);
 $menuMobileTextColor: $primary_color_two;
 $menuMobileSubMenuTextColor: $menuMobileTextColor;
-$menuMobileSubMenuBGOnHover: darken($themeColorTwo, 10%);
+$menuMobileSubMenuBGOnHover: lighten($themeColorOne, 10%);
 $menuMobileSubMenuTextColorOnHover: $primary_color_two;
 $navArrowColor: $primary_color_two;
 

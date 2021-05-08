@@ -81,6 +81,10 @@
           display: none;
         }
 
+        &:hover {
+          background: $menuMobileSubMenuBGOnHover;
+        }
+
         .menu-item-has-children-arrow {
           position: absolute;
           top: 5px;
@@ -150,6 +154,7 @@
 
         &-current {
           > .sub-menu-link {
+            background: $menuMobileSubMenuBGOnHover;
           }
         }
       }
@@ -157,7 +162,7 @@
       &-link {
         color: $menuMobileSubMenuTextColor;
         font-size: $menuMobileSubMenuLinkFontSize;
-          text-align: center;
+        text-align: center;
       }
     }
   }

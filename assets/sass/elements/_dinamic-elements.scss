@@ -120,9 +120,8 @@
   @extend %reset-list;
   display: inline-flex;
   align-items: center;
-  min-width: 205px;
+  min-width: 160px;
   position: relative;
-  margin-right: 10px;
 
   &__item {
     display: flex;

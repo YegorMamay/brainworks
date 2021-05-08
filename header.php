@@ -196,7 +196,30 @@
     <!-- Mobile menu start-->
     <div class="nav-mobile-header">
         <div class="logo"><?php get_default_logo_link(); ?></div>
-        <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
+<!-- Dropdown phones -->
+<?php if (has_phones()) { ?>
+    <ul class="phone-dropdown">
+        <li class="phone-dropdown__item">
+            <?php foreach(get_phones() as $key => $phone) { ?>
+            <?php if ($key === key(get_phones())) { ?>
+            <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
+                <?php echo trim($phone); ?>
+            </a>
+            <button type="button" class="phone-dropdown__button js-dropdown"></button>
+            <ul class="phone-dropdown__list js-phone-list">
+                <?php  } else { ?>
+                    <li class="phone-dropdown__item">
+                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
+                            <?php echo trim($phone); ?>
+                        </a>
+                    </li>
+                <?php } ?>
+                <?php } ?>
+            </ul>
+        </li>
+    </ul>
+<?php } ?>
+<!-- Dropdown phones -->
         <button class="hamburger js-hamburger" type="button" tabindex="0">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
