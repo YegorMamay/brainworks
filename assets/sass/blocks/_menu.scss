@@ -23,7 +23,8 @@
     &-item {
       display: inline-block;
       vertical-align: middle;
-      padding: 5px;
+      flex-grow: 1;
+      padding: 5px 0;
 
       &:hover {
         background: $menuBgColorActive;
@@ -82,7 +83,7 @@
 
         &:hover {
           &::after {
-
+            border-color: $menuFontColorActive transparent transparent transparent;
           }
         }
 
@@ -155,7 +156,7 @@
 
         &:hover {
           &::after {
-            border-left-color: $primary_color_two;
+            border-left-color: $menuFontColor;
           }
         }
 
