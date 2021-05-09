@@ -17,8 +17,7 @@
 //}
 
 //* example 2 (import from google fonts)
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-$font-family-sans-serif: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-$fontFamilyOne: $font-family-sans-serif; // titles
-$fontFamilyTwo: $font-family-sans-serif; // body
+$fontFamilyOne: 'Montserrat', sans-serif; // titles
+$fontFamilyTwo: 'Montserrat', sans-serif; // body

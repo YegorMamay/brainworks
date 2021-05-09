@@ -8,7 +8,8 @@
 
 .pre-footer {
     padding: 20px 0;
-    background-color: lighten($footerBgColor, 10%);
+    background-color: lighten($footerBgColor, 7%);
+    color: $footerFontColor;
     
     .widget-item div {
         padding-bottom: 20px;
