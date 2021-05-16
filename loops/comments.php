@@ -85,7 +85,7 @@ endif;
 
                     <div class="vh-xs-2 vh-sm-2 vh-md-2 vh-lg-2 vh-xl-2"></div>
                     <p>
-                        <input name="submit" class="btn btn-secondary btn-sm center-block" type="submit" id="submit" value="<?php _e('Submit comment', 'brainworks'); ?>">
+                        <input name="submit" class="btn btn-one btn-sm center-block" type="submit" id="submit" value="<?php _e('Submit comment', 'brainworks'); ?>">
                     </p>
 
             </div>

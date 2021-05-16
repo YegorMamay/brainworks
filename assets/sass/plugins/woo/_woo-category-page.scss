@@ -6,7 +6,7 @@ ul.products li.product {
         background: $themeColorTwo;
         padding: 5px 7px 5px 8px;
         border-radius: $borderRadius;
-        color: $primary_color_two;
+        color: $whiteColor;
         opacity: 0;
         @include smooth_animation;
     }
@@ -19,7 +19,7 @@ ul.products li.product {
         background: $themeColorTwo;
         padding: 17px;
         border-radius: $borderRadius;
-        color: $primary_color_two;
+        color: $whiteColor;
         opacity: 0;
         @include smooth_animation;
     }
@@ -42,7 +42,7 @@ ul.products li.product {
         &.product {
           text-align: center;
           //box-shadow: $shadow;
-          //border: 1px solid lighten($primary_color_one, 90%);
+          //border: 1px solid lighten($blackColor, 90%);
           padding-bottom: 20px;
           @include smooth_animation;
 

@@ -10,7 +10,7 @@
 <?php get_template_part('loops/content', 'page'); ?>
 
 <div class="text-center">   
-    <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-secondary btn-lg">
+    <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-one btn-lg">
         <?php _e('Back to the homepage', 'brainworks'); ?>
     </a>
 </div>

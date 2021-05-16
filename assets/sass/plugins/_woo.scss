@@ -7,12 +7,12 @@
 
 %button-style {
   @extend .btn;
-  @extend .btn-secondary;
+  @extend .btn-one;
 }
 
-%btn-outline-primary {
+%btn-outline-two {
   @extend .btn;
-  @extend .btn-primary;
+  @extend .btn-two;
 }
 
 .woocommerce {

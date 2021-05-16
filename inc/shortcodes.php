@@ -327,7 +327,7 @@ if (!function_exists('bw_last_posts')) {
                                     ' . $post['post_excerpt'] . '
                                 </p>
                                 <br />
-                                <a href="' . $permalink . '" class="btn btn-secondary btn-sm">
+                                <a href="' . $permalink . '" class="btn btn-one btn-sm">
                                     ' . $atts['button_title'] . '
                                 </a>
                             </div>';
@@ -447,7 +447,7 @@ if (!function_exists('bw_advert_shortcode')) {
 
                 $btn = sprintf(
                     '<div class="front-news-btn">
-                        <a class="btn btn-secondary btn-sm %s-link" href="%s">%s</a>
+                        <a class="btn btn-one btn-sm %s-link" href="%s">%s</a>
                     </div>',
                     $basic_class,
                     get_the_permalink(),
@@ -509,7 +509,7 @@ if (!function_exists('bw_custom_login_shortcode')) {
                         <input type="password" id="password" name="password" class="form-field" required />
                     </div>
                     <div class="login-form-row form-group">
-                        <button type="submit" name="submit" class="btn btn-primary login-form-submit">
+                        <button type="submit" name="submit" class="btn btn-two login-form-submit">
                             ' . __('Login', 'brainworks') . '
                         </button>
                     </div>   
@@ -549,7 +549,7 @@ if (!function_exists('bw_custom_register_shortcode')) {
                     <input type="password" id="retry_password" name="retry_password" class="form-field" required />
                 </div>
                 <div class="login-form-row form-group">
-                    <button type="submit" name="submit" class="btn btn-primary login-form-submit">
+                    <button type="submit" name="submit" class="btn btn-two login-form-submit">
                         ' . __('Register', 'brainworks') . '
                     </button>
                 </div>    

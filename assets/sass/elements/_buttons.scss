@@ -104,116 +104,14 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-primary {
-  $background: $themeColorTwo;
-  $btn-primary-color: $primary_color_two;
-  $btn-primary-color-hover: $primary_color_two;
-  $border: $themeColorTwo;
-  $hover-background: darken($themeColorTwo, 15%);
-  $hover-border: darken($themeColorTwo, 15%);
-  $active-background: darken($themeColorTwo, 15%);
-  $active-border: darken($themeColorTwo, 15%);
-
-  @if $btn-enable-gradients {
-    background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 25%), $background) repeat-x;
-  } @else {
-    background: $background;
-    @if ($btn-glass-effect) {
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      &:after {
-        background: $primary_color_two;
-        content: "";
-        height: 155px;
-        left: -75px;
-        opacity: .2;
-        position: absolute;
-        top: -50px;
-        width: 50px;
-        transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
-        transform: rotate(35deg);
-        z-index: -10;
-      }
-    }
-  }
-
-  color: $btn-primary-color;
-  border-color: $border;
-
-  &:hover {
-    color: $btn-primary-color-hover;
-    @if $btn-enable-gradients {
-      background: $hover-background linear-gradient($btn-gradient-angle, mix(#fff, $hover-background, 25%), $hover-background) repeat-x;
-    } @else {
-      background-color: $hover-background;
-      @if ($btn-glass-effect) {
-        &:after {
-          left: 120%;
-          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-        }
-      }
-    }
-    border-color: $hover-border;
-  }
-
-  &:focus,
-  &.focus {
-    box-shadow: none;
-    outline: none;
-  }
-
-  &.disabled,
-  &:disabled {
-    color: $primary_color_two;
-    background-color: darken($themeColorTwo, 30%);
-    border-color: darken($themeColorTwo, 30%);
-    cursor: not-allowed;
-
-    &:after {
-      content: none;
-    }
-  }
-
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    color: $primary_color_two;
-    background-color: lighten($active-background, 5%);
-    border-color: lighten($active-background, 5%);
-
-    @if ($btn-glass-effect) {
-      color: $primary_color_two;
-      text-shadow: 3px 2px 6px rgba($primary_color_one, 0.7);
-      background-color: lighten($active-background, 10%);
-      border-color: lighten($active-background, 10%);
-      &:after {
-        background: rgba(255, 255, 255, 0.75);
-        left: 0;
-        transform: rotate(0deg);
-        width: 100%;
-        transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
-      }
-    }
-
-    @if $btn-enable-gradients {
-      background-image: none;
-    }
-
-    &:focus {
-      box-shadow: none;
-      outline: none;
-    }
-  }
-}
-
-.btn-secondary {
+.btn-one {
   $background: $themeColorOne;
-  $btn-primary-color: $primary_color_two;
-  $btn-primary-color-hover: $primary_color_two;
-  $border: $themeColorOne;
   $hover-background: lighten($themeColorOne, 25%);
-  $hover-border: lighten($themeColorOne, 25%);
   $active-background: lighten($themeColorOne, 25%);
+  $text-color: $whiteColor;
+  $text-color-hover: $whiteColor;
+  $border: $themeColorOne;
+  $hover-border: lighten($themeColorOne, 25%);
   $active-border: lighten($themeColorOne, 25%);
 
   @if $btn-enable-gradients {
@@ -225,7 +123,7 @@ fieldset:disabled a.btn {
       z-index: 1;
       overflow: hidden;
       &:after {
-        background: $primary_color_two;
+        background: $whiteColor;
         content: "";
         height: 155px;
         left: -75px;
@@ -240,11 +138,11 @@ fieldset:disabled a.btn {
     }
   }
 
-  color: $btn-primary-color;
+  color: $text-color;
   border-color: $border;
 
   &:hover {
-    color: $btn-primary-color-hover;
+    color: $text-color-hover;
     @if $btn-enable-gradients {
       background: $hover-background linear-gradient($btn-gradient-angle, mix(#fff, $hover-background, 25%), $hover-background) repeat-x;
     } @else {
@@ -267,7 +165,7 @@ fieldset:disabled a.btn {
 
   &.disabled,
   &:disabled {
-    color: $primary_color_two;
+    color: $whiteColor;
     background-color: lighten($themeColorOne, 30%);
     border-color: lighten($themeColorOne, 30%);
     cursor: not-allowed;
@@ -279,13 +177,13 @@ fieldset:disabled a.btn {
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
-    color: $primary_color_two;
+    color: $whiteColor;
     background-color: lighten($active-background, 5%);
     border-color: lighten($active-background, 5%);
 
     @if ($btn-glass-effect) {
-      color: $primary_color_two;
-      text-shadow: 3px 2px 6px rgba($primary_color_one, 0.7);
+      color: $whiteColor;
+      text-shadow: 3px 2px 6px rgba($blackColor, 0.7);
       background-color: lighten($active-background, 15%);
       border-color: lighten($active-background, 15%);
       &:after {
@@ -308,22 +206,125 @@ fieldset:disabled a.btn {
   }
 }
 
-.btn-outline-primary {
-  $btn-outline-primary-color: $themeColorTwo;
-  $btn-outline-primary-color-hover: white;
-  $border: $themeColorTwo;
-  $hover-background: $themeColorTwo;
-  $hover-border: $themeColorTwo;
+.btn-two {
+  $background: $themeColorTwo;
+  $hover-background: darken($themeColorTwo, 15%);
   $active-background: darken($themeColorTwo, 15%);
+  $text-color: $whiteColor;
+  $text-color-hover: $whiteColor;
+  $border: $themeColorTwo;
+  $hover-border: darken($themeColorTwo, 15%);
   $active-border: darken($themeColorTwo, 15%);
 
+  @if $btn-enable-gradients {
+    background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 25%), $background) repeat-x;
+  } @else {
+    background: $background;
+    @if ($btn-glass-effect) {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      &:after {
+        background: $whiteColor;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        width: 50px;
+        transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+        transform: rotate(35deg);
+        z-index: -10;
+      }
+    }
+  }
+
+  color: $text-color;
+  border-color: $border;
+
+  &:hover {
+    color: $text-color-hover;
+    @if $btn-enable-gradients {
+      background: $hover-background linear-gradient($btn-gradient-angle, mix(#fff, $hover-background, 25%), $hover-background) repeat-x;
+    } @else {
+      background-color: $hover-background;
+      @if ($btn-glass-effect) {
+        &:after {
+          left: 120%;
+          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+      }
+    }
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $whiteColor;
+    background-color: darken($themeColorTwo, 30%);
+    border-color: darken($themeColorTwo, 30%);
+    cursor: not-allowed;
+
+    &:after {
+      content: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    color: $whiteColor;
+    background-color: lighten($active-background, 5%);
+    border-color: lighten($active-background, 5%);
+
+    @if ($btn-glass-effect) {
+      color: $whiteColor;
+      text-shadow: 3px 2px 6px rgba($blackColor, 0.7);
+      background-color: lighten($active-background, 10%);
+      border-color: lighten($active-background, 10%);
+      &:after {
+        background: rgba(255, 255, 255, 0.75);
+        left: 0;
+        transform: rotate(0deg);
+        width: 100%;
+        transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+    @if $btn-enable-gradients {
+      background-image: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+.btn-outline-one {
+  /* background transparent */
+  $hover-background: $themeColorOne;
+  $active-background: lighten($themeColorOne, 20%);
+  $text-color: $themeColorOne;
+  $text-color-hover: $whiteColor;
+  $border: $themeColorOne;
+  $hover-border: $themeColorOne;
+  $active-border: lighten($themeColorOne, 20%);
+
   background-color: rgba(255, 255, 255, 0);
-  color: $btn-outline-primary-color;
+  color: $text-color;
   border-color: $border;
   box-shadow: none;
 
   &:hover {
-    color: $btn-outline-primary-color-hover;
+    color: $text-color-hover;
     @if $btn-enable-gradients {
       background: $hover-background linear-gradient($btn-gradient-angle, mix(#fff, $hover-background, 15%), $hover-background) repeat-x;
     } @else {
@@ -339,9 +340,9 @@ fieldset:disabled a.btn {
 
   &.disabled,
   &:disabled {
-    color: $primary_color_two;
-    background-color: darken($themeColorTwo, 50%);
-    border-color: darken($themeColorTwo, 50%);
+    color: $whiteColor;
+    background-color: lighten($themeColorOne, 50%);
+    border-color: lighten($themeColorOne, 50%);
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -360,22 +361,23 @@ fieldset:disabled a.btn {
   }
 }
 
-.btn-outline-secondary {
-  $btn-outline-primary-color: $themeColorOne;
-  $btn-outline-primary-color-hover: $primary_color_two;
-  $border: $themeColorOne;
-  $hover-background: $themeColorOne;
-  $hover-border: $themeColorOne;
-  $active-background: lighten($themeColorOne, 20%);
-  $active-border: lighten($themeColorOne, 20%);
+.btn-outline-two {
+  /* background transparent */
+  $hover-background: $themeColorTwo;
+  $text-color: $themeColorTwo;
+  $text-color-hover: white;
+  $active-background: darken($themeColorTwo, 15%);
+  $border: $themeColorTwo;
+  $hover-border: $themeColorTwo;
+  $active-border: darken($themeColorTwo, 15%);
 
   background-color: rgba(255, 255, 255, 0);
-  color: $btn-outline-primary-color;
+  color: $text-color;
   border-color: $border;
   box-shadow: none;
 
   &:hover {
-    color: $btn-outline-primary-color-hover;
+    color: $text-color-hover;
     @if $btn-enable-gradients {
       background: $hover-background linear-gradient($btn-gradient-angle, mix(#fff, $hover-background, 15%), $hover-background) repeat-x;
     } @else {
@@ -391,9 +393,9 @@ fieldset:disabled a.btn {
 
   &.disabled,
   &:disabled {
-    color: $primary_color_two;
-    background-color: lighten($themeColorOne, 50%);
-    border-color: lighten($themeColorOne, 50%);
+    color: $whiteColor;
+    background-color: darken($themeColorTwo, 50%);
+    border-color: darken($themeColorTwo, 50%);
   }
 
   &:not(:disabled):not(.disabled):active,

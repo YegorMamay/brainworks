@@ -161,7 +161,7 @@
 
   &__list {
     @extend %reset-list;
-    background: $primary_color_two;
+    background: $whiteColor;
     box-shadow: $shadow;
     position: absolute;
     padding: 15px 10px;
@@ -183,7 +183,7 @@
       }
 
       &__link {
-        color: $primary_color_one;
+        color: $blackColor;
         display: block;
         width: 100%;
         text-align: center;

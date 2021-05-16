@@ -19,7 +19,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
 // FormCraft
 html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
     @extend .btn;
-    @extend .btn-secondary;
+    @extend .btn-one;
 }
 
 html .formcraft-css .fc-form .form-element .form-element-html input[type=color],

@@ -114,7 +114,7 @@ if( is_admin() && ! class_exists('Term_Meta_Image') ){
                     <a class="termeta_img_button" href="#">
                         <img src="<?php echo self::$add_img_url ?>" alt="">
                     </a>
-                    <input type="button" class="button button-secondary termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
+                    <input type="button" class="button button-one termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
                 </div>
 
                 <input type="hidden" id="term_imgid" name="term_imgid" value="">
@@ -139,7 +139,7 @@ if( is_admin() && ! class_exists('Term_Meta_Image') ){
                         <a class="termeta_img_button" href="#">
                             <?php echo '<img src="'. $image_url .'" alt="">'; ?>
                         </a>
-                        <input type="button" class="button button-secondary termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
+                        <input type="button" class="button button-one termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
                     </div>
 
                     <input type="hidden" id="term_imgid" name="term_imgid" value="<?php echo $image_id; ?>">

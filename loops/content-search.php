@@ -16,7 +16,7 @@
             <div class="vh-xs-2"></div>
             <p><?php the_excerpt(); ?></p>
             <div class="vh-xs-2"></div>
-            <a class="btn btn-secondary btn-sm" href="<?php the_permalink(); ?>"><?php _e('Go', 'brainworks') ?></a>   
+            <a class="btn btn-one btn-sm" href="<?php the_permalink(); ?>"><?php _e('Go', 'brainworks') ?></a>
         </div>
     </article>
     <div class="vh-xs-2"></div>

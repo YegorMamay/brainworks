@@ -145,6 +145,7 @@
     visibility: hidden;
     text-align: left;
     opacity: 0;
+    box-shadow: $shadow;
 
     &-item {
       .menu-item-has-children-arrow {
