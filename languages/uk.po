@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-25 07:45+0000\n"
-"PO-Revision-Date: 2020-11-25 07:47+0000\n"
+"PO-Revision-Date: 2021-05-18 12:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.4.4; wp-5.5.3"
+"X-Loco-Version: 2.5.2; wp-5.7.2"
 
 #. Name of the template
 #: inc/widgets.php:22
@@ -663,7 +663,7 @@ msgstr "Опубліковано:"
 #: woocommerce/single-product/add-to-cart/simple.php:48
 #: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:30
 msgid "Buy in one click"
-msgstr "Купити одним кліком"
+msgstr "Замовити"
 
 #. Name of the theme
 msgid "BrainWorks WP Theme"
