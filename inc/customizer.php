@@ -791,6 +791,8 @@ function bw_customize_register($wp_customize)
     $wp_customize->add_setting('bw_phone2', array());
     $wp_customize->add_setting('bw_phone3', array());
     $wp_customize->add_setting('bw_phone4', array());
+    $wp_customize->add_setting('bw_phone5', array());
+    $wp_customize->add_setting('bw_phone6', array());
 
     $wp_customize->add_control('bw_phone1', array(
         'label' => __('Phone №1', 'brainworks'),
@@ -819,6 +821,20 @@ function bw_customize_register($wp_customize)
         'settings' => 'bw_phone4',
         'type' => 'tel',
     ));
+
+	$wp_customize->add_control('bw_phone5', array(
+		'label' => __('Phone №5', 'brainworks'),
+		'section' => 'bw_phones',
+		'settings' => 'bw_phone5',
+		'type' => 'tel',
+	));
+
+	$wp_customize->add_control('bw_phone6', array(
+		'label' => __('Phone №6', 'brainworks'),
+		'section' => 'bw_phones',
+		'settings' => 'bw_phone6',
+		'type' => 'tel',
+	));
 
 	// Section Sticky Header
 	$wp_customize->add_section('bw_sticky_header', array(

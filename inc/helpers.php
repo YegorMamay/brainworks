@@ -352,6 +352,8 @@ if (!function_exists('get_phones')) {
             get_theme_mod('bw_phone2'),
             get_theme_mod('bw_phone3'),
             get_theme_mod('bw_phone4'),
+            get_theme_mod('bw_phone5'),
+            get_theme_mod('bw_phone6'),
         ];
 
         $phones = array_filter($_phones, function ($value) {

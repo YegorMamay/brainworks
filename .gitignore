@@ -8,6 +8,7 @@ bower_components
 *.map
 *.po~
 *.pot~
+*.lock
 style.min.css
 brainworks.min.js
 package-lock.json
