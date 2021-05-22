@@ -17,10 +17,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
 // popup-maker end
 
 // FormCraft
-html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
-    @extend .btn;
-    @extend .btn-one;
-}
+//html .formcraft-css .fc-form .form-element .submit-cover .submit-button {
+//    @extend .btn;
+//    @extend .btn-one;
+//}
 
 html .formcraft-css .fc-form .form-element .form-element-html input[type=color],
 html .formcraft-css .fc-form .form-element .form-element-html input[type=date], 
