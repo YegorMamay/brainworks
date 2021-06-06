@@ -90,7 +90,8 @@
         &::after {
           content: "";
           position: absolute;
-          top: 21px;
+          top: 50%;
+          transform: translateY(-50%);
           right: 8px;
           border: 5px solid $menuFontColor;
           border-color: $menuFontColor transparent transparent transparent;
