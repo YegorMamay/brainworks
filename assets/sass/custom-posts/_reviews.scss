@@ -35,6 +35,10 @@ $review-next: '\00bb'; // &raquo;
 
     &-item {
         margin-bottom: 30px;
+
+        .row {
+            align-items: center;
+        }
     }
 
     &-client {

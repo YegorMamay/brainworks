@@ -128,7 +128,7 @@ $formBgColor: lighten($themeColorOne, 75%);
 // FOOTER
 $footerBgColor: $themeColorOne;
 $footerFontColor: $whiteColor;
-$footerLinkColorActive: darken($footerFontColor, 5%);
+$footerLinkColorActive: $themeColorTwo;
 
 // Pagination
 $paginationTextColor: $blackColor;

@@ -96,7 +96,11 @@ em {
     list-style: none;
 }
 
-.brand-color {
+.brand-color-one {
+    color: $themeColorOne;
+}
+
+.brand-color-two {
     color: $themeColorTwo;
 }
 
