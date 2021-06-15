@@ -173,7 +173,7 @@ em {
 }
 
 .center-on-mobile {
-    @media #{$desktop-max} {
+    @media #{$tablet-max} {
             text-align: center !important;
     } 
 }
