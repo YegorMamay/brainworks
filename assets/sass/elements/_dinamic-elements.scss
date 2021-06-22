@@ -241,6 +241,22 @@
     &:hover, &:active, &:focus {
       color: $iconColorActive;
     }
+
+      .fa-skype {
+        color: #0078d7
+      }
+
+      .fa-viber {
+        color: #665CAC
+      }
+
+      .fa-whatsapp {
+        color: #25D366
+      }
+
+      .fa-telegram-plane {
+        color: #0088CC
+      }
   }
 }
 
@@ -293,7 +309,6 @@
 }
 
 //Show/Hide content text button style
-
 .sh-link {
   display: flex;
   flex-direction: column;
@@ -340,4 +355,12 @@
       color: darken($themeColorTwo, 10%);
     }
   }
+}
+
+.nav-wrapper.language-switcher .nav {
+    background: $whiteColor;
+
+    img {
+        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+    }
 }

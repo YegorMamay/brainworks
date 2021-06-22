@@ -118,9 +118,8 @@
                         ?>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="nav-wrapper">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                    <div class="nav-wrapper language-switcher">
                         <?php if (has_nav_menu('language-switcher')) { ?>
                             <nav class="nav js-menu">
                                 <button type="button" tabindex="0"
@@ -146,6 +145,9 @@
                             <?php } ?>
                         </div>
                     </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                    <?php echo do_shortcode('[bw-messengers]'); ?>
                 </div>
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
 <!-- Dropdown phones -->
