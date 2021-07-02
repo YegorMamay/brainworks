@@ -94,7 +94,7 @@ $titleFontColor: $themeColorOne;
 $titleFontColorActive: lighten($titleFontColor, 10%);
 
 // LINKS
-$linkFontColor: $blackColor;
+$linkFontColor: $bodyFontColor;
 $linkFontColorActive: lighten($linkFontColor, 20%);
 
 // TABLE
