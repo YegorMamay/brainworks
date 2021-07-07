@@ -50,7 +50,7 @@ ul.products li.product {
             box-shadow: none;
           }
 
-          .woocommerce-loop-product__title {
+          .woocommerce-loop-product__title, .woocommerce-loop-category__title {
             line-height: 1.1;
             @include responsive-font-size(18px, 24px, 480px, 1200px, 20px);
           }
@@ -60,6 +60,10 @@ ul.products li.product {
             font-size: 20px;
             line-height: 1;
           }
+
+            .count {
+                color: $bodyFontColor;
+            }
         }
       }
     }
