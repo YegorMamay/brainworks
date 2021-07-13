@@ -169,6 +169,13 @@ table.variations {
   margin-bottom: 20px;
 }
 
+//Tabs
+.tabs {
+    .active {
+        color: $themeColorTwo;
+    }
+}
+
 //xs 544
 @media #{$mobile-max} {
   .woocommerce {

@@ -2,6 +2,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     text-align: center;
+    background: $tableBgColor;
 }
 
 tr > th:first-child,
