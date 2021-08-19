@@ -60,11 +60,6 @@ function bw_wp_default_styles($styles)
 {
     $editor = get_option('classic-editor-replace');
 
-    if (empty($editor) || $editor === 'classic') {
-	    $styles->remove('wp-block-library-theme');
-	    $styles->remove('wp-block-library');
-	    $styles->remove('wp-blocks');
-    }
 }
 
 add_action('wp_default_styles', 'bw_wp_default_styles', 11);
