@@ -1,0 +1,43 @@
+// TI WooCommerce Wishlist
+ul.products {
+    li.product {
+        .tinv-wraper.tinv-wishlist {
+            position: absolute;
+        }
+
+        .tinvwl_add_to_wishlist_button {
+            margin-top: 0;
+        }
+    }
+}
+// TI WooCommerce Wishlist END
+
+
+// Product carousel
+.ywcps-nav {
+    .ywcps-nav-prev {
+        left: -35px !important;
+    }
+
+    .ywcps-nav-next {
+        right: -35px !important;
+    }
+
+    span {
+        border-radius: 15px;
+        width: 30px !important;
+        top: 27% !important;
+    }
+}
+
+.woocommerce .ywcps-wrapper .owl-item li.product {
+    width: 100% !important;
+    margin-bottom: 0;
+}
+
+.woocommerce .ywcps-wrapper ul.products {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+// Product carousel End

@@ -23,7 +23,7 @@ em {
     }
     
     &-white {
-        color: #fff;
+        color: $whiteColor;
     }
 
     &-center {
@@ -142,7 +142,7 @@ em {
         margin-right: 5px;
         border-radius: 50%;
         border: 2px solid #ccc;
-        border-top-color: #363636;
+        border-top-color: $themeColorOne;
         animation: spin 1s linear infinite;
     }
 }

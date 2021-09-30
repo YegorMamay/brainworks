@@ -9,9 +9,9 @@ $review-content-color: $bodyFontColor !default;
 $review-content-font-size: 16px !default;
 
 $review-social-size: 25px !default;
-$review-social-color: #fff !default;
+$review-social-color: $whiteColor !default;
 $review-social-background: $themeColorTwo !default;
-$review-social-hover-color: #fff !default;
+$review-social-hover-color: $whiteColor !default;
 $review-social-hover-background: $themeColorOne !default;
 
 $review-arrow-size: 32px !default;
@@ -20,11 +20,11 @@ $review-arrow-font-size: 24px !default;
 $review-arrow-font-weight: bold !default;
 $review-arrow-background: transparent !default;
 $review-arrow-border-width: 1px !default;
-$review-arrow-border-color: lighten($themeColorOne, 60%) !default;
+$review-arrow-border-color: lighten($themeColorTwo, 40%) !default;
 $review-arrow-radius: 50% !default;
-$review-arrow-hover-color: $themeColorTwo !default;
-$review-arrow-hover-border-color: $themeColorTwo !default;
-$review-arrow-hover-background: $themeColorOne !default;
+$review-arrow-hover-color: $whiteColor !default;
+$review-arrow-hover-border-color: lighten($themeColorTwo, 10%) !default;
+$review-arrow-hover-background: $themeColorTwo !default;
 $review-prev: '\00ab'; // &laquo;
 $review-next: '\00bb'; // &raquo;
 
@@ -68,7 +68,7 @@ $review-next: '\00bb'; // &raquo;
         vertical-align: middle;
         width: $review-social-size;
         height: $review-social-size;
-        font-size: 14px;
+        font-size: 15px;
         line-height: $review-social-size;
         border-radius: 50%;
         color: $review-social-color;
