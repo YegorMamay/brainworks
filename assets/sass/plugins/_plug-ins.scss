@@ -41,6 +41,11 @@ html .formcraft-css .fc-form .form-element .form-element-html textarea,
 html .formcraft-css .fc-form {
     border-radius: $borderRadius;
 }
+
+html .formcraft-css .fc-form .form-element .error {
+    background: transparent;
+    color: black;
+}
 // FormCraft end
 
 
