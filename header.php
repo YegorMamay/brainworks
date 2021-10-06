@@ -118,7 +118,7 @@
                         ?>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 d-flex justify-content-between align-items-center">
                     <div class="nav-wrapper language-switcher">
                         <?php if (has_nav_menu('language-switcher')) { ?>
                             <nav class="nav js-menu">
@@ -135,6 +135,7 @@
                                 )); ?>
                             </nav>
                         <?php } ?>
+                    </div>
                         <div class="woo-cart woo-cart-popup-wrapper">
                             <?php if ( class_exists( 'WooCommerce' ) ) { ?>
                                 <?php echo woocommerce_cart(); ?>
@@ -144,7 +145,6 @@
                                 </span>
                             <?php } ?>
                         </div>
-                    </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     <?php echo do_shortcode('[bw-messengers]'); ?>

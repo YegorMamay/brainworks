@@ -270,7 +270,7 @@
   }
 
   &-item {
-    margin: 0 5px;
+    margin: 0 3px;
 
     a {
       display: block;
@@ -282,7 +282,7 @@
       }
 
       img {
-        height: 15px;
+        //height: 15px;
       }
     }
   }
@@ -306,6 +306,19 @@
       text-align: center;
     }
   }
+}
+
+.nav-wrapper.language-switcher .nav {
+    background: lighten($grayColor, 10%);
+    border: 1px solid $grayColor;
+
+    img {
+        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-item-has-children::after {
+        border-color: $themeColorOne transparent transparent transparent;
+    }
 }
 
 //Show/Hide content text button style
@@ -355,12 +368,4 @@
       color: darken($themeColorTwo, 10%);
     }
   }
-}
-
-.nav-wrapper.language-switcher .nav {
-    background: $whiteColor;
-
-    img {
-        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
-    }
 }

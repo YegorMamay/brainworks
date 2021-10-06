@@ -11,15 +11,26 @@
     background-color: lighten($footerBgColor, 7%);
     color: $footerFontColor;
     
-    .widget-item div {
-        padding-bottom: 20px;
+    .widget-item {
+        .phone-item {
+            display: block;
+        }
+
+        div {
+            padding-bottom: 20px;
+        }
     }
     
+
     ul {
         padding-left: 0;
         list-style: none; 
     }
     
+    .menu-link, .sub-menu-link, .phone-number {
+        color: $footerFontColor;
+    }
+
     @media #{$mobile-max} {
         text-align: center;
     }

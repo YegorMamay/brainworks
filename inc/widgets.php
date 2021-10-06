@@ -62,7 +62,7 @@ function bw_widgets_init()
         'name' => __('Footer', 'brainworks'),
         'id' => 'footer-widget-area',
         'description' => __('The footer widget area', 'brainworks'),
-        'before_widget' => '<div class="widget-item %1$s %2$s col-sm-6 col-md-3">',
+        'before_widget' => '<div class="widget-item %1$s %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h6 class="widget-title">',
         'after_title' => '</h6>',
