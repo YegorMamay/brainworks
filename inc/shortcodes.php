@@ -217,7 +217,9 @@ if (!function_exists('bw_html_sitemap')) {
             'popup',
             'reviews',
             'sn_catalogs',
-            'product'
+            'product',
+            'br_product_filter',
+            'br_filters_group'
         );
 
         $post_types = get_post_types($args, 'objects');
@@ -564,7 +566,6 @@ if (!function_exists('bw_custom_register_shortcode')) {
     add_shortcode('bw-custom-register', 'bw_custom_register_shortcode');
 }
 
-
 if (!function_exists('bw_custom_auth_shortcode')) {
     function bw_custom_auth_shortcode($atts)
     {
@@ -746,8 +747,6 @@ if (!function_exists('sn_catalog_shortcode')) {
         wp_reset_postdata();        
     }
 }
-
-
 
 add_shortcode('sn_cat', 'cat_and_child_id');
 

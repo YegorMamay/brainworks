@@ -63,4 +63,12 @@ html .formcraft-css .fc-form .form-element .error {
     z-index: 30 !important;
 }
 
+//Woo product filter
+.bapf_sfilter .bapf_body>ul {
+    padding-left: 0;
+}
+
+.bapf_sfilter .bapf_hascolarr, .bapf_sfilter .bapf_hasdesc {
+    font-size: 20px;
+}
 
