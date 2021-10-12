@@ -7,11 +7,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
-  <?php /* If there is plugin LayerSlider
+    <?php /* If there is plugin LayerSlider
    <link data-minify="0" rel="preload" href="/wp-content/plugins/LayerSlider/assets/static/layerslider/skins/fullwidth/skin.css" as="style">
    */
     ?>
-      
+
     <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-brands-400.woff2'); ?>" crossorigin>
     <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-light-300.woff2'); ?>" crossorigin>
     <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
@@ -19,7 +19,7 @@
     <?php if(is_plugin_active($plugin)){ ?>
     <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
     <?php } ?>
-       
+
     <title>
         <?php
         if (is_front_page()) {
@@ -91,23 +91,20 @@
     ">
     <meta name="twitter:image" content="<?php echo esc_url(get_the_post_thumbnail_url()); ?>">
     <!-- OpenGraph end-->
-    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>"
-          type="image/x-icon">
-    <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>"
-          type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="top">
 
-<?php wp_body_open(); ?>
-<div class="wrapper js-container"><!--Do not delete!-->
+    <?php wp_body_open(); ?>
+    <div class="wrapper js-container"><!--Do not delete this openning div!-->
 
-    <header class="header <?php sticky_header(); ?>">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                    <div class="logo">
-                        <?php get_default_logo_link([
+        <header class="header <?php sticky_header(); ?>">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <div class="logo">
+                    <?php get_default_logo_link([
                             'name' => 'logo.svg',
                             'options' => [
                                 'class' => 'logo-img',
@@ -116,71 +113,68 @@
                             ],
                         ])
                         ?>
-                    </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 d-flex justify-content-between align-items-center">
-                    <div class="nav-wrapper language-switcher">
-                        <?php if (has_nav_menu('language-switcher')) { ?>
-                            <nav class="nav js-menu">
-                                <button type="button" tabindex="0"
-                                        class="menu-item-close menu-close js-menu-close"></button>
-                                <?php wp_nav_menu(array(
-                                    'theme_location' => 'language-switcher',
-                                    'container' => false,
-                                    'menu_class' => 'menu-container',
-                                    'menu_id' => '',
-                                    'fallback_cb' => 'wp_page_menu',
-                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                    'depth' => 3
-                                )); ?>
-                            </nav>
-                        <?php } ?>
-                    </div>
-                        <div class="woo-cart woo-cart-popup-wrapper">
-                            <?php if ( class_exists( 'WooCommerce' ) ) { ?>
-                                <?php echo woocommerce_cart(); ?>
-                                <?php echo woocommerce_cart_popup(); ?>
-                                <span id="modal-cart" class="cart-caption">
-                                    <?php echo woocommerce_get_total_price(); ?>
-                                </span>
-                            <?php } ?>
-                        </div>
+
+                <div class="nav-wrapper language-switcher">
+                    <?php if (has_nav_menu('language-switcher')) { ?>
+                    <nav class="nav js-menu">
+                        <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'language-switcher',
+                            'container' => false,
+                            'menu_class' => 'menu-container',
+                            'menu_id' => '',
+                            'fallback_cb' => 'wp_page_menu',
+                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'depth' => 3
+                        )); ?>
+                    </nav>
+                    <?php } ?>
                 </div>
-                <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                    <?php echo do_shortcode('[bw-messengers]'); ?>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-<!-- Dropdown phones -->
-<?php if (has_phones()) { ?>
-    <ul class="phone-dropdown">
-        <li class="phone-dropdown__item">
-            <?php foreach(get_phones() as $key => $phone) { ?>
-            <?php if ($key === key(get_phones())) { ?>
-            <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
-                <?php echo trim($phone); ?>
-            </a>
-            <button type="button" class="phone-dropdown__button js-dropdown"></button>
-            <ul class="phone-dropdown__list js-phone-list">
-                <?php  } else { ?>
+
+                <?php echo do_shortcode('[bw-messengers]'); ?>
+
+                <!-- Dropdown phones -->
+                <?php if (has_phones()) { ?>
+                <ul class="phone-dropdown">
                     <li class="phone-dropdown__item">
-                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
+                        <?php foreach(get_phones() as $key => $phone) { ?>
+                        <?php if ($key === key(get_phones())) { ?>
+                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
                             <?php echo trim($phone); ?>
                         </a>
+                        <button type="button" class="phone-dropdown__button js-dropdown"></button>
+                        <ul class="phone-dropdown__list js-phone-list">
+                            <?php  } else { ?>
+                            <li class="phone-dropdown__item">
+                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
+                                    <?php echo trim($phone); ?>
+                                </a>
+                            </li>
+                            <?php } ?>
+                            <?php } ?>
+                        </ul>
                     </li>
+                </ul>
                 <?php } ?>
-                <?php } ?>
-            </ul>
-        </li>
-    </ul>
-<?php } ?>
-<!-- Dropdown phones -->
+                <!-- Dropdown phones -->
+
+                <div class="woo-cart woo-cart-popup-wrapper">
+                    <?php if ( class_exists( 'WooCommerce' ) ) { ?>
+                    <?php echo woocommerce_cart(); ?>
+                    <?php echo woocommerce_cart_popup(); ?>
+                    <span id="modal-cart" class="cart-caption">
+                        <?php echo woocommerce_get_total_price(); ?>
+                    </span>
+                    <?php } ?>
                 </div>
-            </div>
+
+            </div> <!-- Container END -->
 
             <?php if (has_nav_menu('main-nav')) { ?>
-                <nav class="nav js-menu">
-                    <button type="button" tabindex="0"
-                            class="menu-item-close menu-close js-menu-close"></button>
+            <nav class="nav js-menu">
+                <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+                <div class="container">
                     <?php wp_nav_menu(array(
                         'theme_location' => 'main-nav',
                         'container' => false,
@@ -190,49 +184,61 @@
                         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                         'depth' => 3
                     )); ?>
-                </nav>
+                </div>
+            </nav>
             <?php } ?>
-        </div>
+
     </header>
 
     <!-- Mobile menu start-->
     <div class="nav-mobile-header">
         <div class="logo"><?php get_default_logo_link(); ?></div>
-<!-- Dropdown phones -->
-<?php if (has_phones()) { ?>
-    <ul class="phone-dropdown">
-        <li class="phone-dropdown__item">
-            <?php foreach(get_phones() as $key => $phone) { ?>
-            <?php if ($key === key(get_phones())) { ?>
-            <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
-                <?php echo trim($phone); ?>
-            </a>
-            <button type="button" class="phone-dropdown__button js-dropdown"></button>
-            <ul class="phone-dropdown__list js-phone-list">
-                <?php  } else { ?>
+        <!-- Dropdown phones -->
+        <?php if (has_phones()) { ?>
+        <ul class="phone-dropdown">
+            <li class="phone-dropdown__item">
+                <?php foreach(get_phones() as $key => $phone) { ?>
+                <?php if ($key === key(get_phones())) { ?>
+                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
+                    <?php echo trim($phone); ?>
+                </a>
+                <button type="button" class="phone-dropdown__button js-dropdown"></button>
+                <ul class="phone-dropdown__list js-phone-list">
+                    <?php  } else { ?>
                     <li class="phone-dropdown__item">
                         <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
                             <?php echo trim($phone); ?>
                         </a>
                     </li>
-                <?php } ?>
-                <?php } ?>
-            </ul>
-        </li>
-    </ul>
-<?php } ?>
-<!-- Dropdown phones -->
+                    <?php } ?>
+                    <?php } ?>
+                </ul>
+            </li>
+        </ul>
+        <?php } ?>
+        <!-- Dropdown phones -->
         <button class="hamburger js-hamburger" type="button" tabindex="0">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
         </button>
     </div>
     <?php if (has_nav_menu('main-nav')) { ?>
-        <nav class="nav js-menu hide-on-desktop">
-            <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+    <nav class="nav js-menu hide-on-desktop">
+        <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+        <?php wp_nav_menu(array(
+            'theme_location' => 'main-nav',
+            'container' => false,
+            'menu_class' => 'menu-container',
+            'menu_id' => '',
+            'fallback_cb' => 'wp_page_menu',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth' => 3
+        )); ?>
+        <?php if (has_nav_menu('language-switcher')) { ?>
+        <div class="mobile-language">
             <?php wp_nav_menu(array(
-                'theme_location' => 'main-nav',
+                'theme_location' => 'language-switcher',
                 'container' => false,
                 'menu_class' => 'menu-container',
                 'menu_id' => '',
@@ -240,27 +246,16 @@
                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'depth' => 3
             )); ?>
-            <?php if (has_nav_menu('language-switcher')) { ?>
-                <div class="mobile-language">
-                    <?php wp_nav_menu(array(
-                        'theme_location' => 'language-switcher',
-                        'container' => false,
-                        'menu_class' => 'menu-container',
-                        'menu_id' => '',
-                        'fallback_cb' => 'wp_page_menu',
-                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 3
-                    )); ?>
-                </div>
-            <?php } ?>
-            <div class="mobile-phones">
-                <?php echo do_shortcode('[bw-phone]'); ?>
-            </div>
-            <div class="vh-xs-2"></div>
-            <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
-        </nav>
+        </div>
+        <?php } ?>
+        <div class="mobile-phones">
+            <?php echo do_shortcode('[bw-phone]'); ?>
+        </div>
+        <div class="vh-xs-2"></div>
+        <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
+    </nav>
     <?php } ?>
     <!-- Mobile menu end-->
     <?php if ( class_exists( 'WooCommerce' ) ) { ?>
-    <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>'/>
+    <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>' />
     <?php } ?>
