@@ -439,7 +439,7 @@ if (!function_exists('bw_advert_shortcode')) {
                 );
 
                 $headline = sprintf(
-                    '<h3 class="%s-headline"><a href="%s">%s</a></h3>',
+                    '<h5 class="%s-headline"><a href="%s">%s</a></h5>',
                     $basic_class,
                     get_the_permalink(),
                     get_the_title()
