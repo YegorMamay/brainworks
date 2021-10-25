@@ -1,7 +1,7 @@
-  $mobile-max: "(max-width: 574px)"; //xs
-    $tablet-max: "(max-width: 767px)"; //sm
+  $mobile-max: "(max-width: 767px)"; //xs
+    $tablet-max: "(max-width: 769px)"; //sm
    $laptop-max: "(max-width: 1023px)"; //md
-$desktop-max: "(max-width: 1199px)"; //lg - стили будут применены, если область просмотра не больше 1199 пикселей
+$desktop-max: "(max-width: 1199px)"; //lg - стили будут применены, если область просмотра 1199 пикселей и меньше
   $screen-max: "(max-width: 1365px)"; //xl
 
 @media #{$mobile-max} {} //xs > 576
@@ -13,7 +13,7 @@ $desktop-max: "(max-width: 1199px)"; //lg - стили будут примене
 
 $mobile-min: "(min-width: 575px)"; //xs 
 $tablet-min: "(min-width: 768px)"; //sm
-$laptop-min: "(min-width: 1024px)"; //md - стили будут применены, если область просмотра более 1024
+$laptop-min: "(min-width: 1024px)"; //md - стили будут применены, если область просмотра 1024 и более
 $desktop-min: "(min-width: 1200px)"; //lg
 $screen-min: "(min-width: 1366px)"; //xl
 
@@ -21,4 +21,4 @@ $screen-min: "(min-width: 1366px)"; //xl
 @media #{$tablet-min} {} //sm - 768
 @media #{$laptop-min} {} //md - 1024
 @media #{$desktop-min} {} //lg - 1200
-@media #{$screen-min} {} //xl 1366 
+@media #{$screen-min} {} //xl 1366

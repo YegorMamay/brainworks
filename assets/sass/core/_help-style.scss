@@ -160,10 +160,30 @@ em {
     }
 }
 
+.center-on-mobile {
+    @media #{$mobile-max} {
+            text-align: center !important;
+    }
+}
+
+.center-on-tablet {
+    @media #{$tablet-max} {
+            text-align: center !important;
+    }
+}
+
 .hide-on-mobile {
     display: block !important; 
     
     @media #{$mobile-max} {
+        display: none !important;
+    }
+}
+
+.hide-on-tablet {
+    display: block !important;
+
+    @media #{$tablet-max} {
         display: none !important;
     }
 }
@@ -176,8 +196,4 @@ em {
     }
 }
 
-.center-on-mobile {
-    @media #{$tablet-max} {
-            text-align: center !important;
-    } 
-}
+

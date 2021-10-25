@@ -1,7 +1,7 @@
 $btn-enable-shadows: true;
 $btn-enable-gradients: false;
 $btn-gradient-angle: -90deg;
-$btn-border-radius: 0px;
+$btn-border-radius: $borderRadius;
 
 //Animation effects
 $btn-glass-effect: true;

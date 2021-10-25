@@ -33,6 +33,10 @@
 
     @media #{$mobile-max} {
         text-align: center;
+
+        .container {
+            flex-direction: column;
+        }
     }
 }
 
