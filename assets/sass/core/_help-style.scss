@@ -73,6 +73,10 @@ em {
     &-vertical {
         transform: rotate(-90deg);
     }
+
+    &-transparent {
+        color: transparent;
+    }
 }
 
 .font-one {
