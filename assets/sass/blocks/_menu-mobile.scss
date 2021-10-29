@@ -23,7 +23,6 @@
 
     img {
       max-height: 50px;
-      width: auto;
     }
 
     .hamburger {
@@ -50,10 +49,10 @@
     will-change: transform;
     transform: translateX(100%);
     transition: transform .2s ease-out;
-    box-shadow: $shadow;
 
     &.is-active {
       transform: translateX(0%);
+      box-shadow: $shadow;
     }
 
     .menu-container {

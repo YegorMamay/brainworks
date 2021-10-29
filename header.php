@@ -112,7 +112,7 @@
                                 'height' => 50,
                             ],
                         ])
-                        ?>
+                    ?>
                 </div>
 
                 <div class="nav-wrapper language-switcher">
