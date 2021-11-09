@@ -50,6 +50,27 @@ function bw_enqueues()
 
 add_action('wp_enqueue_scripts', 'bw_enqueues', 100);
 
+// Квиз старт
+function bw_enqueues_kviz()
+{
+
+    wp_register_script('kviz', get_template_directory_uri() . '/kviz/js/kviz.js', ['jquery'],
+        null, true);
+    wp_enqueue_script('kviz');
+    wp_localize_script( 'kviz', 'kvizVariable', array(
+      'template_url' => get_template_directory_uri(),
+    ) );
+
+    require get_template_directory() . '/kviz/kviz-shortcode.php';
+}
+
+add_action('wp_enqueue_scripts', 'bw_enqueues_kviz', 100);
+// Квиз енд
+
+
+
+
+
 /**
  * WP Default Styles
  *
