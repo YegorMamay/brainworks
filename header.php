@@ -134,6 +134,16 @@
 
                 <?php echo do_shortcode('[bw-messengers]'); ?>
 
+                <div class="woo-cart woo-cart-popup-wrapper">
+                    <?php if ( class_exists( 'WooCommerce' ) ) { ?>
+                    <?php echo woocommerce_cart(); ?>
+                    <?php echo woocommerce_cart_popup(); ?>
+                    <span id="modal-cart" class="cart-caption">
+                        <?php echo woocommerce_get_total_price(); ?>
+                    </span>
+                    <?php } ?>
+                </div>
+
                 <!-- Dropdown phones -->
                 <?php if (has_phones()) { ?>
                 <ul class="phone-dropdown">
@@ -158,16 +168,6 @@
                 </ul>
                 <?php } ?>
                 <!-- Dropdown phones -->
-
-                <div class="woo-cart woo-cart-popup-wrapper">
-                    <?php if ( class_exists( 'WooCommerce' ) ) { ?>
-                    <?php echo woocommerce_cart(); ?>
-                    <?php echo woocommerce_cart_popup(); ?>
-                    <span id="modal-cart" class="cart-caption">
-                        <?php echo woocommerce_get_total_price(); ?>
-                    </span>
-                    <?php } ?>
-                </div>
 
             </div> <!-- Container END -->
 
@@ -253,6 +253,8 @@
         </div>
         <div class="vh-xs-2"></div>
         <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
+        <div class="vh-xs-2"></div>
+        <?php echo do_shortcode('[bw-messengers]'); ?>
     </nav>
     <?php } ?>
     <!-- Mobile menu end-->
