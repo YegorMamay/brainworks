@@ -472,3 +472,10 @@ if (!function_exists('loop_columns')) {
     return 3; // 3 products per row
   }
 }
+
+add_filter( 'kses_allowed_protocols', function ( $protocols ) {
+	$protocols[] = 'skype';
+	$protocols[] = 'viber';
+
+	return $protocols;
+} );

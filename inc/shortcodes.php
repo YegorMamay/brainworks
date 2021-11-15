@@ -175,7 +175,7 @@ if (!function_exists('bw_messengers_shortcode')) {
 	            }
 
                 $link = sprintf(
-                    '<a class="messenger-link messenger-%s" href="%s" target="_blank" aria-label="%s" rel="nofollow">%s</a>',
+                    '<a class="messenger-link messenger-%s" href="%s" target="_blank" aria-label="%s" rel="noopener nofollow">%s</a>',
                     esc_attr($name),
                     esc_attr($tel),
                     esc_attr($messenger['text']),
