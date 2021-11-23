@@ -1,4 +1,3 @@
-
 @-webkit-keyframes slideme {
   0% {
     left: -30px;
@@ -37,11 +36,8 @@
     &-circle {
         width: 30px;
         height: 30px;
-        -webkit-box-shadow: inset 0 2px 5px rgba(86, 117, 139, 0.25);
         box-shadow: inset 0 2px 5px rgba(86, 117, 139, 0.25);
         background-color: #fafafa;
-        -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
         flex-grow: 0;
         position: relative;
         border-radius: 100%;
@@ -50,15 +46,11 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             width: 9px;
             height: 9px;
             background-color: #fafafa;
             border-radius: 100%;
-            -webkit-transition: all 0.9s;
-            -o-transition: all 0.9s;
             transition: all 0.9s;
         }
         &-active:before {
@@ -69,10 +61,7 @@
     &-block {
         height: 7px;
         width: 8%;
-        -webkit-box-shadow: inset -1px 1px 1px rgba(0, 0, 0, 0.05);
         box-shadow: inset -1px 1px 1px rgba(0, 0, 0, 0.05);
-        background: -webkit-repeating-linear-gradient(135deg, #e5e5e5 0px, #e5e5e5 1px, #f2f6f9 2px, #f2f6f9 5px);
-        background: -o-repeating-linear-gradient(135deg, #e5e5e5 0px, #e5e5e5 1px, #f2f6f9 2px, #f2f6f9 5px);
         background: repeating-linear-gradient(-45deg, #e5e5e5 0px, #e5e5e5 1px, #f2f6f9 2px, #f2f6f9 5px);
         position: relative;
         z-index: 17;
@@ -83,8 +72,6 @@
             left: 0;
             width: 0;
             height: 100%;
-            -webkit-transition: all 0.5s;
-            -o-transition: all 0.5s;
             transition: all 0.5s;
         }
         &-active:before {
@@ -98,14 +85,8 @@
         }
     }
     &-item__progress {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         width: 100%;
         margin: 5vh auto 0;
@@ -114,11 +95,7 @@
         -ms-flex-negative: 0;
         flex-shrink: 0;
         width: auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         color: #000000;
         font-family: $fontFamilyOne;
@@ -127,8 +104,6 @@
         text-transform: uppercase;
         line-height: 1;
         margin-right: 50px;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
         align-items: center;
     }
     &-item__number-all {
@@ -137,17 +112,10 @@
         font-weight: 300;
         width: 50px;
         height: 50px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         margin-left: 15px;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-shadow: inset 0px 2px 15px 5px rgba(153, 153, 153, 0.24);
         box-shadow: inset 0px 2px 15px 5px rgba(153, 153, 153, 0.24);
         border-radius: 50%;
     }
@@ -163,19 +131,11 @@
     &__visual {
         position: relative;
         z-index: 17;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
         flex: 1;
         &>div:not(:last-child) {
             flex-grow: 1;
-            display: -webkit-flex;
-            display: -ms-flex;
             display: flex;
             align-items: center;
             .kviz-block {
@@ -194,11 +154,7 @@
 }
 
 
-
-
 // Кнопки
-
-
 .btn-kviz {
     padding: 17px 50px;
     color: $themeColorTwo;
@@ -220,8 +176,6 @@
         &:not(:disabled) {
             background-color: $themeColorTwo;
             color: #ffffff;
-            -webkit-transition: none;
-            -o-transition: none;
             transition: none;
             position: relative;
             &:after {
@@ -230,23 +184,15 @@
                 width: 14px;
                 height: 300px;
                 background: #fff;
-                -webkit-animation-delay: 0.05s;
                 animation-delay: 0.05s;
                 position: absolute;
                 left: -40px;
                 top: -150px;
                 top-animation-timing-function: ease-in-out;
-                -webkit-transition: all 0.1s;
-                -o-transition: all 0.1s;
                 transition: all 0.1s;
-                -webkit-animation-name: slideme;
                 animation-name: slideme;
-                -webkit-animation-duration: 3.5s;
                 animation-duration: 3.5s;
-                -webkit-animation-iteration-count: infinite;
                 animation-iteration-count: infinite;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
         }
@@ -275,8 +221,6 @@
 }
 
 
-
-
 // Квиз
 
 .customRadio {
@@ -286,13 +230,10 @@
         &:checked ~ .customRadio_label .checkbox-item {
             background-color: #cffff8;
             border: none;
-            -webkit-box-shadow: inset 0px 3px 15px 2px rgba(0, 0, 0, 0.13);
             box-shadow: inset 0px 3px 15px 2px rgba(0, 0, 0, 0.13);
         }
         &:checked ~ .customRadio_label .customRadio_label-cirkle:after,
         &:checked ~ .customRadio_label .checkbox-item:after {
-            -webkit-transform: translate(-50%, -50%) scale(1);
-            -ms-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
         }
         &:checked ~ .customRadio_label span {
@@ -306,11 +247,7 @@
         font-weight: 300;
         font-family: $fontFamilyOne;
         cursor: pointer;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         padding: 20px;
         text-transform: uppercase;
@@ -319,14 +256,10 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            -webkit-transform: translate(-50%, -50%) scale(0);
-            -ms-transform: translate(-50%, -50%) scale(0);
             transform: translate(-50%, -50%) scale(0);
               width: 19px;
               height: 19px;
               background-color: #000;
-            -webkit-transition: all 0.4s;
-            -o-transition: all 0.4s;
             transition: all 0.4s;
         }
     }
@@ -338,10 +271,7 @@
         border: 2px solid #4e4c4c;
         display: inline-block;
         margin-right: 15px;
-        -webkit-transition: all 0.4s;
-        -o-transition: all 0.4s;
         transition: all 0.4s;
-        -ms-flex-negative: 0;
     }
     &__img-title {
         width: calc(100% - 43px);
@@ -364,8 +294,6 @@
     margin: 60px 0;
     &__btn-block {
         margin: 45px 0;
-        display: -webkit-flex;
-        display: -ms-flex;
         display: flex;
         align-items: center;
         width: 100%;
@@ -384,8 +312,6 @@
             margin-bottom: 60px;
         }
         &__content {
-            display: -webkit-flex;
-            display: -ms-flex;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -398,8 +324,6 @@
             width: 63%;
             &.two-col {
                 width: 100%;
-                display: -webkit-flex;
-                display: -ms-flex;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
@@ -413,7 +337,7 @@
             width: 35%;
         }
         &__elem-radio {
-            box-shadow: 0px 4px 6px 0px rgb(0 0 0 / 40%);
+            box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.4);
             width: 100%;
             cursor: pointer;
             // padding: 10px;
@@ -441,8 +365,6 @@
             font-size: 20px;
         }
         &__form {
-            display: -webkit-flex;
-            display: -ms-flex;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -460,8 +382,7 @@
                 position: relative;
                 background-color: #f3f3f3;
                 border-radius: 8px;
-                -webkit-box-shadow: inset 0px 4px 55px 1px rgb(0 0 0 / 7%);
-                box-shadow: inset 0px 4px 55px 1px rgb(0 0 0 / 7%);
+                box-shadow: inset 0px 4px 55px 1px rgba(0, 0, 0, .07);
                 width: 100%;
                 font-size: calc(0.8vw + (1.1 - 0.8) * (100vw - 320px) / (1560 - 320));
                 border: none;
@@ -471,7 +392,6 @@
                 margin: 5px;
             }
         }
-
     }
 }
 
@@ -480,28 +400,15 @@
     width: 100%;
     padding: 38px 27px;
     border: none;
-    -webkit-box-shadow: 0 1rem 2rem #ffc316, inset 0 -4px 0 #cd8f38;
     box-shadow: 0 0rem 2rem #eab016, inset 0 -4px 0 #cd8f38;
     background-color: #ffd04c;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 82, 35, 0)), to(#ffc117));
-    background-image: -webkit-linear-gradient(top, rgba(255, 82, 35, 0) 0%, #eab016 100%);
-    background-image: -o-linear-gradient(top, rgba(255, 82, 35, 0) 0%, #eab016 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 82, 35, 0)), to(#eab016));
     background-image: linear-gradient(to bottom, rgba(255, 82, 35, 0) 0%, #eab016 100%);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     color: #212121;
     border-radius: 10px;
     cursor: pointer;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
     transition: all 0.4s;
     text-decoration: none;
     position: relative;
@@ -523,17 +430,10 @@
       left: -40px;
       top: -150px;
       top-animation-timing-function: ease-in-out;
-      -webkit-transition: all 0.1s;
-      -o-transition: all 0.1s;
       transition: all 0.1s;
-      -webkit-animation-name: slideme;
       animation-name: slideme;
-      -webkit-animation-duration: 3.5s;
       animation-duration: 3.5s;
-      -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
       transform: rotate(45deg);
     }
     &:after {
@@ -542,23 +442,15 @@
       width: 30px;
       height: 300px;
       background: #fff;
-      -webkit-animation-delay: 0.05s;
       animation-delay: 0.05s;
       position: absolute;
       left: -90px;
       top: -150px;
       top-animation-timing-function: ease-in-out;
-      -webkit-transition: all 0.1s;
-      -o-transition: all 0.1s;
       transition: all 0.1s;
-      -webkit-animation-name: slideme;
       animation-name: slideme;
-      -webkit-animation-duration: 3.5s;
       animation-duration: 3.5s;
-      -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
       transform: rotate(45deg);
   }
 }
