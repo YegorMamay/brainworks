@@ -120,7 +120,7 @@ var _this = void 0;
         var headerOffsetTop = header.length ? header.offset().top : 0;
         var stickyOn;
         var _onScroll = function _onScroll() {
-            stickyOn = w.scrollTop() >= headerOffsetTop;
+            stickyOn = w.scrollTop() > headerOffsetTop;
             if (stickyOn) {
                 header.addClass("is-fixed");
                 headerFake.show();

@@ -202,7 +202,7 @@
          * @returns {void}
          */
         const _onScroll = () => {
-            stickyOn = w.scrollTop() >= headerOffsetTop;
+            stickyOn = w.scrollTop() > headerOffsetTop;
 
             if (stickyOn) {
                 header.addClass('is-fixed');
