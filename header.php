@@ -115,6 +115,11 @@
                     ?>
                 </div>
 
+                <div class="site-name">
+                    <div class="h4 bold"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></div>
+                    <p><?php bloginfo( 'description' ); ?></p>
+                </div>
+
                 <div class="nav-wrapper language-switcher">
                     <?php if (has_nav_menu('language-switcher')) { ?>
                     <nav class="nav js-menu">
@@ -132,7 +137,7 @@
                     <?php } ?>
                 </div>
 
-                <?php echo do_shortcode('[bw-messengers]'); ?>
+                <?php echo do_shortcode('[bw-social]'); ?>
 
                 <div class="woo-cart woo-cart-popup-wrapper">
                     <?php if ( class_exists( 'WooCommerce' ) ) { ?>
@@ -168,6 +173,10 @@
                 </ul>
                 <?php } ?>
                 <!-- Dropdown phones -->
+
+                <?php echo do_shortcode('[bw-messengers]'); ?>
+
+                <button class="btn btn-two callback"><?php _e('Callback', 'brainworks') ?></button>
 
             </div> <!-- Container END -->
 

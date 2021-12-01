@@ -11,7 +11,7 @@
         <div class="copyright">
             <div class="date"><?php _e('All rights reserved', 'brainworks'); ?> &copy; <?php echo date('Y'); ?></div>
             <div class="developer">
-                <?php _e('Developed by ', 'brainworks') ?><a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a> 
+                <?php _e('Developed by ', 'brainworks') ?><a href="https://brainworks.pro/" target="_blank">BrainWorks</a>
             </div>
         </div>
     </div>
