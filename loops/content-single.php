@@ -7,8 +7,8 @@
 
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
     <article id="post_<?php the_ID() ?>" <?php post_class() ?>>
-            <h1 class="single-title"><?php the_title() ?></h1>
-            <div class="vh-xs-2"></div>
+        <h1 class="single-title"><?php the_title() ?></h1>
+        <div class="vh-xs-2"></div>
             <?php /*
             <h5>
                 <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?></span>
@@ -28,6 +28,7 @@
     
     <div class="vh-xs-2"></div>
     
+    <?php /*
     <hr>
     
     <span class="text-muted text-italic bold">
@@ -37,6 +38,7 @@
     </span>
     
     <div class="vh-xs-2"></div>
+    */ ?>
     
     <?php comments_template('/loops/comments.php'); ?>
 <?php endwhile; ?>
@@ -44,3 +46,5 @@
 <?php else : ?>
     <?php get_template_part('loops/content', 'none'); ?>
 <?php endif; ?>
+
+<div class="vh-xs-4"></div>
