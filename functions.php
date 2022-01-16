@@ -10,6 +10,7 @@ require get_template_directory() . '/inc/auth.php';
 require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/login.php';
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/woo-function.php';
 
 require get_template_directory() . '/inc/breadcrumbs.php';
 require get_template_directory() . '/inc/cleanup.php';
@@ -457,25 +458,8 @@ function showhide_footer() {
  add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
 function custom_override_checkout_fields( $fields ) {
-  unset($fields['billing']['billing_country']);  
-  unset($fields['shipping']['shipping_country']); 
+  unset($fields['billing']['billing_country']);
+  unset($fields['shipping']['shipping_country']);
 
   return $fields;
 }
-
-/**
- * Woo: Change number or products per row to 3
- */
-add_filter('loop_shop_columns', 'loop_columns', 999);
-if (!function_exists('loop_columns')) {
-  function loop_columns() {
-    return 3; // 3 products per row
-  }
-}
-
-add_filter( 'kses_allowed_protocols', function ( $protocols ) {
-	$protocols[] = 'skype';
-	$protocols[] = 'viber';
-
-	return $protocols;
-} );

@@ -69,3 +69,29 @@ ul.products li.product {
     }
   }
 }
+
+.wrapper-top {
+    align-items: center;
+    justify-content: space-between;
+    &-ordering {
+        align-items: center;
+    }
+    &-btns {
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+    @media (max-width: 768px) {
+        .berocket_lgv_widget {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            a:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        flex-direction: column;
+
+    }
+}
