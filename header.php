@@ -20,6 +20,8 @@
     <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
     <?php } ?>
 
+
+    <!-- Delete if YoastSEO plugin activated START -->
     <title>
         <?php
         if (is_front_page()) {
@@ -91,6 +93,8 @@
     ">
     <meta name="twitter:image" content="<?php echo esc_url(get_the_post_thumbnail_url()); ?>">
     <!-- OpenGraph end-->
+    <!-- Delete if YoastSEO plugin activated END -->
+
     <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
     <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
     <?php wp_head(); ?>
