@@ -7,6 +7,8 @@ $scroll-triangle-color: #fff !default; // Color of the triangle
 $scroll-triangle-width: 12px !default; // The width of the triangle
 $scroll-triangle-height: 10px !default; // The height of the triangle
 
+@use "sass:math";
+
 .scroll-top {
     display: none;
     cursor: pointer;
@@ -54,7 +56,7 @@ $scroll-triangle-height: 10px !default; // The height of the triangle
             bottom: 0;
             left: 0;
             margin: auto;
-            border: ($scroll-triangle-width / 2) solid transparent;
+            border: math.div($scroll-triangle-width, 2) solid transparent;
             border-top: 0;
             border-bottom: $scroll-triangle-height solid $scroll-triangle-color;
         }

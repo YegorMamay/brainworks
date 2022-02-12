@@ -1,8 +1,9 @@
-// Font Awesome Pro 5.15.1 by @fontawesome - https://fontawesome.com
+// Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com
+@import 'functions';
 @import 'variables';
 @import 'mixins';
 @import 'core';
-//@import 'larger';
+//@import 'sizing';
 @import 'fixed-width';
 //@import 'list';
 //@import 'bordered-pulled';
@@ -11,9 +12,10 @@
 //@import 'stacked';
 @import 'icons';
 //@import 'screen-reader';
-@import 'light';
-@import 'solid';
-@import 'regular';
 @import 'brands';
 //@import 'duotone';
+@import 'light';
+@import 'regular';
+@import 'solid';
+@import 'thin';
 //@import 'v4-shims';

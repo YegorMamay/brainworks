@@ -94,11 +94,12 @@ function bw_php_version($content)
 if (!function_exists('bw_add_img_attributes')) {
     /**
      * Добавление аттрибутов title и alt для картинок
-     * @param  array $attr Аттрибуты картинки
-     * @param  WP_Post|array $attachment Наша картинка
+     * @param string[] Аттрибуты картинки
+     * @param WP_Post $attachment Наша картинка
+     * @param string|int[] $size Requested image size
      * @return array Аттрибуты картинки
      */
-    function bw_add_img_attributes($attr = array(), $attachment)
+    function bw_add_img_attributes(array $attr, $attachment)
     {
         $title = trim(strip_tags($attachment->post_title));
         $alt = trim(strip_tags(get_post_meta($attachment->ID, '_wp_attachment_image_alt', true)));
@@ -110,7 +111,7 @@ if (!function_exists('bw_add_img_attributes')) {
     }
 }
 
-add_filter('wp_get_attachment_image_attributes', 'bw_add_img_attributes', 10, 3);
+add_filter('wp_get_attachment_image_attributes', 'bw_add_img_attributes', 10, 2);
 
 /**
  * Admin Enqueue Script

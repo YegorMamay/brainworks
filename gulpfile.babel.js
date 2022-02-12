@@ -1,6 +1,8 @@
 'use strict';
 
-import sass from 'gulp-sass';
+import gulp from 'gulp';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import svgmin from 'gulp-svgmin';
@@ -11,7 +13,9 @@ import imagemin from 'gulp-imagemin';
 import cleancss from 'gulp-clean-css';
 //import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
-import {task, src, dest, series, parallel, watch} from 'gulp';
+
+const sass = gulpSass(dartSass);
+const {task, src, dest, series, parallel, watch} = gulp;
 
 task('svg', () => {
     return src('assets/img/svg/*.svg')

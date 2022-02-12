@@ -1,7 +1,9 @@
 // FUNCTIONS
+@use "sass:math";
+
 @function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
-        @return $number / ($number * 0 + 1);
+        @return math.div($number, $number * 0 + 1);
     }
 
     @return $number;
@@ -14,7 +16,7 @@
     $viewport-width-min: strip-unit($viewport-width-min);
     $viewport-width-max: strip-unit($viewport-width-max);
 
-    $k: ($font-size-max - $font-size-min) / ($viewport-width-max - $viewport-width-min);
+    $k: math.div($font-size-max - $font-size-min, $viewport-width-max - $viewport-width-min);
 
     $b: $font-size-min - $k * $viewport-width-min;
 
@@ -36,7 +38,7 @@
     $g: green($color);
     $b: blue($color);
 
-    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+    $yiq: math.div(($r * 299) + ($g * 587) + ($b * 114), 1000);
 
     @if ($yiq >= $yiq-contrasted-threshold) {
         @return $yiq-text-dark;

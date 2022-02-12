@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -68,8 +70,9 @@ a img.aligncenter {
 }
 
 .wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: (17/11);
+    $size: 11;
+    font-size: $size * 1px;
+    line-height: math.div(17, $size);
     margin: 0;
     padding: 0 4px 5px;
 }

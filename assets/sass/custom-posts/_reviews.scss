@@ -28,6 +28,8 @@ $review-arrow-hover-background: $themeColorTwo !default;
 $review-prev: '\00ab'; // &laquo;
 $review-next: '\00bb'; // &raquo;
 
+@use "sass:math";
+
 .review {
     &-list {
 
@@ -123,7 +125,7 @@ $review-next: '\00bb'; // &raquo;
                 position: absolute;
                 top: 50%;
                 z-index: 10;
-                margin-top: -($review-arrow-size / 2);
+                margin-top: math.div(-$review-arrow-size, 2);
                 border: $review-arrow-border-width solid $review-arrow-border-color;
                 padding: 0;
                 width: $review-arrow-size;
@@ -194,7 +196,7 @@ $review-next: '\00bb'; // &raquo;
                 }
 
                 &-arrow {
-                    top: ($review-client-size - $review-arrow-size) / 2;
+                    top: math.div($review-client-size - $review-arrow-size, 2);
                     margin-top: 0;
                 }
             }
