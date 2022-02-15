@@ -176,6 +176,13 @@ table.variations {
     }
 }
 
+@media #{$mobile-max} {
+    .woocommerce div.product .woocommerce-tabs ul.tabs li {
+        display: block;
+        width: 100%;
+    }
+}
+
 //xs 544
 @media #{$mobile-max} {
   .woocommerce {
