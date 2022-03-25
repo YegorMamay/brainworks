@@ -3,6 +3,20 @@
 function bw_widgets_init()
 {
     /**
+     * PreHeader
+     */
+    register_sidebar(array(
+        'name' => __('PreHeader', 'brainworks'),
+        'id' => 'pre-header-widget-area',
+        'description' => __('PreHeader widget area', 'brainworks'),
+        'before_widget' => '<div class="widget-item %1$s %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
+    ));
+
+
+    /**
      * Sidebar Left
      */
     register_sidebar(array(

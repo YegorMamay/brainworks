@@ -105,6 +105,14 @@
     <div class="wrapper js-container"><!--Do not delete this openning div!-->
 
         <header class="header <?php sticky_header(); ?>">
+            <?php if (is_active_sidebar('pre-header-widget-area')) : ?>
+                <div class="pre-header">
+                    <div class="container d-flex justify-content-between">
+                        <?php dynamic_sidebar('pre-header-widget-area'); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+
             <div class="container d-flex justify-content-between align-items-center">
 
                 <div class="logo">
@@ -140,8 +148,6 @@
                     </nav>
                     <?php } ?>
                 </div>
-
-                <?php echo do_shortcode('[bw-social]'); ?>
 
                 <div class="woo-cart woo-cart-popup-wrapper">
                     <?php if ( class_exists( 'WooCommerce' ) ) { ?>
