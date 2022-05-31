@@ -514,8 +514,8 @@ if (!function_exists('bw_custom_login_shortcode')) {
                         <button type="submit" name="submit" class="btn btn-two login-form-submit">
                             ' . __('Login', 'brainworks') . '
                         </button>
-                    </div>   
-                </fieldset>   
+                    </div>
+                </fieldset>
                 </form>
             ';
             return $output;
@@ -554,8 +554,8 @@ if (!function_exists('bw_custom_register_shortcode')) {
                     <button type="submit" name="submit" class="btn btn-two login-form-submit">
                         ' . __('Register', 'brainworks') . '
                     </button>
-                </div>    
-            </fieldset>  
+                </div>
+            </fieldset>
             </form>
             ';
             return $output;
@@ -575,7 +575,7 @@ if (!function_exists('bw_custom_auth_shortcode')) {
             $register_form = do_shortcode('[bw-custom-register]');
             $output = '<div class="login-block row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                ' . $login_form . ' 
+                ' . $login_form . '
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 ' . $register_form . '
@@ -744,7 +744,7 @@ if (!function_exists('sn_catalog_shortcode')) {
 
         endif;
 
-        wp_reset_postdata();        
+        wp_reset_postdata();
     }
 }
 
@@ -824,3 +824,20 @@ function cat_and_child_id( $atts ) {
         return $html;
     }
 }
+
+
+function html_block_function( $atts ) {
+
+	$params = shortcode_atts(
+		array( // в массиве укажите значения параметров по умолчанию
+			'id' => '', // параметр 1
+		),
+		$atts
+	);
+    $post_id = $atts['id'];
+    $post_content = get_post($post_id);
+    $content = $post_content->post_content;
+	return $content;
+}
+
+add_shortcode( 'html_block', 'html_block_function' );

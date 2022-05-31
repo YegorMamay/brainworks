@@ -86,3 +86,40 @@ function bw_create_catalog()
 }
 
 add_action('init', 'bw_create_catalog');
+
+
+function bw_register_cpts_shortcode()
+{
+    /**
+     * Post Type: Reviews.
+     */
+    $labels = array(
+        'name' => __('HTML blocks', 'brainworks'),
+        'singular_name' => __('HTML block', 'brainworks'),
+    );
+
+    $args = array(
+        'label' => __('HTML blocks', 'brainworks'),
+        'labels' => $labels,
+        'description' => '',
+        'public' => true,
+        'publicly_queryable' => false,
+        'show_ui' => true,
+        'delete_with_user' => false,
+        'show_in_menu'        => null, // показывать ли в меню адмнки
+        'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+        'rest_base'           => null, // $post_type. C WP 4.7
+        'has_archive' => false,
+        'show_in_nav_menus' => false,
+        'exclude_from_search' => true,
+        'map_meta_cap' => true,
+        'hierarchical' => false,
+        'rewrite' => false,
+        'query_var' => false,
+        'supports' => array('title', 'editor'),
+    );
+
+    register_post_type('blocks', $args);
+}
+
+add_action('init', 'bw_register_cpts_shortcode');

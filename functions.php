@@ -464,8 +464,19 @@ function custom_override_checkout_fields( $fields ) {
   return $fields;
 }
 
-//Отключает файл стилей для Гуттенберг
-function wpassist_remove_block_library_css(){
-wp_dequeue_style( 'wp-block-library' );
+
+
+// Column shortcode cpt "html block"
+add_filter( 'manage_'.'blocks'.'_posts_columns', 'add_views_column', 4 );
+function add_views_column( $columns ){
+	$num = 2;
+	$new_columns = array(
+		'views' =>  __('Shortcode', 'brainworks'),
+	);
+	return array_slice( $columns, 0, $num ) + $new_columns + array_slice( $columns, $num );
 }
-add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+
+add_action('manage_'.'blocks'.'_posts_custom_column', 'fill_views_column', 5, 2 );
+function fill_views_column( $colname, $post_id ){
+	echo "[html_block id=" . $post_id . "]";
+}
