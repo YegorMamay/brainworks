@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 left-sidebar">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 sidebar">
             <?php get_sidebar(); ?>
         </div>
         <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">

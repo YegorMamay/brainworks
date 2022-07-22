@@ -1,4 +1,4 @@
-.left-sidebar {
+.sidebar {
     .widget_nav_menu {
         box-shadow: $shadow;
         padding: 15px;
@@ -23,7 +23,7 @@
             cursor: pointer;
             position: absolute;
             right: 0;
-            top: 1px;
+            top: 5px;
             z-index: 1;
             width: 20px;
             height: 20px;
@@ -99,7 +99,7 @@
                         content: "\f068";
                         display: block;
                         padding: 0 7px 0 0;
-                        font-family: 'Font Awesome 5 Pro';
+                        font-family: 'Font Awesome 6 Pro';
                         color: $themeColorTwo;
                         float: left;
                         margin-left: 5px;

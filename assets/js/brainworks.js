@@ -314,7 +314,7 @@ var _this = void 0;
         });
     };
     var sidebarAccordion = function sidebarAccordion() {
-        var sidebarMenu = $(".left-sidebar .widget_nav_menu");
+        var sidebarMenu = $(".sidebar .widget_nav_menu");
         var items = sidebarMenu.find("li");
         var subMenu = items.find(".sub-menu");
         if (subMenu.length) {

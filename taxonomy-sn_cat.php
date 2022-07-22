@@ -15,7 +15,7 @@
 
     <div class="row">
         <?php if (is_active_sidebar('sidebar-widget-area')) { ?>
-            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 left-sidebar">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 sidebar">
                 <?php dynamic_sidebar('sidebar-widget-area'); ?>
             </div>
         <?php } ?>

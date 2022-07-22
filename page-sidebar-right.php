@@ -12,7 +12,7 @@
             <?php get_template_part('loops/content', 'page'); ?>
         </div>
 
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 sidebar">
             <?php dynamic_sidebar('sidebar-widget-area2'); ?>
         </div>
 
