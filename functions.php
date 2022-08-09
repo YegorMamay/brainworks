@@ -6,7 +6,7 @@
 //show_admin_bar(false);
 
 require get_template_directory() . '/inc/helpers.php';
-require get_template_directory() . '/inc/auth.php';
+// require get_template_directory() . '/inc/auth.php';
 require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/login.php';
 require get_template_directory() . '/inc/customizer.php';
