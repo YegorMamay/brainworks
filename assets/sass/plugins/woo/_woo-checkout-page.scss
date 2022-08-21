@@ -68,3 +68,7 @@
 #add_payment_method #payment ul.payment_methods li input, .woocommerce-cart #payment ul.payment_methods li input, .woocommerce-checkout #payment ul.payment_methods li input {
     margin: 12px 1em 0 0;
 }
+
+.woocommerce-billing-fields .optional {
+    display: none;
+}

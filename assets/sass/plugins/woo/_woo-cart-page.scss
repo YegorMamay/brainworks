@@ -47,3 +47,8 @@
         margin: 8px 0;
     }
 }
+
+// Скрывает информацию под выбором способа доставки
+.woocommerce-shipping-destination {
+    display: none;
+}

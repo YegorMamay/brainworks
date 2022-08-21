@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<div class="container">
 
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
     <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
@@ -18,5 +17,4 @@ else: ?>
     <?php get_template_part('loops/content', 'none'); ?>
 <?php endif; ?>
 
-</div><!-- /.container -->
 <?php get_footer(); ?>

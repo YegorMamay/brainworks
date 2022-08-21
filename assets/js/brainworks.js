@@ -34,7 +34,6 @@ var _this = void 0;
                 removeAllStyles($(".js-menu"));
             }
         });
-        addLightBoxHandlerForImage(".wpgis-slider-for");
     });
     var dropdownPhone = function dropdownPhone() {
         var dropDownBtn = $(".js-dropdown");
@@ -375,39 +374,14 @@ var _this = void 0;
             });
         });
     };
-    var addLightBoxHandlerForImage = function addLightBoxHandlerForImage(sliderContainer) {
-        var slider = $(sliderContainer);
-        var verticalSlider = $("#wpgis-gallery");
-        if (verticalSlider.find(".slick-slide").length == 1 && typeof $.fn.slick === "function") { //length == 1 - это количество изображений товара, при котором галерея миниатюр не отображается. Можно изменить, к примеру, на length < 5
-            $(_this).hide();
-            $(sliderContainer).css({
-                width: "100%"
-            });
-        }
-        $(window).on("load", function() {
-            if (slider.length) {
-                slider.find("img").each(function(index, element) {
-                    var el = $(element);
-                    el.on("click", function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        el.parents(".slick-slide").find(".wpgis-popup").click();
-                    });
-                });
-            }
-        });
-    };
+
     $(".js-hamburger").on("click", function() {
         $("body").addClass("body-overflow");
     });
     $(".js-menu-close, .menu-link").on("click", function() {
         $("body").removeClass("body-overflow");
     });
-    if ($(".wpgis-slider-for").length > 0) {
-        $('.form-cover input[type="text"]').on("focus", function() {
-            $.fancybox.destroy();
-        });
-    }
+
     var updateCartTotalValue = function updateCartTotalValue(elemId) {
         localStorage.setItem("currency", $("#cyr-value").val());
         var totalId = $(elemId);

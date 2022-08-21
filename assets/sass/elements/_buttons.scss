@@ -42,6 +42,10 @@ $btn-link-decoration: none;
 $btn-link-hover-color: darken($btn-link-color, 15%);
 $btn-link-hover-decoration: underline;
 
+button {
+    cursor: pointer;
+}
+
 .btn {
   display: inline-block;
   font-weight: $btn-font-weight;

@@ -41,7 +41,6 @@
             }
         });
 
-        addLightBoxHandlerForImage('.wpgis-slider-for');
     });
 
     /**
@@ -712,43 +711,6 @@
         });
     };
 
-    /**
-     * Add Light Box Handler For Image
-     *
-     * @description для плагина Advanced Woocommerce Product Gallery Slider
-     * https://ru.wordpress.org/plugins/advanced-woocommerce-product-gallery-slider/
-     *
-     * @example
-     * addLightBoxHandlerForImage('.wpgis-slider-for');
-     *
-     * @param {string} sliderContainer - Selected slider container
-     *
-     * @returns {void}
-     */
-    const addLightBoxHandlerForImage = (sliderContainer) => {
-
-        const slider = $(sliderContainer);
-        const verticalSlider = $('#wpgis-gallery');
-
-        if (verticalSlider.find('.slick-slide').length < 5 && typeof $.fn.slick === 'function') {
-            $(this).hide();
-            $(sliderContainer).css({'width': '100%'});
-        }
-
-        $(window).on('load', () => {
-            if (slider.length) {
-                slider.find('img').each((index, element) => {
-                    const el = $(element);
-
-                    el.on('click', (event) => {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        el.parents('.slick-slide').find('.wpgis-popup').click();
-                    });
-                });
-            }
-        });
-    };
 
     // Disabled page scroll
     $('.js-hamburger').on('click', function () {
