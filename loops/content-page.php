@@ -5,11 +5,13 @@
  */
 ?>
 
+<div class="container">
 <?php if ((!is_page_template(array('page-landing.php')) && is_front_page()) || (!is_page_template(array('page-landing.php')) && !is_front_page())) {
 
     if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » ');
 
 } ?>
+</div>
 
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
