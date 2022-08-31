@@ -7,7 +7,10 @@
 <?php get_header(); ?>
 
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
-    <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+
+    <div class="container">
+        <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+    </div>
 
     <?php the_content() ?>
     <?php wp_link_pages(); ?>

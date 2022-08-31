@@ -209,7 +209,7 @@
 
                 <?php echo do_shortcode('[bw-messengers]'); ?>
 
-                <button class="btn btn-two callback"><?php _e('Callback', 'brainworks') ?></button>
+                <button class="btn btn-two callback <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
 
             </div> <!-- Container END -->
 
@@ -294,9 +294,9 @@
             <?php echo do_shortcode('[bw-phone]'); ?>
         </div>
         <div class="vh-xs-2"></div>
-        <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
-        <div class="vh-xs-2"></div>
         <?php echo do_shortcode('[bw-messengers]'); ?>
+        <div class="vh-xs-2"></div>
+        <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
     </nav>
     <?php } ?>
     <!-- Mobile menu end-->
