@@ -165,7 +165,7 @@ if (!function_exists('bw_messengers_shortcode')) {
 
 	            if ($name === 'viber') {
 		            $tel = wp_is_mobile()
-			            ? 'viber://add?number=' . str_replace('+', '', $tel)
+			            ? 'viber://chat?number=' . str_replace('+', '', $tel)
 			            : "viber://chat?number=$tel";
 	            } elseif ($name === 'whatsapp') {
 		            $tel = "https://wa.me/$tel";
