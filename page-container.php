@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <div class="container">
 
-<?php get_template_part('loops/content', 'home'); ?>
+<?php get_template_part('loops/content', 'page'); ?>
 
 </div>
 <?php get_footer(); ?>
