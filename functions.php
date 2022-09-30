@@ -3,7 +3,8 @@
  * All the functions are in the PHP pages in the `inc/` folder.
  */
 
-//show_admin_bar(false);
+//Скрывает topbar
+show_admin_bar(false);
 
 require get_template_directory() . '/inc/helpers.php';
 // require get_template_directory() . '/inc/auth.php';
@@ -480,3 +481,23 @@ add_action('manage_'.'blocks'.'_posts_custom_column', 'fill_views_column', 5, 2 
 function fill_views_column( $colname, $post_id ){
 	echo "[html_block id=" . $post_id . "]";
 }
+
+// Перенаправление юзеров не являющихся администраторами на главную страницу
+function my_login_redirect( $url, $request, $user ){
+
+	if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+
+        /*check your roles, customize according to you conditions*/
+		if( $user->has_cap( 'administrator') or $user->has_cap( 'author')) {
+			$url = admin_url();
+		}
+		else
+		{
+			$url = home_url('/');
+		}
+
+	}
+	return $url;
+}
+
+add_filter('login_redirect', 'my_login_redirect', 10, 3 );
