@@ -119,15 +119,7 @@
             <div class="container d-flex justify-content-between align-items-center">
 
                 <div class="logo">
-                    <?php get_default_logo_link([
-                            'name' => 'logo.svg',
-                            'options' => [
-                                'class' => 'logo-img',
-                                'width' => 100,
-                                'height' => 50,
-                            ],
-                        ])
-                    ?>
+                    <?php the_custom_logo() ?>
                 </div>
 
                 <div class="site-name">
