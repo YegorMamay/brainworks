@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-25 07:45+0000\n"
-"PO-Revision-Date: 2021-12-01 07:08+0000\n"
+"PO-Revision-Date: 2022-10-01 21:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -96,7 +96,7 @@ msgstr "Архив автора: <b>%s</b>"
 msgid "Auto Hide"
 msgstr ""
 
-#: 404.php:13 page-thank-you.php:14
+#: 404.php:12 page-thank-you.php:14
 msgid "Back to the homepage"
 msgstr "Вернуться на главную"
 
@@ -138,17 +138,13 @@ msgstr ""
 msgid "Buy in one click"
 msgstr "Купить в один клик"
 
-#: loops/content-single.php:34 loops/content.php:16
-msgid "By"
-msgstr "Автор:"
-
-#: header.php:172
+#: header.php:184
 msgid "Callback"
 msgstr "Обратный звонок"
 
-#: loops/content-single.php:35 loops/content.php:19
-msgid "Category"
-msgstr "Рубрика"
+#: inc/custom-post-types.php:49
+msgid "Catalog"
+msgstr "Каталог"
 
 #: inc/customizer.php:288
 msgid "Chat code"
@@ -162,8 +158,12 @@ msgstr ""
 msgid "Comments"
 msgstr "Комментарии"
 
+#. Name of the template
+msgid "Container"
+msgstr ""
+
 #: inc/LoadMorePosts.php:111 inc/shortcodes.php:298 inc/shortcodes.php:456
-#: loops/content.php:35
+#: loops/content.php:39
 msgid "Continue reading"
 msgstr "Читать дальше"
 
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Enable/Disable sticky header js functionality"
 msgstr ""
 
-#: 404.php:7
+#: 404.php:6
 msgid "Error"
 msgstr "Ошибка"
 
@@ -247,7 +247,7 @@ msgstr ""
 msgid "Feedback"
 msgstr "Отзыв"
 
-#: inc/widgets.php:62
+#: inc/widgets.php:76
 msgid "Footer"
 msgstr "Подвал"
 
@@ -274,6 +274,14 @@ msgstr "Главная"
 
 #. Name of the template
 msgid "Home Page"
+msgstr ""
+
+#: inc/custom-post-types.php:98
+msgid "HTML block"
+msgstr ""
+
+#: inc/custom-post-types.php:97 inc/custom-post-types.php:102
+msgid "HTML blocks"
 msgstr ""
 
 #. Author URI of the theme
@@ -351,7 +359,7 @@ msgstr ""
 msgid "Media: %s"
 msgstr "Медиа: %s"
 
-#: taxonomy-sn_cat.php:46 archive-catalog.php:47 loops/content.php:54
+#: taxonomy-sn_cat.php:46 archive-catalog.php:47 loops/content.php:57
 msgid "Next"
 msgstr "Следующая"
 
@@ -379,7 +387,7 @@ msgstr "Старые"
 msgid "Only Logged In"
 msgstr ""
 
-#: 404.php:18
+#: 404.php:17
 msgid "Or use search"
 msgstr "Или используйте поиск"
 
@@ -470,7 +478,15 @@ msgstr ""
 msgid "Posts by tag: <b>%s</b>"
 msgstr "Записи по метке: <b>%s</b>"
 
-#: taxonomy-sn_cat.php:45 archive-catalog.php:46 loops/content.php:53
+#: inc/widgets.php:9
+msgid "PreHeader"
+msgstr ""
+
+#: inc/widgets.php:11
+msgid "PreHeader widget area"
+msgstr ""
+
+#: taxonomy-sn_cat.php:45 archive-catalog.php:46 loops/content.php:56
 msgid "Previous"
 msgstr "Предыдущая"
 
@@ -494,7 +510,7 @@ msgstr "Повторите пароль"
 msgid "Review"
 msgstr "Отзыв"
 
-#: inc/widgets.php:35
+#: inc/widgets.php:49
 msgid "Review Page Sidebar"
 msgstr ""
 
@@ -539,17 +555,21 @@ msgstr ""
 msgid "Shape"
 msgstr ""
 
+#: functions.php:475
+msgid "Shortcode"
+msgstr ""
+
 #: inc/customizer.php:103
 msgid "Show/Hide scroll top"
 msgstr ""
 
 #. Name of the template
-#: inc/widgets.php:9
+#: inc/widgets.php:23
 msgid "Sidebar Left"
 msgstr ""
 
 #. Name of the template
-#: inc/widgets.php:22
+#: inc/widgets.php:36
 msgid "Sidebar Right"
 msgstr ""
 
@@ -594,15 +614,15 @@ msgstr ""
 msgid "Thank You Page"
 msgstr ""
 
-#: inc/widgets.php:64
+#: inc/widgets.php:78
 msgid "The footer widget area"
 msgstr ""
 
-#: 404.php:8
+#: 404.php:7
 msgid "The page you were looking for does not exist."
 msgstr "Такой страницы не существует."
 
-#: inc/widgets.php:11 inc/widgets.php:24 inc/widgets.php:37
+#: inc/widgets.php:25 inc/widgets.php:38 inc/widgets.php:51
 msgid "The sidebar widget area"
 msgstr ""
 
@@ -646,21 +666,17 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
-#: inc/widgets.php:49
+#: inc/widgets.php:63
 msgid "Woo Cart"
 msgstr ""
 
-#: inc/widgets.php:51
+#: inc/widgets.php:65
 msgid "Woo cart widget area"
 msgstr ""
 
 #: inc/customizer.php:266
 msgid "Yandex Metrika"
 msgstr ""
-
-#: page-auth-only.php:13
-msgid "You must be logged in to see this page!"
-msgstr "Вам нужно войти, чтобы просматривать этот контент"
 
 #: loops/comments.php:82 loops/comments.php:83
 msgid "Your comment"
