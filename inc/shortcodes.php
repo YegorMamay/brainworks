@@ -214,6 +214,7 @@ if (!function_exists('bw_html_sitemap')) {
             'elementor_library',
             'br_product_filter',
             'br_filters_group',
+            'blocks',
             'product'
         );
 
@@ -240,18 +241,19 @@ if (!function_exists('bw_html_sitemap')) {
             }
         }
 
+        /* Закомментируй, чтобы скрыть Каталог - начало */
 	    $ignoretaxonomy = [
-		    //'product_cat',
+		    //'catalog',
 	    ];
 
 	    $product_categories = get_terms( [
-		    'taxonomy' => 'product_cat',
+		    'taxonomy' => 'sn_cat',
 		    'hide_empty' => true,
 		    'orderby' => 'name',
 		    'order' => 'ASC',
 	    ] );
 
-	    $taxonomy = get_taxonomy( 'product_cat' );
+	    $taxonomy = get_taxonomy('sn_cat' );
 
 	    if ( ! in_array( $taxonomy->name, $ignoretaxonomy ) ) {
             $output .= '<div class="col-12 col-md-6 col-lg-3">';
@@ -263,6 +265,7 @@ if (!function_exists('bw_html_sitemap')) {
 		    $output .= '</ul><div class="vh-xs-2"></div>';
             $output .= '</div>';
 	    }
+        /* Закомментируй, чтобы скрыть Каталог - конец */
 
         return $output;
     }
