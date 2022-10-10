@@ -138,7 +138,7 @@
                             'menu_id' => '',
                             'fallback_cb' => 'wp_page_menu',
                             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'depth' => 3
+                            'depth' => 1
                         )); ?>
                     </nav>
                     <?php } ?>
@@ -196,7 +196,7 @@
                         'menu_id' => '',
                         'fallback_cb' => 'wp_page_menu',
                         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 3
+                        'depth' => 4
                     )); ?>
                 </div>
             </nav>

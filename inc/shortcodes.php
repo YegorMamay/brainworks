@@ -197,13 +197,7 @@ if (!function_exists('bw_messengers_shortcode')) {
 }
 
 if (!function_exists('bw_html_sitemap')) {
-    /**
-     * Add Shortcode HTML Sitemap
-     *
-     * @param $atts
-     *
-     * @return string
-     */
+
     function bw_html_sitemap($atts)
     {
         $output = '';
@@ -216,10 +210,11 @@ if (!function_exists('bw_html_sitemap')) {
             'attachment',
             'popup',
             'reviews',
-            'sn_catalogs',
-            'product',
+            'catalog',
+            'elementor_library',
             'br_product_filter',
-            'br_filters_group'
+            'br_filters_group',
+            'product'
         );
 
         $post_types = get_post_types($args, 'objects');
