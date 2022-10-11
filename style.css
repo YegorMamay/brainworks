@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 12.08.22
+Version: 11.10.22
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
@@ -554,6 +554,10 @@ em {
   .hide-on-desktop {
     display: block !important;
   }
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .fa {
@@ -17984,23 +17988,106 @@ html .formcraft-css .fc-form {
   border-radius: 0;
 }
 
-html .formcraft-css .fc-form .form-element .error {
-  background: transparent;
-  color: black;
-  top: -13px;
-  right: 0;
-}
-
 .ls-fullwidth .ls-nav-prev, .ls-fullwidth .ls-nav-next {
   z-index: 30 !important;
 }
 
-.bapf_sfilter .bapf_body > ul {
+ul.products li.product .tinv-wraper.tinv-wishlist {
+  position: absolute;
+}
+ul.products li.product .tinvwl_add_to_wishlist_button {
+  margin-top: 0;
+}
+
+.dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
+  background-color: #e74c3c;
+}
+
+.dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
+  border-color: transparent #e74c3c transparent;
+}
+.dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before:hover {
+  border-color: transparent #e74c3c transparent;
+}
+
+.ywcps-nav .ywcps-nav-prev {
+  left: -35px !important;
+}
+.ywcps-nav .ywcps-nav-next {
+  right: -35px !important;
+}
+.ywcps-nav span {
+  border-radius: 15px;
+  width: 30px !important;
+  top: 27% !important;
+}
+
+.woocommerce .ywcps-wrapper .owl-item li.product {
+  width: 100% !important;
+  margin-bottom: 0;
+}
+
+.woocommerce .ywcps-wrapper ul.products {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#ivpa-content {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+#ivpa-content .ivpa_title, #ivpa-content .ivpa-terms {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#ivpa-content .ivpa_attribute {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ivpa-info-box-icon:before {
+  margin-right: 10px;
+}
+
+.ivpa_quantity input {
+  width: 70px;
+}
+
+.yith_pdil {
+  margin-bottom: 10px;
+}
+
+.single-product div.yith-par-message,
+.single-product .yith-par-message-variation {
+  padding: 0;
+}
+
+.bapf_sfilter .bapf_body .mCSB_container > ul, .bapf_sfilter .bapf_body > ul {
   padding-left: 0;
 }
 
-.bapf_sfilter .bapf_hascolarr, .bapf_sfilter .bapf_hasdesc {
+.bapf_head h3 {
   font-size: 20px;
+}
+
+.irs--round .irs-bar {
+  background-color: #e74c3c;
+}
+
+.irs--round .irs-handle {
+  border: 4px solid #e74c3c;
+}
+
+.irs--round .irs-from, .irs--round .irs-single, .irs--round .irs-to {
+  background-color: #e74c3c;
+}
+
+.irs--round .irs-from:before, .irs--round .irs-single:before, .irs--round .irs-to:before {
+  border-top-color: #e74c3c;
 }
 
 .slick-slider {
@@ -22387,6 +22474,13 @@ hr.style-three {
   text-align: center;
 }
 
+.phone-dropdown.light-mode li a {
+  color: #fff;
+}
+.phone-dropdown.light-mode .phone-dropdown__list {
+  background: #2c3e50;
+}
+
 .social, .social-item {
   display: inline-block;
   vertical-align: middle;
@@ -23328,6 +23422,21 @@ a:hover, a:active, a:focus {
 }
 .hamburger-inner::after {
   top: 8px;
+}
+
+.second-menu ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.second-menu ul li {
+  margin: 0 10px;
+}
+.second-menu ul li a {
+  text-decoration: none;
 }
 
 .is-active .hamburger-inner {
@@ -24675,7 +24784,7 @@ body {
 }
 @media (max-width: 1200px) {
   .wrapper {
-    padding-top: 70px;
+    padding-top: 59px;
   }
 }
 

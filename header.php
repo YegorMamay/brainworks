@@ -206,10 +206,12 @@
 
     <!-- Mobile menu start-->
     <div class="nav-mobile-header">
+
         <div class="logo"><?php get_default_logo_link(); ?></div>
+
         <!-- Dropdown phones -->
         <?php if (has_phones()) { ?>
-        <ul class="phone-dropdown">
+        <ul class="phone-dropdown light-mode">
             <li class="phone-dropdown__item">
                 <?php foreach(get_phones() as $key => $phone) { ?>
                 <?php if ($key === key(get_phones())) { ?>
@@ -231,12 +233,15 @@
         </ul>
         <?php } ?>
         <!-- Dropdown phones -->
+
         <button class="hamburger js-hamburger" type="button" tabindex="0">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
+
     </div>
+
     <?php if (has_nav_menu('main-nav')) { ?>
     <nav class="nav js-menu hide-on-desktop">
         <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
@@ -272,6 +277,7 @@
     </nav>
     <?php } ?>
     <!-- Mobile menu end-->
+
     <?php if ( class_exists( 'WooCommerce' ) ) { ?>
     <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>' />
     <?php } ?>
