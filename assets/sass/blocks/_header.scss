@@ -6,7 +6,10 @@
     .pre-header {
         background: $grayColor;
         padding: 5px 0;
-        margin-bottom: 5px;
+    }
+
+    .header-inner {
+        padding: 5px 0;
     }
 
     &.is-sticky {

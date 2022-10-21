@@ -17,7 +17,11 @@
 //}
 
 //* example 2 (import from google fonts)
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-$fontFamilyOne: 'Montserrat', sans-serif; // titles
-$fontFamilyTwo: 'Montserrat', sans-serif; // body
+//$fontFamilyOne: 'Montserrat', sans-serif; // titles
+//$fontFamilyTwo: 'Montserrat', sans-serif; // body
+
+
+$fontFamilyOne: 'Arial', sans-serif; // titles
+$fontFamilyTwo: 'Arial', sans-serif; // body

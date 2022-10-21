@@ -23,7 +23,7 @@ em {
     }
     
     &-white {
-        color: $whiteColor;
+        color: $whiteColor !important;
     }
 
     &-center {
@@ -174,32 +174,4 @@ em {
     @media #{$tablet-max} {
             text-align: center !important;
     }
-}
-
-.hide-on-mobile {
-    display: block !important; 
-    
-    @media #{$mobile-max} {
-        display: none !important;
-    }
-}
-
-.hide-on-tablet {
-    display: block !important;
-
-    @media #{$tablet-max} {
-        display: none !important;
-    }
-}
-
-.hide-on-desktop {
-    display: none !important;
-    
-    @media #{$desktop-max} {
-        display: block !important;
-    }
-}
-
-.pointer {
-    cursor: pointer;
 }

@@ -3,7 +3,7 @@
 
 <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 
-<h1 class="text-center"><?php /*_e('Category', 'brainworks');*/ ?>#<?php echo single_cat_title(); ?></h1>
+<h1 class="text-center"><?php /*_e('Category', 'brainworks');*/ ?><?php echo single_cat_title(); ?></h1>
 
 <div class="vh-xs-2"></div>
 <hr>

@@ -39,5 +39,88 @@ ul.products {
     padding: 0 !important;
     margin: 0 !important;
 }
-
 // Product carousel End
+
+
+//Fibo-search
+.dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
+    background-color: $themeColorTwo;
+}
+
+.dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
+    border-color: transparent $themeColorTwo transparent;
+
+    &:hover {
+        border-color: transparent $themeColorTwo transparent;
+    }
+}
+//Fibo-search end
+
+
+//Improved Product Options for WooCommerce
+#ivpa-content {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    .ivpa_title, .ivpa-terms {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .ivpa_attribute {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.ivpa-info-box-icon:before {
+    margin-right: 10px;
+}
+
+.ivpa_quantity input {
+    width: 70px;
+}
+//Improved Product Options for WooCommerce END
+
+//YITH Product Description in Loop for WooCommerce
+.yith_pdil {
+    margin-bottom: 10px;
+}
+//YITH Product Description in Loop for WooCommerce END
+
+
+//YITH WOOCOMMERCE POINTS AND REWARDS
+.single-product div.yith-par-message,
+.single-product .yith-par-message-variation {
+    padding: 0;
+}
+//YITH WOOCOMMERCE POINTS AND REWARDS END
+
+
+// Ajax filter
+.bapf_sfilter .bapf_body .mCSB_container > ul, .bapf_sfilter .bapf_body > ul {
+    padding-left: 0;
+}
+
+.bapf_head {
+    h3 {
+        font-size: 20px;
+    }
+}
+
+.irs--round .irs-bar {
+    background-color: $themeColorTwo;
+}
+
+.irs--round .irs-handle {
+    border: 4px solid $themeColorTwo;
+}
+
+.irs--round .irs-from, .irs--round .irs-single, .irs--round .irs-to {
+    background-color: $themeColorTwo;
+}
+
+.irs--round .irs-from:before, .irs--round .irs-single:before, .irs--round .irs-to:before {
+    border-top-color: $themeColorTwo;
+}
+// Ajax filter END
