@@ -6,6 +6,10 @@
     .pre-header {
         background: $grayColor;
         padding: 5px 0;
+
+        .container {
+            padding: 0;
+        }
     }
 
     .header-inner {

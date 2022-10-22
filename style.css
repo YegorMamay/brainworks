@@ -373,6 +373,10 @@ em {
   font-style: italic;
 }
 
+b, strong {
+  font-weight: bold;
+}
+
 .text-muted {
   color: #bfbfbf !important;
 }
@@ -421,11 +425,11 @@ em {
 }
 
 .font-one {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .font-two {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .pull-right {
@@ -606,6 +610,10 @@ em {
     padding: 50px 0;
   }
 }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+}
+
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Pro");
   font-weight: var(--fa-style, 900);
@@ -21402,7 +21410,7 @@ button {
           user-select: none;
   border: 1px solid transparent;
   padding: 12px 20px;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.2;
   border-radius: 0;
@@ -21771,6 +21779,9 @@ a:hover, a:active, a:focus {
 .header .pre-header {
   background: #ddd;
   padding: 5px 0;
+}
+.header .pre-header .container {
+  padding: 0;
 }
 .header .header-inner {
   padding: 5px 0;
@@ -22296,7 +22307,7 @@ a:hover, a:active, a:focus {
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 5px;
+  top: 3px;
   z-index: 1;
   width: 20px;
   height: 20px;
@@ -22562,7 +22573,7 @@ a:hover, a:active, a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   color: #000000;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
@@ -22716,7 +22727,7 @@ a:hover, a:active, a:focus {
   font-size: 20px;
   color: #000000;
   font-weight: 300;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23374,7 +23385,7 @@ body {
   min-width: 320px;
   position: relative;
   color: #000;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #fff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

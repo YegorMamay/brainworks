@@ -17,6 +17,10 @@ em {
     font-style: italic;
 }
 
+b, strong {
+    font-weight: bold;
+}
+
 .text {
     &-muted {
         color: $textMutedColor !important;
