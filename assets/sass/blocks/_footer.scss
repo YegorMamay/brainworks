@@ -41,10 +41,17 @@
 }
 
 .copyright {
-    padding: 14px 0;
     color: $footerFontColor;
     display: flex;
     justify-content: space-between;
+
+    div, nav {
+        margin: 14px 0;
+
+        @media #{$mobile-max} {
+            margin: 8px 0;
+        }
+    }
 
     a {
         color: $footerFontColor;

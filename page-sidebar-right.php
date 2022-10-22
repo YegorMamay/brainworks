@@ -7,6 +7,9 @@
 <?php get_header(); ?>
 
 <div class="container">
+
+   <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+
     <div class="row">
         <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
             <?php get_template_part('loops/content', 'page'); ?>

@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 22.10.22
+Version: 23.10.22
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -20341,6 +20341,28 @@ ol.commentlist .comment-body {
   padding: 15px;
 }
 
+.list-cat__item {
+  margin-bottom: 20px;
+}
+.list-cat__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .scroll-top {
   display: none;
   cursor: pointer;
@@ -21776,6 +21798,9 @@ a:hover, a:active, a:focus {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+.header .logo-name .logo {
+  margin-right: 15px;
+}
 .header .pre-header {
   background: #ddd;
   padding: 5px 0;
@@ -22049,6 +22074,7 @@ a:hover, a:active, a:focus {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-left: 0;
 }
 .second-menu ul li {
   margin: 0 10px;
@@ -22098,7 +22124,7 @@ a:hover, a:active, a:focus {
             align-items: center;
     position: fixed;
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px;
     top: 0;
     left: 0;
     border-bottom: 1px solid #e7e7e7;
@@ -22417,7 +22443,6 @@ a:hover, a:active, a:focus {
 }
 
 .copyright {
-  padding: 14px 0;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22425,6 +22450,14 @@ a:hover, a:active, a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.copyright div, .copyright nav {
+  margin: 14px 0;
+}
+@media (max-width: 575px) {
+  .copyright div, .copyright nav {
+    margin: 8px 0;
+  }
 }
 .copyright a {
   color: #fff;
@@ -22441,28 +22474,6 @@ a:hover, a:active, a:focus {
             flex-direction: column;
     text-align: center;
   }
-}
-
-.list-cat__item {
-  margin-bottom: 20px;
-}
-.list-cat__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 @-webkit-keyframes slideme {
@@ -23399,7 +23410,7 @@ body {
 }
 @media (max-width: 1200px) {
   .wrapper {
-    padding-top: 59px;
+    padding-top: 70px;
   }
 }
 

@@ -329,7 +329,6 @@ if (!function_exists('get_social')) {
     }
 }
 
-
 if (!function_exists('has_phones')) {
     /**
      * @see get_phones()
@@ -570,22 +569,6 @@ if (!function_exists('sanitize_background_setting')) {
             return new WP_Error('unrecognized_setting', __('Unrecognized background setting.'));
         }
         return $value;
-    }
-}
-
-if (!function_exists('the_auth_button')) {
-    /**
-     * @param string $login_page_url Url to auth page
-     * @return void
-     */
-    function the_auth_button ($login_page_url = '/auth') {
-        $link = $login_page_url;
-        $text = __('Login', 'brainworks');
-        if (get_auth_session()) {
-            $link = '/wp-json/api/auth/logout';
-            $text = __('Logout', 'brainworks');
-        }
-        echo sprintf('<a href="%s" class="button-medium">%s</a>', $link, $text);
     }
 }
 

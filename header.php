@@ -118,14 +118,17 @@
 
             <div class="header-inner container d-flex justify-content-between align-items-center">
 
-                <div class="logo">
-                    <?php the_custom_logo() ?>
-                </div>
+               <div class="logo-name d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <?php the_custom_logo() ?>
+                    </div>
 
-                <div class="site-name">
-                    <div class="h4 bold"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></div>
-                    <p><?php bloginfo( 'description' ); ?></p>
-                </div>
+                    <div class="site-name">
+                        <h5><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h5>
+                        <p><?php bloginfo( 'description' ); ?></p>
+                    </div>
+               </div>
+
 
                 <div class="nav-wrapper language-switcher">
                     <?php if (has_nav_menu('language-switcher')) { ?>
@@ -207,7 +210,16 @@
     <!-- Mobile Header Start-->
     <div class="nav-mobile-header">
 
-        <div class="logo"><?php get_default_logo_link(); ?></div>
+        <div class="logo-name d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <?php the_custom_logo() ?>
+            </div>
+
+            <div class="site-name">
+                <h4><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
+                <p><?php bloginfo( 'description' ); ?></p>
+            </div>
+        </div>
 
         <button class="hamburger js-hamburger" type="button" tabindex="0">
             <span class="hamburger-box">

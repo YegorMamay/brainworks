@@ -6,6 +6,9 @@ get_header();
 the_post(); ?>
 
    <div class="container">
+
+   <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+
     <div class="vh-xs-2"></div>
     <?php if (is_user_logged_in()) {
         $a = wp_get_current_user();
