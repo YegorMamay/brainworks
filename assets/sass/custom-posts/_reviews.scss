@@ -58,7 +58,7 @@ $review-next: '\00bb'; // &raquo;
     &-avatar {
         display: block;
         margin: 0 auto;
-        border-radius: 50%;
+        border-radius: 50% !important;
     }
 
     &-social {
