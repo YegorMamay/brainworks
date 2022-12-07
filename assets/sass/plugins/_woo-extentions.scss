@@ -124,3 +124,53 @@ ul.products {
     border-top-color: $themeColorTwo;
 }
 // Ajax filter END
+
+//List Grid display products
+.berocket_lgv_widget {
+    display: flex;
+
+    a:first-child {
+        margin-right: 10px;
+    }
+}
+
+del .woocommerce-Price-amount bdi {
+    color: $textMutedColor;
+}
+
+.price {
+    color: $themeColorTwo;
+
+    .woocommerce-Price-amount {
+        bdi {
+            font-weight: bold;
+
+            @media #{$mobile-max} {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+@media #{$mobile-max} {
+    .berocket_lgv_additional_data {
+        max-width: 48%;
+
+        h3 {
+            font-size: 18px !important;
+            line-height: 1.3em !important;
+        }
+
+        p {
+            font-size: 14px !important;
+            line-height: 1.5em !important;
+        }
+    }
+}
+//List Grid display products END
+
+//Product carosel
+.owl-item li {
+    box-shadow: none !important;
+}

@@ -24,6 +24,9 @@
     appearance: auto;
 }
 
+.woocommerce .quantity .qty {
+    width: 100%;
+}
 
 .woocommerce-cart-form input#coupon_code {
     @include form-field-style;
@@ -51,4 +54,16 @@
 // Скрывает информацию под выбором способа доставки
 .woocommerce-shipping-destination {
     display: none;
+}
+
+//Фото в таблице
+.woocommerce-cart table.cart img {
+    width: 55px;
+}
+
+//Блок с суммой заказов под таблицей
+.cart_totals {
+    h2, .shop_table {
+        display: none;
+    }
 }
