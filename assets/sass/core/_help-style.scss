@@ -21,6 +21,10 @@ b, strong {
     font-weight: bold;
 }
 
+.hover-pointer {
+    cursor: pointer;
+}
+
 .text {
     &-muted {
         color: $textMutedColor !important;

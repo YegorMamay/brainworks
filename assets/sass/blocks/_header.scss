@@ -8,7 +8,7 @@
     }
 
     .pre-header {
-        background: $grayColor;
+        background: lighten($themeColorOne, 65%);
         padding: 5px 0;
 
         .container {

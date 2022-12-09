@@ -44,12 +44,12 @@ function bw_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('bw_scroll_top_width', array(
-        'default' => 50,
+        'default' => 45,
         'transport' => 'postMessage',
     ));
 
     $wp_customize->add_setting('bw_scroll_top_height', array(
-        'default' => 50,
+        'default' => 45,
         'transport' => 'postMessage',
     ));
 
