@@ -176,17 +176,15 @@ table.variations {
     }
 }
 
-@media #{$mobile-max} {
-    .woocommerce div.product .woocommerce-tabs ul.tabs li {
-        display: block;
-        width: 100%;
-    }
-}
-
 //xs 544
 @media #{$mobile-max} {
   .woocommerce {
     div.product {
+        .woocommerce-tabs ul.tabs li {
+            display: block;
+            width: 100%;
+        }
+
       form.cart {
         display: flex;
         justify-content: center;
@@ -199,6 +197,10 @@ table.variations {
       max-width: 70px;
     }
   }
+
+    .summary .price .woocommerce-Price-amount bdi {
+        font-size: 30px;
+    }
 }
 
 .woocommerce-Reviews {

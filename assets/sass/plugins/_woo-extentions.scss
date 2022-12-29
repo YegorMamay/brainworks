@@ -62,9 +62,14 @@ ul.products {
     margin-top: 0;
     margin-bottom: 15px;
 
-    .ivpa_title, .ivpa-terms {
-        margin-top: 0;
-        margin-bottom: 0;
+    .ivpa_attribute[data-attribute="pa_rozmir"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked,
+    .ivpa_attribute[data-attribute="pa_rozmir"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
+        border-color: $themeColorTwo !important;
+        color: $themeColorTwo !important;
+    }
+
+    .ivpa_title {
+        margin: 10px 10px 0 0;
     }
 
     .ivpa_attribute {
@@ -73,8 +78,8 @@ ul.products {
     }
 }
 
-.ivpa-info-box-icon:before {
-    margin-right: 10px;
+.ivpa-info-box {
+    display: none !important;
 }
 
 .ivpa_quantity input {
