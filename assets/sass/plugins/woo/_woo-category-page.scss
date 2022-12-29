@@ -39,12 +39,14 @@ ul.products li.product {
     ul {
 
         &.products {
+            display: flex;
+            flex-wrap: wrap;
 
             li {
                 &.product {
                     text-align: center;
-                    //box-shadow: $shadow;
-                    //border: 1px solid lighten($blackColor, 90%);
+                    box-shadow: $shadow; //
+                    border: 1px solid lighten($blackColor, 90%); //
                     padding-bottom: 20px;
                     @include smooth_animation;
 
@@ -54,8 +56,8 @@ ul.products li.product {
 
                     .woocommerce-loop-product__title,
                     .woocommerce-loop-category__title {
-                        line-height: 1.1;
-                        @include responsive-font-size(18px, 24px, 480px, 1200px, 20px);
+                        line-height: 1.2;
+                        font-size: 20px;
                     }
 
                     .price {

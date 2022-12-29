@@ -141,7 +141,7 @@ table.variations {
       span {
         &.price {
           margin-bottom: 20px;
-          @include responsive-font-size(20px, 32px, 480px, 1024px, 26px);
+          @include responsive-font-size(20px, 26px, 480px, 1024px, 26px);
           line-height: 1;
           font-weight: bold;
           color: $productPriceFontColor;
@@ -199,7 +199,7 @@ table.variations {
   }
 
     .summary .price .woocommerce-Price-amount bdi {
-        font-size: 30px;
+        @include responsive-font-size(20px, 26px, 480px, 1024px, 26px);
     }
 }
 

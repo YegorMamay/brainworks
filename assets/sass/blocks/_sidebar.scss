@@ -2,6 +2,7 @@
     .widget_nav_menu {
         box-shadow: $shadow;
         padding: 15px;
+        border-radius: $borderRadius;
 
         .sub-current-menu-item {
             text-decoration: none;

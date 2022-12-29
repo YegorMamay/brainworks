@@ -1,9 +1,13 @@
 .logo {
+    margin-right: 15px;
+
   &,
   &-link,
   &-img {
     display: inline-block;
     vertical-align: middle;
+    width: 100%;
+    max-height: 58px;
   }
 }
 
