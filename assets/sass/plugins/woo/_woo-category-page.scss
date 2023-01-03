@@ -74,7 +74,18 @@ ul.products li.product {
                         object-fit: contain;
                     }
                 }
+
+            &.berocket_lgv_list {
+                width: 36% !important;
+                margin-bottom: 128px !important;
+                margin-right: 25px !important;
+                padding-bottom: 0;
+
+                a img {
+                    margin: 0;
+                }
             }
+          }
         }
     }
 }

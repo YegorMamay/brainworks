@@ -69,6 +69,14 @@
     margin: 12px 1em 0 0;
 }
 
-.woocommerce-billing-fields .optional {
+.woocommerce-billing-fields .optional, .notes label .optional {
     display: none;
+}
+
+.woocommerce-thankyou-order-received {
+    margin-bottom: 20px;
+}
+
+ul.woocommerce-thankyou-order-details {
+    padding-left: 0;
 }
