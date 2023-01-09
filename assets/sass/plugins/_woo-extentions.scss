@@ -10,6 +10,11 @@ ul.products {
         }
     }
 }
+
+.tinvwl_button_close {
+    @extend .btn;
+    @extend .btn-one;
+}
 // TI WooCommerce Wishlist END
 
 
