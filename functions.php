@@ -4,7 +4,7 @@
  */
 
 //Скрывает topbar
-show_admin_bar(false);
+//show_admin_bar(false);
 
 require get_template_directory() . '/inc/helpers.php';
 // require get_template_directory() . '/inc/auth.php';
@@ -292,7 +292,7 @@ function translate_text($translated) {
 $translated = str_ireplace('Подытог', 'Итого', $translated);
 return $translated;
 }
-//WOOCOMMERCE END
+//Изменение перевода END
 
 // Отменяет удаление из корзины через определенный срок
 function devise_remove_schedule_delete() {
@@ -362,10 +362,12 @@ function ts_quantity_plus_minus() {
 }
 // Добавляет кнопки + и - END
 
+
 //Перемещает описание категории под товары
 remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 add_action( 'woocommerce_after_shop_loop', 'woocommerce_taxonomy_archive_description', 100 );
 // end
+
 
 //show hide content text
 
@@ -470,23 +472,3 @@ add_action('manage_'.'blocks'.'_posts_custom_column', 'fill_views_column', 5, 2 
 function fill_views_column( $colname, $post_id ){
 	echo "[html_block id=" . $post_id . "]";
 }
-
-// Перенаправление юзеров не являющихся администраторами на главную страницу
-function my_login_redirect( $url, $request, $user ){
-
-	if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
-
-        /*check your roles, customize according to you conditions*/
-		if( $user->has_cap( 'administrator') or $user->has_cap( 'author')) {
-			$url = admin_url();
-		}
-		else
-		{
-			$url = home_url('/');
-		}
-
-	}
-	return $url;
-}
-
-add_filter('login_redirect', 'my_login_redirect', 10, 3 );
