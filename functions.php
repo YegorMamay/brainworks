@@ -455,17 +455,6 @@ function showhide_footer() {
     <?php
 }
 
-//WOO Checkout page: delete country field
- add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
-
-function custom_override_checkout_fields( $fields ) {
-  unset($fields['billing']['billing_country']);
-  unset($fields['shipping']['shipping_country']);
-
-  return $fields;
-}
-
-
 
 // Column shortcode cpt "html block"
 add_filter( 'manage_'.'blocks'.'_posts_columns', 'add_views_column', 4 );
