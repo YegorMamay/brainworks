@@ -143,16 +143,6 @@
                     <?php } ?>
                 </div>
 
-                <div class="woo-cart woo-cart-popup-wrapper">
-                    <?php if ( class_exists( 'WooCommerce' ) ) { ?>
-                    <?php echo woocommerce_cart(); ?>
-                    <?php echo woocommerce_cart_popup(); ?>
-                    <span id="modal-cart" class="cart-caption">
-                        <?php echo woocommerce_get_total_price(); ?>
-                    </span>
-                    <?php } ?>
-                </div>
-
                 <!-- Dropdown phones -->
                 <?php if (has_phones()) { ?>
                 <ul class="phone-dropdown">
@@ -181,6 +171,38 @@
                 <?php echo do_shortcode('[bw-messengers]'); ?>
 
                 <button class="btn btn-two callback <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
+
+                     <!-- Список желаний, кабинет, корзина -->
+						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+						<div class="header__woo d-flex align-items-center">
+							<div class="header__wishlist">
+								<a href="<?php echo get_permalink(pll_get_post(579)) ?>" class="header__circle">
+									<i class="far fa-heart"></i>
+								</a>
+							</div>
+							<div class="header__profile">
+								<a href="<?php echo get_permalink(pll_get_post(571)) ?>" class="header__circle">
+									<i class="fa-regular fa-user"></i>
+								</a>
+							</div>
+							<div class="header__cart d-flex align-items-center">
+								<div class="woo-cart">
+									<div class="woo-cart woo-cart-popup-wrapper">
+										<?php if ( class_exists( 'WooCommerce' ) ) {
+											woocommerce_cart(); woocommerce_cart_popup();} ?>
+									</div>
+								</div>
+								<div class="header__cart-details d-flex flex-column">
+									<span>
+										<?php _e('Cart', 'brainworks') ?>
+									</span>
+									<p  id="modal-cart" class="header__cart-price">
+										<?php echo woocommerce_get_total_price(); ?>
+									</p>
+								</div>
+							</div>
+						</div>
+						<?php } ?>
 
             </div>
 
@@ -215,6 +237,27 @@
                 <h4><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
                 <p><?php bloginfo( 'description' ); ?></p>
             </div>
+        </div>
+
+        <!-- Список желаний, кабинет, корзина -->
+        <div class="header__woo d-flex">
+		<div class="header__wishlist">
+			<a href="/wishlist/" class="header__circle">
+				<i class="fal fa-heart"></i>
+			</a>
+		</div>
+		<div class="header__profile">
+			<a href="/mij-akkaunt/" class="header__circle">
+				<i class="fal fa-user-alt"></i>
+			</a>
+		</div>
+		<div class="header__cart d-flex align-items-center">
+			<div class="woo-cart">
+				<div class="woo-cart woo-cart-popup-wrapper">
+                    <?php if ( class_exists( 'WooCommerce' ) ) {woocommerce_cart();} ?>
+                </div>
+			</div>
+		</div>
         </div>
 
         <button class="hamburger js-hamburger" type="button" tabindex="0">
