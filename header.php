@@ -240,6 +240,7 @@
         </div>
 
         <!-- Список желаний, кабинет, корзина -->
+        <?php if ( class_exists( 'WooCommerce' ) ) { ?>
         <div class="header__woo d-flex">
 		<div class="header__wishlist">
 			<a href="/wishlist/" class="header__circle">
@@ -259,6 +260,7 @@
 			</div>
 		</div>
         </div>
+        <?php } ?>
 
         <button class="hamburger js-hamburger" type="button" tabindex="0">
             <span class="hamburger-box">
