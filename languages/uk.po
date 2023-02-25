@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-25 07:45+0000\n"
-"PO-Revision-Date: 2022-10-01 21:33+0000\n"
+"PO-Revision-Date: 2023-02-23 10:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Українська\n"
 "Language: uk\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
@@ -57,7 +57,11 @@ msgstr "Свіжіший"
 msgid "<strong>ERROR:</strong> The username and password is incorrect."
 msgstr "ПОМИЛКА: невірні ім'я чи пароль."
 
-#: footer.php:12
+#: woocommerce/myaccount/form-login.php:104
+msgid "A link to set a new password will be sent to your email address."
+msgstr ""
+
+#: footer.php:13
 msgid "All rights reserved"
 msgstr "Всі права захищені"
 
@@ -96,7 +100,7 @@ msgstr "Архів автора: %s"
 msgid "Auto Hide"
 msgstr ""
 
-#: 404.php:12 page-thank-you.php:14
+#: 404.php:12 page-thank-you.php:16
 msgid "Back to the homepage"
 msgstr "Повернутися на головну"
 
@@ -138,9 +142,13 @@ msgstr ""
 msgid "Buy in one click"
 msgstr "Замовити"
 
-#: header.php:184
+#: header.php:173
 msgid "Callback"
 msgstr "Зворотний дзвінок"
+
+#: header.php:197
+msgid "Cart"
+msgstr "Кошик"
 
 #: inc/custom-post-types.php:49
 msgid "Catalog"
@@ -162,7 +170,7 @@ msgstr "Коментарі"
 msgid "Container"
 msgstr ""
 
-#: inc/LoadMorePosts.php:111 inc/shortcodes.php:298 inc/shortcodes.php:456
+#: inc/LoadMorePosts.php:111 inc/shortcodes.php:296 inc/shortcodes.php:454
 #: loops/content.php:39
 msgid "Continue reading"
 msgstr "Читати далі"
@@ -191,7 +199,7 @@ msgstr ""
 msgid "Customizer Sticky Header"
 msgstr ""
 
-#: footer.php:14
+#: footer.php:28
 msgid "Developed by "
 msgstr "Розроблено в "
 
@@ -207,7 +215,7 @@ msgstr ""
 msgid "Edit"
 msgstr "Редагувати"
 
-#: inc/shortcodes.php:542
+#: inc/shortcodes.php:540
 msgid "Email"
 msgstr ""
 
@@ -329,8 +337,8 @@ msgstr "Вийти з цього акаунту"
 msgid "Logged in as"
 msgstr "Ви увійшли як"
 
-#: inc/customizer.php:377 inc/helpers.php:583 inc/shortcodes.php:506
-#: inc/shortcodes.php:515 inc/shortcodes.php:538
+#: inc/customizer.php:377 inc/shortcodes.php:504 inc/shortcodes.php:513
+#: inc/shortcodes.php:536
 msgid "Login"
 msgstr "Увійти"
 
@@ -345,10 +353,6 @@ msgstr "Пароль або логін невірні!"
 #: inc/customizer.php:387
 msgid "Logo"
 msgstr ""
-
-#: inc/helpers.php:586
-msgid "Logout"
-msgstr "Вийти"
 
 #: inc/navbar.php:4
 msgid "Main Navigation"
@@ -408,7 +412,7 @@ msgstr ""
 msgid "Page Without Title"
 msgstr ""
 
-#: inc/shortcodes.php:510 inc/shortcodes.php:546
+#: inc/shortcodes.php:508 inc/shortcodes.php:544
 msgid "Password"
 msgstr ""
 
@@ -494,7 +498,7 @@ msgstr "Попередній"
 msgid "Quick order"
 msgstr "Замовити"
 
-#: inc/shortcodes.php:555
+#: inc/shortcodes.php:553
 msgid "Register"
 msgstr ""
 
@@ -502,7 +506,7 @@ msgstr ""
 msgid "Remarketing code"
 msgstr ""
 
-#: inc/shortcodes.php:550
+#: inc/shortcodes.php:548
 msgid "Retry password"
 msgstr ""
 
@@ -555,7 +559,7 @@ msgstr ""
 msgid "Shape"
 msgstr ""
 
-#: functions.php:475
+#: functions.php:466
 msgid "Shortcode"
 msgstr ""
 
@@ -650,7 +654,7 @@ msgstr ""
 msgid "User with this login or email has already registered"
 msgstr "Користувач з таким логіном вже існує"
 
-#: inc/setup.php:275 inc/helpers.php:608
+#: inc/setup.php:275 inc/helpers.php:591
 msgid "View your shopping cart"
 msgstr "Перейти до корзини"
 

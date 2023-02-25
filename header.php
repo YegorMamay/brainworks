@@ -126,8 +126,9 @@
                </div>
 
 
+
                 <div class="nav-wrapper language-switcher">
-                    <?php if (has_nav_menu('language-switcher')) { ?>
+                    <?php if (has_nav_menu('language-switcher') && function_exists('pll_the_languages')) { ?>
                     <nav class="nav js-menu">
                         <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
                         <?php wp_nav_menu(array(
@@ -148,20 +149,27 @@
                 <ul class="phone-dropdown">
                     <li class="phone-dropdown__item">
                         <?php foreach(get_phones() as $key => $phone) { ?>
-                        <?php if ($key === key(get_phones())) { ?>
-                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
-                            <?php echo trim($phone); ?>
-                        </a>
-                        <button type="button" class="phone-dropdown__button js-dropdown"></button>
-                        <ul class="phone-dropdown__list js-phone-list">
-                            <?php  } else { ?>
-                            <li class="phone-dropdown__item">
-                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
+                            <?php if (count(get_phones()) > 2): ?>
+
+                            <?php if ($key === key(get_phones())) { ?>
+                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
                                     <?php echo trim($phone); ?>
                                 </a>
-                            </li>
-                            <?php } ?>
-                            <?php } ?>
+                                <button type="button" class="phone-dropdown__button js-dropdown"></button>
+                                <ul class="phone-dropdown__list js-phone-list">
+                                    <?php  } else { ?>
+                                    <li class="phone-dropdown__item">
+                                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
+                                            <?php echo trim($phone); ?>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            <?php else: ?>
+                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
+                                    <?php echo trim($phone); ?>
+                                </a>
+                            <?php endif; ?>
+                        <?php } ?>
                         </ul>
                     </li>
                 </ul>

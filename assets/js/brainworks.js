@@ -416,4 +416,11 @@ var _this = void 0;
     $(window).load(function() {
         $(document.body).trigger("wc_fragment_refresh");
     });
+
+    $(document).mouseup(function(e) {
+    	var popup = $('.nav.js-menu.is-active');
+    	if (e.target!=popup[0]&&popup.has(e.target).length === 0) {
+    		$('.nav.js-menu').removeClass('is-active');
+    	}
+    })
 })(window, document, jQuery, window.jpAjax);

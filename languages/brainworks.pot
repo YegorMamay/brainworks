@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-01 21:32+0000\n"
+"POT-Creation-Date: 2023-02-23 10:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -56,7 +56,11 @@ msgstr ""
 msgid "<strong>ERROR:</strong> The username and password is incorrect."
 msgstr ""
 
-#: footer.php:12
+#: woocommerce/myaccount/form-login.php:104
+msgid "A link to set a new password will be sent to your email address."
+msgstr ""
+
+#: footer.php:13
 msgid "All rights reserved"
 msgstr ""
 
@@ -95,7 +99,7 @@ msgstr ""
 msgid "Auto Hide"
 msgstr ""
 
-#: 404.php:12 page-thank-you.php:14
+#: 404.php:12 page-thank-you.php:16
 msgid "Back to the homepage"
 msgstr ""
 
@@ -137,8 +141,12 @@ msgstr ""
 msgid "Buy in one click"
 msgstr ""
 
-#: header.php:184
+#: header.php:173
 msgid "Callback"
+msgstr ""
+
+#: header.php:197
+msgid "Cart"
 msgstr ""
 
 #: inc/custom-post-types.php:49
@@ -161,7 +169,7 @@ msgstr ""
 msgid "Container"
 msgstr ""
 
-#: inc/LoadMorePosts.php:111 inc/shortcodes.php:298 inc/shortcodes.php:456
+#: inc/LoadMorePosts.php:111 inc/shortcodes.php:296 inc/shortcodes.php:454
 #: loops/content.php:39
 msgid "Continue reading"
 msgstr ""
@@ -190,7 +198,7 @@ msgstr ""
 msgid "Customizer Sticky Header"
 msgstr ""
 
-#: footer.php:14
+#: footer.php:28
 msgid "Developed by "
 msgstr ""
 
@@ -206,7 +214,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/shortcodes.php:542
+#: inc/shortcodes.php:540
 msgid "Email"
 msgstr ""
 
@@ -328,8 +336,8 @@ msgstr ""
 msgid "Logged in as"
 msgstr ""
 
-#: inc/customizer.php:377 inc/helpers.php:583 inc/shortcodes.php:506
-#: inc/shortcodes.php:515 inc/shortcodes.php:538
+#: inc/customizer.php:377 inc/shortcodes.php:504 inc/shortcodes.php:513
+#: inc/shortcodes.php:536
 msgid "Login"
 msgstr ""
 
@@ -343,10 +351,6 @@ msgstr ""
 
 #: inc/customizer.php:387
 msgid "Logo"
-msgstr ""
-
-#: inc/helpers.php:586
-msgid "Logout"
 msgstr ""
 
 #: inc/navbar.php:4
@@ -407,7 +411,7 @@ msgstr ""
 msgid "Page Without Title"
 msgstr ""
 
-#: inc/shortcodes.php:510 inc/shortcodes.php:546
+#: inc/shortcodes.php:508 inc/shortcodes.php:544
 msgid "Password"
 msgstr ""
 
@@ -493,7 +497,7 @@ msgstr ""
 msgid "Quick order"
 msgstr ""
 
-#: inc/shortcodes.php:555
+#: inc/shortcodes.php:553
 msgid "Register"
 msgstr ""
 
@@ -501,7 +505,7 @@ msgstr ""
 msgid "Remarketing code"
 msgstr ""
 
-#: inc/shortcodes.php:550
+#: inc/shortcodes.php:548
 msgid "Retry password"
 msgstr ""
 
@@ -554,7 +558,7 @@ msgstr ""
 msgid "Shape"
 msgstr ""
 
-#: functions.php:475
+#: functions.php:466
 msgid "Shortcode"
 msgstr ""
 
@@ -649,7 +653,7 @@ msgstr ""
 msgid "User with this login or email has already registered"
 msgstr ""
 
-#: inc/setup.php:275 inc/helpers.php:608
+#: inc/setup.php:275 inc/helpers.php:591
 msgid "View your shopping cart"
 msgstr ""
 
