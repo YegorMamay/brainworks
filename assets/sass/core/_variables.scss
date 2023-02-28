@@ -31,8 +31,8 @@ $borderColor: lighten($blackColor, 80%);
 $shadow: 0 10px 20px rgba($blackColor, .2);
 
 // THEME COLORS
-$themeColorOne: #2c3e50; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других. 
-$themeColorTwo: #e74c3c; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
+$themeColorOne: #3D5A80; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других.
+$themeColorTwo: #EE6C4D; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
 
 // SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColorTwo;

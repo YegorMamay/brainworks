@@ -178,7 +178,7 @@
 
                 <?php echo do_shortcode('[bw-messengers]'); ?>
 
-                <button class="btn btn-two callback <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
+                <button class="btn btn-two <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
 
                      <!-- Список желаний, кабинет, корзина -->
 						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
