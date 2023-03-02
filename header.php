@@ -149,7 +149,7 @@
                 <ul class="phone-dropdown">
                     <li class="phone-dropdown__item">
                         <?php foreach(get_phones() as $key => $phone) { ?>
-                            <?php if (count(get_phones()) > 2): ?>
+                            <?php if (count(get_phones()) > 1): ?>
 
                             <?php if ($key === key(get_phones())) { ?>
                                 <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
