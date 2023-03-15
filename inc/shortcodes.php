@@ -243,7 +243,8 @@ if (!function_exists('bw_html_sitemap')) {
 
         /* Закомментируй, чтобы скрыть Каталог - начало */
 	    $ignoretaxonomy = [
-		    //'catalog',
+		    'catalog',
+            'sn_cat' // comment this line to show categities list on sitemap page
 	    ];
 
 	    $product_categories = get_terms( [

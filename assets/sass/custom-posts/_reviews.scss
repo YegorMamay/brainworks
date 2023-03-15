@@ -14,11 +14,11 @@ $review-social-background: $themeColorTwo !default;
 $review-social-hover-color: $whiteColor !default;
 $review-social-hover-background: $themeColorOne !default;
 
-$review-arrow-size: 32px !default;
+$review-arrow-size: 45px !default;
 $review-arrow-color: $themeColorTwo !default;
 $review-arrow-font-size: 24px !default;
 $review-arrow-font-weight: bold !default;
-$review-arrow-background: transparent !default;
+$review-arrow-background: $whiteColor !default;
 $review-arrow-border-width: 1px !default;
 $review-arrow-border-color: lighten($themeColorTwo, 40%) !default;
 $review-arrow-radius: 50% !default;
