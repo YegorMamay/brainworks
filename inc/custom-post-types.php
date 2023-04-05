@@ -46,7 +46,7 @@ function bw_create_catalog()
     register_post_type('catalog', array(
         'label'  => null,
         'labels' => array(
-            'name'               =>  __('Catalog', 'brainworks'), // основное название для типа записи
+            'name'               =>  __('Catalog', 'brainworks'), // основное название для типа записи, можно менять
             'singular_name'      => 'Каталог', // название для одной записи этого типа
             'add_new'            => 'Добавить позицию', // для добавления новой записи
             'add_new_item'       => 'Добавлена позиция', // заголовка у вновь создаваемой записи в админ-панели.
@@ -76,7 +76,7 @@ function bw_create_catalog()
 
     register_taxonomy(
         'sn_cat',
-        'catalog', // привязываеться к произвольному типу записи
+        'catalog', // привязываеться к произвольному типу записи, не менять!
         array(
             'label' => __('Категории'),
             'rewrite' => array('slug' => 'categories'), // slug по которому будет выводиться категории

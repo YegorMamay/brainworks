@@ -17,7 +17,7 @@
     <?php } ?>
 
 
-    <!-- Delete if YoastSEO plugin activated START -->
+    <!-- Delete if YoastSEO plugin activated. START -->
     <title>
         <?php
         if (is_front_page()) {
@@ -88,22 +88,23 @@
     ?>
     ">
     <meta name="twitter:image" content="<?php echo esc_url(get_the_post_thumbnail_url()); ?>">
-    <!-- OpenGraph end-->
-    <!-- Delete if YoastSEO plugin activated END -->
+    <!-- OpenGraph. END -->
+    <!-- Delete if YoastSEO plugin activated. END -->
 
-    <!-- Favicon -->
+    <!-- Favicon. If not set in theme settings. START -->
     <!--<link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
     <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">-->
-    <!-- Favicon End -->
+    <!-- Favicon. END -->
 
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="top">
 
     <?php wp_body_open(); ?>
-    <div class="wrapper js-container"><!--Do not delete this openning div!-->
+    <div class="wrapper js-container"><!--Do not delete this openning div! It ends/closed in footer.php -->
 
         <header class="header <?php sticky_header(); ?>">
+
             <?php if (is_active_sidebar('pre-header-widget-area')) : ?>
                 <div class="pre-header">
                     <div class="container d-flex justify-content-between align-items-center">
@@ -111,6 +112,7 @@
                     </div>
                 </div>
             <?php endif; ?>
+
 
             <div class="header-inner container d-flex justify-content-between align-items-center">
 
@@ -125,8 +127,7 @@
                     </div>
                </div>
 
-
-
+                <!-- Language switcher menu. START -->
                 <div class="nav-wrapper language-switcher">
                     <?php if (has_nav_menu('language-switcher') && function_exists('pll_the_languages')) { ?>
                     <nav class="nav js-menu">
@@ -143,6 +144,7 @@
                     </nav>
                     <?php } ?>
                 </div>
+                <!-- Language switcher menu. END -->
 
                 <!-- Dropdown phones -->
                 <?php if (has_phones()) { ?>
@@ -176,44 +178,48 @@
                 <?php } ?>
                 <!-- Dropdown phones -->
 
+                <!-- Messengers shortcode -->
                 <?php echo do_shortcode('[bw-messengers]'); ?>
 
+                <!-- The button for a pop-up -->
                 <button class="btn btn-two <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
 
-                     <!-- Список желаний, кабинет, корзина -->
-						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-						<div class="header__woo d-flex align-items-center">
-							<div class="header__wishlist">
-								<a href="<?php echo get_permalink(pll_get_post(579)) ?>" class="header__circle">
-									<i class="far fa-heart"></i>
-								</a>
-							</div>
-							<div class="header__profile">
-								<a href="<?php echo get_permalink(pll_get_post(571)) ?>" class="header__circle">
-									<i class="fa-regular fa-user"></i>
-								</a>
-							</div>
-							<div class="header__cart d-flex align-items-center">
-								<div class="woo-cart">
-									<div class="woo-cart woo-cart-popup-wrapper">
-										<?php if ( class_exists( 'WooCommerce' ) ) {
-											woocommerce_cart(); woocommerce_cart_popup();} ?>
-									</div>
-								</div>
-								<div class="header__cart-details d-flex flex-column">
-									<span>
-										<?php _e('Cart', 'brainworks') ?>
-									</span>
-									<p  id="modal-cart" class="header__cart-price">
-										<?php echo woocommerce_get_total_price(); ?>
-									</p>
-								</div>
+                <!-- If WOO: Список желаний, кабинет, корзина. START -->
+				<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+				<div class="header__woo d-flex align-items-center">
+					<div class="header__wishlist">
+						<a href="<?php echo get_permalink(pll_get_post(579)) ?>" class="header__circle">
+							<i class="far fa-heart"></i>
+						</a>
+					</div>
+					<div class="header__profile">
+						<a href="<?php echo get_permalink(pll_get_post(571)) ?>" class="header__circle">
+							<i class="fa-regular fa-user"></i>
+						</a>
+					</div>
+					<div class="header__cart d-flex align-items-center">
+						<div class="woo-cart">
+							<div class="woo-cart woo-cart-popup-wrapper">
+								<?php if ( class_exists( 'WooCommerce' ) ) {
+									woocommerce_cart(); woocommerce_cart_popup();} ?>
 							</div>
 						</div>
-						<?php } ?>
+						<div class="header__cart-details d-flex flex-column">
+							<span>
+								<?php _e('Cart', 'brainworks') ?>
+							</span>
+							<p  id="modal-cart" class="header__cart-price">
+								<?php echo woocommerce_get_total_price(); ?>
+							</p>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+                <!-- If WOO: Список желаний, кабинет, корзина. END -->
 
             </div>
 
+            <!-- Main Navigation. START -->
             <?php if (has_nav_menu('main-nav')) { ?>
             <nav class="nav js-menu">
                 <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
@@ -230,6 +236,7 @@
                 </div>
             </nav>
             <?php } ?>
+            <!-- Main Navigation. START -->
 
         </header>
 
@@ -247,7 +254,7 @@
             </div>
         </div>
 
-        <!-- Список желаний, кабинет, корзина -->
+        <!-- If WOO: Список желаний, кабинет, корзина. START -->
         <?php if ( class_exists( 'WooCommerce' ) ) { ?>
         <div class="header__woo d-flex">
 		<div class="header__wishlist">
@@ -269,18 +276,21 @@
 		</div>
         </div>
         <?php } ?>
+        <!-- If WOO: Список желаний, кабинет, корзина. START -->
 
+        <!-- Hamburger button. START -->
         <button class="hamburger js-hamburger" type="button" tabindex="0">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
+        <!-- Hamburger button. END -->
 
     </div>
-    <!-- Mobile Header END-->
+    <!-- Mobile Header END -->
 
 
-    <!-- Mobile menu start-->
+    <!-- Mobile menu. START-->
     <?php if (has_nav_menu('main-nav')) { ?>
     <nav class="nav js-menu hide-on-desktop">
         <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
@@ -315,7 +325,7 @@
         <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
     </nav>
     <?php } ?>
-    <!-- Mobile menu end-->
+    <!-- Mobile menu END -->
 
     <?php if ( class_exists( 'WooCommerce' ) ) { ?>
     <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>' />
