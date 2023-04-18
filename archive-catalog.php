@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php $column_class = is_active_sidebar('sidebar-widget-area')
-    ? 'col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9'
+    ? 'col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9'
     : 'col-12';
 ?>
 
@@ -14,29 +14,29 @@
     
     <div class="row">
         <?php if (is_active_sidebar('sidebar-widget-area')) { ?>
-            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 sidebar">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 sidebar">
                 <?php dynamic_sidebar('sidebar-widget-area'); ?>
             </div>
         <?php } ?>
         
         <div class="<?php echo $column_class; ?>">
-           <h1 class="page-name"><?php post_type_archive_title(); ?></h1>
-           
-            <div class="row">
+           <h1 class="page-name"><?php _e('Katalog', 'brainworks') ?></h1>
+
+                <div class="catalog-wrap">
+
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <div class="col-12 col-sm-12 col-md-4">
+
                    <div class="catalog-item">
-                    <div><a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail('large'); ?></a></div>
-                    <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
+                        <a href="<?php the_permalink(); ?>" class="image-catalogs"><?php the_post_thumbnail('large'); ?></a>
+                        <h6 class="text-center"><a href="<?php the_permalink(); ?>" class="title-catalogs"><?php the_title(); ?></a></h6>
                     </div>
-                    <div class="vh-xs-3"></div>
-                </div>  
+
                 <?php endwhile;
                     else : ?>
                 <?php get_template_part('loops/content', 'none'); ?>
                 <?php endif; ?>
-            </div>
-            
+
+               </div>
             
     <?php if (function_exists('bw_pagination')) {
             bw_pagination();
