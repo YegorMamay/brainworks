@@ -43,7 +43,7 @@ $textHighlightBgColor: $themeColorTwo;
 $textHighlightColor: $whiteColor;
 
 // BODY
-$bodyBgColor: $whiteColor;
+$bodyBgColor: darken($whiteColor, 3%);
 $bodyFontColor: $blackColor;
 
 // WRAPPER

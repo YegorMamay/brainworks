@@ -44,6 +44,7 @@ ul.products li.product {
 
             li {
                 &.product {
+                    background-color: $whiteColor;
                     text-align: center;
                     box-shadow: $shadow; //
                     border: 1px solid lighten($blackColor, 90%); //
@@ -78,6 +79,13 @@ ul.products li.product {
 
                     a.added_to_cart {
                         max-width: 230px;
+                    }
+
+                    &.berocket_lgv_list {
+                        a.added_to_cart {
+                            max-width: 230px;
+                            margin: 20px 0;
+                        }
                     }
                 }
 
