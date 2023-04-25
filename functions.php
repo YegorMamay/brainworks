@@ -473,26 +473,6 @@ function fill_views_column( $colname, $post_id ){
 	echo "[html_block id=" . $post_id . "]";
 }
 
-//Редирект со страницы входа в админку на Главную, если юзер не админ
-function redirect_user_on_role()
-{
-    //retrieve current user info
-    global $current_user;
-        wp_get_current_user();
-    //If login user role is Subscriber
-        if ($current_user->user_level == 0)
-        {
-            wp_redirect( home_url() ); exit;
-        }
-    // For other roles
-    else
-        {
-            $redirect_to = '/wp-admin/';
-            return $redirect_to;
-    }
-}
-add_action('admin_init','redirect_user_on_role');
-
 //Скрывает топ-бар для подписчиков
 if (!current_user_can('manage_options')) {
     add_filter('show_admin_bar', '__return_false');

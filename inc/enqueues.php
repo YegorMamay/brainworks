@@ -50,6 +50,7 @@ function bw_enqueues()
 
 add_action('wp_enqueue_scripts', 'bw_enqueues', 100);
 
+
 // Квиз старт
 function bw_enqueues_kviz()
 {
@@ -66,9 +67,6 @@ function bw_enqueues_kviz()
 
 add_action('wp_enqueue_scripts', 'bw_enqueues_kviz', 100);
 // Квиз енд
-
-
-
 
 
 /**
