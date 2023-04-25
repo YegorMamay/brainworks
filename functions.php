@@ -478,7 +478,7 @@ function redirect_user_on_role()
 {
     //retrieve current user info
     global $current_user;
-        get_currentuserinfo();
+        wp_get_current_user();
     //If login user role is Subscriber
         if ($current_user->user_level == 0)
         {
