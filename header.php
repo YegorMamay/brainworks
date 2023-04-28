@@ -7,7 +7,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
-
     <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-brands-400.woff2'); ?>" crossorigin>
     <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-light-300.woff2'); ?>" crossorigin>
     <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
@@ -15,7 +14,6 @@
     <?php if(is_plugin_active($plugin)){ ?>
     <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
     <?php } ?>
-
 
     <!-- Delete if YoastSEO plugin activated. START -->
     <title>
@@ -92,8 +90,8 @@
     <!-- Delete if YoastSEO plugin activated. END -->
 
     <!-- Favicon. If not set in theme settings. START -->
-    <!--<link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
-    <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">-->
+    <!--<link rel="shortcut icon" href="<?php /* echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); */ ?>" type="image/x-icon">
+    <link rel="icon" href="<?php /* echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); */ ?>" type="image/x-icon">-->
     <!-- Favicon. END -->
 
     <?php wp_head(); ?>
