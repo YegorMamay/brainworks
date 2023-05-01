@@ -26,7 +26,7 @@ $blackColor: #000 !default; // black
 $whiteColor: #fff !default; // white
 $grayColor : #ddd !default;  // gray
 
-$borderRadius: 6px;
+$borderRadius: 25px;
 $borderColor: lighten($blackColor, 80%);
 $shadow: 0 10px 20px rgba($blackColor, .2);
 
@@ -111,7 +111,7 @@ $textMutedColor: lighten($blackColor, 75%);;
 
 // Icons
 $iconColor: $themeColorTwo;
-$iconColorActive: lighten($themeColorTwo, 10%);
+$iconColorActive: $whiteColor;
 $iconColorReversed: $bodyBgColor;
 
 // FORMS

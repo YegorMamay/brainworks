@@ -221,7 +221,7 @@ fieldset:disabled a.btn {
   $active-border: darken($themeColorTwo, 15%);
 
   @if $btn-enable-gradients {
-    background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 25%), $background) repeat-x;
+    background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 35%), $background) repeat-x;
   } @else {
     background: $background;
     @if ($btn-glass-effect) {

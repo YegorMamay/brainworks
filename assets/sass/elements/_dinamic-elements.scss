@@ -216,18 +216,24 @@
   }
 
   &-item {
-    margin: 0 10px;
+    margin: 0 5px;
   }
 
   &-link {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     color: $iconColor;
+    background-color: $whiteColor;
+    border-radius: $borderRadius;
+    //box-shadow: $shadow;
+    width: 40px;
+    height: 40px;
 
     &:hover, &:active, &:focus {
       color: $iconColorActive;
+      background-color: $themeColorTwo;
     }
   }
 }
