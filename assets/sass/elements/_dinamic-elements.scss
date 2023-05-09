@@ -1,14 +1,6 @@
 .logo {
     margin-right: 15px;
-
-  &,
-  &-link,
-  &-img {
-    display: inline-block;
-    vertical-align: middle;
-    width: auto;
-    max-height: 58px;
-  }
+    max-width: 100px;
 }
 
 .phone {
