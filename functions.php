@@ -404,7 +404,7 @@ function showhide_shortcode( $atts, $content = null ) {
 
     // Determine Whether To Show Or Hide Press Release
     $hidden_class = 'sh-hide';
-    $hidden_css = 'display: none;';
+    $hidden_css = '';
     $hidden_aria_expanded = 'false';
     if( $attributes['hidden'] === 'no' ) {
         $hidden_class = 'sh-show';
@@ -416,8 +416,8 @@ function showhide_shortcode( $atts, $content = null ) {
     }
 
     // Format HTML Output
-    $output = '<div id="' . $attributes['type'] . '-content-' . $post_id . '" class="sh-content ' . $attributes['type'] . '-content ' . $hidden_class . '" style="' . $hidden_css . '">' . do_shortcode( $content ) . '</div>';
-    $output .= '<div id="' . $attributes['type'] . '-link-' . $post_id . '" class="sh-link ' . $attributes['type'] . '-link js-show-more ' . $hidden_class .'"><a href="#" class="btn-show-more" onclick="showhide_toggle(\'' . esc_js( $attributes['type'] ) . '\', ' . $post_id . ', \'' . esc_js( $more_text ) . '\', \'' . esc_js( $less_text ) . '\'); return false;" aria-expanded="' . $hidden_aria_expanded .'"><span id="' . $attributes['type'] . '-toggle-' . $post_id . '">' . $more_text . '</span></a></div>';
+    $output = '<div class="show-hide-text__wrapp"><div class="show-hide-text"><div id="' . $attributes['type'] . '-content-' . $post_id . '" class="sh-content ' . $attributes['type'] . '-content ' . $hidden_class . '" style="' . $hidden_css . '">' . do_shortcode( $content ) . '</div>';
+    $output .= '<div id="' . $attributes['type'] . '-link-' . $post_id . '" class="sh-link ' . $attributes['type'] . '-link js-show-more ' . $hidden_class .'"></div></div><a href="#" class="btn-show-more"><span class="show-text">' . $more_text . '</span><span class="hide-text">'.$less_text.'</span></a></div>';
 
     return $output;
 }
@@ -428,31 +428,31 @@ function showhide_footer() {
     ?>
     <?php if( WP_DEBUG ): ?>
         <script type="text/javascript">
-            function showhide_toggle(type, post_id, more_text, less_text) {
-                var   $link = jQuery("#"+ type + "-link-" + post_id)
-                    , $link_a = jQuery('a', $link)
-                    , $content = jQuery("#"+ type + "-content-" + post_id)
-                    , $toggle = jQuery("#"+ type + "-toggle-" + post_id)
-                    , show_hide_class = 'sh-show sh-hide';
-                $link.toggleClass(show_hide_class);
-                $content.toggleClass(show_hide_class).toggle();
-                if($link_a.attr('aria-expanded') === 'true') {
-                    $link_a.attr('aria-expanded', 'false');
-                } else {
-                    $link_a.attr('aria-expanded', 'true');
-                }
-                if($toggle.text() === more_text) {
-                    $toggle.text(less_text);
-                    $link.trigger( "sh-link:more" );
-                } else {
-                    $toggle.text(more_text);
-                    $link.trigger( "sh-link:less" );
-                }
-                $link.trigger( "sh-link:toggle" );
-            }
+            // function showhide_toggle(type, post_id, more_text, less_text) {
+            //     var   $link = jQuery("#"+ type + "-link-" + post_id)
+            //         , $link_a = jQuery('a', $link)
+            //         , $content = jQuery("#"+ type + "-content-" + post_id)
+            //         , $toggle = jQuery("#"+ type + "-toggle-" + post_id)
+            //         , show_hide_class = 'sh-show sh-hide';
+            //     $link.toggleClass(show_hide_class);
+            //     $content.toggleClass(show_hide_class).toggle();
+            //     if($link_a.attr('aria-expanded') === 'true') {
+            //         $link_a.attr('aria-expanded', 'false');
+            //     } else {
+            //         $link_a.attr('aria-expanded', 'true');
+            //     }
+            //     if($toggle.text() === more_text) {
+            //         $toggle.text(less_text);
+            //         $link.trigger( "sh-link:more" );
+            //     } else {
+            //         $toggle.text(more_text);
+            //         $link.trigger( "sh-link:less" );
+            //     }
+            //     $link.trigger( "sh-link:toggle" );
+            // }
         </script>
     <?php else : ?>
-        <script type="text/javascript">function showhide_toggle(e,t,r,g){var a=jQuery("#"+e+"-link-"+t),s=jQuery("a",a),i=jQuery("#"+e+"-content-"+t),l=jQuery("#"+e+"-toggle-"+t);a.toggleClass("sh-show sh-hide"),i.toggleClass("sh-show sh-hide").toggle(),"true"===s.attr("aria-expanded")?s.attr("aria-expanded","false"):s.attr("aria-expanded","true"),l.text()===r?(l.text(g),a.trigger("sh-link:more")):(l.text(r),a.trigger("sh-link:less")),a.trigger("sh-link:toggle")}</script>
+        <!-- <script type="text/javascript">function showhide_toggle(e,t,r,g){var a=jQuery("#"+e+"-link-"+t),s=jQuery("a",a),i=jQuery("#"+e+"-content-"+t),l=jQuery("#"+e+"-toggle-"+t);a.toggleClass("sh-show sh-hide"),i.toggleClass("sh-show sh-hide").toggle(),"true"===s.attr("aria-expanded")?s.attr("aria-expanded","false"):s.attr("aria-expanded","true"),l.text()===r?(l.text(g),a.trigger("sh-link:more")):(l.text(r),a.trigger("sh-link:less")),a.trigger("sh-link:toggle")}</script> -->
     <?php endif; ?>
     <?php
 }

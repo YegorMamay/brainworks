@@ -99,7 +99,7 @@
         }
       }
 
-      &-current {
+      &-current:not(.menu-item-type-custom) {
         border-bottom: 5px solid $menuBgColorActive;
         padding-bottom: 0;
       }

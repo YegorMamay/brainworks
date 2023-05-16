@@ -529,6 +529,7 @@ function bw_customize_register($wp_customize)
     $wp_customize->add_setting('bw_messenger_viber', array('default' => '', 'sanitize_callback' => '',));
     $wp_customize->add_setting('bw_messenger_whatsapp', array('default' => '', 'sanitize_callback' => '',));
     $wp_customize->add_setting('bw_messenger_telegram', array('default' => '', 'sanitize_callback' => '',));
+    $wp_customize->add_setting('bw_messenger_facebook', array('default' => '', 'sanitize_callback' => '',));
 
     $wp_customize->selective_refresh->add_partial('bw_messenger_skype', array(
         'selector' => '.messenger',
@@ -559,6 +560,13 @@ function bw_customize_register($wp_customize)
         'label' => 'Telegram',
         'section' => 'bw_messenger',
         'settings' => 'bw_messenger_telegram',
+        'type' => 'tel',
+    ));
+
+    $wp_customize->add_control('bw_messenger_facebook', array(
+        'label' => 'Facebook',
+        'section' => 'bw_messenger',
+        'settings' => 'bw_messenger_facebook',
         'type' => 'tel',
     ));
 

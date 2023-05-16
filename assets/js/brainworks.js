@@ -206,7 +206,7 @@ var _this = void 0;
         Elements.button.add(Elements.close).on("click", function() {
             Elements.menu.toggleClass("is-active");
         });
-        Elements.menu.find("a").on("click", function() {
+        Elements.menu.find(".menu-item:not(.menu-item-has-children.menu-item-type-custom) a").on("click", function() {
             Elements.menu.removeClass("is-active");
         });
         var arrowOpener = function arrowOpener(parent) {
@@ -281,7 +281,7 @@ var _this = void 0;
     };
     var scrollToElement = function scrollToElement() {
         var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
-        var links = $("a");
+        var links = $(".menu-item:not(.menu-item-has-children.menu-item-type-custom) a");
         links.each(function(index, element) {
             var $element = $(element), href = $element.attr("href");
             if (href) {
@@ -378,7 +378,7 @@ var _this = void 0;
     $(".js-hamburger").on("click", function() {
         $("body").addClass("body-overflow");
     });
-    $(".js-menu-close, .menu-link").on("click", function() {
+    $(".js-menu-close, .menu-item:not(.menu-item-has-children.menu-item-type-custom) .menu-link").on("click", function() {
         $("body").removeClass("body-overflow");
     });
 
@@ -421,6 +421,27 @@ var _this = void 0;
     	var popup = $('.nav.js-menu.is-active');
     	if (e.target!=popup[0]&&popup.has(e.target).length === 0) {
     		$('.nav.js-menu').removeClass('is-active');
+    		$('body').removeClass("body-overflow");
     	}
+    })
+
+    $('.menu-item-object-custom.menu-item-has-children a').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).closest('.menu-item-object-custom').find('button').trigger('click');
+    })
+
+    $('.btn-show-more').on('click', function(e) {
+        e.preventDefault();
+        if ($(this).closest('.show-hide-text__wrapp').hasClass('show')) {
+            $(this).closest('.show-hide-text__wrapp').removeClass('show');
+            $('.show-hide-text').css('height', '150px');
+            $(this).toggleClass('show');
+        } else {
+            $(this).closest('.show-hide-text__wrapp').addClass('show');
+            $('.show-hide-text').css('height', 'auto');
+            $(this).toggleClass('show');
+        }
+
     })
 })(window, document, jQuery, window.jpAjax);
