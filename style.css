@@ -21727,14 +21727,14 @@ a:hover, a:active, a:focus {
 }
 .nav .menu-item-close:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
-          box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 0 0 4px rgba(61, 90, 128, 0.2);
+          box-shadow: 0 0 0 4px rgba(61, 90, 128, 0.2);
 }
 .nav .menu-item-close::before, .nav .menu-item-close::after {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #3D5A80;
   position: absolute;
   top: 0;
   right: 0;
@@ -21984,7 +21984,7 @@ a:hover, a:active, a:focus {
     padding-bottom: 20px;
     z-index: 1000;
     overflow: auto;
-    background-color: #3D5A80;
+    background-color: #f7f7f7;
     will-change: transform;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -22017,18 +22017,15 @@ a:hover, a:active, a:focus {
     display: block;
     padding: 5px 0;
   }
-  .nav .menu-item-has-children {
-    padding-right: 5px;
-  }
   .nav .menu-item::after {
     display: none;
   }
   .nav .menu-item:hover {
-    background: #4d72a3;
+    background: #EE6C4D;
   }
   .nav .menu-item .menu-item-has-children-arrow {
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 10px;
     z-index: 1;
     display: block;
@@ -22041,8 +22038,8 @@ a:hover, a:active, a:focus {
     display: block;
     width: 10px;
     height: 10px;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
@@ -22055,7 +22052,7 @@ a:hover, a:active, a:focus {
             transform: rotate(-135deg);
   }
   .nav .menu-link {
-    color: #fff;
+    color: #000;
     display: block;
     font-size: 20px;
     padding: 10px 0;
@@ -22065,7 +22062,7 @@ a:hover, a:active, a:focus {
     width: auto;
     display: none;
     visibility: visible;
-    background-color: #4d72a3;
+    background-color: #EE6C4D;
     opacity: 1;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -22094,6 +22091,7 @@ a:hover, a:active, a:focus {
 }
 .mobile-language .menu-container .menu-link {
   padding: 6px;
+  color: #000 !important;
 }
 .mobile-language .menu-container .menu-item:hover {
   background: transparent;
@@ -22124,7 +22122,7 @@ a:hover, a:active, a:focus {
           justify-content: center;
 }
 .mobile-phones .phone-number {
-  color: #fff;
+  color: #000;
   font-size: 18px;
   padding: 8px 10px;
 }

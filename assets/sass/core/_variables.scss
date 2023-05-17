@@ -67,14 +67,14 @@ $SubMenuBGOnHover: darken($themeColorTwo, 5%);
 $navHeaderMobileBGColor: $whiteColor;
 $navHamburgerMobileColor: $themeColorOne;
 
-$menuMobileBGColor: $themeColorOne;
-$menuMobileSubMenuBGColor: lighten($themeColorOne, 10%);
-$menuMobileTextColor: $whiteColor;
-$menuMobileSubMenuTextColor: $menuMobileTextColor;
-$menuMobileSubMenuBGOnHover: lighten($themeColorOne, 10%);
+$menuMobileBGColor: $bodyBgColor;
+$menuMobileSubMenuBGColor: $themeColorTwo;
+$menuMobileTextColor: $blackColor;
+$menuMobileSubMenuTextColor: $whiteColor;
+$menuMobileSubMenuBGOnHover: $themeColorTwo;
 $menuMobileSubMenuTextColorOnHover: $whiteColor;
 
-$navArrowColor: $whiteColor;
+$navArrowColor: $blackColor;
 
 $menuMobileLinkFontSize: 20px;
 $menuMobileSubMenuLinkFontSize: 18px;
@@ -85,7 +85,7 @@ $hamburger-delay: .1s;
 $hamburger-color: $themeColorTwo;
 
 $menu-close-size: 25px;
-$menu-close-color: $whiteColor;
+$menu-close-color: $themeColorOne;
 $menuContainerMobilePaddingTop: 70px;
 
 // TITLES
