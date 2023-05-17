@@ -221,14 +221,14 @@ if (!function_exists('get_messengers')) {
                 'icon' => 'fab fa-whatsapp',
             ],
             'telegram' => [
-                'tel' => get_theme_mod('bw_messenger_facebook'),
-                'text' => 'Facebook',
-                'icon' => 'fa-brands fa-facebook-messenger',
-            ],
-            'facebook' => [
                 'tel' => get_theme_mod('bw_messenger_telegram'),
                 'text' => 'Telegram',
-                'icon' => 'fab fa-telegram-plane',
+                'icon' => 'fa-brands fa-telegram-plane',
+            ],
+            'facebook' => [
+                'tel' => get_theme_mod('bw_messenger_facebook'),
+                'text' => 'Facebook',
+                'icon' => 'fab fa-facebook-messenger',
             ],
         ];
 

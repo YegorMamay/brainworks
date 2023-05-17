@@ -824,7 +824,6 @@ function cat_and_child_id( $atts ) {
     }
 }
 
-
 function html_block_function( $atts ) {
 
 	$params = shortcode_atts(

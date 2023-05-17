@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 9.05.23
+Version: 17.05.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -21082,6 +21082,9 @@ ol {
 .messenger-link .fa-telegram-plane {
   color: #0088CC;
 }
+.messenger-link .fa-facebook-messenger {
+  color: #9C32F7;
+}
 
 .lang, .lang-item {
   display: inline-block;
@@ -23236,6 +23239,8 @@ body.body-overflow .wrapper:after {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .wrapper {
