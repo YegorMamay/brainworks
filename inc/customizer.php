@@ -869,6 +869,25 @@ function bw_customize_register($wp_customize)
 		'settings' => 'bw_sticky_header_autohide',
 		'type' => 'checkbox',
 	));
+
+
+    // Section second logo
+    $wp_customize->add_section('bw_logos', array(
+    'title' => __('Second logo', 'brainworks'),
+    'description' => esc_html__('Customizer Custom Logos', 'brainworks'),
+    'panel' => 'title_tagline',
+));
+
+$wp_customize->add_setting('bw_logo2', array(
+    'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bw_logo2', array(
+    'label' => __('Second Logo', 'brainworks'),
+    'section' => 'title_tagline',
+    'settings' => 'bw_logo2',
+    'priority' => 9,
+)));
 }
 
 add_action('customize_register', 'bw_customize_register');

@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 17.05.23
+Version: 18.05.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -23277,5 +23277,93 @@ img {
 .kama_breadcrumbs span, .kama_breadcrumbs a {
   font-size: 14px;
   line-height: normal;
+}
+
+.highlight {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.highlight:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 15%;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  -webkit-animation: flareAnimation;
+          animation: flareAnimation;
+  left: -150%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.4)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  -webkit-animation-name: flareAnimation;
+          animation-name: flareAnimation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation: flareAnimation 1.5s ease-in-out infinite, delay-animation 3s linear infinite;
+          animation: flareAnimation 1.5s ease-in-out infinite, delay-animation 3s linear infinite;
+}
+
+@-webkit-keyframes flareAnimation {
+  0% {
+    -webkit-transition: 2s;
+    transition: 2s;
+    opacity: 0;
+    left: -150%;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes flareAnimation {
+  0% {
+    -webkit-transition: 2s;
+    transition: 2s;
+    opacity: 0;
+    left: -150%;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    left: 150%;
+  }
+}
+@-webkit-keyframes delay-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes delay-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -839,3 +839,13 @@ function html_block_function( $atts ) {
 }
 
 add_shortcode( 'html_block', 'html_block_function' );
+
+
+function bw_second_logo_shortcode($atts) {
+    $logo2 = get_theme_mod('bw_logo2');
+    if ($logo2) {
+        return '<img src="' . esc_url($logo2) . '" alt="Second Logo">';
+    }
+    return '';
+}
+add_shortcode('second-logo', 'bw_second_logo_shortcode');
