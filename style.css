@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 18.05.23
+Version: 16.06.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -430,6 +430,9 @@ b, strong {
 }
 .text-transparent {
   color: transparent;
+}
+.text-small {
+  font-size: 15px;
 }
 
 .font-one {
@@ -21626,19 +21629,14 @@ a:hover, a:active, a:focus {
   right: 0;
   left: 0;
   z-index: 101;
-  -webkit-transition: 0.2s visibility, 0.3s background-color, 0.2s -webkit-transform;
-  transition: 0.2s visibility, 0.3s background-color, 0.2s -webkit-transform;
-  transition: 0.2s transform, 0.2s visibility, 0.3s background-color;
-  transition: 0.2s transform, 0.2s visibility, 0.3s background-color, 0.2s -webkit-transform;
-  will-change: transform, visibility, background-color;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .header.is-fixed.onscroll-hide {
-  visibility: hidden;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
 .header.is-fixed.onscroll-show {
-  visibility: visible;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
