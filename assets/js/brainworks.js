@@ -425,7 +425,7 @@ var _this = void 0;
     	}
     })
 
-    $('.menu-item-object-custom.menu-item-has-children a').on('click', function(e) {
+    $('.menu-item-object-custom.menu-item-has-children:not(.pll-parent-menu-item) a').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         $(this).closest('.menu-item-object-custom').find('button').trigger('click');
