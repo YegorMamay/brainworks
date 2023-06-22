@@ -38,8 +38,9 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- OpenGraph -->
-    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale" content="uk_UA">
     <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="
     <?php
@@ -65,7 +66,7 @@
     <meta property="og:image" content="<?php echo esc_url(get_the_post_thumbnail_url()); ?>">
     <meta property="og:image:secure_url" content="<?php echo esc_url(get_the_post_thumbnail_url()); ?>">
     <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="628">
+    <meta property="og:image:height" content="675">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="
         <?php
