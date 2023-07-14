@@ -13,7 +13,7 @@ ul.products {
 
 .tinvwl_button_close {
     @extend .btn;
-    @extend .btn-one;
+    @extend .btn1;
 }
 // TI WooCommerce Wishlist END
 
@@ -49,14 +49,14 @@ ul.products {
 
 //Fibo-search
 .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
-    background-color: $themeColorTwo;
+    background-color: $themeColor2;
 }
 
 .dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
-    border-color: transparent $themeColorTwo transparent;
+    border-color: transparent $themeColor2 transparent;
 
     &:hover {
-        border-color: transparent $themeColorTwo transparent;
+        border-color: transparent $themeColor2 transparent;
     }
 }
 //Fibo-search end
@@ -69,8 +69,8 @@ ul.products {
 
     .ivpa_attribute[data-attribute="pa_rozmir"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked,
     .ivpa_attribute[data-attribute="pa_rozmir"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
-        border-color: $themeColorTwo !important;
-        color: $themeColorTwo !important;
+        border-color: $themeColor2 !important;
+        color: $themeColor2 !important;
     }
 
     .ivpa_title {
@@ -119,19 +119,19 @@ ul.products {
 }
 
 .irs--round .irs-bar {
-    background-color: $themeColorTwo;
+    background-color: $themeColor2;
 }
 
 .irs--round .irs-handle {
-    border: 4px solid $themeColorTwo;
+    border: 4px solid $themeColor2;
 }
 
 .irs--round .irs-from, .irs--round .irs-single, .irs--round .irs-to {
-    background-color: $themeColorTwo;
+    background-color: $themeColor2;
 }
 
 .irs--round .irs-from:before, .irs--round .irs-single:before, .irs--round .irs-to:before {
-    border-top-color: $themeColorTwo;
+    border-top-color: $themeColor2;
 }
 // Ajax filter END
 
@@ -149,7 +149,7 @@ del .woocommerce-Price-amount bdi {
 }
 
 .price {
-    color: $themeColorTwo;
+    color: $themeColor2;
 
     .woocommerce-Price-amount {
         bdi {

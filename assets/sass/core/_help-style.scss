@@ -1,6 +1,6 @@
 .link {
     text-decoration: underline;
-    color: $themeColorTwo;
+    color: $themeColor2;
 }
 
 ins {
@@ -121,11 +121,11 @@ b, strong {
 }
 
 .brand-color-one {
-    color: $themeColorOne;
+    color: $themeColor1;
 }
 
 .brand-color-two {
-    color: $themeColorTwo;
+    color: $themeColor2;
 }
 
 .highlighted {
@@ -144,7 +144,7 @@ b, strong {
     box-shadow: $shadow;
     
     &-bottom {
-        box-shadow: 0 8px 6px -6px $themeColorOne;
+        box-shadow: 0 8px 6px -6px $themeColor1;
     }
 }
 
@@ -166,7 +166,7 @@ b, strong {
         margin-right: 5px;
         border-radius: 50%;
         border: 2px solid #ccc;
-        border-top-color: $themeColorOne;
+        border-top-color: $themeColor1;
         animation: spin 1s linear infinite;
     }
 }

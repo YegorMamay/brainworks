@@ -29,7 +29,7 @@ $btn-border-width: 1px;
 $btn-font-weight: 700;
 $btn-box-shadow: $shadow;
 $btn-focus-width: 0;
-$btn-focus-box-shadow: 0 0 0 3px rgba($themeColorOne, .25);
+$btn-focus-box-shadow: 0 0 0 3px rgba($themeColor1, .25);
 $btn-disabled-opacity: .65;
 $btn-active-box-shadow: inset 0 3px 5px rgba(#000, .125);
 
@@ -37,7 +37,7 @@ $btn-link-disabled-color: $grayColor;
 
 $btn-block-spacing-y: 8px;
 
-$btn-link-color: $themeColorOne;
+$btn-link-color: $themeColor1;
 $btn-link-decoration: none;
 $btn-link-hover-color: darken($btn-link-color, 15%);
 $btn-link-hover-decoration: underline;
@@ -108,15 +108,15 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-one {
-  $background: $themeColorOne;
-  $hover-background: lighten($themeColorOne, 25%);
-  $active-background: lighten($themeColorOne, 25%);
+.btn1 {
+  $background: $themeColor1;
+  $hover-background: lighten($themeColor1, 25%);
+  $active-background: lighten($themeColor1, 25%);
   $text-color: $whiteColor;
   $text-color-hover: $whiteColor;
-  $border: $themeColorOne;
-  $hover-border: lighten($themeColorOne, 25%);
-  $active-border: lighten($themeColorOne, 25%);
+  $border: $themeColor1;
+  $hover-border: lighten($themeColor1, 25%);
+  $active-border: lighten($themeColor1, 25%);
 
   @if $btn-enable-gradients {
     background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 25%), $background) repeat-x;
@@ -170,8 +170,8 @@ fieldset:disabled a.btn {
   &.disabled,
   &:disabled {
     color: $whiteColor;
-    background-color: lighten($themeColorOne, 30%);
-    border-color: lighten($themeColorOne, 30%);
+    background-color: lighten($themeColor1, 30%);
+    border-color: lighten($themeColor1, 30%);
     cursor: not-allowed;
 
     &:after {
@@ -210,15 +210,15 @@ fieldset:disabled a.btn {
   }
 }
 
-.btn-two {
-  $background: $themeColorTwo;
-  $hover-background: darken($themeColorTwo, 15%);
-  $active-background: darken($themeColorTwo, 15%);
+.btn2 {
+  $background: $themeColor2;
+  $hover-background: darken($themeColor2, 15%);
+  $active-background: darken($themeColor2, 15%);
   $text-color: $whiteColor;
   $text-color-hover: $whiteColor;
-  $border: $themeColorTwo;
-  $hover-border: darken($themeColorTwo, 15%);
-  $active-border: darken($themeColorTwo, 15%);
+  $border: $themeColor2;
+  $hover-border: darken($themeColor2, 15%);
+  $active-border: darken($themeColor2, 15%);
 
   @if $btn-enable-gradients {
     background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 35%), $background) repeat-x;
@@ -272,8 +272,8 @@ fieldset:disabled a.btn {
   &.disabled,
   &:disabled {
     color: $whiteColor;
-    background-color: darken($themeColorTwo, 30%);
-    border-color: darken($themeColorTwo, 30%);
+    background-color: darken($themeColor2, 30%);
+    border-color: darken($themeColor2, 30%);
     cursor: not-allowed;
 
     &:after {
@@ -312,15 +312,15 @@ fieldset:disabled a.btn {
   }
 }
 
-.btn-outline-one {
+.btn1-outline {
   /* background transparent */
-  $hover-background: $themeColorOne;
-  $active-background: lighten($themeColorOne, 20%);
-  $text-color: $themeColorOne;
+  $hover-background: $themeColor1;
+  $active-background: lighten($themeColor1, 20%);
+  $text-color: $themeColor1;
   $text-color-hover: $whiteColor;
-  $border: $themeColorOne;
-  $hover-border: $themeColorOne;
-  $active-border: lighten($themeColorOne, 20%);
+  $border: $themeColor1;
+  $hover-border: $themeColor1;
+  $active-border: lighten($themeColor1, 20%);
 
   background-color: rgba(255, 255, 255, 0);
   color: $text-color;
@@ -345,8 +345,8 @@ fieldset:disabled a.btn {
   &.disabled,
   &:disabled {
     color: $whiteColor;
-    background-color: lighten($themeColorOne, 50%);
-    border-color: lighten($themeColorOne, 50%);
+    background-color: lighten($themeColor1, 50%);
+    border-color: lighten($themeColor1, 50%);
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -365,15 +365,15 @@ fieldset:disabled a.btn {
   }
 }
 
-.btn-outline-two {
+.btn2-outline {
   /* background transparent */
-  $hover-background: $themeColorTwo;
-  $text-color: $themeColorTwo;
+  $hover-background: $themeColor2;
+  $text-color: $themeColor2;
   $text-color-hover: white;
-  $active-background: darken($themeColorTwo, 15%);
-  $border: $themeColorTwo;
-  $hover-border: $themeColorTwo;
-  $active-border: darken($themeColorTwo, 15%);
+  $active-background: darken($themeColor2, 15%);
+  $border: $themeColor2;
+  $hover-border: $themeColor2;
+  $active-border: darken($themeColor2, 15%);
 
   background-color: rgba(255, 255, 255, 0);
   color: $text-color;
@@ -398,8 +398,8 @@ fieldset:disabled a.btn {
   &.disabled,
   &:disabled {
     color: $whiteColor;
-    background-color: darken($themeColorTwo, 50%);
-    border-color: darken($themeColorTwo, 50%);
+    background-color: darken($themeColor2, 50%);
+    border-color: darken($themeColor2, 50%);
   }
 
   &:not(:disabled):not(.disabled):active,

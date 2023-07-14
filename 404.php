@@ -8,7 +8,7 @@
     </div>
 
     <div class="btn-to-home">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-one btn-lg">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn1 btn-lg">
             <?php _e('Back to the homepage', 'brainworks'); ?>
         </a>
     </div>

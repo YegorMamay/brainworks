@@ -7,12 +7,12 @@
 
 %button-style {
   @extend .btn;
-  @extend .btn-one;
+  @extend .btn1;
 }
 
-%btn-outline-two {
+%btn2-outline {
   @extend .btn;
-  @extend .btn-two;
+  @extend .btn2;
 }
 
 .woocommerce {
@@ -63,7 +63,7 @@
         @extend %button-style;
 
         &:hover {
-          background-color: $themeColorTwo;
+          background-color: $themeColor2;
         }
 
         &.disabled,
@@ -207,7 +207,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   border: 1px solid #cccccc;
   border-right-color: transparent;
   background-color: $whiteColor;
-  color: $themeColorOne;
+  color: $themeColor1;
   border-radius: 0;
   padding: 12.5px 8px;
   font-size: 16px;
@@ -220,7 +220,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   border: 1px solid #cccccc;
   border-left-color: transparent;
   background-color: $whiteColor;
-  color: $themeColorOne;
+  color: $themeColor1;
   border-radius: 0;
   padding: 12.5px 8px;
   font-size: 16px;

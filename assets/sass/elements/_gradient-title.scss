@@ -7,7 +7,7 @@
 
 @mixin title-gradient($direction) {
   display: table;
-  background-image: linear-gradient(to bottom, $themeColorTwo 10%, $themeColorOne 75%, $themeColorOne 100%);
+  background-image: linear-gradient(to bottom, $themeColor2 10%, $themeColor1 75%, $themeColor1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -15,7 +15,7 @@
     background-image: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
-    color: $themeColorOne;
+    color: $themeColor1;
   }
 
   @if $direction == center {

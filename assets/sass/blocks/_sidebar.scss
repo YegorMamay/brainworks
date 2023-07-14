@@ -19,7 +19,7 @@
             }
         }
 
-        $color: lighten($themeColorTwo, 10%);
+        $color: lighten($themeColor2, 10%);
         .trigger {
             cursor: pointer;
             position: absolute;
@@ -69,7 +69,7 @@
                 a, span {
                     margin-bottom: 4px;
                     display: block;
-                    border-bottom: 1px solid $themeColorTwo;
+                    border-bottom: 1px solid $themeColor2;
                     padding-bottom: 4px;
                     font-size: 14px;
                     text-decoration: none;
@@ -101,7 +101,7 @@
                         display: block;
                         padding: 0 7px 0 0;
                         font-family: 'Font Awesome 6 Pro';
-                        color: $themeColorTwo;
+                        color: $themeColor2;
                         float: left;
                         margin-left: 5px;
                         font-size: 10px;

@@ -44,12 +44,12 @@ table.variations {
 .woocommerce {
   .star-rating span::before,
   p.stars a::before {
-    color: $themeColorTwo;
+    color: $themeColor2;
   }
 
   p.stars a {
     &:hover {
-      color: $themeColorTwo;
+      color: $themeColor2;
     }
   }
 
@@ -172,7 +172,7 @@ table.variations {
 //Tabs
 .tabs {
     .active {
-        color: $themeColorTwo;
+        color: $themeColor2;
     }
 }
 

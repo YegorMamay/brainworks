@@ -7,7 +7,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 19.06.23
+Version: 14.07.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -167,60 +167,60 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
 }
 @media (max-width: 1024px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 13px;
     font-size: 15px;
   }
 }
 @media (max-width: 768px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 11px;
     font-size: 14px;
   }
 }
 @media (max-width: 575px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 12px;
     font-size: 12px;
   }
@@ -18032,6 +18032,10 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.elementor-slideshow__description, .elementor-slideshow__title {
+  text-align: center;
+}
+
 .slick-slider {
   position: relative;
   display: block;
@@ -18291,36 +18295,36 @@ table th[class*=col-] {
     margin-bottom: 0;
   }
   .table-responsive > .table > thead > tr > th,
-.table-responsive > .table > tbody > tr > th,
-.table-responsive > .table > tfoot > tr > th,
-.table-responsive > .table > thead > tr > td,
-.table-responsive > .table > tbody > tr > td,
-.table-responsive > .table > tfoot > tr > td {
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > td {
     white-space: nowrap;
   }
   .table-responsive > .table-bordered {
     border: 0;
   }
   .table-responsive > .table-bordered > thead > tr > th:first-child,
-.table-responsive > .table-bordered > tbody > tr > th:first-child,
-.table-responsive > .table-bordered > tfoot > tr > th:first-child,
-.table-responsive > .table-bordered > thead > tr > td:first-child,
-.table-responsive > .table-bordered > tbody > tr > td:first-child,
-.table-responsive > .table-bordered > tfoot > tr > td:first-child {
+  .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
     border-left: 0;
   }
   .table-responsive > .table-bordered > thead > tr > th:last-child,
-.table-responsive > .table-bordered > tbody > tr > th:last-child,
-.table-responsive > .table-bordered > tfoot > tr > th:last-child,
-.table-responsive > .table-bordered > thead > tr > td:last-child,
-.table-responsive > .table-bordered > tbody > tr > td:last-child,
-.table-responsive > .table-bordered > tfoot > tr > td:last-child {
+  .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
     border-right: 0;
   }
   .table-responsive > .table-bordered > tbody > tr:last-child > th,
-.table-responsive > .table-bordered > tfoot > tr:last-child > th,
-.table-responsive > .table-bordered > tbody > tr:last-child > td,
-.table-responsive > .table-bordered > tfoot > tr:last-child > td {
+  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+  .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
     border-bottom: 0;
   }
 }
@@ -18370,60 +18374,60 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
 }
 @media (max-width: 1024px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 13px;
     font-size: 15px;
   }
 }
 @media (max-width: 768px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 11px;
     font-size: 14px;
   }
 }
 @media (max-width: 575px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 12px;
     font-size: 12px;
   }
@@ -19020,60 +19024,60 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
 }
 @media (max-width: 1024px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 13px;
     font-size: 15px;
   }
 }
 @media (max-width: 768px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 11px;
     font-size: 14px;
   }
 }
 @media (max-width: 575px) {
   [type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=tel],
-[type=url],
-[type=number],
-[type=range],
-[type=month],
-[type=week],
-[type=date],
-[type=datetime-local],
-[type=time],
-textarea,
-select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
+  [type=password],
+  [type=email],
+  [type=search],
+  [type=tel],
+  [type=url],
+  [type=number],
+  [type=range],
+  [type=month],
+  [type=week],
+  [type=date],
+  [type=datetime-local],
+  [type=time],
+  textarea,
+  select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 12px;
     font-size: 12px;
   }
@@ -20122,7 +20126,7 @@ ol.commentlist .comment-body {
     margin-right: auto;
   }
   .review-content,
-.review-content p {
+  .review-content p {
     font-size: 14px;
   }
   .review-slider {
@@ -20837,6 +20841,10 @@ ol {
   max-width: 100px;
 }
 
+.second-logo {
+  width: 100px;
+}
+
 .phone, .phone-item {
   display: inline-block;
   vertical-align: middle;
@@ -21182,8 +21190,8 @@ ol {
   opacity: 1;
   visibility: visible;
   height: 105px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0deg, 0%, 100%, 0)), color-stop(71%, hsla(0deg, 0%, 100%, 0.85)), to(#f7f7f7));
-  background: linear-gradient(180deg, hsla(0deg, 0%, 100%, 0) 0, hsla(0deg, 0%, 100%, 0.85) 71%, #f7f7f7);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(71%, hsla(0, 0%, 100%, 0.85)), to(#f7f7f7));
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, 0.85) 71%, #f7f7f7);
   z-index: 0;
   opacity: 1;
   visibility: visible;
@@ -21299,7 +21307,7 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-one {
+.btn1 {
   background: #3D5A80;
   position: relative;
   z-index: 1;
@@ -21307,7 +21315,7 @@ fieldset:disabled a.btn {
   color: #fff;
   border-color: #3D5A80;
 }
-.btn-one:after {
+.btn1:after {
   background: #fff;
   content: "";
   height: 155px;
@@ -21322,31 +21330,31 @@ fieldset:disabled a.btn {
           transform: rotate(35deg);
   z-index: -10;
 }
-.btn-one:hover {
+.btn1:hover {
   color: #fff;
   background-color: #7c9ac1;
   border-color: #7c9ac1;
 }
-.btn-one:hover:after {
+.btn1:hover:after {
   left: 120%;
   -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn-one:focus, .btn-one.focus {
+.btn1:focus, .btn1.focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
-.btn-one.disabled, .btn-one:disabled {
+.btn1.disabled, .btn1:disabled {
   color: #fff;
   background-color: #8da7c9;
   border-color: #8da7c9;
   cursor: not-allowed;
 }
-.btn-one.disabled:after, .btn-one:disabled:after {
+.btn1.disabled:after, .btn1:disabled:after {
   content: none;
 }
-.btn-one:not(:disabled):not(.disabled):active, .btn-one:not(:disabled):not(.disabled).active {
+.btn1:not(:disabled):not(.disabled):active, .btn1:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #8da7c9;
   border-color: #8da7c9;
@@ -21355,7 +21363,7 @@ fieldset:disabled a.btn {
   background-color: #b0c2d9;
   border-color: #b0c2d9;
 }
-.btn-one:not(:disabled):not(.disabled):active:after, .btn-one:not(:disabled):not(.disabled).active:after {
+.btn1:not(:disabled):not(.disabled):active:after, .btn1:not(:disabled):not(.disabled).active:after {
   background: rgba(255, 255, 255, 0.75);
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -21364,13 +21372,13 @@ fieldset:disabled a.btn {
   -webkit-transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn-one:not(:disabled):not(.disabled):active:focus, .btn-one:not(:disabled):not(.disabled).active:focus {
+.btn1:not(:disabled):not(.disabled):active:focus, .btn1:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
 
-.btn-two {
+.btn2 {
   background: #EE6C4D;
   position: relative;
   z-index: 1;
@@ -21378,7 +21386,7 @@ fieldset:disabled a.btn {
   color: #fff;
   border-color: #EE6C4D;
 }
-.btn-two:after {
+.btn2:after {
   background: #fff;
   content: "";
   height: 155px;
@@ -21393,31 +21401,31 @@ fieldset:disabled a.btn {
           transform: rotate(35deg);
   z-index: -10;
 }
-.btn-two:hover {
+.btn2:hover {
   color: #fff;
   background-color: #da3b15;
   border-color: #da3b15;
 }
-.btn-two:hover:after {
+.btn2:hover:after {
   left: 120%;
   -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn-two:focus, .btn-two.focus {
+.btn2:focus, .btn2.focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
-.btn-two.disabled, .btn-two:disabled {
+.btn2.disabled, .btn2:disabled {
   color: #fff;
   background-color: #94280e;
   border-color: #94280e;
   cursor: not-allowed;
 }
-.btn-two.disabled:after, .btn-two:disabled:after {
+.btn2.disabled:after, .btn2:disabled:after {
   content: none;
 }
-.btn-two:not(:disabled):not(.disabled):active, .btn-two:not(:disabled):not(.disabled).active {
+.btn2:not(:disabled):not(.disabled):active, .btn2:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #ea461e;
   border-color: #ea461e;
@@ -21426,7 +21434,7 @@ fieldset:disabled a.btn {
   background-color: #ec5936;
   border-color: #ec5936;
 }
-.btn-two:not(:disabled):not(.disabled):active:after, .btn-two:not(:disabled):not(.disabled).active:after {
+.btn2:not(:disabled):not(.disabled):active:after, .btn2:not(:disabled):not(.disabled).active:after {
   background: rgba(255, 255, 255, 0.75);
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -21435,13 +21443,13 @@ fieldset:disabled a.btn {
   -webkit-transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn-two:not(:disabled):not(.disabled):active:focus, .btn-two:not(:disabled):not(.disabled).active:focus {
+.btn2:not(:disabled):not(.disabled):active:focus, .btn2:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
 
-.btn-outline-one {
+.btn1-outline {
   /* background transparent */
   background-color: rgba(255, 255, 255, 0);
   color: #3D5A80;
@@ -21449,32 +21457,32 @@ fieldset:disabled a.btn {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-outline-one:hover {
+.btn1-outline:hover {
   color: #fff;
   background-color: #3D5A80;
   border-color: #3D5A80;
 }
-.btn-outline-one:focus, .btn-outline-one.focus {
+.btn1-outline:focus, .btn1-outline.focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-outline-one.disabled, .btn-outline-one:disabled {
+.btn1-outline.disabled, .btn1-outline:disabled {
   color: #fff;
   background-color: #d2dcea;
   border-color: #d2dcea;
 }
-.btn-outline-one:not(:disabled):not(.disabled):active, .btn-outline-one:not(:disabled):not(.disabled).active {
+.btn1-outline:not(:disabled):not(.disabled):active, .btn1-outline:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #6b8cb8;
   border-color: #6b8cb8;
 }
-.btn-outline-one:not(:disabled):not(.disabled):active:focus, .btn-outline-one:not(:disabled):not(.disabled).active:focus {
+.btn1-outline:not(:disabled):not(.disabled):active:focus, .btn1-outline:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
 
-.btn-outline-two {
+.btn2-outline {
   /* background transparent */
   background-color: rgba(255, 255, 255, 0);
   color: #EE6C4D;
@@ -21482,26 +21490,26 @@ fieldset:disabled a.btn {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-outline-two:hover {
+.btn2-outline:hover {
   color: white;
   background-color: #EE6C4D;
   border-color: #EE6C4D;
 }
-.btn-outline-two:focus, .btn-outline-two.focus {
+.btn2-outline:focus, .btn2-outline.focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-outline-two.disabled, .btn-outline-two:disabled {
+.btn2-outline.disabled, .btn2-outline:disabled {
   color: #fff;
   background-color: #370f05;
   border-color: #370f05;
 }
-.btn-outline-two:not(:disabled):not(.disabled):active, .btn-outline-two:not(:disabled):not(.disabled).active {
+.btn2-outline:not(:disabled):not(.disabled):active, .btn2-outline:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #da3b15;
   border-color: #da3b15;
 }
-.btn-outline-two:not(:disabled):not(.disabled):active:focus, .btn-outline-two:not(:disabled):not(.disabled).active:focus {
+.btn2-outline:not(:disabled):not(.disabled):active:focus, .btn2-outline:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;

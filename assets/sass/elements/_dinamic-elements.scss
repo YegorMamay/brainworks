@@ -3,6 +3,10 @@
     max-width: 100px;
 }
 
+.second-logo {
+    width: 100px;
+}
+
 .phone {
   @extend %reset-list;
 
@@ -148,8 +152,8 @@
       margin-left: 10px;
       width: 7px;
       height: 7px;
-      border-bottom: 2px solid $themeColorTwo;
-      border-left: 2px solid $themeColorTwo;
+      border-bottom: 2px solid $themeColor2;
+      border-left: 2px solid $themeColor2;
       transform: rotate(-45deg);
       transition: .2s;
     }
@@ -194,7 +198,7 @@
     }
 
     .phone-dropdown__list {
-        background: $themeColorOne;
+        background: $themeColor1;
     }
 }
 
@@ -225,7 +229,7 @@
 
     &:hover, &:active, &:focus {
       color: $iconColorActive;
-      background-color: $themeColorTwo;
+      background-color: $themeColor2;
     }
   }
 }
@@ -349,7 +353,7 @@
         padding: 3px 15px 3px 0;
 
         &:after {
-            border-color: $themeColorOne transparent transparent transparent;
+            border-color: $themeColor1 transparent transparent transparent;
         }
     }
 }
@@ -389,7 +393,7 @@
   }
 
   & .btn-show-more {
-    color: $themeColorTwo;
+    color: $themeColor2;
     font-weight: 700;
     padding: 5px 15px;
     font-size: inherit;
@@ -398,7 +402,7 @@
     &:hover, &:focus {
       background: transparent;
       text-decoration: none;
-      color: darken($themeColorTwo, 10%);
+      color: darken($themeColor2, 10%);
     }
   }
 }
@@ -457,7 +461,7 @@
 }
 
 .btn-show-more {
-  color: $themeColorTwo;
+  color: $themeColor2;
   font-weight: 700;
   padding: 5px 15px;
   font-size: inherit;
@@ -467,7 +471,7 @@
   &:hover, &:focus {
     background: transparent;
     text-decoration: none;
-    color: darken($themeColorTwo, 10%);
+    color: darken($themeColor2, 10%);
   }
 
 }

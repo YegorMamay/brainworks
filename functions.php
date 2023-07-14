@@ -481,3 +481,12 @@ if (!current_user_can('manage_options')) {
 if (!current_user_can('edit_posts')) {
     add_filter('show_admin_bar', '__return_false');
 }
+
+// Меняет порядок отображения товаров в кастомном посте Каталог - в обратном алфавитному
+//function custom_post_type_archive_sort( $query ) {
+//    if ( is_post_type_archive( 'catalog' ) && ! is_admin() && $query->is_main_query()) {
+//        $query->set( 'orderby', 'title' );
+//        $query->set( 'order', 'DESC' );
+//    }
+//}
+//add_action( 'pre_get_posts', 'custom_post_type_archive_sort' );

@@ -10,7 +10,7 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        background: $themeColorTwo;
+        background: $themeColor2;
         border: 0 none #fff;
         border-radius: 0;
     }
@@ -24,17 +24,17 @@
     }
 
     ::-webkit-scrollbar-track {
-        background: $themeColorOne;
+        background: $themeColor1;
         border: 0 none $whiteColor;
         border-radius: 0;
     }
 
     ::-webkit-scrollbar-track:hover {
-        background: $themeColorOne;
+        background: $themeColor1;
     }
 
     ::-webkit-scrollbar-track:active {
-        background: lighten($themeColorOne, 10%);
+        background: lighten($themeColor1, 10%);
     }
 
     ::-webkit-scrollbar-corner {

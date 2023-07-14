@@ -55,7 +55,7 @@
         }
         &-active:before {
             opacity: 1;
-            background-color: $themeColorTwo;
+            background-color: $themeColor2;
         }
     }
     &-block {
@@ -81,7 +81,7 @@
             background: -webkit-repeating-linear-gradient(135deg, #f1c20c 0%, #f9ca0c 1%, #f9ca0c 7%);
             background: -o-repeating-linear-gradient(135deg, #f1c20c 0%, #f9ca0c 1%, #f9ca0c 7%);
             background: repeating-linear-gradient(-45deg, #f1c20c 0%, #f9ca0c 1%, #f9ca0c 7%);
-            background: $themeColorTwo;
+            background: $themeColor2;
         }
     }
     &-item__progress {
@@ -157,10 +157,10 @@
 // Кнопки
 .btn-kviz {
     padding: 17px 50px;
-    color: $themeColorTwo;
+    color: $themeColor2;
     font-size: 14px;
     font-weight: 500;
-    border: 2px solid $themeColorTwo;
+    border: 2px solid $themeColor2;
     margin: 0 1.5rem;
     overflow: hidden;
     cursor: pointer;
@@ -174,7 +174,7 @@
             // opacity: 0.4;
         }
         &:not(:disabled) {
-            background-color: $themeColorTwo;
+            background-color: $themeColor2;
             color: #ffffff;
             transition: none;
             position: relative;
@@ -417,7 +417,7 @@
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    background: $themeColorTwo;
+    background: $themeColor2;
     box-shadow: 0 0 0 0;
     color: #fff;
     &:not(:disabled):before {

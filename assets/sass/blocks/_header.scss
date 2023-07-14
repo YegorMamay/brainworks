@@ -4,7 +4,7 @@
     box-shadow: $shadow;
 
     .pre-header {
-        background: lighten($themeColorOne, 40%);
+        background: lighten($themeColor1, 40%);
         padding: 5px 0;
 
         .container {
@@ -58,7 +58,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: $themeColorTwo;
+            color: $themeColor2;
             font-size: 20px;
         }
 

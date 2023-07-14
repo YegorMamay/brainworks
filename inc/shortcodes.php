@@ -328,7 +328,7 @@ if (!function_exists('bw_last_posts')) {
                                     ' . $post['post_excerpt'] . '
                                 </p>
                                 <br />
-                                <a href="' . $permalink . '" class="btn btn-one btn-sm">
+                                <a href="' . $permalink . '" class="btn btn1 btn-sm">
                                     ' . $atts['button_title'] . '
                                 </a>
                             </div>';
@@ -448,7 +448,7 @@ if (!function_exists('bw_advert_shortcode')) {
 
                 $btn = sprintf(
                     '<div class="front-news-btn">
-                        <a class="btn btn-one btn-sm %s-link" href="%s">%s</a>
+                        <a class="btn btn1 btn-sm %s-link" href="%s">%s</a>
                     </div>',
                     $basic_class,
                     get_the_permalink(),
@@ -510,7 +510,7 @@ if (!function_exists('bw_custom_login_shortcode')) {
                         <input type="password" id="password" name="password" class="form-field" required />
                     </div>
                     <div class="login-form-row form-group">
-                        <button type="submit" name="submit" class="btn btn-two login-form-submit">
+                        <button type="submit" name="submit" class="btn btn2 login-form-submit">
                             ' . __('Login', 'brainworks') . '
                         </button>
                     </div>
@@ -550,7 +550,7 @@ if (!function_exists('bw_custom_register_shortcode')) {
                     <input type="password" id="retry_password" name="retry_password" class="form-field" required />
                 </div>
                 <div class="login-form-row form-group">
-                    <button type="submit" name="submit" class="btn btn-two login-form-submit">
+                    <button type="submit" name="submit" class="btn btn2 login-form-submit">
                         ' . __('Register', 'brainworks') . '
                     </button>
                 </div>
@@ -844,7 +844,7 @@ add_shortcode( 'html_block', 'html_block_function' );
 function bw_second_logo_shortcode($atts) {
     $logo2 = get_theme_mod('bw_logo2');
     if ($logo2) {
-        return '<img src="' . esc_url($logo2) . '" alt="Second Logo">';
+        return '<img src="' . esc_url($logo2) . '" class="second-logo" alt="Second Logo">';
     }
     return '';
 }

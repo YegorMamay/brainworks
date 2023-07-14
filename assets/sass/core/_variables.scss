@@ -31,15 +31,15 @@ $borderColor: lighten($blackColor, 80%);
 $shadow: 0 10px 20px rgba($blackColor, .2);
 
 // THEME COLORS
-$themeColorOne: #3D5A80; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других.
-$themeColorTwo: #EE6C4D; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
+$themeColor1: #3D5A80; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других.
+$themeColor2: #EE6C4D; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
 
 // SELECTION: цвет фона и текста при выделении его курсором
-$selectionBgColor: $themeColorTwo;
+$selectionBgColor: $themeColor2;
 $selectionFontColor: $whiteColor;
 
 // Text Highlight: цвет фона и текста при добавлении к нему .highlighted
-$textHighlightBgColor: $themeColorTwo;
+$textHighlightBgColor: $themeColor2;
 $textHighlightColor: $whiteColor;
 
 // BODY
@@ -55,23 +55,23 @@ $headerFontColor: $blackColor;
 $headerHight: 80px;
 
 // MENU
-$menuBgColor: $themeColorOne;
-$menuBgColorActive: $themeColorTwo;
+$menuBgColor: $themeColor1;
+$menuBgColorActive: $themeColor2;
 $menuFontColor: $whiteColor;
 $menuFontColorActive: $whiteColor;
 
 // SubMenu
-$SubMenuBGOnHover: darken($themeColorTwo, 5%);
+$SubMenuBGOnHover: darken($themeColor2, 5%);
 
 // MENU mobile
 $navHeaderMobileBGColor: $whiteColor;
-$navHamburgerMobileColor: $themeColorOne;
+$navHamburgerMobileColor: $themeColor1;
 
 $menuMobileBGColor: $bodyBgColor;
-$menuMobileSubMenuBGColor: $themeColorTwo;
+$menuMobileSubMenuBGColor: $themeColor2;
 $menuMobileTextColor: $blackColor;
 $menuMobileSubMenuTextColor: $whiteColor;
-$menuMobileSubMenuBGOnHover: $themeColorTwo;
+$menuMobileSubMenuBGOnHover: $themeColor2;
 $menuMobileSubMenuTextColorOnHover: $whiteColor;
 
 $navArrowColor: $blackColor;
@@ -82,14 +82,14 @@ $menuMobileSubMenuLinkFontSize: 18px;
 $hamburger-offset: 8px;
 $hamburger-duration: .1s;
 $hamburger-delay: .1s;
-$hamburger-color: $themeColorTwo;
+$hamburger-color: $themeColor2;
 
 $menu-close-size: 25px;
-$menu-close-color: $themeColorOne;
+$menu-close-color: $themeColor1;
 $menuContainerMobilePaddingTop: 70px;
 
 // TITLES
-$titleFontColor: $themeColorOne;
+$titleFontColor: $themeColor1;
 $titleFontColorActive: lighten($titleFontColor, 10%);
 
 // LINKS
@@ -97,20 +97,20 @@ $linkFontColor: $bodyFontColor;
 $linkFontColorActive: lighten($linkFontColor, 20%);
 
 // TABLE
-$tableBgColor: lighten($themeColorOne, 80%);
-$tableBgColorActive: lighten($themeColorTwo, 10%);
+$tableBgColor: lighten($themeColor1, 80%);
+$tableBgColorActive: lighten($themeColor2, 10%);
 $tableBorderColor: lighten($blackColor, 85%);
 $tableBorderColorActive: lighten($blackColor, 50%);
-$tableOddBgColor: $themeColorOne;
+$tableOddBgColor: $themeColor1;
 $tableOddFontColor: $whiteColor;
-$tableEvenBgColor: $themeColorTwo;
+$tableEvenBgColor: $themeColor2;
 $tableEvenFontColor: $whiteColor;
 
 // TEXT
 $textMutedColor: lighten($blackColor, 75%);;
 
 // Icons
-$iconColor: $themeColorTwo;
+$iconColor: $themeColor2;
 $iconColorActive: $whiteColor;
 $iconColorReversed: $bodyBgColor;
 
@@ -122,20 +122,20 @@ $formFieldTextColor: $blackColor;
 $formFieldTextSize: 16px; // Responsive in _mixins.scss
 $formFieldBorderRadius: $borderRadius;
 $formFieldBackgroundColor: $whiteColor;
-$formBgColor: lighten($themeColorOne, 75%);
+$formBgColor: lighten($themeColor1, 75%);
 
 // FOOTER
-$footerBgColor: $themeColorOne;
+$footerBgColor: $themeColor1;
 $footerFontColor: $whiteColor;
-$footerLinkColorActive: $themeColorTwo;
+$footerLinkColorActive: $themeColor2;
 
 // Pagination
 $paginationTextColor: $blackColor;
 $paginationActiveTextColor: $whiteColor;
-$paginationActiveBG: $themeColorTwo;
+$paginationActiveBG: $themeColor2;
 
 //WOOCOMMERCE
-$wooThemeColor: $themeColorTwo;
+$wooThemeColor: $themeColor2;
 
 // On sale
 $onsaleBackgroundColor: $wooThemeColor;
@@ -152,16 +152,16 @@ $errorBorderTopColor: #b81c23;
 $errorIconFontColor: #b81c23;
 
 // info
-$infoBorderTopColor: $themeColorTwo;
-$infoIconFontColor: $themeColorTwo;
+$infoBorderTopColor: $themeColor2;
+$infoIconFontColor: $themeColor2;
 
 // message
-$messageBorderTopColor: $themeColorTwo;
-$messageIconFontColor: $themeColorTwo;
+$messageBorderTopColor: $themeColor2;
+$messageIconFontColor: $themeColor2;
 
 //WOOCOMMERCE end
 
 // For sass function color-yiq
 $yiq-contrasted-threshold: 150;
-$yiq-text-dark: $themeColorOne;
+$yiq-text-dark: $themeColor1;
 $yiq-text-light: $whiteColor;

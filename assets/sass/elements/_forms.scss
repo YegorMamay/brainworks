@@ -38,7 +38,7 @@ form {
         @extend %form-field-style;
 
         &:focus {
-            border: 1px solid $themeColorTwo;
+            border: 1px solid $themeColor2;
         }
     }
 }
