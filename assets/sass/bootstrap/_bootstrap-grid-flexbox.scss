@@ -13,6 +13,10 @@ $advanced-mode: false;
         margin-right: auto;
         margin-left: auto;
     }
+
+    &.no-padding {
+        padding: 0;
+    }
 }
 
 .container {
