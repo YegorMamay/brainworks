@@ -8,7 +8,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 15.08.23
+Version: 20.09.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -30,8 +30,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 //@import "plugins/woo-extentions"; // * if woo
 
 // BOOTSTRAP
-@import "bootstrap/bootstrap-embded"; // *
-//@import "bootstrap/bootstrap-grid"; // *
+//@import "bootstrap/bootstrap-embded"; // *
 @import "bootstrap/bootstrap-tables"; // *
 @import "bootstrap/bootstrap-grid-flexbox";
 @import "bootstrap/bootstrap-flexbox";
@@ -56,7 +55,6 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/lists"; // *
 @import "elements/empty-space-vh"; // *
 @import "elements/empty-space-px"; // *
-//@import "elements/dividers"; // *
 @import "elements/custom-scrollbar"; // *
 @import "elements/dinamic-elements";
 @import "elements/buttons";

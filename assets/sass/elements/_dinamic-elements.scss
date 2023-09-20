@@ -227,6 +227,40 @@
     width: 40px;
     height: 40px;
 
+      /* Закомментируй, если нужен только один цвет иконок */
+      &.social-facebook {
+          color: #4267B2;
+      }
+
+      &.social-instagram {
+          color: #F56040;
+      }
+
+      &.social-youtube {
+          color: #FF0000;
+      }
+
+      &.social-tiktok {
+          color: #000000;
+      }
+
+      &.social-twitter {
+          color: #1DA1F2;
+      }
+
+      &.social-linkedin {
+          color: #0077B5;
+      }
+
+      &.social-odnoklassniki {
+          color: #FF9800;
+      }
+
+      &.social-vk {
+          color: #4C75A3;
+      }
+      /* END */
+
     &:hover, &:active, &:focus {
       color: $iconColorActive;
       background-color: $themeColor2;

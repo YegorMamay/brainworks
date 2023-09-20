@@ -18,35 +18,6 @@ ul.products {
 // TI WooCommerce Wishlist END
 
 
-// Product carousel
-.ywcps-nav {
-    .ywcps-nav-prev {
-        left: -35px !important;
-    }
-
-    .ywcps-nav-next {
-        right: -35px !important;
-    }
-
-    span {
-        border-radius: 15px;
-        width: 30px !important;
-        top: 27% !important;
-    }
-}
-
-.woocommerce .ywcps-wrapper .owl-item li.product {
-    width: 100% !important;
-    margin-bottom: 0;
-}
-
-.woocommerce .ywcps-wrapper ul.products {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-// Product carousel End
-
-
 //Fibo-search
 .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
     background-color: $themeColor2;
@@ -92,19 +63,22 @@ ul.products {
 }
 //Improved Product Options for WooCommerce END
 
+/*
 //YITH Product Description in Loop for WooCommerce
 .yith_pdil {
     margin-bottom: 10px;
 }
 //YITH Product Description in Loop for WooCommerce END
+*/
 
-
+/*
 //YITH WOOCOMMERCE POINTS AND REWARDS
 .single-product div.yith-par-message,
 .single-product .yith-par-message-variation {
     padding: 0;
 }
 //YITH WOOCOMMERCE POINTS AND REWARDS END
+*/
 
 
 // Ajax filter

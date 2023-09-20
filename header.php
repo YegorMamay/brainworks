@@ -181,7 +181,7 @@
                 <?php echo do_shortcode('[bw-messengers]'); ?>
 
                 <!-- The button for a pop-up -->
-                <button class="btn btn2 <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
+                <button class="btn btn2 highlight <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
 
                 <!-- If WOO: Список желаний, кабинет, корзина. START -->
 				<?php if ( class_exists( 'WooCommerce' ) ) { ?>
