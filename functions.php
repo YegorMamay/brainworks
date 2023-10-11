@@ -520,3 +520,9 @@ foreach ( array( 'pre_term_description' ) as $filter ) {
 foreach ( array( 'term_description' ) as $filter ) {
 	remove_filter( $filter, 'wp_kses_data' );
 }
+
+//Remove Guttenberg styles
+function remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+}
+add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css' );

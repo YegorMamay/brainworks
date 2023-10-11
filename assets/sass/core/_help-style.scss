@@ -38,6 +38,10 @@ b, strong {
         color: $whiteColor !important;
     }
 
+    &-dark {
+        color: $blackColor !important;
+    }
+
     &-center {
         text-align: center;
     }
