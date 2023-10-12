@@ -11,7 +11,7 @@
 
 <?php get_template_part('loops/content', 'page'); ?>
 
-<div class="text-center">   
+<div class="text-center mrgn-bot-30">
     <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn1 btn-lg">
         <?php _e('Back to the homepage', 'brainworks'); ?>
     </a>

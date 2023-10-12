@@ -20,7 +20,7 @@
         <?php } ?>
         
         <div class="<?php echo $column_class; ?>">
-           <h1 class="page-name"><?php _e('Catalog', 'brainworks') ?></h1>
+           <h1 class="text-center mrgn-bot-30"><?php _e('Catalog', 'brainworks') ?></h1>
 
                 <div class="catalog-wrap">
 

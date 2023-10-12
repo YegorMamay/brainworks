@@ -72,6 +72,7 @@ function bw_create_catalog()
         'rewrite'             => true,
         'query_var'           => true,
 	    'taxonomies'          => ['sn_cat'],
+        'exclude_from_search' => false,
     ));
 
     register_taxonomy(
