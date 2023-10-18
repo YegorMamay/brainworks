@@ -8,7 +8,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 20.09.23
+Version: 18.10.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -355,6 +355,90 @@ a img.aligncenter {
   background-color: lightblue;
 }
 
+.hide-on-mobile {
+  display: block !important;
+}
+@media (max-width: 575px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+.hide-on-tablet {
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+
+.hide-on-desktop {
+  display: none !important;
+}
+@media (max-width: 1200px) {
+  .hide-on-desktop {
+    display: block !important;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+hr {
+  height: 1px;
+  background-color: #ddd;
+  border: none;
+}
+
+.title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 15px 0;
+  position: relative;
+  overflow: hidden;
+}
+.title-wrapper img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.title-wrapper h1 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 1200px) {
+  .title-wrapper {
+    padding: 50px 0;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  font-family: "Montserrat", sans-serif;
+}
+
 .link {
   text-decoration: underline;
   color: #EE6C4D;
@@ -382,15 +466,14 @@ b, strong {
   font-weight: bold;
 }
 
-.hover-pointer {
-  cursor: pointer;
-}
-
 .text-muted {
   color: #bfbfbf !important;
 }
 .text-white {
   color: #fff !important;
+}
+.text-dark {
+  color: #000 !important;
 }
 .text-center {
   text-align: center;
@@ -461,12 +544,16 @@ b, strong {
   list-style: none;
 }
 
-.brand-color-one {
+.brand-color-1 {
   color: #3D5A80;
 }
 
-.brand-color-two {
+.brand-color-2 {
   color: #EE6C4D;
+}
+
+.muted-color {
+  background: #bfbfbf;
 }
 
 .highlighted {
@@ -544,91 +631,17 @@ b, strong {
   }
 }
 
-ins {
-  text-decoration: none;
+.mrgn-bot-10 {
+  margin-bottom: 10px;
 }
-
-.hide-on-mobile {
-  display: block !important;
+.mrgn-bot-15 {
+  margin-bottom: 15px;
 }
-@media (max-width: 575px) {
-  .hide-on-mobile {
-    display: none !important;
-  }
+.mrgn-bot-20 {
+  margin-bottom: 20px;
 }
-
-.hide-on-tablet {
-  display: block !important;
-}
-@media (max-width: 768px) {
-  .hide-on-tablet {
-    display: none !important;
-  }
-}
-
-.hide-on-desktop {
-  display: none !important;
-}
-@media (max-width: 1200px) {
-  .hide-on-desktop {
-    display: block !important;
-  }
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-.page-name, .page-title {
-  text-align: center;
+.mrgn-bot-30 {
   margin-bottom: 30px;
-}
-
-.title-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  padding: 15px 0;
-  position: relative;
-  overflow: hidden;
-}
-.title-wrapper img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.title-wrapper h1 {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-@media screen and (min-width: 1200px) {
-  .title-wrapper {
-    padding: 50px 0;
-  }
-}
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2em;
-  font-family: "Montserrat", sans-serif;
 }
 
 .fa {
@@ -23304,8 +23317,8 @@ img {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation: flareAnimation 1.5s ease-in-out infinite, delay-animation 6s linear infinite;
-          animation: flareAnimation 1.5s ease-in-out infinite, delay-animation 6s linear infinite;
+  -webkit-animation: flareAnimation 1.5s ease-in-out infinite, delay-animation 3s linear infinite;
+          animation: flareAnimation 1.5s ease-in-out infinite, delay-animation 3s linear infinite;
 }
 
 @-webkit-keyframes flareAnimation {
