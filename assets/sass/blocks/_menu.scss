@@ -1,3 +1,13 @@
+// MENU
+$menuBgColor: $themeColor1;
+$menuBgColorActive: $themeColor2;
+$menuFontColor: $whiteColor;
+$menuFontColorActive: $whiteColor;
+
+// SubMenu
+$SubMenuBGOnHover: darken($themeColor2, 5%);
+
+
 .nav {
   display: block;
   position: relative;

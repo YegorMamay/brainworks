@@ -1,3 +1,29 @@
+// MENU mobile
+$navHeaderMobileBGColor: $whiteColor;
+$navHamburgerMobileColor: $themeColor1;
+
+$menuMobileBGColor: $bodyBgColor;
+$menuMobileSubMenuBGColor: $themeColor2;
+$menuMobileTextColor: $blackColor;
+$menuMobileSubMenuTextColor: $whiteColor;
+$menuMobileSubMenuBGOnHover: $themeColor2;
+$menuMobileSubMenuTextColorOnHover: $whiteColor;
+
+$navArrowColor: $blackColor;
+
+$menuMobileLinkFontSize: 20px;
+$menuMobileSubMenuLinkFontSize: 18px;
+
+$hamburger-offset: 8px;
+$hamburger-duration: .1s;
+$hamburger-delay: .1s;
+$hamburger-color: $themeColor2;
+
+$menu-close-size: 25px;
+$menu-close-color: $themeColor1;
+$menuContainerMobilePaddingTop: 70px;
+
+
 .nav-mobile-header {
   display: none;
 }

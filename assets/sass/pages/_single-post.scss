@@ -10,3 +10,14 @@ ol.commentlist {
         text-align: left;
     }
 }
+
+.tags {
+    margin-top: 15px;
+
+    a {
+        background: $grayColor;
+        padding: 1px 7px;
+        border-radius: $borderRadius;
+        margin-right: 10px;
+    }
+}

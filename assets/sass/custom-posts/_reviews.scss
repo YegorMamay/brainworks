@@ -21,7 +21,7 @@ $review-arrow-font-weight: bold !default;
 $review-arrow-background: $whiteColor !default;
 $review-arrow-border-width: 1px !default;
 $review-arrow-border-color: lighten($themeColor2, 40%) !default;
-$review-arrow-radius: 50% !default;
+$review-arrow-radius: $borderRadius !default;
 $review-arrow-hover-color: $whiteColor !default;
 $review-arrow-hover-border-color: lighten($themeColor2, 10%) !default;
 $review-arrow-hover-background: $themeColor2 !default;

@@ -6,6 +6,12 @@
 
     &:hover {
       box-shadow: none;
+      height: 350px;
+      object-fit: cover;
+
+      @media #{$mobile-max} {
+          height: 250px;
+      }
     }
   }
 
