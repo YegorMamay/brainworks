@@ -53,6 +53,20 @@ $wrapperBgColor: $whiteColor;
 $titleFontColor: $themeColor1;
 $titleFontColorActive: lighten($titleFontColor, 10%);
 
+// LINKS
+$linkFontColor: $bodyFontColor;
+$linkFontColorActive: lighten($linkFontColor, 20%);
+
+// TABLE
+$tableBgColor: lighten($themeColor1, 80%);
+$tableBgColorActive: lighten($themeColor2, 10%);
+$tableBorderColor: lighten($blackColor, 85%);
+$tableBorderColorActive: lighten($blackColor, 50%);
+$tableOddBgColor: $themeColor1;
+$tableOddFontColor: $whiteColor;
+$tableEvenBgColor: $themeColor2;
+$tableEvenFontColor: $whiteColor;
+
 // TEXT
 $mutedColor: lighten($blackColor, 75%);;
 
@@ -70,16 +84,6 @@ $formFieldTextSize: 16px; // Responsive in _mixins.scss
 $formFieldBorderRadius: $borderRadius;
 $formFieldBackgroundColor: $whiteColor;
 $formBgColor: lighten($themeColor1, 75%);
-
-// TABLE
-$tableBgColor: lighten($themeColor1, 80%);
-$tableBgColorActive: lighten($themeColor2, 10%);
-$tableBorderColor: lighten($blackColor, 85%);
-$tableBorderColorActive: lighten($blackColor, 50%);
-$tableOddBgColor: $themeColor1;
-$tableOddFontColor: $whiteColor;
-$tableEvenBgColor: $themeColor2;
-$tableEvenFontColor: $whiteColor;
 
 // Pagination
 $paginationTextColor: $blackColor;

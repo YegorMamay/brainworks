@@ -19,8 +19,6 @@ $hamburger-duration: .1s;
 $hamburger-delay: .1s;
 $hamburger-color: $themeColor2;
 
-$menu-close-size: 25px;
-$menu-close-color: $themeColor1;
 $menuContainerMobilePaddingTop: 70px;
 
 
@@ -264,5 +262,84 @@ $menuContainerMobilePaddingTop: 70px;
     left: 0;
     top: 100%;
     z-index: 1;
+  }
+}
+
+.hamburger {
+  display: none;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: .2s ease-out;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba($hamburger-color, .2);
+  }
+
+  &,
+  &[type="button"] {
+    cursor: pointer;
+    border: 0;
+    padding: 9px 5px;
+    background-color: transparent;
+  }
+
+  &-box {
+    display: block;
+    width: 30px;
+    padding: 9px 0;
+  }
+
+  &-inner {
+    position: relative;
+    transition: background-color 0s ease-out $hamburger-delay;
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $navHamburgerMobileColor;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: bottom $hamburger-duration ease-out $hamburger-delay, top $hamburger-duration ease-out $hamburger-delay, transform $hamburger-duration ease-out;
+    }
+
+    &::before {
+      bottom: $hamburger-offset;
+    }
+
+    &::after {
+      top: $hamburger-offset;
+    }
+  }
+}
+
+
+.is-active {
+  .hamburger-inner {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      transition: bottom $hamburger-duration ease-out, top $hamburger-duration ease-out, transform $hamburger-duration ease-out $hamburger-delay;
+    }
+
+    &::before {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
   }
 }

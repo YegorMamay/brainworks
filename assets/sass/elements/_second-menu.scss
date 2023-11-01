@@ -1,0 +1,17 @@
+// In Footer by defolt
+.second-menu {
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+
+        li {
+            margin: 0 10px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
