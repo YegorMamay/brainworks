@@ -1,3 +1,21 @@
+.js-ajax-posts {
+  img {
+      height: 350px;
+      object-fit: cover;
+      box-shadow: $shadow;
+  }
+
+  & .row {
+    h3 {
+      & a {
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}
+
+// Shortcode
 .front-news {
   &-box {
     box-shadow: $shadow;
@@ -62,21 +80,6 @@
       font-size: 16px;
       line-height: 1.5;
       color: $bodyFontColor;
-    }
-  }
-}
-
-.js-ajax-posts {
-  img {
-    box-shadow: $shadow;
-  }
-
-  & .row {
-    h3 {
-      & a {
-        font-size: inherit;
-        line-height: inherit;
-      }
     }
   }
 }

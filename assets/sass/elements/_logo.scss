@@ -2,7 +2,11 @@
     margin-right: 40px;
 
     a img {
-        width: 200px;
+        width: 150px;
+
+        @media #{$desktop-max} {
+            width: 80px;
+        }
     }
 }
 

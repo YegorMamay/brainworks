@@ -15,6 +15,10 @@ ul.products {
     @extend .btn;
     @extend .btn1;
 }
+
+.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before {
+    font-size: 27px;
+}
 // TI WooCommerce Wishlist END
 
 

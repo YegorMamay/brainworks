@@ -120,10 +120,10 @@
                         <?php the_custom_logo() ?>
                     </div>
 
-                    <div class="site-name">
+                    <!-- <div class="site-name">
                         <h5><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h5>
                         <p><?php bloginfo( 'description' ); ?></p>
-                    </div>
+                    </div> -->
                </div>
 
                 <!-- Language switcher menu. START -->
@@ -239,6 +239,7 @@
 
         </header>
 
+
     <!-- Mobile Header Start-->
     <div class="nav-mobile-header">
 
@@ -247,10 +248,10 @@
                 <?php the_custom_logo() ?>
             </div>
 
-            <div class="site-name">
+            <!-- <div class="site-name">
                 <h4><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
                 <p><?php bloginfo( 'description' ); ?></p>
-            </div>
+            </div> -->
         </div>
 
         <!-- If WOO: Список желаний, кабинет, корзина. START -->
@@ -325,6 +326,7 @@
     </nav>
     <?php } ?>
     <!-- Mobile menu END -->
+
 
     <?php if ( class_exists( 'WooCommerce' ) ) { ?>
     <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>' />
