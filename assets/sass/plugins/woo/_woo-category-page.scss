@@ -22,6 +22,10 @@ ul.products li.product {
         color: $whiteColor;
         opacity: 0;
         @include smooth_animation;
+
+        &::before {
+            font-size: 21px;
+        }
     }
 
     &:hover {

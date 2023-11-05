@@ -13,7 +13,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-    <div class="container">
+    <div class="container no-padding">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6">
 	            <?php do_action( 'woocommerce_before_single_product_summary' ); ?>

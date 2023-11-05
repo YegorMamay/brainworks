@@ -96,8 +96,8 @@
   width: 100%;
 
   .cart {
-    div, button, a {
-      margin-top: 10px;
+    .qua-custom, .single_add_to_cart_button, .single_buy_one_click_button {
+      margin-bottom: 10px;
     }
   }
 }
@@ -170,6 +170,10 @@ table.variations {
 			  margin-top: 0;
 		  }
 	    }
+
+          &::before {
+              display: none;
+          }
       }
 	  .woocommerce-variation-add-to-cart {
 		display: -webkit-flex;

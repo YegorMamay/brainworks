@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 2.11.23
+Version: 5.11.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -200,7 +200,7 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
   textarea,
   select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 11px;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
@@ -18197,7 +18197,7 @@ b, strong {
 @media (max-width: 768px) {
   .woocommerce-cart-form input#coupon_code {
     padding: 11px;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
@@ -18356,6 +18356,9 @@ ul.products li.product .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+ul.products li.product .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt::before {
+  font-size: 21px;
+}
 ul.products li.product:hover .cart-custom-button {
   opacity: 1;
 }
@@ -18506,7 +18509,7 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
 @media (max-width: 768px) {
   .checkout_coupon input {
     padding: 11px;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
@@ -18683,17 +18686,17 @@ dl.variation {
   float: none;
   width: 100%;
 }
-.woocommerce #content div.product div.summary .cart div, .woocommerce #content div.product div.summary .cart button, .woocommerce #content div.product div.summary .cart a,
-.woocommerce div.product div.summary .cart div,
-.woocommerce div.product div.summary .cart button,
-.woocommerce div.product div.summary .cart a,
-.woocommerce-page #content div.product div.summary .cart div,
-.woocommerce-page #content div.product div.summary .cart button,
-.woocommerce-page #content div.product div.summary .cart a,
-.woocommerce-page div.product div.summary .cart div,
-.woocommerce-page div.product div.summary .cart button,
-.woocommerce-page div.product div.summary .cart a {
-  margin-top: 10px;
+.woocommerce #content div.product div.summary .cart .qua-custom, .woocommerce #content div.product div.summary .cart .single_add_to_cart_button, .woocommerce #content div.product div.summary .cart .single_buy_one_click_button,
+.woocommerce div.product div.summary .cart .qua-custom,
+.woocommerce div.product div.summary .cart .single_add_to_cart_button,
+.woocommerce div.product div.summary .cart .single_buy_one_click_button,
+.woocommerce-page #content div.product div.summary .cart .qua-custom,
+.woocommerce-page #content div.product div.summary .cart .single_add_to_cart_button,
+.woocommerce-page #content div.product div.summary .cart .single_buy_one_click_button,
+.woocommerce-page div.product div.summary .cart .qua-custom,
+.woocommerce-page div.product div.summary .cart .single_add_to_cart_button,
+.woocommerce-page div.product div.summary .cart .single_buy_one_click_button {
+  margin-bottom: 10px;
 }
 
 .loading {
@@ -18754,6 +18757,9 @@ table.variations tbody tr {
 .woocommerce div.product form.cart .qua-custom .quantity,
 .woocommerce div.product form.cart .qua-custom button {
   margin-top: 0;
+}
+.woocommerce div.product form.cart::before {
+  display: none;
 }
 .woocommerce div.product .woocommerce-variation-add-to-cart {
   display: -ms-flex;
@@ -19354,7 +19360,7 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
   textarea,
   select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 11px;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
@@ -20007,7 +20013,7 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
   textarea,
   select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
     padding: 11px;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
