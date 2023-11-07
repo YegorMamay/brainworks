@@ -18343,11 +18343,11 @@ ul.products li.product .cart-custom-button {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-ul.products li.product .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
-  width: 0;
-  height: 0;
-  top: 40px;
-  left: 0;
+ul.products li.product .tinv-wraper.tinv-wishlist.tinvwl-above_thumb-add-to-cart {
+  top: 53px;
+  left: 10px;
+}
+ul.products li.product .tinv-wraper.tinv-wishlist.tinvwl-above_thumb-add-to-cart a {
   background: #EE6C4D;
   padding: 17px;
   border-radius: 5px;
@@ -18356,7 +18356,7 @@ ul.products li.product .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-ul.products li.product .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt::before {
+ul.products li.product .tinv-wraper.tinv-wishlist.tinvwl-above_thumb-add-to-cart a::before {
   font-size: 21px;
 }
 ul.products li.product:hover .cart-custom-button {
@@ -21458,7 +21458,6 @@ tbody > tr:first-child th {
 }
 
 table, thead, tfoot, tbody, tr, th, td {
-  border: 1px solid #d9d9d9;
   padding: 13px;
 }
 

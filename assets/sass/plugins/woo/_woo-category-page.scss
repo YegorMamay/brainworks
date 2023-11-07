@@ -11,20 +11,21 @@ ul.products li.product {
         @include smooth_animation;
     }
 
-    .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
-        width: 0;
-        height: 0;
-        top: 40px;
-        left: 0;
-        background: $themeColor2;
-        padding: 17px;
-        border-radius: $borderRadius;
-        color: $whiteColor;
-        opacity: 0;
-        @include smooth_animation;
+    .tinv-wraper.tinv-wishlist.tinvwl-above_thumb-add-to-cart {
+        top: 53px;
+        left: 10px;
 
-        &::before {
-            font-size: 21px;
+        a {
+            background: $themeColor2;
+            padding: 17px;
+            border-radius: $borderRadius;
+            color: $whiteColor;
+            opacity: 0;
+            @include smooth_animation;
+
+            &::before {
+                font-size: 21px;
+            }
         }
     }
 
