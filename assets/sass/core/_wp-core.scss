@@ -52,8 +52,8 @@ a img.aligncenter {
 }
 
 .wp-caption {
-    background: $whiteColor;
-    border: 1px solid $whiteColor;
+    background: $themeColor5;
+    border: 1px solid $themeColor5;
     max-width: 96%; // Image does not overflow the content area
     padding: 5px 3px 10px;
     text-align: center;
@@ -98,7 +98,7 @@ a img.aligncenter {
 }
 
 .screen-reader-text:focus {
-    background-color: $whiteColor;
+    background-color: $themeColor5;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;

@@ -1,5 +1,5 @@
 $footerBgColor: $themeColor1;
-$footerFontColor: $whiteColor;
+$footerFontColor: $themeColor5;
 $footerLinkColorActive: $themeColor2;
 
 
@@ -13,7 +13,7 @@ $footerLinkColorActive: $themeColor2;
 
 .pre-footer {
     padding: 40px 0 20px;
-    background-color: lighten($footerBgColor, 20%);
+    background-color: lighten($footerBgColor, 5%);
     color: $footerFontColor;
     
     .widget-item {

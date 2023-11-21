@@ -22,32 +22,34 @@ $container-max-widths: (
 ) !default;
 
 
-$blackColor: #000 !default; // black
-$whiteColor: #fff !default; // white
-$grayColor : #ddd !default;  // gray
+// THEME COLORS
+$themeColor1: #28325D; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других.
+$themeColor2: #BB2440; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
+$themeColor3: #FFF22D;
+$themeColor4: #000 !default;    // black
+$themeColor5: #fff !default;    // white
+$themeColor6: #ddd !default;    // lightgray
+$themeColor7: #b2b2b2 !default; // darkgray
+
 
 $borderRadius: 5px;
-$borderColor: lighten($blackColor, 80%);
-$shadow: 0 10px 20px rgba($blackColor, .2);
-
-// THEME COLORS
-$themeColor1: #3D5A80; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других.
-$themeColor2: #EE6C4D; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
+$borderColor: lighten($themeColor4, 80%);
+$shadow: 0 10px 20px rgba($themeColor4, .2);
 
 // SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColor2;
-$selectionFontColor: $whiteColor;
+$selectionFontColor: $themeColor5;
 
 // Text Highlight: цвет фона и текста при добавлении к нему .highlighted
 $textHighlightBgColor: $themeColor2;
-$textHighlightColor: $whiteColor;
+$textHighlightColor: $themeColor5;
 
 // BODY
-$bodyBgColor: darken($whiteColor, 3%);
-$bodyFontColor: $blackColor;
+$bodyBgColor: darken($themeColor5, 3%);
+$bodyFontColor: $themeColor4;
 
 // WRAPPER
-$wrapperBgColor: $whiteColor;
+$wrapperBgColor: $themeColor5;
 
 // TITLES
 $titleFontColor: $themeColor1;
@@ -59,35 +61,35 @@ $linkFontColorActive: lighten($linkFontColor, 20%);
 
 // TABLE
 $tableBgColor: lighten($themeColor1, 80%);
-$tableBgColorActive: lighten($themeColor2, 10%);
-$tableBorderColor: lighten($blackColor, 85%);
-$tableBorderColorActive: lighten($blackColor, 50%);
-$tableOddBgColor: $themeColor1;
-$tableOddFontColor: $whiteColor;
-$tableEvenBgColor: $themeColor2;
-$tableEvenFontColor: $whiteColor;
+$tableBgColorActive: lighten($themeColor2, 25%);
+$tableBorderColor: $themeColor7;
+$tableBorderColorActive: $themeColor7;
+$tableOddBgColor: lighten($themeColor1, 60%);
+$tableOddFontColor: $themeColor4;
+$tableEvenBgColor: lighten($themeColor2, 40%);
+$tableEvenFontColor: $themeColor4;
 
 // TEXT
-$mutedColor: lighten($blackColor, 75%);;
+$mutedColor: lighten($themeColor4, 75%);;
 
 // Icons
-$iconColor: $whiteColor;
-$iconColorActive: $whiteColor;
+$iconColor: $themeColor5;
+$iconColorActive: $themeColor5;
 $iconColorReversed: $bodyBgColor;
 
 // FORMS
 $formFieldBorderWidth: 1px;
 $formFieldBorderColor: $borderColor;
 $formFieldPadding: 12.5px 10px; // Responsive in _mixins.scss. Задумка в том, чтобы высота полей форм совпадала с размером кнопок
-$formFieldTextColor: $blackColor;
+$formFieldTextColor: $themeColor4;
 $formFieldTextSize: 16px; // Responsive in _mixins.scss
 $formFieldBorderRadius: $borderRadius;
-$formFieldBackgroundColor: $whiteColor;
+$formFieldBackgroundColor: $themeColor5;
 $formBgColor: lighten($themeColor1, 75%);
 
 // Pagination
-$paginationTextColor: $blackColor;
-$paginationActiveTextColor: $whiteColor;
+$paginationTextColor: $themeColor4;
+$paginationActiveTextColor: $themeColor5;
 $paginationActiveBG: $themeColor2;
 
 //WOOCOMMERCE
@@ -95,7 +97,7 @@ $wooThemeColor: $themeColor2;
 
 // On sale
 $onsaleBackgroundColor: $wooThemeColor;
-$onsaleFontColor: $whiteColor;
+$onsaleFontColor: $themeColor5;
 
 // Products price
 $productsPriceFontColor: $wooThemeColor;
@@ -120,4 +122,4 @@ $messageIconFontColor: $themeColor2;
 // For sass function color-yiq
 $yiq-contrasted-threshold: 150;
 $yiq-text-dark: $themeColor1;
-$yiq-text-light: $whiteColor;
+$yiq-text-light: $themeColor5;

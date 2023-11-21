@@ -47,8 +47,8 @@
 }
 
 .nav-wrapper.language-switcher .nav {
-    background: lighten($grayColor, 10%);
-    border: 1px solid $grayColor;
+    background: lighten($themeColor6, 10%);
+    border: 1px solid $themeColor6;
     border-radius: 4px;
 
     img {
@@ -62,7 +62,7 @@
 
         &:hover {
             .menu-link {
-                color: $whiteColor;
+                color: $themeColor5;
             }
         }
     }
@@ -76,7 +76,7 @@
 
         &:hover {
             &:after {
-                border-color: $grayColor transparent transparent transparent;
+                border-color: $themeColor6 transparent transparent transparent;
             }
         }
     }

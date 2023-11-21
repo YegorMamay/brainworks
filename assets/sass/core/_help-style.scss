@@ -28,7 +28,7 @@
 
 hr {
     height: 1px;
-    background-color: $grayColor;
+    background-color: $themeColor6;
     border: none;
 }
 
@@ -103,11 +103,11 @@ b, strong {
     }
     
     &-white {
-        color: $whiteColor !important;
+        color: $themeColor5 !important;
     }
 
     &-dark {
-        color: $blackColor !important;
+        color: $themeColor4 !important;
     }
 
     &-center {

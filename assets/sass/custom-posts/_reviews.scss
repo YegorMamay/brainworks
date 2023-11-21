@@ -9,20 +9,20 @@ $review-content-color: $bodyFontColor !default;
 $review-content-font-size: 16px !default;
 
 $review-social-size: 25px !default;
-$review-social-color: $whiteColor !default;
+$review-social-color: $themeColor5 !default;
 $review-social-background: $themeColor2 !default;
-$review-social-hover-color: $whiteColor !default;
+$review-social-hover-color: $themeColor5 !default;
 $review-social-hover-background: $themeColor1 !default;
 
 $review-arrow-size: 45px !default;
 $review-arrow-color: $themeColor2 !default;
 $review-arrow-font-size: 24px !default;
 $review-arrow-font-weight: bold !default;
-$review-arrow-background: $whiteColor !default;
+$review-arrow-background: $themeColor5 !default;
 $review-arrow-border-width: 1px !default;
 $review-arrow-border-color: lighten($themeColor2, 40%) !default;
 $review-arrow-radius: $borderRadius !default;
-$review-arrow-hover-color: $whiteColor !default;
+$review-arrow-hover-color: $themeColor5 !default;
 $review-arrow-hover-border-color: lighten($themeColor2, 10%) !default;
 $review-arrow-hover-background: $themeColor2 !default;
 $review-prev: '\00ab'; // &laquo;

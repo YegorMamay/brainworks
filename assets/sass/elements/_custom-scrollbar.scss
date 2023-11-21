@@ -16,16 +16,16 @@
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: $whiteColor;
+        background: $themeColor5;
     }
 
     ::-webkit-scrollbar-thumb:active {
-        background: $grayColor;
+        background: $themeColor6;
     }
 
     ::-webkit-scrollbar-track {
         background: $themeColor1;
-        border: 0 none $whiteColor;
+        border: 0 none $themeColor5;
         border-radius: 0;
     }
 

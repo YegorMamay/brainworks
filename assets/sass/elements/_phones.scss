@@ -152,7 +152,7 @@
 
   &__list {
     @extend %reset-list;
-    background: $whiteColor;
+    background: $themeColor5;
     box-shadow: $shadow;
     position: absolute;
     padding: 15px 10px;
@@ -174,7 +174,7 @@
       }
 
       &__link {
-        color: $blackColor;
+        color: $themeColor4;
         display: block;
         width: 100%;
         text-align: center;
@@ -185,7 +185,7 @@
 
 .phone-dropdown.light-mode {
    li a {
-        color: $whiteColor;
+        color: $themeColor5;
     }
 
     .phone-dropdown__list {
