@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 21.11.23
+Version: 22.11.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -19204,17 +19204,17 @@ caption {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #cdd3ea;
+  background-color: #f1f3f9;
   color: #000;
 }
 
 .table-striped > tbody > tr:nth-of-type(even) {
-  background-color: #f2b9c4;
+  background-color: #fae4e8;
   color: #000;
 }
 
 .table-hover > tbody > tr:hover {
-  background-color: #e5798d;
+  background-color: #f6cfd6;
 }
 
 table col[class*=col-] {
@@ -21074,7 +21074,7 @@ ol.commentlist .comment-body {
   top: 50%;
   z-index: 10;
   margin-top: -22.5px;
-  border: 1px solid #f2b9c4;
+  border: 0 solid #f2b9c4;
   padding: 0;
   width: 45px;
   height: 45px;
@@ -22033,8 +22033,8 @@ fieldset:disabled a.tinvwl_button_close {
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover, .tinvwl_button_close:hover {
   color: #fff;
-  background-color: #5163b4;
-  border-color: #5163b4;
+  background-color: #3f4f92;
+  border-color: #3f4f92;
 }
 .btn1:hover:after, .woocommerce #respond input#submit:hover:after, .woocommerce a.button:hover:after,
 .woocommerce button.button:hover:after,
@@ -22093,12 +22093,12 @@ fieldset:disabled a.tinvwl_button_close {
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active,
 .woocommerce input.button.alt:not(:disabled):not(.disabled).active, .tinvwl_button_close:not(:disabled):not(.disabled).active {
   color: #fff;
-  background-color: #6273bc;
-  border-color: #6273bc;
+  background-color: #4758a4;
+  border-color: #4758a4;
   color: #fff;
   text-shadow: 3px 2px 6px rgba(0, 0, 0, 0.7);
-  background-color: #8693cb;
-  border-color: #8693cb;
+  background-color: #6273bc;
+  border-color: #6273bc;
 }
 .btn1:not(:disabled):not(.disabled):active:after, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:after, .woocommerce a.button:not(:disabled):not(.disabled):active:after,
 .woocommerce button.button:not(:disabled):not(.disabled):active:after,
@@ -22748,8 +22748,8 @@ a:hover, a:active, a:focus {
   opacity: 1;
   visibility: visible;
   height: 105px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(71%, hsla(0, 0%, 100%, 0.85)), to(#f7f7f7));
-  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, 0.85) 71%, #f7f7f7);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(71%, hsla(0, 0%, 97%, 0.85)), to(#f7f7f7));
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 97%, 0.85) 71%, #f7f7f7);
   z-index: 0;
   opacity: 1;
   visibility: visible;

@@ -110,13 +110,13 @@ fieldset:disabled a.btn {
 
 .btn1 {
   $background: $themeColor1;
-  $hover-background: lighten($themeColor1, 25%);
-  $active-background: lighten($themeColor1, 25%);
+  $hover-background: lighten($themeColor1, 15%);
+  $active-background: lighten($themeColor1, 15%);
   $text-color: $themeColor5;
   $text-color-hover: $themeColor5;
   $border: $themeColor1;
-  $hover-border: lighten($themeColor1, 25%);
-  $active-border: lighten($themeColor1, 25%);
+  $hover-border: lighten($themeColor1, 15%);
+  $active-border: lighten($themeColor1, 15%);
 
   @if $btn-enable-gradients {
     background: $background linear-gradient($btn-gradient-angle, mix(#fff, $background, 25%), $background) repeat-x;

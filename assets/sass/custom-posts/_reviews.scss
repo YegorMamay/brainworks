@@ -1,30 +1,30 @@
-$review-title-color: $themeColor1 !default;
-$review-title-font-size: 16px !default;
-$review-title-font-weight: bold !default;
-$review-title-text-transform: none !default;
+$review-title-color: $themeColor1;
+$review-title-font-size: 16px;
+$review-title-font-weight: bold;
+$review-title-text-transform: none;
 
-$review-client-size: 100px !default;
+$review-client-size: 100px;
 
-$review-content-color: $bodyFontColor !default;
-$review-content-font-size: 16px !default;
+$review-content-color: $bodyFontColor;
+$review-content-font-size: 16px;
 
-$review-social-size: 25px !default;
-$review-social-color: $themeColor5 !default;
-$review-social-background: $themeColor2 !default;
-$review-social-hover-color: $themeColor5 !default;
-$review-social-hover-background: $themeColor1 !default;
+$review-social-size: 25px;
+$review-social-color: $themeColor5;
+$review-social-background: $themeColor2;
+$review-social-hover-color: $themeColor5;
+$review-social-hover-background: $themeColor1;
 
-$review-arrow-size: 45px !default;
-$review-arrow-color: $themeColor2 !default;
-$review-arrow-font-size: 24px !default;
-$review-arrow-font-weight: bold !default;
-$review-arrow-background: $themeColor5 !default;
-$review-arrow-border-width: 1px !default;
-$review-arrow-border-color: lighten($themeColor2, 40%) !default;
-$review-arrow-radius: $borderRadius !default;
-$review-arrow-hover-color: $themeColor5 !default;
-$review-arrow-hover-border-color: lighten($themeColor2, 10%) !default;
-$review-arrow-hover-background: $themeColor2 !default;
+$review-arrow-size: 45px;
+$review-arrow-color: $themeColor2;
+$review-arrow-font-size: 24px;
+$review-arrow-font-weight: bold;
+$review-arrow-background: $themeColor5;
+$review-arrow-border-width: 0;
+$review-arrow-border-color: lighten($themeColor2, 40%);
+$review-arrow-radius: $borderRadius;
+$review-arrow-hover-color: $themeColor5;
+$review-arrow-hover-border-color: lighten($themeColor2, 10%);
+$review-arrow-hover-background: $themeColor2;
 $review-prev: '\00ab'; // &laquo;
 $review-next: '\00bb'; // &raquo;
 

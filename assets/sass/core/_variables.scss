@@ -1,10 +1,10 @@
-$debug: false !default;
-$image-url-path: "assets/img/" !default;
-$font-url-path: "assets/fonts/" !default;
+$debug: false;
+$image-url-path: "assets/img/";
+$font-url-path: "assets/fonts/";
 
 //GRID Settings
-$grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
 
 $grid-breakpoints: (
         xs: 0,
@@ -12,24 +12,24 @@ $grid-breakpoints: (
         md: 768px,
         lg: 1024px,
         xl: 1366px
-) !default;
+);
 
 $container-max-widths: (
         sm: 570px,
         md: 760px,
         lg: 1000px,
         xl: 1200px
-) !default;
+);
 
 
 // THEME COLORS
 $themeColor1: #28325D; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других.
 $themeColor2: #BB2440; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
 $themeColor3: #FFF22D;
-$themeColor4: #000 !default;    // black
-$themeColor5: #fff !default;    // white
-$themeColor6: #ddd !default;    // lightgray
-$themeColor7: #b2b2b2 !default; // darkgray
+$themeColor4: #000;    // black
+$themeColor5: #fff;    // white
+$themeColor6: #ddd;    // lightgray
+$themeColor7: #b2b2b2; // darkgray
 
 
 $borderRadius: 5px;
@@ -61,12 +61,12 @@ $linkFontColorActive: lighten($linkFontColor, 20%);
 
 // TABLE
 $tableBgColor: lighten($themeColor1, 80%);
-$tableBgColorActive: lighten($themeColor2, 25%);
+$tableBgColorActive: lighten($themeColor2, 45%);
 $tableBorderColor: $themeColor7;
 $tableBorderColorActive: $themeColor7;
-$tableOddBgColor: lighten($themeColor1, 60%);
+$tableOddBgColor: lighten($themeColor1, 70%);
 $tableOddFontColor: $themeColor4;
-$tableEvenBgColor: lighten($themeColor2, 40%);
+$tableEvenBgColor: lighten($themeColor2, 50%);
 $tableEvenFontColor: $themeColor4;
 
 // TEXT
