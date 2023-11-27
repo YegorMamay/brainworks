@@ -147,7 +147,7 @@
 
                 <!-- Dropdown phones -->
                 <?php if (has_phones()) { ?>
-                <ul class="phone-dropdown">
+                <ul class="phone-dropdown <!--light-mode-->">
                     <li class="phone-dropdown__item">
                         <?php foreach(get_phones() as $key => $phone) { ?>
                             <?php if (count(get_phones()) > 1): ?>
