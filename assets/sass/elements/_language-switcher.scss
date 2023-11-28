@@ -1,49 +1,49 @@
 .lang {
-  @extend %reset-list;
+    @extend %reset-list;
 
-  &,
-  &-item {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  &-item {
-    margin: 0 5px;
-
-    a {
-      display: block;
-
-
-      &:after {
-        //content: "/";
-        //margin-left: 15px;
-      }
-
-      img {
-        //height: 15px;
-      }
+    &,
+    &-item {
+        display: inline-block;
+        vertical-align: middle;
     }
-  }
 
-  &-item:last-child {
-    a {
-      &:after {
-        display: none;
-      }
+    &-item {
+        margin: 0 5px;
+
+        a {
+            display: block;
+
+
+            &:after {
+                //content: "/";
+                //margin-left: 15px;
+            }
+
+            img {
+                //height: 15px;
+            }
+        }
     }
-  }
+
+    &-item:last-child {
+        a {
+            &:after {
+                display: none;
+            }
+        }
+    }
 }
 
 //lang dropdown
 .pll-parent-menu-item {
-  .sub-menu {
-    width: auto !important;
+    .sub-menu {
+        width: auto !important;
 
-    .lang-item {
-      display: block;
-      text-align: center;
+        .lang-item {
+            display: block;
+            text-align: center;
+        }
     }
-  }
 }
 
 .nav-wrapper.language-switcher .nav {

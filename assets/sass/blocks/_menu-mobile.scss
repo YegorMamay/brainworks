@@ -23,317 +23,313 @@ $menuContainerMobilePaddingTop: 70px;
 
 
 .nav-mobile-header {
-  display: none;
+    display: none;
 }
 
 @media #{$desktop-max} {
-  nav.main-nav {
-    display: none;
-  }
+    nav.main-nav {
+        display: none;
+    }
 
-  .nav-mobile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    padding: 10px;
-    top: 0;
-    left: 0;
-    border-bottom: 1px solid #e7e7e7;
-    background-color: $navHeaderMobileBGColor;
-    text-align: left;
-    z-index: 99;
+    .nav-mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #e7e7e7;
+        background-color: $navHeaderMobileBGColor;
+        text-align: left;
+        z-index: 99;
+
+        .hamburger {
+            display: block;
+        }
+    }
 
     .hamburger {
-      display: block;
-    }
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    max-width: 375px;
-    height: 100%;
-    margin: 0;
-    padding-bottom: 20px;
-    z-index: 1000;
-    overflow: auto;
-    background-color: $menuMobileBGColor;
-    will-change: transform;
-    transform: translateX(100%);
-    transition: transform .2s ease-out;
-
-    &.is-active {
-      transform: translateX(0%);
-      box-shadow: $shadow;
-    }
-
-    .menu-container {
-      padding-top: $menuContainerMobilePaddingTop;
-      display: block;
-    }
-
-    .menu {
-      display: block;
-      padding: 40px 0;
-
-      &-close {
         display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-      }
+    }
 
-      &-item {
-        display: block;
-        padding: 5px 0;
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 375px;
+        height: 100%;
+        margin: 0;
+        padding-bottom: 20px;
+        z-index: 1000;
+        overflow: auto;
+        background-color: $menuMobileBGColor;
+        will-change: transform;
+        transform: translateX(100%);
+        transition: transform .2s ease-out;
 
-        &-has-children {
-
+        &.is-active {
+            transform: translateX(0%);
+            box-shadow: $shadow;
         }
 
-        &::after {
-          display: none;
-        }
-
-        &:hover {
-          background: $menuMobileSubMenuBGOnHover;
-        }
-
-        .menu-item-has-children-arrow {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          z-index: 1;
-          display: block;
-          border: 0;
-          padding: 11px 13px 15px;
-          background-color: transparent;
-
-          &::before {
-            content: '';
+        .menu-container {
+            padding-top: $menuContainerMobilePaddingTop;
             display: block;
-            width: 10px;
-            height: 10px;
-            border-right: 2px solid $navArrowColor;
-            border-bottom: 2px solid $navArrowColor;
-            transform: rotate(45deg);
-          }
+        }
 
-          &-active {
-            padding-top: 15px;
-            padding-bottom: 11px;
+        .menu {
+            display: block;
+            padding: 40px 0;
 
-            &::before {
-              transform: rotate(-135deg);
+            &-close {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
             }
-          }
+
+            &-item {
+                display: block;
+                padding: 5px 0;
+
+                &-has-children {}
+
+                &::after {
+                    display: none;
+                }
+
+                &:hover {
+                    background: $menuMobileSubMenuBGOnHover;
+                }
+
+                .menu-item-has-children-arrow {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    z-index: 1;
+                    display: block;
+                    border: 0;
+                    padding: 11px 13px 15px;
+                    background-color: transparent;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-right: 2px solid $navArrowColor;
+                        border-bottom: 2px solid $navArrowColor;
+                        transform: rotate(45deg);
+                    }
+
+                    &-active {
+                        padding-top: 15px;
+                        padding-bottom: 11px;
+
+                        &::before {
+                            transform: rotate(-135deg);
+                        }
+                    }
+                }
+
+                &-current,
+                &.current-menu-parent,
+                &.current-menu-ancestor {
+                    .menu-link {}
+                }
+            }
+
+            &-link {
+                color: $menuMobileTextColor;
+                display: block;
+                font-size: $menuMobileLinkFontSize;
+                padding: 10px 0;
+            }
         }
 
-        &-current,
-        &.current-menu-parent,
-        &.current-menu-ancestor {
-          .menu-link {
-          }
-        }
-      }
+        .sub-menu {
+            position: static;
+            width: auto;
+            display: none;
+            visibility: visible;
+            background-color: $menuMobileSubMenuBGColor;
+            opacity: 1;
+            box-shadow: none;
+            transition: none;
 
-      &-link {
-        color: $menuMobileTextColor;
-        display: block;
-        font-size: $menuMobileLinkFontSize;
-        padding: 10px 0;
-      }
+            &-item {
+                &::after {
+                    display: none;
+                }
+
+                .menu-item-has-children-arrow {
+                    top: 0;
+                }
+
+                & + .sub-menu-item {}
+
+                &-current {
+                    > .sub-menu-link {
+                        //background: $menuMobileSubMenuBGOnHover;
+                    }
+                }
+            }
+
+            &-link {
+                color: $menuMobileSubMenuTextColor;
+                font-size: $menuMobileSubMenuLinkFontSize;
+                text-align: center;
+            }
+        }
     }
-
-    .sub-menu {
-      position: static;
-      width: auto;
-      display: none;
-      visibility: visible;
-      background-color: $menuMobileSubMenuBGColor;
-      opacity: 1;
-      box-shadow: none;
-      transition: none;
-
-      &-item {
-        &::after {
-          display: none;
-        }
-
-        .menu-item-has-children-arrow {
-          top: 0;
-        }
-
-        & + .sub-menu-item {
-        }
-
-        &-current {
-          > .sub-menu-link {
-            //background: $menuMobileSubMenuBGOnHover;
-          }
-        }
-      }
-
-      &-link {
-        color: $menuMobileSubMenuTextColor;
-        font-size: $menuMobileSubMenuLinkFontSize;
-        text-align: center;
-      }
-    }
-  }
 }
 
 .mobile-language {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 
-  & .menu-container {
-    padding-top: 0;
+    & .menu-container {
+        padding-top: 0;
 
-    & .menu-link {
-      padding: 6px;
-      color: $menuMobileTextColor !important;
+        & .menu-link {
+            padding: 6px;
+            color: $menuMobileTextColor !important;
+        }
+
+        & .menu-item {
+            &:hover {
+                background: transparent;
+            }
+        }
     }
 
-    & .menu-item {
-      &:hover {
-        background: transparent;
-      }
+    & .lang-item {
+
+        & .sub-menu-link {
+            padding: 5px;
+
+            & img {
+                width: 32px;
+            }
+        }
     }
-  }
-
-  & .lang-item {
-
-    & .sub-menu-link {
-      padding: 5px;
-
-      & img {
-        width: 32px;
-      }
-    }
-  }
 }
 
 .mobile-phones {
-  margin-top: 20px;
+    margin-top: 20px;
 
-  & .phone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    & .phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-    &-number {
-      color: $menuMobileTextColor;
-      font-size: $menuMobileSubMenuLinkFontSize;
-      padding: 8px 10px;
+        &-number {
+            color: $menuMobileTextColor;
+            font-size: $menuMobileSubMenuLinkFontSize;
+            padding: 8px 10px;
+        }
     }
-  }
 }
 
 #menu-language-switcher-1 {
-  & .menu-item-has-children-arrow {
-    top: 13px;
-    right: -15px;
-    padding: 5px;
+    & .menu-item-has-children-arrow {
+        top: 13px;
+        right: -15px;
+        padding: 5px;
 
-    &:before {
-      width: 8px;
-      height: 8px;
+        &:before {
+            width: 8px;
+            height: 8px;
+        }
     }
-  }
 
-  & .sub-menu {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    z-index: 1;
-  }
+    & .sub-menu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 1;
+    }
 }
 
 .hamburger {
-  display: none;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-  transition: .2s ease-out;
+    display: none;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: .2s ease-out;
 
-  &:focus {
-    outline: 0;
-    box-shadow: 0 0 0 4px rgba($hamburger-color, .2);
-  }
-
-  &,
-  &[type="button"] {
-    cursor: pointer;
-    border: 0;
-    padding: 9px 5px;
-    background-color: transparent;
-  }
-
-  &-box {
-    display: block;
-    width: 30px;
-    padding: 9px 0;
-  }
-
-  &-inner {
-    position: relative;
-    transition: background-color 0s ease-out $hamburger-delay;
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 4px rgba($hamburger-color, .2);
+    }
 
     &,
-    &::before,
-    &::after {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: $navHamburgerMobileColor;
+    &[type="button"] {
+        cursor: pointer;
+        border: 0;
+        padding: 9px 5px;
+        background-color: transparent;
     }
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      transition: bottom $hamburger-duration ease-out $hamburger-delay, top $hamburger-duration ease-out $hamburger-delay, transform $hamburger-duration ease-out;
+    &-box {
+        display: block;
+        width: 30px;
+        padding: 9px 0;
     }
 
-    &::before {
-      bottom: $hamburger-offset;
-    }
+    &-inner {
+        position: relative;
+        transition: background-color 0s ease-out $hamburger-delay;
 
-    &::after {
-      top: $hamburger-offset;
+        &,
+        &::before,
+        &::after {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $navHamburgerMobileColor;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: bottom $hamburger-duration ease-out $hamburger-delay, top $hamburger-duration ease-out $hamburger-delay, transform $hamburger-duration ease-out;
+        }
+
+        &::before {
+            bottom: $hamburger-offset;
+        }
+
+        &::after {
+            top: $hamburger-offset;
+        }
     }
-  }
 }
 
 .is-active {
-  .hamburger-inner {
-    background-color: transparent;
+    .hamburger-inner {
+        background-color: transparent;
 
-    &::before,
-    &::after {
-      transition: bottom $hamburger-duration ease-out, top $hamburger-duration ease-out, transform $hamburger-duration ease-out $hamburger-delay;
-    }
+        &::before,
+        &::after {
+            transition: bottom $hamburger-duration ease-out, top $hamburger-duration ease-out, transform $hamburger-duration ease-out $hamburger-delay;
+        }
 
-    &::before {
-      bottom: 0;
-      transform: rotate(45deg);
-    }
+        &::before {
+            bottom: 0;
+            transform: rotate(45deg);
+        }
 
-    &::after {
-      top: 0;
-      transform: rotate(-45deg);
+        &::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
     }
-  }
 }

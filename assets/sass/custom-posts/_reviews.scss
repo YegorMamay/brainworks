@@ -31,9 +31,7 @@ $review-next: '\00bb'; // &raquo;
 @use "sass:math";
 
 .review {
-    &-list {
-
-    }
+    &-list {}
 
     &-item {
         margin-bottom: 30px;
@@ -93,6 +91,7 @@ $review-next: '\00bb'; // &raquo;
     }
 
     &-content {
+
         &,
         p {
             color: $review-content-color;
@@ -111,14 +110,10 @@ $review-next: '\00bb'; // &raquo;
         padding: 0 40px;
         margin: 20px 0;
 
-        .review-item {
-
-        }
+        .review-item {}
 
         .slick {
-            &-list {
-
-            }
+            &-list {}
 
             &-arrow {
                 cursor: pointer;
@@ -181,6 +176,7 @@ $review-next: '\00bb'; // &raquo;
         }
 
         &-content {
+
             &,
             p {
                 font-size: 14px;
@@ -191,9 +187,7 @@ $review-next: '\00bb'; // &raquo;
             padding: 0;
 
             .slick {
-                &-list {
-
-                }
+                &-list {}
 
                 &-arrow {
                     top: math.div($review-client-size - $review-arrow-size, 2);

@@ -1,22 +1,22 @@
 .woocommerce-cart {
-  .cart-popup {
-    display: none !important;
-  }
+    .cart-popup {
+        display: none !important;
+    }
 }
 
 .woocommerce {
-  a.added_to_cart {
-    @extend %btn2-outline;
-    width: 100%;
-  }
-    
-    .cart-collaterals {
-    .cart_totals {
-      h2 {
-        text-align: center;
-      }
+    a.added_to_cart {
+        @extend %btn2-outline;
+        width: 100%;
     }
-  }
+
+    .cart-collaterals {
+        .cart_totals {
+            h2 {
+                text-align: center;
+            }
+        }
+    }
 }
 
 .woocommerce ul#shipping_method li input {
@@ -35,14 +35,14 @@
 
 .woocommerce-cart,
 .woocommerce-checkout {
-  .wc-proceed-to-checkout {
-    a {
-      &.checkout-button {
-        width: 100%;
-        display: block;
-      }
+    .wc-proceed-to-checkout {
+        a {
+            &.checkout-button {
+                width: 100%;
+                display: block;
+            }
+        }
     }
-  }
 }
 
 .cart_item {
@@ -63,7 +63,9 @@
 
 //Блок с суммой заказов под таблицей
 .cart_totals {
-    h2, .shop_table {
+
+    h2,
+    .shop_table {
         display: none;
     }
 }

@@ -20,6 +20,7 @@
         }
 
         $color: lighten($themeColor2, 10%);
+
         .trigger {
             cursor: pointer;
             position: absolute;
@@ -66,7 +67,8 @@
                     }
                 }
 
-                a, span {
+                a,
+                span {
                     margin-bottom: 4px;
                     display: block;
                     border-bottom: 1px solid $themeColor2;

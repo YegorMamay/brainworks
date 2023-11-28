@@ -6,187 +6,189 @@
 @import "woo/woo-product-page";
 
 %button-style {
-  @extend .btn;
-  @extend .btn1;
+    @extend .btn;
+    @extend .btn1;
 }
 
 %btn2-outline {
-  @extend .btn;
-  @extend .btn2;
+    @extend .btn;
+    @extend .btn2;
 }
 
 .woocommerce {
 
-  #respond {
-    input#submit {
-      @extend %button-style;
+    #respond {
+        input#submit {
+            @extend %button-style;
 
-      &.loading {
-        &::after {
-          top: 19px;
+            &.loading {
+                &::after {
+                    top: 19px;
+                }
+            }
+
+            &.alt {
+                @extend %button-style;
+
+                &.disabled,
+                &.disabled:hover,
+                &:disabled,
+                &:disabled:hover,
+                &:disabled[disabled],
+                &:disabled[disabled]:hover {
+                    cursor: not-allowed;
+                    background-color: $wooThemeColor;
+                }
+            }
         }
-      }
-
-      &.alt {
-        @extend %button-style;
-
-        &.disabled,
-        &.disabled:hover,
-        &:disabled,
-        &:disabled:hover,
-        &:disabled[disabled],
-        &:disabled[disabled]:hover {
-          cursor: not-allowed;
-          background-color: $wooThemeColor;
-        }
-      }
     }
-  }
 
-  a,
-  button,
-  input {
-    &.button {
-      @extend %button-style;
+    a,
+    button,
+    input {
+        &.button {
+            @extend %button-style;
 
-      &,
-      &.disabled,
-      &.disabled:hover,
-      &:disabled,
-      &:disabled:hover,
-      &:disabled[disabled],
-      &:disabled[disabled]:hover {
-        //@extend %button-style;
-      }
+            &,
+            &.disabled,
+            &.disabled:hover,
+            &:disabled,
+            &:disabled:hover,
+            &:disabled[disabled],
+            &:disabled[disabled]:hover {
+                //@extend %button-style;
+            }
 
-      &.alt {
-        @extend %button-style;
+            &.alt {
+                @extend %button-style;
 
-        &:hover {
-          background-color: $themeColor2;
+                &:hover {
+                    background-color: $themeColor2;
+                }
+
+                &.disabled,
+                &.disabled:hover,
+                &:disabled,
+                &:disabled:hover,
+                &:disabled[disabled],
+                &:disabled[disabled]:hover {
+                    cursor: not-allowed;
+                    background-color: $wooThemeColor;
+                }
+            }
         }
+    }
 
-        &.disabled,
-        &.disabled:hover,
-        &:disabled,
-        &:disabled:hover,
-        &:disabled[disabled],
-        &:disabled[disabled]:hover {
-          cursor: not-allowed;
-          background-color: $wooThemeColor;
+    // On sale
+    span {
+        &.onsale {
+            background-color: $onsaleBackgroundColor;
+            color: $onsaleFontColor;
         }
-      }
     }
-  }
 
-  // On sale
-  span {
-    &.onsale {
-      background-color: $onsaleBackgroundColor;
-      color: $onsaleFontColor;
+    // Product sku
+    .sku_wrapper,
+    .posted_in,
+    .tagged_as {
+        display: block;
     }
-  }
 
-  // Product sku
-  .sku_wrapper, .posted_in, .tagged_as {
-    display: block;
-  }
+    .col2-set {
+        padding-top: 20px;
+    }
 
-  .col2-set {
-    padding-top: 20px;
-  }
+    fieldset {
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
 
-  fieldset {
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
-  }
+    // error, info, message
+    &-error,
+    &-info,
+    &-message {
+        a {
+            text-decoration: underline;
+        }
+    }
 
-  // error, info, message
-  &-error,
-  &-info,
-  &-message {
+    // error
+    &-error {
+        border-top-color: $errorBorderTopColor;
+
+        &::before {
+            color: $errorIconFontColor;
+        }
+    }
+
+    // info
+    &-info {
+        border-top-color: $infoBorderTopColor;
+
+        &::before {
+            color: $infoIconFontColor;
+        }
+    }
+
+    // message
+    &-message {
+        border-top-color: $messageBorderTopColor;
+
+        &::before {
+            color: $messageIconFontColor;
+        }
+    }
+
+    // remove
     a {
-      text-decoration: underline;
+        &.remove {}
     }
-  }
 
-  // error
-  &-error {
-    border-top-color: $errorBorderTopColor;
-
-    &::before {
-      color: $errorIconFontColor;
+    // form
+    form {
+        .form-row {
+            .required {
+                text-decoration: none;
+            }
+        }
     }
-  }
 
-  // info
-  &-info {
-    border-top-color: $infoBorderTopColor;
-
-    &::before {
-      color: $infoIconFontColor;
+    #reviews {
+        #comment {
+            height: 120px;
+        }
     }
-  }
-
-  // message
-  &-message {
-    border-top-color: $messageBorderTopColor;
-
-    &::before {
-      color: $messageIconFontColor;
-    }
-  }
-
-  // remove
-  a {
-    &.remove {
-    }
-  }
-
-  // form
-  form {
-    .form-row {
-      .required {
-        text-decoration: none;
-      }
-    }
-  }
-
-  #reviews {
-    #comment {
-      height: 120px;
-    }
-  }
 }
 
 .woocommerce #content table.cart td.actions .input-text,
 .woocommerce table.cart td.actions .input-text,
 .woocommerce-page #content table.cart td.actions .input-text,
 .woocommerce-page table.cart td.actions .input-text {
-  width: 200px;
+    width: 200px;
 }
 
 @media only screen and (max-width: 360px) {
-  .woocommerce,
-  .woocommerce-page,
-  .woocommerce-page[class*=columns-],
-  .woocommerce[class*=columns-] {
-    ul {
-      &.products {
-        li {
-          &.product {
-            float: none;
-            width: auto;
 
-            &:nth-child(2n) {
-              float: none;
+    .woocommerce,
+    .woocommerce-page,
+    .woocommerce-page[class*=columns-],
+    .woocommerce[class*=columns-] {
+        ul {
+            &.products {
+                li {
+                    &.product {
+                        float: none;
+                        width: auto;
+
+                        &:nth-child(2n) {
+                            float: none;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 }
 
 .page-title {

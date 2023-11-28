@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -103,13 +104,15 @@
 
     <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
 
-<?php get_template_part('loops/content', 'page'); ?>
+    <?php get_template_part('loops/content', 'page'); ?>
 
-<?php scroll_top(); ?>
+    <?php scroll_top(); ?>
 
-<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 
 </body>
+
 </html>

@@ -11,24 +11,24 @@ div.aligncenter {
 }
 
 .alignleft {
-  display: inline;
-  float: left;
-  margin-right: 2em;
-  margin-bottom: 2em;
+    display: inline;
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 2em;
 }
 
 .alignright {
-  display: inline;
-  float: right;
-  margin-left: 2em;
-  margin-bottom: 2em;
+    display: inline;
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 2em;
 }
 
 .aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a img.alignright {

@@ -15,7 +15,7 @@ $footerLinkColorActive: $themeColor2;
     padding: 40px 0 20px;
     background-color: lighten($footerBgColor, 5%);
     color: $footerFontColor;
-    
+
     .widget-item {
         .phone-item {
             display: block;
@@ -25,14 +25,16 @@ $footerLinkColorActive: $themeColor2;
             padding-bottom: 20px;
         }
     }
-    
+
 
     ul {
         padding-left: 0;
-        list-style: none; 
+        list-style: none;
     }
-    
-    .menu-link, .sub-menu-link, .phone-number {
+
+    .menu-link,
+    .sub-menu-link,
+    .phone-number {
         color: $footerFontColor;
     }
 
@@ -50,7 +52,8 @@ $footerLinkColorActive: $themeColor2;
     display: flex;
     justify-content: space-between;
 
-    div, nav {
+    div,
+    nav {
         margin: 14px 0;
 
         @media #{$mobile-max} {
@@ -66,7 +69,7 @@ $footerLinkColorActive: $themeColor2;
             color: $footerLinkColorActive;
         }
     }
-    
+
     //xs 544
     @media #{$mobile-max} {
         flex-direction: column;

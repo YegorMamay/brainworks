@@ -1,35 +1,35 @@
 @-webkit-keyframes slideme {
-  0% {
-    left: -30px;
-    margin-left: 0;
-  }
+    0% {
+        left: -30px;
+        margin-left: 0;
+    }
 
-  30% {
-    left: 110%;
-    margin-left: 80px;
-  }
+    30% {
+        left: 110%;
+        margin-left: 80px;
+    }
 
-  100% {
-    left: 111%;
-    margin-left: 84px;
-  }
+    100% {
+        left: 111%;
+        margin-left: 84px;
+    }
 }
 
 @keyframes slideme {
-  0% {
-    left: -30px;
-    margin-left: 0;
-  }
+    0% {
+        left: -30px;
+        margin-left: 0;
+    }
 
-  30% {
-    left: 110%;
-    margin-left: 80px;
-  }
+    30% {
+        left: 110%;
+        margin-left: 80px;
+    }
 
-  100% {
-    left: 111%;
-    margin-left: 84px;
-  }
+    100% {
+        left: 111%;
+        margin-left: 84px;
+    }
 }
 
 .kviz {
@@ -41,6 +41,7 @@
         flex-grow: 0;
         position: relative;
         border-radius: 100%;
+
         &:before {
             content: "";
             position: absolute;
@@ -53,11 +54,13 @@
             border-radius: 100%;
             transition: all 0.9s;
         }
+
         &-active:before {
             opacity: 1;
             background-color: $themeColor2;
         }
     }
+
     &-block {
         height: 7px;
         width: 8%;
@@ -65,6 +68,7 @@
         background: repeating-linear-gradient(-45deg, #e5e5e5 0px, #e5e5e5 1px, #f2f6f9 2px, #f2f6f9 5px);
         position: relative;
         z-index: 17;
+
         &:before {
             content: "";
             position: absolute;
@@ -74,6 +78,7 @@
             height: 100%;
             transition: all 0.5s;
         }
+
         &-active:before {
             width: 100%;
             background: -webkit-repeating-linear-gradient(-45deg, #f1c20c 0%, #f9ca0c 1%, #f9ca0c 7%);
@@ -84,6 +89,7 @@
             background: $themeColor2;
         }
     }
+
     &-item__progress {
         display: flex;
         justify-content: center;
@@ -91,6 +97,7 @@
         width: 100%;
         margin: 5vh auto 0;
     }
+
     &-item__number {
         -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -106,6 +113,7 @@
         margin-right: 50px;
         align-items: center;
     }
+
     &-item__number-all {
         color: #999999;
         font-size: 17px;
@@ -119,33 +127,40 @@
         box-shadow: inset 0px 2px 15px 5px rgba(153, 153, 153, 0.24);
         border-radius: 50%;
     }
+
     &-item__number-furst {
         margin-top: 10px;
     }
+
     &-item__number-text {
         color: #f44336;
         font-size: 20px;
         font-weight: 700;
         display: none;
     }
+
     &__visual {
         position: relative;
         z-index: 17;
         display: flex;
         align-items: center;
         flex: 1;
-        &>div:not(:last-child) {
+
+        & > div:not(:last-child) {
             flex-grow: 1;
             display: flex;
             align-items: center;
+
             .kviz-block {
                 width: calc(100% - 30px);
             }
         }
     }
+
     &-item__progress {
         margin-bottom: 40px;
     }
+
     &-slider__item {
         &:not(:first-child) {
             display: none;
@@ -173,11 +188,13 @@
             // border: 2px solid #222222;
             // opacity: 0.4;
         }
+
         &:not(:disabled) {
             background-color: $themeColor2;
             color: #ffffff;
             transition: none;
             position: relative;
+
             &:after {
                 margin-left: -30px;
                 content: " ";
@@ -196,6 +213,7 @@
                 transform: rotate(45deg);
             }
         }
+
         &:disable {
             color: #fec009;
             border: 2px solid #fec009;
@@ -207,11 +225,13 @@
 .prev {
     &-kviz {
         background: transparent;
+
         &:disabled {
             color: #222222;
             border: 2px solid #222222;
             opacity: 0.4;
         }
+
         &:not(:disabled) {
             color: #222222;
             border: 2px solid #222222;
@@ -226,20 +246,24 @@
 .customRadio {
     &_radio {
         display: none;
+
         &:checked ~ .customRadio_label .customRadio_label-cirkle,
         &:checked ~ .customRadio_label .checkbox-item {
             background-color: #cffff8;
             border: none;
             box-shadow: inset 0px 3px 15px 2px rgba(0, 0, 0, 0.13);
         }
+
         &:checked ~ .customRadio_label .customRadio_label-cirkle:after,
         &:checked ~ .customRadio_label .checkbox-item:after {
             transform: translate(-50%, -50%) scale(1);
         }
+
         &:checked ~ .customRadio_label span {
             color: #222222;
         }
     }
+
     &_label {
         position: relative;
         font-size: 20px;
@@ -251,18 +275,20 @@
         align-items: center;
         padding: 20px;
         text-transform: uppercase;
+
         &-cirkle:after {
             content: '';
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%) scale(0);
-              width: 19px;
-              height: 19px;
-              background-color: #000;
+            width: 19px;
+            height: 19px;
+            background-color: #000;
             transition: all 0.4s;
         }
     }
+
     &_label-cirkle {
         width: 28px;
         height: 28px;
@@ -273,13 +299,16 @@
         margin-right: 15px;
         transition: all 0.4s;
     }
+
     &__img-title {
         width: calc(100% - 43px);
         line-height: 1.2;
     }
+
     &__img {
         display: block;
         height: 210px;
+
         img {
             width: 100%;
             height: 100%;
@@ -292,93 +321,115 @@
 
 .kviz {
     margin: 60px 0;
+
     &__btn-block {
         margin: 45px 0;
         display: flex;
         align-items: center;
         width: 100%;
         justify-content: center;
+
         button:not(:last-child) {
             margin-right: 30px;
         }
     }
+
     &-slider {
         &__wrap {
             width: 100%;
         }
+
         &__title {
             font-size: 27px;
             font-weight: 700;
             margin-bottom: 60px;
         }
+
         &__content {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+
             &_img {
                 align-items: inherit;
             }
         }
+
         &__data {
             width: 63%;
+
             &.two-col {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
+
                 .kviz-slider__elem-radio {
                     width: 49%;
                     margin-bottom: 15px;
                 }
             }
         }
+
         &__img {
             width: 35%;
         }
+
         &__elem-radio {
             box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.4);
             width: 100%;
             cursor: pointer;
+
             // padding: 10px;
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
         }
+
         &__elem-min {
             width: 31%;
             border: 2px solid #ededed;
             border-radius: 5px;
             cursor: pointer;
+
             &_img {
                 border-radius: 5px 5px 0 0;
                 overflow: hidden;
                 display: block;
             }
+
             .customRadio_label {
                 padding: 20px 10px 20px;
             }
         }
+
         &__input {
             height: 55px;
             width: 100%;
             font-size: 20px;
         }
+
         &__form {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             .kviz-slider__content {
                 width: 45%;
+
                 .kviz-slider__data {
                     width: 100%;
                 }
             }
+
             .inputs_form {
                 width: 45%;
             }
+
             .main-input__inner {
-                padding: 35px 20px 35px 40px;;
+                padding: 35px 20px 35px 40px;
+                ;
                 position: relative;
                 background-color: #f3f3f3;
                 border-radius: 8px;
@@ -388,6 +439,7 @@
                 border: none;
                 font-size: 20px;
             }
+
             .customRadio_label {
                 margin: 5px;
             }
@@ -420,39 +472,41 @@
     background: $themeColor2;
     box-shadow: 0 0 0 0;
     color: #fff;
+
     &:not(:disabled):before {
-      margin-left: -30px;
-      content: " ";
-      width: 30px;
-      height: 300px;
-      background: #fff;
-      position: absolute;
-      left: -40px;
-      top: -150px;
-      top-animation-timing-function: ease-in-out;
-      transition: all 0.1s;
-      animation-name: slideme;
-      animation-duration: 3.5s;
-      animation-iteration-count: infinite;
-      transform: rotate(45deg);
+        margin-left: -30px;
+        content: " ";
+        width: 30px;
+        height: 300px;
+        background: #fff;
+        position: absolute;
+        left: -40px;
+        top: -150px;
+        top-animation-timing-function: ease-in-out;
+        transition: all 0.1s;
+        animation-name: slideme;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        transform: rotate(45deg);
     }
+
     &:after {
-      margin-left: -30px;
-      content: " ";
-      width: 30px;
-      height: 300px;
-      background: #fff;
-      animation-delay: 0.05s;
-      position: absolute;
-      left: -90px;
-      top: -150px;
-      top-animation-timing-function: ease-in-out;
-      transition: all 0.1s;
-      animation-name: slideme;
-      animation-duration: 3.5s;
-      animation-iteration-count: infinite;
-      transform: rotate(45deg);
-  }
+        margin-left: -30px;
+        content: " ";
+        width: 30px;
+        height: 300px;
+        background: #fff;
+        animation-delay: 0.05s;
+        position: absolute;
+        left: -90px;
+        top: -150px;
+        top-animation-timing-function: ease-in-out;
+        transition: all 0.1s;
+        animation-name: slideme;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        transform: rotate(45deg);
+    }
 }
 
 @media #{$laptop-max} {
@@ -461,40 +515,49 @@
         &-circle {
             width: 27px;
             height: 27px;
+
             &:before {
                 width: 8px;
                 height: 8px;
             }
         }
+
         &-block {
             height: 6px;
         }
+
         &-item__progress {
             margin: 4vh auto 0;
         }
+
         &-item__number {
             font-size: 45px;
             margin-right: 40px;
         }
+
         &-item__number-all {
             font-size: 16px;
             width: 49px;
             height: 49px;
             margin-left: 10px;
         }
+
         &-item__number-furst {
             margin-top: 9px;
         }
+
         &-item__number-text {
             font-size: 19px;
         }
+
         &__visual {
-            &>div:not(:last-child) {
+            & > div:not(:last-child) {
                 .kviz-block {
                     width: calc(100% - 27px);
                 }
             }
         }
+
         &-item__progress {
             margin-bottom: 35px;
         }
@@ -511,16 +574,19 @@
     .customRadio {
         &_label {
             font-size: 18px;
+
             &-cirkle:after {
                 width: 18px;
                 height: 18px;
             }
         }
+
         &_label-cirkle {
             width: 25px;
             height: 25px;
             margin-right: 9px;
         }
+
         &__img {
             height: 190px;
         }
@@ -531,45 +597,56 @@
     .kviz {
         &__btn-block {
             margin: 40px 0;
+
             button:not(:last-child) {
                 margin-right: 0;
             }
         }
+
         &-slider {
             &__title {
                 font-size: 24px;
                 line-height: 1.2;
                 margin-bottom: 40px;
             }
+
             &__data {
                 width: 63%;
             }
+
             &__img {
                 width: 35%;
             }
+
             &__elem-radio {
                 &:not(:last-child) {
                     margin-bottom: 13px;
                 }
             }
+
             &__elem-min {
                 width: 31%;
             }
+
             &__input {
                 height: 50px;
                 font-size: 19px;
             }
+
             &__form {
                 .kviz-slider__content {
                     width: 40%;
                 }
+
                 .inputs_form {
                     width: 55%;
                 }
+
                 .main-input__inner {
                     padding: 30px 20px 30px 25px;
                     font-size: 19px;
                 }
+
                 .customRadio_label {
                     margin: 5px;
                 }
@@ -583,45 +660,55 @@
         font-size: 16px;
     }
 }
+
 @media #{$tablet-max} {
     .kviz {
         &-circle {
             width: 20px;
             height: 20px;
+
             &:before {
                 width: 7px;
                 height: 7px;
             }
         }
+
         &-block {
             height: 5px;
         }
+
         &-item__progress {
             margin: 3vh auto 0;
         }
+
         &-item__number {
             font-size: 35px;
             margin-right: 25px;
         }
+
         &-item__number-all {
             font-size: 15px;
             width: 40px;
             height: 40px;
             margin-left: 8px;
         }
+
         &-item__number-furst {
             margin-top: 7px;
         }
+
         &-item__number-text {
             font-size: 17px;
         }
+
         &__visual {
-            &>div:not(:last-child) {
+            & > div:not(:last-child) {
                 .kviz-block {
                     width: calc(100% - 20px);
                 }
             }
         }
+
         &-item__progress {
             margin-bottom: 30px;
         }
@@ -639,16 +726,19 @@
         &_label {
             font-size: 16px;
             line-height: 1.2;
+
             &-cirkle:after {
                 width: 13px;
                 height: 13px;
             }
         }
+
         &_label-cirkle {
             width: 18px;
             height: 18px;
             margin-right: 8px;
         }
+
         &__img {
             height: 170px;
         }
@@ -660,14 +750,17 @@
         &__btn-block {
             margin: 30px 0
         }
+
         &-slider {
             &__title {
                 font-size: 21px;
                 line-height: 1.2;
                 margin-bottom: 30px;
             }
+
             &__data {
                 width: 63%;
+
                 &.two-col {
                     width: 100%;
                     display: -webkit-flex;
@@ -675,38 +768,47 @@
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
+
                     .kviz-slider__elem-radio {
                         width: 100%;
                         margin-bottom: 13px;
                     }
                 }
             }
+
             &__img {
                 width: 35%;
             }
+
             &__elem-radio {
                 &:not(:last-child) {
                     margin-bottom: 13px;
                 }
             }
+
             &__elem-min {
                 width: 48%;
             }
+
             &__input {
                 height: 40px;
                 font-size: 17px;
             }
+
             &__form {
                 .kviz-slider__content {
                     width: 45%;
                 }
+
                 .inputs_form {
                     width: 50%;
                 }
+
                 .main-input__inner {
                     padding: 22px;
                     font-size: 16px;
                 }
+
                 .customRadio_label {
                     margin: 5px;
                 }
@@ -727,40 +829,49 @@
         &-circle {
             width: 15px;
             height: 15px;
+
             &:before {
                 width: 6px;
                 height: 6px;
             }
         }
+
         &-block {
             height: 5px;
         }
+
         &-item__progress {
             margin: 2vh auto 0;
         }
+
         &-item__number {
             font-size: 27px;
             margin-right: 10px;
         }
+
         &-item__number-all {
             font-size: 13px;
             width: 30px;
             height: 30px;
             margin-left: 7px;
         }
+
         &-item__number-furst {
             margin-top: 7px;
         }
+
         &-item__number-text {
             font-size: 15px;
         }
+
         &__visual {
-            &>div:not(:last-child) {
+            & > div:not(:last-child) {
                 .kviz-block {
                     width: calc(100% - 15px);
                 }
             }
         }
+
         &-item__progress {
             margin-bottom: 25px;
         }
@@ -779,16 +890,19 @@
         &_label {
             font-size: 16px;
             line-height: 1.2;
+
             &-cirkle:after {
                 width: 13px;
                 height: 13px;
             }
         }
+
         &_label-cirkle {
             width: 18px;
             height: 18px;
             margin-right: 8px;
         }
+
         &__img {
             height: 170px;
             margin-bottom: 15px;
@@ -801,42 +915,52 @@
         &__btn-block {
             margin: 20px 0
         }
+
         &-slider {
             &__title {
                 font-size: 18px;
                 line-height: 1.2;
                 margin-bottom: 25px;
             }
+
             &__data {
                 width: 100%;
                 margin-bottom: 20px;
             }
+
             &__img {
                 display: none;
             }
+
             &__elem-radio {
                 &:not(:last-child) {
                     margin-bottom: 13px;
                 }
             }
+
             &__elem-min {
                 width: 48%;
             }
+
             &__input {
                 height: 34px;
                 font-size: 16px;
             }
+
             &__form {
                 .kviz-slider__content {
                     width: 45%;
                 }
+
                 .inputs_form {
                     width: 50%;
                 }
+
                 .main-input__inner {
                     padding: 21px;
                     font-size: 15px;
                 }
+
                 .customRadio_label {
                     margin: 4px;
                 }
@@ -859,18 +983,23 @@
             &__elem-min {
                 width: 100%;
             }
+
             &__form {
                 flex-direction: column;
+
                 .kviz-slider__content {
                     width: 100%;
                 }
+
                 .inputs_form {
                     width: 100%;
                 }
+
                 .main-input__inner {
                     padding: 20px;
                     font-size: 14px;
                 }
+
                 .customRadio_label {
                     margin: 4px;
                 }
@@ -878,6 +1007,7 @@
 
         }
     }
+
     .btn_quiz {
         margin-top: 14px;
         padding: 20px;

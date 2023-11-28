@@ -110,18 +110,18 @@ if( is_admin() && ! class_exists('Term_Meta_Image') ){
             add_action('admin_print_footer_scripts', [ $this, 'add_script' ], 99 );
             $this->css();
             ?>
-            <div class="form-field term-group">
-                <label><?php _e('Image', 'default'); ?></label>
-                <div class="term__image__wrapper">
-                    <a class="termeta_img_button" href="#">
-                        <img src="<?php echo self::$add_img_url ?>" alt="">
-                    </a>
-                    <input type="button" class="button button-one termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
-                </div>
+<div class="form-field term-group">
+    <label><?php _e('Image', 'default'); ?></label>
+    <div class="term__image__wrapper">
+        <a class="termeta_img_button" href="#">
+            <img src="<?php echo self::$add_img_url ?>" alt="">
+        </a>
+        <input type="button" class="button button-one termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
+    </div>
 
-                <input type="hidden" id="term_imgid" name="term_imgid" value="">
-            </div>
-            <?php
+    <input type="hidden" id="term_imgid" name="term_imgid" value="">
+</div>
+<?php
         }
 
         ## поля при редактировании термина
@@ -134,31 +134,53 @@ if( is_admin() && ! class_exists('Term_Meta_Image') ){
             $image_url = $image_id ? wp_get_attachment_image_url( $image_id, 'thumbnail' ) : self::$add_img_url;
             $this->css();
             ?>
-            <tr class="form-field term-group-wrap">
-                <th scope="row"><?php _e( 'Image', 'default' ); ?></th>
-                <td>
-                    <div class="term__image__wrapper">
-                        <a class="termeta_img_button" href="#">
-                            <?php echo '<img src="'. $image_url .'" alt="">'; ?>
-                        </a>
-                        <input type="button" class="button button-one termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
-                    </div>
+<tr class="form-field term-group-wrap">
+    <th scope="row"><?php _e( 'Image', 'default' ); ?></th>
+    <td>
+        <div class="term__image__wrapper">
+            <a class="termeta_img_button" href="#">
+                <?php echo '<img src="'. $image_url .'" alt="">'; ?>
+            </a>
+            <input type="button" class="button button-one termeta_img_remove" value="<?php _e( 'Remove', 'default' ); ?>" />
+        </div>
 
-                    <input type="hidden" id="term_imgid" name="term_imgid" value="<?php echo $image_id; ?>">
-                </td>
-            </tr>
-            <?php
+        <input type="hidden" id="term_imgid" name="term_imgid" value="<?php echo $image_id; ?>">
+    </td>
+</tr>
+<?php
         }
 
         public function css(){
             ?>
-            <style>
-                .termeta_img_button{ display:inline-block; margin-right:1em; }
-                .termeta_img_button img{ display:block; float:left; margin:0; padding:0; min-width:100px; max-width:150px; height:auto; background:rgba(0,0,0,.07); }
-                .termeta_img_button:hover img{ opacity:.8; }
-                .termeta_img_button:after{ content:''; display:table; clear:both; }
-            </style>
-            <?php
+<style>
+    .termeta_img_button {
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    .termeta_img_button img {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        min-width: 100px;
+        max-width: 150px;
+        height: auto;
+        background: rgba(0, 0, 0, .07);
+    }
+
+    .termeta_img_button:hover img {
+        opacity: .8;
+    }
+
+    .termeta_img_button:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+</style>
+<?php
         }
 
         ## Add script
@@ -171,59 +193,65 @@ if( is_admin() && ! class_exists('Term_Meta_Image') ){
             $title = __('Featured Image', 'default');
             $button_txt = __('Set featured image', 'default');
             ?>
-            <script>
-                jQuery(document).ready(function($){
-                    var frame,
-                        $imgwrap = $('.term__image__wrapper'),
-                        $imgid   = $('#term_imgid');
+<script>
+    jQuery(document).ready(function($) {
+        var frame,
+            $imgwrap = $('.term__image__wrapper'),
+            $imgid = $('#term_imgid');
 
-                    // добавление
-                    $('.termeta_img_button').click( function(ev){
-                        ev.preventDefault();
+        // добавление
+        $('.termeta_img_button').click(function(ev) {
+            ev.preventDefault();
 
-                        if( frame ){ frame.open(); return; }
+            if (frame) {
+                frame.open();
+                return;
+            }
 
-                        // задаем media frame
-                        frame = wp.media.frames.questImgAdd = wp.media({
-                            states: [
-                                new wp.media.controller.Library({
-                                    title:    '<?php echo $title ?>',
-                                    library:   wp.media.query({ type: 'image' }),
-                                    multiple: false,
-                                    //date:   false
-                                })
-                            ],
-                            button: {
-                                text: '<?php echo $button_txt ?>', // Set the text of the button.
-                            }
-                        });
+            // задаем media frame
+            frame = wp.media.frames.questImgAdd = wp.media({
+                states: [
+                    new wp.media.controller.Library({
+                        title: '<?php echo $title ?>',
+                        library: wp.media.query({
+                            type: 'image'
+                        }),
+                        multiple: false,
+                        //date:   false
+                    })
+                ],
+                button: {
+                    text: '<?php echo $button_txt ?>', // Set the text of the button.
+                }
+            });
 
-                        // выбор
-                        frame.on('select', function(){
-                            var selected = frame.state().get('selection').first().toJSON();
-                            if( selected ){
-                                $imgid.val( selected.id );
-                                $imgwrap.find('img').attr('src', selected.sizes.thumbnail.url );
-                            }
-                        } );
+            // выбор
+            frame.on('select', function() {
+                var selected = frame.state().get('selection').first().toJSON();
+                if (selected) {
+                    $imgid.val(selected.id);
+                    $imgwrap.find('img').attr('src', selected.sizes.thumbnail.url);
+                }
+            });
 
-                        // открываем
-                        frame.on('open', function(){
-                            if( $imgid.val() ) frame.state().get('selection').add( wp.media.attachment( $imgid.val() ) );
-                        });
+            // открываем
+            frame.on('open', function() {
+                if ($imgid.val()) frame.state().get('selection').add(wp.media.attachment($imgid.val()));
+            });
 
-                        frame.open();
-                    });
+            frame.open();
+        });
 
-                    // удаление
-                    $('.termeta_img_remove').click(function(){
-                        $imgid.val('');
-                        $imgwrap.find('img').attr('src','<?php echo self::$add_img_url ?>');
-                    });
-                });
-            </script>
+        // удаление
+        $('.termeta_img_remove').click(function() {
+            $imgid.val('');
+            $imgwrap.find('img').attr('src', '<?php echo self::$add_img_url ?>');
+        });
+    });
 
-            <?php
+</script>
+
+<?php
         }
 
         ## Добавляет колонку картинки в таблицу терминов
@@ -325,40 +353,38 @@ function ts_quantity_plus_minus() {
 
     if ( function_exists( 'is_product' ) && ! is_product() ) return;
     ?>
-    <script type="text/javascript">
-        window.onload = function () {
-            jQuery(document).ready(function($){
+<script type="text/javascript">
+    window.onload = function() {
+        jQuery(document).ready(function($) {
 
-                $('.cart .qty.text').attr('type', 'text');
-                $('form.cart').on( 'click', 'button.plus, button.minus', function() {
+            $('.cart .qty.text').attr('type', 'text');
+            $('form.cart').on('click', 'button.plus, button.minus', function() {
 
-                    var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
-                    var val = parseFloat(qty.val());
-                    var max = parseFloat(qty.attr( 'max' ));
-                    var min = parseFloat(qty.attr( 'min' ));
-                    var step = parseFloat(qty.attr( 'step' ));
+                var qty = $(this).closest('form.cart').find('.qty');
+                var val = parseFloat(qty.val());
+                var max = parseFloat(qty.attr('max'));
+                var min = parseFloat(qty.attr('min'));
+                var step = parseFloat(qty.attr('step'));
 
-                    if ( $( this ).is( '.plus' ) ) {
-                        if ( max && ( max <= val ) ) {
-                            qty.val( max );
-                        }
-                        else {
-                            qty.val( val + step );
-                        }
+                if ($(this).is('.plus')) {
+                    if (max && (max <= val)) {
+                        qty.val(max);
+                    } else {
+                        qty.val(val + step);
                     }
-                    else {
-                        if ( min && ( min >= val ) ) {
-                            qty.val( min );
-                        }
-                        else if ( val > 1 ) {
-                            qty.val( val - step );
-                        }
+                } else {
+                    if (min && (min >= val)) {
+                        qty.val(min);
+                    } else if (val > 1) {
+                        qty.val(val - step);
                     }
-                });
+                }
             });
-        }
-    </script>
-    <?php
+        });
+    }
+
+</script>
+<?php
 }
 // Добавляет кнопки + и - END
 
@@ -426,35 +452,36 @@ function showhide_shortcode( $atts, $content = null ) {
 add_action( 'wp_footer', 'showhide_footer' );
 function showhide_footer() {
     ?>
-    <?php if( WP_DEBUG ): ?>
-        <script type="text/javascript">
-            // function showhide_toggle(type, post_id, more_text, less_text) {
-            //     var   $link = jQuery("#"+ type + "-link-" + post_id)
-            //         , $link_a = jQuery('a', $link)
-            //         , $content = jQuery("#"+ type + "-content-" + post_id)
-            //         , $toggle = jQuery("#"+ type + "-toggle-" + post_id)
-            //         , show_hide_class = 'sh-show sh-hide';
-            //     $link.toggleClass(show_hide_class);
-            //     $content.toggleClass(show_hide_class).toggle();
-            //     if($link_a.attr('aria-expanded') === 'true') {
-            //         $link_a.attr('aria-expanded', 'false');
-            //     } else {
-            //         $link_a.attr('aria-expanded', 'true');
-            //     }
-            //     if($toggle.text() === more_text) {
-            //         $toggle.text(less_text);
-            //         $link.trigger( "sh-link:more" );
-            //     } else {
-            //         $toggle.text(more_text);
-            //         $link.trigger( "sh-link:less" );
-            //     }
-            //     $link.trigger( "sh-link:toggle" );
-            // }
-        </script>
-    <?php else : ?>
-        <!-- <script type="text/javascript">function showhide_toggle(e,t,r,g){var a=jQuery("#"+e+"-link-"+t),s=jQuery("a",a),i=jQuery("#"+e+"-content-"+t),l=jQuery("#"+e+"-toggle-"+t);a.toggleClass("sh-show sh-hide"),i.toggleClass("sh-show sh-hide").toggle(),"true"===s.attr("aria-expanded")?s.attr("aria-expanded","false"):s.attr("aria-expanded","true"),l.text()===r?(l.text(g),a.trigger("sh-link:more")):(l.text(r),a.trigger("sh-link:less")),a.trigger("sh-link:toggle")}</script> -->
-    <?php endif; ?>
-    <?php
+<?php if( WP_DEBUG ): ?>
+<script type="text/javascript">
+    // function showhide_toggle(type, post_id, more_text, less_text) {
+    //     var   $link = jQuery("#"+ type + "-link-" + post_id)
+    //         , $link_a = jQuery('a', $link)
+    //         , $content = jQuery("#"+ type + "-content-" + post_id)
+    //         , $toggle = jQuery("#"+ type + "-toggle-" + post_id)
+    //         , show_hide_class = 'sh-show sh-hide';
+    //     $link.toggleClass(show_hide_class);
+    //     $content.toggleClass(show_hide_class).toggle();
+    //     if($link_a.attr('aria-expanded') === 'true') {
+    //         $link_a.attr('aria-expanded', 'false');
+    //     } else {
+    //         $link_a.attr('aria-expanded', 'true');
+    //     }
+    //     if($toggle.text() === more_text) {
+    //         $toggle.text(less_text);
+    //         $link.trigger( "sh-link:more" );
+    //     } else {
+    //         $toggle.text(more_text);
+    //         $link.trigger( "sh-link:less" );
+    //     }
+    //     $link.trigger( "sh-link:toggle" );
+    // }
+
+</script>
+<?php else : ?>
+<!-- <script type="text/javascript">function showhide_toggle(e,t,r,g){var a=jQuery("#"+e+"-link-"+t),s=jQuery("a",a),i=jQuery("#"+e+"-content-"+t),l=jQuery("#"+e+"-toggle-"+t);a.toggleClass("sh-show sh-hide"),i.toggleClass("sh-show sh-hide").toggle(),"true"===s.attr("aria-expanded")?s.attr("aria-expanded","false"):s.attr("aria-expanded","true"),l.text()===r?(l.text(g),a.trigger("sh-link:more")):(l.text(r),a.trigger("sh-link:less")),a.trigger("sh-link:toggle")}</script> -->
+<?php endif; ?>
+<?php
 }
 
 

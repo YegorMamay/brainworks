@@ -5,6 +5,7 @@
 $advanced-mode: false;
 
 .container {
+
     &,
     &-fluid {
         width: 100%;
@@ -22,10 +23,11 @@ $advanced-mode: false;
 .container {
     @if ($advanced-mode) {
 
-        @each $breakpoint, $max-width in $container-max-widths {
+        @each $breakpoint,
+        $max-width in $container-max-widths {
 
             $min: map-get($grid-breakpoints, $breakpoint);
-            $min: if($min != 0, $min, null);
+            $min: if($min !=0, $min, null);
 
             @if $min {
                 @media (min-width: $min) {
@@ -35,7 +37,9 @@ $advanced-mode: false;
 
         }
 
-    } @else {
+    }
+
+    @else {
 
         $max: map-get($grid-breakpoints, 'xl');
         $max-width: map-get($container-max-widths, 'xl');
@@ -74,9 +78,9 @@ $advanced-mode: false;
 
 @each $breakpoint in map-keys($grid-breakpoints) {
     $min: map-get($grid-breakpoints, $breakpoint);
-    $min: if($min != 0, $min, null);
+    $min: if($min !=0, $min, null);
 
-    $infix: if($min == null, '', '-#{$breakpoint}');
+    $infix: if($min==null, '', '-#{$breakpoint}');
 
     @for $i from 1 through $grid-columns {
         .col#{$infix}-#{$i} {
@@ -95,6 +99,7 @@ $advanced-mode: false;
             flex-grow: 1;
             max-width: 100%;
         }
+
         .col#{$infix}-auto {
             flex: 0 0 auto;
             width: auto;

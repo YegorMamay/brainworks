@@ -1,85 +1,86 @@
 .js-ajax-posts {
-  img {
-      height: 350px;
-      object-fit: cover;
-      box-shadow: $shadow;
-  }
-
-  & .row {
-    h3 {
-      & a {
-        font-size: inherit;
-        line-height: inherit;
-      }
+    img {
+        height: 350px;
+        object-fit: cover;
+        box-shadow: $shadow;
     }
-  }
+
+    & .row {
+        h3 {
+            & a {
+                font-size: inherit;
+                line-height: inherit;
+            }
+        }
+    }
 }
 
 // Shortcode
 .front-news {
-  &-box {
-    box-shadow: $shadow;
-    border: 1px solid $borderColor;
-    @include smooth_animation;
+    &-box {
+        box-shadow: $shadow;
+        border: 1px solid $borderColor;
+        @include smooth_animation;
 
-    &:hover {
-      box-shadow: none;
-      height: 350px;
-      object-fit: cover;
+        &:hover {
+            box-shadow: none;
+            height: 350px;
+            object-fit: cover;
 
-      @media #{$mobile-max} {
-          height: 250px;
-      }
+            @media #{$mobile-max} {
+                height: 250px;
+            }
+        }
     }
-  }
 
-  &-inner {
-    padding: 15px;
-  }
-    
-  &-meta {
-    display: flex;
-    justify-content: space-between;    
-  }
-    
-  &-btn {
-    display: none;
-  }
-
-  &-item {
-    margin-bottom: 20px;
-  }
-
-  &-headline {
-    margin-bottom: 10px;
-    & a {
-      font-size: inherit;
-      line-height: inherit;
+    &-inner {
+        padding: 15px;
     }
-  }
 
-  &-preview {
-    margin-bottom: 10px;
-
-    a {
-      display: block;
+    &-meta {
+        display: flex;
+        justify-content: space-between;
     }
-  }
 
-  &-thumbnail {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  &-excerpt {
-    margin-bottom: 10px;
-
-    &,
-    p {
-      text-align: justify;
-      font-size: 16px;
-      line-height: 1.5;
-      color: $bodyFontColor;
+    &-btn {
+        display: none;
     }
-  }
+
+    &-item {
+        margin-bottom: 20px;
+    }
+
+    &-headline {
+        margin-bottom: 10px;
+
+        & a {
+            font-size: inherit;
+            line-height: inherit;
+        }
+    }
+
+    &-preview {
+        margin-bottom: 10px;
+
+        a {
+            display: block;
+        }
+    }
+
+    &-thumbnail {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    &-excerpt {
+        margin-bottom: 10px;
+
+        &,
+        p {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.5;
+            color: $bodyFontColor;
+        }
+    }
 }

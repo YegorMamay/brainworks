@@ -45,6 +45,7 @@ $scroll-triangle-height: 10px; // The height of the triangle
     }
 
     @at-root {
+
         .scroll-top--arrow,
         .scroll-top:after {
             content: ' ';

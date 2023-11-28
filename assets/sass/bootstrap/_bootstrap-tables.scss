@@ -120,9 +120,11 @@ table th[class*="col-"] {
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
+
     .table-responsive > .table {
         margin-bottom: 0;
     }
+
     .table-responsive > .table > thead > tr > th,
     .table-responsive > .table > tbody > tr > th,
     .table-responsive > .table > tfoot > tr > th,
@@ -131,9 +133,11 @@ table th[class*="col-"] {
     .table-responsive > .table > tfoot > tr > td {
         white-space: nowrap;
     }
+
     .table-responsive > .table-bordered {
         border: 0;
     }
+
     .table-responsive > .table-bordered > thead > tr > th:first-child,
     .table-responsive > .table-bordered > tbody > tr > th:first-child,
     .table-responsive > .table-bordered > tfoot > tr > th:first-child,
@@ -142,6 +146,7 @@ table th[class*="col-"] {
     .table-responsive > .table-bordered > tfoot > tr > td:first-child {
         border-left: 0;
     }
+
     .table-responsive > .table-bordered > thead > tr > th:last-child,
     .table-responsive > .table-bordered > tbody > tr > th:last-child,
     .table-responsive > .table-bordered > tfoot > tr > th:last-child,
@@ -150,6 +155,7 @@ table th[class*="col-"] {
     .table-responsive > .table-bordered > tfoot > tr > td:last-child {
         border-right: 0;
     }
+
     .table-responsive > .table-bordered > tbody > tr:last-child > th,
     .table-responsive > .table-bordered > tfoot > tr:last-child > th,
     .table-responsive > .table-bordered > tbody > tr:last-child > td,

@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <div class="container">
-<?php if ((!is_page_template(array('page-landing.php')) && is_front_page()) || (!is_page_template(array('page-landing.php')) && !is_front_page())) {
+    <?php if ((!is_page_template(array('page-landing.php')) && is_front_page()) || (!is_page_template(array('page-landing.php')) && !is_front_page())) {
 
     if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » ');
 

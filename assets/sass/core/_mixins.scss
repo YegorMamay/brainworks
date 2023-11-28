@@ -2,7 +2,7 @@
 @use "sass:math";
 
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
+    @if type-of($number)=='number'and not unitless($number) {
         @return math.div($number, $number * 0 + 1);
     }
 
@@ -40,9 +40,11 @@
 
     $yiq: math.div(($r * 299) + ($g * 587) + ($b * 114), 1000);
 
-    @if ($yiq >= $yiq-contrasted-threshold) {
+    @if ($yiq >=$yiq-contrasted-threshold) {
         @return $yiq-text-dark;
-    } @else {
+    }
+
+    @else {
         @return $yiq-text-light;
     }
 }
@@ -59,6 +61,7 @@
 }
 
 $form-field-MQ: true;
+
 @mixin form-field-style {
     width: 100%;
     border: $formFieldBorderWidth solid $formFieldBorderColor;
@@ -67,23 +70,25 @@ $form-field-MQ: true;
     border-radius: $formFieldBorderRadius;
     padding: $formFieldPadding;
     font-size: $formFieldTextSize;
-    
+
     @if ($form-field-MQ) {
         @media #{$laptop-max} {
             padding: 13px;
             font-size: 15px;
         }
-        
+
         @media #{$tablet-max} {
             padding: 11px;
             font-size: 18px;
         }
-        
+
         @media #{$mobile-max} {
             padding: 12px;
             font-size: 12px;
         }
-    } @else {
+    }
+
+    @else {
         padding: $formFieldPadding;
         font-size: $formFieldTextSize;
     }
@@ -107,7 +112,9 @@ $form-field-MQ: true;
 }
 
 @mixin responsive-headers() {
-    @each $name, $value in $headers-map {
+
+    @each $name,
+    $value in $headers-map {
         #{$name} {
             font-size: round(map-get($value, fons-size-min));
         }
@@ -118,12 +125,13 @@ $form-field-MQ: true;
 
     @media (min-width: $viewport-min) and (max-width: $viewport-max - 1) {
 
-        @each $name, $value in $headers-map {
+        @each $name,
+        $value in $headers-map {
             #{$name} {
 
                 $fallback: map-get($value, font-size-fallback);
 
-                @if ($fallback != null and $fallback != "") {
+                @if ($fallback !=null and $fallback !="") {
                     font-size: $fallback;
                 }
 
@@ -134,7 +142,9 @@ $form-field-MQ: true;
     }
 
     @media (min-width: $viewport-max) {
-        @each $name, $value in $headers-map {
+
+        @each $name,
+        $value in $headers-map {
             #{$name} {
                 font-size: round(map-get($value, font-size-max));
             }
@@ -151,22 +161,26 @@ $form-field-MQ: true;
 }
 
 @mixin letter-spacing($letter-spacing, $font-size, $unit: px) {
-    @if ($unit == px) {
+    @if ($unit==px) {
         letter-spacing: #{($letter-spacing * $font-size / 1000) * 1px};
-    } @else if ($unit == em) {
+    }
+
+    @else if ($unit==em) {
         letter-spacing: #{($letter-spacing / 1000) * 1em};
     }
 }
 
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
     $min: map-get($breakpoints, $name);
-    $min: if($min != 0, $min, null);
+    $min: if($min !=0, $min, null);
 
     @if $min {
         @media (min-width: $min) {
             @content;
         }
-    } @else {
+    }
+
+    @else {
         @content;
     }
 }

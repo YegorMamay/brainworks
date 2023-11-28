@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,25 +98,27 @@
 
     <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?> id="top">
 
     <?php wp_body_open(); ?>
-    <div class="wrapper js-container"><!--Do not delete this openning div! It ends/closed in footer.php -->
+    <div class="wrapper js-container">
+        <!--Do not delete this openning div! It ends/closed in footer.php -->
 
         <header class="header <?php sticky_header(); ?>">
 
             <?php if (is_active_sidebar('pre-header-widget-area')) : ?>
-                <div class="pre-header">
-                    <div class="container d-flex justify-content-between align-items-center">
-                        <?php dynamic_sidebar('pre-header-widget-area'); ?>
-                    </div>
+            <div class="pre-header">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <?php dynamic_sidebar('pre-header-widget-area'); ?>
                 </div>
+            </div>
             <?php endif; ?>
 
 
             <div class="header-inner container d-flex justify-content-between align-items-center">
 
-               <div class="logo-name d-flex justify-content-between align-items-center">
+                <div class="logo-name d-flex justify-content-between align-items-center">
                     <div class="logo">
                         <?php the_custom_logo() ?>
                     </div>
@@ -124,7 +127,7 @@
                         <h5><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h5>
                         <p><?php bloginfo( 'description' ); ?></p>
                     </div> -->
-               </div>
+                </div>
 
                 <!-- Language switcher menu. START -->
                 <div class="nav-wrapper language-switcher">
@@ -150,27 +153,27 @@
                 <ul class="phone-dropdown <!--light-mode-->">
                     <li class="phone-dropdown__item">
                         <?php foreach(get_phones() as $key => $phone) { ?>
-                            <?php if (count(get_phones()) > 1): ?>
+                        <?php if (count(get_phones()) > 1): ?>
 
-                            <?php if ($key === key(get_phones())) { ?>
-                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
+                        <?php if ($key === key(get_phones())) { ?>
+                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
+                            <?php echo trim($phone); ?>
+                        </a>
+                        <button type="button" class="phone-dropdown__button js-dropdown"></button>
+                        <ul class="phone-dropdown__list js-phone-list">
+                            <?php  } else { ?>
+                            <li class="phone-dropdown__item">
+                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
                                     <?php echo trim($phone); ?>
                                 </a>
-                                <button type="button" class="phone-dropdown__button js-dropdown"></button>
-                                <ul class="phone-dropdown__list js-phone-list">
-                                    <?php  } else { ?>
-                                    <li class="phone-dropdown__item">
-                                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
-                                            <?php echo trim($phone); ?>
-                                        </a>
-                                    </li>
-                                <?php } ?>
+                            </li>
+                            <?php } ?>
                             <?php else: ?>
-                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
-                                    <?php echo trim($phone); ?>
-                                </a>
+                            <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
+                                <?php echo trim($phone); ?>
+                            </a>
                             <?php endif; ?>
-                        <?php } ?>
+                            <?php } ?>
                         </ul>
                     </li>
                 </ul>
@@ -184,36 +187,36 @@
                 <button class="btn btn2 highlight <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
 
                 <!-- If WOO: Список желаний, кабинет, корзина. START -->
-				<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-				<div class="header__woo d-flex align-items-center">
-					<div class="header__wishlist">
-						<a href="<?php echo get_permalink(pll_get_post(579)) ?>" class="header__circle">
-							<i class="far fa-heart"></i>
-						</a>
-					</div>
-					<div class="header__profile">
-						<a href="<?php echo get_permalink(pll_get_post(571)) ?>" class="header__circle">
-							<i class="fa-regular fa-user"></i>
-						</a>
-					</div>
-					<div class="header__cart d-flex align-items-center">
-						<div class="woo-cart">
-							<div class="woo-cart woo-cart-popup-wrapper">
-								<?php if ( class_exists( 'WooCommerce' ) ) {
+                <?php if ( class_exists( 'WooCommerce' ) ) { ?>
+                <div class="header__woo d-flex align-items-center">
+                    <div class="header__wishlist">
+                        <a href="<?php echo get_permalink(pll_get_post(579)) ?>" class="header__circle">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="header__profile">
+                        <a href="<?php echo get_permalink(pll_get_post(571)) ?>" class="header__circle">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </div>
+                    <div class="header__cart d-flex align-items-center">
+                        <div class="woo-cart">
+                            <div class="woo-cart woo-cart-popup-wrapper">
+                                <?php if ( class_exists( 'WooCommerce' ) ) {
 									woocommerce_cart(); woocommerce_cart_popup();} ?>
-							</div>
-						</div>
-						<div class="header__cart-details d-flex flex-column">
-							<span>
-								<?php _e('Cart', 'brainworks') ?>
-							</span>
-							<p  id="modal-cart" class="header__cart-price">
-								<?php echo woocommerce_get_total_price(); ?>
-							</p>
-						</div>
-					</div>
-				</div>
-				<?php } ?>
+                            </div>
+                        </div>
+                        <div class="header__cart-details d-flex flex-column">
+                            <span>
+                                <?php _e('Cart', 'brainworks') ?>
+                            </span>
+                            <p id="modal-cart" class="header__cart-price">
+                                <?php echo woocommerce_get_total_price(); ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
                 <!-- If WOO: Список желаний, кабинет, корзина. END -->
 
             </div>
@@ -240,61 +243,61 @@
         </header>
 
 
-    <!-- Mobile Header Start-->
-    <div class="nav-mobile-header">
+        <!-- Mobile Header Start-->
+        <div class="nav-mobile-header">
 
-        <div class="logo-name d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <?php the_custom_logo() ?>
+            <div class="logo-name d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <?php the_custom_logo() ?>
+                </div>
+
+                <!-- <div class="site-name">
+                    <h4><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
+                    <p><?php bloginfo( 'description' ); ?></p>
+                </div> -->
             </div>
 
-            <!-- <div class="site-name">
-                <h4><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
-                <p><?php bloginfo( 'description' ); ?></p>
-            </div> -->
-        </div>
-
-        <!-- If WOO: Список желаний, кабинет, корзина. START -->
-        <?php if ( class_exists( 'WooCommerce' ) ) { ?>
-        <div class="header__woo d-flex">
-		<div class="header__wishlist">
-			<a href="/wishlist/" class="header__circle">
-				<i class="fal fa-heart"></i>
-			</a>
-		</div>
-		<div class="header__profile">
-			<a href="/mij-akkaunt/" class="header__circle">
-				<i class="fal fa-user-alt"></i>
-			</a>
-		</div>
-		<div class="header__cart d-flex align-items-center">
-			<div class="woo-cart">
-				<div class="woo-cart woo-cart-popup-wrapper">
-                    <?php if ( class_exists( 'WooCommerce' ) ) {woocommerce_cart();} ?>
+            <!-- If WOO: Список желаний, кабинет, корзина. START -->
+            <?php if ( class_exists( 'WooCommerce' ) ) { ?>
+            <div class="header__woo d-flex">
+                <div class="header__wishlist">
+                    <a href="/wishlist/" class="header__circle">
+                        <i class="fal fa-heart"></i>
+                    </a>
                 </div>
-			</div>
-		</div>
+                <div class="header__profile">
+                    <a href="/mij-akkaunt/" class="header__circle">
+                        <i class="fal fa-user-alt"></i>
+                    </a>
+                </div>
+                <div class="header__cart d-flex align-items-center">
+                    <div class="woo-cart">
+                        <div class="woo-cart woo-cart-popup-wrapper">
+                            <?php if ( class_exists( 'WooCommerce' ) ) {woocommerce_cart();} ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+            <!-- If WOO: Список желаний, кабинет, корзина. START -->
+
+            <!-- Hamburger button. START -->
+            <button class="hamburger js-hamburger" type="button" tabindex="0">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <!-- Hamburger button. END -->
+
         </div>
-        <?php } ?>
-        <!-- If WOO: Список желаний, кабинет, корзина. START -->
-
-        <!-- Hamburger button. START -->
-        <button class="hamburger js-hamburger" type="button" tabindex="0">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
-        <!-- Hamburger button. END -->
-
-    </div>
-    <!-- Mobile Header END -->
+        <!-- Mobile Header END -->
 
 
-    <!-- Mobile menu. START-->
-    <?php if (has_nav_menu('main-nav')) { ?>
-    <nav class="nav js-menu hide-on-desktop">
-        <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
-        <?php wp_nav_menu(array(
+        <!-- Mobile menu. START-->
+        <?php if (has_nav_menu('main-nav')) { ?>
+        <nav class="nav js-menu hide-on-desktop">
+            <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+            <?php wp_nav_menu(array(
             'theme_location' => 'main-nav',
             'container' => false,
             'menu_class' => 'menu-container',
@@ -303,9 +306,9 @@
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'depth' => 3
         )); ?>
-        <?php if (has_nav_menu('language-switcher')) { ?>
-        <div class="mobile-language">
-            <?php wp_nav_menu(array(
+            <?php if (has_nav_menu('language-switcher')) { ?>
+            <div class="mobile-language">
+                <?php wp_nav_menu(array(
                 'theme_location' => 'language-switcher',
                 'container' => false,
                 'menu_class' => 'menu-container',
@@ -314,20 +317,20 @@
                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'depth' => 3
             )); ?>
-        </div>
+            </div>
+            <?php } ?>
+            <div class="mobile-phones">
+                <?php echo do_shortcode('[bw-phone]'); ?>
+            </div>
+            <div class="vh-xs-2"></div>
+            <?php echo do_shortcode('[bw-messengers]'); ?>
+            <div class="vh-xs-2"></div>
+            <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
+        </nav>
         <?php } ?>
-        <div class="mobile-phones">
-            <?php echo do_shortcode('[bw-phone]'); ?>
-        </div>
-        <div class="vh-xs-2"></div>
-        <?php echo do_shortcode('[bw-messengers]'); ?>
-        <div class="vh-xs-2"></div>
-        <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
-    </nav>
-    <?php } ?>
-    <!-- Mobile menu END -->
+        <!-- Mobile menu END -->
 
 
-    <?php if ( class_exists( 'WooCommerce' ) ) { ?>
-    <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>' />
-    <?php } ?>
+        <?php if ( class_exists( 'WooCommerce' ) ) { ?>
+        <input id="cyr-value" type="hidden" value='<?php echo get_woocommerce_currency_symbol(); ?>' />
+        <?php } ?>

@@ -1,10 +1,10 @@
 <footer class="footer js-footer">
     <?php if (is_active_sidebar('footer-widget-area')) : ?>
-        <div class="pre-footer">
-            <div class="container d-flex justify-content-between <!--align-items-center-->">
-                <?php dynamic_sidebar('footer-widget-area'); ?>
-            </div>
-        </div><!-- .pre-footer end-->
+    <div class="pre-footer">
+        <div class="container d-flex justify-content-between <!--align-items-center-->">
+            <?php dynamic_sidebar('footer-widget-area'); ?>
+        </div>
+    </div><!-- .pre-footer end-->
     <?php endif; ?>
 
     <div class="container">
@@ -39,4 +39,5 @@
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

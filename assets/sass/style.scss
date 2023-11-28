@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 27.11.23
+Version: 28.11.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -72,126 +72,127 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/kviz"; // *
 
 ::selection {
-  text-shadow: none;
-  color: $selectionFontColor;
-  background-color: $selectionBgColor;
+    text-shadow: none;
+    color: $selectionFontColor;
+    background-color: $selectionBgColor;
     -webkit-text-fill-color: $selectionFontColor;
 }
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 * {
-  @if ($debug) {
-    outline: 1px solid red !important;
-  }
+    @if ($debug) {
+        outline: 1px solid red !important;
+    }
 
-  &,
-  &::before,
-  &::after {
-    box-sizing: inherit;
-  }
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
 }
 
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  position: relative;
-  color: $bodyFontColor;
-  font-family: $fontFamily2;
-  //font-weight: $font-weight-size;
-  //font-size: $font-min-size;
-  //line-height: $font-line-height;
-  background-color: $bodyBgColor;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  max-width: 100%;
+    margin: 0;
+    min-width: 320px;
+    position: relative;
+    color: $bodyFontColor;
+    font-family: $fontFamily2;
+    //font-weight: $font-weight-size;
+    //font-size: $font-min-size;
+    //line-height: $font-line-height;
+    background-color: $bodyBgColor;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 100%;
 
-  &.home {
-      background-color: $themeColor5;
+    &.home {
+        background-color: $themeColor5;
 
-    .wrapper {
-        @media #{$desktop-max} {
-            padding-top: 0;
+        .wrapper {
+            @media #{$desktop-max} {
+                padding-top: 0;
 
-            .nav-mobile-header {
-                background: rgba($headerBgColor, 0.8);
-                backdrop-filter: blur(5px);
+                .nav-mobile-header {
+                    background: rgba($headerBgColor, 0.8);
+                    backdrop-filter: blur(5px);
+                }
             }
         }
     }
-  }
 
-  &.body-overflow {
-      .wrapper {
-        &:after {
-            content: '';
-            width: 100%;
-            height: 100%;
-            z-index: 999;
-            background: rgba(0, 0, 0, 0.3);
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            backdrop-filter: blur(3px);
+    &.body-overflow {
+        .wrapper {
+            &:after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                z-index: 999;
+                background: rgba(0, 0, 0, 0.3);
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                backdrop-filter: blur(3px);
+            }
         }
-      }
-  }
+    }
 }
 
 .wrapper {
-  position: relative;
-  overflow-x: hidden;
-  min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100%;
 
-  @media #{$desktop-max} {
-    padding-top: 67px;
-  }
+    @media #{$desktop-max} {
+        padding-top: 67px;
+    }
 }
 
 img {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100%; // не удалять
-  height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%; // не удалять
+    height: auto;
 }
 
 :focus {
-  outline: 0;
+    outline: 0;
 }
 
 .body-overflow {
-  //overflow: hidden;
+    //overflow: hidden;
 }
 
 .svg-icon {
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  @extend %smooth_animation;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    @extend %smooth_animation;
 }
 
 .kama_breadcrumbs {
-  padding: 10px 0;
-  font-size: 14px;
-  margin-bottom: 10px;
-
-  & span, a {
+    padding: 10px 0;
     font-size: 14px;
-    line-height: normal;
-  }
+    margin-bottom: 10px;
+
+    & span,
+    a {
+        font-size: 14px;
+        line-height: normal;
+    }
 }
 
 .highlight {
@@ -214,7 +215,7 @@ img {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation: flareAnimation 1.5s ease-in-out infinite,
-      delay-animation 3s linear infinite;
+        delay-animation 3s linear infinite;
 }
 
 @keyframes flareAnimation {
@@ -223,25 +224,30 @@ img {
         opacity: 0;
         left: -150%;
     }
+
     10% {
         opacity: 1;
     }
+
     100% {
         left: 150%;
     }
 }
 
 @keyframes delay-animation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  50.01% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    50.01% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
