@@ -18054,6 +18054,10 @@ strong {
   text-align: center;
 }
 
+.iti {
+  width: 100%;
+}
+
 .slick-slider {
   position: relative;
   display: block;
