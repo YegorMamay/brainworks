@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 28.11.23
+Version: 4.12.23
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -129,12 +129,12 @@ q:after {
   content: none;
 }
 
-.svg-icon, .nav .sub-menu-link, .nav .menu-link, a, .review-slider .slick-arrow, .review-social {
+.svg-icon, .nav .sub-menu-item .sub-menu-link, .nav .menu-item .menu-link, a, .review-slider .slick-arrow, .review-social {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.nav .sub-menu, .nav .menu, .nav .menu-container, .lang, .phone-dropdown__list, .phone-dropdown, .phone, .messenger, .social {
+.nav .sub-menu, .nav .menu-container, .lang, .phone-dropdown__list, .phone-dropdown, .phone, .messenger, .social {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -19314,12 +19314,12 @@ table th[class*=col-] {
   clear: both;
 }
 
-.svg-icon, .nav .sub-menu-link, .nav .menu-link, a, .review-slider .slick-arrow, .review-social {
+.svg-icon, .nav .sub-menu-item .sub-menu-link, .nav .menu-item .menu-link, a, .review-slider .slick-arrow, .review-social {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.nav .sub-menu, .nav .menu, .nav .menu-container, .lang, .phone-dropdown__list, .phone-dropdown, .phone, .messenger, .social {
+.nav .sub-menu, .nav .menu-container, .lang, .phone-dropdown__list, .phone-dropdown, .phone, .messenger, .social {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -19967,12 +19967,12 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
             order: 13;
   }
 }
-.svg-icon, .nav .sub-menu-link, .nav .menu-link, a, .review-slider .slick-arrow, .review-social {
+.svg-icon, .nav .sub-menu-item .sub-menu-link, .nav .menu-item .menu-link, a, .review-slider .slick-arrow, .review-social {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.nav .sub-menu, .nav .menu, .nav .menu-container, .lang, .phone-dropdown__list, .phone-dropdown, .phone, .messenger, .social {
+.nav .sub-menu, .nav .menu-container, .lang, .phone-dropdown__list, .phone-dropdown, .phone, .messenger, .social {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -22986,7 +22986,7 @@ a:hover, a:active, a:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.nav .menu, .nav .menu-container {
+.nav .menu-container {
   font-size: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23002,6 +23002,9 @@ a:hover, a:active, a:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 5px 0;
+  /*&:first-child .menu-link {
+      border-left: none;
+  }*/
 }
 .nav .menu-item:hover {
   background: #BB2440;
@@ -23080,7 +23083,7 @@ a:hover, a:active, a:focus {
   opacity: 1;
   z-index: 33;
 }
-.nav .menu-link {
+.nav .menu-item .menu-link {
   display: block;
   padding: 8px 10px;
   color: #fff;
@@ -23131,7 +23134,7 @@ a:hover, a:active, a:focus {
   visibility: visible;
   opacity: 1;
 }
-.nav .sub-menu-link {
+.nav .sub-menu-item .sub-menu-link {
   display: block;
   padding: 9px 15px;
   color: #fff;
@@ -23258,8 +23261,11 @@ a:hover, a:active, a:focus {
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
   }
-  .nav .menu-link {
-    color: #000;
+  .nav .menu-item-current, .nav .menu-item.current-menu-parent, .nav .menu-item.current-menu-ancestor {
+    border-bottom: none;
+  }
+  .nav .menu-item .menu-link {
+    color: #28325D;
     display: block;
     font-size: 20px;
     padding: 10px 0;
@@ -23269,7 +23275,7 @@ a:hover, a:active, a:focus {
     width: auto;
     display: none;
     visibility: visible;
-    background-color: #BB2440;
+    background-color: #f7f7f7;
     opacity: 1;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -23282,8 +23288,8 @@ a:hover, a:active, a:focus {
   .nav .sub-menu-item .menu-item-has-children-arrow {
     top: 0;
   }
-  .nav .sub-menu-link {
-    color: #fff;
+  .nav .sub-menu-item .sub-menu-link {
+    color: #28325D;
     font-size: 18px;
     text-align: center;
   }
@@ -23298,7 +23304,7 @@ a:hover, a:active, a:focus {
 }
 .mobile-language .menu-container .menu-link {
   padding: 6px;
-  color: #000 !important;
+  color: #28325D !important;
 }
 .mobile-language .menu-container .menu-item:hover {
   background: transparent;
@@ -23329,7 +23335,7 @@ a:hover, a:active, a:focus {
           justify-content: center;
 }
 .mobile-phones .phone-number {
-  color: #000;
+  color: #28325D;
   font-size: 18px;
   padding: 8px 10px;
 }
