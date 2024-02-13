@@ -94,6 +94,7 @@ $menuContainerMobilePaddingTop: 70px;
             &-item {
                 display: block;
                 padding: 5px 0;
+                border: none !important;
 
                 &-has-children {}
 
@@ -205,6 +206,8 @@ $menuContainerMobilePaddingTop: 70px;
         }
 
         & .menu-item {
+            border: none;
+
             &:hover {
                 background: transparent;
             }
@@ -219,23 +222,6 @@ $menuContainerMobilePaddingTop: 70px;
             & img {
                 width: 32px;
             }
-        }
-    }
-}
-
-.mobile-phones {
-    margin-top: 20px;
-
-    & .phone {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        &-number {
-            color: $menuMobileTextColor;
-            font-size: $menuMobileSubMenuLinkFontSize;
-            padding: 8px 10px;
         }
     }
 }
@@ -313,6 +299,23 @@ $menuContainerMobilePaddingTop: 70px;
 
         &::after {
             top: $hamburger-offset;
+        }
+    }
+}
+
+.mobile-phones {
+    margin-top: 20px;
+
+    & .phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-number {
+            color: $menuMobileTextColor;
+            font-size: $menuMobileSubMenuLinkFontSize;
+            padding: 8px 10px;
         }
     }
 }

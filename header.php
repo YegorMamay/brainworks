@@ -225,7 +225,7 @@
             <?php if (has_nav_menu('main-nav')) { ?>
             <nav class="nav js-menu">
                 <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
-                <div class="container">
+                <div class="container no-padding">
                     <?php wp_nav_menu(array(
                         'theme_location' => 'main-nav',
                         'container' => false,

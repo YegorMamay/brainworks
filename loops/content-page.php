@@ -12,7 +12,6 @@
 <?php endif; ?>
 
 <?php the_content() ?>
-<?php wp_link_pages(); ?>
 
 <?php endwhile; else: ?>
 <?php get_template_part('loops/content', 'none'); ?>

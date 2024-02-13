@@ -12,7 +12,7 @@ $headerHight: 80px;
     //background-origin: border-box; // if problem with border when gradient applied to header
 
     .pre-header {
-        background: $themeColor6;
+        background: lighten($themeColor1, 60%);
         padding: 5px 0;
 
         .container {

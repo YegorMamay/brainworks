@@ -56,6 +56,8 @@
     }
 
     .pll-parent-menu-item {
+        border: none;
+
         .menu-link {
             color: $bodyFontColor;
         }
@@ -81,3 +83,4 @@
         }
     }
 }
+

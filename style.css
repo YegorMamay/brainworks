@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 26.12.23
+Version: 13.02.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -22756,6 +22756,9 @@ a:hover, a:active, a:focus {
   -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
 }
+.nav-wrapper.language-switcher .nav .pll-parent-menu-item {
+  border: none;
+}
 .nav-wrapper.language-switcher .nav .pll-parent-menu-item .menu-link {
   color: #000;
 }
@@ -22916,7 +22919,7 @@ a:hover, a:active, a:focus {
   z-index: 3;
 }
 .header .pre-header {
-  background: #ddd;
+  background: #cdd3ea;
   padding: 5px 0;
 }
 .header .pre-header .container {
@@ -23004,9 +23007,13 @@ a:hover, a:active, a:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 5px 0;
+  border-right: 1px solid #303c6f;
   /*&:first-child .menu-link {
       border-left: none;
   }*/
+}
+.nav .menu-item:first-child {
+  border-left: 1px solid #303c6f;
 }
 .nav .menu-item:hover {
   background: #BB2440;
@@ -23228,6 +23235,7 @@ a:hover, a:active, a:focus {
   .nav .menu-item {
     display: block;
     padding: 5px 0;
+    border: none !important;
   }
   .nav .menu-item::after {
     display: none;
@@ -23308,6 +23316,9 @@ a:hover, a:active, a:focus {
   padding: 6px;
   color: #28325D !important;
 }
+.mobile-language .menu-container .menu-item {
+  border: none;
+}
 .mobile-language .menu-container .menu-item:hover {
   background: transparent;
 }
@@ -23316,30 +23327,6 @@ a:hover, a:active, a:focus {
 }
 .mobile-language .lang-item .sub-menu-link img {
   width: 32px;
-}
-
-.mobile-phones {
-  margin-top: 20px;
-}
-.mobile-phones .phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.mobile-phones .phone-number {
-  color: #28325D;
-  font-size: 18px;
-  padding: 8px 10px;
 }
 
 #menu-language-switcher-1 .menu-item-has-children-arrow {
@@ -23408,6 +23395,30 @@ a:hover, a:active, a:focus {
 }
 .hamburger-inner::after {
   top: 8px;
+}
+
+.mobile-phones {
+  margin-top: 20px;
+}
+.mobile-phones .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mobile-phones .phone-number {
+  color: #28325D;
+  font-size: 18px;
+  padding: 8px 10px;
 }
 
 .is-active .hamburger-inner {

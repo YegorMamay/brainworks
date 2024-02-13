@@ -38,6 +38,11 @@ $SubMenuBGOnHover: darken($themeColor2, 5%);
             vertical-align: middle;
             flex-grow: 1;
             padding: 5px 0;
+            border-right: 1px solid lighten($menuBgColor, 5%);
+
+            &:first-child {
+                border-left: 1px solid lighten($menuBgColor, 5%);
+            }
 
             &:hover {
                 background: $menuBgColorActive;
@@ -178,7 +183,7 @@ $SubMenuBGOnHover: darken($themeColor2, 5%);
 
                 &:hover {
                     &::after {
-                        border-left-color: $menuFontColor;
+                        border-left-color: $menuFontColorActive;
                     }
                 }
 
@@ -187,8 +192,8 @@ $SubMenuBGOnHover: darken($themeColor2, 5%);
                     position: absolute;
                     top: 12px;
                     right: 5px;
-                    border: 5px solid $menuFontColor;
-                    border-color: transparent transparent transparent $menuFontColor;
+                    border: 5px solid $menuFontColorActive;
+                    border-color: transparent transparent transparent $menuFontColorActive;
                     transition: border-color .3s ease-in-out;
                 }
             }

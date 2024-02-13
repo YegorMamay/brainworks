@@ -11,7 +11,6 @@
 <?php /*<h1 class="text-center mrgn-bot-30"><?php the_title() ?></h1>*/ ?>
 
 <?php the_content() ?>
-<?php wp_link_pages(); ?>
 
 <?php endwhile;
 else: ?>
