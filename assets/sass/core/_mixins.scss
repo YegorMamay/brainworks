@@ -55,7 +55,7 @@
 }
 
 @mixin form-style {
-    background-color: $formBgColor;
+    background: $formBgColor;
     padding: 25px;
     box-shadow: $shadow;
 }
@@ -65,7 +65,7 @@ $form-field-MQ: true;
 @mixin form-field-style {
     width: 100%;
     border: $formFieldBorderWidth solid $formFieldBorderColor;
-    background-color: $formFieldBackgroundColor;
+    background: $formFieldBackgroundColor;
     color: $formFieldTextColor;
     border-radius: $formFieldBorderRadius;
     padding: $formFieldPadding;

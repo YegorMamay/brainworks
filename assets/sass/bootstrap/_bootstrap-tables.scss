@@ -3,7 +3,7 @@
 }
 
 table {
-    background-color: transparent;
+    background: transparent;
     border-collapse: collapse;
 }
 
@@ -51,7 +51,7 @@ caption {
 }
 
 .table .table {
-    background-color: $tableBgColor;
+    background: $tableBgColor;
 }
 
 .table-condensed > thead > tr > th,
@@ -82,17 +82,17 @@ caption {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: $tableOddBgColor;
+    background: $tableOddBgColor;
     color: $tableOddFontColor;
 }
 
 .table-striped > tbody > tr:nth-of-type(even) {
-    background-color: $tableEvenBgColor;
+    background: $tableEvenBgColor;
     color: $tableEvenFontColor;
 }
 
 .table-hover > tbody > tr:hover {
-    background-color: $tableBgColorActive;
+    background: $tableBgColorActive;
 }
 
 table col[class*="col-"] {

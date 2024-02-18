@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 13.02.24
+Version: 18.02.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -157,7 +157,7 @@ textarea,
 select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
   width: 100%;
   border: 1px solid #cccccc;
-  background-color: #fff;
+  background: #fff;
   color: #000;
   border-radius: 5px;
   padding: 12.5px 10px;
@@ -320,7 +320,7 @@ a img.aligncenter {
 }
 
 .screen-reader-text:focus {
-  background-color: #fff;
+  background: #fff;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -349,7 +349,7 @@ a img.aligncenter {
 }
 
 .gallery-caption {
-  background-color: lightblue;
+  background: lightblue;
 }
 
 .hide-on-mobile {
@@ -385,7 +385,7 @@ a img.aligncenter {
 
 hr {
   height: 1px;
-  background-color: #ddd;
+  background: #ddd;
   border: none;
 }
 
@@ -562,7 +562,7 @@ strong {
 .highlighted {
   display: inline-block;
   padding: 5px 15px;
-  background-color: #BB2440;
+  background: #BB2440;
   color: #fff !important;
 }
 .highlighted,
@@ -18192,7 +18192,7 @@ strong {
 .woocommerce-cart-form input#coupon_code {
   width: 100%;
   border: 1px solid #cccccc;
-  background-color: #fff;
+  background: #fff;
   color: #000;
   border-radius: 5px;
   padding: 12.5px 10px;
@@ -18507,7 +18507,7 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
 .checkout_coupon input {
   width: 100%;
   border: 1px solid #cccccc;
-  background-color: #fff;
+  background: #fff;
   color: #000;
   border-radius: 5px;
   padding: 12.5px 10px;
@@ -19150,7 +19150,7 @@ del .woocommerce-Price-amount bdi {
 }
 
 table {
-  background-color: transparent;
+  background: transparent;
   border-collapse: collapse;
 }
 
@@ -19198,7 +19198,7 @@ caption {
 }
 
 .table .table {
-  background-color: white;
+  background: white;
 }
 
 .table-condensed > thead > tr > th,
@@ -19229,17 +19229,17 @@ caption {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f1f3f9;
+  background: #f1f3f9;
   color: #000;
 }
 
 .table-striped > tbody > tr:nth-of-type(even) {
-  background-color: #fae4e8;
+  background: #fae4e8;
   color: #000;
 }
 
 .table-hover > tbody > tr:hover {
-  background-color: #f6cfd6;
+  background: #f6cfd6;
 }
 
 table col[class*=col-] {
@@ -19342,7 +19342,7 @@ textarea,
 select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
   width: 100%;
   border: 1px solid #cccccc;
-  background-color: #fff;
+  background: #fff;
   color: #000;
   border-radius: 5px;
   padding: 12.5px 10px;
@@ -19995,7 +19995,7 @@ textarea,
 select, #commentform .form-group textarea, #commentform .form-group input, .form-inline input, form fieldset textarea, form fieldset input {
   width: 100%;
   border: 1px solid #cccccc;
-  background-color: #fff;
+  background: #fff;
   color: #000;
   border-radius: 5px;
   padding: 12.5px 10px;
@@ -21066,11 +21066,11 @@ ol.commentlist .comment-body {
   line-height: 25px;
   border-radius: 50%;
   color: #fff;
-  background-color: #BB2440;
+  background: #BB2440;
 }
 .review-social:hover, .review-social:active {
   color: #fff;
-  background-color: #28325D;
+  background: #28325D;
 }
 .review-author, .review-title {
   color: #28325D;
@@ -21109,7 +21109,7 @@ ol.commentlist .comment-body {
   line-height: 1;
   text-align: center;
   border-radius: 5px;
-  background-color: #fff;
+  background: #fff;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -21119,7 +21119,7 @@ ol.commentlist .comment-body {
 .review-slider .slick-arrow:hover {
   color: #fff;
   border-color: #d93957;
-  background-color: #BB2440;
+  background: #BB2440;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -21386,7 +21386,7 @@ h6 a b,
 }
 
 form fieldset {
-  background-color: white;
+  background: white;
   padding: 25px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -21427,7 +21427,7 @@ form fieldset textarea {
 }
 
 #commentform {
-  background-color: white;
+  background: white;
   padding: 25px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -22457,7 +22457,7 @@ a:hover, a:active, a:focus {
   vertical-align: middle;
 }
 .social-item {
-  margin: 0 5px;
+  margin: 0 7px;
 }
 .social-link {
   display: -webkit-box;
@@ -22469,13 +22469,13 @@ a:hover, a:active, a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 20px;
+  font-size: 23px;
   color: #fff;
-  background-color: #fff;
+  background: #fff;
   border-radius: 5px;
-  width: 37px;
-  height: 37px;
-  /* Закомментируй, если нужен только один цвет иконок */
+  width: 35px;
+  height: 35px;
+  /* Закомментируй или удали, если нужен только один цвет иконок START */
   /* END */
 }
 .social-link.social-facebook {
@@ -22911,7 +22911,7 @@ a:hover, a:active, a:focus {
 }
 
 .header {
-  background-color: #fff;
+  background: #fff;
   color: #000;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -23031,7 +23031,7 @@ a:hover, a:active, a:focus {
   width: 25px;
   height: 25px;
   border: 0;
-  background-color: transparent;
+  background: transparent;
   -webkit-tap-highlight-color: transparent;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
@@ -23045,7 +23045,7 @@ a:hover, a:active, a:focus {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #28325D;
+  background: #28325D;
   position: absolute;
   top: 0;
   right: 0;
@@ -23108,7 +23108,7 @@ a:hover, a:active, a:focus {
   left: 0;
   z-index: -200;
   width: 250px;
-  background-color: rgba(187, 36, 64, 0.9);
+  background: rgba(187, 36, 64, 0.9);
   visibility: hidden;
   text-align: left;
   opacity: 0;
@@ -23135,7 +23135,7 @@ a:hover, a:active, a:focus {
   transition: border-color 0.3s ease-in-out;
 }
 .no-touch .nav .sub-menu-item:hover > .sub-menu-link, .nav .sub-menu-item-current > .sub-menu-link {
-  background-color: #a62039;
+  background: #a62039;
   color: #fff;
 }
 .no-touch .nav .sub-menu-item:hover > .sub-menu {
@@ -23182,7 +23182,7 @@ a:hover, a:active, a:focus {
     top: 0;
     left: 0;
     border-bottom: 1px solid #e7e7e7;
-    background-color: #fff;
+    background: #fff;
     text-align: left;
     z-index: 99;
   }
@@ -23203,7 +23203,7 @@ a:hover, a:active, a:focus {
     padding-bottom: 20px;
     z-index: 1000;
     overflow: auto;
-    background-color: #f7f7f7;
+    background: #f7f7f7;
     will-change: transform;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -23251,7 +23251,7 @@ a:hover, a:active, a:focus {
     display: block;
     border: 0;
     padding: 11px 13px 15px;
-    background-color: transparent;
+    background: transparent;
   }
   .nav .menu-item .menu-item-has-children-arrow::before {
     content: "";
@@ -23285,7 +23285,7 @@ a:hover, a:active, a:focus {
     width: auto;
     display: none;
     visibility: visible;
-    background-color: #f7f7f7;
+    background: #f7f7f7;
     opacity: 1;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -23363,7 +23363,7 @@ a:hover, a:active, a:focus {
   cursor: pointer;
   border: 0;
   padding: 9px 5px;
-  background-color: transparent;
+  background: transparent;
 }
 .hamburger-box {
   display: block;
@@ -23372,14 +23372,14 @@ a:hover, a:active, a:focus {
 }
 .hamburger-inner {
   position: relative;
-  -webkit-transition: background-color 0s ease-out 0.1s;
-  transition: background-color 0s ease-out 0.1s;
+  -webkit-transition: background 0s ease-out 0.1s;
+  transition: background 0s ease-out 0.1s;
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #28325D;
+  background: #28325D;
 }
 .hamburger-inner::before, .hamburger-inner::after {
   content: "";
@@ -23422,7 +23422,7 @@ a:hover, a:active, a:focus {
 }
 
 .is-active .hamburger-inner {
-  background-color: transparent;
+  background: transparent;
 }
 .is-active .hamburger-inner::before, .is-active .hamburger-inner::after {
   -webkit-transition: bottom 0.1s ease-out, top 0.1s ease-out, -webkit-transform 0.1s ease-out 0.1s;
@@ -23475,7 +23475,7 @@ a:hover, a:active, a:focus {
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: #d93957;
+  background: #d93957;
 }
 .sidebar .widget_nav_menu .trigger::before {
   width: 10px;
@@ -23537,12 +23537,12 @@ a:hover, a:active, a:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #28325D;
+  background: #28325D;
 }
 
 .pre-footer {
   padding: 40px 0 20px;
-  background-color: #303c6f;
+  background: #303c6f;
   color: #fff;
 }
 .pre-footer .widget-item .phone-item {
@@ -24479,13 +24479,13 @@ a:hover, a:active, a:focus {
 ::-moz-selection {
   text-shadow: none;
   color: #fff;
-  background-color: #BB2440;
+  background: #BB2440;
   -webkit-text-fill-color: #fff;
 }
 ::selection {
   text-shadow: none;
   color: #fff;
-  background-color: #BB2440;
+  background: #BB2440;
   -webkit-text-fill-color: #fff;
 }
 
@@ -24514,14 +24514,14 @@ body {
   position: relative;
   color: #000;
   font-family: "Montserrat", sans-serif;
-  background-color: #f7f7f7;
+  background: #f7f7f7;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
 }
 body.home {
-  background-color: #fff;
+  background: #fff;
 }
 @media (max-width: 1200px) {
   body.home .wrapper {

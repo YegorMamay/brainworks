@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 13.02.24
+Version: 18.02.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -74,7 +74,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 ::selection {
     text-shadow: none;
     color: $selectionFontColor;
-    background-color: $selectionBgColor;
+    background: $selectionBgColor;
     -webkit-text-fill-color: $selectionFontColor;
 }
 
@@ -112,14 +112,14 @@ body {
     //font-weight: $font-weight-size;
     //font-size: $font-min-size;
     //line-height: $font-line-height;
-    background-color: $bodyBgColor;
+    background: $bodyBgColor;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     max-width: 100%;
 
     &.home {
-        background-color: $themeColor5;
+        background: $themeColor5;
 
         .wrapper {
             @media #{$desktop-max} {

@@ -166,12 +166,13 @@ if (!function_exists('bw_messengers_shortcode')) {
 	            if ($name === 'viber') {
 		            $tel = wp_is_mobile()
 			            ? 'viber://chat?number=' . str_replace('+', '', $tel)
-			            : "viber://chat?number=$tel";
+			            : "viber://chat?number=%2B$tel";
 	            } elseif ($name === 'whatsapp') {
-		            $tel = "https://wa.me/$tel";
-	            } elseif ($name === 'telegram' && strpos($tel, '@') === 0) {
-		            $tel = strtolower(str_replace('@', '', $tel));
-		            $tel = "tg://resolve?domain=$tel";
+		            $tel = "https://wa.me/+$tel";
+	            } elseif ($name === 'telegram') {
+		            $tel = "https://t.me/$tel";
+	            } elseif ($name === 'facebook') {
+		            $tel = "https://m.me/$tel";
 	            }
 
                 $link = sprintf(

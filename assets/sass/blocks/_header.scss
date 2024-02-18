@@ -4,7 +4,7 @@ $headerHight: 80px;
 
 
 .header {
-    background-color: $headerBgColor;
+    background: $headerBgColor;
     color: $headerFontColor;
     box-shadow: $shadow;
     position: relative;
@@ -29,7 +29,7 @@ $headerHight: 80px;
         top: 0;
         right: 0;
         left: 0;
-        //background-color: $headerBgColor;
+        //background: $headerBgColor;
         z-index: 101;
         transition: .2s ease;
 

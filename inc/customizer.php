@@ -543,28 +543,28 @@ function bw_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('bw_messenger_viber', array(
-        'label' => 'Viber',
+        'label' => 'Viber (no «+» sign needed)',
         'section' => 'bw_messenger',
         'settings' => 'bw_messenger_viber',
         'type' => 'tel',
     ));
 
     $wp_customize->add_control('bw_messenger_whatsapp', array(
-        'label' => 'WhatsApp',
+        'label' => 'WhatsApp (no «+» sign needed)',
         'section' => 'bw_messenger',
         'settings' => 'bw_messenger_whatsapp',
         'type' => 'tel',
     ));
 
     $wp_customize->add_control('bw_messenger_telegram', array(
-        'label' => 'Telegram',
+        'label' => 'Telegram (username only)',
         'section' => 'bw_messenger',
         'settings' => 'bw_messenger_telegram',
         'type' => 'tel',
     ));
 
     $wp_customize->add_control('bw_messenger_facebook', array(
-        'label' => 'Facebook',
+        'label' => 'Facebook (page name / link ending)',
         'section' => 'bw_messenger',
         'settings' => 'bw_messenger_facebook',
         'type' => 'tel',

@@ -72,13 +72,13 @@ $review-next: '\00bb'; // &raquo;
         line-height: $review-social-size;
         border-radius: 50%;
         color: $review-social-color;
-        background-color: $review-social-background;
+        background: $review-social-background;
         @extend %smooth_animation;
 
         &:hover,
         &:active {
             color: $review-social-hover-color;
-            background-color: $review-social-hover-background;
+            background: $review-social-hover-background;
         }
     }
 
@@ -131,7 +131,7 @@ $review-next: '\00bb'; // &raquo;
                 line-height: 1;
                 text-align: center;
                 border-radius: $review-arrow-radius;
-                background-color: $review-arrow-background;
+                background: $review-arrow-background;
                 box-shadow: $shadow;
                 @extend %smooth_animation;
 
@@ -142,7 +142,7 @@ $review-next: '\00bb'; // &raquo;
                 &:hover {
                     color: $review-arrow-hover-color;
                     border-color: $review-arrow-hover-border-color;
-                    background-color: $review-arrow-hover-background;
+                    background: $review-arrow-hover-background;
                     box-shadow: none;
                 }
             }
