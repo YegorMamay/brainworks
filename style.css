@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 18.02.24
+Version: 21.02.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -18167,10 +18167,6 @@ strong {
   }
 }
 
-.woocommerce-cart .cart-popup {
-  display: none !important;
-}
-
 .woocommerce a.added_to_cart {
   width: 100%;
 }
@@ -18241,6 +18237,10 @@ strong {
   display: none;
 }
 
+.woocommerce-checkout .cart-popup, .woocommerce-cart .cart-popup {
+  display: none !important;
+}
+
 .cart-contents {
   cursor: pointer;
   position: relative;
@@ -18272,10 +18272,6 @@ strong {
   height: 18px;
   border-radius: 50%;
   font-size: 12px;
-}
-
-.woocommerce-checkout .cart-popup {
-  display: none !important;
 }
 
 .woo-cart-popup-wrapper {
@@ -22978,6 +22974,11 @@ a:hover, a:active, a:focus {
   text-align: center;
   background: #28325D;
 }
+@media (min-width: 1200px) {
+  .nav {
+    border-top: 1px solid #303c6f;
+  }
+}
 .nav-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23182,9 +23183,11 @@ a:hover, a:active, a:focus {
     top: 0;
     left: 0;
     border-bottom: 1px solid #e7e7e7;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
     text-align: left;
-    z-index: 99;
+    z-index: 999;
   }
   .nav-mobile-header .hamburger {
     display: block;

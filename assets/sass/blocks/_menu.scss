@@ -17,6 +17,10 @@ $SubMenuBGOnHover: darken($themeColor2, 5%);
     text-align: center;
     background: $menuBgColor;
 
+    @media #{$desktop-min} {
+        border-top: 1px solid lighten($menuBgColor, 5%);
+    }
+
     &-wrapper {
         display: flex;
         align-items: center;

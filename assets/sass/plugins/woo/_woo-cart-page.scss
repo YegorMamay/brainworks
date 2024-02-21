@@ -1,9 +1,3 @@
-.woocommerce-cart {
-    .cart-popup {
-        display: none !important;
-    }
-}
-
 .woocommerce {
     a.added_to_cart {
         @extend %btn2-outline;
