@@ -125,6 +125,10 @@ table.variations {
     }
 }
 
+.woocommerce-variation.single_variation {
+    display: none !important;
+}
+
 //star rating START
 .woocommerce {
 
@@ -234,7 +238,6 @@ table.variations {
             p,
             span {
                 &.price {
-                    margin-bottom: 20px;
                     @include responsive-font-size(20px, 26px, 480px, 1024px, 26px);
                     line-height: 1;
                     font-weight: bold;
@@ -243,7 +246,7 @@ table.variations {
             }
 
             .woocommerce-product-details__short-description {
-                margin-bottom: 10px;
+                margin: 20px 0 10px 0;
             }
 
             form {

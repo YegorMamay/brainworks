@@ -19,7 +19,6 @@ tbody > tr:first-child th {
     font-weight: 600;
 }
 
-table,
 thead,
 tfoot,
 tbody,
@@ -27,9 +26,9 @@ tr,
 th,
 td {
     // border: 1px solid $tableBorderColor;
-    padding: 13px;
+    padding: 17px !important;
 }
 
-td {
-    vertical-align: middle;
+td, th {
+    vertical-align: middle !important;
 }

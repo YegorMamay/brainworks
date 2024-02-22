@@ -97,25 +97,14 @@ ul.products {
     }
 }
 
-.irs--round .irs-bar {
-    background-color: $themeColor2;
+.bapf_slidr_main.ui-widget-content .ui-slider-handle, .berocket_filter_price_slider.ui-widget-content .ui-slider-handle, .slide.default .bapf_slidr_main .ui-state-default, .slide.default .bapf_slidr_main .ui-widget-header .ui-state-default, .slide.default .bapf_slidr_main.ui-widget-content .ui-state-default, .slide.default .berocket_filter_price_slider .ui-state-default, .slide.default .berocket_filter_price_slider .ui-widget-header .ui-state-default, .slide.default .berocket_filter_price_slider.ui-widget-content .ui-state-default {
+    background: $themeColor2;
 }
 
-.irs--round .irs-handle {
-    border: 4px solid $themeColor2;
+.bapf_slidr_main.ui-widget-content .ui-slider-range, .berocket_filter_price_slider.ui-widget-content .ui-slider-range {
+    background: $themeColor1;
 }
 
-.irs--round .irs-from,
-.irs--round .irs-single,
-.irs--round .irs-to {
-    background-color: $themeColor2;
-}
-
-.irs--round .irs-from:before,
-.irs--round .irs-single:before,
-.irs--round .irs-to:before {
-    border-top-color: $themeColor2;
-}
 // Ajax filter END
 
 //List Grid display products
@@ -166,4 +155,9 @@ del .woocommerce-Price-amount bdi {
 //Product carosel
 .owl-item li {
     box-shadow: none !important;
+}
+
+//Improved badges
+.isb_sale_badge {
+    z-index: 2;
 }

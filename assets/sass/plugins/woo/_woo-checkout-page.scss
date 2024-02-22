@@ -63,10 +63,17 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+
+                .cqoc_container {
+                    display: flex;
+                    align-items: center;
+                }
             }
 
             & .quantity {
-                margin-left: 15px;
+                input {
+                    width: 70px;
+                }
             }
         }
     }
@@ -101,6 +108,10 @@
 .woocommerce-billing-fields .optional,
 .notes label .optional {
     display: none;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    margin-bottom: 20px;
 }
 
 //Thank you page

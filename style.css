@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 21.02.24
+Version: 22.02.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -18182,7 +18182,7 @@ strong {
 }
 
 .woocommerce .quantity .qty {
-  width: 100%;
+  width: 90px;
 }
 
 .woocommerce-cart-form input#coupon_code {
@@ -18561,8 +18561,16 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-#top .woocommerce-checkout-review-order-table .cart_item .quantity {
-  margin-left: 15px;
+#top .woocommerce-checkout-review-order-table .cart_item .product-name .cqoc_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#top .woocommerce-checkout-review-order-table .cart_item .quantity input {
+  width: 70px;
 }
 
 .select2-container .select2-selection--single {
@@ -18594,6 +18602,10 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
 .woocommerce-billing-fields .optional,
 .notes label .optional {
   display: none;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+  margin-bottom: 20px;
 }
 
 .woocommerce-thankyou-order-received {
@@ -18728,6 +18740,10 @@ table.variations tbody tr {
   border: none;
 }
 
+.woocommerce-variation.single_variation {
+  display: none !important;
+}
+
 .woocommerce .star-rating span::before,
 .woocommerce p.stars a::before {
   color: #BB2440;
@@ -18829,7 +18845,6 @@ table.variations tbody tr {
 }
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-  margin-bottom: 20px;
   font-size: 20px;
   line-height: 1;
   font-weight: bold;
@@ -18849,7 +18864,7 @@ table.variations tbody tr {
   }
 }
 .woocommerce div.product .woocommerce-product-details__short-description {
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
 }
 .woocommerce div.product form.cart .button + .button {
   margin-left: 5px;
@@ -19078,24 +19093,12 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
   font-size: 20px;
 }
 
-.irs--round .irs-bar {
-  background-color: #BB2440;
+.bapf_slidr_main.ui-widget-content .ui-slider-handle, .berocket_filter_price_slider.ui-widget-content .ui-slider-handle, .slide.default .bapf_slidr_main .ui-state-default, .slide.default .bapf_slidr_main .ui-widget-header .ui-state-default, .slide.default .bapf_slidr_main.ui-widget-content .ui-state-default, .slide.default .berocket_filter_price_slider .ui-state-default, .slide.default .berocket_filter_price_slider .ui-widget-header .ui-state-default, .slide.default .berocket_filter_price_slider.ui-widget-content .ui-state-default {
+  background: #BB2440;
 }
 
-.irs--round .irs-handle {
-  border: 4px solid #BB2440;
-}
-
-.irs--round .irs-from,
-.irs--round .irs-single,
-.irs--round .irs-to {
-  background-color: #BB2440;
-}
-
-.irs--round .irs-from:before,
-.irs--round .irs-single:before,
-.irs--round .irs-to:before {
-  border-top-color: #BB2440;
+.bapf_slidr_main.ui-widget-content .ui-slider-range, .berocket_filter_price_slider.ui-widget-content .ui-slider-range {
+  background: #28325D;
 }
 
 .berocket_lgv_widget {
@@ -19139,6 +19142,10 @@ del .woocommerce-Price-amount bdi {
 .owl-item li {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.isb_sale_badge {
+  z-index: 2;
 }
 
 [role=button] {
@@ -19194,7 +19201,7 @@ caption {
 }
 
 .table .table {
-  background: white;
+  background: #fff;
 }
 
 .table-condensed > thead > tr > th,
@@ -21504,7 +21511,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   text-align: center;
-  background: white;
+  background: #fff;
 }
 
 tr > th:first-child,
@@ -21520,18 +21527,17 @@ tbody > tr:first-child th {
   font-weight: 600;
 }
 
-table,
 thead,
 tfoot,
 tbody,
 tr,
 th,
 td {
-  padding: 13px;
+  padding: 17px !important;
 }
 
-td {
-  vertical-align: middle;
+td, th {
+  vertical-align: middle !important;
 }
 
 ul,
@@ -22929,7 +22935,7 @@ a:hover, a:active, a:focus {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 101;
+  z-index: 99999;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
