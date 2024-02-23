@@ -13,7 +13,7 @@ $headerHight: 80px;
 
     .pre-header {
         background: lighten($themeColor1, 60%);
-        padding: 5px 0;
+        padding: 5px 10px;
 
         .container {
             padding: 0;
@@ -21,7 +21,7 @@ $headerHight: 80px;
     }
 
     .header-inner {
-        padding: 5px 0;
+        padding: 5px 10px;
     }
 
     &.is-fixed {

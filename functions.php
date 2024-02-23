@@ -422,41 +422,6 @@ function showhide_shortcode( $atts, $content = null ) {
     return $output;
 }
 
-### Function: Add JavaScript To Footer
-add_action( 'wp_footer', 'showhide_footer' );
-function showhide_footer() {
-    ?>
-    <?php if( WP_DEBUG ): ?>
-        <script type="text/javascript">
-            // function showhide_toggle(type, post_id, more_text, less_text) {
-            //     var   $link = jQuery("#"+ type + "-link-" + post_id)
-            //         , $link_a = jQuery('a', $link)
-            //         , $content = jQuery("#"+ type + "-content-" + post_id)
-            //         , $toggle = jQuery("#"+ type + "-toggle-" + post_id)
-            //         , show_hide_class = 'sh-show sh-hide';
-            //     $link.toggleClass(show_hide_class);
-            //     $content.toggleClass(show_hide_class).toggle();
-            //     if($link_a.attr('aria-expanded') === 'true') {
-            //         $link_a.attr('aria-expanded', 'false');
-            //     } else {
-            //         $link_a.attr('aria-expanded', 'true');
-            //     }
-            //     if($toggle.text() === more_text) {
-            //         $toggle.text(less_text);
-            //         $link.trigger( "sh-link:more" );
-            //     } else {
-            //         $toggle.text(more_text);
-            //         $link.trigger( "sh-link:less" );
-            //     }
-            //     $link.trigger( "sh-link:toggle" );
-            // }
-        </script>
-    <?php else : ?>
-        <!-- <script type="text/javascript">function showhide_toggle(e,t,r,g){var a=jQuery("#"+e+"-link-"+t),s=jQuery("a",a),i=jQuery("#"+e+"-content-"+t),l=jQuery("#"+e+"-toggle-"+t);a.toggleClass("sh-show sh-hide"),i.toggleClass("sh-show sh-hide").toggle(),"true"===s.attr("aria-expanded")?s.attr("aria-expanded","false"):s.attr("aria-expanded","true"),l.text()===r?(l.text(g),a.trigger("sh-link:more")):(l.text(r),a.trigger("sh-link:less")),a.trigger("sh-link:toggle")}</script> -->
-    <?php endif; ?>
-    <?php
-}
-
 
 // Column shortcode cpt "html block"
 add_filter( 'manage_'.'blocks'.'_posts_columns', 'add_views_column', 4 );

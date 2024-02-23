@@ -238,10 +238,10 @@ table.variations {
             p,
             span {
                 &.price {
-                    @include responsive-font-size(20px, 26px, 480px, 1024px, 26px);
                     line-height: 1;
                     font-weight: bold;
                     color: $productPriceFontColor;
+                    margin-bottom: 5px;
                 }
             }
 
