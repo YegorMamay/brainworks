@@ -16,6 +16,10 @@ ul.products {
     @extend .btn1;
 }
 
+.tinv-wishlist .tinv-modal .tinv-modal-inner {
+    //background-color: $bodyBgColor; // расскомментируй, если цвет фона сайта темный
+}
+
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before {
     font-size: 27px;
 }
