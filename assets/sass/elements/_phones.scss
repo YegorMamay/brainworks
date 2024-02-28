@@ -37,14 +37,15 @@
 .phone-dropdown__link[href^="tel:38"]::before,
 .phone-dropdown__link[href^="tel:+38"]::before,
 .phone-number[href^="tel:+38"]::before {
-    content: '';
+    content: '\f2a0';
+    font-family: 'Font Awesome 6 Pro';
     display: inline-block;
     vertical-align: baseline;
     width: 15px;
     height: 15px;
     margin-right: 3px;
     margin-bottom: -1px;
-    background-image: image-url('phones.svg');
+    //background-image: image-url('phones.svg');
     background-repeat: no-repeat;
 }
 

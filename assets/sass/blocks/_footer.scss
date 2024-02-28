@@ -13,8 +13,9 @@ $footerLinkColorActive: $themeColor2;
 
 .pre-footer {
     padding: 40px 0 20px;
-    background: lighten($footerBgColor, 5%);
+    //background: lighten($footerBgColor, 5%);
     color: $footerFontColor;
+    border-bottom: 1px solid lighten($footerBgColor, 15%);
 
     .widget-item {
         .phone-item {

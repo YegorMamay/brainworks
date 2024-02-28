@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 27.02.24
+Version: 28.02.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -22552,14 +22552,14 @@ a:hover, a:active, a:focus {
 .phone-dropdown__link[href^="tel:38"]::before,
 .phone-dropdown__link[href^="tel:+38"]::before,
 .phone-number[href^="tel:+38"]::before {
-  content: "";
+  content: "\f2a0";
+  font-family: "Font Awesome 6 Pro";
   display: inline-block;
   vertical-align: baseline;
   width: 15px;
   height: 15px;
   margin-right: 3px;
   margin-bottom: -1px;
-  background-image: url("assets/img/phones.svg");
   background-repeat: no-repeat;
 }
 
@@ -23537,8 +23537,8 @@ a:hover, a:active, a:focus {
 
 .pre-footer {
   padding: 40px 0 20px;
-  background: #303c6f;
   color: #fff;
+  border-bottom: 1px solid #3f4f92;
 }
 .pre-footer .widget-item .phone-item {
   display: block;
