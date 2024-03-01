@@ -161,7 +161,7 @@ if (!function_exists('bw_messengers_shortcode')) {
             foreach (get_messengers() as $name => $messenger) {
                 $icon = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($messenger['icon']));
 
-	            $tel = get_phone_number($messenger['tel']);
+	            $tel = ($messenger['tel']);
 
 	            if ($name === 'viber') {
 		            $tel = wp_is_mobile()
@@ -173,7 +173,9 @@ if (!function_exists('bw_messengers_shortcode')) {
 		            $tel = "https://t.me/$tel";
 	            } elseif ($name === 'facebook') {
 		            $tel = "https://m.me/$tel";
-	            }
+	            } else {
+                    $tel = get_phone_number($tel);
+                }
 
                 $link = sprintf(
                     '<a class="messenger-link messenger-%s" href="%s" target="_blank" aria-label="%s" rel="noopener nofollow">%s</a>',

@@ -492,8 +492,29 @@ function remove_wp_block_library_css(){
 }
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css' );
 
-// Move out of stock products to bottom of shop/category page
-add_filter('posts_clauses', 'order_by_stock_status', 2000);
+
+// Функция для проверки уровня доступа пользователя
+function is_subscriber() {
+  if ( ! current_user_can( 'edit_posts' ) ) {
+    return true;
+  }
+
+  return false;
+}
+
+// Проверка, является ли пользователь подписчиком
+if ( is_subscriber() && is_admin() ) {
+  // Перенаправление пользователя на главную страницу
+  wp_redirect( home_url() );
+  exit;
+}
+
+
+/* Перемещает закончивщиеся товары в конец */
+
+if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+    add_filter('posts_clauses', 'order_by_stock_status', 2000);
+}
 
 function order_by_stock_status($posts_clauses) {
     global $wpdb;
