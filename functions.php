@@ -284,7 +284,7 @@ if( is_admin() && ! class_exists('Term_Meta_Image') ){
  *  Добавил физическое удаление картинки (файла вложения) при удалении его у термина.
  */
 
-//Изменение перевода
+//Изменение перевода для Woo
 add_filter('gettext', 'translate_text');
 add_filter('ngettext', 'translate_text');
 
@@ -438,7 +438,7 @@ function fill_views_column( $colname, $post_id ){
 	echo "[html_block id=" . $post_id . "]";
 }
 
-//Скрывает топ-бар для подписчиков
+// Скрывает топ-бар для подписчиков
 if (!current_user_can('manage_options')) {
     add_filter('show_admin_bar', '__return_false');
 }
@@ -493,25 +493,7 @@ function remove_wp_block_library_css(){
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css' );
 
 
-// Функция для проверки уровня доступа пользователя
-function is_subscriber() {
-  if ( ! current_user_can( 'edit_posts' ) ) {
-    return true;
-  }
-
-  return false;
-}
-
-// Проверка, является ли пользователь подписчиком
-if ( is_subscriber() && is_admin() ) {
-  // Перенаправление пользователя на главную страницу
-  wp_redirect( home_url() );
-  exit;
-}
-
-
-/* Перемещает закончивщиеся товары в конец */
-
+/* WOO: Перемещает закончивщиеся товары в конец START */
 if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
     add_filter('posts_clauses', 'order_by_stock_status', 2000);
 }
@@ -526,3 +508,4 @@ function order_by_stock_status($posts_clauses) {
     }
 	return $posts_clauses;
 }
+/* WOO: Перемещает закончивщиеся товары в конец END */
