@@ -190,12 +190,12 @@
                 <?php if ( class_exists( 'WooCommerce' ) ) { ?>
                 <div class="header__woo d-flex align-items-center">
                     <div class="header__wishlist">
-                        <a href="<?php echo get_permalink(pll_get_post(579)) ?>" class="header__circle">
+                        <a href="<?php echo get_permalink(pll_get_post(1569)) ?>" class="header__circle">
                             <i class="far fa-heart"></i>
                         </a>
                     </div>
                     <div class="header__profile">
-                        <a href="<?php echo get_permalink(pll_get_post(571)) ?>" class="header__circle">
+                        <a href="<?php echo get_permalink(pll_get_post(1562)) ?>" class="header__circle">
                             <i class="fa-regular fa-user"></i>
                         </a>
                     </div>
@@ -261,12 +261,12 @@
             <?php if ( class_exists( 'WooCommerce' ) ) { ?>
             <div class="header__woo d-flex">
                 <div class="header__wishlist">
-                    <a href="/wishlist/" class="header__circle">
+                    <a href="<?php echo get_permalink(pll_get_post(1569)) ?>" class="header__circle">
                         <i class="fal fa-heart"></i>
                     </a>
                 </div>
                 <div class="header__profile">
-                    <a href="/mij-akkaunt/" class="header__circle">
+                    <a href="<?php echo get_permalink(pll_get_post(1562)) ?>" class="header__circle">
                         <i class="fal fa-user-alt"></i>
                     </a>
                 </div>
