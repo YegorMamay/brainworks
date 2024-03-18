@@ -323,9 +323,16 @@
                 <?php echo do_shortcode('[bw-phone]'); ?>
             </div>
             <div class="vh-xs-2"></div>
+
             <?php echo do_shortcode('[bw-messengers]'); ?>
             <div class="vh-xs-2"></div>
+
             <div class="social-mob"><?php echo do_shortcode('[bw-social]'); ?></div>
+            <div class="vh-xs-2"></div>
+
+            <!-- The button for a pop-up -->
+                <button class="btn btn2 highlight <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
+
         </nav>
         <?php } ?>
         <!-- Mobile menu END -->
