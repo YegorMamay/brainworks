@@ -51,8 +51,8 @@ function bw_update_footer()
     $support = sprintf(
         '%s <a href="mailto:%s" target="_blank">%s</a>',
         __('Support:', 'brainworks'),
-        __('web@brainworks.com.ua', 'brainworks'),
-        __('web@brainworks.com.ua', 'brainworks')
+        __('info@brainworks.pro', 'brainworks'),
+        __('info@brainworks.pro', 'brainworks')
     );
 
     $tel = sprintf(
