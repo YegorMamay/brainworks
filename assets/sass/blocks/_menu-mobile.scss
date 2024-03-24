@@ -227,7 +227,7 @@ $menuContainerMobilePaddingTop: 70px;
     }
 }
 
-#menu-language-switcher-1 {
+#menu-language-switcher {
     & .menu-item-has-children-arrow {
         top: 13px;
         right: -15px;
@@ -253,6 +253,7 @@ $menuContainerMobilePaddingTop: 70px;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     transition: .2s ease-out;
+    margin-left: 15px;
 
     &:focus {
         outline: 0;
