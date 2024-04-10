@@ -324,9 +324,9 @@ if (!function_exists('bw_last_posts')) {
                                 </div>';
             }
             $output .= '<div class="custom-card-body">
-                                <h3>
+                                <h6>
                                     <a href="' . $permalink . '">' . $post['post_title'] . '</a>
-                                </h3>
+                                </h6>
                                 <p>
                                     ' . $post['post_excerpt'] . '
                                 </p>
@@ -409,7 +409,7 @@ if (!function_exists('bw_advert_shortcode')) {
 
                 if ($atts['display_datetime']) {
                     $datetime = sprintf(
-                        '<time class="%s-datetime" datetime="%s">%s</time>',
+                        '<time class="%s-datetime text-small" datetime="%s">%s</time>',
                         $basic_class,
                         get_the_date('c'),
                         get_the_date()
@@ -418,7 +418,7 @@ if (!function_exists('bw_advert_shortcode')) {
 
                 if ($atts['display_category']) {
                     $category = sprintf(
-                        '<div class="%s-category">#%s</div>',
+                        '<div class="%s-category">%s</div>',
                         $basic_class,
                         get_the_category_list(',')
                     );
@@ -426,7 +426,7 @@ if (!function_exists('bw_advert_shortcode')) {
 
 	            if ($atts['display_tags']) {
 		            $tags = sprintf(
-			            '<div class="%s-tags">#%s</div>',
+			            '<div class="%s-tags">%s</div>',
 			            $basic_class,
 			            get_the_tag_list( '', ', ', '' )
 		            );
@@ -441,7 +441,7 @@ if (!function_exists('bw_advert_shortcode')) {
                 );
 
                 $headline = sprintf(
-                    '<h5 class="%s-headline"><a href="%s">%s</a></h5>',
+                    '<h6 class="%s-headline"><a href="%s">%s</a></h6>',
                     $basic_class,
                     get_the_permalink(),
                     get_the_title()

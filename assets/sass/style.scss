@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 24.03.24
+Version: 10.04.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -61,6 +61,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/unfold-text"; // *
 @import "elements/logo"; // *
 @import "elements/second-menu"; // *
+@import "elements/front-news-shortcode"; // *
 
 // BLOCKS
 @import "blocks/header";

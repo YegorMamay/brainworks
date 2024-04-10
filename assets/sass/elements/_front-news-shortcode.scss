@@ -1,0 +1,78 @@
+// Shortcode
+.front-news {
+    &-box {
+        box-shadow: $shadow;
+        border: 1px solid $borderColor;
+        @include smooth_animation;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &-inner {
+        padding: 20px 20px 30px;
+    }
+
+    &-meta {
+        .front-news-category, .front-news-datetime {
+            position: absolute;
+            top: 15px;
+        }
+
+        .front-news-category a {
+            font-size: 16px;
+        }
+
+        .front-news-datetime {
+            right: 30px;
+        }
+
+        .front-news-category a, .front-news-datetime {
+            background: $themeColor2;
+            padding: 5px 10px;
+            border-radius: $borderRadius;
+            color: $themeColor5;
+        }
+    }
+
+    &-btn {
+        //display: none;
+    }
+
+    &-item {
+        margin-bottom: 20px;
+    }
+
+    &-headline {
+        margin-bottom: 10px;
+
+        & a {
+            font-size: inherit;
+            line-height: inherit;
+        }
+    }
+
+    &-preview {
+
+    }
+
+    &-thumbnail {
+        display: block;
+        height: 230px;
+        object-fit: cover;
+        margin-bottom: 0;
+    }
+
+    &-excerpt {
+        margin-bottom: 20px;
+
+        &,
+        p {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.5;
+            color: $bodyFontColor;
+        }
+    }
+}

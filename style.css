@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 28.02.24
+Version: 10.04.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -519,7 +519,8 @@ strong {
   color: transparent;
 }
 .text-small {
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .font-one {
@@ -645,6 +646,42 @@ strong {
 }
 .mrgn-bot-30 {
   margin-bottom: 30px;
+}
+.mrgn-top-10 {
+  margin-top: 10px;
+}
+.mrgn-top-15 {
+  margin-top: 15px;
+}
+.mrgn-top-20 {
+  margin-top: 20px;
+}
+.mrgn-top-30 {
+  margin-top: 30px;
+}
+.mrgn-r-10 {
+  margin-right: 10px;
+}
+.mrgn-r-15 {
+  margin-right: 15px;
+}
+.mrgn-r-20 {
+  margin-right: 20px;
+}
+.mrgn-r-30 {
+  margin-right: 30px;
+}
+.mrgn-l-10 {
+  margin-left: 10px;
+}
+.mrgn-l-15 {
+  margin-left: 15px;
+}
+.mrgn-l-20 {
+  margin-left: 20px;
+}
+.mrgn-l-30 {
+  margin-left: 30px;
 }
 
 .fa {
@@ -18381,6 +18418,10 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
     margin-left: 4%;
   }
 }
+.term-description {
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 767px) {
   .woocommerce .woocommerce-ordering,
   .woocommerce-page .woocommerce-ordering {
@@ -20848,70 +20889,6 @@ ol.commentlist .comment-body {
   line-height: inherit;
 }
 
-.front-news-box {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border: 1px solid #cccccc;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.front-news-box:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 575px) {
-  .front-news-box:hover {
-    height: 250px;
-  }
-}
-.front-news-inner {
-  padding: 15px;
-}
-.front-news-meta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.front-news-btn {
-  display: none;
-}
-.front-news-item {
-  margin-bottom: 20px;
-}
-.front-news-headline {
-  margin-bottom: 10px;
-}
-.front-news-headline a {
-  font-size: inherit;
-  line-height: inherit;
-}
-.front-news-preview {
-  margin-bottom: 10px;
-}
-.front-news-preview a {
-  display: block;
-}
-.front-news-thumbnail {
-  display: block;
-  margin-bottom: 0;
-}
-.front-news-excerpt {
-  margin-bottom: 10px;
-}
-.front-news-excerpt,
-.front-news-excerpt p {
-  text-align: justify;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #000;
-}
-
 .page-404 {
   text-align: center;
   height: 40vh;
@@ -21944,7 +21921,7 @@ button {
 .woocommerce button.button.alt,
 .woocommerce input.button.alt, .tinvwl_button_close {
   display: inline-block;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -22330,7 +22307,7 @@ fieldset:disabled a.tinvwl_button_close {
 }
 
 .btn-link {
-  font-weight: 700;
+  font-weight: 400;
   color: #28325D;
   background-color: transparent;
 }
@@ -22898,6 +22875,64 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
+.front-news-box {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #cccccc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.front-news-box:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.front-news-inner {
+  padding: 20px 20px 30px;
+}
+.front-news-meta .front-news-category, .front-news-meta .front-news-datetime {
+  position: absolute;
+  top: 15px;
+}
+.front-news-meta .front-news-category a {
+  font-size: 16px;
+}
+.front-news-meta .front-news-datetime {
+  right: 30px;
+}
+.front-news-meta .front-news-category a, .front-news-meta .front-news-datetime {
+  background: #BB2440;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+.front-news-item {
+  margin-bottom: 20px;
+}
+.front-news-headline {
+  margin-bottom: 10px;
+}
+.front-news-headline a {
+  font-size: inherit;
+  line-height: inherit;
+}
+.front-news-thumbnail {
+  display: block;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 0;
+}
+.front-news-excerpt {
+  margin-bottom: 20px;
+}
+.front-news-excerpt,
+.front-news-excerpt p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
 .header {
   background: #fff;
   color: #000;
@@ -23174,7 +23209,7 @@ a:hover, a:active, a:focus {
     padding: 10px;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e6e6e6;
     background: rgba(255, 255, 255, 0.9);
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
@@ -23324,16 +23359,16 @@ a:hover, a:active, a:focus {
   width: 32px;
 }
 
-#menu-language-switcher-1 .menu-item-has-children-arrow {
+#menu-language-switcher .menu-item-has-children-arrow {
   top: 13px;
   right: -15px;
   padding: 5px;
 }
-#menu-language-switcher-1 .menu-item-has-children-arrow:before {
+#menu-language-switcher .menu-item-has-children-arrow:before {
   width: 8px;
   height: 8px;
 }
-#menu-language-switcher-1 .sub-menu {
+#menu-language-switcher .sub-menu {
   position: absolute;
   left: 0;
   top: 100%;
@@ -23348,6 +23383,7 @@ a:hover, a:active, a:focus {
       touch-action: manipulation;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
+  margin-left: 15px;
 }
 .hamburger:focus {
   outline: 0;
