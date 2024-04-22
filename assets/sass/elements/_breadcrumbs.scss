@@ -1,0 +1,12 @@
+.kama_breadcrumbs {
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: $bodyFontColor;
+
+    & span,
+    a {
+        font-size: 16px;
+        line-height: normal;
+    }
+}

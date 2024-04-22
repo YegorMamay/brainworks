@@ -118,3 +118,7 @@ q:before,
 q:after {
     content: none
 }
+
+:focus {
+    outline: 0;
+}

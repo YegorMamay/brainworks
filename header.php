@@ -306,6 +306,7 @@
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'depth' => 3
         )); ?>
+
             <?php if (has_nav_menu('language-switcher')) { ?>
             <div class="mobile-language">
                 <?php wp_nav_menu(array(
@@ -319,6 +320,7 @@
             )); ?>
             </div>
             <?php } ?>
+
             <div class="mobile-phones">
                 <?php echo do_shortcode('[bw-phone]'); ?>
             </div>
@@ -331,7 +333,7 @@
             <div class="vh-xs-2"></div>
 
             <!-- The button for a pop-up -->
-                <button class="btn btn2 highlight <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
+            <button class="btn btn2 highlight <?php the_lang_class('callback'); ?>"><?php _e('Callback', 'brainworks') ?></button>
 
         </nav>
         <?php } ?>

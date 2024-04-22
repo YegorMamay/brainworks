@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 10.04.24
+Version: 22.04.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -44,24 +44,25 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/typography"; // * if woo
 //@import "elements/responsive-titles"; // * if woo
 @import "elements/scroll-top";
-@import "elements/forms"; // *
+@import "elements/forms";
 @import "elements/pagination";
-@import "elements/tables"; // *
-@import "elements/lists"; // *
-@import "elements/empty-space-vh"; // *
-@import "elements/empty-space-px"; // *
-@import "elements/custom-scrollbar"; // *
+@import "elements/tables";
+@import "elements/lists";
+@import "elements/empty-space-vh";
+@import "elements/empty-space-px";
+@import "elements/custom-scrollbar";
 @import "elements/buttons";
-//@import "elements/gradient-title"; // *
-@import "elements/links"; // *
-@import "elements/social"; // *
-@import "elements/messengers"; // *
-@import "elements/phones"; // *
-@import "elements/language-switcher"; // *
-@import "elements/unfold-text"; // *
-@import "elements/logo"; // *
-@import "elements/second-menu"; // *
-@import "elements/front-news-shortcode"; // *
+//@import "elements/gradient-title";
+@import "elements/links";
+@import "elements/social";
+@import "elements/messengers";
+@import "elements/phones";
+@import "elements/language-switcher";
+@import "elements/unfold-text";
+@import "elements/logo";
+@import "elements/second-menu";
+@import "elements/front-news-shortcode";
+@import "elements/breadcrumbs";
 
 // BLOCKS
 @import "blocks/header";
@@ -124,11 +125,6 @@ body {
         .wrapper {
             @media #{$desktop-max} {
                 padding-top: 0;
-
-                .nav-mobile-header {
-                    background: rgba($navHeaderMobileBGColor, 0.8);
-                    backdrop-filter: blur(5px);
-                }
             }
         }
     }
@@ -168,32 +164,11 @@ img {
     height: auto;
 }
 
-:focus {
-    outline: 0;
-}
-
-.body-overflow {
-    //overflow: hidden;
-}
-
 .svg-icon {
     max-width: 100%;
     display: inline-block;
     vertical-align: middle;
     @extend %smooth_animation;
-}
-
-.kama_breadcrumbs {
-    padding: 10px 0;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: $bodyFontColor;
-
-    & span,
-    a {
-        font-size: 14px;
-        line-height: normal;
-    }
 }
 
 .highlight {

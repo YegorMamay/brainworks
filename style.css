@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 10.04.24
+Version: 22.04.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -127,6 +127,10 @@ blockquote:after,
 q:before,
 q:after {
   content: none;
+}
+
+:focus {
+  outline: 0;
 }
 
 .svg-icon, .nav .sub-menu-item .sub-menu-link, .nav .menu-item .menu-link, a, .review-slider .slick-arrow, .review-social {
@@ -22535,7 +22539,7 @@ a:hover, a:active, a:focus {
   vertical-align: baseline;
   width: 15px;
   height: 15px;
-  margin-right: 3px;
+  margin-right: 6px;
   margin-bottom: -1px;
   background-repeat: no-repeat;
 }
@@ -22933,6 +22937,18 @@ a:hover, a:active, a:focus {
   color: #000;
 }
 
+.kama_breadcrumbs {
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.kama_breadcrumbs span,
+.kama_breadcrumbs a {
+  font-size: 16px;
+  line-height: normal;
+}
+
 .header {
   background: #fff;
   color: #000;
@@ -23040,6 +23056,20 @@ a:hover, a:active, a:focus {
       border-left: none;
   }*/
 }
+.nav .menu-item-current:not(.menu-item-type-custom) {
+  border-bottom: 5px solid #BB2440;
+  padding-bottom: 0;
+}
+.nav .menu-item .menu-link {
+  display: block;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+}
 .nav .menu-item:first-child {
   border-left: 1px solid #303c6f;
 }
@@ -23107,10 +23137,6 @@ a:hover, a:active, a:focus {
   border-color: #fff transparent transparent transparent;
   cursor: pointer;
 }
-.nav .menu-item-current:not(.menu-item-type-custom) {
-  border-bottom: 5px solid #BB2440;
-  padding-bottom: 0;
-}
 .no-touch .nav .menu-item:hover .menu-link, .nav .menu-item-current .menu-link, .nav .menu-item.current-menu-parent .menu-link, .nav .menu-item.current-menu-ancestor .menu-link {
   text-decoration: none;
 }
@@ -23119,16 +23145,6 @@ a:hover, a:active, a:focus {
   visibility: visible;
   opacity: 1;
   z-index: 33;
-}
-.nav .menu-item .menu-link {
-  display: block;
-  padding: 8px 10px;
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: none;
-  text-decoration: none;
 }
 .nav .sub-menu {
   position: absolute;
@@ -23188,6 +23204,14 @@ a:hover, a:active, a:focus {
 
 .nav-mobile-header {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  body.home .wrapper .nav-mobile-header {
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -23359,16 +23383,16 @@ a:hover, a:active, a:focus {
   width: 32px;
 }
 
-#menu-language-switcher .menu-item-has-children-arrow {
-  top: 13px;
+#menu-language-switcher-1 .menu-item-has-children-arrow {
+  top: 15px;
   right: -15px;
   padding: 5px;
 }
-#menu-language-switcher .menu-item-has-children-arrow:before {
+#menu-language-switcher-1 .menu-item-has-children-arrow:before {
   width: 8px;
   height: 8px;
 }
-#menu-language-switcher .sub-menu {
+#menu-language-switcher-1 .sub-menu {
   position: absolute;
   left: 0;
   top: 100%;
@@ -24558,11 +24582,6 @@ body.home {
   body.home .wrapper {
     padding-top: 0;
   }
-  body.home .wrapper .nav-mobile-header {
-    background: rgba(255, 255, 255, 0.8);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-  }
 }
 body.body-overflow .wrapper:after {
   content: "";
@@ -24596,26 +24615,10 @@ img {
   height: auto;
 }
 
-:focus {
-  outline: 0;
-}
-
 .svg-icon {
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
-}
-
-.kama_breadcrumbs {
-  padding: 10px 0;
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #000;
-}
-.kama_breadcrumbs span,
-.kama_breadcrumbs a {
-  font-size: 14px;
-  line-height: normal;
 }
 
 .highlight {
