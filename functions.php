@@ -509,3 +509,8 @@ function order_by_stock_status($posts_clauses) {
 	return $posts_clauses;
 }
 /* WOO: Перемещает закончивщиеся товары в конец END */
+
+//Длина отрывка статьи
+add_filter( 'excerpt_length', function(){
+	return 25;
+} );
