@@ -378,9 +378,18 @@ var _this = void 0;
     $(".js-hamburger").on("click", function() {
         $("body").addClass("body-overflow");
     });
+
     $(".js-menu-close, .menu-item:not(.menu-item-has-children.menu-item-type-custom) .menu-link").on("click", function() {
         $("body").removeClass("body-overflow");
     });
+
+    $(".js-menu-close, .menu-item.menu-item-has-children .menu-link").on("click", function(e) {
+        if ($(this).attr('href') == '#') {
+            e.preventDefault();
+            $(this).closest('.menu-item').find('.menu-item-has-children-arrow').trigger('click');
+        }
+    });
+
 
     var updateCartTotalValue = function updateCartTotalValue(elemId) {
         localStorage.setItem("currency", $("#cyr-value").val());
