@@ -1,9 +1,15 @@
 // Shortcode
 .front-news {
+    &-item {
+        margin-bottom: 20px;
+    }
+
     &-box {
+        background: $themeColor5;
         box-shadow: $shadow;
         border: 1px solid $borderColor;
         @include smooth_animation;
+        height: 100%;
 
         &:hover {
             box-shadow: none;
@@ -12,6 +18,7 @@
 
     &-inner {
         padding: 20px 20px 30px;
+
     }
 
     &-meta {
@@ -29,7 +36,7 @@
         }
 
         .front-news-category a, .front-news-datetime {
-            background: $themeColor2;
+            background: $themeColor1;
             padding: 5px 10px;
             border-radius: $borderRadius;
             color: $themeColor5;
@@ -37,11 +44,9 @@
     }
 
     &-btn {
+        position: absolute;
+        bottom: 22px;
         //display: none;
-    }
-
-    &-item {
-        margin-bottom: 20px;
     }
 
     &-headline {
@@ -65,7 +70,7 @@
     }
 
     &-excerpt {
-        margin-bottom: 20px;
+        margin-bottom: 42px;
 
         &,
         p {

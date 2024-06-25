@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 22.04.24
+Version: 12.06.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -21425,6 +21425,51 @@ textarea {
           appearance: none;
 }
 
+/* file upload button */
+input[type=file]::-webkit-file-upload-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+input[type=file]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type=file]::-webkit-file-upload-button:hover {
+  background-color: #f3f4f6;
+}
+input[type=file]::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type=file]::-webkit-file-upload-button:active {
+  background-color: #e5e7eb;
+}
+input[type=file]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+/* ------------------------ */
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22879,12 +22924,17 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
+.front-news-item {
+  margin-bottom: 20px;
+}
 .front-news-box {
+  background: #fff;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border: 1px solid #cccccc;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  height: 100%;
 }
 .front-news-box:hover {
   -webkit-box-shadow: none;
@@ -22904,13 +22954,14 @@ a:hover, a:active, a:focus {
   right: 30px;
 }
 .front-news-meta .front-news-category a, .front-news-meta .front-news-datetime {
-  background: #BB2440;
+  background: #28325D;
   padding: 5px 10px;
   border-radius: 5px;
   color: #fff;
 }
-.front-news-item {
-  margin-bottom: 20px;
+.front-news-btn {
+  position: absolute;
+  bottom: 22px;
 }
 .front-news-headline {
   margin-bottom: 10px;
@@ -22927,7 +22978,7 @@ a:hover, a:active, a:focus {
   margin-bottom: 0;
 }
 .front-news-excerpt {
-  margin-bottom: 20px;
+  margin-bottom: 42px;
 }
 .front-news-excerpt,
 .front-news-excerpt p {
@@ -23069,6 +23120,7 @@ a:hover, a:active, a:focus {
   text-align: center;
   text-transform: none;
   text-decoration: none;
+  text-wrap: nowrap;
 }
 .nav .menu-item:first-child {
   border-left: 1px solid #303c6f;
