@@ -514,3 +514,9 @@ function order_by_stock_status($posts_clauses) {
 add_filter( 'excerpt_length', function(){
 	return 25;
 } );
+
+add_filter( 'kses_allowed_protocols', function ( $protocols ) {
+    $protocols[] = 'viber';
+    $protocols[] = 'skype';
+    return $protocols;
+} );
