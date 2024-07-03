@@ -14,6 +14,11 @@
         &:hover {
             box-shadow: none;
         }
+
+        img {
+            height: 230px;
+            object-fit: cover;
+        }
     }
 
     &-inner {
