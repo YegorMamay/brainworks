@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 12.06.24
+Version: 02.09.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -18193,7 +18193,7 @@ strong {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
+  color: #BB2440;
   text-align: center;
   font: bold 12px/1.5 Arial, Helvetica, sans-serif;
 }
@@ -18205,7 +18205,7 @@ strong {
 }
 .cart-contents:hover {
   text-decoration: none;
-  color: #fff;
+  color: #28325D;
 }
 .cart-contents-count {
   position: absolute;
@@ -22471,7 +22471,7 @@ a:hover, a:active, a:focus {
   vertical-align: middle;
 }
 .social-item {
-  margin: 0 7px;
+  margin: 0 5px;
 }
 .social-link {
   display: -webkit-box;
@@ -22483,39 +22483,61 @@ a:hover, a:active, a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 23px;
-  color: #fff;
-  background: #fff;
-  border-radius: 5px;
+  font-size: 26px;
+  color: #BB2440;
+  /* Раскомментируй, если нужены цветные иконки START
+  background: $themeColor5;
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
   width: 35px;
-  height: 35px;
-  /* Закомментируй или удали, если нужен только один цвет иконок START */
-  /* END */
+  //height: 35px;
+
+
+  &.social-facebook {
+      //color: #4267B2;
+      background: #4267B2;
+  }
+
+  &.social-instagram {
+      //color: #F56040;
+      background: linear-gradient(49.12deg, #FFDD55 6.62%, #FF543E 50.06%, #C837AB 93.5%);
+  }
+
+  &.social-youtube {
+      //color: #FF0000;
+      background: #FF0000;
+  }
+
+  &.social-tiktok {
+      //color: #000;
+      background: #000;
+  }
+
+  &.social-twitter {
+      //color: #1DA1F2;
+      background: #1DA1F2;
+  }
+
+  &.social-linkedin {
+      //color: #0077B5;
+      background: #0077B5;
+  }
+
+  &.social-odnoklassniki {
+      //color: #FF9800;
+      background: #FF9800;
+  }
+
+  &.social-vk {
+      //color: #4C75A3;
+      background: #4C75A3;
+  }
+   END */
 }
-.social-link.social-facebook {
-  background: #4267B2;
+.social-link:hover, .social-link:active, .social-link:focus {
+  color: #28325D;
 }
-.social-link.social-instagram {
-  background: linear-gradient(49.12deg, #FFDD55 6.62%, #FF543E 50.06%, #C837AB 93.5%);
-}
-.social-link.social-youtube {
-  background: #FF0000;
-}
-.social-link.social-tiktok {
-  background: #000;
-}
-.social-link.social-twitter {
-  background: #1DA1F2;
-}
-.social-link.social-linkedin {
-  background: #0077B5;
-}
-.social-link.social-odnoklassniki {
-  background: #FF9800;
-}
-.social-link.social-vk {
-  background: #4C75A3;
-}
+
 .messenger, .messenger-item {
   display: inline-block;
   vertical-align: middle;
@@ -22528,25 +22550,31 @@ a:hover, a:active, a:focus {
   text-align: center;
   text-decoration: none;
   font-size: 24px;
-  color: #fff;
+  color: #BB2440;
+  /* Раскомментируй, если нужены цветные иконки START
+  .fa-skype {
+      color: #0078d7
+  }
+
+  .fa-viber {
+      color: #665CAC
+  }
+
+  .fa-whatsapp {
+      color: #25D366
+  }
+
+  .fa-telegram-plane {
+      color: #0088CC
+  }
+
+  .fa-facebook-messenger {
+      color: #9C32F7
+  }
+   END */
 }
 .messenger-link:hover, .messenger-link:active, .messenger-link:focus {
-  color: #fff;
-}
-.messenger-link .fa-skype {
-  color: #0078d7;
-}
-.messenger-link .fa-viber {
-  color: #665CAC;
-}
-.messenger-link .fa-whatsapp {
-  color: #25D366;
-}
-.messenger-link .fa-telegram-plane {
-  color: #0088CC;
-}
-.messenger-link .fa-facebook-messenger {
-  color: #9C32F7;
+  color: #28325D;
 }
 
 .phone, .phone-item {
@@ -22939,6 +22967,11 @@ a:hover, a:active, a:focus {
 .front-news-box:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+.front-news-box img {
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .front-news-inner {
   padding: 20px 20px 30px;

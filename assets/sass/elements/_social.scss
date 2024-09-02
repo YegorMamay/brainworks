@@ -8,22 +8,23 @@
     }
 
     &-item {
-        margin: 0 7px;
+        margin: 0 5px;
     }
 
     &-link {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 23px;
+        font-size: 26px;
         color: $iconColor;
+        /* Раскомментируй, если нужены цветные иконки START
         background: $themeColor5;
         border-radius: $borderRadius;
-        //box-shadow: $shadow;
+        box-shadow: $shadow;
         width: 35px;
         height: 35px;
 
-        /* Закомментируй или удали, если нужен только один цвет иконок START */
+
         &.social-facebook {
             //color: #4267B2;
             background: #4267B2;
@@ -63,12 +64,12 @@
             //color: #4C75A3;
             background: #4C75A3;
         }
-        /* END */
+         END */
 
         &:hover,
         &:active,
         &:focus {
-            //color: $iconColorActive; // раскомментируй, если нужен только один цвет иконок
+            color: $iconColorActive; // раскомментируй, если нужен только один цвет иконок
             //background: $themeColor2; // раскомментируй, если нужен только один цвет иконок
         }
     }
