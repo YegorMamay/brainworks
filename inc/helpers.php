@@ -258,71 +258,82 @@ if (!function_exists('get_social')) {
     function get_social()
     {
         $_socials = [
-            'vk' => [
-                'url' => get_theme_mod('bw_social_vk'),
-                'text' => 'Vk',
-                'icon' => 'fab fa-vk',
-                'icon-html' => get_theme_mod('bw_social_vk_icon'),
-            ],
-            'twitter' => [
-                'url' => get_theme_mod('bw_social_twitter'),
-                'text' => 'Twitter',
-                'icon' => 'fab fa-twitter',
-                'icon-html' => get_theme_mod('bw_social_twitter_icon'),
-            ],
             'facebook' => [
                 'url' => get_theme_mod('bw_social_facebook'),
                 'text' => 'Facebook',
                 'icon' => 'fab fa-facebook-square',
                 'icon-html' => get_theme_mod('bw_social_facebook_icon'),
-            ],
-            'linkedin' => [
-                'url' => get_theme_mod('bw_social_linkedin'),
-                'text' => 'Linkedin',
-                'icon' => 'fab fa-linkedin-in',
-                'icon-html' => get_theme_mod('bw_social_linkedin_icon'),
+                'img-link' => get_theme_mod('bw_social_facebook_img'),
             ],
             'instagram' => [
                 'url' => get_theme_mod('bw_social_instagram'),
                 'text' => 'Instagram',
                 'icon' => 'fab fa-instagram',
                 'icon-html' => get_theme_mod('bw_social_instagram_icon'),
-            ],
-            'tiktok' => [
-                'url' => get_theme_mod('bw_social_tiktok'),
-                'text' => 'TikTok',
-                'icon' => 'fab fa-tiktok',
-                'icon-html' => get_theme_mod('bw_social_tiktok_icon'),
+                'img-link' => get_theme_mod('bw_social_instagram_img'),
             ],
             'youtube' => [
                 'url' => get_theme_mod('bw_social_youtube'),
                 'text' => 'YouTube',
                 'icon' => 'fab fa-youtube',
                 'icon-html' => get_theme_mod('bw_social_youtube_icon'),
+                'img-link' => get_theme_mod('bw_social_youtube_img'),
+            ],
+            'tiktok' => [
+                'url' => get_theme_mod('bw_social_tiktok'),
+                'text' => 'TikTok',
+                'icon' => 'fab fa-tiktok',
+                'icon-html' => get_theme_mod('bw_social_tiktok_icon'),
+                'img-link' => get_theme_mod('bw_social_tiktok_img'),
+            ],
+            'linkedin' => [
+                'url' => get_theme_mod('bw_social_linkedin'),
+                'text' => 'Linkedin',
+                'icon' => 'fab fa-linkedin-in',
+                'icon-html' => get_theme_mod('bw_social_linkedin_icon'),
+                'img-link' => get_theme_mod('bw_social_linkedin_img'),
+            ],
+            'twitter' => [
+                'url' => get_theme_mod('bw_social_twitter'),
+                'text' => 'X',
+                'icon' => 'fab fa-twitter',
+                'icon-html' => get_theme_mod('bw_social_twitter_icon'),
+                'img-link' => get_theme_mod('bw_social_twitter_img'),
+            ],
+            'vk' => [
+                'url' => get_theme_mod('bw_social_vk'),
+                'text' => 'Vk',
+                'icon' => 'fab fa-vk',
+                'icon-html' => get_theme_mod('bw_social_vk_icon'),
+                'img-link' => get_theme_mod('bw_social_vk_img'),
             ],
             'odnoklassniki' => [
                 'url' => get_theme_mod('bw_social_odnoklassniki'),
                 'text' => 'Odnoklassniki',
                 'icon' => 'fab fa-odnoklassniki',
                 'icon-html' => get_theme_mod('bw_social_odnoklassniki_icon'),
+                'img-link' => get_theme_mod('bw_social_odnoklassniki_img'),
             ],
             'custom-one' => [
                 'url' => get_theme_mod('bw_social_custom_one'),
                 'text' => '',
                 'icon' => 'far fa-question-circle',
                 'icon-html' => get_theme_mod('bw_social_custom_one_icon'),
+                'img-link' => get_theme_mod('bw_social_custom_one_img'),
             ],
             'custom-two' => [
                 'url' => get_theme_mod('bw_social_custom_two'),
                 'text' => '',
                 'icon' => 'far fa-question-circle',
                 'icon-html' => get_theme_mod('bw_social_custom_two_icon'),
+                'img-link' => get_theme_mod('bw_social_custom_two_img'),
             ],
             'custom-three' => [
                 'url' => get_theme_mod('bw_social_custom_three'),
                 'text' => '',
                 'icon' => 'far fa-question-circle',
                 'icon-html' => get_theme_mod('bw_social_custom_three_icon'),
+                'img-link' => get_theme_mod('bw_social_custom_three_img'),
             ],
         ];
 

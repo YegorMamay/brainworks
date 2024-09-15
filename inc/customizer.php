@@ -601,39 +601,18 @@ function bw_customize_register($wp_customize)
     $wp_customize->add_setting('bw_social_custom_two_icon', array('default' => ''));
     $wp_customize->add_setting('bw_social_custom_three_icon', array('default' => ''));
 
-    $wp_customize->add_control('bw_social_vk', array(
-        'label' => __('Vk', 'brainworks'),
-        'section' => 'bw_social',
-        'settings' => 'bw_social_vk',
-        'type' => 'text',
-    ));
+    $wp_customize->add_setting('bw_social_vk_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_twitter_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_facebook_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_linkedin_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_instagram_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_tiktok_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_youtube_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_odnoklassniki_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_custom_one_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_custom_two_img', array('default' => ''));
+    $wp_customize->add_setting('bw_social_custom_three_img', array('default' => ''));
 
-    $wp_customize->add_control('bw_social_vk_icon', array(
-        'label' => 'Vk Icon',
-        'section' => 'bw_social',
-        'settings' => 'bw_social_vk_icon',
-        'type' => 'text',
-        'input_attrs' => array(
-            'placeholder' => '<i class="fab fa-vk"></i>',
-        ),
-    ));
-
-    $wp_customize->add_control('bw_social_twitter', array(
-        'label' => __('Twitter', 'brainworks'),
-        'section' => 'bw_social',
-        'settings' => 'bw_social_twitter',
-        'type' => 'text',
-    ));
-
-    $wp_customize->add_control('bw_social_twitter_icon', array(
-        'label' => 'Twitter Icon',
-        'section' => 'bw_social',
-        'settings' => 'bw_social_twitter_icon',
-        'type' => 'text',
-        'input_attrs' => array(
-            'placeholder' => '<i class="fab fa-twitter"></i>',
-        ),
-    ));
 
     $wp_customize->add_control('bw_social_facebook', array(
         'label' => __('Facebook', 'brainworks'),
@@ -652,22 +631,16 @@ function bw_customize_register($wp_customize)
         ),
     ));
 
-    $wp_customize->add_control('bw_social_linkedin', array(
-        'label' => __('Linkedin', 'brainworks'),
+    $wp_customize->add_control('bw_social_facebook_img', array(
+        'label' => 'Facebook Image',
         'section' => 'bw_social',
-        'settings' => 'bw_social_linkedin',
-        'type' => 'text',
-    ));
-
-    $wp_customize->add_control('bw_social_linkedin_icon', array(
-        'label' => 'Linkedin Icon',
-        'section' => 'bw_social',
-        'settings' => 'bw_social_linkedin_icon',
+        'settings' => 'bw_social_facebook_img',
         'type' => 'text',
         'input_attrs' => array(
-            'placeholder' => '<i class="fab fa-linkedin-in"></i>',
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
         ),
     ));
+
 
     $wp_customize->add_control('bw_social_instagram', array(
         'label' => __('Instagram', 'brainworks'),
@@ -683,6 +656,44 @@ function bw_customize_register($wp_customize)
         'type' => 'text',
         'input_attrs' => array(
             'placeholder' => '<i class="fab fa-instagram"></i>',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_instagram_img', array(
+        'label' => 'Instagram Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_instagram_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
+        ),
+    ));
+
+
+    $wp_customize->add_control('bw_social_youtube', array(
+        'label' => __('YouTube', 'brainworks'),
+        'section' => 'bw_social',
+        'settings' => 'bw_social_youtube',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_control('bw_social_youtube_icon', array(
+        'label' => 'YouTube Icon',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_youtube_icon',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => '<i class="fab fa-youtube"></i>',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_youtube_img', array(
+        'label' => 'Youtube Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_youtube_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
         ),
     ));
 
@@ -703,22 +714,98 @@ function bw_customize_register($wp_customize)
         ),
     ));
 
-    $wp_customize->add_control('bw_social_youtube', array(
-        'label' => __('YouTube', 'brainworks'),
+    $wp_customize->add_control('bw_social_tiktok_img', array(
+        'label' => 'Tiktok Image',
         'section' => 'bw_social',
-        'settings' => 'bw_social_youtube',
+        'settings' => 'bw_social_tiktok_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_linkedin', array(
+        'label' => __('Linkedin', 'brainworks'),
+        'section' => 'bw_social',
+        'settings' => 'bw_social_linkedin',
         'type' => 'text',
     ));
 
-    $wp_customize->add_control('bw_social_youtube_icon', array(
-        'label' => 'YouTube Icon',
+    $wp_customize->add_control('bw_social_linkedin_icon', array(
+        'label' => 'Linkedin Icon',
         'section' => 'bw_social',
-        'settings' => 'bw_social_youtube_icon',
+        'settings' => 'bw_social_linkedin_icon',
         'type' => 'text',
         'input_attrs' => array(
-            'placeholder' => '<i class="fab fa-youtube"></i>',
+            'placeholder' => '<i class="fab fa-linkedin-in"></i>',
         ),
     ));
+
+    $wp_customize->add_control('bw_social_linkedin_img', array(
+        'label' => 'Linkedin Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_linkedin_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
+        ),
+    ));
+
+
+    $wp_customize->add_control('bw_social_twitter', array(
+        'label' => __('X', 'brainworks'),
+        'section' => 'bw_social',
+        'settings' => 'bw_social_twitter',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_control('bw_social_twitter_icon', array(
+        'label' => 'X Icon',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_twitter_icon',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => '<i class="fab fa-twitter"></i>',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_twitter_img', array(
+        'label' => 'X Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_twitter_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_vk', array(
+        'label' => __('Vk', 'brainworks'),
+        'section' => 'bw_social',
+        'settings' => 'bw_social_vk',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_control('bw_social_vk_icon', array(
+        'label' => 'Vk Icon',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_vk_icon',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => '<i class="fab fa-vk"></i>',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_vk_img', array(
+        'label' => 'Vk Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_vk_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
+        ),
+    ));
+
 
     $wp_customize->add_control('bw_social_odnoklassniki', array(
         'label' => __('Odnoklassniki', 'brainworks'),
@@ -734,6 +821,16 @@ function bw_customize_register($wp_customize)
         'type' => 'text',
         'input_attrs' => array(
             'placeholder' => '<i class="fab fa-odnoklassniki"></i>',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_odnoklassniki_img', array(
+        'label' => 'Odnoklassniki Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_odnoklassniki_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
         ),
     ));
 
@@ -754,6 +851,16 @@ function bw_customize_register($wp_customize)
         ),
     ));
 
+    $wp_customize->add_control('bw_social_custom_one_img', array(
+        'label' => 'Custom one Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_custom_one_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
+        ),
+    ));
+
     $wp_customize->add_control('bw_social_custom_two', array(
         'label' => 'Custom social',
         'section' => 'bw_social',
@@ -771,6 +878,16 @@ function bw_customize_register($wp_customize)
         ),
     ));
 
+    $wp_customize->add_control('bw_social_custom_two_img', array(
+        'label' => 'Custom two Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_custom_two_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
+        ),
+    ));
+
     $wp_customize->add_control('bw_social_custom_three', array(
         'label' => 'Custom social',
         'section' => 'bw_social',
@@ -785,6 +902,16 @@ function bw_customize_register($wp_customize)
         'type' => 'text',
         'input_attrs' => array(
             'placeholder' => '<i class="fa fa-icon"></i>',
+        ),
+    ));
+
+    $wp_customize->add_control('bw_social_custom_three_img', array(
+        'label' => 'Custom three Image',
+        'section' => 'bw_social',
+        'settings' => 'bw_social_custom_three_img',
+        'type' => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'https://naked.brainworks.pro/wp-content/uploads/example-img.jpg',
         ),
     ));
 

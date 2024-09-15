@@ -70,8 +70,12 @@ if (!function_exists('bw_social_shortcode')) {
 
             foreach (get_social() as $name => $social) {
                 $icon_fallback = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($social['icon']));
+                if (!empty($social['img-link'])) {
+                    $icon = sprintf('<img src="%s" alt="%s">', esc_url($social['img-link']), esc_attr($social['text']));
+                } else {
+                    $icon = !empty($social['icon-html']) ? strip_tags($social['icon-html'], '<i>') : $icon_fallback;
+                }
 
-                $icon = !empty($social['icon-html']) ? strip_tags($social['icon-html'], '<i>') : $icon_fallback;
 
                 $items .= sprintf(
                     '<li class="social-item">%s</li>',

@@ -17,6 +17,9 @@
         align-items: center;
         font-size: 26px;
         color: $iconColor;
+        img {
+            max-width: 25px;
+        }
         /* Раскомментируй, если нужены цветные иконки START
         background: $themeColor5;
         border-radius: $borderRadius;
