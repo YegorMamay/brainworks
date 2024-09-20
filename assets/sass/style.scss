@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 02.09.24
+Version: 20.09.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -153,7 +153,7 @@ body {
     min-height: 100%;
 
     @media #{$desktop-max} {
-        padding-top: 67px;
+        padding-top: 67px; // отступ от шапки на мобильной версии сайта
     }
 }
 

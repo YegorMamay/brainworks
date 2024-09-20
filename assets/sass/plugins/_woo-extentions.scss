@@ -165,3 +165,9 @@ del .woocommerce-Price-amount bdi {
 .isb_sale_badge {
     z-index: 2;
 }
+
+//Load more button
+#isw-load-more-button {
+    @extend .btn;
+    @extend .btn1;
+}
