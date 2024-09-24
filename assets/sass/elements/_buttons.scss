@@ -557,3 +557,10 @@ fieldset:disabled a.btn {
         font-size: 14px;
     }
 }
+
+//Кнопка в форме логина
+.button.button-primary {
+    @extend .btn;
+    @extend .btn1;
+    margin-top: 15px;
+}

@@ -129,6 +129,19 @@
                     </div> -->
                 </div>
 
+                <!-- Кнопка логина -->
+                <?php if ( is_user_logged_in() ) : ?>
+                    <!-- Если пользователь залогинен, показываем кнопку выхода -->
+                    <a href="<?php echo wp_logout_url( get_permalink() ); ?>" class="btn btn1">
+                        <?php _e('Log Out', 'brainworks'); ?> <i class="fa-light fa-arrow-right-from-bracket"></i>
+                    </a>
+                <?php else : ?>
+                    <!-- Если пользователь не залогинен, показываем кнопку входа -->
+                    <a href="<?php echo esc_url( '/login/?redirect_to=' . urlencode( get_permalink() ) ); ?>" class="btn btn2"><i class="fa-light fa-user"></i>
+                        <?php _e('Log In', 'brainworks'); ?>
+                    </a>
+                <?php endif; ?>
+
                 <!-- Language switcher menu. START -->
                 <div class="nav-wrapper language-switcher">
                     <?php if (has_nav_menu('language-switcher') && function_exists('pll_the_languages')) { ?>

@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 02.09.24
+Version: 24.09.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -21964,11 +21964,11 @@ button {
   cursor: pointer;
 }
 
-.btn, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+.btn, .button.button-primary, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce a.button.alt,
 .woocommerce button.button.alt,
-.woocommerce input.button.alt, .tinvwl_button_close {
+.woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -21988,82 +21988,82 @@ button {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-.btn:hover, .woocommerce a.added_to_cart:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
+.btn:hover, .button.button-primary:hover, .woocommerce a.added_to_cart:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover, .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover, .tinvwl_button_close:hover, .btn:focus, .woocommerce a.added_to_cart:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
+.woocommerce input.button.alt:hover, .tinvwl_button_close:hover, #isw-load-more-button:hover, .btn:focus, .button.button-primary:focus, .woocommerce a.added_to_cart:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
 .woocommerce button.button:focus,
 .woocommerce input.button:focus, .woocommerce a.button.alt:focus,
 .woocommerce button.button.alt:focus,
-.woocommerce input.button.alt:focus, .tinvwl_button_close:focus {
+.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, #isw-load-more-button:focus {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none;
 }
-.btn:focus, .woocommerce a.added_to_cart:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
+.btn:focus, .button.button-primary:focus, .woocommerce a.added_to_cart:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
 .woocommerce button.button:focus,
 .woocommerce input.button:focus, .woocommerce a.button.alt:focus,
 .woocommerce button.button.alt:focus,
-.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, .btn.focus, .woocommerce a.focus.added_to_cart, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
+.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, #isw-load-more-button:focus, .btn.focus, .focus.button.button-primary, .woocommerce a.focus.added_to_cart, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
 .woocommerce button.focus.button,
 .woocommerce input.focus.button, .woocommerce a.focus.button.alt,
 .woocommerce button.focus.button.alt,
-.woocommerce input.focus.button.alt, .focus.tinvwl_button_close {
+.woocommerce input.focus.button.alt, .focus.tinvwl_button_close, .focus#isw-load-more-button {
   outline: 0;
   -webkit-box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25);
           box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25);
 }
-.btn.disabled, .woocommerce a.disabled.added_to_cart, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
+.btn.disabled, .disabled.button.button-primary, .woocommerce a.disabled.added_to_cart, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
 .woocommerce button.disabled.button,
 .woocommerce input.disabled.button, .woocommerce a.disabled.button.alt,
 .woocommerce button.disabled.button.alt,
-.woocommerce input.disabled.button.alt, .disabled.tinvwl_button_close, .btn:disabled, .woocommerce a.added_to_cart:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
+.woocommerce input.disabled.button.alt, .disabled.tinvwl_button_close, .disabled#isw-load-more-button, .btn:disabled, .button.button-primary:disabled, .woocommerce a.added_to_cart:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
 .woocommerce button.button:disabled,
 .woocommerce input.button:disabled, .woocommerce a.button.alt:disabled,
 .woocommerce button.button.alt:disabled,
-.woocommerce input.button.alt:disabled, .tinvwl_button_close:disabled {
+.woocommerce input.button.alt:disabled, .tinvwl_button_close:disabled, #isw-load-more-button:disabled {
   opacity: 0.65;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn:not(:disabled):not(.disabled), .woocommerce a.added_to_cart:not(:disabled):not(.disabled), .woocommerce #respond input#submit:not(:disabled):not(.disabled), .woocommerce a.button:not(:disabled):not(.disabled),
+.btn:not(:disabled):not(.disabled), .button.button-primary:not(:disabled):not(.disabled), .woocommerce a.added_to_cart:not(:disabled):not(.disabled), .woocommerce #respond input#submit:not(:disabled):not(.disabled), .woocommerce a.button:not(:disabled):not(.disabled),
 .woocommerce button.button:not(:disabled):not(.disabled),
 .woocommerce input.button:not(:disabled):not(.disabled), .woocommerce a.button.alt:not(:disabled):not(.disabled),
 .woocommerce button.button.alt:not(:disabled):not(.disabled),
-.woocommerce input.button.alt:not(:disabled):not(.disabled), .tinvwl_button_close:not(:disabled):not(.disabled) {
+.woocommerce input.button.alt:not(:disabled):not(.disabled), .tinvwl_button_close:not(:disabled):not(.disabled), #isw-load-more-button:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-.btn:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
+.btn:not(:disabled):not(.disabled):active, .button.button-primary:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
 .woocommerce button.button:not(:disabled):not(.disabled):active,
 .woocommerce input.button:not(:disabled):not(.disabled):active, .woocommerce a.button.alt:not(:disabled):not(.disabled):active,
 .woocommerce button.button.alt:not(:disabled):not(.disabled):active,
-.woocommerce input.button.alt:not(:disabled):not(.disabled):active, .tinvwl_button_close:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
+.woocommerce input.button.alt:not(:disabled):not(.disabled):active, .tinvwl_button_close:not(:disabled):not(.disabled):active, #isw-load-more-button:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .button.button-primary:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
 .woocommerce button.button:not(:disabled):not(.disabled).active,
 .woocommerce input.button:not(:disabled):not(.disabled).active, .woocommerce a.button.alt:not(:disabled):not(.disabled).active,
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active,
-.woocommerce input.button.alt:not(:disabled):not(.disabled).active, .tinvwl_button_close:not(:disabled):not(.disabled).active {
+.woocommerce input.button.alt:not(:disabled):not(.disabled).active, .tinvwl_button_close:not(:disabled):not(.disabled).active, #isw-load-more-button:not(:disabled):not(.disabled).active {
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
+.btn:not(:disabled):not(.disabled):active:focus, .button.button-primary:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled):active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled):active:focus, .woocommerce a.button.alt:not(:disabled):not(.disabled):active:focus,
 .woocommerce button.button.alt:not(:disabled):not(.disabled):active:focus,
-.woocommerce input.button.alt:not(:disabled):not(.disabled):active:focus, .tinvwl_button_close:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
+.woocommerce input.button.alt:not(:disabled):not(.disabled):active:focus, .tinvwl_button_close:not(:disabled):not(.disabled):active:focus, #isw-load-more-button:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, .button.button-primary:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled).active:focus, .woocommerce a.button.alt:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active:focus,
-.woocommerce input.button.alt:not(:disabled):not(.disabled).active:focus, .tinvwl_button_close:not(:disabled):not(.disabled).active:focus {
+.woocommerce input.button.alt:not(:disabled):not(.disabled).active:focus, .tinvwl_button_close:not(:disabled):not(.disabled).active:focus, #isw-load-more-button:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
           box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn:active, .woocommerce a.added_to_cart:active, .woocommerce #respond input#submit:active, .woocommerce a.button:active,
+.btn:active, .button.button-primary:active, .woocommerce a.added_to_cart:active, .woocommerce #respond input#submit:active, .woocommerce a.button:active,
 .woocommerce button.button:active,
 .woocommerce input.button:active, .woocommerce a.button.alt:active,
 .woocommerce button.button.alt:active,
-.woocommerce input.button.alt:active, .tinvwl_button_close:active {
+.woocommerce input.button.alt:active, .tinvwl_button_close:active, #isw-load-more-button:active {
   bottom: -3px;
   -webkit-transition: bottom 0.5s ease-in;
   transition: bottom 0.5s ease-in;
@@ -22071,23 +22071,25 @@ button {
   transition: all 0.4s;
 }
 
-a.btn.disabled, .woocommerce a.disabled.added_to_cart, .woocommerce a.disabled.button, .woocommerce a.disabled.button.alt, a.disabled.tinvwl_button_close,
+a.btn.disabled, a.disabled.button.button-primary, .woocommerce a.disabled.added_to_cart, .woocommerce a.disabled.button, .woocommerce a.disabled.button.alt, a.disabled.tinvwl_button_close, a.disabled#isw-load-more-button,
 fieldset:disabled a.btn,
+fieldset:disabled a.button.button-primary,
 fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce fieldset:disabled a.added_to_cart,
 fieldset:disabled .woocommerce a.button,
 .woocommerce fieldset:disabled a.button,
 fieldset:disabled .woocommerce a.button.alt,
 .woocommerce fieldset:disabled a.button.alt,
-fieldset:disabled a.tinvwl_button_close {
+fieldset:disabled a.tinvwl_button_close,
+fieldset:disabled a#isw-load-more-button {
   pointer-events: none;
 }
 
-.btn1, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+.btn1, .button.button-primary, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce a.button.alt,
 .woocommerce button.button.alt,
-.woocommerce input.button.alt, .tinvwl_button_close {
+.woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
   background: #28325D;
   position: relative;
   z-index: 1;
@@ -22095,11 +22097,11 @@ fieldset:disabled a.tinvwl_button_close {
   color: #fff;
   border-color: #28325D;
 }
-.btn1:after, .woocommerce #respond input#submit:after, .woocommerce #respond input#submit.alt:after, .woocommerce a.button:after,
+.btn1:after, .button.button-primary:after, .woocommerce #respond input#submit:after, .woocommerce #respond input#submit.alt:after, .woocommerce a.button:after,
 .woocommerce button.button:after,
 .woocommerce input.button:after, .woocommerce a.button.alt:after,
 .woocommerce button.button.alt:after,
-.woocommerce input.button.alt:after, .tinvwl_button_close:after {
+.woocommerce input.button.alt:after, .tinvwl_button_close:after, #isw-load-more-button:after {
   background: #fff;
   content: "";
   height: 155px;
@@ -22114,71 +22116,71 @@ fieldset:disabled a.tinvwl_button_close {
           transform: rotate(35deg);
   z-index: -10;
 }
-.btn1:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
+.btn1:hover, .button.button-primary:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover, .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover, .tinvwl_button_close:hover {
+.woocommerce input.button.alt:hover, .tinvwl_button_close:hover, #isw-load-more-button:hover {
   color: #fff;
   background-color: #3f4f92;
   border-color: #3f4f92;
 }
-.btn1:hover:after, .woocommerce #respond input#submit:hover:after, .woocommerce a.button:hover:after,
+.btn1:hover:after, .button.button-primary:hover:after, .woocommerce #respond input#submit:hover:after, .woocommerce a.button:hover:after,
 .woocommerce button.button:hover:after,
 .woocommerce input.button:hover:after, .woocommerce a.button.alt:hover:after,
 .woocommerce button.button.alt:hover:after,
-.woocommerce input.button.alt:hover:after, .tinvwl_button_close:hover:after {
+.woocommerce input.button.alt:hover:after, .tinvwl_button_close:hover:after, #isw-load-more-button:hover:after {
   left: 120%;
   -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn1:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
+.btn1:focus, .button.button-primary:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
 .woocommerce button.button:focus,
 .woocommerce input.button:focus, .woocommerce a.button.alt:focus,
 .woocommerce button.button.alt:focus,
-.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, .btn1.focus, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
+.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, #isw-load-more-button:focus, .btn1.focus, .focus.button.button-primary, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
 .woocommerce button.focus.button,
 .woocommerce input.focus.button, .woocommerce a.focus.button.alt,
 .woocommerce button.focus.button.alt,
-.woocommerce input.focus.button.alt, .focus.tinvwl_button_close {
+.woocommerce input.focus.button.alt, .focus.tinvwl_button_close, .focus#isw-load-more-button {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
-.btn1.disabled, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
+.btn1.disabled, .disabled.button.button-primary, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
 .woocommerce button.disabled.button,
 .woocommerce input.disabled.button, .woocommerce a.disabled.button.alt,
 .woocommerce button.disabled.button.alt,
-.woocommerce input.disabled.button.alt, .disabled.tinvwl_button_close, .btn1:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
+.woocommerce input.disabled.button.alt, .disabled.tinvwl_button_close, .disabled#isw-load-more-button, .btn1:disabled, .button.button-primary:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
 .woocommerce button.button:disabled,
 .woocommerce input.button:disabled, .woocommerce a.button.alt:disabled,
 .woocommerce button.button.alt:disabled,
-.woocommerce input.button.alt:disabled, .tinvwl_button_close:disabled {
+.woocommerce input.button.alt:disabled, .tinvwl_button_close:disabled, #isw-load-more-button:disabled {
   color: #fff;
   background-color: #6273bc;
   border-color: #6273bc;
   cursor: not-allowed;
 }
-.btn1.disabled:after, .woocommerce #respond input.disabled#submit:after, .woocommerce a.disabled.button:after,
+.btn1.disabled:after, .disabled.button.button-primary:after, .woocommerce #respond input.disabled#submit:after, .woocommerce a.disabled.button:after,
 .woocommerce button.disabled.button:after,
 .woocommerce input.disabled.button:after, .woocommerce a.disabled.button.alt:after,
 .woocommerce button.disabled.button.alt:after,
-.woocommerce input.disabled.button.alt:after, .disabled.tinvwl_button_close:after, .btn1:disabled:after, .woocommerce #respond input#submit:disabled:after, .woocommerce a.button:disabled:after,
+.woocommerce input.disabled.button.alt:after, .disabled.tinvwl_button_close:after, .disabled#isw-load-more-button:after, .btn1:disabled:after, .button.button-primary:disabled:after, .woocommerce #respond input#submit:disabled:after, .woocommerce a.button:disabled:after,
 .woocommerce button.button:disabled:after,
 .woocommerce input.button:disabled:after, .woocommerce a.button.alt:disabled:after,
 .woocommerce button.button.alt:disabled:after,
-.woocommerce input.button.alt:disabled:after, .tinvwl_button_close:disabled:after {
+.woocommerce input.button.alt:disabled:after, .tinvwl_button_close:disabled:after, #isw-load-more-button:disabled:after {
   content: none;
 }
-.btn1:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
+.btn1:not(:disabled):not(.disabled):active, .button.button-primary:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
 .woocommerce button.button:not(:disabled):not(.disabled):active,
 .woocommerce input.button:not(:disabled):not(.disabled):active, .woocommerce a.button.alt:not(:disabled):not(.disabled):active,
 .woocommerce button.button.alt:not(:disabled):not(.disabled):active,
-.woocommerce input.button.alt:not(:disabled):not(.disabled):active, .tinvwl_button_close:not(:disabled):not(.disabled):active, .btn1:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
+.woocommerce input.button.alt:not(:disabled):not(.disabled):active, .tinvwl_button_close:not(:disabled):not(.disabled):active, #isw-load-more-button:not(:disabled):not(.disabled):active, .btn1:not(:disabled):not(.disabled).active, .button.button-primary:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
 .woocommerce button.button:not(:disabled):not(.disabled).active,
 .woocommerce input.button:not(:disabled):not(.disabled).active, .woocommerce a.button.alt:not(:disabled):not(.disabled).active,
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active,
-.woocommerce input.button.alt:not(:disabled):not(.disabled).active, .tinvwl_button_close:not(:disabled):not(.disabled).active {
+.woocommerce input.button.alt:not(:disabled):not(.disabled).active, .tinvwl_button_close:not(:disabled):not(.disabled).active, #isw-load-more-button:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #4758a4;
   border-color: #4758a4;
@@ -22187,15 +22189,15 @@ fieldset:disabled a.tinvwl_button_close {
   background-color: #6273bc;
   border-color: #6273bc;
 }
-.btn1:not(:disabled):not(.disabled):active:after, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:after, .woocommerce a.button:not(:disabled):not(.disabled):active:after,
+.btn1:not(:disabled):not(.disabled):active:after, .button.button-primary:not(:disabled):not(.disabled):active:after, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:after, .woocommerce a.button:not(:disabled):not(.disabled):active:after,
 .woocommerce button.button:not(:disabled):not(.disabled):active:after,
 .woocommerce input.button:not(:disabled):not(.disabled):active:after, .woocommerce a.button.alt:not(:disabled):not(.disabled):active:after,
 .woocommerce button.button.alt:not(:disabled):not(.disabled):active:after,
-.woocommerce input.button.alt:not(:disabled):not(.disabled):active:after, .tinvwl_button_close:not(:disabled):not(.disabled):active:after, .btn1:not(:disabled):not(.disabled).active:after, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:after, .woocommerce a.button:not(:disabled):not(.disabled).active:after,
+.woocommerce input.button.alt:not(:disabled):not(.disabled):active:after, .tinvwl_button_close:not(:disabled):not(.disabled):active:after, #isw-load-more-button:not(:disabled):not(.disabled):active:after, .btn1:not(:disabled):not(.disabled).active:after, .button.button-primary:not(:disabled):not(.disabled).active:after, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:after, .woocommerce a.button:not(:disabled):not(.disabled).active:after,
 .woocommerce button.button:not(:disabled):not(.disabled).active:after,
 .woocommerce input.button:not(:disabled):not(.disabled).active:after, .woocommerce a.button.alt:not(:disabled):not(.disabled).active:after,
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active:after,
-.woocommerce input.button.alt:not(:disabled):not(.disabled).active:after, .tinvwl_button_close:not(:disabled):not(.disabled).active:after {
+.woocommerce input.button.alt:not(:disabled):not(.disabled).active:after, .tinvwl_button_close:not(:disabled):not(.disabled).active:after, #isw-load-more-button:not(:disabled):not(.disabled).active:after {
   background: rgba(255, 255, 255, 0.75);
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -22204,15 +22206,15 @@ fieldset:disabled a.tinvwl_button_close {
   -webkit-transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn1:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
+.btn1:not(:disabled):not(.disabled):active:focus, .button.button-primary:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled):active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled):active:focus, .woocommerce a.button.alt:not(:disabled):not(.disabled):active:focus,
 .woocommerce button.button.alt:not(:disabled):not(.disabled):active:focus,
-.woocommerce input.button.alt:not(:disabled):not(.disabled):active:focus, .tinvwl_button_close:not(:disabled):not(.disabled):active:focus, .btn1:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
+.woocommerce input.button.alt:not(:disabled):not(.disabled):active:focus, .tinvwl_button_close:not(:disabled):not(.disabled):active:focus, #isw-load-more-button:not(:disabled):not(.disabled):active:focus, .btn1:not(:disabled):not(.disabled).active:focus, .button.button-primary:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled).active:focus, .woocommerce a.button.alt:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active:focus,
-.woocommerce input.button.alt:not(:disabled):not(.disabled).active:focus, .tinvwl_button_close:not(:disabled):not(.disabled).active:focus {
+.woocommerce input.button.alt:not(:disabled):not(.disabled).active:focus, .tinvwl_button_close:not(:disabled):not(.disabled).active:focus, #isw-load-more-button:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
@@ -22405,11 +22407,11 @@ fieldset:disabled a.tinvwl_button_close {
 }
 
 @media (max-width: 1024px) {
-  .btn, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+  .btn, .button.button-primary, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
   .woocommerce button.button,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
-  .woocommerce input.button.alt, .tinvwl_button_close {
+  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
     padding: 12px 25px;
     font-size: 16px;
   }
@@ -22423,11 +22425,11 @@ fieldset:disabled a.tinvwl_button_close {
   }
 }
 @media (max-width: 768px) {
-  .btn, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+  .btn, .button.button-primary, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
   .woocommerce button.button,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
-  .woocommerce input.button.alt, .tinvwl_button_close {
+  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
     padding: 10px 25px;
     font-size: 15px;
   }
@@ -22441,11 +22443,11 @@ fieldset:disabled a.tinvwl_button_close {
   }
 }
 @media (max-width: 575px) {
-  .btn, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
+  .btn, .button.button-primary, .woocommerce a.added_to_cart, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
   .woocommerce button.button,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
-  .woocommerce input.button.alt, .tinvwl_button_close {
+  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
     padding: 10px 20px;
     font-size: 14px;
   }
@@ -22458,6 +22460,10 @@ fieldset:disabled a.tinvwl_button_close {
     font-size: 14px;
   }
 }
+.button.button-primary {
+  margin-top: 15px;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -22490,7 +22496,7 @@ a:hover, a:active, a:focus {
   border-radius: $borderRadius;
   box-shadow: $shadow;
   width: 35px;
-  //height: 35px;
+  height: 35px;
 
 
   &.social-facebook {
@@ -22533,6 +22539,9 @@ a:hover, a:active, a:focus {
       background: #4C75A3;
   }
    END */
+}
+.social-link img {
+  max-width: 25px;
 }
 .social-link:hover, .social-link:active, .social-link:focus {
   color: #28325D;
