@@ -125,8 +125,12 @@ table.variations {
     }
 }
 
-.woocommerce-variation.single_variation {
+.woocommerce-variation-price {
     display: none !important;
+}
+
+.woocommerce-variation.single_variation {
+    margin-bottom: 0;
 }
 
 //star rating START
