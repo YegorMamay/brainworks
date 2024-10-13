@@ -197,6 +197,38 @@ var _this = void 0;
             });
         }
     };
+
+    function isAnchorAndBlockExists(link) {
+        let href = link.getAttribute('href');
+
+        if (href.startsWith('/')) {
+            href = href.slice(1);
+        }
+        const [path, anchor] = href.split('#');
+
+        const currentPath = window.location.pathname.replace(/^\/|\/$/g, '');
+        const normalizedPath = path.replace(/^\/|\/$/g, '');
+
+        if (normalizedPath === currentPath) {
+            if (anchor) {
+                const targetElement = document.getElementById(anchor);
+
+                if (targetElement) {
+                    $('body').removeClass('body-overflow');
+                    $('.nav.js-menu').removeClass('is-active');
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    return;
+                }
+            }
+        } else {
+            window.location.href = link.getAttribute('href');
+        }
+    }
+
+    $('.nav.hide-on-desktop li.anchor-link a').on('click', function(e) {
+        e.preventDefault();
+        isAnchorAndBlockExists(this);
+    })
     var anotherHamburgerMenu = function anotherHamburgerMenu(menuElement, hamburgerElement, closeTrigger) {
         var Elements = {
             menu: $(menuElement),
@@ -389,6 +421,8 @@ var _this = void 0;
             $(this).closest('.menu-item').find('.menu-item-has-children-arrow').trigger('click');
         }
     });
+
+
 
 
     var updateCartTotalValue = function updateCartTotalValue(elemId) {
