@@ -17,16 +17,34 @@ $footerLinkColorActive: $themeColor2;
     color: $footerFontColor;
     border-bottom: 1px solid lighten($footerBgColor, 15%);
 
-    .widget-item {
-        .phone-item {
-            display: block;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .widget-item {
+            .phone-item {
+                display: block;
+            }
+
+            div {
+                padding-bottom: 20px;
+            }
         }
 
-        div {
-            padding-bottom: 20px;
+        .full-width { /* Есил добавить этот класс к виджету, он будет занимать всю ширину */
+          flex-basis: 100%;
+          margin-top: 20px;
         }
     }
 
+    @media #{$mobile-max} {
+        text-align: center;
+
+        .container {
+            flex-direction: column;
+        }
+    }
 
     ul {
         padding-left: 0;
@@ -37,14 +55,6 @@ $footerLinkColorActive: $themeColor2;
     .sub-menu-link,
     .phone-number {
         color: $footerFontColor;
-    }
-
-    @media #{$mobile-max} {
-        text-align: center;
-
-        .container {
-            flex-direction: column;
-        }
     }
 }
 

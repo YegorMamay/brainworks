@@ -36,7 +36,7 @@
 
             <div class="vh-xs-2"></div>
 
-            <a class="btn btn1 btn-sm" href="<?php echo get_permalink(); ?>"><?php _e('Continue reading', 'brainworks') ?> <i class="glyphicon glyphicon-arrow-right"></i></a>
+            <a class="btn btn1 btn-sm" href="<?php echo get_permalink(); ?>"><?php _e('Continue reading', 'brainworks') ?></a>
         </div>
     </article>
     <div class="vh-xs-2"></div>
