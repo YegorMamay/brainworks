@@ -7,7 +7,9 @@
 <?php get_header(); ?>
 <div class="container">
 
-    <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+    <?php /* if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); */ ?>
+
+    <div class="vh-xs-10"></div>
 
     <?php get_template_part('loops/content', 'page'); ?>
 

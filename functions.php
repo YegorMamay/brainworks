@@ -520,3 +520,31 @@ add_filter( 'kses_allowed_protocols', function ( $protocols ) {
     $protocols[] = 'skype';
     return $protocols;
 } );
+
+// Кнопка удаления аккаунта START
+function delete_account_button() {
+    if (is_user_logged_in()) {
+        $user_id = get_current_user_id();
+        return '<form method="post">
+                    <input type="hidden" name="delete_account" value="' . $user_id . '"/>
+                    <input type="submit" value="' . esc_attr__('Удалить аккаунт', 'brainworks') . '" onclick="return confirm(\'' . esc_js(__('Вы уверены, что хотите удалить свой аккаунт?', 'brainworks')) . '\');"/>
+                </form>';
+    }
+    return __('Вам нужно залогиниться', 'brainworks');
+}
+add_shortcode('delete_account_button', 'delete_account_button');
+
+// Обработка удаления аккаунта
+function process_delete_account() {
+    if (isset($_POST['delete_account'])) {
+        $user_id = intval($_POST['delete_account']);
+        if (get_current_user_id() === $user_id) {
+            require_once(ABSPATH . 'wp-admin/includes/user.php');
+            wp_delete_user($user_id);
+            wp_redirect(home_url());
+            exit;
+        }
+    }
+}
+add_action('init', 'process_delete_account');
+// Кнопка удаления аккаунта END

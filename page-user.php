@@ -45,7 +45,10 @@ the_post(); ?>
 
 
     } ?>
+
     <div class="vh-xs-2"></div>
+
+    <?php the_content() ?>
 
 </div><!-- /.container -->
 <?php get_footer(); ?>
