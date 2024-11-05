@@ -3,7 +3,7 @@
 <?php if (get_row_layout() == 'checkbox_1') : ?>
 
    <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
-       <h3 class="kviz-slider__title">
+       <h3 class="kviz-slider__title text-center">
            <?php the_sub_field('title') ?>
        </h3>
        <div class="kviz-slider__content">
@@ -37,7 +37,7 @@
   <?php elseif (get_row_layout() == 'checkbox_more') : ?>
 
     <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
-        <h3 class="kviz-slider__title">
+        <h3 class="kviz-slider__title text-center">
             <?php the_sub_field('title') ?>
         </h3>
         <div class="kviz-slider__content">
@@ -69,7 +69,7 @@
 <?php elseif (get_row_layout() == 'checkbox_1_img') : ?>
 
     <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
-        <h3 class="kviz-slider__title" style="text-align: center;"><?php the_sub_field('title') ?></h3>
+        <h3 class="kviz-slider__title text-center" style="text-align: center;"><?php the_sub_field('title') ?></h3>
         <div class="kviz-slider__content kviz-slider__content_img" style="padding: 0;border: 0;">
 
             <?php $checkboxList =  get_sub_field('checkbox_list') ?>
@@ -103,7 +103,7 @@
 <?php elseif (get_row_layout() == 'checkbox_more_img') : ?>
 
     <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
-        <h3 class="kviz-slider__title" style="text-align: center;"><?php the_sub_field('title') ?></h3>
+        <h3 class="kviz-slider__title text-center" style="text-align: center;"><?php the_sub_field('title') ?></h3>
         <div class="kviz-slider__content kviz-slider__content_img" style="padding: 0;border: 0;">
 
             <?php $checkboxList =  get_sub_field('checkbox_list') ?>
@@ -138,7 +138,7 @@
 <?php elseif (get_row_layout() == 'checkbox_1_col') : ?>
 
    <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
-       <h3 class="kviz-slider__title">
+       <h3 class="kviz-slider__title text-center">
            <?php the_sub_field('title') ?>
        </h3>
        <div class="kviz-slider__content">
@@ -168,7 +168,7 @@
 <?php elseif (get_row_layout() == 'checkbox_more_col') : ?>
 
    <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
-       <h3 class="kviz-slider__title">
+       <h3 class="kviz-slider__title text-center">
            <?php the_sub_field('title') ?>
        </h3>
        <div class="kviz-slider__content">
@@ -197,7 +197,7 @@
 <?php elseif (get_row_layout() == 'kviz_input') : ?>
 
     <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
-        <h3 class="kviz-slider__title">
+        <h3 class="kviz-slider__title text-center">
             <?php the_sub_field('title') ?>
         </h3>
         <div class="kviz-slider__content">
