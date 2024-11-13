@@ -20,17 +20,17 @@
                         the_author_meta('last_name'); ?>,
             <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?>
             </span>
-            */ ?>
 
             <div class="vh-xs-1"></div>
+            */ ?>
 
             <p><?php the_excerpt(); ?></p>
 
+            <?php /*
             <div class="vh-xs-1"></div>
 
-            <?php /*
-                    <time  class="text-muted text-italic bold" datetime="<?php the_time('j F Y')?>">
-            <?php the_time('j F Y')?>
+            <time  class="text-muted text-italic bold" datetime="<?php the_time('j F Y')?>">
+                <?php the_time('j F Y')?>
             </time>
             */ ?>
 

@@ -19,7 +19,7 @@ $SubMenuFontColor: $themeColor5;
     background: $menuBgColor;
 
     @media #{$desktop-min} {
-        border-top: 1px solid lighten($menuBgColor, 5%);
+        //border-top: 1px solid lighten($menuBgColor, 5%);
     }
 
     &-wrapper {
