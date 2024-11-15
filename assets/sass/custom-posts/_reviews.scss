@@ -60,12 +60,13 @@ $review-next: '\00bb'; // &raquo;
     }
 
     &-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
         position: absolute;
         right: 10px;
         bottom: 0;
-        display: inline-block;
-        vertical-align: middle;
         width: $review-social-size;
         height: $review-social-size;
         font-size: 15px;
@@ -263,8 +264,8 @@ $review-next: '\00bb'; // &raquo;
 
 .slick-slide {
     float: left;
-    height: 100%;
-    min-height: 1px;
+    //height: 100%;
+    //min-height: 1px;
     //margin: 10px;
 
     [dir="rtl"] & {

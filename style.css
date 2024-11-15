@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 13.11.24
+Version: 15.11.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -20939,12 +20939,19 @@ ol.commentlist .comment-body {
   border-radius: 50% !important;
 }
 .review-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   position: absolute;
   right: 10px;
   bottom: 0;
-  display: inline-block;
-  vertical-align: middle;
   width: 25px;
   height: 25px;
   font-size: 15px;
@@ -21095,8 +21102,6 @@ ol.commentlist .comment-body {
 
 .slick-slide {
   float: left;
-  height: 100%;
-  min-height: 1px;
   display: none;
 }
 [dir=rtl] .slick-slide {
