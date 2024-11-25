@@ -548,3 +548,9 @@ function process_delete_account() {
 }
 add_action('init', 'process_delete_account');
 // Кнопка удаления аккаунта END
+
+// Замена текста в подвале админки
+function custom_admin_footer_text() {
+    return __('Created with love by <a href="https://brainworks.in.ua/" target="_blank">BrainWorks</a>', 'brainworks');
+}
+add_filter('admin_footer_text', 'custom_admin_footer_text');
