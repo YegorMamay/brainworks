@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.5.0
+ * @see https://woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 9.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -38,8 +38,6 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     <div class="col2-set" id="checkout-form">
         <div class="col-12 col-sm-12 col-md-6" id="customer_details">
         	<?php do_action( 'woocommerce_checkout_billing' ); ?>
-
-            <!-- Additional info -->
         	<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 	        <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
         </div>

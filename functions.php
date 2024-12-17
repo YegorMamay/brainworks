@@ -554,3 +554,20 @@ function custom_admin_footer_text() {
     return __('Created with love by <a href="https://brainworks.in.ua/" target="_blank">BrainWorks</a>', 'brainworks');
 }
 add_filter('admin_footer_text', 'custom_admin_footer_text');
+
+// Если юзер не админ логинится в админку, переадресовывается на Главную
+add_action('admin_init', 'redirect_non_admin_users');
+
+function redirect_non_admin_users() {
+    // Проверяем, залогинен ли пользователь
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+
+        // Если пользователь не администратор и это не AJAX-запрос
+        if (!in_array('administrator', $user->roles) && !defined('DOING_AJAX')) {
+            wp_redirect(home_url('/user/')); // Перенаправляем на Главную
+            exit;
+        }
+    }
+}
+// Если юзер не админ END
