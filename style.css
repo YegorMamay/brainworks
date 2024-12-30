@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 15.11.24
+Version: 30.12.24
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -18099,6 +18099,11 @@ strong {
   width: 100%;
 }
 
+.single-product .isb_sale_badge {
+  right: 15px !important;
+  z-index: 99999 !important;
+}
+
 .woocommerce-account .woocommerce-MyAccount-navigation li {
   margin-bottom: 5px;
 }
@@ -21431,13 +21436,7 @@ textarea {
   font-family: inherit;
 }
 
-.is-mobile input,
-.is-mobile select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
+/* Этот класс добавляется к тэгу html, если ползователь заходит с мобильного. Позволяет добавить нужные стили для мобильных устройств */
 /* file upload button */
 input[type=file]::-webkit-file-upload-button {
   border-radius: 4px;
@@ -22967,8 +22966,18 @@ a:hover, a:active, a:focus {
       justify-content: space-around;
   padding-left: 0;
 }
+@media (max-width: 768px) {
+  .second-menu ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .second-menu ul li {
-  margin: 0 10px;
+  padding: 0 10px;
+}
+.second-menu ul li:first-child {
+  border-right: 1px solid #fff;
 }
 .second-menu ul li a {
   text-decoration: none;
@@ -23078,7 +23087,7 @@ a:hover, a:active, a:focus {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 999999;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -23144,6 +23153,9 @@ a:hover, a:active, a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.nav .menu-container .current-menu-item a {
+  color: #BB2440;
 }
 .nav .menu-item {
   display: inline-block;

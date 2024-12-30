@@ -19,3 +19,9 @@
 .iti {
     width: 100%;
 }
+
+// Improved Badges for WooCommerce
+.single-product .isb_sale_badge {
+    right: 15px !important;
+    z-index: 99999 !important;
+}
