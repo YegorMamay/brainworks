@@ -32,7 +32,8 @@ $footerLinkColorActive: $themeColor2;
             }
         }
 
-        .full-width { /* Есил добавить этот класс к виджету, он будет занимать всю ширину */
+        /* Есил добавить этот класс к виджету, он будет занимать всю ширину */
+        .full-width {
           flex-basis: 100%;
           margin-top: 20px;
         }
@@ -65,16 +66,18 @@ $footerLinkColorActive: $themeColor2;
 
     div,
     nav {
-        margin: 14px 0;
+        margin: 10px 0;
+        font-size: 14px;
 
         @media #{$mobile-max} {
-            margin: 8px 0;
+            margin: 2px 0;
         }
     }
 
     a {
         color: $footerFontColor;
         text-decoration: underline;
+        font-size: 14px;
 
         &:hover {
             color: $footerLinkColorActive;
@@ -85,5 +88,6 @@ $footerLinkColorActive: $themeColor2;
     @media #{$mobile-max} {
         flex-direction: column;
         text-align: center;
+        padding: 10px 0;
     }
 }
