@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 30.12.24
+Version: 15.01.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -22957,6 +22957,15 @@ a:hover, a:active, a:focus {
   width: 100px;
 }
 
+.second-menu {
+  max-width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 575px) {
+  .second-menu {
+    max-width: 100%;
+  }
+}
 .second-menu ul {
   list-style: none;
   display: -webkit-box;
@@ -22964,6 +22973,8 @@ a:hover, a:active, a:focus {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-left: 0;
 }
 @media (max-width: 768px) {
@@ -23722,6 +23733,7 @@ a:hover, a:active, a:focus {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  /* Есил добавить этот класс к виджету, он будет занимать всю ширину */
 }
 .pre-footer .container .widget-item .phone-item {
   display: block;
@@ -23729,7 +23741,7 @@ a:hover, a:active, a:focus {
 .pre-footer .container .widget-item div {
   padding-bottom: 20px;
 }
-.pre-footer .container .full-width { /* Есил добавить этот класс к виджету, он будет занимать всю ширину */
+.pre-footer .container .full-width {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-top: 20px;
@@ -23766,8 +23778,9 @@ a:hover, a:active, a:focus {
 }
 .copyright div,
 .copyright nav {
-  margin: 14px 0;
+  margin: 10px 0;
   font-size: 14px;
+  text-wrap: nowrap;
 }
 @media (max-width: 575px) {
   .copyright div,

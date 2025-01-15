@@ -1,8 +1,16 @@
 .second-menu {
+    max-width: 60%;
+    margin: 0 auto;
+
+    @media #{$mobile-max} {
+        max-width: 100%;
+    }
+
     ul {
         list-style: none;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         padding-left: 0;
 
         @media #{$tablet-max} {
