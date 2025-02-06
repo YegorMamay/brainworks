@@ -71,6 +71,20 @@ ul.products {
 }
 //Improved Product Options for WooCommerce END
 
+
+// Improved Badges for WooCommerce START
+.single-product .isb_sale_badge {
+    right: 15px !important;
+    z-index: 99999 !important;
+}
+
+.related, .upsells {
+    .isb_sale_badge {
+        right: 0 !important;
+    }
+}
+// Improved Badges for WooCommerce END
+
 /*
 //YITH Product Description in Loop for WooCommerce
 .yith_pdil {

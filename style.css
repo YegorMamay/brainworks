@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 15.01.25
+Version: 6.02.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -18099,11 +18099,6 @@ strong {
   width: 100%;
 }
 
-.single-product .isb_sale_badge {
-  right: 15px !important;
-  z-index: 99999 !important;
-}
-
 .woocommerce-account .woocommerce-MyAccount-navigation li {
   margin-bottom: 5px;
 }
@@ -18808,7 +18803,6 @@ table.variations tbody tr {
   line-height: 1;
   font-weight: bold;
   color: #BB2440;
-  margin-bottom: 5px;
 }
 .woocommerce div.product .woocommerce-product-details__short-description {
   margin: 20px 0 10px 0;
@@ -18823,6 +18817,43 @@ table.variations tbody tr {
 
 .tabs .active {
   color: #BB2440;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  border: 1px solid #BB2440;
+  background-color: #fae4e8;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+  color: #BB2440;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+  color: #28325D;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+  color: #28325D;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a:hover {
+  color: #BB2440;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+  border-bottom: 1px solid #BB2440;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+  border: 1px solid #BB2440;
+  border-width: 0 1px 1px 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after {
+  border: 1px solid #BB2440;
+  border-width: 0 0 1px 1px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media (max-width: 575px) {
@@ -19014,6 +19045,15 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
 
 .ivpa_quantity input {
   width: 70px;
+}
+
+.single-product .isb_sale_badge {
+  right: 15px !important;
+  z-index: 99999 !important;
+}
+
+.related .isb_sale_badge, .upsells .isb_sale_badge {
+  right: 0 !important;
 }
 
 /*

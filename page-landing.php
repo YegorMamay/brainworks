@@ -11,8 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
-
 
     <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-brands-400.woff2'); ?>" crossorigin>
     <link rel="preload" as="font" href="<?php echo esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome/fa-light-300.woff2'); ?>" crossorigin>
@@ -21,7 +21,6 @@
     <?php if(is_plugin_active($plugin)){ ?>
     <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
     <?php } ?>
-
 
     <!-- Delete if YoastSEO plugin activated. START -->
     <title>
