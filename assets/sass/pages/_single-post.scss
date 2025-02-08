@@ -1,3 +1,8 @@
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
 //Comments list
 ol.commentlist {
     .comment-body {

@@ -12,36 +12,39 @@
             <?php if (!is_front_page() && function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 
             <?php if (have_posts()): while (have_posts()): the_post(); ?>
-            <article id="post_<?php the_ID() ?>" <?php post_class() ?>>
-                <h1 class="single-title mrgn-bot-15"><?php the_title() ?></h1>
+            <article id="post_<?php the_ID() ?>" <?php post_class() ?> itemscope itemtype="https://schema.org/Article">
+                <h1 class="single-title mrgn-bot-15" itemprop="headline"><?php the_title() ?></h1>
 
-                <?php /*
+                <!-- Метаинформация статьи -->
+                <meta itemprop="author" content="<?php the_author() ?>" />
+                <meta itemprop="datePublished" content="<?php the_date('c') ?>" />
+                <meta itemprop="dateModified" content="<?php the_modified_date('c') ?>" />
 
-             <p class="text-muted" style="margin-bottom: 30px;">
-                <i class="fa-light fa-folder"></i>&nbsp; <?php _e('Filed under', 'brainworks'); ?>: <?php the_category(', ') ?><br />
-                <i class="fa-light fa-comment"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
-                </p>
+                <div class="post-meta">
+                    <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                        <meta itemprop="name" content="<?php bloginfo('name'); ?>" />
+                    </span>
+                    <span itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>"></span>
+                </div>
 
-                */ ?>
-
-                <section class="mrgn-bot-20">
-                    <?php /* the_post_thumbnail('full'); */ ?>
+                <section class="mrgn-bot-20" itemprop="articleBody">
                     <?php the_content() ?>
                     <?php wp_link_pages(); ?>
                 </section>
+
+                <!-- Преобразованный код для тега "Публикации" -->
+                <p class="tags" itemprop="keywords"><?php the_tags( '', '', '' ) ?></p>
             </article>
 
             <hr>
 
-            <?php /*
-    <span class="text-muted text-italic bold">
-        <?php _e('By', 'brainworks'); echo " "; the_author_meta('first_name'); echo " "; the_author_meta('last_name'); ?>,
-            <?php _e('Category', 'brainworks'); ?>: <?php the_category(', '); ?>,
-            <time class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php the_time('j F Y') ?></time>
-            </span>
-            */ ?>
+            <!-- Ссылки на предыдущую и следующую статью -->
+            <div class="post-navigation">
+                <div class="prev-post"><?php previous_post_link('%link', '&laquo; ' . __('Previous post', 'brainworks')); ?></div>
+                <div class="next-post"><?php next_post_link('%link', __('Next post', 'brainworks') . ' &raquo;'); ?></div>
+            </div>
 
-            <p class="tags"><?php the_tags( '', '', '' ) ?></p>
+            <hr>
 
             <?php comments_template('/loops/comments.php'); ?>
             <?php endwhile; ?>
