@@ -8,7 +8,7 @@ $headerHight: 80px;
     color: $headerFontColor;
     box-shadow: $shadow;
     position: relative;
-    z-index: 3;
+    z-index: 999;
     //background-origin: border-box; // if problem with border when gradient applied to header
 
     .pre-header {
