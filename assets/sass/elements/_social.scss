@@ -17,9 +17,11 @@
         align-items: center;
         font-size: 26px;
         color: $iconColor;
+
         img {
             max-width: 25px;
         }
+
         /* Раскомментируй, если нужены цветные иконки START
         background: $themeColor5;
         border-radius: $borderRadius;
@@ -74,6 +76,18 @@
         &:focus {
             color: $iconColorActive; // раскомментируй, если нужен только один цвет иконок
             //background: $themeColor2; // раскомментируй, если нужен только один цвет иконок
+        }
+    }
+}
+
+.hover-reverse {
+    .social {
+        &-link {
+            &:hover,
+            &:active,
+            &:focus {
+                color: $themeColor5;
+            }
         }
     }
 }

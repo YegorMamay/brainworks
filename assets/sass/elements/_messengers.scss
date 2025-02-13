@@ -47,3 +47,15 @@
          END */
     }
 }
+
+.hover-reverse {
+    .messenger {
+        &-link {
+            &:hover,
+            &:active,
+            &:focus {
+                color: $themeColor5;
+            }
+        }
+    }
+}

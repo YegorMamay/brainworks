@@ -5,7 +5,7 @@
         <div class="col-12 col-md-6">
             <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 
-            <div class="vh-xs-3"></div>
+            <div class="vh-xs-3 vh-sm-0"></div>
 
         </div>
 
