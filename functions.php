@@ -571,3 +571,56 @@ function redirect_non_admin_users() {
     }
 }
 // Если юзер не админ END
+
+// Поддержка GIF для обложек товаров START
+// Отключаем обработку миниатюр для GIF
+function allow_gif_thumbnails($result, $path) {
+    if ($path && strpos($path, '.gif') !== false) {
+        return false; // Не создавать уменьшенные версии GIF
+    }
+    return $result;
+}
+add_filter('wp_image_editors', function($editors) {
+    return array('WP_Image_Editor_GD', 'WP_Image_Editor_Imagick');
+});
+add_filter('wp_generate_attachment_metadata', 'disable_gif_thumbnail', 10, 2);
+function disable_gif_thumbnail($metadata, $attachment_id) {
+    $file = get_attached_file($attachment_id);
+    if ($file && strpos($file, '.gif') !== false) {
+        return []; // Отменяем создание миниатюр
+    }
+    return $metadata;
+}
+
+// Используем оригинальный GIF вместо миниатюр в каталоге товаров WooCommerce
+function replace_gif_in_shop($image, $post_id, $size, $attr) {
+    $thumbnail_id = get_post_thumbnail_id($post_id);
+    if (!$thumbnail_id) {
+        return $image; // Если нет миниатюры, возвращаем стандартное изображение
+    }
+
+    $file = get_attached_file($thumbnail_id);
+    if ($file && strpos($file, '.gif') !== false) {
+        $url = wp_get_attachment_url($thumbnail_id);
+        if ($url) {
+            return '<img src="' . esc_url($url) . '" class="wp-post-image" alt="">';
+        }
+    }
+
+    return $image;
+}
+add_filter('post_thumbnail_html', 'replace_gif_in_shop', 10, 4);
+
+// Используем оригинальный GIF на странице товара
+function replace_gif_in_product_page($html, $attachment_id) {
+    $file = get_attached_file($attachment_id);
+    if ($file && strpos($file, '.gif') !== false) {
+        $url = wp_get_attachment_url($attachment_id);
+        if ($url) {
+            return '<img src="' . esc_url($url) . '" class="wp-post-image" alt="">';
+        }
+    }
+    return $html;
+}
+add_filter('woocommerce_single_product_image_thumbnail_html', 'replace_gif_in_product_page', 10, 2);
+// Поддержка GIF для обложек товаров END
