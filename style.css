@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 11.02.25
+Version: 19.02.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -18407,21 +18407,20 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
   margin: 20px 0;
 }
 .woocommerce ul.products li.berocket_lgv_list {
-  width: 36% !important;
-  margin-bottom: 128px !important;
+  width: 34% !important;
+  margin-bottom: 50px !important;
   margin-right: 25px !important;
   padding-bottom: 0;
 }
 .woocommerce ul.products li.berocket_lgv_list a img {
   margin: 0;
 }
-
 @media (max-width: 768px) {
-  .woocommerce ul.products[class*=columns-] li.product:nth-child(2n),
-  .woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n) {
-    margin-left: 4%;
+  .woocommerce ul.products li.berocket_lgv_list {
+    margin-bottom: 211px !important;
   }
 }
+
 .term-description {
   margin-bottom: 20px;
 }
@@ -19119,7 +19118,7 @@ del .woocommerce-Price-amount bdi {
 
 @media (max-width: 575px) {
   .berocket_lgv_additional_data {
-    max-width: 48%;
+    max-width: 58%;
   }
   .berocket_lgv_additional_data h3 {
     font-size: 18px !important;
@@ -23236,6 +23235,15 @@ a:hover, a:active, a:focus {
       border-left: none;
   }*/
 }
+.nav .menu-item:first-child {
+  border-left: 1px solid #303c6f;
+}
+.nav .menu-item:hover {
+  background: #BB2440;
+}
+.nav .menu-item:hover .menu-link {
+  color: #fff;
+}
 .nav .menu-item-current:not(.menu-item-type-custom) {
   border-bottom: 5px solid #BB2440;
   padding-bottom: 0;
@@ -23250,15 +23258,6 @@ a:hover, a:active, a:focus {
   text-transform: none;
   text-decoration: none;
   text-wrap: nowrap;
-}
-.nav .menu-item:first-child {
-  border-left: 1px solid #303c6f;
-}
-.nav .menu-item:hover {
-  background: #BB2440;
-}
-.nav .menu-item:hover .menu-link {
-  color: #fff;
 }
 .nav .menu-item .menu-item-has-children-arrow {
   display: none;

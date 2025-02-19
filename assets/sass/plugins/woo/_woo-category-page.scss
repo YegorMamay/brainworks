@@ -130,25 +130,21 @@ ul.products li.product {
                 }
 
                 &.berocket_lgv_list {
-                    width: 36% !important;
-                    margin-bottom: 128px !important;
+                    width: 34% !important;
+                    margin-bottom: 50px !important;
                     margin-right: 25px !important;
                     padding-bottom: 0;
 
                     a img {
                         margin: 0;
                     }
+
+                    @media #{$tablet-max} {
+                        margin-bottom: 211px !important;
+                    }
                 }
             }
         }
-    }
-}
-
-@media #{$tablet-max} {
-
-    .woocommerce ul.products[class*=columns-] li.product:nth-child(2n),
-    .woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n) {
-        margin-left: 4%;
     }
 }
 

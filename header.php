@@ -143,7 +143,7 @@
                     </a>
                 <?php endif; ?>
 
-                <!-- Language switcher menu. START -->
+                <!-- Language switcher menu START -->
                 <div class="nav-wrapper language-switcher">
                     <?php if (has_nav_menu('language-switcher') && function_exists('pll_the_languages')) { ?>
                     <nav class="nav js-menu">
@@ -160,9 +160,9 @@
                     </nav>
                     <?php } ?>
                 </div>
-                <!-- Language switcher menu. END -->
+                <!-- Language switcher menu END -->
 
-                <!-- Dropdown phones -->
+                <!-- Dropdown phones START -->
                 <?php if (has_phones()) { ?>
                 <ul class="phone-dropdown <!--light-mode-->">
                     <li class="phone-dropdown__item">
@@ -192,7 +192,7 @@
                     </li>
                 </ul>
                 <?php } ?>
-                <!-- Dropdown phones -->
+                <!-- Dropdown phones END -->
 
                 <!-- Messengers shortcode -->
                 <?php /* echo do_shortcode('[bw-messengers]'); */ ?>
@@ -252,7 +252,7 @@
                 </div>
             </nav>
             <?php } ?>
-            <!-- Main Navigation. START -->
+            <!-- Main Navigation. END -->
 
         </header>
 
@@ -293,7 +293,7 @@
                 </div>
             </div>
             <?php } ?>
-            <!-- If WOO: Список желаний, кабинет, корзина. START -->
+            <!-- If WOO: Список желаний, кабинет, корзина. END -->
 
             <!-- Hamburger button. START -->
             <button class="hamburger js-hamburger" type="button" tabindex="0">

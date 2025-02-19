@@ -49,6 +49,18 @@ $SubMenuFontColor: $themeColor5;
             padding: 5px 0;
             border-right: 1px solid lighten($menuBgColor, 5%);
 
+            &:first-child {
+                border-left: 1px solid lighten($menuBgColor, 5%);
+            }
+
+            &:hover {
+                background: $menuBgColorActive;
+
+                & .menu-link {
+                    color: $menuFontColorActive;
+                }
+            }
+
             &-current:not(.menu-item-type-custom) {
                 border-bottom: 5px solid $menuBgColorActive;
                 padding-bottom: 0;
@@ -71,18 +83,6 @@ $SubMenuFontColor: $themeColor5;
             /*&:first-child .menu-link {
                 border-left: none;
             }*/
-
-            &:first-child {
-                border-left: 1px solid lighten($menuBgColor, 5%);
-            }
-
-            &:hover {
-                background: $menuBgColorActive;
-
-                & .menu-link {
-                    color: $menuFontColorActive;
-                }
-            }
 
             .menu-item-has-children-arrow {
                 display: none;
