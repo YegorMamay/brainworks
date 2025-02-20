@@ -138,6 +138,13 @@ ul.products {
     }
 }
 
+.woocommerce div.products .product.berocket_lgv_list div,
+.woocommerce-page div.products .product.berocket_lgv_list div,
+.woocommerce ul.products .product.berocket_lgv_list div,
+.woocommerce-page ul.products .product.berocket_lgv_list div {
+    margin-bottom: 0;
+}
+
 del .woocommerce-Price-amount bdi {
     color: $mutedColor;
 }

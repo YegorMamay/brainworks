@@ -75,6 +75,7 @@ ul.products li.product {
 }
 
 .woocommerce {
+
     ul {
 
         &.products {
@@ -126,6 +127,10 @@ ul.products li.product {
                             max-width: 230px;
                             margin: 20px 0;
                         }
+                    }
+
+                    .star-rating {
+                        margin: 15px auto !important;
                     }
                 }
 

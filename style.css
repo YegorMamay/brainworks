@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 19.02.25
+Version: 20.02.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -18406,6 +18406,9 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
   max-width: 230px;
   margin: 20px 0;
 }
+.woocommerce ul.products li.product .star-rating {
+  margin: 15px auto !important;
+}
 .woocommerce ul.products li.berocket_lgv_list {
   width: 34% !important;
   margin-bottom: 50px !important;
@@ -18704,9 +18707,6 @@ table.variations tbody tr {
 }
 .woocommerce p.stars a:hover {
   color: #BB2440;
-}
-.woocommerce ul.products li.product .star-rating {
-  margin: 0 auto 10px;
 }
 .woocommerce .woocommerce-product-rating {
   margin-bottom: 15px !important;
@@ -19098,6 +19098,13 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
 }
 .berocket_lgv_widget a:first-child {
   margin-right: 10px;
+}
+
+.woocommerce div.products .product.berocket_lgv_list div,
+.woocommerce-page div.products .product.berocket_lgv_list div,
+.woocommerce ul.products .product.berocket_lgv_list div,
+.woocommerce-page ul.products .product.berocket_lgv_list div {
+  margin-bottom: 0;
 }
 
 del .woocommerce-Price-amount bdi {
