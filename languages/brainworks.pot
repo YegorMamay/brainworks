@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-23 10:00+0000\n"
+"POT-Creation-Date: 2025-03-01 22:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -24,11 +24,21 @@ msgstr ""
 msgid "%d request pear %s sec."
 msgstr ""
 
-#: loops/comments.php:64
+#: functions.php:634
+#, php-format
+msgid "%s people are viewing this right now"
+msgstr ""
+
+#: functions.php:698
+#, php-format
+msgid "%s sold in last 24 hours"
+msgstr ""
+
+#: loops/comments.php:63
 msgid "(required)"
 msgstr ""
 
-#: loops/comments.php:71
+#: loops/comments.php:68
 msgid "(required, but will not be published)"
 msgstr ""
 
@@ -48,7 +58,7 @@ msgstr ""
 msgid "<!-- paste tracking code here -->"
 msgstr ""
 
-#: inc/index-pagination.php:21
+#: inc/index-pagination.php:19
 msgid "<i class=\"fa fa-angle-left\"></i> Newer"
 msgstr ""
 
@@ -73,7 +83,6 @@ msgid "Analytics Tracking Code"
 msgstr ""
 
 #: inc/setup.php:241
-#, php-format
 msgid "Archive by <b>%d</b> year"
 msgstr ""
 
@@ -95,11 +104,11 @@ msgstr ""
 msgid "Author archve: <b>%s</b>"
 msgstr ""
 
-#: inc/customizer.php:858
+#: inc/customizer.php:993
 msgid "Auto Hide"
 msgstr ""
 
-#: 404.php:12 page-thank-you.php:16
+#: 404.php:12 page-thank-you.php:18
 msgid "Back to the homepage"
 msgstr ""
 
@@ -136,20 +145,20 @@ msgstr ""
 msgid "brainworks.com.ua"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:48
+#: woocommerce/single-product/add-to-cart/simple.php:51
 #: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:30
 msgid "Buy in one click"
 msgstr ""
 
-#: header.php:173
+#: header.php:201 header.php:350
 msgid "Callback"
 msgstr ""
 
-#: header.php:197
+#: header.php:225
 msgid "Cart"
 msgstr ""
 
-#: inc/custom-post-types.php:49
+#: archive-catalog.php:23 inc/custom-post-types.php:49
 msgid "Catalog"
 msgstr ""
 
@@ -166,12 +175,19 @@ msgid "Comments"
 msgstr ""
 
 #. Name of the template
+#: page-container.php:2
 msgid "Container"
 msgstr ""
 
-#: inc/LoadMorePosts.php:111 inc/shortcodes.php:296 inc/shortcodes.php:454
-#: loops/content.php:39
+#: inc/LoadMorePosts.php:111 inc/shortcodes.php:305 inc/shortcodes.php:463
+#: loops/content.php:21
 msgid "Continue reading"
+msgstr ""
+
+#: functions.php:554
+msgid ""
+"Created with love by <a href=\"https://brainworks.in.ua/\" target=\"_blank\">"
+"BrainWorks</a>"
 msgstr ""
 
 #: inc/customizer.php:354
@@ -182,7 +198,11 @@ msgstr ""
 msgid "Customizer Custom Login"
 msgstr ""
 
-#: inc/customizer.php:786
+#: inc/customizer.php:1004
+msgid "Customizer Custom Logos"
+msgstr ""
+
+#: inc/customizer.php:921
 msgid "Customizer Custom Phone numbers"
 msgstr ""
 
@@ -190,11 +210,11 @@ msgstr ""
 msgid "Customizer Custom Scroll Top"
 msgstr ""
 
-#: inc/customizer.php:568
+#: inc/customizer.php:576
 msgid "Customizer Custom Social links"
 msgstr ""
 
-#: inc/customizer.php:842
+#: inc/customizer.php:977
 msgid "Customizer Sticky Header"
 msgstr ""
 
@@ -214,19 +234,19 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/shortcodes.php:540
+#: inc/shortcodes.php:549
 msgid "Email"
 msgstr ""
 
-#: inc/customizer.php:850
+#: inc/customizer.php:985
 msgid "Enable"
 msgstr ""
 
-#: inc/customizer.php:859
+#: inc/customizer.php:994
 msgid "Enable/Disable auto hide functionality option"
 msgstr ""
 
-#: inc/customizer.php:851
+#: inc/customizer.php:986
 msgid "Enable/Disable sticky header js functionality"
 msgstr ""
 
@@ -242,7 +262,7 @@ msgstr ""
 msgid "Error with creating user. Please, try again later!"
 msgstr ""
 
-#: inc/customizer.php:631
+#: inc/customizer.php:618
 msgid "Facebook"
 msgstr ""
 
@@ -280,14 +300,15 @@ msgid "Home"
 msgstr ""
 
 #. Name of the template
+#: page-home.php:2
 msgid "Home Page"
 msgstr ""
 
-#: inc/custom-post-types.php:98
+#: inc/custom-post-types.php:99
 msgid "HTML block"
 msgstr ""
 
-#: inc/custom-post-types.php:97 inc/custom-post-types.php:102
+#: inc/custom-post-types.php:98 inc/custom-post-types.php:103
 msgid "HTML blocks"
 msgstr ""
 
@@ -296,15 +317,24 @@ msgstr ""
 msgid "https://brainworks.com.ua"
 msgstr ""
 
+#. URI of the theme
+msgid "https://github.com/YegorMamay/brainworks"
+msgstr ""
+
 #: inc/customizer.php:388
 msgid "Image size 80x80 px"
 msgstr ""
 
-#: inc/customizer.php:665
+#: inc/admin.php:54 inc/admin.php:55
+msgid "info@brainworks.pro"
+msgstr ""
+
+#: inc/customizer.php:646
 msgid "Instagram"
 msgstr ""
 
 #. Name of the template
+#: page-landing.php:2
 msgid "Landing"
 msgstr ""
 
@@ -316,7 +346,7 @@ msgstr ""
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:648
+#: inc/customizer.php:728
 msgid "Linkedin"
 msgstr ""
 
@@ -324,11 +354,19 @@ msgstr ""
 msgid "Load more posts..."
 msgstr ""
 
-#: loops/comments.php:58
+#: header.php:142
+msgid "Log In"
+msgstr ""
+
+#: header.php:137
+msgid "Log Out"
+msgstr ""
+
+#: loops/comments.php:57
 msgid "Log out"
 msgstr ""
 
-#: loops/comments.php:58
+#: loops/comments.php:57
 msgid "Log out of this account"
 msgstr ""
 
@@ -336,8 +374,8 @@ msgstr ""
 msgid "Logged in as"
 msgstr ""
 
-#: inc/customizer.php:377 inc/shortcodes.php:504 inc/shortcodes.php:513
-#: inc/shortcodes.php:536
+#: inc/shortcodes.php:513 inc/shortcodes.php:522 inc/shortcodes.php:545
+#: inc/customizer.php:377
 msgid "Login"
 msgstr ""
 
@@ -347,6 +385,11 @@ msgstr ""
 
 #: inc/auth.php:243
 msgid "Login or password are incorrect!"
+msgstr ""
+
+#. Name of the template
+#: page-login.php:2
+msgid "Login Page"
 msgstr ""
 
 #: inc/customizer.php:387
@@ -362,15 +405,19 @@ msgstr ""
 msgid "Media: %s"
 msgstr ""
 
-#: taxonomy-sn_cat.php:46 archive-catalog.php:47 loops/content.php:57
+#: taxonomy-sn_cat.php:46 archive-catalog.php:47 loops/content.php:39
 msgid "Next"
+msgstr ""
+
+#: single.php:44
+msgid "Next post"
 msgstr ""
 
 #: loops/comments.php:21
 msgid "None"
 msgstr ""
 
-#: inc/customizer.php:716
+#: inc/customizer.php:811
 msgid "Odnoklassniki"
 msgstr ""
 
@@ -382,11 +429,12 @@ msgstr ""
 msgid "Offset Left/Right"
 msgstr ""
 
-#: inc/index-pagination.php:22
+#: inc/index-pagination.php:20
 msgid "Older <i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
 #. Name of the template
+#: page-auth-only.php:2
 msgid "Only Logged In"
 msgstr ""
 
@@ -395,23 +443,25 @@ msgid "Or use search"
 msgstr ""
 
 #: inc/setup.php:237
-#, php-format
 msgid "Page %d"
 msgstr ""
 
 #. Name of the template
+#: page-with-decor-image.php:2
 msgid "Page With Decor Image"
 msgstr ""
 
 #. Name of the template
+#: page-no-breadcrumbs.php:2
 msgid "Page Without Breadcrumbs"
 msgstr ""
 
 #. Name of the template
+#: page-no-title.php:2
 msgid "Page Without Title"
 msgstr ""
 
-#: inc/shortcodes.php:508 inc/shortcodes.php:544
+#: inc/shortcodes.php:517 inc/shortcodes.php:553
 msgid "Password"
 msgstr ""
 
@@ -439,37 +489,41 @@ msgstr ""
 msgid "Paste tracking code here &dArr;"
 msgstr ""
 
-#: inc/customizer.php:798
+#: inc/customizer.php:933
 msgid "Phone №1"
 msgstr ""
 
-#: inc/customizer.php:805
+#: inc/customizer.php:940
 msgid "Phone №2"
 msgstr ""
 
-#: inc/customizer.php:812
+#: inc/customizer.php:947
 msgid "Phone №3"
 msgstr ""
 
-#: inc/customizer.php:819
+#: inc/customizer.php:954
 msgid "Phone №4"
 msgstr ""
 
-#: inc/customizer.php:826
+#: inc/customizer.php:961
 msgid "Phone №5"
 msgstr ""
 
-#: inc/customizer.php:833
+#: inc/customizer.php:968
 msgid "Phone №6"
 msgstr ""
 
-#: inc/customizer.php:785
+#: inc/customizer.php:920
 msgid "Phones"
 msgstr ""
 
 #: inc/customizer.php:245 inc/customizer.php:267 inc/customizer.php:289
 #: inc/customizer.php:311 inc/customizer.php:333 inc/customizer.php:355
 msgid "Placed (head/body)"
+msgstr ""
+
+#: page-auth-only.php:27
+msgid "Please log in to see the contents of this page."
 msgstr ""
 
 #: inc/customizer.php:138
@@ -489,15 +543,15 @@ msgstr ""
 msgid "PreHeader widget area"
 msgstr ""
 
-#: taxonomy-sn_cat.php:45 archive-catalog.php:46 loops/content.php:56
+#: taxonomy-sn_cat.php:45 archive-catalog.php:46 loops/content.php:38
 msgid "Previous"
 msgstr ""
 
-#: single-catalog.php:20
-msgid "Quick order"
+#: single.php:43
+msgid "Previous post"
 msgstr ""
 
-#: inc/shortcodes.php:553
+#: inc/shortcodes.php:562
 msgid "Register"
 msgstr ""
 
@@ -505,7 +559,7 @@ msgstr ""
 msgid "Remarketing code"
 msgstr ""
 
-#: inc/shortcodes.php:548
+#: inc/shortcodes.php:557
 msgid "Retry password"
 msgstr ""
 
@@ -550,6 +604,14 @@ msgstr ""
 msgid "Search Results for"
 msgstr ""
 
+#: inc/customizer.php:1013
+msgid "Second Logo"
+msgstr ""
+
+#: inc/customizer.php:1003
+msgid "Second logo"
+msgstr ""
+
 #: inc/navbar.php:5
 msgid "Second Menu"
 msgstr ""
@@ -558,7 +620,7 @@ msgstr ""
 msgid "Shape"
 msgstr ""
 
-#: functions.php:466
+#: functions.php:431
 msgid "Shortcode"
 msgstr ""
 
@@ -567,29 +629,29 @@ msgid "Show/Hide scroll top"
 msgstr ""
 
 #. Name of the template
-#: inc/widgets.php:23
+#: page-sidebar-left.php:2 inc/widgets.php:23
 msgid "Sidebar Left"
 msgstr ""
 
 #. Name of the template
-#: inc/widgets.php:36
+#: page-sidebar-right.php:2 inc/widgets.php:36
 msgid "Sidebar Right"
 msgstr ""
 
 #. Name of the template
+#: page-sitemap.php:2
 msgid "Sitemap Page"
 msgstr ""
 
-#: inc/customizer.php:567
+#: inc/customizer.php:575
 msgid "Social"
 msgstr ""
 
-#: loops/content-search.php:29
+#: loops/content-search.php:28
 msgid "Sorry, your search yielded no results."
 msgstr ""
 
 #: inc/admin.php:28
-#, php-format
 msgid "Spent %d Mb of memory (including unused pages %d Mb)"
 msgstr ""
 
@@ -597,11 +659,11 @@ msgstr ""
 msgid "Square"
 msgstr ""
 
-#: inc/customizer.php:841
+#: inc/customizer.php:976
 msgid "Sticky Header"
 msgstr ""
 
-#: loops/comments.php:88
+#: loops/comments.php:83
 msgid "Submit comment"
 msgstr ""
 
@@ -614,6 +676,7 @@ msgid "Tel:"
 msgstr ""
 
 #. Name of the template
+#: page-thank-you.php:2
 msgid "Thank You Page"
 msgstr ""
 
@@ -641,28 +704,25 @@ msgstr ""
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: inc/customizer.php:682
+#: inc/customizer.php:701
 msgid "TikTok"
 msgstr ""
 
-#: inc/customizer.php:614
-msgid "Twitter"
+#. Name of the template
+#: page-user.php:2
+msgid "User Page"
 msgstr ""
 
 #: inc/auth.php:238
 msgid "User with this login or email has already registered"
 msgstr ""
 
-#: inc/setup.php:275 inc/helpers.php:591
+#: inc/helpers.php:607 inc/setup.php:275
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/customizer.php:597
+#: inc/customizer.php:783
 msgid "Vk"
-msgstr ""
-
-#: inc/admin.php:54 inc/admin.php:55
-msgid "web@brainworks.com.ua"
 msgstr ""
 
 #: inc/customizer.php:110
@@ -677,11 +737,15 @@ msgstr ""
 msgid "Woo cart widget area"
 msgstr ""
 
+#: inc/customizer.php:756
+msgid "X"
+msgstr ""
+
 #: inc/customizer.php:266
 msgid "Yandex Metrika"
 msgstr ""
 
-#: loops/comments.php:82 loops/comments.php:83
+#: loops/comments.php:77 loops/comments.php:78
 msgid "Your comment"
 msgstr ""
 
@@ -689,20 +753,28 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: loops/comments.php:70 loops/comments.php:73
+#: loops/comments.php:67 loops/comments.php:69
 msgid "Your email address"
 msgstr ""
 
-#: loops/comments.php:63 loops/comments.php:66
+#: loops/comments.php:62 loops/comments.php:64
 msgid "Your name"
 msgstr ""
 
-#: inc/customizer.php:699
+#: inc/customizer.php:674
 msgid "YouTube"
 msgstr ""
 
 #: kviz/kviz-shortcode.php:40
 msgid "В який месенждер Вам зручно отримати результат?"
+msgstr ""
+
+#: functions.php:533
+msgid "Вам нужно залогиниться"
+msgstr ""
+
+#: functions.php:530
+msgid "Вы уверены, что хотите удалить свой аккаунт?"
 msgstr ""
 
 #: kviz/kviz-shortcode.php:101
@@ -711,4 +783,8 @@ msgstr ""
 
 #: kviz/kviz-shortcode.php:98
 msgid "Назад"
+msgstr ""
+
+#: functions.php:530
+msgid "Удалить аккаунт"
 msgstr ""

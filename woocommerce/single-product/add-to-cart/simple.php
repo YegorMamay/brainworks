@@ -28,6 +28,8 @@ echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 if ( $product->is_in_stock() ) : ?>
 
+    <?php echo do_shortcode('[sold_in_last_24_hours]'); ?>
+
     <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
     <form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>

@@ -624,3 +624,106 @@ function replace_gif_in_product_page($html, $attachment_id) {
 }
 add_filter('woocommerce_single_product_image_thumbnail_html', 'replace_gif_in_product_page', 10, 2);
 // Поддержка GIF для обложек товаров END
+
+// Шорткод для товара - количество пользователей, которые просматривают товар
+function product_viewers_shortcode() {
+    ob_start(); // Буферизация вывода
+    ?>
+
+    <div class="product-viewers mrgn-bot-20 mrgn-top-20">
+        <i class="fa-solid fa-eye"></i> <?php printf(esc_html__('%s people are viewing this right now', 'brainworks'), '<span id="viewers-count">' . rand(5, 20) . '</span>'); ?>
+    </div>
+
+    <style>
+        .fade {
+            opacity: 1;
+            transition: opacity 0.8s ease-in-out;
+        }
+        .fade.out {
+            opacity: 0;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let viewersCount = parseInt(document.getElementById("viewers-count").textContent);
+            let viewersElement = document.getElementById("viewers-count");
+
+            function updateViewers() {
+                let change = Math.random() < 0.5 ? -1 : 1; // Увеличение или уменьшение
+                let newCount = viewersCount + change;
+
+                // Устанавливаем границы (чтобы не было слишком низкого или высокого числа)
+                if (newCount < 5) newCount = 5;
+                if (newCount > 30) newCount = 30;
+
+                // Анимация fadeOut
+                viewersElement.classList.add("out");
+
+                setTimeout(() => {
+                    viewersElement.textContent = newCount;
+                    viewersCount = newCount;
+                    viewersElement.classList.remove("out"); // fadeIn
+                }, 800); // Задержка до замены текста
+
+                setTimeout(updateViewers, Math.random() * 3000 + 5000); // Интервал 5-8 секунд
+            }
+
+            setTimeout(updateViewers, 5000); // Первый запуск через 5 секунд
+        });
+    </script>
+
+    <?php
+    return ob_get_clean(); // Возвращаем буферизированный контент
+}
+add_shortcode('product_viewers', 'product_viewers_shortcode');
+// Шорткод для товара END
+
+
+// Функция для вывода шорткода [product_viewers] под ценой товара
+function display_product_viewers() {
+    echo do_shortcode('[product_viewers]'); // Вставляем шорткод
+}
+
+// Добавляем вывод шорткода после цены товара
+add_action('woocommerce_single_product_summary', 'display_product_viewers', 15);
+
+
+// Шорткод для товара 2 - кол-во купленных товаров за сутки
+function sold_in_last_24_hours_shortcode() {
+    ob_start(); // Буферизация вывода
+    ?>
+
+    <div class="sold-last-24 mrgn-bot-20">
+        <i class="fa-solid fa-bag-shopping"></i> <?php printf(esc_html__('%s sold in last 24 hours', 'brainworks'), '<span id="sold-count">' . rand(5, 30) . '</span>'); ?>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const soldElement = document.getElementById('sold-count');
+
+            // Получаем текущее время и время последнего изменения числа
+            const currentTime = new Date().getTime();
+            const lastUpdated = localStorage.getItem('soldLastUpdated');
+            let lastSold = localStorage.getItem('soldCount');
+
+            // Если число менялось в этот день, используем его, если нет - генерируем новое
+            if (lastUpdated && currentTime - lastUpdated < 86400000) { // 86400000 мс = 24 часа
+                soldElement.textContent = lastSold; // Показываем сохранённое число
+            } else {
+                let randomSold = Math.floor(Math.random() * (30 - 5 + 1)) + 5; // Генерация случайного числа от 5 до 30
+                soldElement.textContent = randomSold;
+
+                // Сохраняем новое число и время его изменения
+                localStorage.setItem('soldCount', randomSold);
+                localStorage.setItem('soldLastUpdated', currentTime);
+            }
+        });
+    </script>
+
+    <?php
+    return ob_get_clean(); // Возвращаем буферизированный контент
+}
+
+add_shortcode('sold_in_last_24_hours', 'sold_in_last_24_hours_shortcode');
+// Шорткод для товара 2 END

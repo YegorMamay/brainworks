@@ -11,6 +11,9 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 ?>
+
+<?php echo do_shortcode('[sold_in_last_24_hours]'); ?>
+
 <div class="woocommerce-variation-add-to-cart variations_button">
     <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 

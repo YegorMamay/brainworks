@@ -219,10 +219,11 @@ if (!function_exists('bw_html_sitemap')) {
             'reviews',
             'catalog',
             'elementor_library',
+            'e-floating-buttons',
             'br_product_filter',
             'br_filters_group',
             'blocks',
-            'product'
+            /*'product'*/
         );
 
         $post_types = get_post_types($args, 'objects');

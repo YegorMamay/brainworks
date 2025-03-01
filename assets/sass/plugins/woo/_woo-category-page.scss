@@ -81,6 +81,11 @@ ul.products li.product {
         &.products {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
+
+            &::before, &::after {
+                content: none;
+            }
 
             li {
                 &.product {
@@ -90,7 +95,7 @@ ul.products li.product {
                     border: 1px solid lighten($themeColor4, 90%); //
                     padding-bottom: 20px;
                     @include smooth_animation;
-                    margin-bottom: 30px !important;
+                    margin: 0 0 30px 0 !important;
 
                     &:hover {
                         box-shadow: none;
