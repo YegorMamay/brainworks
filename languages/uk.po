@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-25 07:45+0000\n"
-"PO-Revision-Date: 2025-03-01 22:36+0000\n"
+"PO-Revision-Date: 2025-03-03 08:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: Українська\n"
 "Language: uk\n"
@@ -29,11 +29,6 @@ msgstr ""
 #, php-format
 msgid "%s people are viewing this right now"
 msgstr "%s користувачів переглядають цей товар прямо зараз"
-
-#: functions.php:698
-#, php-format
-msgid "%s sold in last 24 hours"
-msgstr "%s продано за останні 24 години"
 
 #: loops/comments.php:63
 msgid "(required)"
@@ -147,7 +142,7 @@ msgid "brainworks.com.ua"
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:51
-#: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:30
+#: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:33
 msgid "Buy in one click"
 msgstr "Замовити"
 
@@ -789,3 +784,8 @@ msgstr ""
 #: functions.php:530
 msgid "Удалить аккаунт"
 msgstr ""
+
+#: functions.php:714
+#| msgid "%s sold in last 24 hours"
+msgid "🔥 %d sold in last 24 hours"
+msgstr "🔥 %s продано за останні 24 години"

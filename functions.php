@@ -690,40 +690,32 @@ add_action('woocommerce_single_product_summary', 'display_product_viewers', 15);
 
 
 // Шорткод для товара 2 - кол-во купленных товаров за сутки
-function sold_in_last_24_hours_shortcode() {
-    ob_start(); // Буферизация вывода
-    ?>
+// Функция для генерации и кэширования случайного числа продаж за последние 24 часа
+function get_sold_in_last_24_hours() {
+    global $post;
 
-    <div class="sold-last-24 mrgn-bot-20">
-        <i class="fa-solid fa-bag-shopping"></i> <?php printf(esc_html__('%s sold in last 24 hours', 'brainworks'), '<span id="sold-count">' . rand(5, 30) . '</span>'); ?>
-    </div>
+    if (!$post || !is_singular('product')) {
+        return '';
+    }
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const soldElement = document.getElementById('sold-count');
+    $product_id = $post->ID;
+    $transient_key = 'sold_in_last_24_hours_' . $product_id;
 
-            // Получаем текущее время и время последнего изменения числа
-            const currentTime = new Date().getTime();
-            const lastUpdated = localStorage.getItem('soldLastUpdated');
-            let lastSold = localStorage.getItem('soldCount');
+    // Проверяем, есть ли уже сохраненное значение
+    $sold_count = get_transient($transient_key);
 
-            // Если число менялось в этот день, используем его, если нет - генерируем новое
-            if (lastUpdated && currentTime - lastUpdated < 86400000) { // 86400000 мс = 24 часа
-                soldElement.textContent = lastSold; // Показываем сохранённое число
-            } else {
-                let randomSold = Math.floor(Math.random() * (30 - 5 + 1)) + 5; // Генерация случайного числа от 5 до 30
-                soldElement.textContent = randomSold;
+    if ($sold_count === false) {
+        // Если нет, генерируем случайное число и кэшируем его на 24 часа
+        $sold_count = rand(5, 30);
+        set_transient($transient_key, $sold_count, DAY_IN_SECONDS);
+    }
 
-                // Сохраняем новое число и время его изменения
-                localStorage.setItem('soldCount', randomSold);
-                localStorage.setItem('soldLastUpdated', currentTime);
-            }
-        });
-    </script>
-
-    <?php
-    return ob_get_clean(); // Возвращаем буферизированный контент
+    // Оборачиваем в <div> с классом
+    return '<div class="sold-last-24-hours mrgn-bot-20">' . sprintf(__('🔥 %d sold in last 24 hours', 'brainworks'), $sold_count) . '</div>';
 }
 
-add_shortcode('sold_in_last_24_hours', 'sold_in_last_24_hours_shortcode');
+// Регистрируем шорткод
+add_shortcode('sold_in_last_24_hours', 'get_sold_in_last_24_hours');
+
+
 // Шорткод для товара 2 END

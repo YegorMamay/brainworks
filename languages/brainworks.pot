@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-01 22:31+0000\n"
+"POT-Creation-Date: 2025-03-03 08:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -27,11 +27,6 @@ msgstr ""
 #: functions.php:634
 #, php-format
 msgid "%s people are viewing this right now"
-msgstr ""
-
-#: functions.php:698
-#, php-format
-msgid "%s sold in last 24 hours"
 msgstr ""
 
 #: loops/comments.php:63
@@ -146,7 +141,7 @@ msgid "brainworks.com.ua"
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:51
-#: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:30
+#: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:33
 msgid "Buy in one click"
 msgstr ""
 
@@ -787,4 +782,8 @@ msgstr ""
 
 #: functions.php:530
 msgid "Удалить аккаунт"
+msgstr ""
+
+#: functions.php:714
+msgid "🔥 %d sold in last 24 hours"
 msgstr ""
