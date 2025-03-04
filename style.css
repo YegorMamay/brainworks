@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 01.03.25
+Version: 04.03.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -19063,7 +19063,7 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
 
 .single-product .isb_sale_badge {
   right: 15px !important;
-  z-index: 99999 !important;
+  z-index: 99 !important;
 }
 
 .related .isb_sale_badge, .upsells .isb_sale_badge {
