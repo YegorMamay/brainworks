@@ -3,7 +3,7 @@
     <?php while (have_posts()): the_post(); ?>
     <article id="post_<?php the_ID() ?>" class="row">
         <div class="col-12 col-md-6">
-            <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
+            <a href="<?php echo get_permalink(); ?>" class="post-img-link"><?php the_post_thumbnail('large'); ?></a>
 
             <div class="vh-xs-3 vh-sm-0"></div>
 

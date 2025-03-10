@@ -29,7 +29,6 @@
 
                 <section class="mrgn-bot-20" itemprop="articleBody">
                     <?php the_content() ?>
-                    <?php wp_link_pages(); ?>
                 </section>
 
                 <!-- Преобразованный код для тега "Публикации" -->
