@@ -1,13 +1,27 @@
+article p {
+    text-align: justify;
+}
+
 .post-navigation {
     display: flex;
     justify-content: space-between;
+    padding: 15px;
+    background: $themeColor5;
+    border-radius: $borderRadius;
+}
+
+.prev-post a, .next-post a {
+    @extend .btn;
+    @extend .btn1-outline;
+    @extend .btn-sm;
 }
 
 //Comments list
 ol.commentlist {
-    .comment-body {
-        margin-bottom: 25px;
-    }
+    padding: 20px;
+    background: $themeColor5;
+    margin-bottom: 25px;
+    border-radius: $borderRadius;
 }
 
 #respond {
@@ -35,4 +49,11 @@ ol.commentlist {
             background: $themeColor2;
         }
     }
+}
+
+.comment-reply-link {
+    @extend .btn;
+    @extend .btn2;
+    @extend .btn-sm;
+    margin-left: 15px;
 }

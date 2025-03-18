@@ -37,13 +37,15 @@
 
             <hr>
 
+            <?php echo do_shortcode('[stellar]'); ?>
+
+            <div class="vh-xs-2"></div>
+
             <!-- Ссылки на предыдущую и следующую статью -->
-            <div class="post-navigation">
+            <div class="post-navigation mrgn-bot-20">
                 <div class="prev-post"><?php previous_post_link('%link', '&laquo; ' . __('Previous post', 'brainworks')); ?></div>
                 <div class="next-post"><?php next_post_link('%link', __('Next post', 'brainworks') . ' &raquo;'); ?></div>
             </div>
-
-            <hr>
 
             <?php comments_template('/loops/comments.php'); ?>
             <?php endwhile; ?>

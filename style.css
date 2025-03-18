@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 10.03.25
+Version: 18.03.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -20925,6 +20925,10 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
         align-self: stretch !important;
   }
 }
+article p {
+  text-align: justify;
+}
+
 .post-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20932,10 +20936,16 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
 }
 
-ol.commentlist .comment-body {
+ol.commentlist {
+  padding: 20px;
+  background: #fff;
   margin-bottom: 25px;
+  border-radius: 5px;
 }
 
 #respond p {
@@ -20962,6 +20972,10 @@ ol.commentlist .comment-body {
 .tags a:hover {
   color: #fff;
   background: #BB2440;
+}
+
+.comment-reply-link {
+  margin-left: 15px;
 }
 
 .js-ajax-posts img {
@@ -21452,8 +21466,6 @@ h6 a b,
 form fieldset {
   background: white;
   padding: 25px;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 form fieldset label {
   font-weight: 700;
@@ -21493,8 +21505,7 @@ form fieldset textarea {
 #commentform {
   background: white;
   padding: 25px;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 #commentform .form-group label {
   text-align: left;
@@ -22056,7 +22067,7 @@ button {
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce a.button.alt,
 .woocommerce button.button.alt,
-.woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
+.woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button, .prev-post a, .next-post a, .comment-reply-link {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -22080,11 +22091,11 @@ button {
 .woocommerce button.button:hover,
 .woocommerce input.button:hover, .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover, .tinvwl_button_close:hover, #isw-load-more-button:hover, .btn:focus, .button.button-primary:focus, .woocommerce a.added_to_cart:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
+.woocommerce input.button.alt:hover, .tinvwl_button_close:hover, #isw-load-more-button:hover, .prev-post a:hover, .next-post a:hover, .comment-reply-link:hover, .btn:focus, .button.button-primary:focus, .woocommerce a.added_to_cart:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
 .woocommerce button.button:focus,
 .woocommerce input.button:focus, .woocommerce a.button.alt:focus,
 .woocommerce button.button.alt:focus,
-.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, #isw-load-more-button:focus {
+.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, #isw-load-more-button:focus, .prev-post a:focus, .next-post a:focus, .comment-reply-link:focus {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none;
@@ -22093,11 +22104,11 @@ button {
 .woocommerce button.button:focus,
 .woocommerce input.button:focus, .woocommerce a.button.alt:focus,
 .woocommerce button.button.alt:focus,
-.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, #isw-load-more-button:focus, .btn.focus, .focus.button.button-primary, .woocommerce a.focus.added_to_cart, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
+.woocommerce input.button.alt:focus, .tinvwl_button_close:focus, #isw-load-more-button:focus, .prev-post a:focus, .next-post a:focus, .comment-reply-link:focus, .btn.focus, .focus.button.button-primary, .woocommerce a.focus.added_to_cart, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
 .woocommerce button.focus.button,
 .woocommerce input.focus.button, .woocommerce a.focus.button.alt,
 .woocommerce button.focus.button.alt,
-.woocommerce input.focus.button.alt, .focus.tinvwl_button_close, .focus#isw-load-more-button {
+.woocommerce input.focus.button.alt, .focus.tinvwl_button_close, .focus#isw-load-more-button, .prev-post a.focus, .next-post a.focus, .focus.comment-reply-link {
   outline: 0;
   -webkit-box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25);
           box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25);
@@ -22106,11 +22117,11 @@ button {
 .woocommerce button.disabled.button,
 .woocommerce input.disabled.button, .woocommerce a.disabled.button.alt,
 .woocommerce button.disabled.button.alt,
-.woocommerce input.disabled.button.alt, .disabled.tinvwl_button_close, .disabled#isw-load-more-button, .btn:disabled, .button.button-primary:disabled, .woocommerce a.added_to_cart:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
+.woocommerce input.disabled.button.alt, .disabled.tinvwl_button_close, .disabled#isw-load-more-button, .prev-post a.disabled, .next-post a.disabled, .disabled.comment-reply-link, .btn:disabled, .button.button-primary:disabled, .woocommerce a.added_to_cart:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
 .woocommerce button.button:disabled,
 .woocommerce input.button:disabled, .woocommerce a.button.alt:disabled,
 .woocommerce button.button.alt:disabled,
-.woocommerce input.button.alt:disabled, .tinvwl_button_close:disabled, #isw-load-more-button:disabled {
+.woocommerce input.button.alt:disabled, .tinvwl_button_close:disabled, #isw-load-more-button:disabled, .prev-post a:disabled, .next-post a:disabled, .comment-reply-link:disabled {
   opacity: 0.65;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -22119,18 +22130,18 @@ button {
 .woocommerce button.button:not(:disabled):not(.disabled),
 .woocommerce input.button:not(:disabled):not(.disabled), .woocommerce a.button.alt:not(:disabled):not(.disabled),
 .woocommerce button.button.alt:not(:disabled):not(.disabled),
-.woocommerce input.button.alt:not(:disabled):not(.disabled), .tinvwl_button_close:not(:disabled):not(.disabled), #isw-load-more-button:not(:disabled):not(.disabled) {
+.woocommerce input.button.alt:not(:disabled):not(.disabled), .tinvwl_button_close:not(:disabled):not(.disabled), #isw-load-more-button:not(:disabled):not(.disabled), .prev-post a:not(:disabled):not(.disabled), .next-post a:not(:disabled):not(.disabled), .comment-reply-link:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
 .btn:not(:disabled):not(.disabled):active, .button.button-primary:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
 .woocommerce button.button:not(:disabled):not(.disabled):active,
 .woocommerce input.button:not(:disabled):not(.disabled):active, .woocommerce a.button.alt:not(:disabled):not(.disabled):active,
 .woocommerce button.button.alt:not(:disabled):not(.disabled):active,
-.woocommerce input.button.alt:not(:disabled):not(.disabled):active, .tinvwl_button_close:not(:disabled):not(.disabled):active, #isw-load-more-button:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .button.button-primary:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
+.woocommerce input.button.alt:not(:disabled):not(.disabled):active, .tinvwl_button_close:not(:disabled):not(.disabled):active, #isw-load-more-button:not(:disabled):not(.disabled):active, .prev-post a:not(:disabled):not(.disabled):active, .next-post a:not(:disabled):not(.disabled):active, .comment-reply-link:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .button.button-primary:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active, .woocommerce a.button:not(:disabled):not(.disabled).active,
 .woocommerce button.button:not(:disabled):not(.disabled).active,
 .woocommerce input.button:not(:disabled):not(.disabled).active, .woocommerce a.button.alt:not(:disabled):not(.disabled).active,
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active,
-.woocommerce input.button.alt:not(:disabled):not(.disabled).active, .tinvwl_button_close:not(:disabled):not(.disabled).active, #isw-load-more-button:not(:disabled):not(.disabled).active {
+.woocommerce input.button.alt:not(:disabled):not(.disabled).active, .tinvwl_button_close:not(:disabled):not(.disabled).active, #isw-load-more-button:not(:disabled):not(.disabled).active, .prev-post a:not(:disabled):not(.disabled).active, .next-post a:not(:disabled):not(.disabled).active, .comment-reply-link:not(:disabled):not(.disabled).active {
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -22139,11 +22150,11 @@ button {
 .woocommerce button.button:not(:disabled):not(.disabled):active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled):active:focus, .woocommerce a.button.alt:not(:disabled):not(.disabled):active:focus,
 .woocommerce button.button.alt:not(:disabled):not(.disabled):active:focus,
-.woocommerce input.button.alt:not(:disabled):not(.disabled):active:focus, .tinvwl_button_close:not(:disabled):not(.disabled):active:focus, #isw-load-more-button:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, .button.button-primary:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
+.woocommerce input.button.alt:not(:disabled):not(.disabled):active:focus, .tinvwl_button_close:not(:disabled):not(.disabled):active:focus, #isw-load-more-button:not(:disabled):not(.disabled):active:focus, .prev-post a:not(:disabled):not(.disabled):active:focus, .next-post a:not(:disabled):not(.disabled):active:focus, .comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, .button.button-primary:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled).active:focus, .woocommerce a.button.alt:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button.alt:not(:disabled):not(.disabled).active:focus,
-.woocommerce input.button.alt:not(:disabled):not(.disabled).active:focus, .tinvwl_button_close:not(:disabled):not(.disabled).active:focus, #isw-load-more-button:not(:disabled):not(.disabled).active:focus {
+.woocommerce input.button.alt:not(:disabled):not(.disabled).active:focus, .tinvwl_button_close:not(:disabled):not(.disabled).active:focus, #isw-load-more-button:not(:disabled):not(.disabled).active:focus, .prev-post a:not(:disabled):not(.disabled).active:focus, .next-post a:not(:disabled):not(.disabled).active:focus, .comment-reply-link:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
           box-shadow: 0 0 0 3px rgba(40, 50, 93, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
@@ -22151,7 +22162,7 @@ button {
 .woocommerce button.button:active,
 .woocommerce input.button:active, .woocommerce a.button.alt:active,
 .woocommerce button.button.alt:active,
-.woocommerce input.button.alt:active, .tinvwl_button_close:active, #isw-load-more-button:active {
+.woocommerce input.button.alt:active, .tinvwl_button_close:active, #isw-load-more-button:active, .prev-post a:active, .next-post a:active, .comment-reply-link:active {
   bottom: -3px;
   -webkit-transition: bottom 0.5s ease-in;
   transition: bottom 0.5s ease-in;
@@ -22159,7 +22170,7 @@ button {
   transition: all 0.4s;
 }
 
-a.btn.disabled, a.disabled.button.button-primary, .woocommerce a.disabled.added_to_cart, .woocommerce a.disabled.button, .woocommerce a.disabled.button.alt, a.disabled.tinvwl_button_close, a.disabled#isw-load-more-button,
+a.btn.disabled, a.disabled.button.button-primary, .woocommerce a.disabled.added_to_cart, .woocommerce a.disabled.button, .woocommerce a.disabled.button.alt, a.disabled.tinvwl_button_close, a.disabled#isw-load-more-button, .prev-post a.disabled, .next-post a.disabled, a.disabled.comment-reply-link,
 fieldset:disabled a.btn,
 fieldset:disabled a.button.button-primary,
 fieldset:disabled .woocommerce a.added_to_cart,
@@ -22169,7 +22180,12 @@ fieldset:disabled .woocommerce a.button,
 fieldset:disabled .woocommerce a.button.alt,
 .woocommerce fieldset:disabled a.button.alt,
 fieldset:disabled a.tinvwl_button_close,
-fieldset:disabled a#isw-load-more-button {
+fieldset:disabled a#isw-load-more-button,
+fieldset:disabled .prev-post a,
+.prev-post fieldset:disabled a,
+fieldset:disabled .next-post a,
+.next-post fieldset:disabled a,
+fieldset:disabled a.comment-reply-link {
   pointer-events: none;
 }
 
@@ -22308,7 +22324,7 @@ fieldset:disabled a#isw-load-more-button {
   outline: none;
 }
 
-.btn2, .woocommerce a.added_to_cart {
+.btn2, .woocommerce a.added_to_cart, .comment-reply-link {
   background: #BB2440;
   position: relative;
   z-index: 1;
@@ -22316,7 +22332,7 @@ fieldset:disabled a#isw-load-more-button {
   color: #fff;
   border-color: #BB2440;
 }
-.btn2:after, .woocommerce a.added_to_cart:after {
+.btn2:after, .woocommerce a.added_to_cart:after, .comment-reply-link:after {
   background: #fff;
   content: "";
   height: 155px;
@@ -22331,31 +22347,31 @@ fieldset:disabled a#isw-load-more-button {
           transform: rotate(35deg);
   z-index: -10;
 }
-.btn2:hover, .woocommerce a.added_to_cart:hover {
+.btn2:hover, .woocommerce a.added_to_cart:hover, .comment-reply-link:hover {
   color: #fff;
   background-color: #7b182a;
   border-color: #7b182a;
 }
-.btn2:hover:after, .woocommerce a.added_to_cart:hover:after {
+.btn2:hover:after, .woocommerce a.added_to_cart:hover:after, .comment-reply-link:hover:after {
   left: 120%;
   -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn2:focus, .woocommerce a.added_to_cart:focus, .btn2.focus, .woocommerce a.focus.added_to_cart {
+.btn2:focus, .woocommerce a.added_to_cart:focus, .comment-reply-link:focus, .btn2.focus, .woocommerce a.focus.added_to_cart, .focus.comment-reply-link {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
-.btn2.disabled, .woocommerce a.disabled.added_to_cart, .btn2:disabled, .woocommerce a.added_to_cart:disabled {
+.btn2.disabled, .woocommerce a.disabled.added_to_cart, .disabled.comment-reply-link, .btn2:disabled, .woocommerce a.added_to_cart:disabled, .comment-reply-link:disabled {
   color: #fff;
   background-color: #3b0b14;
   border-color: #3b0b14;
   cursor: not-allowed;
 }
-.btn2.disabled:after, .woocommerce a.disabled.added_to_cart:after, .btn2:disabled:after, .woocommerce a.added_to_cart:disabled:after {
+.btn2.disabled:after, .woocommerce a.disabled.added_to_cart:after, .disabled.comment-reply-link:after, .btn2:disabled:after, .woocommerce a.added_to_cart:disabled:after, .comment-reply-link:disabled:after {
   content: none;
 }
-.btn2:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .btn2:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active {
+.btn2:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .comment-reply-link:not(:disabled):not(.disabled):active, .btn2:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active, .comment-reply-link:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #901c31;
   border-color: #901c31;
@@ -22364,7 +22380,7 @@ fieldset:disabled a#isw-load-more-button {
   background-color: #a62039;
   border-color: #a62039;
 }
-.btn2:not(:disabled):not(.disabled):active:after, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:after, .btn2:not(:disabled):not(.disabled).active:after, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:after {
+.btn2:not(:disabled):not(.disabled):active:after, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:after, .comment-reply-link:not(:disabled):not(.disabled):active:after, .btn2:not(:disabled):not(.disabled).active:after, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:after, .comment-reply-link:not(:disabled):not(.disabled).active:after {
   background: rgba(255, 255, 255, 0.75);
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -22373,13 +22389,13 @@ fieldset:disabled a#isw-load-more-button {
   -webkit-transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.btn2:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .btn2:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus {
+.btn2:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn2:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus, .comment-reply-link:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
 
-.btn1-outline {
+.btn1-outline, .prev-post a, .next-post a {
   /* background transparent */
   background-color: rgba(255, 255, 255, 0);
   color: #28325D;
@@ -22387,26 +22403,26 @@ fieldset:disabled a#isw-load-more-button {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn1-outline:hover {
+.btn1-outline:hover, .prev-post a:hover, .next-post a:hover {
   color: #fff;
   background-color: #28325D;
   border-color: #28325D;
 }
-.btn1-outline:focus, .btn1-outline.focus {
+.btn1-outline:focus, .prev-post a:focus, .next-post a:focus, .btn1-outline.focus, .prev-post a.focus, .next-post a.focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn1-outline.disabled, .btn1-outline:disabled {
+.btn1-outline.disabled, .prev-post a.disabled, .next-post a.disabled, .btn1-outline:disabled, .prev-post a:disabled, .next-post a:disabled {
   color: #fff;
   background-color: #aab3da;
   border-color: #aab3da;
 }
-.btn1-outline:not(:disabled):not(.disabled):active, .btn1-outline:not(:disabled):not(.disabled).active {
+.btn1-outline:not(:disabled):not(.disabled):active, .prev-post a:not(:disabled):not(.disabled):active, .next-post a:not(:disabled):not(.disabled):active, .btn1-outline:not(:disabled):not(.disabled).active, .prev-post a:not(:disabled):not(.disabled).active, .next-post a:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #4758a4;
   border-color: #4758a4;
 }
-.btn1-outline:not(:disabled):not(.disabled):active:focus, .btn1-outline:not(:disabled):not(.disabled).active:focus {
+.btn1-outline:not(:disabled):not(.disabled):active:focus, .prev-post a:not(:disabled):not(.disabled):active:focus, .next-post a:not(:disabled):not(.disabled):active:focus, .btn1-outline:not(:disabled):not(.disabled).active:focus, .prev-post a:not(:disabled):not(.disabled).active:focus, .next-post a:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
@@ -22473,7 +22489,7 @@ fieldset:disabled a#isw-load-more-button {
   border-radius: 5px;
 }
 
-.btn-sm {
+.btn-sm, .prev-post a, .next-post a, .comment-reply-link {
   padding: 10px 18px;
   font-size: 14px;
   line-height: 1.15;
@@ -22499,11 +22515,11 @@ fieldset:disabled a#isw-load-more-button {
   .woocommerce button.button,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
-  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
+  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button, .prev-post a, .next-post a, .comment-reply-link {
     padding: 12px 25px;
     font-size: 16px;
   }
-  .btn-sm {
+  .btn-sm, .prev-post a, .next-post a, .comment-reply-link {
     padding: 8px 20px;
     font-size: 14px;
   }
@@ -22517,11 +22533,11 @@ fieldset:disabled a#isw-load-more-button {
   .woocommerce button.button,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
-  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
+  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button, .prev-post a, .next-post a, .comment-reply-link {
     padding: 10px 25px;
     font-size: 15px;
   }
-  .btn-sm {
+  .btn-sm, .prev-post a, .next-post a, .comment-reply-link {
     padding: 10px 15px;
     font-size: 14px;
   }
@@ -22535,11 +22551,11 @@ fieldset:disabled a#isw-load-more-button {
   .woocommerce button.button,
   .woocommerce input.button, .woocommerce a.button.alt,
   .woocommerce button.button.alt,
-  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button {
+  .woocommerce input.button.alt, .tinvwl_button_close, #isw-load-more-button, .prev-post a, .next-post a, .comment-reply-link {
     padding: 10px 20px;
     font-size: 14px;
   }
-  .btn-sm {
+  .btn-sm, .prev-post a, .next-post a, .comment-reply-link {
     padding: 8px 15px;
     font-size: 14px;
   }

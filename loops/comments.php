@@ -17,7 +17,7 @@ if (have_comments()) : ?>
 
 <h3><?php _e('Feedback', 'brainworks'); ?></h3>
 <p class="text-muted" style="margin-bottom: 20px;">
-    <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>
+    <i class="fa-regular fa-comments"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>
     : <?php comments_number(__('None', 'brainworks'), '1', '%'); ?>
 </p>
 

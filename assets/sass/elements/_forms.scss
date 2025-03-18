@@ -48,6 +48,7 @@ form {
 //Comment form on single post page
 #commentform {
     @include form-style;
+    margin-bottom: 20px;
 
     .form-group {
         label {

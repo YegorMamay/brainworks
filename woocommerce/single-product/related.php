@@ -12,7 +12,7 @@
  *
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @package     WooCommerce/Templates
- * @version     9.6.0
+ * @version     9.7.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,8 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
     
-        <hr class="style-three">
-        <div class="vh-xs-2"></div>
+    <hr class="style-three">
+    <div class="vh-xs-2"></div>
 
 	<section class="related products">
 
@@ -39,13 +39,13 @@ if ( $related_products ) : ?>
 
 			<?php foreach ( $related_products as $related_product ) : ?>
 
-					<?php
-					$post_object = get_post( $related_product->get_id() );
+				<?php
+				$post_object = get_post( $related_product->get_id() );
 
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+				setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-					wc_get_template_part( 'content', 'product' );
-					?>
+				wc_get_template_part( 'content', 'product' );
+				?>
 
 			<?php endforeach; ?>
 

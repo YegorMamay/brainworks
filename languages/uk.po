@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-25 07:45+0000\n"
-"PO-Revision-Date: 2025-03-03 08:49+0000\n"
+"PO-Revision-Date: 2025-03-10 17:38+0000\n"
 "Last-Translator: \n"
 "Language-Team: Українська\n"
 "Language: uk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.2; wp-5.7.2"
+"X-Loco-Version: 2.7.1; wp-6.7.2"
 
 #: inc/setup.php:246
 #, php-format
@@ -407,7 +407,7 @@ msgstr "Наступний"
 
 #: single.php:44
 msgid "Next post"
-msgstr ""
+msgstr "Наступна стаття"
 
 #: loops/comments.php:21
 msgid "None"
@@ -545,7 +545,7 @@ msgstr "Попередній"
 
 #: single.php:43
 msgid "Previous post"
-msgstr ""
+msgstr "Попередня стаття"
 
 #: inc/shortcodes.php:562
 msgid "Register"
