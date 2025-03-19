@@ -195,3 +195,7 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    background-color: $themeColor6;
+}

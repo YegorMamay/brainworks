@@ -716,6 +716,21 @@ function get_sold_in_last_24_hours() {
 
 // Регистрируем шорткод
 add_shortcode('sold_in_last_24_hours', 'get_sold_in_last_24_hours');
-
-
 // Шорткод для товара 2 END
+
+function custom_seo_title() {
+    if (is_front_page()) {
+            echo get_bloginfo('name');
+        } elseif (is_post_type_archive()) {
+            echo post_type_archive_title();
+        } elseif (!is_front_page() || !is_page()) {
+            echo single_post_title();
+        } elseif (!is_front_page() || !is_single()) {
+            echo the_title();
+        } elseif (is_front_page() && is_category()) {
+            echo single_cat_title();
+        }
+        if (is_archive()) {
+            echo single_cat_title();
+        }
+}

@@ -5,6 +5,9 @@ function bw_enqueues()
     wp_register_style('style-css', get_template_directory_uri() . '/style.css', false, null);
     wp_enqueue_style('style-css');
 
+    wp_register_style('fontawesome', get_template_directory_uri() . '/assets/css/all.min.css', false, null);
+    wp_enqueue_style('fontawesome');
+
     /** Scripts */
     wp_register_script('html5shiv', 'https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js', [], null, false);
     wp_register_script('respond', 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js', [], null, false);
