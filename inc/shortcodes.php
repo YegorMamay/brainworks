@@ -207,80 +207,188 @@ if (!function_exists('bw_html_sitemap')) {
 
     function bw_html_sitemap($atts)
     {
-        $output = '';
-        $args = array(
-            'public' => 1,
-        );
+        $output = '<div class="sitemap-container">';
 
-        // If you would like to ignore some post types just add them to the array below
+        // Игнорируемые типы записей
         $ignoreposttypes = array(
             'attachment',
             'popup',
             'reviews',
-            'catalog',
             'elementor_library',
             'e-floating-buttons',
             'br_product_filter',
             'br_filters_group',
-            'blocks',
-            /*'product'*/
+            'blocks'
         );
 
-        $post_types = get_post_types($args, 'objects');
+        // Маппинг колонок: укажите, в какую колонку попадает каждая сущность
+        $column_mapping = array(
+            'page' => 1,
+            'post' => 2,
+            'category' => 2,
+            'sn_cat' => 2,
+            'product' => 3,
+            'product_cat' => 3
+        );
 
+        // Порядок сущностей внутри колонок
+        $entity_order = array(
+            'page' => 1,
+            'category' => 2,
+            'post' => 3,
+            'sn_cat' => 4,
+            'product' => 6,
+            'product_cat' => 5
+        );
+
+        // Создаем массив для контента каждой колонки
+        $columns = array_fill(1, 3, array()); // Используем массивы для сортировки
+
+        // Страницы
+        $post_type_obj = get_post_type_object('page');
+        if ($post_type_obj && !in_array($post_type_obj->name, $ignoreposttypes)) {
+            $pages_array = get_posts(array(
+                'posts_per_page' => -1,
+                'post_type' => 'page',
+                'post_status' => 'publish',
+                'orderby' => 'title',
+                'order' => 'ASC',
+            ));
+            if (!empty($pages_array)) { // Условие добавлено здесь
+                $pages_output = '<h5 class="sitemap-headline">' . esc_html($post_type_obj->labels->name) . '</h5>';
+                $pages_output .= '<ul class="sitemap-list">';
+                foreach ($pages_array as $page) {
+                    $pages_output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . esc_url(get_permalink($page->ID)) . '">' . esc_html($page->post_title) . '</a></li>';
+                }
+                $pages_output .= '</ul>';
+                $columns[$column_mapping['page']][] = array('order' => $entity_order['page'], 'content' => $pages_output);
+            }
+        }
+
+        // Динамическая обработка всех типов записей, исключая "product"
+        $post_types = get_post_types(array('public' => true), 'objects');
         foreach ($post_types as $post_type) {
-            if (!in_array($post_type->name, $ignoreposttypes)) {
-                $output .= '<div class="col-12 col-md-6 col-lg-3">';
-                $output .= '<h4 class="sitemap-headline">' . $post_type->labels->name . '</h4><div class="vh-xs-1"></div>';
-                $args = array(
+            if (!in_array($post_type->name, $ignoreposttypes) && $post_type->name !== 'page' && $post_type->name !== 'product') {
+                $posts_array = get_posts(array(
                     'posts_per_page' => -1,
                     'post_type' => $post_type->name,
                     'post_status' => 'publish',
                     'orderby' => 'title',
                     'order' => 'ASC',
-                );
-                $posts_array = get_posts($args);
-                $output .= '<ul class="sitemap-list">';
-                foreach ($posts_array as $pst) {
-                    $output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . get_permalink($pst->ID) . '">' . $pst->post_title . '</a></li>';
+                ));
+                if (!empty($posts_array)) { // Условие добавлено здесь
+                    $posts_output = '<h5 class="sitemap-headline">' . esc_html($post_type->labels->name) . '</h5>';
+                    $posts_output .= '<ul class="sitemap-list">';
+                    foreach ($posts_array as $post) {
+                        $posts_output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . esc_url(get_permalink($post->ID)) . '">' . esc_html($post->post_title) . '</a></li>';
+                    }
+                    $posts_output .= '</ul>';
+                    $columns[$column_mapping[$post_type->name] ?? 2][] = array('order' => $entity_order[$post_type->name] ?? 99, 'content' => $posts_output);
                 }
-                $output .= '</ul><div class="vh-xs-2"></div>';
-                $output .= '</div>';
             }
         }
 
-        /* Закомментируй, чтобы скрыть Каталог - начало */
-	    $ignoretaxonomy = [
-		    'catalog',
-            'sn_cat' // comment this line to show categities list on sitemap page
-	    ];
+        // Категории записей
+        $taxonomy_obj = get_taxonomy('category');
+        if ($taxonomy_obj) {
+            $categories = get_categories(array(
+                'hide_empty' => true,
+                'orderby' => 'name',
+                'order' => 'ASC',
+            ));
+            if (!empty($categories)) { // Условие добавлено здесь
+                $categories_output = '<h5 class="sitemap-headline">' . esc_html($taxonomy_obj->labels->name) . '</h5>';
+                $categories_output .= '<ul class="sitemap-list">';
+                foreach ($categories as $category) {
+                    $categories_output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a></li>';
+                }
+                $categories_output .= '</ul>';
+                $columns[$column_mapping['category']][] = array('order' => $entity_order['category'], 'content' => $categories_output);
+            }
+        }
 
-	    $product_categories = get_terms( [
-		    'taxonomy' => 'sn_cat',
-		    'hide_empty' => true,
-		    'orderby' => 'name',
-		    'order' => 'ASC',
-	    ] );
+        // Категории кастомного поста
+        $taxonomy_obj = get_taxonomy('sn_cat');
+        if ($taxonomy_obj) {
+            $sn_cat_terms = get_terms(array(
+                'taxonomy' => 'sn_cat',
+                'hide_empty' => true,
+                'orderby' => 'name',
+                'order' => 'ASC',
+            ));
+            if (!empty($sn_cat_terms)) { // Условие добавлено здесь
+                $sn_cat_output = '<h5 class="sitemap-headline">' . esc_html($taxonomy_obj->labels->name) . '</h5>';
+                $sn_cat_output .= '<ul class="sitemap-list">';
+                foreach ($sn_cat_terms as $term) {
+                    $sn_cat_output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                }
+                $sn_cat_output .= '</ul>';
+                $columns[$column_mapping['sn_cat']][] = array('order' => $entity_order['sn_cat'], 'content' => $sn_cat_output);
+            }
+        }
 
-	    $taxonomy = get_taxonomy('sn_cat' );
+        // Товары WooCommerce
+        $post_type_obj = get_post_type_object('product');
+        if ($post_type_obj && !in_array('product', $ignoreposttypes)) {
+            $products_array = get_posts(array(
+                'posts_per_page' => -1,
+                'post_type' => 'product',
+                'post_status' => 'publish',
+                'orderby' => 'title',
+                'order' => 'ASC',
+            ));
+            if (!empty($products_array)) { // Условие добавлено здесь
+                $products_output = '<h5 class="sitemap-headline">' . esc_html($post_type_obj->labels->name) . '</h5>';
+                $products_output .= '<ul class="sitemap-list">';
+                foreach ($products_array as $product) {
+                    $products_output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . esc_url(get_permalink($product->ID)) . '">' . esc_html($product->post_title) . '</a></li>';
+                }
+                $products_output .= '</ul>';
+                $columns[$column_mapping['product']][] = array('order' => $entity_order['product'], 'content' => $products_output);
+            }
+        }
 
-	    if ( ! in_array( $taxonomy->name, $ignoretaxonomy ) ) {
-            $output .= '<div class="col-12 col-md-6 col-lg-3">';
-		    $output .= '<h4 class="sitemap-headline">' . $taxonomy->labels->name . '</h4><div class="vh-xs-1"></div>';
-		    $output .= '<ul class="sitemap-list">';
-		    foreach ( $product_categories as $term ) {
-			    $output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . get_term_link( $term ) . '">' . $term->name . '</a></li>';
-		    }
-		    $output .= '</ul><div class="vh-xs-2"></div>';
+        // Категории товаров
+        $taxonomy_obj = get_taxonomy('product_cat');
+        if ($taxonomy_obj) {
+            $product_categories = get_terms(array(
+                'taxonomy' => 'product_cat',
+                'hide_empty' => true,
+                'orderby' => 'name',
+                'order' => 'ASC',
+            ));
+            if (!empty($product_categories)) { // Условие добавлено здесь
+                $prod_categories_output = '<h5 class="sitemap-headline">' . esc_html($taxonomy_obj->labels->name) . '</h5>';
+                $prod_categories_output .= '<ul class="sitemap-list">';
+                foreach ($product_categories as $term) {
+                    $prod_categories_output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                }
+                $prod_categories_output .= '</ul>';
+                $columns[$column_mapping['product_cat']][] = array('order' => $entity_order['product_cat'], 'content' => $prod_categories_output);
+            }
+        }
+
+        // Формирование HTML с колонками
+        foreach ($columns as $column_content) {
+            usort($column_content, function ($a, $b) {
+                return $a['order'] <=> $b['order'];
+            }); // Сортируем по порядку
+            $output .= '<div class="sitemap-column">';
+            foreach ($column_content as $entity) {
+                $output .= $entity['content'];
+            }
             $output .= '</div>';
-	    }
-        /* Закомментируй, чтобы скрыть Каталог - конец */
+        }
+
+        $output .= '</div>'; // Закрытие sitemap-container
 
         return $output;
     }
 
     add_shortcode('bw-html-sitemap', 'bw_html_sitemap');
 }
+
+
 
 if (!function_exists('bw_last_posts')) {
     /**

@@ -1,0 +1,27 @@
+.sitemap-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.sitemap-column {
+    flex: 1 1 calc(25% - 20px); /* 4 колонки равномерно, учитывая gap */
+    min-width: 200px;
+    max-width: 400px; /* Добавить ограничение, чтобы колонки не растягивались слишком сильно */
+    box-sizing: border-box; /* Для более предсказуемой ширины */
+}
+
+.sitemap-section {
+    margin-bottom: 30px;
+}
+
+.sitemap-headline {
+    margin-bottom: 5px;
+}
+
+.sitemap-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
