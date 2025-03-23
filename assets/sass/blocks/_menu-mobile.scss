@@ -115,7 +115,11 @@ body.home {
                 }
 
                 &:hover {
-                    background: $menuMobileSubMenuBGOnHover;
+                    background: transparent;
+
+                    .menu-link {
+                        color: $menuMobileTextColor;
+                    }
                 }
 
                 .menu-item-has-children-arrow {

@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 19.03.25
+Version: 22.03.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -3607,6 +3607,42 @@ ol.commentlist {
   line-height: inherit;
 }
 
+.sitemap-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sitemap-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(25% - 20px);
+          flex: 1 1 calc(25% - 20px); /* 4 колонки равномерно, учитывая gap */
+  min-width: 200px;
+  max-width: 400px; /* Добавить ограничение, чтобы колонки не растягивались слишком сильно */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* Для более предсказуемой ширины */
+}
+
+.sitemap-section {
+  margin-bottom: 30px;
+}
+
+.sitemap-headline {
+  margin-bottom: 5px;
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
 .page-404 {
   text-align: center;
   height: 40vh;
@@ -6130,7 +6166,10 @@ a:hover, a:active, a:focus {
     display: none;
   }
   .nav .menu-item:hover {
-    background: #BB2440;
+    background: transparent;
+  }
+  .nav .menu-item:hover .menu-link {
+    color: #28325D;
   }
   .nav .menu-item .menu-item-has-children-arrow {
     position: absolute;

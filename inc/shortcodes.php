@@ -6,43 +6,45 @@ if (!function_exists('bw_polylang_shortcode')) {
      *
      * @param $atts
      *
-     * @return array|null|string
+     * @return string
      */
-    function polylang_shortcode($atts)
-    {
-        // Attributes
+    function bw_polylang_shortcode($atts) {
+        // Устанавливаем атрибуты шорткода
         $atts = shortcode_atts(
             array(
-                'dropdown' => 0, // display as list and not as dropdown
-                'echo' => 0, // echoes the list
-                'hide_if_empty' => 1, // hides languages with no posts ( or pages )
-                'menu' => 0, // not for nav menu ( this argument is deprecated since v1.1.1 )
-                'show_flags' => 0, // don't show flags
-                'show_names' => 1, // show language names
-                'display_names_as' => 'name', // valid options are slug and name
-                'force_home' => 0, // tries to find a translation
-                'hide_if_no_translation' => 0, // don't hide the link if there is no translation
-                'hide_current' => 0, // don't hide current language
-                'post_id' => null, // if not null, link to translations of post defined by post_id
-                'raw' => 0, // set this to true to build your own custom language switcher
-                'item_spacing' => 'preserve', // 'preserve' or 'discard' whitespace between list items
+                'dropdown' => 0, // показывать как список, а не как выпадающий
+                'show_flags' => 1, // показывать флаги
+                'show_names' => 1, // показывать имена языков
+                'hide_if_empty' => 1, // скрывать языки с пустым контентом
             ),
             $atts
         );
 
         if (function_exists('pll_the_languages')) {
-            $flags = pll_the_languages($atts);
+            // Параметры для вывода языков
+            $args = array(
+                'show_flags' => $atts['show_flags'],
+                'show_names' => $atts['show_names'],
+                'hide_if_empty' => $atts['hide_if_empty'],
+                'dropdown' => $atts['dropdown'],
+                'echo' => 0, // Мы не выводим его сразу, чтобы получить результат в переменную
+            );
 
-            if (0 === (int) $atts['dropdown']) {
-                $flags = sprintf('<ul class="lang">%s</ul>', $flags);
+            // Получаем языковый переключатель
+            $output = pll_the_languages($args);
+
+            // Если вывод пустой, возвращаем пустое значение
+            if (!$output) {
+                return ''; // если ничего не возвращает, выводим пустое
             }
 
-            return $flags;
+            return $output; // возвращаем результат
         }
 
-        return '';
+        return ''; // если функция не существует, возвращаем пустое значение
     }
 
+    // Регистрируем шорткод
     add_shortcode('polylang', 'bw_polylang_shortcode');
 }
 
@@ -56,43 +58,33 @@ if (!function_exists('bw_social_shortcode')) {
      */
     function bw_social_shortcode($atts)
     {
+        // Атрибуты шорткода (можно добавить по необходимости)
+        $atts = shortcode_atts(array(), $atts);
 
-        // Attributes
-        $atts = shortcode_atts(
-            array(),
-            $atts
-        );
-
-        $output = '';
-
-        if (has_social()) {
-            $items = '';
-
-            foreach (get_social() as $name => $social) {
-                $icon_fallback = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($social['icon']));
-                if (!empty($social['img-link'])) {
-                    $icon = sprintf('<img src="%s" alt="%s">', esc_url($social['img-link']), esc_attr($social['text']));
-                } else {
-                    $icon = !empty($social['icon-html']) ? strip_tags($social['icon-html'], '<i>') : $icon_fallback;
-                }
-
-
-                $items .= sprintf(
-                    '<li class="social-item">%s</li>',
-                    sprintf(
-                        '<a class="social-link social-%s" href="%s" target="_blank" rel="nofollow noopener" aria-label="%s">%s</a>',
-                        esc_attr($name),
-                        esc_attr(esc_url($social['url'])),
-                        esc_attr($social['text']),
-                        $icon
-                    )
-                );
-            }
-
-            $output = sprintf('<ul class="social">%s</ul>', $items);
+        // Проверка на наличие социальных ссылок
+        if (!has_social()) {
+            return ''; // Возвращаем пустое значение, если социальных ссылок нет
         }
 
-        return $output;
+        // Генерация списка социальных иконок
+        $items = array_map(function ($name, $social) {
+            // Устанавливаем иконку по умолчанию или пользовательскую
+            $icon = !empty($social['img-link'])
+                ? sprintf('<img src="%s" alt="%s">', esc_url($social['img-link']), esc_attr($social['text']))
+                : (empty($social['icon-html']) ? sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($social['icon'])) : strip_tags($social['icon-html'], '<i>'));
+
+            // Формируем ссылку с социальной иконкой
+            return sprintf(
+                '<li class="social-item"><a class="social-link social-%s" href="%s" target="_blank" rel="nofollow noopener" aria-label="%s">%s</a></li>',
+                esc_attr($name),
+                esc_url($social['url']),
+                esc_attr($social['text']),
+                $icon
+            );
+        }, array_keys(get_social()), get_social());
+
+        // Объединяем элементы в один список и возвращаем результат
+        return sprintf('<ul class="social">%s</ul>', implode('', $items));
     }
 
     add_shortcode('bw-social', 'bw_social_shortcode');
@@ -108,33 +100,25 @@ if (!function_exists('bw_phone_shortcode')) {
      */
     function bw_phone_shortcode($atts)
     {
+        // Атрибуты шорткода (не используются в данном случае)
+        $atts = shortcode_atts([], $atts);
 
-        // Attributes
-        $atts = shortcode_atts(
-            array(),
-            $atts
-        );
-
-        $output = '';
-
-        if (has_phones()) {
-            $items = '';
-
-            foreach (get_phones() as $phone) {
-                $items .= sprintf(
-                    '<li class="phone-item">%s</li>',
-                    sprintf(
-                        '<a class="phone-number" href="tel:%s">%s</a>',
-                        strip_tags(get_phone_number($phone)),
-                        trim($phone)
-                    )
-                );
-            }
-
-            $output = sprintf('<ul class="phone">%s</ul>', $items);
+        // Проверка наличия телефонов
+        if (!has_phones()) {
+            return ''; // Если нет телефонов, возвращаем пустую строку
         }
 
-        return $output;
+        // Создание списка телефонов
+        $items = array_map(function ($phone) {
+            return sprintf(
+                '<li class="phone-item"><a class="phone-number" href="tel:%s">%s</a></li>',
+                strip_tags(get_phone_number($phone)),
+                trim($phone)
+            );
+        }, get_phones());
+
+        // Возвращаем форматированный список телефонов
+        return sprintf('<ul class="phone">%s</ul>', implode('', $items));
     }
 
     add_shortcode('bw-phone', 'bw_phone_shortcode');
@@ -150,54 +134,54 @@ if (!function_exists('bw_messengers_shortcode')) {
      */
     function bw_messengers_shortcode($atts)
     {
+        // Атрибуты шорткода (не используются в данном случае)
+        $atts = shortcode_atts([], $atts);
 
-        // Attributes
-        $atts = shortcode_atts(
-            array(),
-            $atts
-        );
-
-        $output = '';
-
-        if (has_messengers()) {
-            $items = '';
-
-            foreach (get_messengers() as $name => $messenger) {
-                $icon = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($messenger['icon']));
-
-	            $tel = ($messenger['tel']);
-
-	            if ($name === 'viber') {
-		            $tel = wp_is_mobile()
-			            ? 'viber://chat?number=' . str_replace('+', '', $tel)
-			            : "viber://chat?number=%2B$tel";
-	            } elseif ($name === 'whatsapp') {
-		            $tel = "https://wa.me/+$tel";
-	            } elseif ($name === 'telegram') {
-		            $tel = "https://t.me/$tel";
-	            } elseif ($name === 'facebook') {
-		            $tel = "https://m.me/$tel";
-	            } else {
-                    $tel = get_phone_number($tel);
-                }
-
-                $link = sprintf(
-                    '<a class="messenger-link messenger-%s" href="%s" target="_blank" aria-label="%s" rel="noopener nofollow">%s</a>',
-                    esc_attr($name),
-                    esc_attr($tel),
-                    esc_attr($messenger['text']),
-                    $icon
-                );
-
-                $item = sprintf('<li class="messenger-item">%s</li>', $link);
-
-                $items .= $item . PHP_EOL;
-            }
-
-            $output = sprintf('<ul class="messenger">%s</ul>', $items);
+        // Проверка наличия мессенджеров
+        if (!has_messengers()) {
+            return ''; // Если нет мессенджеров, возвращаем пустую строку
         }
 
-        return $output;
+        // Массив с элементами списка
+        $items = [];
+        foreach (get_messengers() as $name => $messenger) {
+            // Формируем иконку
+            $icon = sprintf('<i class="%s" aria-hidden="true"></i>', esc_attr($messenger['icon']));
+
+            // Обработка URL в зависимости от мессенджера
+            $tel = ($messenger['tel']);
+            switch ($name) {
+                case 'viber':
+                    $tel = wp_is_mobile() ? 'viber://chat?number=' . str_replace('+', '', $tel) : "viber://chat?number=%2B$tel";
+                    break;
+                case 'whatsapp':
+                    $tel = "https://wa.me/+$tel";
+                    break;
+                case 'telegram':
+                    $tel = "https://t.me/$tel";
+                    break;
+                case 'facebook':
+                    $tel = "https://m.me/$tel";
+                    break;
+                default:
+                    $tel = get_phone_number($tel);
+            }
+
+            // Формируем ссылку
+            $link = sprintf(
+                '<a class="messenger-link messenger-%s" href="%s" target="_blank" aria-label="%s" rel="noopener nofollow">%s</a>',
+                esc_attr($name),
+                esc_attr($tel),
+                esc_attr($messenger['text']),
+                $icon
+            );
+
+            // Добавляем элемент списка
+            $items[] = sprintf('<li class="messenger-item">%s</li>', $link);
+        }
+
+        // Возвращаем список мессенджеров
+        return sprintf('<ul class="messenger">%s</ul>', implode(PHP_EOL, $items));
     }
 
     add_shortcode('bw-messengers', 'bw_messengers_shortcode');
@@ -387,8 +371,6 @@ if (!function_exists('bw_html_sitemap')) {
 
     add_shortcode('bw-html-sitemap', 'bw_html_sitemap');
 }
-
-
 
 if (!function_exists('bw_last_posts')) {
     /**

@@ -94,22 +94,25 @@
 
                 <!-- Language switcher menu START -->
                 <div class="nav-wrapper language-switcher">
-                    <?php if (has_nav_menu('language-switcher') && function_exists('pll_the_languages')) { ?>
+                    <?php if (has_nav_menu('language-switcher')) { ?>
                     <nav class="nav js-menu">
-                        <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
-                        <?php wp_nav_menu(array(
+                    <button type="button" class="menu-item-close menu-close js-menu-close" tabindex="0"></button>
+                    <?php
+                        wp_nav_menu(array(
                             'theme_location' => 'language-switcher',
                             'container' => false,
                             'menu_class' => 'menu-container',
-                            'menu_id' => '',
+                            'menu_id' => false,
                             'fallback_cb' => 'wp_page_menu',
-                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
                             'depth' => 2
-                        )); ?>
+                        ));
+                    ?>
                     </nav>
                     <?php } ?>
                 </div>
                 <!-- Language switcher menu END -->
+
 
                 <!-- Dropdown phones START -->
                 <?php if (has_phones()) { ?>
@@ -244,6 +247,10 @@
             <?php } ?>
             <!-- If WOO: Список желаний, кабинет, корзина. END -->
 
+            <div class="d-flex align-items-center">
+
+            <?php echo do_shortcode('[polylang show_flags="1" show_names="1" dropdown="1"]'); ?>
+
             <!-- Hamburger button. START -->
             <button class="hamburger js-hamburger" type="button" tabindex="0">
                 <span class="hamburger-box">
@@ -251,6 +258,8 @@
                 </span>
             </button>
             <!-- Hamburger button. END -->
+
+            </div>
 
         </div>
         <!-- Mobile Header END -->
@@ -270,19 +279,19 @@
             'depth' => 3
         )); ?>
 
-            <?php if (has_nav_menu('language-switcher')) { ?>
+        <?php if (has_nav_menu('language-switcher')) { ?>
             <div class="mobile-language">
                 <?php wp_nav_menu(array(
-                'theme_location' => 'language-switcher',
-                'container' => false,
-                'menu_class' => 'menu-container',
-                'menu_id' => '',
-                'fallback_cb' => 'wp_page_menu',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 3
-            )); ?>
+                    'theme_location' => 'language-switcher',
+                    'container' => false,
+                    'menu_class' => 'menu-container',
+                    'fallback_cb' => 'wp_page_menu',
+                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'depth' => 2
+                )); ?>
             </div>
-            <?php } ?>
+        <?php } ?>
+
 
             <div class="mobile-phones">
                 <?php echo do_shortcode('[bw-phone]'); ?>
