@@ -69,12 +69,13 @@
 
                 a,
                 span {
-                    margin-bottom: 4px;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
                     display: block;
                     border-bottom: 1px solid $themeColor2;
-                    padding-bottom: 4px;
                     font-size: 14px;
                     text-decoration: none;
+                    line-height: 1.4;
                 }
             }
 

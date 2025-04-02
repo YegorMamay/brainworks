@@ -13,7 +13,8 @@
         <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
     <?php endif; ?>
 
-    <?php if ( is_plugin_inactive( 'yoast-seo/wp-seo.php' ) ) : ?>
+    <?php if ((function_exists('is_plugin_inactive') && is_plugin_inactive('yoast-seo/wp-seo.php')) || !file_exists(WP_PLUGIN_DIR . '/yoast-seo/wp-seo.php')) : ?>
+
         <title><?php echo esc_html( custom_seo_title() ); ?></title>
 
         <meta name="description" content="<?php echo esc_attr( is_single() ? get_the_excerpt() : get_bloginfo( 'description' ) ); ?>">
@@ -47,7 +48,6 @@
 
     <?php wp_head(); ?>
 </head>
-
 
 <body <?php body_class(); ?> id="top">
 

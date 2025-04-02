@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 22.03.25
+Version: 2.04.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -872,6 +872,11 @@ strong {
 .woocommerce ul.product_list_widget li {
   padding: 10px 0;
 }
+.woocommerce ul.cart_list li a,
+.woocommerce ul.product_list_widget li a {
+  font-size: 14px;
+  line-height: 1.3;
+}
 
 .woocommerce ul.cart_list li img,
 .woocommerce ul.product_list_widget li img {
@@ -880,7 +885,9 @@ strong {
 
 .woocommerce .widget_shopping_cart .cart_list li a.remove,
 .woocommerce.widget_shopping_cart .cart_list li a.remove {
-  top: 7px;
+  font-size: 26px;
+  height: 31px;
+  width: 31px;
 }
 
 .woocommerce .widget_shopping_cart .total,
@@ -6425,12 +6432,13 @@ a:hover, a:active, a:focus {
 }
 .sidebar .widget_nav_menu .menu .menu-item a,
 .sidebar .widget_nav_menu .menu .menu-item span {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   display: block;
   border-bottom: 1px solid #BB2440;
-  padding-bottom: 4px;
   font-size: 14px;
   text-decoration: none;
+  line-height: 1.4;
 }
 .sidebar .widget_nav_menu .menu li.is-opened > .sub-menu {
   display: block;

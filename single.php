@@ -37,8 +37,6 @@
 
             <hr>
 
-            <?php echo do_shortcode('[stellar]'); ?>
-
             <div class="vh-xs-2"></div>
 
             <!-- Ссылки на предыдущую и следующую статью -->

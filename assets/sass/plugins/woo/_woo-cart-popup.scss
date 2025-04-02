@@ -87,6 +87,11 @@
 .woocommerce ul.cart_list li,
 .woocommerce ul.product_list_widget li {
     padding: 10px 0;
+
+    a {
+        font-size: 14px;
+        line-height: 1.3;
+    }
 }
 
 .woocommerce ul.cart_list li img,
@@ -96,7 +101,9 @@
 
 .woocommerce .widget_shopping_cart .cart_list li a.remove,
 .woocommerce.widget_shopping_cart .cart_list li a.remove {
-    top: 7px;
+    font-size: 26px;
+    height: 31px;
+    width: 31px;
 }
 
 .woocommerce .widget_shopping_cart .total,
