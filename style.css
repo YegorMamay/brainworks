@@ -3614,40 +3614,70 @@ ol.commentlist {
   line-height: inherit;
 }
 
+/* Общие стили для обоих режимов */
 .sitemap-container {
+  width: 100%;
+}
+
+/* Режим колонок (по умолчанию) */
+.sitemap-container:not(.list-mode) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .sitemap-column {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 calc(25% - 20px);
-          flex: 1 1 calc(25% - 20px); /* 4 колонки равномерно, учитывая gap */
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
   min-width: 200px;
-  max-width: 400px; /* Добавить ограничение, чтобы колонки не растягивались слишком сильно */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* Для более предсказуемой ширины */
+}
+
+/* Режим списка (list="true") */
+.sitemap-container.list-mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
 }
 
 .sitemap-section {
-  margin-bottom: 30px;
+  width: 100%;
 }
 
-.sitemap-headline {
-  margin-bottom: 5px;
+.sitemap-list-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
 }
 
+.sitemap-list-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  min-width: 150px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Общие стили для списков */
 .sitemap-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
+  margin: 0;
+}
+
+.sitemap-item {
+  margin-bottom: 5px;
 }
 
 .page-404 {
@@ -5372,81 +5402,16 @@ a:hover, a:active, a:focus {
 .phone-number:hover {
   text-decoration: underline;
 }
-
-.phone-number[href^="tel:+"]::before,
-.phone-dropdown__link[href^="tel:+"]::before,
-.phone-number[href^="tel:0"]::before,
-.phone-dropdown__link[href^="tel:0"]::before,
-.phone-number[href^="tel:38"]::before,
-.phone-dropdown__link[href^="tel:38"]::before,
-.phone-dropdown__link[href^="tel:+38"]::before,
-.phone-number[href^="tel:+38"]::before {
-  content: "\f2a0";
-  font-family: "Font Awesome 6 Pro";
-  display: inline-block;
-  vertical-align: baseline;
-  width: 15px;
-  height: 15px;
-  margin-right: 6px;
-  margin-bottom: -1px;
-  background-repeat: no-repeat;
+.phone--column {
+  display: block;
 }
-
-.phone-number[href^="tel:+38063"]::before,
-.phone-dropdown__link[href^="tel:+38063"]::before,
-.phone-number[href^="tel:+38073"]::before,
-.phone-dropdown__link[href^="tel:+38073"]::before,
-.phone-dropdown__link[href^="tel:+38093"]::before,
-.phone-number[href^="tel:+38093"]::before {
-  content: "";
-  display: inline-block;
-  vertical-align: baseline;
-  width: 15px;
-  height: 15px;
-  margin-right: 3px;
-  margin-bottom: -1px;
-  background-image: url("assets/img/life.svg");
-  background-repeat: no-repeat;
+.phone--column,
+.phone--column .phone-item {
+  display: block;
+  vertical-align: initial;
 }
-
-.phone-number[href^="tel:+38050"]::before,
-.phone-dropdown__link[href^="tel:+38050"]::before,
-.phone-number[href^="tel:+38066"]::before,
-.phone-dropdown__link[href^="tel:+38066"]::before,
-.phone-number[href^="tel:+38095"]::before,
-.phone-dropdown__link[href^="tel:+38095"]::before,
-.phone-number[href^="tel:+38099"]::before,
-.phone-dropdown__link[href^="tel:+38099"]::before {
-  content: "";
-  display: inline-block;
-  vertical-align: baseline;
-  width: 15px;
-  height: 15px;
-  margin-right: 3px;
-  margin-bottom: -1px;
-  background-image: url("assets/img/vodafone.svg");
-  background-repeat: no-repeat;
-}
-
-.phone-number[href^="tel:+38067"]::before,
-.phone-dropdown__link[href^="tel:+38067"]::before,
-.phone-number[href^="tel:+38068"]::before,
-.phone-dropdown__link[href^="tel:+38068"]::before,
-.phone-number[href^="tel:+38096"]::before,
-.phone-dropdown__link[href^="tel:+38096"]::before,
-.phone-number[href^="tel:+38097"]::before,
-.phone-dropdown__link[href^="tel:+38097"]::before,
-.phone-number[href^="tel:+38098"]::before,
-.phone-dropdown__link[href^="tel:+38098"]::before {
-  content: "";
-  display: inline-block;
-  vertical-align: baseline;
-  width: 15px;
-  height: 15px;
-  margin-right: 3px;
-  margin-bottom: -1px;
-  background-image: url("assets/img/kyivstar.svg");
-  background-repeat: no-repeat;
+.phone--column .phone-item {
+  margin: 5px 0;
 }
 
 .phone-dropdown {
@@ -5540,6 +5505,82 @@ a:hover, a:active, a:focus {
 }
 .phone-dropdown.light-mode .phone-dropdown__list {
   background: #28325D;
+}
+
+.phone-number[href^="tel:+"]::before,
+.phone-dropdown__link[href^="tel:+"]::before,
+.phone-number[href^="tel:0"]::before,
+.phone-dropdown__link[href^="tel:0"]::before,
+.phone-number[href^="tel:38"]::before,
+.phone-dropdown__link[href^="tel:38"]::before,
+.phone-dropdown__link[href^="tel:+38"]::before,
+.phone-number[href^="tel:+38"]::before {
+  content: "\f2a0";
+  font-family: "Font Awesome 6 Pro";
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+  margin-bottom: -1px;
+  background-repeat: no-repeat;
+}
+
+.phone-number[href^="tel:+38063"]::before,
+.phone-dropdown__link[href^="tel:+38063"]::before,
+.phone-number[href^="tel:+38073"]::before,
+.phone-dropdown__link[href^="tel:+38073"]::before,
+.phone-dropdown__link[href^="tel:+38093"]::before,
+.phone-number[href^="tel:+38093"]::before {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  background-image: url("assets/img/life.svg");
+  background-repeat: no-repeat;
+}
+
+.phone-number[href^="tel:+38050"]::before,
+.phone-dropdown__link[href^="tel:+38050"]::before,
+.phone-number[href^="tel:+38066"]::before,
+.phone-dropdown__link[href^="tel:+38066"]::before,
+.phone-number[href^="tel:+38095"]::before,
+.phone-dropdown__link[href^="tel:+38095"]::before,
+.phone-number[href^="tel:+38099"]::before,
+.phone-dropdown__link[href^="tel:+38099"]::before {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  background-image: url("assets/img/vodafone.svg");
+  background-repeat: no-repeat;
+}
+
+.phone-number[href^="tel:+38067"]::before,
+.phone-dropdown__link[href^="tel:+38067"]::before,
+.phone-number[href^="tel:+38068"]::before,
+.phone-dropdown__link[href^="tel:+38068"]::before,
+.phone-number[href^="tel:+38096"]::before,
+.phone-dropdown__link[href^="tel:+38096"]::before,
+.phone-number[href^="tel:+38097"]::before,
+.phone-dropdown__link[href^="tel:+38097"]::before,
+.phone-number[href^="tel:+38098"]::before,
+.phone-dropdown__link[href^="tel:+38098"]::before {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  background-image: url("assets/img/kyivstar.svg");
+  background-repeat: no-repeat;
 }
 
 .lang, .lang-item {

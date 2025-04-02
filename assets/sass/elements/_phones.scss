@@ -26,6 +26,107 @@
             text-decoration: underline;
         }
     }
+
+    // Режим колонки
+    &--column {
+        display: block; // Сбрасываем inline-block для контейнера
+
+        &,
+        .phone-item {
+            display: block; // Каждый элемент в своей строке
+            vertical-align: initial; // Сбрасываем выравнивание
+        }
+
+        .phone-item {
+            margin: 5px 0; // Вертикальные отступы вместо горизонтальных
+        }
+    }
+}
+
+.phone-dropdown {
+    @extend %reset-list;
+    display: inline-flex;
+    align-items: center;
+    min-width: 160px;
+    position: relative;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__button {
+        background: transparent;
+        border: none;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+
+        &.active {
+            &:after {
+                transform: rotate(-225deg);
+                transition: .2s;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            margin-bottom: 3px;
+            margin-left: 10px;
+            width: 7px;
+            height: 7px;
+            border-bottom: 2px solid $themeColor2;
+            border-left: 2px solid $themeColor2;
+            transform: rotate(-45deg);
+            transition: .2s;
+        }
+    }
+
+    &__list {
+        @extend %reset-list;
+        background: $themeColor5;
+        box-shadow: $shadow;
+        position: absolute;
+        padding: 15px 10px;
+        width: 100%;
+        height: auto;
+        left: -12px;
+        top: 100%;
+        z-index: 33;
+        display: none;
+
+        & .phone-dropdown {
+            &__item {
+                margin-bottom: 8px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__link {
+                color: $themeColor4;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.phone-dropdown.light-mode {
+    li a {
+        color: $themeColor5;
+    }
+
+    .phone-dropdown__list {
+        background: $themeColor1;
+    }
 }
 
 //Other
@@ -107,91 +208,4 @@
     margin-bottom: -1px;
     background-image: image-url('kyivstar.svg');
     background-repeat: no-repeat;
-}
-
-.phone-dropdown {
-    @extend %reset-list;
-    display: inline-flex;
-    align-items: center;
-    min-width: 160px;
-    position: relative;
-
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    &__button {
-        background: transparent;
-        border: none;
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 25px;
-        height: 25px;
-
-        &.active {
-            &:after {
-                transform: rotate(-225deg);
-                transition: .2s;
-            }
-        }
-
-        &:after {
-            content: "";
-            display: inline-block;
-            margin-bottom: 3px;
-            margin-left: 10px;
-            width: 7px;
-            height: 7px;
-            border-bottom: 2px solid $themeColor2;
-            border-left: 2px solid $themeColor2;
-            transform: rotate(-45deg);
-            transition: .2s;
-        }
-    }
-
-    &__list {
-        @extend %reset-list;
-        background: $themeColor5;
-        box-shadow: $shadow;
-        position: absolute;
-        padding: 15px 10px;
-        width: 100%;
-        height: auto;
-        left: -12px;
-        top: 100%;
-        z-index: 33;
-        display: none;
-
-        & .phone-dropdown {
-
-            &__item {
-                margin-bottom: 8px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            &__link {
-                color: $themeColor4;
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-        }
-    }
-}
-
-.phone-dropdown.light-mode {
-    li a {
-        color: $themeColor5;
-    }
-
-    .phone-dropdown__list {
-        background: $themeColor1;
-    }
 }

@@ -1,27 +1,51 @@
+/* Общие стили для обоих режимов */
 .sitemap-container {
+    width: 100%;
+}
+
+/* Режим колонок (по умолчанию) */
+.sitemap-container:not(.list-mode) {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
 }
 
 .sitemap-column {
-    flex: 1 1 calc(25% - 20px); /* 4 колонки равномерно, учитывая gap */
+    flex: 1 1 30%;
     min-width: 200px;
-    max-width: 400px; /* Добавить ограничение, чтобы колонки не растягивались слишком сильно */
-    box-sizing: border-box; /* Для более предсказуемой ширины */
+}
+
+/* Режим списка (list="true") */
+.sitemap-container.list-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .sitemap-section {
-    margin-bottom: 30px;
+    width: 100%;
 }
 
-.sitemap-headline {
-    margin-bottom: 5px;
+.sitemap-list-columns {
+    display: flex;
+    gap: 20px;
 }
 
+.sitemap-list-column {
+    flex: 1 1 30%;
+    min-width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Общие стили для списков */
 .sitemap-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 30px;
+    margin: 0;
+}
+
+.sitemap-item {
+    margin-bottom: 5px;
 }
