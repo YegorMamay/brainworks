@@ -126,6 +126,51 @@ if (!function_exists('bw_phone_shortcode')) {
     add_shortcode('bw-phone', 'bw_phone_shortcode');
 }
 
+if (!function_exists('phone_dropdown')) {
+    function phone_dropdown($atts) {
+        $atts = shortcode_atts([
+            'light_mode' => 'false'
+        ], $atts);
+
+        if (!has_phones()) {
+            return '';
+        }
+
+        $light_class = ($atts['light_mode'] === 'true') ? 'light-mode' : '';
+        ob_start();
+        ?>
+        <ul class="phone-dropdown <?php echo esc_attr($light_class); ?>">
+            <li class="phone-dropdown__item">
+                <?php foreach (get_phones() as $key => $phone) { ?>
+                    <?php if (count(get_phones()) > 1): ?>
+                        <?php if ($key === key(get_phones())) { ?>
+                            <a href="tel:<?php echo esc_attr(strip_tags(get_phone_number($phone))); ?>" class="phone-dropdown__link phone-dropdown--main">
+                                <?php echo wp_kses_post(trim($phone)); ?>
+                            </a>
+                            <button type="button" class="phone-dropdown__button js-dropdown"></button>
+                            <ul class="phone-dropdown__list js-phone-list">
+                        <?php } else { ?>
+                            <li class="phone-dropdown__item">
+                                <a href="tel:<?php echo esc_attr(strip_tags(get_phone_number($phone))); ?>" class="phone-dropdown__link">
+                                    <?php echo wp_kses_post(trim($phone)); ?>
+                                </a>
+                            </li>
+                        <?php } ?>
+                    <?php else: ?>
+                        <a href="tel:<?php echo esc_attr(strip_tags(get_phone_number($phone))); ?>" class="phone-dropdown__link phone-dropdown--main">
+                            <?php echo wp_kses_post(trim($phone)); ?>
+                        </a>
+                    <?php endif; ?>
+                <?php } ?>
+                </ul>
+            </li>
+        </ul>
+        <?php
+        return ob_get_clean();
+    }
+    add_shortcode('phone_dropdown', 'phone_dropdown');
+}
+
 if (!function_exists('bw_messengers_shortcode')) {
     /**
      * Add Shortcode Messengers

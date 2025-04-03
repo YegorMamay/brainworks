@@ -113,38 +113,8 @@
                 </div>
                 <!-- Language switcher menu END -->
 
-
-                <!-- Dropdown phones START -->
-                <?php if (has_phones()) { ?>
-                <ul class="phone-dropdown <!--light-mode-->">
-                    <li class="phone-dropdown__item">
-                        <?php foreach(get_phones() as $key => $phone) { ?>
-                        <?php if (count(get_phones()) > 1): ?>
-
-                        <?php if ($key === key(get_phones())) { ?>
-                        <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
-                            <?php echo trim($phone); ?>
-                        </a>
-                        <button type="button" class="phone-dropdown__button js-dropdown"></button>
-                        <ul class="phone-dropdown__list js-phone-list">
-                            <?php  } else { ?>
-                            <li class="phone-dropdown__item">
-                                <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link">
-                                    <?php echo trim($phone); ?>
-                                </a>
-                            </li>
-                            <?php } ?>
-                            <?php else: ?>
-                            <a href="tel:<?php echo strip_tags(get_phone_number($phone)); ?>" class="phone-dropdown__link phone-dropdown--main">
-                                <?php echo trim($phone); ?>
-                            </a>
-                            <?php endif; ?>
-                            <?php } ?>
-                        </ul>
-                    </li>
-                </ul>
-                <?php } ?>
-                <!-- Dropdown phones END -->
+                <!-- Dropdown phones -->
+                <?php echo do_shortcode('[phone_dropdown light_mode="false"]'); ?>
 
                 <!-- Messengers shortcode -->
                 <?php /* echo do_shortcode('[bw-messengers]'); */ ?>
