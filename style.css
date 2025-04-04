@@ -3673,13 +3673,31 @@ ol.commentlist {
 .sitemap-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .sitemap-item {
   margin-bottom: 5px;
 }
 
+/* Адаптивность */
+@media (max-width: 768px) {
+  .sitemap-container:not(.list-mode),
+  .sitemap-list-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .sitemap-column,
+  .sitemap-list-column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    min-width: unset;
+  }
+}
 .page-404 {
   text-align: center;
   height: 40vh;

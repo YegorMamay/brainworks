@@ -43,9 +43,24 @@
 .sitemap-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 .sitemap-item {
     margin-bottom: 5px;
+}
+
+/* Адаптивность */
+@media #{$tablet-max} {
+    .sitemap-container:not(.list-mode),
+    .sitemap-list-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .sitemap-column,
+    .sitemap-list-column {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
 }
