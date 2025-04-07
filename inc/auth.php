@@ -1,7 +1,14 @@
 <?php
 
+// Определение константы для хранения данных авторизации
 define('_BRAINWORKS_AUTH', '_BRAINWORKS_AUTH');
+
+// Запуск сессии
 session_start();
+
+/**
+ * Получение значения из сессии по ключу
+ */
 if (!function_exists('get_bw_session')) {
     function get_bw_session($key = "")
     {
@@ -9,6 +16,9 @@ if (!function_exists('get_bw_session')) {
     }
 }
 
+/**
+ * Установка значения в сессию по ключу
+ */
 if (!function_exists('set_bw_session')) {
     function set_bw_session($key, $value = "")
     {
@@ -17,6 +27,9 @@ if (!function_exists('set_bw_session')) {
     }
 }
 
+/**
+ * Получение данных авторизации из сессии
+ */
 if (!function_exists('get_auth_session')) {
     function get_auth_session()
     {
@@ -24,6 +37,9 @@ if (!function_exists('get_auth_session')) {
     }
 }
 
+/**
+ * Установка данных авторизации в сессию
+ */
 if (!function_exists('set_auth_session')) {
     function set_auth_session($value = [])
     {
@@ -32,6 +48,9 @@ if (!function_exists('set_auth_session')) {
     }
 }
 
+/**
+ * Проверка, авторизован ли пользователь
+ */
 if (!function_exists('bw_user_logged_in')) {
     function bw_user_logged_in()
     {
@@ -45,6 +64,9 @@ if (!function_exists('bw_user_logged_in')) {
     }
 }
 
+/**
+ * Проверка срока действия сессии пользователя
+ */
 if (!function_exists('bw_user_experation_check')) {
     function bw_user_experation_check()
     {
@@ -53,7 +75,7 @@ if (!function_exists('bw_user_experation_check')) {
         if ($user) {
             $user_date = $user['_date'];
             $current_date = microtime(true);
-            if ($current_date - $user_date >= 3600) {
+            if ($current_date - $user_date >= 3600) { // Сессия истекает через 1 час
                 set_auth_session(null);
             }
         }
@@ -62,6 +84,9 @@ if (!function_exists('bw_user_experation_check')) {
     add_action('init', 'bw_user_experation_check');
 }
 
+/**
+ * Авторизация пользователя
+ */
 if (!function_exists('bw_user_login')) {
     function bw_user_login($login = '', $password = '')
     {
@@ -79,6 +104,9 @@ if (!function_exists('bw_user_login')) {
     }
 }
 
+/**
+ * Выход пользователя из системы
+ */
 if (!function_exists('bw_user_logout')) {
     function bw_user_logout()
     {
@@ -87,30 +115,31 @@ if (!function_exists('bw_user_logout')) {
     }
 }
 
+/**
+ * Проверка существования пользователя по логину
+ */
 if (!function_exists('bw_user_check_login')) {
     function bw_user_check_login($login = "")
     {
         $user = get_user_by('login', $login);
-        if ($user) {
-            return true;
-        } else {
-            return false;
-        }
+        return $user ? true : false;
     }
 }
 
+/**
+ * Проверка существования пользователя по email
+ */
 if (!function_exists('bw_user_check_email')) {
     function bw_user_check_email($email = "")
     {
         $user = get_user_by_email($email);
-        if ($user) {
-            return true;
-        } else {
-            return false;
-        }
+        return $user ? true : false;
     }
 }
 
+/**
+ * Создание массива данных для сессии пользователя
+ */
 if (!function_exists('bw_create_user_session_array')) {
     function bw_create_user_session_array($login = '')
     {
@@ -122,6 +151,9 @@ if (!function_exists('bw_create_user_session_array')) {
     }
 }
 
+/**
+ * Создание нового пользователя
+ */
 if (!function_exists('bw_user_create')) {
     function bw_user_create($login = '', $password = '', $email = '')
     {
@@ -134,6 +166,9 @@ if (!function_exists('bw_user_create')) {
     }
 }
 
+/**
+ * REST API: Авторизация пользователя
+ */
 if (!function_exists('bw_auth_rest_endpoint')) {
     function bw_auth_rest_endpoint(WP_REST_Request $req)
     {
@@ -165,6 +200,9 @@ if (!function_exists('bw_auth_rest_endpoint')) {
     });
 }
 
+/**
+ * REST API: Регистрация пользователя
+ */
 if (!function_exists('bw_auth_rest_register')) {
     function bw_auth_rest_register(WP_REST_Request $req)
     {
@@ -173,13 +211,12 @@ if (!function_exists('bw_auth_rest_register')) {
         $password = filter_var($req->get_param('password'), FILTER_SANITIZE_STRING);
         $retry_password = filter_var($req->get_param('retry_password'), FILTER_SANITIZE_STRING);
         $redirect = filter_var($req->get_param('_redirect_url'), FILTER_SANITIZE_URL);
+
         if (!$redirect) {
             $redirect = '';
         }
 
-
         if ($password == $retry_password) {
-
             if (!bw_user_check_login($login) && !bw_user_check_email($email)) {
                 $user = bw_user_create($login, $password, $email);
                 if ($user) {
@@ -188,11 +225,9 @@ if (!function_exists('bw_auth_rest_register')) {
                 } else {
                     return wp_redirect(home_url() . $redirect . "?error_message=3");
                 }
-
             } else {
                 return wp_redirect(home_url() . $redirect . "?error_message=2");
             }
-
         } else {
             return wp_redirect(home_url() . $redirect . "?error_message=4");
         }
@@ -206,6 +241,9 @@ if (!function_exists('bw_auth_rest_register')) {
     });
 }
 
+/**
+ * REST API: Выход пользователя
+ */
 if (!function_exists('bw_auth_rest_logout')) {
     function bw_auth_rest_logout()
     {
@@ -221,27 +259,22 @@ if (!function_exists('bw_auth_rest_logout')) {
     });
 }
 
+/**
+ * Генерация сообщений об ошибках авторизации
+ */
 if (!function_exists('bw_auth_error_reporting')) {
     function bw_auth_error_reporting($error_code = 1)
     {
         switch ($error_code) {
             case 4:
-                {
-                    return __('Passwords must be the same!', 'brainworks');
-                }
+                return __('Passwords must be the same!', 'brainworks');
             case 3:
-                {
-                    return __('Error with creating user. Please, try again later!', 'brainworks');
-                }
+                return __('Error with creating user. Please, try again later!', 'brainworks');
             case 2:
-                {
-                    return __('User with this login or email has already registered', 'brainworks');
-                }
+                return __('User with this login or email has already registered', 'brainworks');
             case 1:
             default:
-                {
-                    return __('Login or password are incorrect!', 'brainworks');
-                }
+                return __('Login or password are incorrect!', 'brainworks');
         }
     }
 }

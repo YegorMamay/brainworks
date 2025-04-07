@@ -4,8 +4,7 @@
  * @param      $name
  * @param bool $default
  */
-function theme_mod($name, $default = false)
-{
+function theme_mod($name, $default = false) {
     $theme_mod = get_theme_mod($name, $default);
 
     if (!empty($theme_mod)) {
@@ -13,11 +12,7 @@ function theme_mod($name, $default = false)
     }
 }
 
-/**
- * @param $wp_customize WP_Customize_Manager
- */
-function bw_customize_register($wp_customize)
-{
+function bw_customize_register($wp_customize) {
 
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
@@ -1019,8 +1014,7 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bw_log
 
 add_action('customize_register', 'bw_customize_register');
 
-function bw_customizer_preview()
-{
+function bw_customizer_preview() {
     wp_register_script('bw_customizer_preview', get_template_directory_uri() . '/assets/js/customizer-preview.js',
         array(
             'jquery',
@@ -1031,8 +1025,7 @@ function bw_customizer_preview()
 
 add_action('customize_preview_init', 'bw_customizer_preview');
 
-function bw_customize_controls_enqueue_scripts()
-{
+function bw_customize_controls_enqueue_scripts() {
     wp_register_script('bw_customizer_control', get_template_directory_uri() . '/assets/js/customizer-control.js',
         array(
             'jquery',
@@ -1043,34 +1036,41 @@ function bw_customize_controls_enqueue_scripts()
 
 add_action('customize_controls_enqueue_scripts', 'bw_customize_controls_enqueue_scripts');
 
-function bw_customizer_css()
-{ ?>
-    <style>
-        .scroll-top {
-            width: <?php theme_mod('bw_scroll_top_width', '50'); ?>px;
-            height: <?php theme_mod('bw_scroll_top_height', '50'); ?>px;
-            background-color: <?php theme_mod('bw_scroll_top_background_color', '#000000'); ?>;
-            border-width: <?php echo get_theme_mod('bw_scroll_top_border_width', '1'); ?>px;
-            border-color: <?php theme_mod('bw_scroll_top_border_color', '#000000'); ?>;
-            bottom: <?php theme_mod('bw_scroll_top_offset_bottom', '20'); ?>px;
-        <?php bw_scroll_top_position_offset(); ?>
-        }
+function bw_customizer_css() { ?>
+<style>
+    .scroll-top {
+        width: <?php theme_mod('bw_scroll_top_width', '50');
+        ?>px;
+        height: <?php theme_mod('bw_scroll_top_height', '50');
+        ?>px;
+        background-color: <?php theme_mod('bw_scroll_top_background_color', '#000000');
+        ?>;
+        border-width: <?php echo get_theme_mod('bw_scroll_top_border_width', '1');
+        ?>px;
+        border-color: <?php theme_mod('bw_scroll_top_border_color', '#000000');
+        ?>;
+        bottom: <?php theme_mod('bw_scroll_top_offset_bottom', '20');
+        ?>px;
+        <?php bw_scroll_top_position_offset();
+        ?>
+    }
 
-        .scroll-top:hover {
-            background-color: <?php theme_mod('bw_scroll_top_background_color_hover', '#000000'); ?>;
-        }
+    .scroll-top:hover {
+        background-color: <?php theme_mod('bw_scroll_top_background_color_hover', '#000000');
+        ?>;
+    }
 
-        .scroll-top--arrow {
-            border-bottom-color: <?php theme_mod('bw_scroll_top_arrow_color', '#ffffff'); ?>;
-        }
-    </style>
-    <?php
+    .scroll-top--arrow {
+        border-bottom-color: <?php theme_mod('bw_scroll_top_arrow_color', '#ffffff');
+        ?>;
+    }
+</style>
+<?php
 }
 
 add_action('wp_head', 'bw_customizer_css');
 
-function bw_scroll_top_position_offset()
-{
+function bw_scroll_top_position_offset() {
     $position = get_theme_mod('bw_scroll_top_position', 'right');
     $offset = get_theme_mod('bw_scroll_top_offset_left_right', 20);
 

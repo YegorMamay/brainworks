@@ -2,6 +2,7 @@
 
 /**
  * Footer left text
+ * Выводит текст в левом нижнем углу панели администратора WordPress.
  */
 function bw_admin_footer_text()
 {
@@ -45,6 +46,7 @@ function bw_admin_footer_text()
 
 /**
  * Footer right text
+ * Выводит текст в правом нижнем углу панели администратора WordPress.
  */
 function bw_update_footer()
 {
@@ -66,13 +68,14 @@ function bw_update_footer()
 
     echo $output;
 
-    core_update_footer();
+    core_update_footer(); // Вызывает стандартный текст обновления WordPress.
 }
 
 add_filter('update_footer', 'bw_update_footer', 10);
 
 /**
  * PHP version
+ * Добавляет информацию о версии PHP в текст "Right Now" на панели администратора.
  *
  * @param string $content Default text
  *
@@ -93,19 +96,19 @@ function bw_php_version($content)
 
 if (!function_exists('bw_add_img_attributes')) {
     /**
-     * Добавление аттрибутов title и alt для картинок
-     * @param string[] Аттрибуты картинки
-     * @param WP_Post $attachment Наша картинка
-     * @param string|int[] $size Requested image size
-     * @return array Аттрибуты картинки
+     * Добавление атрибутов title и alt для картинок
+     *
+     * @param array $attr Атрибуты картинки
+     * @param WP_Post $attachment Объект вложения (картинки)
+     * @return array Атрибуты картинки
      */
     function bw_add_img_attributes(array $attr, $attachment)
     {
-        $title = trim(strip_tags($attachment->post_title));
-        $alt = trim(strip_tags(get_post_meta($attachment->ID, '_wp_attachment_image_alt', true)));
+        $title = trim(strip_tags($attachment->post_title)); // Получаем заголовок картинки
+        $alt = trim(strip_tags(get_post_meta($attachment->ID, '_wp_attachment_image_alt', true))); // Получаем alt текст
 
-        $attr['title'] = $title;
-        $attr['alt'] = $alt;
+        $attr['title'] = $title; // Устанавливаем атрибут title
+        $attr['alt'] = $alt; // Устанавливаем атрибут alt
 
         return $attr;
     }
@@ -115,6 +118,7 @@ add_filter('wp_get_attachment_image_attributes', 'bw_add_img_attributes', 10, 2)
 
 /**
  * Admin Enqueue Script
+ * Добавляет скрипт для управления отображением пользовательских полей в админке.
  */
 function bw_admin_enqueue_script()
 {
