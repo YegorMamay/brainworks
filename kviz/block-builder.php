@@ -32,8 +32,6 @@
        </div>
    </div>
 
-
-
   <?php elseif (get_row_layout() == 'checkbox_more') : ?>
 
     <div class="kviz-slider__item kviz-slider__item-<?php echo get_row_index () ?>">
@@ -62,7 +60,6 @@
                 <?php $img = get_sub_field('img') ?>
                 <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
             </div>
-
         </div>
     </div>
 
@@ -94,10 +91,7 @@
                 </label>
             </div>
             <?php endforeach; ?>
-
         </div>
-
-
     </div>
 
 <?php elseif (get_row_layout() == 'checkbox_more_img') : ?>
@@ -128,12 +122,8 @@
                 </label>
             </div>
             <?php endforeach; ?>
-
         </div>
-
-
     </div>
-
 
 <?php elseif (get_row_layout() == 'checkbox_1_col') : ?>
 
@@ -163,7 +153,6 @@
 
        </div>
    </div>
-
 
 <?php elseif (get_row_layout() == 'checkbox_more_col') : ?>
 
@@ -212,13 +201,6 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
 
 <?php endif; ?>
 
