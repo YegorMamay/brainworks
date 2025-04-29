@@ -734,3 +734,12 @@ function custom_seo_title() {
             echo single_cat_title();
         }
 }
+
+// Разрешить загрузку SVG только администраторам
+function allow_svg_uploads_for_admins($mimes) {
+    if (current_user_can('administrator')) {
+        $mimes['svg'] = 'image/svg+xml';
+    }
+    return $mimes;
+}
+add_filter('upload_mimes', 'allow_svg_uploads_for_admins');

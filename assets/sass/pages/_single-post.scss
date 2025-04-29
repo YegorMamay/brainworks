@@ -1,3 +1,12 @@
+.single-title {
+    font-size: 36px !important;
+
+    @media #{$tablet-max} {
+        font-size: 30px !important;
+    }
+}
+
+
 article p {
     text-align: justify;
 }

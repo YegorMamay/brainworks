@@ -552,7 +552,7 @@ function bw_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('bw_messenger_telegram', array(
-        'label' => 'Telegram (username only)',
+        'label' => 'Telegram (username or phone number)',
         'section' => 'bw_messenger',
         'settings' => 'bw_messenger_telegram',
         'type' => 'tel',

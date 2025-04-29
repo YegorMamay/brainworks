@@ -127,6 +127,15 @@ ul.products {
     margin-right: 12px;
 }
 
+.bapf_sfilter.bapf_button_berocket .bapf_button {
+    background: $themeColor2;
+    font-size: 16px;
+    font-weight: 400;
+
+    &:hover {
+        background: $themeColor1;
+    }
+}
 // Ajax filter END
 
 //List Grid display products
