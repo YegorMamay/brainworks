@@ -10,7 +10,7 @@
         </div>
 
         <div class="col-12 col-md-6">
-            <h3><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h3>
+            <h4><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h4>
 
             <div class="vh-xs-1"></div>
 

@@ -15,6 +15,8 @@
             <article id="post_<?php the_ID() ?>" <?php post_class() ?> itemscope itemtype="https://schema.org/Article">
                 <h1 class="single-title mrgn-bot-15" itemprop="headline"><?php the_title() ?></h1>
 
+                <div class="post-img mrgn-bot-20"><?php the_post_thumbnail('full'); ?></div>
+
                 <!-- Метаинформация статьи -->
                 <meta itemprop="author" content="<?php the_author() ?>" />
                 <meta itemprop="datePublished" content="<?php the_date('c') ?>" />
