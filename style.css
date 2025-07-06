@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 4.04.25
+Version: 6.07.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -1181,14 +1181,6 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
   margin-bottom: 20px;
 }
 
-.woocommerce-thankyou-order-received {
-  margin-bottom: 20px;
-}
-
-ul.woocommerce-thankyou-order-details {
-  padding-left: 0;
-}
-
 dl.variation {
   display: none;
 }
@@ -1523,6 +1515,40 @@ table.variations tbody tr {
   margin-left: 15px;
 }
 
+.woocommerce-thankyou-order-received {
+  margin-bottom: 20px;
+}
+
+.woocommerce-customer-details,
+.woocommerce-bacs-bank-details,
+.woocommerce-order-overview {
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  background: #fff;
+  padding: 20px !important;
+  margin-bottom: 30px;
+}
+
+.woocommerce .woocommerce-customer-details h2 {
+  margin-bottom: 15px;
+}
+.woocommerce .woocommerce-customer-details address {
+  padding: 0;
+  border: none;
+}
+
+.woocommerce-bacs-bank-details h2, .woocommerce-bacs-bank-details h3 {
+  margin-bottom: 15px;
+}
+.woocommerce-bacs-bank-details .wc-bacs-bank-details {
+  margin-bottom: 0;
+}
+
+ul.woocommerce-thankyou-order-details,
+.woocommerce ul.order_details {
+  padding-left: 0;
+}
+
 .woocommerce #respond input#submit.loading::after {
   top: 19px;
 }
@@ -1722,6 +1748,15 @@ ul.products li.product .tinvwl_add_to_wishlist_button {
 
 .bapf_sfilter.bapf_ckbox input[type=checkbox] {
   margin-right: 12px;
+}
+
+.bapf_sfilter.bapf_button_berocket .bapf_button {
+  background: #BB2440;
+  font-size: 16px;
+  font-weight: 400;
+}
+.bapf_sfilter.bapf_button_berocket .bapf_button:hover {
+  background: #28325D;
 }
 
 .berocket_lgv_widget {
@@ -3543,6 +3578,15 @@ select, #commentform .form-group textarea, #commentform .form-group input, .form
         align-self: stretch !important;
   }
 }
+.single-title {
+  font-size: 36px !important;
+}
+@media (max-width: 768px) {
+  .single-title {
+    font-size: 30px !important;
+  }
+}
+
 article p {
   text-align: justify;
 }
