@@ -758,6 +758,22 @@ if (!function_exists('bw_custom_auth_shortcode')) {
     add_shortcode('bw-custom-auth', 'bw_custom_auth_shortcode');
 }
 
+function bw_register_review_taxonomy() {
+    register_taxonomy(
+        'review_category',
+        'reviews',
+        array(
+            'label'        => __('Review Categories', 'brainworks'),
+            'rewrite'      => array('slug' => 'review-category'),
+            'hierarchical' => true,
+            'public'       => true,
+            'show_ui'      => true,
+            'show_admin_column' => true,
+        )
+    );
+}
+add_action('init', 'bw_register_review_taxonomy');
+
 if (!function_exists('bw_reviews_shortcode')) {
     /**
      * Add Shortcode Reviews List
@@ -767,107 +783,92 @@ if (!function_exists('bw_reviews_shortcode')) {
      * @return string
      */
     function bw_reviews_shortcode($atts)
-    {
-        // Attributes
-        $atts = shortcode_atts(
-            array(),
-            $atts
-        );
+{
+    // Параметры шорткода
+    $atts = shortcode_atts(
+        array(
+            'cat' => '', // ID категории
+        ),
+        $atts
+    );
 
-        $output = '';
+    $output = '';
 
-        $args = array(
-            'post_type' => 'reviews',
-            'publish_status' => 'publish',
-            'orderby' => 'post_date',
-            'order' => 'DESC',
-            'posts_per_page' => -1,
-            'meta_query' => array(
-                array(
-                    'key' => 'review-display',
-                    'value' => '1',
-                )
+    $args = array(
+        'post_type' => 'reviews',
+        'post_status' => 'publish',
+        'orderby' => 'post_date',
+        'order' => 'DESC',
+        'posts_per_page' => -1,
+        'meta_query' => array(
+            array(
+                'key' => 'review-display',
+                'value' => '1',
+            )
+        ),
+    );
+
+    // Если указана категория, добавляем tax_query
+    if (!empty($atts['cat'])) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'review_category',
+                'field'    => 'term_id',
+                'terms'    => intval($atts['cat']),
             ),
         );
+    }
 
-        $query = new WP_Query($args);
+    $query = new WP_Query($args);
 
-        if ($query->have_posts()) {
+    if ($query->have_posts()) {
+        $output .= '<div class="review-slider text-center js-reviews">';
 
-            $output .= '<div class="review-slider text-center js-reviews">';
+        while ($query->have_posts()) {
+            $query->the_post();
 
-            while ($query->have_posts()) {
-                $query->the_post();
+            $id = get_the_ID();
+            $social = array();
+            $socials = array(
+                'vk' => array('url' => get_post_meta($id, 'review-vk', true), 'icon' => 'fa-vk'),
+                'youtube' => array('url' => get_post_meta($id, 'review-youtube', true), 'icon' => 'fa-youtube'),
+                'twitter' => array('url' => get_post_meta($id, 'review-twitter', true), 'icon' => 'fa-x-twitter'),
+                'facebook' => array('url' => get_post_meta($id, 'review-facebook', true), 'icon' => 'fa-facebook-square'),
+                'linkedin' => array('url' => get_post_meta($id, 'review-linkedin', true), 'icon' => 'fa-linkedin-in'),
+                'instagram' => array('url' => get_post_meta($id, 'review-instagram', true), 'icon' => 'fa-instagram'),
+                'odnoklassniki' => array('url' => get_post_meta($id, 'review-odnoklassniki', true), 'icon' => 'fa-odnoklassniki'),
+            );
 
-                $id = get_the_ID();
-                $social = array();
-                $socials = array(
-                    'vk' => array(
-                        'url' => get_post_meta($id, 'review-vk', true),
-                        'icon' => 'fa-vk',
-                    ),
-                    'youtube' => array(
-                        'url' => get_post_meta($id, 'review-youtube', true),
-                        'icon' => 'fa-youtube',
-                    ),
-                    'twitter' => array(
-                        'url' => get_post_meta($id, 'review-twitter', true),
-                        'icon' => 'fa-twitter',
-                    ),
-                    'facebook' => array(
-                        'url' => get_post_meta($id, 'review-facebook', true),
-                        'icon' => 'fa-facebook-square',
-                    ),
-                    'linkedin' => array(
-                        'url' => get_post_meta($id, 'review-linkedin', true),
-                        'icon' => 'fa-linkedin-in',
-                    ),
-                    'instagram' => array(
-                        'url' => get_post_meta($id, 'review-instagram', true),
-                        'icon' => 'fa-instagram',
-                    ),
-                    'google-plus' => array(
-                        'url' => get_post_meta($id, 'review-google-plus', true),
-                        'icon' => 'fa-google-plus-g',
-                    ),
-                    'odnoklassniki' => array(
-                        'url' => get_post_meta($id, 'review-odnoklassniki', true),
-                        'icon' => 'fa-odnoklassniki',
-                    ),
-                );
-
-                foreach ($socials as $item) {
-                    if (!empty($item['url'])) {
-                        $social['url'] = $item['url'];
-                        $social['icon'] = $item['icon'];
-                    }
+            foreach ($socials as $item) {
+                if (!empty($item['url'])) {
+                    $social['url'] = $item['url'];
+                    $social['icon'] = $item['icon'];
                 }
-
-                $post_class = 'class="' . join(' ', get_post_class('review-item', null)) . '"';
-
-                $output .= '<div id="post-' . get_the_ID() . '" ' . $post_class . '>';
-
-                $output .= '<div class="review-client">';
-                $output .= get_the_post_thumbnail(null, 'thumbnail', array('class' => 'review-avatar'));
-                if (count($social)) {
-                    $output .= '<a class="review-social" href="' . esc_url($social['url']) . '" target="_blank" rel="noopener noreferrer">';
-                    $output .= '<i class="fab ' . esc_attr($social['icon']) . '" aria-hidden="true"></i>';
-                    $output .= '</a>';
-                }
-                $output .= '</div>';
-                $output .= '<div class="review-title">' . get_the_title() . '</div>';
-                $output .= '<div class="review-content">' . get_the_content() . '</div>';
-
-                $output .= '</div>';
             }
 
-            wp_reset_postdata();
+            $post_class = 'class="' . join(' ', get_post_class('review-item', null)) . '"';
 
+            $output .= '<div id="post-' . $id . '" ' . $post_class . '>';
+            $output .= '<div class="review-client">';
+            $output .= get_the_post_thumbnail($id, 'thumbnail', array('class' => 'review-avatar'));
+            if (count($social)) {
+                $output .= '<a class="review-social" href="' . esc_url($social['url']) . '" target="_blank" rel="noopener noreferrer">';
+                $output .= '<i class="fab ' . esc_attr($social['icon']) . '" aria-hidden="true"></i>';
+                $output .= '</a>';
+            }
+            $output .= '</div>';
+            $output .= '<div class="review-title">' . get_the_title() . '</div>';
+            $output .= '<div class="review-content">' . get_the_content() . '</div>';
             $output .= '</div>';
         }
 
-        return $output;
+        wp_reset_postdata();
+
+        $output .= '</div>';
     }
+
+    return $output;
+}
 
     add_shortcode('bw-reviews', 'bw_reviews_shortcode');
 }

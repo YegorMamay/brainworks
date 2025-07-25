@@ -296,7 +296,7 @@ if (!function_exists('get_social')) {
             'twitter' => [
                 'url' => get_theme_mod('bw_social_twitter'),
                 'text' => 'X',
-                'icon' => 'fab fa-twitter',
+                'icon' => 'fab fa-x-twitter',
                 'icon-html' => get_theme_mod('bw_social_twitter_icon'),
                 'img-link' => get_theme_mod('bw_social_twitter_img'),
             ],

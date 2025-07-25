@@ -30,7 +30,7 @@
                         ),
                         'twitter' => array(
                             'url' => get_post_meta($id, 'review-twitter', true),
-                            'icon' => 'fa-twitter',
+                            'icon' => 'fa-x-twitter',
                         ),
                         'facebook' => array(
                             'url' => get_post_meta($id, 'review-facebook', true),

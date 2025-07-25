@@ -760,7 +760,7 @@ function bw_customize_register($wp_customize) {
         'settings' => 'bw_social_twitter_icon',
         'type' => 'text',
         'input_attrs' => array(
-            'placeholder' => '<i class="fab fa-twitter"></i>',
+            'placeholder' => '<i class="fab fa-x-twitter"></i>',
         ),
     ));
 
