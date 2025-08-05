@@ -63,3 +63,10 @@
         display: none;
     }
 }
+
+//Кнопка обновления корзины
+td.actions {
+    button[name="update_cart"] {
+        display: none;
+    }
+}

@@ -47,6 +47,12 @@ $size = get_post_meta ( $product->get_id() , '_size_prouduct', true );
 		<?php if ( $product->is_in_stock() ) : ?>
 
 		<div class="product__actions">
+
+            <?php
+                global $product;
+                echo '<div class="product-short-description text-muted">' . $product->get_short_description() . '</div>';
+            ?>
+
 		    <button class="button buy-one-click one-click" data-title="<?php echo $product->get_name(); ?>">Buy</button>
 		    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 		</div>

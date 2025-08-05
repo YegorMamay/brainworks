@@ -743,3 +743,26 @@ function allow_svg_uploads_for_admins($mimes) {
     return $mimes;
 }
 add_filter('upload_mimes', 'allow_svg_uploads_for_admins');
+
+//Автообновление корзины
+add_action( 'wp_footer', 'custom_ajax_cart_quantity_script' );
+function custom_ajax_cart_quantity_script() {
+    if (is_cart()) : ?>
+        <script type="text/javascript">
+            jQuery(function($){
+                let timeout = null;
+
+                $('div.woocommerce').on('change', 'input.qty', function(){
+                    if (timeout !== null) {
+                        clearTimeout(timeout);
+                    }
+
+                    timeout = setTimeout(function(){
+                        $("[name='update_cart']").trigger("click");
+                    }, 1000); // задержка 1 секунда, можно уменьшить
+                });
+            });
+        </script>
+    <?php endif;
+}
+//Автообновление корзины END
