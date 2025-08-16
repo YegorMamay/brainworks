@@ -653,4 +653,5 @@ var _this = void 0;
             $(this).toggleClass('show'); // Переключаем класс кнопки
         }
     });
+
 })(window, document, jQuery, window.jpAjax);

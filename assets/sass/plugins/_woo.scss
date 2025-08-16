@@ -200,3 +200,13 @@
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     background-color: $themeColor6;
 }
+
+/* Убираем стандартные стрелки у поля выбора количества товаров */
+    .cart .qty::-webkit-inner-spin-button,
+    .cart .qty::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .cart .qty[type=number] {
+        -moz-appearance: textfield;
+}

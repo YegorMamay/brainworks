@@ -5,7 +5,7 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: Brain Works
 Author URI: https://brainworks.com.ua
-Version: 5.08.25
+Version: 16.08.25
 Last changes: 25.07.25
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
@@ -1026,6 +1026,7 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
 }
 .woocommerce ul.products li.product a.added_to_cart {
   max-width: 230px;
+  margin: 15px auto 0;
 }
 .woocommerce ul.products li.product.berocket_lgv_list a.added_to_cart {
   max-width: 230px;
@@ -1051,6 +1052,16 @@ ul.products li.product:hover .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvw
 
 .term-description {
   margin-bottom: 20px;
+}
+
+.product_actions form.cart .quantity-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px auto 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1427,6 +1438,10 @@ table.variations tbody tr {
   margin-left: 5px;
 }
 
+.product__actions form.cart {
+  margin-bottom: 0 !important;
+}
+
 .woocommerce-variation.single_variation {
   margin-bottom: 20px;
 }
@@ -1518,6 +1533,10 @@ table.variations tbody tr {
 }
 .product_meta .posted_in, .product_meta .tagged_as {
   margin-left: 15px;
+}
+
+.woocommerce div.product form.cart::after, .woocommerce div.product form.cart::before {
+  display: none;
 }
 
 .woocommerce-thankyou-order-received {
@@ -1657,6 +1676,17 @@ ul.woocommerce-thankyou-order-details,
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
   background-color: #e3e3e3;
+}
+
+/* Убираем стандартные стрелки у поля выбора количества товаров */
+.cart .qty::-webkit-inner-spin-button,
+.cart .qty::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cart .qty[type=number] {
+  -moz-appearance: textfield;
 }
 
 ul.products li.product .tinv-wraper.tinv-wishlist {

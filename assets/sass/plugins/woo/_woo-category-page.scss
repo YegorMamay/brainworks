@@ -125,6 +125,7 @@ ul.products li.product {
 
                     a.added_to_cart {
                         max-width: 230px;
+                        margin: 15px auto 0;
                     }
 
                     &.berocket_lgv_list {
@@ -160,4 +161,10 @@ ul.products li.product {
 
 .term-description {
     margin-bottom: 20px;
+}
+
+.product_actions form.cart .quantity-control {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 0;
 }

@@ -261,6 +261,10 @@ table.variations {
     }
 }
 
+.product__actions form.cart {
+    margin-bottom: 0 !important;
+}
+
 .woocommerce-variation.single_variation {
     margin-bottom: 20px;
 }
@@ -349,4 +353,8 @@ table.variations {
     .posted_in, .tagged_as {
         margin-left: 15px;
     }
+}
+
+.woocommerce div.product form.cart::after, .woocommerce div.product form.cart::before {
+    display: none;
 }
