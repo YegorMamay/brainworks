@@ -9,15 +9,23 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
+    <?php wp_site_icon(); ?>
+
     <?php if ( class_exists( 'YITH_WCWL' ) ) : ?>
         <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
     <?php endif; ?>
 
-    <?php if ((function_exists('is_plugin_inactive') && is_plugin_inactive('yoast-seo/wp-seo.php')) || !file_exists(WP_PLUGIN_DIR . '/yoast-seo/wp-seo.php')) : ?>
+    <!-- Если плагин Yoast SEO не активирован, срабатывает этот код START -->
+    <?php if ( ! defined('WPSEO_VERSION') ) : ?>
 
         <title><?php echo esc_html( custom_seo_title() ); ?></title>
 
-        <meta name="description" content="<?php echo esc_attr( is_single() ? get_the_excerpt() : get_bloginfo( 'description' ) ); ?>">
+        <meta name="description" content="<?php
+            if ( has_excerpt() ) {
+                echo esc_attr( get_the_excerpt() );
+            } else {
+                echo esc_attr( get_bloginfo( 'description' ) );
+            } ?>">
 
         <!-- OpenGraph -->
         <?php
@@ -44,7 +52,9 @@
         <meta name="twitter:title" content="<?php echo esc_html( custom_seo_title() ); ?>">
         <meta name="twitter:image" content="<?php echo esc_url( $image_url ); ?>">
         <!-- OpenGraph. END -->
+
     <?php endif; ?>
+    <!-- Если Yoast END -->
 
     <?php wp_head(); ?>
 </head>

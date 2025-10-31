@@ -73,8 +73,6 @@
      * @example
      * stickHeader('.js-header');
      *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     *
      * @param {(string|Object)} element - element
      * @returns {void}
      */
@@ -243,8 +241,6 @@
      * @example
      * stickFooter('.js-footer', '.js-wrapper');
      *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     *
      * @param {(string|Object)} element - footer element
      * @param {(string|Object)} container - container element
      * @returns {void}
@@ -275,8 +271,6 @@
      *
      * @example
      * reviews('.js-reviews');
-     *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
      *
      * @param {(string|Object)} container - reviews container
      * @returns {void}
@@ -337,8 +331,6 @@
      *
      * @example
      * hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-     *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
      *
      * @param {(string|Object)} menuElement - Selected menu
      * @param {(string|Object)} hamburgerElement - Trigger element for open/close menu
@@ -482,8 +474,6 @@
      * @example
      * buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
      *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     *
      * @param {(string|Object)} button - The selected button when clicking on which the form of purchase pops up
      * @param {(string|Object)} field - The selected field for writing the value (disabled field)
      * @param {(string|Object)} headline - The element from which we get the value to write to the field
@@ -504,8 +494,6 @@
      *
      * @example
      * scrollTop('.js-scroll-top');
-     *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
      *
      * @param {(string|Object)} element - Selected element
      * @returns {void}
@@ -538,8 +526,6 @@
      *
      * @example
      * document.oncopy = addLink; or $(document).on('copy', addLink);
-     *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
      *
      * @returns {void}
      */
@@ -610,8 +596,6 @@
      * @example
      * sidebarAccordion();
      *
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     *
      * @returns {void}
      */
     const sidebarAccordion = () => {
@@ -644,7 +628,6 @@
      *
      * @example
      * ajaxLoadMorePosts('.js-load-more', '.js-ajax-posts');
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
      * @param {string} selector - Element for event handler (send ajax)
      * @param {string} container - The container to which the html markup will be added
      * @returns {void}

@@ -743,3 +743,9 @@ function fill_views_column( $colname, $post_id ){
 //    }
 //}
 //add_action( 'pre_get_posts', 'custom_post_type_archive_sort' );
+
+// Добавляем поддержку excerpt (цитат) для страниц
+function bw_enable_page_excerpt() {
+    add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'after_setup_theme', 'bw_enable_page_excerpt' );
