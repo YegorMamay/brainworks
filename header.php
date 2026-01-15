@@ -11,10 +11,6 @@
 
     <?php wp_site_icon(); ?>
 
-    <?php if ( class_exists( 'YITH_WCWL' ) ) : ?>
-        <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
-    <?php endif; ?>
-
     <!-- Если плагин Yoast SEO не активирован, срабатывает этот код START -->
     <?php if ( ! defined('WPSEO_VERSION') ) : ?>
 
@@ -135,11 +131,6 @@
                 <!-- If WOO: Список желаний, кабинет, корзина. START -->
                 <?php if ( class_exists( 'WooCommerce' ) ) { ?>
                 <div class="header__woo d-flex align-items-center">
-                    <div class="header__wishlist">
-                        <a href="<?php echo get_permalink(pll_get_post(1569)) ?>" class="header__circle">
-                            <i class="far fa-heart"></i>
-                        </a>
-                    </div>
                     <div class="header__profile">
                         <a href="<?php echo get_permalink(pll_get_post(1562)) ?>" class="header__circle">
                             <i class="fa-regular fa-user"></i>
@@ -206,11 +197,6 @@
             <!-- If WOO: Список желаний, кабинет, корзина. START -->
             <?php if ( class_exists( 'WooCommerce' ) ) { ?>
             <div class="header__woo d-flex">
-                <div class="header__wishlist">
-                    <a href="<?php echo get_permalink(pll_get_post(1569)) ?>" class="header__circle">
-                        <i class="fal fa-heart"></i>
-                    </a>
-                </div>
                 <div class="header__profile">
                     <a href="<?php echo get_permalink(pll_get_post(1562)) ?>" class="header__circle">
                         <i class="fal fa-user-alt"></i>

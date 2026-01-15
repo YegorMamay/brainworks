@@ -14,10 +14,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
-    <?php if ( class_exists( 'YITH_WCWL' ) ) : ?>
-        <link rel="preload" as="font" href="/wp-content/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.ttf?xu2uyi" crossorigin>
-    <?php endif; ?>
-
     <?php if ( ! defined('WPSEO_VERSION') ) : ?>
 
         <title><?php echo esc_html( custom_seo_title() ); ?></title>

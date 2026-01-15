@@ -9,6 +9,7 @@
 
     &-item {
         margin: 0 5px;
+        border: none !important;
 
         a {
             display: block;
@@ -47,9 +48,13 @@
 }
 
 .nav-wrapper.language-switcher .nav {
-    //background: lighten($themeColor6, 10%);
+    background: lighten($themeColor6, 10%);
     border: 1px solid $themeColor6;
     border-radius: 4px;
+
+    &:hover {
+        background: $themeColor2;
+    }
 
     img {
         box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);

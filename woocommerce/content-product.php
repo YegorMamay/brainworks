@@ -40,32 +40,6 @@ $link = esc_url( get_permalink( $product->get_id() ) );
         <?php if ( $product->is_in_stock() ) : ?>
         <div class="product_actions">
 
-            <form class="cart" action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" method="post" enctype="multipart/form-data">
-                <div class="quantity-control">
-                    <button type="button" class="qty-btn minus">−</button>
-                    <?php
-                    woocommerce_quantity_input( [
-                        'min_value'   => 1,
-                        'max_value'   => $product->get_max_purchase_quantity(),
-                        'input_value' => 1,
-                        'classes'     => ['input-text', 'qty', 'text'],
-                    ] );
-                    ?>
-                    <button type="button" class="qty-btn plus">+</button>
-                </div>
-
-                <!-- Кнопка добавления в корзину -->
-                <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-            </form>
-
-            <!-- Кнопка "Buy" с ID попапов Elementor для разных языков -->
-            <button class="button buy-one-click one-click"
-              data-title="<?php echo esc_attr( $product->get_name() ); ?>"
-              data-popup="ru:116,ua:388,en:867">
-                <?php _e('Buy', 'brainworks'); ?>
-            </button>
-
-
         </div>
         <?php endif; ?>
     </div>

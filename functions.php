@@ -61,8 +61,6 @@ remove_action( 'wp_head', '_wp_render_title_tag', 1 ); //удаляет тег t
  *     $image_id = get_term_meta( $term_id, '_thumbnail_id', 1 );
  *     $image_url = wp_get_attachment_image_url( $image_id, 'thumbnail' );
  *
- * @author: Pavel
- *
  * @version 1.0
  */
 if( is_admin() && ! class_exists('Term_Meta_Image') ){
@@ -368,7 +366,6 @@ function ts_quantity_plus_minus() {
     <?php
 }
 // Добавляет кнопки + и - END
-
 
 //Перемещает описание категории под товары
 remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
