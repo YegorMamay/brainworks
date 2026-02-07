@@ -4,7 +4,8 @@ $headerHight: 80px;
 
 
 .header {
-    background: $headerBgColor;
+    background: transparentize($headerBgColor, 0.1);
+    backdrop-filter: blur(3px);
     color: $headerFontColor;
     box-shadow: $shadow;
     position: relative;

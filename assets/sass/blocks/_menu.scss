@@ -16,7 +16,8 @@ $SubMenuFontColor: $themeColor5;
     display: block;
     position: relative;
     text-align: center;
-    background: $menuBgColor;
+    background: transparentize($menuBgColor, 0.1);
+    backdrop-filter: blur(3px);
 
     @media #{$desktop-min} {
         //border-top: 1px solid lighten($menuBgColor, 5%);

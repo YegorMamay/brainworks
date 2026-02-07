@@ -5,8 +5,8 @@ Theme URI: https://github.com/YegorMamay/brainworks
 Text Domain: brainworks
 Author: BrainWorks
 Author URI: https://brainworks.com.ua
-Version: 17.08.25
-Last changes: 25.07.25
+Version: 15.01.26
+Last changes: 18.01.26
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 html,
@@ -5477,6 +5477,12 @@ a:hover, a:active, a:focus {
 .messenger-item {
   margin: 0 5px;
 }
+.messenger-item:first-child {
+  margin-left: 0;
+}
+.messenger-item:last-child {
+  margin-right: 0;
+}
 .messenger-link {
   display: block;
   text-align: center;
@@ -6010,7 +6016,8 @@ a:hover, a:active, a:focus {
 }
 
 .header {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(3px);
   color: #000;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -6075,7 +6082,8 @@ a:hover, a:active, a:focus {
   display: block;
   position: relative;
   text-align: center;
-  background: #28325D;
+  background: rgba(40, 50, 93, 0.9);
+  backdrop-filter: blur(3px);
 }
 .nav-wrapper {
   display: -webkit-box;
@@ -6409,6 +6417,9 @@ a:hover, a:active, a:focus {
   }
   .nav .sub-menu-item .menu-item-has-children-arrow {
     top: 0;
+  }
+  .nav .sub-menu-item-current > .sub-menu-link {
+    background: transparent;
   }
   .nav .sub-menu-item .sub-menu-link {
     color: #28325D;
