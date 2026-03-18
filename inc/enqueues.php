@@ -19,15 +19,15 @@ function bw_enqueues()
     wp_register_script('respond', 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js', [], null, false);
 
     // Установка условий для загрузки скриптов только в старых браузерах (IE < 9)
-    wp_script_add_data('html5shiv', 'conditional', 'lt IE 9');
-    wp_script_add_data('respond', 'conditional', 'lt IE 9');
+    // wp_script_add_data('html5shiv', 'conditional', 'lt IE 9');
+    // wp_script_add_data('respond', 'conditional', 'lt IE 9');
 
     wp_enqueue_script('html5shiv');
     wp_enqueue_script('respond');
 
     // Регистрация и подключение Modernizr
     wp_register_script('modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', [], null, true);
-    wp_enqueue_script('modernizr');
+
 
     // Регистрация и подключение Slick Carousel, если есть посты типа "reviews"
     wp_register_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
@@ -58,7 +58,8 @@ add_action('wp_enqueue_scripts', 'bw_enqueues', 100);
 /**
  * Подключение скриптов для квиза.
  */
-function bw_enqueues_kviz() {
+function bw_enqueues_kviz()
+{
     // Регистрация и подключение скрипта для квиза
     wp_register_script('kviz', get_template_directory_uri() . '/kviz/js/kviz.js', ['jquery'], null, true);
     wp_enqueue_script('kviz');
@@ -79,7 +80,8 @@ add_action('wp_enqueue_scripts', 'bw_enqueues_kviz', 100);
  *
  * @param WP_Styles $styles Объект стилей WordPress.
  */
-function bw_wp_default_styles($styles) {
+function bw_wp_default_styles($styles)
+{
     $editor = get_option('classic-editor-replace');
     // Здесь можно добавить логику для настройки стандартных стилей
 }

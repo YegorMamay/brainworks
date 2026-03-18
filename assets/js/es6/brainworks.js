@@ -3,8 +3,8 @@
 ((w, d, $, ajax) => {
 
     $(() => {
-        console.log('%cThe website developed by BRAIN WORKS — https://brainworks.pro/', 'color: blue');
-        console.log('%cСайт разработан в BRAIN WORKS — https://brainworks.pro/', 'color: blue');
+        console.log('%cThe website developed by BrainWorks — https://brainworks.in.ua/', 'color: blue');
+        console.log('%cСайт разработан в BrainWorks — https://brainworks.in.ua/', 'color: blue');
 
         const $w = $(w);
         const $d = $(d);

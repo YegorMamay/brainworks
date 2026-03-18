@@ -25,7 +25,7 @@
             </nav>
 
             <div class="developer">
-                <?php _e('Developed by ', 'brainworks') ?><a href="https://brainworks.pro/" target="_blank">BrainWorks</a>
+                <?php _e('Developed by ', 'brainworks') ?><a href="https://brainworks.in.ua/" target="_blank">BrainWorks</a>
             </div>
 
         </div>

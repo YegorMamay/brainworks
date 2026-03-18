@@ -3,9 +3,6 @@
  * All the functions are in the PHP pages in the `inc/` folder.
  */
 
-//Скрывает topbar
-//show_admin_bar(false);
-
 require get_template_directory() . '/inc/helpers.php';
 // require get_template_directory() . '/inc/auth.php';
 require get_template_directory() . '/inc/admin.php';

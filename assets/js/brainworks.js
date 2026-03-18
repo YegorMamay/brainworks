@@ -5,8 +5,8 @@ var _this = void 0;
 (function (w, d, $, ajax) {
     $(function () {
         // Логирование информации о разработчике сайта
-        console.log("%cThe website developed by BRAIN WORKS — https://brainworks.pro/", "color: blue");
-        console.log("%cСайт разработан в BRAIN WORKS — https://brainworks.pro/", "color: blue");
+        console.log("%cThe website developed by BrainWorks — https://brainworks.in.ua/", "color: blue");
+        console.log("%cСайт разработан в BrainWorks — https://brainworks.in.ua/", "color: blue");
 
         // Определение основных переменных
         var $w = $(w);

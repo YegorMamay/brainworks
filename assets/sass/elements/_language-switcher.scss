@@ -48,43 +48,44 @@
 }
 
 .nav-wrapper.language-switcher .nav {
-    background: lighten($themeColor6, 10%);
-    border: 1px solid $themeColor6;
-    border-radius: 4px;
-
-    &:hover {
-        background: $themeColor2;
-    }
-
-    img {
-        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .pll-parent-menu-item {
-        border: none;
-
-        .menu-link {
-            color: $bodyFontColor;
-        }
+        background: lighten($themeColor6, 10%);
+        border: 1px solid $themeColor6;
+        border-radius: 4px;
+        z-index: 2;
 
         &:hover {
+            background: $themeColor2;
+        }
+
+        img {
+            box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .pll-parent-menu-item {
+            border: none;
+
             .menu-link {
-                color: $themeColor5;
+                color: $bodyFontColor;
+            }
+
+            &:hover {
+                .menu-link {
+                    color: $themeColor5;
+                }
             }
         }
-    }
 
-    .menu-item-has-children {
-        padding: 3px 18px 3px 0;
+        .menu-item-has-children {
+            padding: 3px 18px 3px 0;
 
-        &:after {
-            border-color: $themeColor1 transparent transparent transparent;
-        }
-
-        &:hover {
             &:after {
-                border-color: $themeColor6 transparent transparent transparent;
+                border-color: $themeColor1 transparent transparent transparent;
+            }
+
+            &:hover {
+                &:after {
+                    border-color: $themeColor6 transparent transparent transparent;
+                }
             }
         }
     }
-}
