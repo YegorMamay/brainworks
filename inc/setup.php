@@ -284,6 +284,14 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
     <?php
     $fragments['a.cart-contents'] = ob_get_clean();
 
+    ob_start();
+    ?>
+    <p id="modal-cart" class="header__cart-price">
+        <?php echo woocommerce_get_total_price(); ?>
+    </p>
+    <?php
+    $fragments['p#modal-cart'] = ob_get_clean();
+
     return $fragments;
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );

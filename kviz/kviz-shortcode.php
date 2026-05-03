@@ -1,5 +1,6 @@
 <?php
 function kviz_function() {
+    wp_enqueue_script('kviz');
     ob_start();  ?>
 <section class="second-screen grey">
     <div class="kviz">
@@ -116,3 +117,4 @@ function kviz_function() {
 }
 add_shortcode("quiz", "kviz_function");
 ?>
+

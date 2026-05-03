@@ -14,20 +14,11 @@ function bw_enqueues()
     wp_enqueue_style('fontawesome');
 
     /** Scripts */
-    // Регистрация и подключение скриптов для поддержки старых браузеров
-    wp_register_script('html5shiv', 'https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js', [], null, false);
-    wp_register_script('respond', 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js', [], null, false);
-
-    // Установка условий для загрузки скриптов только в старых браузерах (IE < 9)
-    // wp_script_add_data('html5shiv', 'conditional', 'lt IE 9');
-    // wp_script_add_data('respond', 'conditional', 'lt IE 9');
-
-    wp_enqueue_script('html5shiv');
-    wp_enqueue_script('respond');
+    // IE conditional scripts are deprecated since WordPress 6.9 and no longer needed for modern themes.
 
     // Регистрация и подключение Modernizr
     wp_register_script('modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', [], null, true);
-
+    wp_enqueue_script('modernizr');
 
     // Регистрация и подключение Slick Carousel, если есть посты типа "reviews"
     wp_register_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
@@ -62,7 +53,6 @@ function bw_enqueues_kviz()
 {
     // Регистрация и подключение скрипта для квиза
     wp_register_script('kviz', get_template_directory_uri() . '/kviz/js/kviz.js', ['jquery'], null, true);
-    wp_enqueue_script('kviz');
 
     // Локализация скрипта для передачи данных из PHP в JS
     wp_localize_script('kviz', 'kvizVariable', array(
@@ -99,11 +89,21 @@ function bw_wp_head()
 add_action('wp_head', 'bw_wp_head', 20);
 
 /**
- * Добавление аналитического кода в <body>.
+ * Добавление аналитического кода сразу после <body>.
+ */
+function bw_wp_body_open()
+{
+    analytics_tracking_code('body');
+}
+
+add_action('wp_body_open', 'bw_wp_body_open', 20);
+
+/**
+ * Добавление аналитического кода в <footer>.
  */
 function bw_wp_footer()
 {
-    analytics_tracking_code('body');
+    analytics_tracking_code('footer');
 }
 
 add_action('wp_footer', 'bw_wp_footer', 20);

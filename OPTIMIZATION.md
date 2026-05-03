@@ -56,45 +56,6 @@ function bw_enqueues() {
 add_action('wp_enqueue_scripts', 'bw_enqueues', 100);
 ```
 
-**Выгода:** Уменьшение времени загрузки на 200-500ms, независимость от CDN.
-
----
-
-### 2. Производительность: Минификация и объединение CSS
-
-**Проблема:** Основной CSS файл весит 183 KB - это много для современного сайта.
-
-**Рекомендации:**
-1. Использовать CSS минификацию
-2. Удалить неиспользуемые стили
-3. Разделить критический CSS (above-the-fold) и остальной
-
-**Решение:**
-```php
-// Добавить в functions.php
-function bw_enqueue_critical_css() {
-    if (!is_admin()) {
-        echo '<style id="critical-css">';
-        include get_template_directory() . '/assets/css/critical.min.css';
-        echo '</style>';
-    }
-}
-add_action('wp_head', 'bw_enqueue_critical_css', 1);
-
-// Основной CSS с preload
-function bw_preload_styles() {
-    echo '<link rel="preload" href="' . get_stylesheet_uri() . '" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">';
-    echo '<noscript><link rel="stylesheet" href="' . get_stylesheet_uri() . '"></noscript>';
-}
-add_action('wp_head', 'bw_preload_styles', 2);
-```
-
-**Инструменты для анализа:**
-- PurgeCSS для удаления неиспользуемых стилей
-- cssnano для минификации
-
----
-
 ### 3. Безопасность: Удалить console.log из production
 
 **Проблема:** В production коде найдены console.log вызовы.
@@ -183,11 +144,6 @@ function process_delete_account() {
 }
 add_action('init', 'process_delete_account');
 ```
-
----
-
-## 🟡 Важные рекомендации (средний приоритет)
-
 
 
 ### 6. Производительность: Кэширование запросов
@@ -353,11 +309,6 @@ add_filter('wp_generate_attachment_metadata', 'convert_to_webp', 10, 2);
 
 ## 🛠️ Инструменты для тестирования
 
-### Производительность
-- **Google PageSpeed Insights** - https://pagespeed.web.dev/
-- **GTmetrix** - https://gtmetrix.com/
-- **WebPageTest** - https://www.webpagetest.org/
-
 ### Безопасность
 - **WPScan** - сканер уязвимостей WordPress
 - **Sucuri SiteCheck** - https://sitecheck.sucuri.net/
@@ -365,10 +316,6 @@ add_filter('wp_generate_attachment_metadata', 'convert_to_webp', 10, 2);
 ### Код
 - **PHP_CodeSniffer** с WordPress Coding Standards
 - **PHPStan** - статический анализ PHP кода
-
-### SEO
-- **Google Search Console**
-- **Screaming Frog SEO Spider**
 
 ### Доступность
 - **WAVE** - https://wave.webaim.org/

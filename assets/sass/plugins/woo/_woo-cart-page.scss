@@ -18,8 +18,64 @@
     appearance: auto;
 }
 
-.woocommerce .quantity .qty {
-    width: 90px;
+.woocommerce .quantity, .woocommerce-cart .quantity, .woocommerce-cart-form .quantity {
+    display: inline-flex !important;
+    align-items: stretch !important;
+    float: none !important;
+
+    .qty {
+        width: 50px !important;
+        height: 45px !important;
+        text-align: center !important;
+        appearance: textfield;
+        border: 1px solid #ccc !important;
+        border-width: 1px 0 !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 0 5px !important;
+        background: none !important;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+    }
+
+    .qty-btn,
+    .minus,
+    .plus {
+        width: 35px !important;
+        height: 45px !important;
+        background-color: #f5f5f5 !important;
+        border: 1px solid #ccc !important;
+        cursor: pointer !important;
+        font-size: 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: #333 !important;
+        transition: all 0.3s ease !important;
+        float: none !important;
+
+        &:hover {
+            background-color: #e5e5e5 !important;
+        }
+    }
+
+    .qty-minus,
+    .minus {
+        border-right: none !important;
+        border-radius: 4px 0 0 4px !important;
+    }
+
+    .qty-plus,
+    .plus {
+        border-left: none !important;
+        border-radius: 0 4px 4px 0 !important;
+    }
 }
 
 .woocommerce-cart-form input#coupon_code {

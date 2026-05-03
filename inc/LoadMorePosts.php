@@ -32,10 +32,10 @@ if (!class_exists('LoadMorePosts')) {
                     'action' => 'load_more_posts',
                     'nonce' => wp_create_nonce('load_more_posts_action'),
                     'url' => admin_url('admin-ajax.php'),
-	                'sticky_header' => [
-		                'enable' => get_theme_mod('bw_sticky_header_enable', false),
-		                'autohide' => get_theme_mod('bw_sticky_header_autohide', false)
-	                ],
+                    'sticky_header' => [
+                        'enable' => get_theme_mod('bw_sticky_header_enable', false),
+                        'autohide' => get_theme_mod('bw_sticky_header_autohide', false)
+                    ],
                 ]);
             }
         }
@@ -52,7 +52,6 @@ if (!class_exists('LoadMorePosts')) {
             $wp_customize->add_section('bw_load_more', [
                 'title' => 'Load More',
                 'description' => 'If this function enabled, the pagination will ignore.',
-                'panel' => 'bw_theme_options',
             ]);
 
             $wp_customize->add_setting('bw_load_more_enable', [

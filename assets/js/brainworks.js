@@ -5,8 +5,8 @@ var _this = void 0;
 (function (w, d, $, ajax) {
     $(function () {
         // Логирование информации о разработчике сайта
-        console.log("%cThe website developed by BrainWorks — https://brainworks.in.ua/", "color: blue");
-        console.log("%cСайт разработан в BrainWorks — https://brainworks.in.ua/", "color: blue");
+        console.log("%cThe website developed by BRAIN WORKS — https://brainworks.pro/", "color: blue");
+        console.log("%cСайт разработан в BRAIN WORKS — https://brainworks.pro/", "color: blue");
 
         // Определение основных переменных
         var $w = $(w);
@@ -55,7 +55,57 @@ var _this = void 0;
                 removeAllStyles($(".js-menu"));
             }
         });
+
+        // Инициализация переключателя вида товаров (сетка/список)
+        viewSwitcher();
+
+        // Инициализация кнопок + и - для количества
+        initQuantityButtons();
+        $(document.body).on('updated_wc_div updated_cart_totals', initQuantityButtons);
     });
+
+    // Функция переключения вида товаров (сетка/список)
+    var viewSwitcher = function viewSwitcher() {
+        var gridBtn = $('.bw-view-grid');
+        var listBtn = $('.bw-view-list');
+        var productsContainer = $('ul.products');
+
+        if (!gridBtn.length || !listBtn.length || !productsContainer.length) {
+            return;
+        }
+
+        // Проверяем сохраненный тип отображения в localStorage
+        var savedView = localStorage.getItem('bw_shop_view');
+        if (savedView === 'list') {
+            productsContainer.addClass('bw-list-view');
+            listBtn.addClass('active');
+            gridBtn.removeClass('active');
+        } else {
+            productsContainer.removeClass('bw-list-view');
+            gridBtn.addClass('active');
+            listBtn.removeClass('active');
+        }
+
+        // Обработчик события клика на Сетку
+        $('body').on('click', '.bw-view-grid', function (e) {
+            e.preventDefault();
+            var $container = $('ul.products');
+            $container.removeClass('bw-list-view');
+            $('.bw-view-grid').addClass('active');
+            $('.bw-view-list').removeClass('active');
+            localStorage.setItem('bw_shop_view', 'grid');
+        });
+
+        // Обработчик события клика на Список
+        $('body').on('click', '.bw-view-list', function (e) {
+            e.preventDefault();
+            var $container = $('ul.products');
+            $container.addClass('bw-list-view');
+            $('.bw-view-list').addClass('active');
+            $('.bw-view-grid').removeClass('active');
+            localStorage.setItem('bw_shop_view', 'list');
+        });
+    };
 
     // Функция для выпадающего списка телефонов
     var dropdownPhone = function dropdownPhone() {
@@ -251,14 +301,14 @@ var _this = void 0;
                         settings: {
                             slidesToShow: 1 // Показывать 1 слайд
                         }
-                },
+                    },
                     {
                         breakpoint: 768, // Для экранов шириной до 768px
                         settings: {
                             slidesToShow: 1 // Показывать 1 слайд
                         }
-                }
-            ],
+                    }
+                ],
                 slidesToShow: 1, // Количество отображаемых слайдов
                 slidesToScroll: 1, // Количество слайдов для прокрутки
                 speed: 300, // Скорость анимации прокрутки
@@ -574,43 +624,17 @@ var _this = void 0;
 
     // Функция для обновления общей стоимости корзины
     var updateCartTotalValue = function updateCartTotalValue(elemId) {
-        // Сохраняем текущую валюту в localStorage
-        localStorage.setItem("currency", $("#cyr-value").val());
         var totalId = $(elemId); // Элемент, где отображается общая стоимость
 
         // Проверяем, существует ли элемент
-        if ($(elemId).length > 0) {
+        if (totalId.length > 0) {
             // Привязываем обработчик к завершению всех AJAX-запросов
             $(document).bind("ajaxStop.mine", function () {
                 // Если таблица корзины существует
                 if ($(".shop_table").length > 0) {
                     totalId.css("pointerEvents", "none"); // Отключаем взаимодействие с элементом
-                    var checkoutTotalValue = $(".shop_table .amount").text(); // Получаем значение общей стоимости
+                    var checkoutTotalValue = $(".shop_table .amount").first().text(); // Получаем значение общей стоимости
                     totalId.find(".amount").first().text(checkoutTotalValue); // Обновляем текст общей стоимости
-                }
-
-                // Проверяем, есть ли данные в sessionStorage
-                if (sessionStorage.getItem(wc_cart_fragments_params.fragment_name) !== null) {
-                    var sessionHash = sessionStorage.getItem(wc_cart_fragments_params.fragment_name); // Получаем данные из sessionStorage
-                    var parseValue = JSON.parse(sessionHash); // Парсим данные
-                    var totalValueCart; // Общая стоимость корзины
-                    var totalValueCyr; // Валюта
-
-                    // Перебираем данные из sessionStorage
-                    $.each(parseValue, function (key, value) {
-                        if (key == "div.widget_shopping_cart_content") {
-                            var cartModalContent = $(value).text(); // Получаем текст содержимого корзины
-                            var cartContentString = cartModalContent.split(":").pop(); // Извлекаем строку с общей стоимостью
-                            totalValueCart = Array.from(cartContentString.split("."))[0]; // Извлекаем значение до точки
-                            totalValueCyr = localStorage.getItem("currency"); // Получаем валюту из localStorage
-                        } else if ($(".cart-contents-count").text() < 1) {
-                            // Если корзина пуста
-                            totalId.find(".amount").first().text("0 " + totalValueCyr); // Устанавливаем 0 и валюту
-                        } else {
-                            // Если корзина не пуста
-                            totalId.find(".amount").first().text(totalValueCart + "."); // Устанавливаем общую стоимость
-                        }
-                    });
                 }
             });
         }
@@ -653,5 +677,58 @@ var _this = void 0;
             $(this).toggleClass('show'); // Переключаем класс кнопки
         }
     });
+
+    /**
+     * Quantity Buttons
+     *
+     * @returns {void}
+     */
+    function initQuantityButtons() {
+        var qtyInputs = document.querySelectorAll('.woocommerce .quantity:not(.buttons_added) .qty');
+
+        qtyInputs.forEach(function (qtyInput) {
+            var container = qtyInput.closest('.quantity');
+            container.classList.add('buttons_added');
+
+            var btnMinus = document.createElement('button');
+            btnMinus.type = 'button';
+            btnMinus.classList.add('qty-btn', 'qty-minus');
+            btnMinus.innerText = '-';
+
+            var btnPlus = document.createElement('button');
+            btnPlus.type = 'button';
+            btnPlus.classList.add('qty-btn', 'qty-plus');
+            btnPlus.innerText = '+';
+
+            container.insertBefore(btnMinus, qtyInput);
+            container.appendChild(btnPlus);
+
+            btnMinus.addEventListener('click', function () {
+                var value = parseFloat(qtyInput.value);
+                var step = parseFloat(qtyInput.step) || 1;
+                var min = parseFloat(qtyInput.min) || 0;
+
+                if (isNaN(value)) {
+                    qtyInput.value = min;
+                } else if (value > min) {
+                    qtyInput.value = value - step;
+                }
+                $(qtyInput).trigger('change');
+            });
+
+            btnPlus.addEventListener('click', function () {
+                var value = parseFloat(qtyInput.value);
+                var step = parseFloat(qtyInput.step) || 1;
+                var max = parseFloat(qtyInput.max);
+
+                if (isNaN(value)) {
+                    qtyInput.value = step;
+                } else if (!max || value < max) {
+                    qtyInput.value = value + step;
+                }
+                $(qtyInput).trigger('change');
+            });
+        });
+    };
 
 })(window, document, jQuery, window.jpAjax);

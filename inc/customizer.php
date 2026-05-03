@@ -4,7 +4,8 @@
  * @param      $name
  * @param bool $default
  */
-function theme_mod($name, $default = false) {
+function theme_mod($name, $default = false)
+{
     $theme_mod = get_theme_mod($name, $default);
 
     if (!empty($theme_mod)) {
@@ -12,7 +13,8 @@ function theme_mod($name, $default = false) {
     }
 }
 
-function bw_customize_register($wp_customize) {
+function bw_customize_register($wp_customize)
+{
 
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
@@ -20,18 +22,10 @@ function bw_customize_register($wp_customize) {
     $wp_customize->get_setting('background_color')->transport = 'postMessage';
 
 
-    // Panel Theme Options
-    $wp_customize->add_panel('bw_theme_options', array(
-        'title' => __('Theme Options', 'brainworks'),
-        'description' => esc_html__('Theme Options Customizer', 'brainworks'),
-        'priority' => 201,
-    ));
-
     // Section Scroll Top
     $wp_customize->add_section('bw_scroll_top', array(
         'title' => __('Scroll Top', 'brainworks'),
         'description' => esc_html__('Customizer Custom Scroll Top', 'brainworks'),
-        'panel' => 'bw_theme_options',
     ));
 
     $wp_customize->add_setting('bw_scroll_top_display', array(
@@ -196,7 +190,6 @@ function bw_customize_register($wp_customize) {
     $wp_customize->add_section('bw_analytics', array(
         'title' => __('Analytics', 'brainworks'),
         'description' => esc_html__('Analytics Tracking Code', 'brainworks'),
-        'panel' => 'bw_theme_options',
     ));
 
     $wp_customize->add_setting('bw_analytics_google_placed', array(
@@ -236,14 +229,14 @@ function bw_customize_register($wp_customize) {
     $wp_customize->add_setting('bw_analytics_custom', array());
 
     $wp_customize->add_control('bw_analytics_google_placed', array(
-        'label' => __('Google Analytics', 'brainworks'),
-        'description' => esc_html__('Placed (head/body)', 'brainworks'),
+        'label' => __('Code 1', 'brainworks'),
         'section' => 'bw_analytics',
         'settings' => 'bw_analytics_google_placed',
         'type' => 'select',
         'choices' => array(
             'head' => __('Head', 'brainworks'),
             'body' => __('Body', 'brainworks'),
+            'footer' => __('Footer', 'brainworks'),
         ),
     ));
 
@@ -258,14 +251,14 @@ function bw_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('bw_analytics_yandex_placed', array(
-        'label' => __('Yandex Metrika', 'brainworks'),
-        'description' => esc_html__('Placed (head/body)', 'brainworks'),
+        'label' => __('Code 2', 'brainworks'),
         'section' => 'bw_analytics',
         'settings' => 'bw_analytics_yandex_placed',
         'type' => 'select',
         'choices' => array(
             'head' => __('Head', 'brainworks'),
             'body' => __('Body', 'brainworks'),
+            'footer' => __('Footer', 'brainworks'),
         ),
     ));
 
@@ -280,14 +273,14 @@ function bw_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('bw_chat_placed', array(
-        'label' => __('Chat code', 'brainworks'),
-        'description' => esc_html__('Placed (head/body)', 'brainworks'),
+        'label' => __('Code 3', 'brainworks'),
         'section' => 'bw_analytics',
         'settings' => 'bw_chat_placed',
         'type' => 'select',
         'choices' => array(
             'head' => __('Head', 'brainworks'),
             'body' => __('Body', 'brainworks'),
+            'footer' => __('Footer', 'brainworks'),
         ),
     ));
 
@@ -302,14 +295,14 @@ function bw_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('bw_remarketing_placed', array(
-        'label' => __('Remarketing code', 'brainworks'),
-        'description' => esc_html__('Placed (head/body)', 'brainworks'),
+        'label' => __('Code 4', 'brainworks'),
         'section' => 'bw_analytics',
         'settings' => 'bw_remarketing_placed',
         'type' => 'select',
         'choices' => array(
             'head' => __('Head', 'brainworks'),
             'body' => __('Body', 'brainworks'),
+            'footer' => __('Footer', 'brainworks'),
         ),
     ));
 
@@ -324,14 +317,14 @@ function bw_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('bw_facebook_pixel_placed', array(
-        'label' => __('Facebook Pixel code', 'brainworks'),
-        'description' => esc_html__('Placed (head/body)', 'brainworks'),
+        'label' => __('Code 5', 'brainworks'),
         'section' => 'bw_analytics',
         'settings' => 'bw_facebook_pixel_placed',
         'type' => 'select',
         'choices' => array(
             'head' => __('Head', 'brainworks'),
             'body' => __('Body', 'brainworks'),
+            'footer' => __('Footer', 'brainworks'),
         ),
     ));
 
@@ -346,14 +339,14 @@ function bw_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('bw_analytics_custom_placed', array(
-        'label' => __('Custom Analytics', 'brainworks'),
-        'description' => esc_html__('Placed (head/body)', 'brainworks'),
+        'label' => __('Code 6', 'brainworks'),
         'section' => 'bw_analytics',
         'settings' => 'bw_analytics_custom_placed',
         'type' => 'select',
         'choices' => array(
             'head' => __('Head', 'brainworks'),
             'body' => __('Body', 'brainworks'),
+            'footer' => __('Footer', 'brainworks'),
         ),
     ));
 
@@ -371,7 +364,6 @@ function bw_customize_register($wp_customize) {
     $wp_customize->add_section('bw_login', array(
         'title' => __('Login', 'brainworks'),
         'description' => esc_html__('Customizer Custom Login', 'brainworks'),
-        'panel' => 'bw_theme_options',
     ));
 
     $wp_customize->add_setting('bw_login_logo', array(
@@ -485,7 +477,6 @@ function bw_customize_register($wp_customize) {
     $wp_customize->add_section('bw_additional', array(
         'title' => 'Additional',
         //'description' => 'Additional options',
-        'panel' => 'bw_theme_options',
     ));
 
     $wp_customize->add_setting('bw_additional_address', array('default' => ''));
@@ -517,14 +508,13 @@ function bw_customize_register($wp_customize) {
     $wp_customize->add_section('bw_messenger', array(
         'title' => 'Messenger',
         'description' => 'Customizer Custom Messenger links',
-        'panel' => 'bw_theme_options',
     ));
 
-    $wp_customize->add_setting('bw_messenger_skype', array('default' => '', 'sanitize_callback' => '',));
-    $wp_customize->add_setting('bw_messenger_viber', array('default' => '', 'sanitize_callback' => '',));
-    $wp_customize->add_setting('bw_messenger_whatsapp', array('default' => '', 'sanitize_callback' => '',));
-    $wp_customize->add_setting('bw_messenger_telegram', array('default' => '', 'sanitize_callback' => '',));
-    $wp_customize->add_setting('bw_messenger_facebook', array('default' => '', 'sanitize_callback' => '',));
+    $wp_customize->add_setting('bw_messenger_skype', array('default' => '', 'sanitize_callback' => '', ));
+    $wp_customize->add_setting('bw_messenger_viber', array('default' => '', 'sanitize_callback' => '', ));
+    $wp_customize->add_setting('bw_messenger_whatsapp', array('default' => '', 'sanitize_callback' => '', ));
+    $wp_customize->add_setting('bw_messenger_telegram', array('default' => '', 'sanitize_callback' => '', ));
+    $wp_customize->add_setting('bw_messenger_facebook', array('default' => '', 'sanitize_callback' => '', ));
 
     $wp_customize->selective_refresh->add_partial('bw_messenger_skype', array(
         'selector' => '.messenger',
@@ -569,7 +559,6 @@ function bw_customize_register($wp_customize) {
     $wp_customize->add_section('bw_social', array(
         'title' => __('Social', 'brainworks'),
         'description' => esc_html__('Customizer Custom Social links', 'brainworks'),
-        'panel' => 'bw_theme_options',
     ));
 
     $wp_customize->add_setting('bw_social_vk', array('default' => ''));
@@ -914,7 +903,6 @@ function bw_customize_register($wp_customize) {
     $wp_customize->add_section('bw_phones', array(
         'title' => __('Phones', 'brainworks'),
         'description' => esc_html__('Customizer Custom Phone numbers', 'brainworks'),
-        'panel' => 'bw_theme_options',
     ));
 
     $wp_customize->add_setting('bw_phone1', array());
@@ -952,125 +940,168 @@ function bw_customize_register($wp_customize) {
         'type' => 'tel',
     ));
 
-	$wp_customize->add_control('bw_phone5', array(
-		'label' => __('Phone №5', 'brainworks'),
-		'section' => 'bw_phones',
-		'settings' => 'bw_phone5',
-		'type' => 'tel',
-	));
+    $wp_customize->add_control('bw_phone5', array(
+        'label' => __('Phone №5', 'brainworks'),
+        'section' => 'bw_phones',
+        'settings' => 'bw_phone5',
+        'type' => 'tel',
+    ));
 
-	$wp_customize->add_control('bw_phone6', array(
-		'label' => __('Phone №6', 'brainworks'),
-		'section' => 'bw_phones',
-		'settings' => 'bw_phone6',
-		'type' => 'tel',
-	));
+    $wp_customize->add_control('bw_phone6', array(
+        'label' => __('Phone №6', 'brainworks'),
+        'section' => 'bw_phones',
+        'settings' => 'bw_phone6',
+        'type' => 'tel',
+    ));
 
-	// Section Sticky Header
-	$wp_customize->add_section('bw_sticky_header', array(
-		'title' => __('Sticky Header', 'brainworks'),
-		'description' => esc_html__('Customizer Sticky Header', 'brainworks'),
-		'panel' => 'bw_theme_options',
-	));
+    // Section Sticky Header
+    $wp_customize->add_section('bw_sticky_header', array(
+        'title' => __('Sticky Header', 'brainworks'),
+        'description' => esc_html__('Customizer Sticky Header', 'brainworks'),
+    ));
 
-	$wp_customize->add_setting('bw_sticky_header_enable', array('default' => false, 'sanitize_callback' => 'wp_validate_boolean'));
-	$wp_customize->add_setting('bw_sticky_header_autohide', array('default' => false, 'sanitize_callback' => 'wp_validate_boolean'));
+    $wp_customize->add_setting('bw_sticky_header_enable', array('default' => false, 'sanitize_callback' => 'wp_validate_boolean'));
+    $wp_customize->add_setting('bw_sticky_header_autohide', array('default' => false, 'sanitize_callback' => 'wp_validate_boolean'));
 
-	$wp_customize->add_control('bw_sticky_header_enable', array(
-		'label' => __('Enable', 'brainworks'),
-		'description' => esc_html__('Enable/Disable sticky header js functionality', 'brainworks'),
-		'section' => 'bw_sticky_header',
-		'settings' => 'bw_sticky_header_enable',
-		'type' => 'checkbox',
-	));
+    $wp_customize->add_control('bw_sticky_header_enable', array(
+        'label' => __('Enable', 'brainworks'),
+        'description' => esc_html__('Enable/Disable sticky header js functionality', 'brainworks'),
+        'section' => 'bw_sticky_header',
+        'settings' => 'bw_sticky_header_enable',
+        'type' => 'checkbox',
+    ));
 
-	$wp_customize->add_control('bw_sticky_header_autohide', array(
-		'label' => __('Auto Hide', 'brainworks'),
-		'description' => esc_html__('Enable/Disable auto hide functionality option', 'brainworks'),
-		'section' => 'bw_sticky_header',
-		'settings' => 'bw_sticky_header_autohide',
-		'type' => 'checkbox',
-	));
+    $wp_customize->add_control('bw_sticky_header_autohide', array(
+        'label' => __('Auto Hide', 'brainworks'),
+        'description' => esc_html__('Enable/Disable auto hide functionality option', 'brainworks'),
+        'section' => 'bw_sticky_header',
+        'settings' => 'bw_sticky_header_autohide',
+        'type' => 'checkbox',
+    ));
 
+
+    // Hide default sections (moved to bw_remove_customizer_options)
 
     // Section second logo
     $wp_customize->add_section('bw_logos', array(
-    'title' => __('Second logo', 'brainworks'),
-    'description' => esc_html__('Customizer Custom Logos', 'brainworks'),
-    'panel' => 'title_tagline',
-));
+        'title' => __('Second logo', 'brainworks'),
+        'description' => esc_html__('Customizer Custom Logos', 'brainworks'),
+        'panel' => 'title_tagline',
+    ));
 
-$wp_customize->add_setting('bw_logo2', array(
-    'sanitize_callback' => 'esc_url_raw',
-));
+    $wp_customize->add_setting('bw_logo2', array(
+        'sanitize_callback' => 'esc_url_raw',
+    ));
 
-$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bw_logo2', array(
-    'label' => __('Second Logo', 'brainworks'),
-    'section' => 'title_tagline',
-    'settings' => 'bw_logo2',
-    'priority' => 9,
-)));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bw_logo2', array(
+        'label' => __('Second Logo', 'brainworks'),
+        'section' => 'title_tagline',
+        'settings' => 'bw_logo2',
+        'priority' => 9,
+    )));
 }
 
 add_action('customize_register', 'bw_customize_register');
 
-function bw_customizer_preview() {
-    wp_register_script('bw_customizer_preview', get_template_directory_uri() . '/assets/js/customizer-preview.js',
+function bw_remove_customizer_options($wp_customize)
+{
+    $wp_customize->remove_section('colors');
+    $wp_customize->remove_section('header_image');
+    $wp_customize->remove_section('background_image');
+    $wp_customize->remove_panel('nav_menus');
+    $wp_customize->remove_panel('widgets');
+    $wp_customize->remove_section('static_front_page');
+}
+
+add_action('customize_register', 'bw_remove_customizer_options', 50);
+
+function bw_customizer_preview()
+{
+    wp_register_script(
+        'bw_customizer_preview',
+        get_template_directory_uri() . '/assets/js/customizer-preview.js',
         array(
             'jquery',
             'customize-preview'
-        ), null, true);
+        ),
+        null,
+        true
+    );
     wp_enqueue_script('bw_customizer_preview');
 }
 
 add_action('customize_preview_init', 'bw_customizer_preview');
 
-function bw_customize_controls_enqueue_scripts() {
-    wp_register_script('bw_customizer_control', get_template_directory_uri() . '/assets/js/customizer-control.js',
+function bw_customize_controls_enqueue_scripts()
+{
+    wp_register_script(
+        'bw_customizer_control',
+        get_template_directory_uri() . '/assets/js/customizer-control.js',
         array(
             'jquery',
             'customize-controls'
-        ), null, true);
+        ),
+        null,
+        true
+    );
     wp_enqueue_script('bw_customizer_control');
 }
 
 add_action('customize_controls_enqueue_scripts', 'bw_customize_controls_enqueue_scripts');
 
-function bw_customizer_css() { ?>
-<style>
-    .scroll-top {
-        width: <?php theme_mod('bw_scroll_top_width', '50');
-        ?>px;
-        height: <?php theme_mod('bw_scroll_top_height', '50');
-        ?>px;
-        background-color: <?php theme_mod('bw_scroll_top_background_color', '#000000');
-        ?>;
-        border-width: <?php echo get_theme_mod('bw_scroll_top_border_width', '1');
-        ?>px;
-        border-color: <?php theme_mod('bw_scroll_top_border_color', '#000000');
-        ?>;
-        bottom: <?php theme_mod('bw_scroll_top_offset_bottom', '20');
-        ?>px;
-        <?php bw_scroll_top_position_offset();
-        ?>
-    }
+function bw_customizer_css()
+{ ?>
+    <style>
+        .scroll-top {
+            width:
+                <?php theme_mod('bw_scroll_top_width', '50');
+                ?>
+                px;
+            height:
+                <?php theme_mod('bw_scroll_top_height', '50');
+                ?>
+                px;
+            background-color:
+                <?php theme_mod('bw_scroll_top_background_color', '#000000');
+                ?>
+            ;
+            border-width:
+                <?php echo get_theme_mod('bw_scroll_top_border_width', '1');
+                ?>
+                px;
+            border-color:
+                <?php theme_mod('bw_scroll_top_border_color', '#000000');
+                ?>
+            ;
+            bottom:
+                <?php theme_mod('bw_scroll_top_offset_bottom', '20');
+                ?>
+                px;
+            <?php bw_scroll_top_position_offset();
+            ?>
+        }
 
-    .scroll-top:hover {
-        background-color: <?php theme_mod('bw_scroll_top_background_color_hover', '#000000');
-        ?>;
-    }
+        .scroll-top:hover {
+            background-color:
+                <?php theme_mod('bw_scroll_top_background_color_hover', '#000000');
+                ?>
+            ;
+        }
 
-    .scroll-top--arrow {
-        border-bottom-color: <?php theme_mod('bw_scroll_top_arrow_color', '#ffffff');
-        ?>;
-    }
-</style>
-<?php
+        .scroll-top--arrow {
+            border-bottom-color:
+                <?php theme_mod('bw_scroll_top_arrow_color', '#ffffff');
+                ?>
+            ;
+        }
+    </style>
+    <?php
 }
 
 add_action('wp_head', 'bw_customizer_css');
 
-function bw_scroll_top_position_offset() {
+function bw_scroll_top_position_offset()
+{
     $position = get_theme_mod('bw_scroll_top_position', 'right');
     $offset = get_theme_mod('bw_scroll_top_offset_left_right', 20);
 

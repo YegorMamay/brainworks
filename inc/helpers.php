@@ -627,17 +627,6 @@ if ( ! function_exists( 'woocommerce_get_total_price' ) ) {
 	}
 }
 
-if ( ! function_exists( 'woocommerce_get_total_price' ) ) {
-    /**
-     * Get total price
-     *
-     * @return string
-     */
-    function woocommerce_get_total_price() {
-        return class_exists( 'WooCommerce' ) ? WC()->cart->get_cart_total() : '';
-    }
-}
-
 if (!function_exists( 'woocommerce_cart_popup' )) {
     function woocommerce_cart_popup() {
         echo '<div class="cart-popup">';

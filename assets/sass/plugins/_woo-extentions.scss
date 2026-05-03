@@ -23,6 +23,7 @@ ul.products {
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before {
     font-size: 27px;
 }
+
 // TI WooCommerce Wishlist END
 
 
@@ -38,6 +39,7 @@ ul.products {
         border-color: transparent $themeColor2 transparent;
     }
 }
+
 //Fibo-search end
 
 
@@ -69,6 +71,7 @@ ul.products {
 .ivpa_quantity input {
     width: 70px;
 }
+
 //Improved Product Options for WooCommerce END
 
 
@@ -78,11 +81,13 @@ ul.products {
     z-index: 99 !important;
 }
 
-.related, .upsells {
+.related,
+.upsells {
     .isb_sale_badge {
         right: 0 !important;
     }
 }
+
 // Improved Badges for WooCommerce END
 
 /*
@@ -104,8 +109,8 @@ ul.products {
 
 
 // Ajax filter
-.bapf_sfilter .bapf_body .mCSB_container > ul,
-.bapf_sfilter .bapf_body > ul {
+.bapf_sfilter .bapf_body .mCSB_container>ul,
+.bapf_sfilter .bapf_body>ul {
     padding-left: 0;
 }
 
@@ -115,11 +120,19 @@ ul.products {
     }
 }
 
-.bapf_slidr_main.ui-widget-content .ui-slider-handle, .berocket_filter_price_slider.ui-widget-content .ui-slider-handle, .slide.default .bapf_slidr_main .ui-state-default, .slide.default .bapf_slidr_main .ui-widget-header .ui-state-default, .slide.default .bapf_slidr_main.ui-widget-content .ui-state-default, .slide.default .berocket_filter_price_slider .ui-state-default, .slide.default .berocket_filter_price_slider .ui-widget-header .ui-state-default, .slide.default .berocket_filter_price_slider.ui-widget-content .ui-state-default {
+.bapf_slidr_main.ui-widget-content .ui-slider-handle,
+.berocket_filter_price_slider.ui-widget-content .ui-slider-handle,
+.slide.default .bapf_slidr_main .ui-state-default,
+.slide.default .bapf_slidr_main .ui-widget-header .ui-state-default,
+.slide.default .bapf_slidr_main.ui-widget-content .ui-state-default,
+.slide.default .berocket_filter_price_slider .ui-state-default,
+.slide.default .berocket_filter_price_slider .ui-widget-header .ui-state-default,
+.slide.default .berocket_filter_price_slider.ui-widget-content .ui-state-default {
     background: $themeColor2;
 }
 
-.bapf_slidr_main.ui-widget-content .ui-slider-range, .berocket_filter_price_slider.ui-widget-content .ui-slider-range {
+.bapf_slidr_main.ui-widget-content .ui-slider-range,
+.berocket_filter_price_slider.ui-widget-content .ui-slider-range {
     background: $themeColor1;
 }
 
@@ -136,6 +149,7 @@ ul.products {
         background: $themeColor1;
     }
 }
+
 // Ajax filter END
 
 //List Grid display products
@@ -145,13 +159,6 @@ ul.products {
     a:first-child {
         margin-right: 10px;
     }
-}
-
-.woocommerce div.products .product.berocket_lgv_list div,
-.woocommerce-page div.products .product.berocket_lgv_list div,
-.woocommerce ul.products .product.berocket_lgv_list div,
-.woocommerce-page ul.products .product.berocket_lgv_list div {
-    margin-bottom: 0;
 }
 
 del .woocommerce-Price-amount bdi {
@@ -188,6 +195,7 @@ del .woocommerce-Price-amount bdi {
         }
     }
 }
+
 //List Grid display products END
 
 //Product carosel
